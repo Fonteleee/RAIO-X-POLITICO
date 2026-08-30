@@ -1,0 +1,1664 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Showcase: 18 Propostas de Cards Sociais & Conteúdo Viral • Raio-X Político</title>
+  
+  <!-- Tailwind CSS & Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cyan: '#06b6d4',
+              amber: '#f59e0b',
+              purple: '#a855f7',
+              emerald: '#10b981',
+              rose: '#f43f5e',
+              twitter: '#1d9bf0'
+            }
+          },
+          fontFamily: {
+            mono: ['"JetBrains Mono"', 'monospace'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+            brutal: ['"Space Grotesk"', 'Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700;800&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Space+Grotesk:wght@500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- html2canvas -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <style>
+    @keyframes holographic {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .foil-border {
+      background: linear-gradient(135deg, #ffd700, #ff007f, #00f2fe, #4facfe, #ffd700);
+      background-size: 300% 300%;
+      animation: holographic 6s ease infinite;
+    }
+    .mesh-aura {
+      background: radial-gradient(circle at 20% 20%, rgba(236, 72, 153, 0.4), transparent 50%),
+                  radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.4), transparent 50%),
+                  radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.3), transparent 60%);
+    }
+    .neo-shadow { box-shadow: 4px 4px 0px #000000; }
+    .neo-shadow-sm { box-shadow: 2.5px 2.5px 0px #000000; }
+    .scrollbar-none::-webkit-scrollbar { display: none; }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-sans antialiased pb-20 selection:bg-cyan-500 selection:text-black">
+
+  <!-- TOP HEADER -->
+  <header class="sticky top-0 z-40 bg-slate-900/95 backdrop-blur-md border-b border-white/10 px-4 sm:px-8 py-3.5 flex flex-wrap items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-amber-500 via-rose-500 to-indigo-600 flex items-center justify-center text-white shadow-lg shadow-rose-600/20 font-black">
+        <i data-lucide="flame" class="w-5 h-5"></i>
+      </div>
+      <div>
+        <div class="flex items-center gap-2">
+          <h1 class="text-sm sm:text-base font-black text-white tracking-tight">Showcase Master: 18 Propostas de Cards Cívicos</h1>
+          <span class="px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-rose-500/20 text-rose-300 border border-rose-500/30">18 Modelos & Gatilhos Virais</span>
+        </div>
+        <p class="text-xs text-slate-400">Padrões de Marketing Sênior: Retenção, Gancho de Parada no Feed e Compartilhamento Massivo.</p>
+      </div>
+    </div>
+
+    <!-- Candidate Selector Controls -->
+    <div class="flex items-center gap-2 bg-slate-850 p-1 rounded-xl border border-white/10 text-xs">
+      <span class="text-[10px] font-bold uppercase text-slate-400 px-2">Político:</span>
+      <button onclick="selectCandidate('cand-1')" id="btn-cand-1" class="px-3 py-1.5 rounded-lg bg-sky-600 text-white font-bold transition">
+        Eduardo Rocha (PSD)
+      </button>
+      <button onclick="selectCandidate('cand-2')" id="btn-cand-2" class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:text-white font-medium transition">
+        Renata Vasconcelos (REP)
+      </button>
+      <button onclick="selectCandidate('cand-3')" id="btn-cand-3" class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:text-white font-medium transition">
+        Carlos Mendes (PL)
+      </button>
+      <button onclick="toggleDuelMode()" id="btn-duel" class="px-3 py-1.5 rounded-lg bg-gradient-to-r from-amber-500 to-purple-600 text-slate-950 font-black flex items-center gap-1 transition">
+        ⚔️ Modo Duelo
+      </button>
+    </div>
+  </header>
+
+  <!-- NAVIGATION BAR: 18 PROPOSALS SELECTOR -->
+  <div class="bg-slate-900 border-b border-white/10 px-4 sm:px-8 py-3">
+    <div class="max-w-7xl mx-auto space-y-2.5">
+      
+      <div class="flex items-center justify-between">
+        <span class="text-[11px] uppercase font-mono font-black text-slate-400 tracking-wider flex items-center gap-2">
+          <span>🎯 Selecione um Modelo: 01-06 (Dark) • 07-10 (Light/Clean) • 11-12 (Especiais) • 13-18 (Marketing Viral)</span>
+        </span>
+        <div class="flex items-center gap-2 text-xs">
+          <button onclick="downloadActiveCard('fhd')" class="px-3 py-1 rounded-lg bg-sky-600 hover:bg-sky-500 text-white font-bold flex items-center gap-1.5 transition">
+            <i data-lucide="download" class="w-3.5 h-3.5"></i> Baixar Full HD (1080p)
+          </button>
+          <button onclick="downloadActiveCard('4k')" class="px-3 py-1 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-black flex items-center gap-1.5 transition">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Baixar 4K
+          </button>
+        </div>
+      </div>
+
+      <!-- 18 Tabs Buttons Grid (3 Rows on Desktop) -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2 text-left">
+        
+        <!-- Tab 1 -->
+        <button onclick="switchProposal(1)" id="tab-p1" class="p-2 rounded-xl border-2 border-cyan-400 bg-cyan-500/15 transition shadow-sm">
+          <span class="text-[7.5px] uppercase font-mono font-bold text-cyan-400 block">01 • DARK</span>
+          <strong class="text-xs text-white block truncate">Cyber HUD Neo</strong>
+        </button>
+
+        <!-- Tab 2 -->
+        <button onclick="switchProposal(2)" id="tab-p2" class="p-2 rounded-xl border border-white/10 bg-slate-850 hover:bg-slate-800 transition">
+          <span class="text-[7.5px] uppercase font-mono font-bold text-slate-400 block">02 • DARK</span>
+          <strong class="text-xs text-white block truncate">Editorial Suíço</strong>
+        </button>
+
+        <!-- Tab 3 -->
+        <button onclick="switchProposal(3)" id="tab-p3" class="p-2 rounded-xl border border-white/10 bg-slate-850 hover:bg-slate-800 transition">
+          <span class="text-[7.5px] uppercase font-mono font-bold text-amber-400 block">03 • FOIL</span>
+          <strong class="text-xs text-white block truncate">Ultimate Gold</strong>
+        </button>
+
+        <!-- Tab 4 -->
+        <button onclick="switchProposal(4)" id="tab-p4" class="p-2 rounded-xl border border-white/10 bg-slate-850 hover:bg-slate-800 transition">
+          <span class="text-[7.5px] uppercase font-mono font-bold text-emerald-400 block">04 • RECEIPT</span>
+          <strong class="text-xs text-white block truncate">Cupom Fiscal</strong>
+        </button>
+
+        <!-- Tab 5 -->
+        <button onclick="switchProposal(5)" id="tab-p5" class="p-2 rounded-xl border border-white/10 bg-slate-850 hover:bg-slate-800 transition">
+          <span class="text-[7.5px] uppercase font-mono font-bold text-purple-400 block">05 • RPG</span>
+          <strong class="text-xs text-white block truncate">Character RPG</strong>
+        </button>
+
+        <!-- Tab 6 -->
+        <button onclick="switchProposal(6)" id="tab-p6" class="p-2 rounded-xl border border-white/10 bg-slate-850 hover:bg-slate-800 transition">
+          <span class="text-[7.5px] uppercase font-mono font-bold text-rose-400 block">06 • STORIES</span>
+          <strong class="text-xs text-white block truncate">Stories Split</strong>
+        </button>
+
+        <!-- Tab 7 (LIGHT) -->
+        <button onclick="switchProposal(7)" id="tab-p7" class="p-2 rounded-xl border border-white/10 bg-slate-850 hover:bg-slate-800 transition">
+          <span class="text-[7.5px] uppercase font-mono font-bold text-sky-400 block">07 • LIGHT</span>
+          <strong class="text-xs text-white block truncate">Apple Minimalist</strong>
+        </button>
+
+        <!-- Tab 8 (LIGHT) -->
+        <button onclick="switchProposal(8)" id="tab-p8" class="p-2 rounded-xl border border-white/10 bg-slate-850 hover:bg-slate-800 transition">
+          <span class="text-[7.5px] uppercase font-mono font-bold text-purple-300 block">08 • LIGHT</span>
+          <strong class="text-xs text-white block truncate">FinTech Nubank</strong>
+        </button>
+
+        <!-- Tab 9 (LIGHT) -->
+        <button onclick="switchProposal(9)" id="tab-p9" class="p-2 rounded-xl border border-white/10 bg-slate-850 hover:bg-slate-800 transition">
+          <span class="text-[7.5px] uppercase font-mono font-bold text-emerald-300 block">09 • LIGHT</span>
+          <strong class="text-xs text-white block truncate">Certidão Oficial</strong>
+        </button>
+
+        <!-- Tab 10 (LIGHT) -->
+        <button onclick="switchProposal(10)" id="tab-p10" class="p-2 rounded-xl border border-white/10 bg-slate-850 hover:bg-slate-800 transition">
+          <span class="text-[7.5px] uppercase font-mono font-bold text-amber-300 block">10 • LIGHT</span>
+          <strong class="text-xs text-white block truncate">Polaroid Panini</strong>
+        </button>
+
+        <!-- Tab 11 (VIBRANT) -->
+        <button onclick="switchProposal(11)" id="tab-p11" class="p-2 rounded-xl border border-white/10 bg-slate-850 hover:bg-slate-800 transition">
+          <span class="text-[7.5px] uppercase font-mono font-bold text-pink-400 block">11 • AURA</span>
+          <strong class="text-xs text-white block truncate">Aurora Glass</strong>
+        </button>
+
+        <!-- Tab 12 (BRUTALIST) -->
+        <button onclick="switchProposal(12)" id="tab-p12" class="p-2 rounded-xl border border-white/10 bg-slate-850 hover:bg-slate-800 transition">
+          <span class="text-[7.5px] uppercase font-mono font-bold text-yellow-300 block">12 • BRUTAL</span>
+          <strong class="text-xs text-white block truncate">Alerta Amarelo</strong>
+        </button>
+
+        <!-- VIRAL PROPOSALS 13-18 -->
+        <!-- Tab 13 -->
+        <button onclick="switchProposal(13)" id="tab-p13" class="p-2 rounded-xl border border-white/10 bg-slate-850 hover:bg-slate-800 transition">
+          <span class="text-[7.5px] uppercase font-mono font-bold text-sky-400 block">13 • VIRAL CV</span>
+          <strong class="text-xs text-white block truncate">Currículo Vaga</strong>
+        </button>
+
+        <!-- Tab 14 -->
+        <button onclick="switchProposal(14)" id="tab-p14" class="p-2 rounded-xl border border-white/10 bg-slate-850 hover:bg-slate-800 transition">
+          <span class="text-[7.5px] uppercase font-mono font-bold text-red-400 block">14 • LOCKSCREEN</span>
+          <strong class="text-xs text-white block truncate">Push Notification</strong>
+        </button>
+
+        <!-- Tab 15 -->
+        <button onclick="switchProposal(15)" id="tab-p15" class="p-2 rounded-xl border border-white/10 bg-slate-850 hover:bg-slate-800 transition">
+          <span class="text-[7.5px] uppercase font-mono font-bold text-emerald-400 block">15 • TIER LIST</span>
+          <strong class="text-xs text-white block truncate">Tier S-Rank Cívico</strong>
+        </button>
+
+        <!-- Tab 16 -->
+        <button onclick="switchProposal(16)" id="tab-p16" class="p-2 rounded-xl border border-white/10 bg-slate-850 hover:bg-slate-800 transition">
+          <span class="text-[7.5px] uppercase font-mono font-bold text-indigo-400 block">16 • BOLETIM</span>
+          <strong class="text-xs text-white block truncate">Boletim Escolar</strong>
+        </button>
+
+        <!-- Tab 17 -->
+        <button onclick="switchProposal(17)" id="tab-p17" class="p-2 rounded-xl border border-white/10 bg-slate-850 hover:bg-slate-800 transition">
+          <span class="text-[7.5px] uppercase font-mono font-bold text-brand-twitter block">17 • FACT-CHECK</span>
+          <strong class="text-xs text-white block truncate">Thread X / Twitter</strong>
+        </button>
+
+        <!-- Tab 18 -->
+        <button onclick="switchProposal(18)" id="tab-p18" class="p-2 rounded-xl border border-white/10 bg-slate-850 hover:bg-slate-800 transition">
+          <span class="text-[7.5px] uppercase font-mono font-bold text-rose-500 block">18 • DUEL SPLIT</span>
+          <strong class="text-xs text-white block truncate">Versus Street Battle</strong>
+        </button>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN SHOWCASE STAGE -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-8 py-8">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      
+      <!-- LEFT: RENDERED CARD PREVIEW STAGE (CENTERED) -->
+      <div class="lg:col-span-7 flex flex-col items-center justify-center">
+        
+        <div id="card-stage-wrapper" class="relative flex justify-center items-center py-2">
+          <div id="active-card-container"></div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT: CONCEPT DESIGN SHEET & MARKETING RATIONALE -->
+      <div class="lg:col-span-5 space-y-5 bg-slate-900 p-6 rounded-3xl border border-white/10 shadow-2xl">
+        
+        <!-- Proposal Header Info -->
+        <div class="space-y-1 border-b border-white/10 pb-4">
+          <div class="flex items-center justify-between">
+            <span id="sheet-category-badge" class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-black uppercase tracking-wider bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
+              GRUPO A • EVOLUÇÃO VISUAL
+            </span>
+            <span id="sheet-rating-badge" class="text-xs font-mono font-bold text-amber-400 flex items-center gap-1">
+              <i data-lucide="zap" class="w-3.5 h-3.5 fill-amber-400"></i> Viral Engine
+            </span>
+          </div>
+          <h2 id="sheet-title" class="text-xl font-black text-white">01. Cyber/HUD Neo-Brutalista Dark</h2>
+          <p id="sheet-tagline" class="text-xs text-slate-400">Interface tática de inteligência política com contraste OLED e neon de alta definição.</p>
+        </div>
+
+        <!-- Marketing & Viral Pillars -->
+        <div class="space-y-3 text-xs">
+          <h4 class="font-bold text-white uppercase font-mono tracking-wider flex items-center gap-1.5">
+            <i data-lucide="target" class="w-4 h-4 text-rose-400"></i> Gatilho Psicológico & Mecânica de Compartilhamento
+          </h4>
+          
+          <div class="space-y-2 text-slate-300">
+            <div class="p-3 bg-slate-950/70 rounded-xl border border-white/5 space-y-1">
+              <strong id="sheet-pillar-1-title" class="text-white block font-semibold">Gancho de Parada no Feed (Pattern Interrupt):</strong>
+              <p id="sheet-pillar-1-desc" class="text-slate-400 leading-relaxed text-[11px]">Interrompe o scroll rápido por apresentar uma interface incomum e chamativa.</p>
+            </div>
+
+            <div class="p-3 bg-slate-950/70 rounded-xl border border-white/5 space-y-1">
+              <strong id="sheet-pillar-2-title" class="text-white block font-semibold">Gatilho de Identificação & Debate:</strong>
+              <p id="sheet-pillar-2-desc" class="text-slate-400 leading-relaxed text-[11px]">Estimula o usuário a marcar amigos ou repostar com sua própria opinião.</p>
+            </div>
+
+            <div class="p-3 bg-slate-950/70 rounded-xl border border-white/5 space-y-1">
+              <strong id="sheet-pillar-3-title" class="text-white block font-semibold">Redes & Plataformas Otimizadas:</strong>
+              <p id="sheet-pillar-3-desc" class="text-slate-400 leading-relaxed text-[11px]">Instagram Stories, WhatsApp Grupos, X/Twitter e TikTok.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Senior Marketing Rationale -->
+        <div class="p-4 rounded-2xl bg-gradient-to-r from-rose-950/40 via-purple-950/30 to-slate-950 border border-rose-500/20 space-y-1.5 text-xs">
+          <span class="font-black text-rose-300 flex items-center gap-1.5 font-mono text-[11px]">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-rose-400"></i> Diagnóstico de Marketing de Conversão
+          </span>
+          <p id="sheet-recommendation" class="text-slate-300 leading-relaxed text-[11px]">
+            Mantém a precisão dos dados mas reformula a narrativa visual para criar fricção produtiva e curiosidade irresistível.
+          </p>
+        </div>
+
+        <!-- Fast Actions -->
+        <div class="pt-2 flex items-center gap-3">
+          <button onclick="downloadActiveCard('fhd')" class="flex-1 py-3 rounded-2xl bg-gradient-to-r from-sky-600 to-indigo-600 hover:from-sky-500 hover:to-indigo-500 text-white font-black text-xs flex items-center justify-center gap-2 shadow-lg transition">
+            <i data-lucide="download" class="w-4 h-4"></i> Baixar em PNG 1080p
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- DATA & PROPOSALS ENGINE -->
+  <script>
+    const candidates = [
+      {
+        id: "cand-1",
+        name: "Eduardo Rocha",
+        shortName: "Eduardo Rocha",
+        party: "PSD",
+        number: "55",
+        position: "Governador de SP",
+        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=faces",
+        ovr: 88,
+        tier: "ELITE CÍVICA",
+        costPerMinute: "R$ 0,51 / min",
+        costPerCitizen: "R$ 0,006 / ano",
+        salariosMinimos: "190 salários mínimos",
+        spendingPct: 70,
+        spendingAmount: "R$ 22.400 / mês",
+        attendancePct: 93.8,
+        attendancePresences: "107 de 114 sessões",
+        integrityScore: 92,
+        integrityLabel: "0 Condenações • 4 Certidões Positivas",
+        tseProtocol: "TSE-PL-2026-SP-5501",
+        radar: [92, 85, 78, 88, 82, 94],
+        affiliationSince: "15/03/2021",
+        experienceYears: "12 anos na Vida Pública",
+        schoolGrade: "9.4",
+        tierRank: "S"
+      },
+      {
+        id: "cand-2",
+        name: "Renata Vasconcelos",
+        shortName: "Renata Vasc.",
+        party: "REPUBLICANOS",
+        number: "10",
+        position: "Governador de SP",
+        avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop&crop=faces",
+        ovr: 86,
+        tier: "ELITE CÍVICA",
+        costPerMinute: "R$ 0,43 / min",
+        costPerCitizen: "R$ 0,005 / ano",
+        salariosMinimos: "160 salários mínimos",
+        spendingPct: 59,
+        spendingAmount: "R$ 18.900 / mês",
+        attendancePct: 88.6,
+        attendancePresences: "101 de 114 sessões",
+        integrityScore: 86,
+        integrityLabel: "0 Condenações • 4 Certidões Positivas",
+        tseProtocol: "TSE-PL-2026-SP-1092",
+        radar: [86, 91, 82, 79, 88, 89],
+        affiliationSince: "04/04/2019",
+        experienceYears: "8 anos na Vida Pública",
+        schoolGrade: "9.1",
+        tierRank: "A+"
+      },
+      {
+        id: "cand-3",
+        name: "Carlos Mendes",
+        shortName: "Carlos Mendes",
+        party: "PL",
+        number: "22",
+        position: "Senador por SP",
+        avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop&crop=faces",
+        ovr: 76,
+        tier: "NOTÁVEL",
+        costPerMinute: "R$ 0,88 / min",
+        costPerCitizen: "R$ 0,010 / ano",
+        salariosMinimos: "326 salários mínimos",
+        spendingPct: 92,
+        spendingAmount: "R$ 38.500 / mês",
+        attendancePct: 85.9,
+        attendancePresences: "98 de 114 sessões",
+        integrityScore: 72,
+        integrityLabel: "Inquérito em Aberto • Sem Condenação",
+        tseProtocol: "TSE-PL-2026-SP-2218",
+        radar: [72, 76, 64, 84, 70, 88],
+        affiliationSince: "12/08/2021",
+        experienceYears: "16 anos na Vida Pública",
+        schoolGrade: "7.8",
+        tierRank: "B"
+      }
+    ];
+
+    const proposalMeta = {
+      1: { category: "GRUPO A • EVOLUÇÃO VISUAL", title: "01. Cyber/HUD Neo-Brutalista Dark", tagline: "Interface tática de inteligência política com contraste OLED profundo e acentos neon de alta precisão.", p1Title: "Paleta Cromática OLED & Neon:", p1Desc: "Fundo #030712 com linhas ciano elétrico e acentos âmbar dourado.", p2Title: "Tipografia & Legibilidade:", p2Desc: "JetBrains Mono com Inter Black.", p3Title: "Potencial Viral nas Redes:", p3Desc: "Transmite autoridade de auditoria tecnológica militar.", recommendation: "Mantém a estrutura atual com máxima nitidez em telas de celulares." },
+      2: { category: "GRUPO A • EVOLUÇÃO VISUAL", title: "02. Editorial Suíço Premium", tagline: "Estilo jornalismo investigativo de alta densidade (Financial Times / Bloomberg) com vidro fumê.", p1Title: "Paleta Nobre:", p1Desc: "Fundo Slate profundo com glassmorphism suave.", p2Title: "Tipografia Suíça:", p2Desc: "Proporções harmônicas e pesos calibrados.", p3Title: "Público Alvo:", p3Desc: "Eleitor analítico e formadores de opinião.", recommendation: "Confere prestígio institucional e ar de pesquisa independente." },
+      3: { category: "GRUPO A • EVOLUÇÃO VISUAL", title: "03. Ultimate Foil Trading Card", tagline: "Inspirado em cards esportivos raros (FIFA Ultimate / Panini Gold) com moldura holográfica.", p1Title: "Efeito Ouro Metálico:", p1Desc: "Degradê holográfico animado e selo oficial.", p2Title: "Badge OVR:", p2Desc: "Nota gigante em estilo videogame.", p3Title: "Engajamento:", p3Desc: "Transforma políticos em figurinhas comparáveis.", recommendation: "Ideal para engajar jovens e grupos de WhatsApp." },
+      4: { category: "GRUPO B • DISRUPTIVO DARK", title: "04. Extrato Cívico / Cupom Fiscal", tagline: "Reimaginação no formato de Cupom Fiscal Moderno: 'A conta do seu voto ao final do mês'.", p1Title: "Estética de Recibo:", p1Desc: "Bordas serrilhadas, código de barras e fonte de cupom.", p2Title: "Narrativa:", p2Desc: "Discrimina o salário, a cota e o total por minuto.", p3Title: "Choque Visual:", p3Desc: "Altíssimo choque de realidade sobre o custo do mandato.", recommendation: "Viraliza organicamente por quebrar o formato padrão eleitoral." },
+      5: { category: "GRUPO B • DISRUPTIVO DARK", title: "05. Character Sheet RPG", tagline: "Painel estilo RPG e games de estratégia, com classes e barras de poder.", p1Title: "Identidade Cyber RPG:", p1Desc: "Fundo Dark Violet cósmico com barras luminosas de atributos.", p2Title: "Perícias:", p2Desc: "Integridade, Presença e Disciplina Fiscal.", p3Title: "Engajamento:", p3Desc: "Gamificação do debate político para o público jovem.", recommendation: "Perfeito para o público gamer e debates no Twitter/X." },
+      6: { category: "GRUPO B • DISRUPTIVO DARK", title: "06. Stories Split High-Impact", tagline: "Layout vertical otimizado em 3 blocos narrativos de impacto instantâneo nos Stories.", p1Title: "Estrutura Tripla:", p1Desc: "Quem é? Quanto custa? Como vota?", p2Title: "Legibilidade:", p2Desc: "Compreendido em 2 segundos de visualização no feed.", p3Title: "Conversão:", p3Desc: "Ideal para tráfego rápido no Instagram.", recommendation: "Máxima legibilidade sem elementos pequenos." },
+      7: { category: "GRUPO C • MODO LIGHT", title: "07. Apple Minimalist Pure", tagline: "Visual limpo no estilo Apple / Design Escandinavo com branco puro e cinza neutro.", p1Title: "Paleta Imaculada:", p1Desc: "Fundo branco #ffffff com cartões cinza #f8fafc.", p2Title: "Radar em Alta Claridade:", p2Desc: "Gráfico com linhas azuis contrastantes sobre fundo claro.", p3Title: "Público:", p3Desc: "Ambientes corporativos e WhatsApp diurno.", recommendation: "A melhor opção Light para sobriedade e leveza." },
+      8: { category: "GRUPO C • MODO LIGHT", title: "08. FinTech Cívico (Nubank/Stripe)", tagline: "Card no estilo aplicativo financeiro de elite, tratando o mandato como extrato de investimento.", p1Title: "Paleta FinTech:", p1Desc: "Off-white com roxo nobre #8b5cf6 e esmeralda #10b981.", p2Title: "Linguagem Financeira:", p2Desc: "Taxa de consumo por minuto e rendimento do voto.", p3Title: "Identificação:", p3Desc: "Conecta-se aos milhões de usuários de bancos digitais.", recommendation: "Traduz gastos públicos para a linguagem do dia a dia." },
+      9: { category: "GRUPO C • MODO LIGHT", title: "09. Certidão Oficial Gov Digital", tagline: "Inspirado nos documentos digitais da Justiça Eleitoral com carimbo oficial de Ficha Limpa.", p1Title: "Linguagem Institucional:", p1Desc: "Cinza perolado com brasão e carimbo verde esmeralda.", p2Title: "Autenticidade:", p2Desc: "Código autenticador e fontes de tribunais.", p3Title: "Autoridade:", p3Desc: "Atestado oficial contra fake news em grupos de família.", recommendation: "Para eleitores que buscam rigor formal inquestionável." },
+      10: { category: "GRUPO C • MODO LIGHT", title: "10. Álbum Polaroid Vintage", tagline: "Simulação de figurinha física autêntica de álbum de papel com foto em moldura Polaroid.", p1Title: "Estética Analógica:", p1Desc: "Papel marfim #fffef7 com carimbos em vermelho.", p2Title: "Humanização:", p2Desc: "Selos postais e assinatura manual.", p3Title: "Nostalgia:", p3Desc: "Desperta a sensação de colecionar álbuns de Copa.", recommendation: "Humaniza o político e foge de templates corporativos." },
+      11: { category: "GRUPO D • ESPECIAL", title: "11. Aurora Glass iOS 18", tagline: "Design futurista com iluminação de aurora boreal (Pink, Purple & Cyan) e vidro fosco.", p1Title: "Vibração Mesh:", p1Desc: "Gradiente volumétrico e efeito frosted glass.", p2Title: "Radar Neon:", p2Desc: "Vértices luminosos pulsantes.", p3Title: "Apelo Estético:", p3Desc: "Ideal para Reels, TikTok e feeds escuros.", recommendation: "Chama muita atenção pelo design contemporâneo." },
+      12: { category: "GRUPO D • ESPECIAL", title: "12. Neo-Brutalismo Bicolor", tagline: "Estética de sinalização urbana em amarelo vibrante e preto: impossível passar batido.", p1Title: "Contraste Máximo:", p1Desc: "Amarelo #fde047 com bordas pretas de 4px e sombras duras.", p2Title: "Tipografia Massiva:", p2Desc: "Caixa-alta pesada com badges de choque.", p3Title: "Senso de Alerta:", p3Desc: "Cria urgência imediata sobre o conteúdo.", recommendation: "Visual enérgico, combativo e marcante." },
+      
+      // VIRAL PROPOSALS 13-18
+      13: {
+        category: "GRUPO E • MARKETING VIRAL (CV ELEITORAL)",
+        title: "13. O Currículo do Candidato (Processo Seletivo)",
+        tagline: "Inverte a dinâmica de poder: coloca o eleitor como o 'Chefe/Recrutador' contratando o político.",
+        p1Title: "Gatilho de Inversão de Papéis:",
+        p1Desc: "Em vez de 'vote em mim', a narrativa é: 'Candidato pleiteando a vaga de Governador (Salário: R$ 35k + Cota)'.",
+        p2Title: "Dados em Formato de Currículo:",
+        p2Desc: "Campos: 'Assiduidade no Trabalho (93.8%)', 'Experiência Anterior (12 anos)', 'Histórico de Conduta (0 Condenações)' e 'Custo de Manutenção'.",
+        p3Title: "Mecânica de Viralização:",
+        p3Desc: "Gera debates ferozes no LinkedIn, Twitter e WhatsApp: 'Você contrataria esse profissional para administrar sua empresa?'",
+        recommendation: "Gatilho mental poderoso de autoridade cidadã que engaja pessoas que odeiam politicagem tradicional."
+      },
+      14: {
+        category: "GRUPO E • MARKETING VIRAL (LOCKSCREEN PUSH)",
+        title: "14. Tela de Bloqueio com Notificações Push",
+        tagline: "Simula uma tela de iPhone com alertas urgentes do Banco e do TSE pipocando na tela.",
+        p1Title: "Gatilho de Interrupção de Padrão (Pattern Interrupt):",
+        p1Desc: "O cérebro do usuário para instantaneamente no feed porque parece uma notificação real de débito do seu próprio celular.",
+        p2Title: "Notificações Empilhadas:",
+        p2Desc: "🚨 Notificação 1: '[BANCO] Débito de R$ 0,51 efetuado na sua conta neste minuto para custear o mandato'. 🏛️ Notificação 2: 'Presença confirmada em 107 sessões'.",
+        p3Title: "Mecânica de Viralização:",
+        p3Desc: "Formato nativo dos stories de maior retenção (a pessoa pausa com o dedo na tela para ler os push notifications).",
+        recommendation: "Máxima taxa de retenção por segundo em vídeos curtos e stories de redes sociais."
+      },
+      15: {
+        category: "GRUPO E • MARKETING VIRAL (TIER LIST OFICIAL)",
+        title: "15. Tier List S-Rank Cívico (Classificação Geral)",
+        tagline: "Baseado no fenômeno mundial das 'Tier Lists' de games, filmes e esportes.",
+        p1Title: "Gatilho de Classificação & Status:",
+        p1Desc: "O político é classificado formalmente no TIER S (Elite Cívica), com barras de atributos por letra (Integridade: S, Presença: S, Custo: B).",
+        p2Title: "Comparabilidade Instantânea:",
+        p2Desc: "Qualquer pessoa bate o olho e entende se o político é S-Tier, A-Tier ou Trash-Tier.",
+        p3Title: "Mecânica de Viralização:",
+        p3Desc: "Pessoas adoram discordar ou concordar com Tier Lists, gerando centenas de comentários e compartilhamentos com amigos.",
+        recommendation: "Excelente para criar polêmica positiva fundamentada em dados auditados."
+      },
+      16: {
+        category: "GRUPO E • MARKETING VIRAL (BOLETIM ESCOLAR)",
+        title: "16. O Boletim do Mandato (Passou de Ano?)",
+        tagline: "Formato universal de Boletim Escolar: matérias, faltas, média final e carimbo de aprovação.",
+        p1Title: "Familiaridade Cognitiva Universal:",
+        p1Desc: "Todo cidadão alfabetizado sabe ler um boletim escolar com notas de 0 a 10 e total de faltas.",
+        p2Title: "Disciplinas Cívicas:",
+        p2Desc: "Matérias: Assiduidade (Nota 9.4), Economia dos Recursos (Nota 7.0), Integridade e Ética (Nota 9.2), Projetos Aprovados (Nota 8.5).",
+        p3Title: "Mecânica de Viralização:",
+        p3Desc: "'O seu candidato passou de ano ou pegou recuperação?' — compartilhamento explosivo em grupos de família e salas de aula.",
+        recommendation: "A forma mais simples e didática do mundo para explicar métricas complexas."
+      },
+      17: {
+        category: "GRUPO E • MARKETING VIRAL (FACT-CHECK THREAD)",
+        title: "17. Thread de Fato Checado (Estilo X / Twitter)",
+        tagline: "Formato de tweet verificado com carimbo de checagem independente de dados.",
+        p1Title: "Gatilho de Revelação & Investigação:",
+        p1Desc: "Headline no estilo: '🧵 AUDITORIA 2026: Checamos quanto custa o candidato ao governo por minuto. Os dados oficiais do TSE:'",
+        p2Title: "Cards de Thread Integrados:",
+        p2Desc: "Simula a publicação de um analista respeitado com métricas de curtidas, reposts e selo azul de autenticidade.",
+        p3Title: "Mecânica de Viralização:",
+        p3Desc: "Prints de tweets são o formato #1 de conteúdo estático compartilhado em stories de Instagram e grupos de WhatsApp.",
+        recommendation: "Gera autoridade imediata de furo jornalístico e apuração independente."
+      },
+      18: {
+        category: "GRUPO E • MARKETING VIRAL (VERSUS STREET BATTLE)",
+        title: "18. Street Versus Battle (Duelo Polarizado Direto)",
+        tagline: "Layout de ringue/batalha direta com corte diagonal e confronto de barras de poder.",
+        p1Title: "Gatilho de Polarização Construtiva:",
+        p1Desc: "Coloca os dois rivais frente a frente ('Rocha vs Mendes') com o título: 'QUEM MERECE SEU VOTO? Compare os números reais'.",
+        p2Title: "Batalha Métrica por Métrica:",
+        p2Desc: "Compara lado a lado: Quem gasta menos? Quem falta menos? Quem tem maior nota de integridade?",
+        p3Title: "Mecânica de Viralização:",
+        p3Desc: "Militantes e eleitores de ambos os lados compartilham para provar que o seu candidato venceu o duelo nos números.",
+        recommendation: "O maior gerador de tráfego orgânico durante os debates e semanas decisivas de eleição."
+      }
+    };
+
+    let activeProposalId = 1;
+    let activeCandId = 'cand-1';
+    let isDuelMode = false;
+    let activeRadarInstance = null;
+
+    function init() {
+      renderProposal(activeProposalId);
+      lucide.createIcons();
+    }
+
+    function selectCandidate(id) {
+      activeCandId = id;
+      isDuelMode = false;
+      updateCandidateButtons();
+      renderProposal(activeProposalId);
+    }
+
+    function toggleDuelMode() {
+      isDuelMode = !isDuelMode;
+      updateCandidateButtons();
+      renderProposal(activeProposalId);
+    }
+
+    function updateCandidateButtons() {
+      ['cand-1', 'cand-2', 'cand-3'].forEach(id => {
+        const btn = document.getElementById(`btn-${id}`);
+        if (!isDuelMode && activeCandId === id) {
+          btn.className = 'px-3 py-1.5 rounded-lg bg-sky-600 text-white font-bold transition';
+        } else {
+          btn.className = 'px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:text-white font-medium transition';
+        }
+      });
+
+      const duelBtn = document.getElementById('btn-duel');
+      if (isDuelMode) {
+        duelBtn.className = 'px-3 py-1.5 rounded-lg bg-gradient-to-r from-amber-400 to-purple-500 text-slate-950 font-black shadow-lg shadow-amber-500/20 scale-105 transition';
+      } else {
+        duelBtn.className = 'px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:text-white font-medium transition';
+      }
+    }
+
+    function switchProposal(id) {
+      activeProposalId = id;
+      for (let i = 1; i <= 18; i++) {
+        const tab = document.getElementById(`tab-p${i}`);
+        if (tab) {
+          if (i === id) {
+            tab.className = 'p-2 rounded-xl border-2 border-rose-500 bg-rose-500/15 transition shadow-sm';
+          } else {
+            tab.className = 'p-2 rounded-xl border border-white/10 bg-slate-850 hover:bg-slate-800 transition';
+          }
+        }
+      }
+
+      // Update Info Sheet
+      const meta = proposalMeta[id];
+      document.getElementById('sheet-category-badge').innerText = meta.category;
+      document.getElementById('sheet-title').innerText = meta.title;
+      document.getElementById('sheet-tagline').innerText = meta.tagline;
+      document.getElementById('sheet-pillar-1-title').innerText = meta.p1Title;
+      document.getElementById('sheet-pillar-1-desc').innerText = meta.p1Desc;
+      document.getElementById('sheet-pillar-2-title').innerText = meta.p2Title;
+      document.getElementById('sheet-pillar-2-desc').innerText = meta.p2Desc;
+      document.getElementById('sheet-pillar-3-title').innerText = meta.p3Title;
+      document.getElementById('sheet-pillar-3-desc').innerText = meta.p3Desc;
+      document.getElementById('sheet-recommendation').innerText = meta.recommendation;
+
+      renderProposal(id);
+    }
+
+    function renderProposal(id) {
+      const container = document.getElementById('active-card-container');
+      const cand1 = candidates.find(c => c.id === activeCandId) || candidates[0];
+      const cand2 = candidates.find(c => c.id === (activeCandId === 'cand-1' ? 'cand-3' : 'cand-1'));
+
+      if (id === 1) renderProposal1(container, cand1, cand2, isDuelMode);
+      else if (id === 2) renderProposal2(container, cand1, cand2, isDuelMode);
+      else if (id === 3) renderProposal3(container, cand1, cand2, isDuelMode);
+      else if (id === 4) renderProposal4(container, cand1, cand2, isDuelMode);
+      else if (id === 5) renderProposal5(container, cand1, cand2, isDuelMode);
+      else if (id === 6) renderProposal6(container, cand1, cand2, isDuelMode);
+      else if (id === 7) renderProposal7(container, cand1, cand2, isDuelMode);
+      else if (id === 8) renderProposal8(container, cand1, cand2, isDuelMode);
+      else if (id === 9) renderProposal9(container, cand1, cand2, isDuelMode);
+      else if (id === 10) renderProposal10(container, cand1, cand2, isDuelMode);
+      else if (id === 11) renderProposal11(container, cand1, cand2, isDuelMode);
+      else if (id === 12) renderProposal12(container, cand1, cand2, isDuelMode);
+      else if (id === 13) renderProposal13(container, cand1, cand2, isDuelMode);
+      else if (id === 14) renderProposal14(container, cand1, cand2, isDuelMode);
+      else if (id === 15) renderProposal15(container, cand1, cand2, isDuelMode);
+      else if (id === 16) renderProposal16(container, cand1, cand2, isDuelMode);
+      else if (id === 17) renderProposal17(container, cand1, cand2, isDuelMode);
+      else if (id === 18) renderProposal18(container, cand1, cand2, isDuelMode);
+
+      lucide.createIcons();
+    }
+
+    // ================= 1 to 12 RENDERERS =================
+    function renderProposal1(container, c1, c2, duel) {
+      container.innerHTML = `
+        <div id="export-target" class="w-[330px] bg-[#030712] p-4 rounded-[1.75rem] border-2 border-cyan-500/60 shadow-[0_0_40px_rgba(6,182,212,0.25)] text-white flex flex-col justify-between" style="min-height: 520px;">
+          <div class="px-2.5 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/40 text-center flex items-center justify-between text-[8px] font-mono font-black tracking-widest text-cyan-300 uppercase">
+            <span class="flex items-center gap-1"><i data-lucide="cpu" class="w-3 h-3 text-cyan-400"></i> FIGURINHA CÍVICA ELEIÇÕES 2026</span>
+            <span class="bg-cyan-400 text-slate-950 px-1.5 py-0.2 rounded font-black text-[7.5px]">TSE VERIFIED</span>
+          </div>
+
+          <div class="flex items-center justify-between gap-2.5 bg-slate-900/90 p-2 rounded-2xl border border-white/10 my-1">
+            <div class="flex items-center gap-2.5 min-w-0">
+              <div class="relative flex-shrink-0">
+                <img src="${c1.avatar}" class="w-12 h-12 rounded-xl object-cover border-2 border-cyan-400 shadow-md">
+                <span class="absolute -bottom-1 -right-1 bg-cyan-400 text-slate-950 text-[8px] font-black px-1 rounded font-mono">Nº ${c1.number}</span>
+              </div>
+              <div class="min-w-0 space-y-0.2">
+                <h4 class="font-black text-xs text-white uppercase tracking-tight truncate">${c1.name}</h4>
+                <span class="text-[9.5px] font-black text-cyan-300 font-mono">${c1.party} • ${c1.position}</span>
+                <span class="text-[8px] text-slate-400 block font-mono">🏛️ Filiado desde ${c1.affiliationSince.split('/')[2]}</span>
+              </div>
+            </div>
+            <div class="p-1.5 rounded-xl bg-cyan-500/15 border border-cyan-400/40 text-center min-w-[55px]">
+              <span class="text-[6px] uppercase font-black text-cyan-400 font-mono block">SCORE OVR</span>
+              <span class="text-base font-black text-cyan-300 font-mono leading-none">${c1.ovr}</span>
+              <span class="text-[6px] font-bold text-slate-300 block uppercase">${c1.tier}</span>
+            </div>
+          </div>
+
+          <div class="my-1 bg-[#090f1d] p-2 rounded-2xl border border-cyan-500/30 flex flex-col items-center relative">
+            <div class="flex items-center justify-between w-full mb-0.5">
+              <span class="text-[8.5px] font-black text-cyan-300 uppercase font-mono flex items-center gap-1"><i data-lucide="activity" class="w-2.5 h-2.5"></i> RADAR DE QUALIDADE</span>
+              <span class="text-[7.5px] px-1 py-0.2 rounded bg-cyan-500/20 text-cyan-300 font-mono">Escala 0-100</span>
+            </div>
+            <div style="height: 175px; width: 260px;"><canvas id="propRadarCanvas"></canvas></div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-1.5 text-[9px] my-1 font-mono">
+            <div class="p-1.5 bg-slate-900 rounded-xl border border-amber-500/30 text-left">
+              <span class="text-[7px] text-amber-400 font-black uppercase block">⏱️ Custo aos Cofres</span>
+              <span class="text-xs font-black text-amber-300 font-mono">${c1.costPerMinute}</span>
+              <span class="text-[7px] text-slate-400 block">${c1.spendingPct}% da cota</span>
+            </div>
+            <div class="p-1.5 bg-slate-900 rounded-xl border border-purple-500/30 text-left">
+              <span class="text-[7px] text-purple-400 font-black uppercase block">🏛️ Presença</span>
+              <span class="text-xs font-black text-purple-300 font-mono">${c1.attendancePct}%</span>
+              <span class="text-[7px] text-slate-400 block">${c1.attendancePresences}</span>
+            </div>
+            <div class="col-span-2 p-1.5 bg-slate-900/90 rounded-xl border border-emerald-500/30 text-center flex items-center justify-between">
+              <span class="text-[7.5px] uppercase font-black text-emerald-400">💵 Gasto Anual Pagaria:</span>
+              <span class="text-[9px] font-black text-white bg-black/50 px-2 py-0.5 rounded border border-emerald-500/30">${c1.salariosMinimos}</span>
+            </div>
+          </div>
+
+          <div class="pt-1 border-t border-white/10 flex items-center justify-between text-[7.5px] text-slate-400 font-mono">
+            <span>🛡️ Auditoria • raioxpolitico.org</span>
+            <div class="w-6 h-6 rounded bg-white p-0.5 flex items-center justify-center"><i data-lucide="qr-code" class="w-5 h-5 text-black"></i></div>
+          </div>
+        </div>
+      `;
+      initRadar(c1, c2, duel, '#06b6d4', 'rgba(6, 182, 212, 0.45)', true);
+    }
+
+    function renderProposal2(container, c1, c2, duel) {
+      container.innerHTML = `
+        <div id="export-target" class="w-[330px] bg-gradient-to-b from-[#0f172a] to-[#020617] p-4 rounded-[2rem] border border-white/20 shadow-2xl text-white flex flex-col justify-between" style="min-height: 520px;">
+          <div class="flex items-center justify-between border-b border-white/15 pb-2 text-[8px] font-bold text-slate-400 tracking-wider">
+            <span class="uppercase font-serif italic text-slate-200">Dossiê Eleitoral Independente</span>
+            <span class="text-emerald-400 font-mono">ELEIÇÕES 2026</span>
+          </div>
+
+          <div class="flex items-center justify-between gap-3 my-2">
+            <div class="flex items-center gap-3">
+              <img src="${c1.avatar}" class="w-13 h-13 rounded-2xl object-cover border border-white/30 shadow-lg">
+              <div>
+                <h3 class="text-sm font-serif font-black text-white tracking-tight">${c1.name}</h3>
+                <p class="text-[9.5px] font-medium text-slate-300">${c1.party} • ${c1.position}</p>
+                <span class="text-[8px] text-slate-400 font-mono">TSE: ${c1.tseProtocol}</span>
+              </div>
+            </div>
+            <div class="text-right">
+              <span class="text-[7px] uppercase font-bold text-slate-400 block tracking-widest">Índice Geral</span>
+              <span class="text-2xl font-serif font-black text-white leading-none">${c1.ovr}</span>
+              <span class="text-[7.5px] font-semibold text-emerald-400 block">/ 100 pts</span>
+            </div>
+          </div>
+
+          <div class="my-1 bg-white/5 backdrop-blur-md p-2.5 rounded-2xl border border-white/10 flex flex-col items-center">
+            <div style="height: 175px; width: 260px;"><canvas id="propRadarCanvas"></canvas></div>
+          </div>
+
+          <div class="space-y-1 my-1 text-[9.5px]">
+            <div class="flex items-center justify-between p-2 rounded-xl bg-white/5 border border-white/5">
+              <span class="text-slate-300">Custo Minuto / Cidadão:</span>
+              <strong class="font-mono text-amber-300 font-bold">${c1.costPerMinute} • ${c1.costPerCitizen}</strong>
+            </div>
+            <div class="flex items-center justify-between p-2 rounded-xl bg-white/5 border border-white/5">
+              <span class="text-slate-300">Presença em Sessões:</span>
+              <strong class="font-mono text-purple-300 font-bold">${c1.attendancePct}% (${c1.attendancePresences.split(' ')[0]} pres.)</strong>
+            </div>
+            <div class="flex items-center justify-between p-2 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-300">
+              <span class="text-[8.5px] font-medium">Equivalência Social do Gasto:</span>
+              <strong class="font-bold text-[9px]">💵 ${c1.salariosMinimos}</strong>
+            </div>
+          </div>
+
+          <div class="pt-2 border-t border-white/15 flex items-center justify-between text-[8px] text-slate-400">
+            <span>raioxpolitico.org • Auditoria Cívica</span>
+            <span class="font-mono text-[7.5px] text-slate-500">Hash #2026-TSE-AUTH</span>
+          </div>
+        </div>
+      `;
+      initRadar(c1, c2, duel, '#ffffff', 'rgba(255, 255, 255, 0.35)', true);
+    }
+
+    function renderProposal3(container, c1, c2, duel) {
+      container.innerHTML = `
+        <div id="export-target" class="w-[330px] bg-[#070b16] p-1 rounded-[2rem] foil-border shadow-[0_0_40px_rgba(245,158,11,0.35)] text-white" style="min-height: 520px;">
+          <div class="bg-[#0b0f19] p-3.5 rounded-[1.85rem] h-full flex flex-col justify-between" style="min-height: 512px;">
+            <div class="flex items-center justify-between px-1">
+              <div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span><span class="text-[8.5px] font-black text-amber-300 tracking-wider font-mono">EDITION 2026 • GOLD CARD</span></div>
+              <span class="px-1.5 py-0.2 rounded bg-amber-400 text-slate-950 font-black text-[7.5px]">SUPER TRUNFO</span>
+            </div>
+
+            <div class="relative flex items-center justify-between bg-gradient-to-r from-amber-500/20 via-slate-900 to-amber-500/10 p-2.5 rounded-2xl border border-amber-400/50 my-1">
+              <div class="flex items-center gap-2.5">
+                <div class="relative">
+                  <img src="${c1.avatar}" class="w-13 h-13 rounded-2xl object-cover border-2 border-amber-400 shadow-md">
+                  <span class="absolute -top-1.5 -left-1.5 bg-amber-400 text-slate-950 font-black text-[8px] px-1 rounded font-mono shadow">Nº ${c1.number}</span>
+                </div>
+                <div>
+                  <h4 class="font-black text-xs text-white uppercase tracking-tight">${c1.name}</h4>
+                  <span class="text-[9px] font-black text-amber-300 font-mono">${c1.party}</span>
+                  <span class="text-[8px] text-slate-400 block">${c1.position}</span>
+                </div>
+              </div>
+              <div class="p-2 rounded-2xl bg-gradient-to-b from-amber-400 to-amber-600 text-slate-950 text-center min-w-[55px] shadow-lg shadow-amber-500/30">
+                <span class="text-[6.5px] uppercase font-black tracking-widest block">OVR</span>
+                <span class="text-xl font-black font-mono leading-none block my-0.5">${c1.ovr}</span>
+                <span class="text-[6.5px] font-extrabold uppercase block">${c1.tier}</span>
+              </div>
+            </div>
+
+            <div class="my-1 bg-[#050811] p-2 rounded-2xl border border-amber-400/30 flex flex-col items-center">
+              <span class="text-[8px] font-black text-amber-300 uppercase font-mono tracking-wider mb-0.5">⚡ ATRIBUTOS CÍVICOS</span>
+              <div style="height: 175px; width: 260px;"><canvas id="propRadarCanvas"></canvas></div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-1.5 text-[8.5px] my-1 font-mono font-bold">
+              <div class="p-1.5 bg-slate-900 rounded-xl border border-amber-400/30 text-center">
+                <span class="text-amber-400 block text-[7px]">⏱️ CUSTO / MINUTO</span>
+                <span class="text-white text-xs">${c1.costPerMinute}</span>
+              </div>
+              <div class="p-1.5 bg-slate-900 rounded-xl border border-purple-400/30 text-center">
+                <span class="text-purple-400 block text-[7px]">🏛️ PRESENÇA</span>
+                <span class="text-purple-300 text-xs">${c1.attendancePct}%</span>
+              </div>
+              <div class="col-span-2 p-1.5 bg-gradient-to-r from-emerald-950 to-slate-900 rounded-xl border border-emerald-400/40 text-center">
+                <span class="text-[7.5px] text-emerald-400 block uppercase">💵 Gasto Anual Equivalente a:</span>
+                <span class="text-[9.5px] text-white font-black">${c1.salariosMinimos}</span>
+              </div>
+            </div>
+
+            <div class="pt-1 border-t border-white/10 flex items-center justify-between text-[8px] text-slate-400">
+              <span class="font-mono text-amber-300">⭐ Raio-X Político Oficial</span>
+              <span class="text-[7px]">Colecione & Compartilhe</span>
+            </div>
+          </div>
+        </div>
+      `;
+      initRadar(c1, c2, duel, '#f59e0b', 'rgba(245, 158, 11, 0.5)', true);
+    }
+
+    function renderProposal4(container, c1, c2, duel) {
+      container.innerHTML = `
+        <div id="export-target" class="w-[330px] bg-[#090d16] p-4 rounded-3xl border-2 border-emerald-500/40 shadow-2xl text-slate-100 flex flex-col justify-between font-mono" style="min-height: 520px;">
+          <div class="text-center space-y-1 border-b border-dashed border-slate-600 pb-2.5">
+            <span class="text-[8px] text-emerald-400 font-bold uppercase tracking-widest block">*** EXTRATO DO MANDATO ELEITORAL ***</span>
+            <h3 class="text-sm font-black text-white uppercase">${c1.name} (${c1.party})</h3>
+            <p class="text-[9px] text-slate-400">CARGO: ${c1.position.toUpperCase()} • Nº ${c1.number}</p>
+            <span class="text-[8px] text-slate-500 block">PROTOCOLO TSE: ${c1.tseProtocol}</span>
+          </div>
+
+          <div class="py-2 space-y-1.5 text-[9px] border-b border-dashed border-slate-600">
+            <div class="flex items-center justify-between"><span class="text-slate-400">01. GASTO MENSAL (CEAP):</span><span class="font-black text-amber-300">${c1.spendingAmount}</span></div>
+            <div class="flex items-center justify-between"><span class="text-slate-400">02. USO DA COTA MÁXIMA:</span><span class="font-black ${c1.spendingPct < 80 ? 'text-emerald-400' : 'text-amber-400'}">${c1.spendingPct}% DO TETO</span></div>
+            <div class="flex items-center justify-between"><span class="text-slate-400">03. PRESENÇA EM SESSÕES:</span><span class="font-black text-purple-300">${c1.attendancePct}% (${c1.attendancePresences.split(' ')[0]} pres.)</span></div>
+            <div class="flex items-center justify-between"><span class="text-slate-400">04. FICHA / CONDENAÇÕES:</span><span class="font-black text-emerald-400">0 CONDENAÇÕES</span></div>
+            <div class="flex items-center justify-between"><span class="text-slate-400">05. SCORE GERAL (OVR):</span><span class="font-black text-cyan-300">${c1.ovr} / 100 PTS</span></div>
+          </div>
+
+          <div class="my-1.5 p-2.5 rounded-xl bg-emerald-950/40 border border-emerald-500/30 text-center space-y-0.5">
+            <span class="text-[7.5px] uppercase font-bold text-emerald-400 block tracking-wider">TOTAL A PAGAR PELO CONTRIBUINTE:</span>
+            <div class="text-base font-black text-white font-mono">${c1.costPerMinute}</div>
+            <span class="text-[7.5px] text-slate-400 block">Rateio por cidadão: ${c1.costPerCitizen}</span>
+          </div>
+
+          <div class="p-2 rounded-xl bg-slate-900 border border-slate-700 text-center space-y-0.5">
+            <span class="text-[7.5px] text-slate-400 uppercase block">O que esse valor anual pagaria:</span>
+            <strong class="text-[10px] text-amber-300 font-bold block">💵 ${c1.salariosMinimos}</strong>
+          </div>
+
+          <div class="pt-2 border-t border-dashed border-slate-600 text-center space-y-1">
+            <div class="h-6 bg-white/90 rounded flex items-center justify-center px-4 font-mono text-[9px] text-black tracking-widest font-black">||| | |||| | || |||| | | ||| ||||</div>
+            <span class="text-[7.5px] text-slate-400 block">Consulte dados públicos em raioxpolitico.org</span>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderProposal5(container, c1, c2, duel) {
+      container.innerHTML = `
+        <div id="export-target" class="w-[330px] bg-[#0c071e] p-4 rounded-3xl border-2 border-purple-500/50 shadow-[0_0_40px_rgba(168,85,247,0.25)] text-white flex flex-col justify-between" style="min-height: 520px;">
+          <div class="flex items-center justify-between border-b border-purple-500/30 pb-2">
+            <div class="flex items-center gap-2"><span class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 border border-purple-500/40 text-[8.5px] font-mono font-bold">LVL ${c1.ovr}</span><span class="text-[9px] font-mono text-slate-400 uppercase">Classe: ${c1.position.split(' ')[0]}</span></div>
+            <span class="text-[8.5px] font-bold text-amber-400 font-mono">🏆 TIER: ${c1.tier}</span>
+          </div>
+
+          <div class="flex items-center gap-3 my-1.5 bg-slate-900/80 p-2.5 rounded-2xl border border-purple-500/20">
+            <img src="${c1.avatar}" class="w-12 h-12 rounded-xl object-cover border-2 border-purple-400 shadow-md">
+            <div>
+              <h3 class="text-xs font-black text-white uppercase">${c1.name}</h3>
+              <span class="text-[9px] font-mono font-bold text-purple-300">${c1.party} • Nº ${c1.number}</span>
+              <span class="text-[7.5px] text-slate-400 block font-mono">Filiado desde ${c1.affiliationSince}</span>
+            </div>
+          </div>
+
+          <div class="space-y-1.5 my-1 text-[8.5px] font-mono">
+            <div>
+              <div class="flex justify-between text-slate-300 mb-0.5"><span>🛡️ Integridade & Ficha:</span><span class="font-bold text-emerald-400">${c1.integrityScore} / 100</span></div>
+              <div class="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-emerald-400 rounded-full" style="width: ${c1.integrityScore}%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-slate-300 mb-0.5"><span>🏛️ Presença em Sessões:</span><span class="font-bold text-purple-400">${c1.attendancePct}%</span></div>
+              <div class="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-purple-400 rounded-full" style="width: ${c1.attendancePct}%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-slate-300 mb-0.5"><span>💰 Disciplina Fiscal:</span><span class="font-bold text-amber-400">${100 - c1.spendingPct} / 100</span></div>
+              <div class="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-amber-400 rounded-full" style="width: ${100 - c1.spendingPct}%"></div></div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-1.5 my-1 text-[8.5px] font-mono">
+            <div class="p-2 rounded-xl bg-purple-950/40 border border-purple-500/30 text-center"><span class="text-[7px] text-purple-400 block">DANO AO COFRE (60S)</span><strong class="text-white text-xs">${c1.costPerMinute}</strong></div>
+            <div class="p-2 rounded-xl bg-emerald-950/40 border border-emerald-500/30 text-center"><span class="text-[7px] text-emerald-400 block">EQUIVALÊNCIA REAL</span><strong class="text-emerald-300 text-[9px]">${c1.salariosMinimos.split(' ')[0]} salários</strong></div>
+          </div>
+
+          <div class="pt-1.5 border-t border-purple-500/30 flex items-center justify-between text-[7.5px] text-slate-400 font-mono">
+            <span>⚔️ Duelo Cívico 2026</span>
+            <span class="text-purple-300">raioxpolitico.org</span>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderProposal6(container, c1, c2, duel) {
+      container.innerHTML = `
+        <div id="export-target" class="w-[330px] bg-gradient-to-b from-[#090d1a] via-[#050811] to-[#120826] p-4 rounded-3xl border-2 border-indigo-500/50 shadow-2xl text-white flex flex-col justify-between" style="min-height: 520px;">
+          <div class="bg-indigo-950/50 p-3 rounded-2xl border border-indigo-500/30 flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <img src="${c1.avatar}" class="w-12 h-12 rounded-xl object-cover border-2 border-indigo-400 shadow-md">
+              <div>
+                <span class="text-[8px] font-mono text-indigo-300 font-bold uppercase block">Candidato 2026</span>
+                <h3 class="text-xs font-black text-white uppercase">${c1.name}</h3>
+                <span class="text-[9px] text-slate-300 font-bold">${c1.party} • ${c1.position}</span>
+              </div>
+            </div>
+            <div class="text-right bg-indigo-600 px-2 py-1 rounded-xl text-center"><span class="text-[6.5px] font-bold block uppercase">Urna</span><span class="text-sm font-black font-mono leading-none">${c1.number}</span></div>
+          </div>
+
+          <div class="my-1.5 p-3 rounded-2xl bg-gradient-to-r from-amber-500/20 via-slate-900 to-amber-500/10 border border-amber-400/40 text-center space-y-0.5">
+            <span class="text-[8px] uppercase font-black text-amber-400 tracking-wider block">⏱️ CUSTO A CADA 60 SEGUNDOS AOS COFRES:</span>
+            <div class="text-xl font-black text-amber-300 font-mono">${c1.costPerMinute}</div>
+            <span class="text-[8px] text-slate-400 block">${c1.costPerCitizen} por cidadão paulista</span>
+          </div>
+
+          <div class="grid grid-cols-2 gap-1.5 my-1 text-[9px] font-mono">
+            <div class="p-2 rounded-xl bg-slate-900 border border-purple-500/30 text-center"><span class="text-[7.5px] text-purple-400 font-bold block">🏛️ PRESENÇA</span><span class="text-sm font-black text-purple-300">${c1.attendancePct}%</span><span class="text-[7px] text-slate-400 block">${c1.attendancePresences}</span></div>
+            <div class="p-2 rounded-xl bg-slate-900 border border-emerald-500/30 text-center"><span class="text-[7.5px] text-emerald-400 font-bold block">🛡️ FICHA LIMPA</span><span class="text-sm font-black text-emerald-300">${c1.integrityScore}/100</span><span class="text-[7px] text-emerald-400 block">0 Condenações</span></div>
+          </div>
+
+          <div class="p-2 rounded-xl bg-emerald-950/60 border border-emerald-500/40 flex items-center justify-between text-[9px]">
+            <span class="text-[8px] text-emerald-400 font-bold">O Gasto Anual Pagaria:</span>
+            <span class="font-black text-white font-mono bg-black/40 px-2 py-0.5 rounded border border-emerald-400/30">💵 ${c1.salariosMinimos}</span>
+          </div>
+
+          <div class="pt-1.5 border-t border-white/10 flex items-center justify-between text-[8px] text-slate-400">
+            <span>🛡️ raioxpolitico.org</span>
+            <span class="text-indigo-400 font-bold flex items-center gap-1">Arraste para cima <i data-lucide="chevron-up" class="w-3 h-3"></i></span>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderProposal7(container, c1, c2, duel) {
+      container.innerHTML = `
+        <div id="export-target" class="w-[330px] bg-white p-4 rounded-[2rem] border border-slate-200 shadow-[0_10px_35px_rgba(0,0,0,0.06)] text-slate-900 flex flex-col justify-between" style="min-height: 520px;">
+          <div class="flex items-center justify-between border-b border-slate-100 pb-2 text-[8px] font-bold text-slate-400 uppercase tracking-wider">
+            <span class="flex items-center gap-1 text-slate-700 font-bold"><i data-lucide="award" class="w-3 h-3 text-sky-600"></i> AUDITORIA CÍVICA 2026</span>
+            <span class="bg-slate-100 text-slate-800 px-2 py-0.5 rounded-full font-mono font-bold">OFICIAL TSE</span>
+          </div>
+
+          <div class="flex items-center justify-between gap-3 bg-slate-50 p-3 rounded-2xl border border-slate-100 my-1">
+            <div class="flex items-center gap-2.5">
+              <div class="relative">
+                <img src="${c1.avatar}" class="w-12 h-12 rounded-xl object-cover border-2 border-slate-900 shadow-sm">
+                <span class="absolute -bottom-1 -right-1 bg-slate-950 text-white text-[7.5px] font-black px-1 rounded font-mono">Nº ${c1.number}</span>
+              </div>
+              <div>
+                <h4 class="font-black text-xs text-slate-900 uppercase tracking-tight">${c1.name}</h4>
+                <span class="text-[9.5px] font-bold text-sky-700">${c1.party} • ${c1.position}</span>
+                <span class="text-[8px] text-slate-400 block font-mono">Filiado desde ${c1.affiliationSince.split('/')[2]}</span>
+              </div>
+            </div>
+            <div class="p-2 rounded-xl bg-slate-900 text-white text-center min-w-[50px] shadow-sm">
+              <span class="text-[6px] uppercase font-bold tracking-widest text-slate-300 block">SCORE</span>
+              <span class="text-base font-black font-mono leading-none">${c1.ovr}</span>
+              <span class="text-[6px] text-emerald-400 font-bold block uppercase">${c1.tier.split(' ')[0]}</span>
+            </div>
+          </div>
+
+          <div class="my-1 bg-slate-50/80 p-2 rounded-2xl border border-slate-100 flex flex-col items-center">
+            <span class="text-[8px] font-bold text-slate-500 uppercase tracking-wider mb-0.5">RADAR MULTIDIMENSIONAL</span>
+            <div style="height: 175px; width: 260px;"><canvas id="propRadarCanvas"></canvas></div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-1.5 text-[9px] my-1 font-mono">
+            <div class="p-2 bg-slate-50 rounded-xl border border-slate-100 text-left">
+              <span class="text-[7px] text-slate-400 font-bold uppercase block">⏱️ Custo aos Cofres</span>
+              <span class="text-xs font-black text-amber-600 font-mono">${c1.costPerMinute}</span>
+              <span class="text-[7px] text-slate-500 block">${c1.spendingPct}% do teto legal</span>
+            </div>
+            <div class="p-2 bg-slate-50 rounded-xl border border-slate-100 text-left">
+              <span class="text-[7px] text-slate-400 font-bold uppercase block">🏛️ Presença em Sessões</span>
+              <span class="text-xs font-black text-purple-700 font-mono">${c1.attendancePct}%</span>
+              <span class="text-[7px] text-slate-500 block">${c1.attendancePresences}</span>
+            </div>
+            <div class="col-span-2 p-2 bg-emerald-50 rounded-xl border border-emerald-100 text-center flex items-center justify-between">
+              <span class="text-[7.5px] uppercase font-bold text-emerald-800">💵 Gasto Anual Pagaria:</span>
+              <span class="text-[9px] font-black text-emerald-900 bg-white px-2 py-0.5 rounded border border-emerald-200">${c1.salariosMinimos}</span>
+            </div>
+          </div>
+
+          <div class="pt-1.5 border-t border-slate-100 flex items-center justify-between text-[7.5px] text-slate-400">
+            <span>raioxpolitico.org • Auditoria Cívica</span>
+            <span class="font-mono text-slate-500">TSE: ${c1.tseProtocol}</span>
+          </div>
+        </div>
+      `;
+      initRadar(c1, c2, duel, '#0284c7', 'rgba(2, 132, 199, 0.25)', false);
+    }
+
+    function renderProposal8(container, c1, c2, duel) {
+      container.innerHTML = `
+        <div id="export-target" class="w-[330px] bg-gradient-to-b from-[#faf5ff] via-white to-[#f5f3ff] p-4 rounded-[2rem] border border-purple-200 shadow-xl text-slate-900 flex flex-col justify-between" style="min-height: 520px;">
+          <div class="flex items-center justify-between border-b border-purple-100 pb-2">
+            <div class="flex items-center gap-1.5"><span class="w-6 h-6 rounded-lg bg-purple-600 text-white font-black text-[10px] flex items-center justify-center">RX</span><span class="text-[9px] font-black text-purple-950 tracking-wider">EXTRATO POLÍTICO CÍVICO</span></div>
+            <span class="px-2 py-0.5 rounded-full text-[7.5px] font-black bg-purple-100 text-purple-800">ELEITOR PRO</span>
+          </div>
+
+          <div class="flex items-center justify-between bg-white p-3 rounded-2xl border border-purple-100 shadow-sm my-1.5">
+            <div class="flex items-center gap-2.5">
+              <img src="${c1.avatar}" class="w-12 h-12 rounded-2xl object-cover border border-purple-300">
+              <div>
+                <span class="text-[7.5px] font-mono text-purple-600 font-bold uppercase block">Titular do Mandato</span>
+                <h4 class="font-black text-xs text-slate-900">${c1.name}</h4>
+                <span class="text-[9px] text-slate-500 font-medium">${c1.party} • Nº ${c1.number} (${c1.position})</span>
+              </div>
+            </div>
+            <div class="text-right">
+              <span class="text-[6.5px] font-bold text-slate-400 block uppercase">SCORE CÍVICO</span>
+              <span class="text-xl font-black text-purple-700 font-mono">${c1.ovr}</span>
+            </div>
+          </div>
+
+          <div class="p-3 bg-purple-900 text-white rounded-2xl shadow-md text-center space-y-0.5 my-1">
+            <span class="text-[7.5px] uppercase font-bold text-purple-300 tracking-wider block">CONSUMO DE RECURSO PÚBLICO (60s):</span>
+            <div class="text-xl font-black font-mono text-amber-300">${c1.costPerMinute}</div>
+            <span class="text-[7.5px] text-purple-200 block">Rateio estimado: ${c1.costPerCitizen} por paulista</span>
+          </div>
+
+          <div class="grid grid-cols-2 gap-1.5 text-[8.5px] my-1">
+            <div class="p-2 bg-white rounded-xl border border-purple-100">
+              <span class="text-[7px] text-slate-400 uppercase font-bold block">🏛️ Presença Efetiva</span>
+              <strong class="text-xs text-purple-900 font-mono">${c1.attendancePct}%</strong>
+              <span class="text-[7px] text-slate-500 block">${c1.attendancePresences.split(' ')[0]} presenças</span>
+            </div>
+            <div class="p-2 bg-white rounded-xl border border-purple-100">
+              <span class="text-[7px] text-slate-400 uppercase font-bold block">🛡️ Compliance / Ficha</span>
+              <strong class="text-xs text-emerald-600 font-mono">100% REGULAR</strong>
+              <span class="text-[7px] text-slate-500 block">Zero condenações</span>
+            </div>
+            <div class="col-span-2 p-2 bg-emerald-50 rounded-xl border border-emerald-200 text-center flex items-center justify-between">
+              <span class="text-[7.5px] font-bold text-emerald-800 uppercase">💵 Equivalência do Gasto Anual:</span>
+              <span class="text-[9px] font-black text-emerald-950 font-mono bg-white px-2 py-0.5 rounded border border-emerald-300">${c1.salariosMinimos}</span>
+            </div>
+          </div>
+
+          <div class="pt-1.5 border-t border-purple-100 flex items-center justify-between text-[7.5px] text-slate-400">
+            <span>🛡️ raioxpolitico.org • Auditoria</span>
+            <span class="font-mono text-purple-700 font-bold">TSE-SP #2026</span>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderProposal9(container, c1, c2, duel) {
+      container.innerHTML = `
+        <div id="export-target" class="w-[330px] bg-[#f8fafc] p-4 rounded-3xl border-2 border-emerald-600/40 shadow-xl text-slate-900 flex flex-col justify-between font-sans" style="min-height: 520px;">
+          <div class="flex items-center justify-between border-b border-emerald-600/20 pb-2.5">
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 rounded-lg bg-emerald-700 text-white flex items-center justify-center font-black text-xs shadow">BR</div>
+              <div>
+                <span class="text-[8px] font-bold text-emerald-800 uppercase block font-mono">JUSTIÇA ELEITORAL • AUDITORIA CÍVICA</span>
+                <h3 class="text-[10px] font-black text-slate-900">CERTIDÃO DE MANDATO & DADOS</h3>
+              </div>
+            </div>
+            <span class="px-2 py-0.5 rounded text-[8px] font-bold bg-emerald-100 text-emerald-900 border border-emerald-300">AUTÊNTICO</span>
+          </div>
+
+          <div class="flex items-center gap-3 bg-white p-3 rounded-2xl border border-slate-200 my-1.5">
+            <img src="${c1.avatar}" class="w-13 h-13 rounded-xl object-cover border border-emerald-600">
+            <div class="space-y-0.5">
+              <h4 class="font-black text-xs text-slate-900 uppercase">${c1.name}</h4>
+              <span class="text-[9.5px] font-bold text-emerald-800">${c1.party} • Nº ${c1.number}</span>
+              <span class="text-[8px] text-slate-500 block font-mono">Registro TSE: ${c1.tseProtocol}</span>
+            </div>
+          </div>
+
+          <div class="bg-white p-3 rounded-2xl border border-slate-200 space-y-1.5 text-[9px] my-1 font-mono">
+            <div class="flex justify-between border-b border-slate-100 pb-1"><span class="text-slate-500">CARGO REGISTRADO:</span><span class="font-bold text-slate-900">${c1.position.toUpperCase()}</span></div>
+            <div class="flex justify-between border-b border-slate-100 pb-1"><span class="text-slate-500">PRESENÇA EM PLENÁRIO:</span><span class="font-bold text-purple-700">${c1.attendancePct}% (${c1.attendancePresences.split(' ')[0]} presenças)</span></div>
+            <div class="flex justify-between border-b border-slate-100 pb-1"><span class="text-slate-500">USO DA COTA (CEAP):</span><span class="font-bold text-amber-700">${c1.spendingAmount} (${c1.spendingPct}% do teto)</span></div>
+            <div class="flex justify-between border-b border-slate-100 pb-1"><span class="text-slate-500">CUSTO AOS COFRES (60s):</span><span class="font-bold text-emerald-700">${c1.costPerMinute}</span></div>
+            <div class="flex justify-between"><span class="text-slate-500">CONDENAÇÕES COLEGIADAS:</span><span class="font-bold text-emerald-700">0 (NADA CONSTA)</span></div>
+          </div>
+
+          <div class="p-2.5 bg-emerald-100/70 rounded-2xl border border-emerald-300 text-center">
+            <span class="text-[7.5px] font-bold text-emerald-900 uppercase block">Impacto Social do Gasto Anual:</span>
+            <strong class="text-[10px] font-black text-emerald-950">💵 ${c1.salariosMinimos}</strong>
+          </div>
+
+          <div class="pt-2 border-t border-slate-200 flex items-center justify-between text-[7.5px] text-slate-500 font-mono">
+            <span>Código de Validação: #TSE-BR-2026-OK</span>
+            <span class="text-emerald-800 font-bold">raioxpolitico.org</span>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderProposal10(container, c1, c2, duel) {
+      container.innerHTML = `
+        <div id="export-target" class="w-[330px] bg-[#fffef7] p-4 rounded-2xl border-2 border-amber-900/20 shadow-2xl text-slate-900 flex flex-col justify-between font-sans" style="min-height: 520px;">
+          <div class="flex items-center justify-between border-b-2 border-amber-900/10 pb-2">
+            <span class="text-[9px] font-serif font-black italic text-amber-900 tracking-wider">Figurinha Oficial • Eleições 2026</span>
+            <span class="px-2 py-0.5 rounded bg-amber-200 text-amber-900 font-mono font-bold text-[8px]">Nº 055</span>
+          </div>
+
+          <div class="bg-white p-2.5 rounded-xl border border-amber-900/15 shadow-sm text-center my-1.5">
+            <img src="${c1.avatar}" class="w-full h-36 rounded-lg object-cover border border-amber-900/10">
+            <div class="pt-2 flex items-center justify-between">
+              <div class="text-left">
+                <h3 class="font-serif font-black text-sm text-amber-950">${c1.name}</h3>
+                <span class="text-[9px] font-bold text-amber-800">${c1.party} • Nº ${c1.number}</span>
+              </div>
+              <span class="px-2 py-1 bg-amber-900 text-white rounded-lg font-mono font-bold text-xs">${c1.ovr} pts</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-1.5 text-[8.5px] font-mono">
+            <div class="p-2 bg-amber-50 rounded-xl border border-amber-200"><span class="text-[7px] text-amber-800 font-bold block">CUSTO POR MINUTO</span><strong class="text-xs text-amber-950">${c1.costPerMinute}</strong></div>
+            <div class="p-2 bg-amber-50 rounded-xl border border-amber-200"><span class="text-[7px] text-amber-800 font-bold block">PRESENÇA EM SESSÕES</span><strong class="text-xs text-purple-900">${c1.attendancePct}%</strong></div>
+            <div class="col-span-2 p-2 bg-emerald-100 rounded-xl border border-emerald-300 text-center"><span class="text-[7.5px] text-emerald-900 font-bold block">EQUIVALÊNCIA ANUAL:</span><strong class="text-[9.5px] text-emerald-950">${c1.salariosMinimos}</strong></div>
+          </div>
+
+          <div class="pt-2 border-t-2 border-amber-900/10 flex items-center justify-between text-[8px] text-amber-800 font-serif">
+            <span>Coleção Raio-X Político</span>
+            <span>raioxpolitico.org</span>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderProposal11(container, c1, c2, duel) {
+      container.innerHTML = `
+        <div id="export-target" class="w-[330px] bg-[#070314] p-4 rounded-[2.25rem] border border-white/25 shadow-[0_0_50px_rgba(236,72,153,0.3)] text-white flex flex-col justify-between relative overflow-hidden" style="min-height: 520px;">
+          <div class="absolute -top-10 -left-10 w-40 h-40 bg-pink-500/30 rounded-full blur-3xl pointer-events-none"></div>
+          <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-cyan-500/30 rounded-full blur-3xl pointer-events-none"></div>
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-purple-500/20 rounded-full blur-3xl pointer-events-none"></div>
+
+          <div class="relative z-10 flex items-center justify-between border-b border-white/15 pb-2 text-[8px] font-bold text-pink-300 tracking-wider">
+            <span class="uppercase font-mono flex items-center gap-1.5"><i data-lucide="sparkles" class="w-3 h-3 text-pink-400"></i> AURORA CIVIC EDITION</span>
+            <span class="px-2 py-0.5 rounded-full bg-pink-500/20 text-pink-200 border border-pink-500/30">2026</span>
+          </div>
+
+          <div class="relative z-10 flex items-center justify-between bg-white/10 backdrop-blur-xl p-3 rounded-2xl border border-white/20 my-1.5 shadow-lg">
+            <div class="flex items-center gap-2.5">
+              <img src="${c1.avatar}" class="w-12 h-12 rounded-2xl object-cover border-2 border-pink-400 shadow-md">
+              <div>
+                <h4 class="font-black text-xs text-white uppercase">${c1.name}</h4>
+                <span class="text-[9.5px] font-bold text-pink-300">${c1.party} • Nº ${c1.number}</span>
+                <span class="text-[8px] text-slate-300 block">${c1.position}</span>
+              </div>
+            </div>
+            <div class="p-2 rounded-2xl bg-gradient-to-tr from-pink-500 to-purple-600 text-white text-center min-w-[50px] shadow-lg shadow-pink-500/30">
+              <span class="text-[6.5px] font-black uppercase tracking-widest block">OVR</span>
+              <span class="text-lg font-black font-mono leading-none">${c1.ovr}</span>
+            </div>
+          </div>
+
+          <div class="relative z-10 my-1 bg-white/5 backdrop-blur-md p-2 rounded-2xl border border-white/15 flex flex-col items-center">
+            <div style="height: 175px; width: 260px;"><canvas id="propRadarCanvas"></canvas></div>
+          </div>
+
+          <div class="relative z-10 grid grid-cols-2 gap-1.5 text-[8.5px] my-1 font-mono">
+            <div class="p-2 bg-white/10 backdrop-blur-md rounded-xl border border-white/15 text-left"><span class="text-[7px] text-pink-300 block">⏱️ CUSTO / MIN</span><strong class="text-white text-xs">${c1.costPerMinute}</strong></div>
+            <div class="p-2 bg-white/10 backdrop-blur-md rounded-xl border border-white/15 text-left"><span class="text-[7px] text-purple-300 block">🏛️ PRESENÇA</span><strong class="text-purple-200 text-xs">${c1.attendancePct}%</strong></div>
+            <div class="col-span-2 p-2 bg-emerald-500/20 backdrop-blur-md rounded-xl border border-emerald-400/40 text-center"><span class="text-[7.5px] text-emerald-300 block uppercase">💵 Gasto Anual Pagaria:</span><strong class="text-[9.5px] text-white font-black">${c1.salariosMinimos}</strong></div>
+          </div>
+
+          <div class="relative z-10 pt-1.5 border-t border-white/15 flex items-center justify-between text-[7.5px] text-slate-300">
+            <span>🛡️ raioxpolitico.org</span>
+            <span class="text-pink-300 font-mono">TSE Verified #2026</span>
+          </div>
+        </div>
+      `;
+      initRadar(c1, c2, duel, '#ec4899', 'rgba(236, 72, 153, 0.45)', true);
+    }
+
+    function renderProposal12(container, c1, c2, duel) {
+      container.innerHTML = `
+        <div id="export-target" class="w-[330px] bg-[#fde047] p-4 rounded-3xl border-4 border-black neo-shadow text-black flex flex-col justify-between font-brutal" style="min-height: 520px;">
+          <div class="bg-black text-yellow-300 px-3 py-1.5 rounded-xl neo-shadow-sm flex items-center justify-between text-[9px] font-black tracking-widest uppercase">
+            <span>⚠️ ALERTA ELEITORAL 2026</span>
+            <span class="bg-yellow-300 text-black px-1 rounded font-black text-[8px]">OFICIAL</span>
+          </div>
+
+          <div class="bg-white p-3 rounded-2xl border-3 border-black neo-shadow-sm flex items-center justify-between my-1.5">
+            <div class="flex items-center gap-2.5">
+              <img src="${c1.avatar}" class="w-13 h-13 rounded-xl object-cover border-2 border-black">
+              <div>
+                <h3 class="font-black text-xs uppercase text-black leading-tight">${c1.name}</h3>
+                <span class="text-[10px] font-black text-slate-700 block">${c1.party} • Nº ${c1.number}</span>
+                <span class="text-[8px] font-bold text-slate-600 block">${c1.position}</span>
+              </div>
+            </div>
+            <div class="bg-black text-yellow-300 p-2 rounded-xl text-center min-w-[50px]"><span class="text-[6.5px] font-bold block uppercase">SCORE</span><span class="text-base font-black font-mono leading-none">${c1.ovr}</span></div>
+          </div>
+
+          <div class="bg-black text-white p-3 rounded-2xl border-2 border-black neo-shadow-sm text-center space-y-0.5 my-1">
+            <span class="text-[8px] font-black text-yellow-300 uppercase tracking-wider block">CUSTO AOS COFRES PÚBLICOS (60s):</span>
+            <div class="text-2xl font-black font-mono text-yellow-300">${c1.costPerMinute}</div>
+            <span class="text-[8px] text-slate-300 block font-bold">${c1.costPerCitizen} por cidadão</span>
+          </div>
+
+          <div class="grid grid-cols-2 gap-2 text-[9px] my-1 font-bold">
+            <div class="bg-white p-2 rounded-xl border-2 border-black neo-shadow-sm text-center"><span class="text-[7.5px] text-slate-600 block uppercase">🏛️ Presença</span><strong class="text-sm font-black text-black font-mono">${c1.attendancePct}%</strong></div>
+            <div class="bg-white p-2 rounded-xl border-2 border-black neo-shadow-sm text-center"><span class="text-[7.5px] text-slate-600 block uppercase">🛡️ Ficha</span><strong class="text-sm font-black text-emerald-700 font-mono">LIMPA</strong></div>
+            <div class="col-span-2 bg-yellow-300 p-2 rounded-xl border-2 border-black neo-shadow-sm text-center"><span class="text-[8px] text-black font-black uppercase">💵 Gasto Anual Pagaria:</span><div class="text-xs font-black text-black">${c1.salariosMinimos}</div></div>
+          </div>
+
+          <div class="pt-1.5 border-t-2 border-black flex items-center justify-between text-[8px] font-black text-black">
+            <span>RAIOXPOLITICO.ORG</span>
+            <span>TSE #2026</span>
+          </div>
+        </div>
+      `;
+    }
+
+    // ================= NEW VIRAL PROPOSALS 13 to 18 =================
+
+    // 13. O Currículo do Candidato (PROCESSO SELETIVO / LINKEDIN VIRAL)
+    function renderProposal13(container, c1, c2, duel) {
+      container.innerHTML = `
+        <div id="export-target" class="w-[330px] bg-slate-900 p-4 rounded-3xl border border-sky-500/40 shadow-2xl text-white flex flex-col justify-between" style="min-height: 520px;">
+          
+          <!-- CV Header -->
+          <div class="border-b border-white/10 pb-2 flex items-center justify-between">
+            <div>
+              <span class="text-[7.5px] font-mono text-sky-400 uppercase font-bold tracking-wider block">PROCESSO SELETIVO ELEITORAL 2026</span>
+              <h3 class="text-xs font-black text-white uppercase">CURRÍCULO DO CANDIDATO</h3>
+            </div>
+            <span class="px-2 py-0.5 rounded bg-sky-500/20 text-sky-300 text-[8px] font-bold border border-sky-500/30">VAGA #01</span>
+          </div>
+
+          <!-- Job Candidate Card -->
+          <div class="bg-slate-950 p-3 rounded-2xl border border-white/10 my-1.5 flex items-center gap-3">
+            <img src="${c1.avatar}" class="w-13 h-13 rounded-xl object-cover border-2 border-sky-400 shadow">
+            <div>
+              <h4 class="font-black text-xs text-white uppercase">${c1.name}</h4>
+              <span class="text-[9px] font-bold text-sky-300 block">Pleiteando: ${c1.position}</span>
+              <span class="text-[7.5px] text-slate-400 font-mono">Experiência: ${c1.experienceYears}</span>
+            </div>
+          </div>
+
+          <!-- Resume Sections -->
+          <div class="space-y-1.5 text-[8.5px] my-1 font-mono">
+            <div class="p-2 bg-slate-950/70 rounded-xl border border-white/5 flex items-center justify-between">
+              <span class="text-slate-400">📅 ASSIDUIDADE NO TRABALHO:</span>
+              <strong class="text-emerald-400 font-bold">${c1.attendancePct}% (${c1.attendancePresences.split(' ')[0]} presenças)</strong>
+            </div>
+
+            <div class="p-2 bg-slate-950/70 rounded-xl border border-white/5 flex items-center justify-between">
+              <span class="text-slate-400">💰 CUSTO DE MANUTENÇÃO (60s):</span>
+              <strong class="text-amber-400 font-bold">${c1.costPerMinute}</strong>
+            </div>
+
+            <div class="p-2 bg-slate-950/70 rounded-xl border border-white/5 flex items-center justify-between">
+              <span class="text-slate-400">⚖️ ANTECEDENTES ÉTICOS:</span>
+              <strong class="text-sky-300 font-bold">0 Condenações</strong>
+            </div>
+
+            <div class="p-2 bg-slate-950/70 rounded-xl border border-white/5 flex items-center justify-between">
+              <span class="text-slate-400">📊 ÍNDICE GERAL DE EFICIÊNCIA:</span>
+              <strong class="text-purple-400 font-bold">${c1.ovr} / 100 PTS</strong>
+            </div>
+          </div>
+
+          <!-- Recruiter Question Hook -->
+          <div class="p-2.5 rounded-xl bg-gradient-to-r from-sky-950 to-indigo-950 border border-sky-500/30 text-center space-y-0.5">
+            <span class="text-[7.5px] text-sky-300 font-bold uppercase block">DECISÃO DO ELEITOR-RECRUTADOR:</span>
+            <p class="text-[9.5px] font-black text-white">Você contrataria este perfil para administrar o Estado?</p>
+          </div>
+
+          <!-- CV Footer -->
+          <div class="pt-1.5 border-t border-white/10 flex items-center justify-between text-[7.5px] text-slate-400 font-mono">
+            <span>Avalie mais candidatos em:</span>
+            <span class="text-sky-400 font-bold">raioxpolitico.org</span>
+          </div>
+
+        </div>
+      `;
+    }
+
+    // 14. Tela de Bloqueio com Notificações Push (PATTERN INTERRUPT VIRAL)
+    function renderProposal14(container, c1, c2, duel) {
+      container.innerHTML = `
+        <div id="export-target" class="w-[330px] bg-gradient-to-b from-[#181028] via-[#0b0716] to-[#030108] p-4 rounded-[2.5rem] border-4 border-slate-700 shadow-2xl text-white flex flex-col justify-between" style="min-height: 520px;">
+          
+          <!-- Smartphone Notch & Clock Top -->
+          <div class="text-center space-y-0.5">
+            <div class="w-24 h-3.5 bg-black rounded-full mx-auto mb-1"></div>
+            <div class="text-2xl font-light text-slate-200 font-mono">08:30</div>
+            <span class="text-[8.5px] text-slate-400 font-medium">Domingo, 4 de Outubro • Dia da Eleição</span>
+          </div>
+
+          <!-- Stacked Push Notifications -->
+          <div class="space-y-2 my-2">
+            
+            <!-- Push 1: Bank Charge Alert -->
+            <div class="bg-white/15 backdrop-blur-xl p-2.5 rounded-2xl border border-white/20 shadow-lg text-[9px] space-y-1">
+              <div class="flex items-center justify-between text-slate-300 text-[8px]">
+                <span class="flex items-center gap-1 font-bold text-amber-400"><i data-lucide="bell" class="w-3 h-3"></i> BANCO DO CONTRIBUINTE</span>
+                <span>Agora</span>
+              </div>
+              <p class="font-bold text-white leading-tight">🚨 DÉBITO AUTOMÁTICO: <span class="text-amber-300 font-mono">${c1.costPerMinute}</span> debitado pelo mandato de ${c1.name} (${c1.party}).</p>
+            </div>
+
+            <!-- Push 2: Presence Alert -->
+            <div class="bg-white/15 backdrop-blur-xl p-2.5 rounded-2xl border border-white/20 shadow-lg text-[9px] space-y-1">
+              <div class="flex items-center justify-between text-slate-300 text-[8px]">
+                <span class="flex items-center gap-1 font-bold text-purple-400"><i data-lucide="check-circle" class="w-3 h-3"></i> AUDITORIA PLENÁRIO</span>
+                <span>Há 2 min</span>
+              </div>
+              <p class="font-bold text-white leading-tight">🏛️ PRESENÇA REGISTRADA: Taxa de <span class="text-purple-300 font-mono">${c1.attendancePct}%</span> nas votações (${c1.attendancePresences}).</p>
+            </div>
+
+            <!-- Push 3: TSE Clean Record -->
+            <div class="bg-white/15 backdrop-blur-xl p-2.5 rounded-2xl border border-white/20 shadow-lg text-[9px] space-y-1">
+              <div class="flex items-center justify-between text-slate-300 text-[8px]">
+                <span class="flex items-center gap-1 font-bold text-emerald-400"><i data-lucide="shield-check" class="w-3 h-3"></i> JUSTIÇA ELEITORAL</span>
+                <span>Há 5 min</span>
+              </div>
+              <p class="font-bold text-white leading-tight">🛡️ FICHA LIMPA: 0 condenações colegiadas e plano homologado no TSE.</p>
+            </div>
+
+          </div>
+
+          <!-- Lock Screen Swipe Action -->
+          <div class="text-center pt-2 border-t border-white/10 space-y-1">
+            <span class="text-[8.5px] font-mono text-slate-300 flex items-center justify-center gap-1">
+              <i data-lucide="chevron-up" class="w-3 h-3 text-sky-400 animate-bounce"></i> Desbloqueie o dossiê completo
+            </span>
+            <span class="text-[7.5px] text-slate-500 font-mono">raioxpolitico.org</span>
+          </div>
+
+        </div>
+      `;
+    }
+
+    // 15. Tier List S-Rank Cívico (GAMER / COMMUNITY VIRAL)
+    function renderProposal15(container, c1, c2, duel) {
+      container.innerHTML = `
+        <div id="export-target" class="w-[330px] bg-[#0c081e] p-4 rounded-3xl border-2 border-emerald-500/50 shadow-2xl text-white flex flex-col justify-between" style="min-height: 520px;">
+          
+          <!-- Tier List Header -->
+          <div class="flex items-center justify-between border-b border-white/10 pb-2">
+            <div class="flex items-center gap-1.5">
+              <span class="px-2 py-0.5 rounded bg-emerald-500 text-slate-950 font-black text-[9px]">TIER LIST</span>
+              <span class="text-[9px] font-black text-white uppercase tracking-wider">ELEIÇÕES 2026</span>
+            </div>
+            <span class="text-[8px] font-mono text-slate-400">Classificação Oficial</span>
+          </div>
+
+          <!-- S-Tier Hero Card Banner -->
+          <div class="bg-gradient-to-r from-emerald-950 via-slate-900 to-emerald-900/40 p-3 rounded-2xl border-2 border-emerald-400 my-1.5 flex items-center justify-between shadow-lg">
+            <div class="flex items-center gap-2.5">
+              <img src="${c1.avatar}" class="w-13 h-13 rounded-xl object-cover border-2 border-emerald-400">
+              <div>
+                <h3 class="text-xs font-black text-white uppercase">${c1.name}</h3>
+                <span class="text-[9px] font-bold text-emerald-300">${c1.party} • ${c1.position}</span>
+                <span class="text-[7.5px] text-slate-400 block font-mono">Nº ${c1.number}</span>
+              </div>
+            </div>
+            <div class="w-12 h-12 rounded-2xl bg-emerald-500 text-slate-950 flex flex-col items-center justify-center font-black shadow-lg shadow-emerald-500/30">
+              <span class="text-[6.5px] uppercase leading-none">RANK</span>
+              <span class="text-2xl font-mono leading-none">${c1.tierRank}</span>
+            </div>
+          </div>
+
+          <!-- Tier Breakdown Rows -->
+          <div class="space-y-1.5 text-[8.5px] font-mono my-1">
+            <div class="flex items-center bg-slate-900/90 rounded-xl overflow-hidden border border-white/5">
+              <span class="w-10 bg-emerald-500 text-slate-950 font-black text-center py-2 text-[10px]">S</span>
+              <span class="px-3 text-slate-300 font-bold flex-1">Integridade & Ficha Limpa (92/100)</span>
+            </div>
+
+            <div class="flex items-center bg-slate-900/90 rounded-xl overflow-hidden border border-white/5">
+              <span class="w-10 bg-sky-500 text-slate-950 font-black text-center py-2 text-[10px]">S</span>
+              <span class="px-3 text-slate-300 font-bold flex-1">Presença em Plenário (${c1.attendancePct}%)</span>
+            </div>
+
+            <div class="flex items-center bg-slate-900/90 rounded-xl overflow-hidden border border-white/5">
+              <span class="w-10 bg-amber-500 text-slate-950 font-black text-center py-2 text-[10px]">B</span>
+              <span class="px-3 text-slate-300 font-bold flex-1">Custo por Minuto (${c1.costPerMinute})</span>
+            </div>
+          </div>
+
+          <!-- Impact Summary -->
+          <div class="p-2.5 rounded-xl bg-slate-900 border border-emerald-500/30 text-center">
+            <span class="text-[7.5px] text-emerald-400 font-bold uppercase block">Veredito da Comunidade:</span>
+            <span class="text-[9.5px] font-black text-white">Gasto anual pagaria 💵 ${c1.salariosMinimos}</span>
+          </div>
+
+          <div class="pt-1.5 border-t border-white/10 flex items-center justify-between text-[7.5px] text-slate-400 font-mono">
+            <span>Monte sua Tier List em:</span>
+            <span class="text-emerald-400 font-bold">raioxpolitico.org</span>
+          </div>
+
+        </div>
+      `;
+    }
+
+    // 16. O Boletim do Mandato (DIDÁTICO / FAMILIARIDADE UNIVERSAL)
+    function renderProposal16(container, c1, c2, duel) {
+      container.innerHTML = `
+        <div id="export-target" class="w-[330px] bg-[#fffdfa] p-4 rounded-3xl border-2 border-indigo-900/20 shadow-2xl text-slate-900 flex flex-col justify-between font-sans" style="min-height: 520px;">
+          
+          <!-- School Card Header -->
+          <div class="flex items-center justify-between border-b-2 border-indigo-900/10 pb-2">
+            <div>
+              <span class="text-[7.5px] font-mono font-bold text-indigo-800 uppercase tracking-widest block">CONSELHO DE CLASSE CÍVICO</span>
+              <h3 class="text-xs font-black text-indigo-950">BOLETIM ESCOLAR DO POLÍTICO</h3>
+            </div>
+            <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-900 text-[8px] font-black border border-emerald-300">APROVADO</span>
+          </div>
+
+          <!-- Student Info -->
+          <div class="flex items-center justify-between bg-indigo-50/70 p-2.5 rounded-2xl border border-indigo-100 my-1.5">
+            <div class="flex items-center gap-2">
+              <img src="${c1.avatar}" class="w-12 h-12 rounded-xl object-cover border border-indigo-300">
+              <div>
+                <span class="text-[7.5px] font-bold text-indigo-600 uppercase block font-mono">Aluno / Candidato:</span>
+                <h4 class="font-black text-xs text-indigo-950">${c1.name}</h4>
+                <span class="text-[8.5px] text-slate-600 font-medium">${c1.party} • Nº ${c1.number} (${c1.position})</span>
+              </div>
+            </div>
+            <div class="text-right">
+              <span class="text-[6.5px] font-bold text-slate-500 block uppercase">MÉDIA GERAL</span>
+              <span class="text-xl font-black text-indigo-900 font-mono">${c1.schoolGrade}</span>
+            </div>
+          </div>
+
+          <!-- Grades Table -->
+          <div class="bg-white rounded-2xl border border-indigo-100 overflow-hidden text-[8.5px] font-mono my-1">
+            <div class="grid grid-cols-12 bg-indigo-950 text-white font-bold p-1.5 text-[7.5px]">
+              <span class="col-span-7">DISCIPLINA CÍVICA</span>
+              <span class="col-span-3 text-center">STATUS</span>
+              <span class="col-span-2 text-right">NOTA</span>
+            </div>
+            
+            <div class="p-2 space-y-1.5 text-slate-800">
+              <div class="grid grid-cols-12 items-center border-b border-slate-100 pb-1">
+                <span class="col-span-7 font-bold">1. Assiduidade (Presença)</span>
+                <span class="col-span-3 text-center text-emerald-700 font-bold">${c1.attendancePct}%</span>
+                <span class="col-span-2 text-right font-black text-indigo-900">9.4</span>
+              </div>
+
+              <div class="grid grid-cols-12 items-center border-b border-slate-100 pb-1">
+                <span class="col-span-7 font-bold">2. Ética & Ficha Limpa</span>
+                <span class="col-span-3 text-center text-emerald-700 font-bold">0 Conden.</span>
+                <span class="col-span-2 text-right font-black text-indigo-900">9.2</span>
+              </div>
+
+              <div class="grid grid-cols-12 items-center border-b border-slate-100 pb-1">
+                <span class="col-span-7 font-bold">3. Economia de Cota</span>
+                <span class="col-span-3 text-center text-amber-700 font-bold">${c1.spendingPct}% uso</span>
+                <span class="col-span-2 text-right font-black text-indigo-900">7.0</span>
+              </div>
+
+              <div class="grid grid-cols-12 items-center">
+                <span class="col-span-7 font-bold">4. Custo / Minuto</span>
+                <span class="col-span-3 text-center text-amber-700 font-bold">${c1.costPerMinute}</span>
+                <span class="col-span-2 text-right font-black text-indigo-900">7.5</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- School Stamp -->
+          <div class="p-2 rounded-xl bg-indigo-100/60 border border-indigo-200 text-center">
+            <span class="text-[7.5px] text-indigo-900 font-bold block uppercase">Parecer do Conselho Popular:</span>
+            <span class="text-[9px] font-black text-indigo-950">Gasto anual equivalente a 💵 ${c1.salariosMinimos}</span>
+          </div>
+
+          <div class="pt-1.5 border-t border-indigo-900/10 flex items-center justify-between text-[7.5px] text-slate-500 font-mono">
+            <span>Boletim completo em:</span>
+            <span class="text-indigo-800 font-bold">raioxpolitico.org</span>
+          </div>
+
+        </div>
+      `;
+    }
+
+    // 17. Thread de Fato Checado (TWITTER / X VIRAL FORMAT)
+    function renderProposal17(container, c1, c2, duel) {
+      container.innerHTML = `
+        <div id="export-target" class="w-[330px] bg-black p-4 rounded-3xl border border-white/20 shadow-2xl text-white flex flex-col justify-between font-sans" style="min-height: 520px;">
+          
+          <!-- Tweet Author Header -->
+          <div class="flex items-start justify-between">
+            <div class="flex items-center gap-2.5">
+              <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-sky-400 to-indigo-600 flex items-center justify-center font-black text-white text-xs shadow">
+                RX
+              </div>
+              <div>
+                <div class="flex items-center gap-1">
+                  <span class="font-black text-xs text-white">Raio-X Político</span>
+                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-sky-400 fill-sky-400"></i>
+                </div>
+                <span class="text-[8px] text-slate-400 font-mono">@raioxpolitico • Auditoria Oficial</span>
+              </div>
+            </div>
+            <i data-lucide="twitter" class="w-4 h-4 text-sky-400"></i>
+          </div>
+
+          <!-- Viral Tweet Hook Text -->
+          <div class="my-2 space-y-1 text-[9.5px] text-slate-200 leading-relaxed">
+            <p>🧵 <strong class="text-white font-bold">FATO CHECADO:</strong> Quanto realmente custa o mandato de <strong class="text-sky-300 font-bold">${c1.name} (${c1.party})</strong> aos cofres públicos? Puxamos os dados oficiais do TSE:</p>
+          </div>
+
+          <!-- Quoted Box with Candidate Data -->
+          <div class="bg-slate-900 p-3 rounded-2xl border border-white/10 space-y-2 my-1">
+            <div class="flex items-center gap-2.5 border-b border-white/10 pb-2">
+              <img src="${c1.avatar}" class="w-10 h-10 rounded-xl object-cover border border-sky-400">
+              <div>
+                <h4 class="font-black text-xs text-white">${c1.name}</h4>
+                <span class="text-[8.5px] text-slate-400">${c1.party} • Nº ${c1.number} (${c1.position})</span>
+              </div>
+            </div>
+
+            <!-- Tweet Key Bullet Points -->
+            <div class="space-y-1 text-[8.5px] font-mono text-slate-300">
+              <div>⏱️ <strong>Custo a cada 60s:</strong> <span class="text-amber-400 font-bold">${c1.costPerMinute}</span></div>
+              <div>🏛️ <strong>Presença em Plenário:</strong> <span class="text-purple-300 font-bold">${c1.attendancePct}%</span> (${c1.attendancePresences.split(' ')[0]} pres.)</div>
+              <div>💵 <strong>Equivalência Anual:</strong> <span class="text-emerald-400 font-bold">${c1.salariosMinimos}</span></div>
+            </div>
+          </div>
+
+          <!-- Social Engagement Mock -->
+          <div class="pt-2 border-t border-white/10 flex items-center justify-between text-[8px] text-slate-400 font-mono">
+            <span>💬 2.4k respostas</span>
+            <span>🔄 8.9k reposts</span>
+            <span>❤️ 42.1k curtidas</span>
+          </div>
+
+        </div>
+      `;
+    }
+
+    // 18. Street Versus Battle (POLARIZAÇÃO COMPARATIVA DIRETA)
+    function renderProposal18(container, c1, c2, duel) {
+      container.innerHTML = `
+        <div id="export-target" class="w-[330px] bg-slate-950 p-4 rounded-3xl border-2 border-rose-500/50 shadow-2xl text-white flex flex-col justify-between font-sans" style="min-height: 520px;">
+          
+          <!-- Versus Top Banner -->
+          <div class="text-center space-y-0.5 border-b border-white/10 pb-2">
+            <span class="px-2.5 py-0.5 rounded-full bg-rose-600 text-white font-black text-[8px] uppercase tracking-widest">
+              ⚔️ DUELO DAS ELEIÇÕES 2026
+            </span>
+            <h3 class="text-xs font-black text-white mt-1">QUEM MERECE SEU VOTO?</h3>
+          </div>
+
+          <!-- Head to Head Clash Box -->
+          <div class="grid grid-cols-11 items-center gap-1 bg-slate-900 p-2.5 rounded-2xl border border-white/10 my-2">
+            
+            <!-- Left Candidate -->
+            <div class="col-span-5 text-center space-y-1">
+              <img src="${c1.avatar}" class="w-14 h-14 rounded-2xl object-cover border-2 border-amber-400 mx-auto shadow-md">
+              <div>
+                <span class="font-black text-[10px] text-amber-300 block uppercase truncate">${c1.shortName}</span>
+                <span class="text-[7.5px] text-slate-400 font-mono">${c1.party} • Nº ${c1.number}</span>
+              </div>
+              <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 font-mono font-bold text-[8px] inline-block">OVR ${c1.ovr}</span>
+            </div>
+
+            <!-- VS Badge -->
+            <div class="col-span-1 text-center font-black text-rose-500 font-mono text-sm">
+              VS
+            </div>
+
+            <!-- Right Candidate -->
+            <div class="col-span-5 text-center space-y-1">
+              <img src="${c2.avatar}" class="w-14 h-14 rounded-2xl object-cover border-2 border-purple-400 mx-auto shadow-md">
+              <div>
+                <span class="font-black text-[10px] text-purple-300 block uppercase truncate">${c2.shortName}</span>
+                <span class="text-[7.5px] text-slate-400 font-mono">${c2.party} • Nº ${c2.number}</span>
+              </div>
+              <span class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 font-mono font-bold text-[8px] inline-block">OVR ${c2.ovr}</span>
+            </div>
+
+          </div>
+
+          <!-- Direct Metrics Battle Breakdown -->
+          <div class="space-y-1.5 text-[8px] font-mono my-1">
+            
+            <!-- Metric 1: Custo / Minuto -->
+            <div class="bg-slate-900/90 p-2 rounded-xl border border-white/5 space-y-0.5">
+              <span class="text-slate-400 block text-center uppercase font-bold">⏱️ CUSTO POR MINUTO</span>
+              <div class="flex justify-between items-center font-bold">
+                <span class="text-amber-300">${c1.costPerMinute}</span>
+                <span class="text-slate-500">VS</span>
+                <span class="text-purple-300">${c2.costPerMinute}</span>
+              </div>
+            </div>
+
+            <!-- Metric 2: Presença -->
+            <div class="bg-slate-900/90 p-2 rounded-xl border border-white/5 space-y-0.5">
+              <span class="text-slate-400 block text-center uppercase font-bold">🏛️ TAXA DE PRESENÇA</span>
+              <div class="flex justify-between items-center font-bold">
+                <span class="text-amber-300">${c1.attendancePct}% (${c1.attendancePresences.split(' ')[0]})</span>
+                <span class="text-slate-500">VS</span>
+                <span class="text-purple-300">${c2.attendancePct}% (${c2.attendancePresences.split(' ')[0]})</span>
+              </div>
+            </div>
+
+            <!-- Metric 3: Ficha -->
+            <div class="bg-slate-900/90 p-2 rounded-xl border border-white/5 space-y-0.5">
+              <span class="text-slate-400 block text-center uppercase font-bold">🛡️ CONDENAÇÕES COLEGIADAS</span>
+              <div class="flex justify-between items-center font-bold text-[8.5px]">
+                <span class="text-emerald-400">0 CONDENAÇÕES</span>
+                <span class="text-slate-500">VS</span>
+                <span class="${c2.id === 'cand-3' ? 'text-amber-400' : 'text-emerald-400'}">${c2.id === 'cand-3' ? 'EM APURAÇÃO' : '0 CONDENAÇÕES'}</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Versus Bottom -->
+          <div class="pt-1.5 border-t border-white/10 flex items-center justify-between text-[7.5px] text-slate-400 font-mono">
+            <span>Duelo auditado em:</span>
+            <span class="text-rose-400 font-bold">raioxpolitico.org</span>
+          </div>
+
+        </div>
+      `;
+    }
+
+    // Shared Radar Initializer
+    function initRadar(cand1, cand2, isDuel, color, bg, isDarkTheme = true) {
+      setTimeout(() => {
+        const canvas = document.getElementById('propRadarCanvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        if (activeRadarInstance) activeRadarInstance.destroy();
+
+        const labels = ['Integridade', 'Eficiência', 'Transparência', 'Coerência', 'Propostas', 'Presença'];
+        const datasets = [];
+
+        if (isDuel && cand2) {
+          datasets.push({
+            label: cand1.shortName,
+            data: cand1.radar,
+            backgroundColor: 'rgba(245, 158, 11, 0.4)',
+            borderColor: '#f59e0b',
+            borderWidth: 2.5,
+            pointRadius: 3
+          });
+          datasets.push({
+            label: cand2.shortName,
+            data: cand2.radar,
+            backgroundColor: 'rgba(192, 132, 252, 0.4)',
+            borderColor: '#c084fc',
+            borderWidth: 2.5,
+            pointRadius: 3
+          });
+        } else {
+          datasets.push({
+            label: cand1.shortName,
+            data: cand1.radar,
+            backgroundColor: bg,
+            borderColor: color,
+            borderWidth: 2.5,
+            pointRadius: 3.5,
+            pointBackgroundColor: isDarkTheme ? '#ffffff' : color
+          });
+        }
+
+        const gridColor = isDarkTheme ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.12)';
+        const labelColor = isDarkTheme ? '#ffffff' : '#0f172a';
+
+        activeRadarInstance = new Chart(ctx, {
+          type: 'radar',
+          data: { labels, datasets },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            animation: false,
+            layout: { padding: 2 },
+            scales: {
+              r: {
+                angleLines: { color: gridColor },
+                grid: { color: gridColor },
+                pointLabels: {
+                  color: labelColor,
+                  font: { size: 9.5, weight: 'bold', family: 'Inter, sans-serif' },
+                  padding: 2
+                },
+                ticks: { display: false, min: 0, max: 100 }
+              }
+            },
+            plugins: {
+              legend: {
+                display: !!isDuel,
+                position: 'top',
+                labels: { color: labelColor, boxWidth: 10, font: { size: 9, weight: 'bold' } }
+              }
+            }
+          }
+        });
+      }, 50);
+    }
+
+    async function downloadActiveCard(resolution = 'fhd') {
+      const target = document.getElementById('export-target');
+      if (!target) return;
+      const scale = resolution === '4k' ? 3.5 : 2.2;
+      
+      try {
+        const canvas = await html2canvas(target, {
+          scale: scale,
+          useCORS: true,
+          allowTaint: true,
+          logging: false
+        });
+
+        const link = document.createElement('a');
+        link.download = `proposta-card-${activeProposalId}-${resolution.toUpperCase()}.png`;
+        link.href = canvas.toDataURL('image/png', 0.95);
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      } catch (err) {
+        console.error('Erro no download:', err);
+        alert('Erro ao gerar a imagem.');
+      }
+    }
+
+    // Run on load
+    window.addEventListener('DOMContentLoaded', init);
+  </script>
+</body>
+</html>

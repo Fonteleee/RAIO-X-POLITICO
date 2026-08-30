@@ -1,0 +1,24 @@
+# Raio-X Político (raioxpolitico.org)
+> Plataforma de Inteligência Cívica, Transparência Pública e Dossiê Auditado dos Candidatos às Eleições Brasileiras de 2026.
+
+## Fontes Oficiais e Integridade de Dados
+- **TSE (Tribunal Superior Eleitoral):** DivulgaCandContas, Registros de Candidatura, Declarações de Bens, Certidões de Quitação Eleitoral e Protocolos Oficiais de Planos de Governo.
+- **Câmara dos Deputados e Senado Federal:** APIs Oficiais de Dados Abertos (Frequência Biométrica em Votações Nominais e Cota para o Exercício da Atividade Parlamentar - CEAP).
+- **Poder Judiciário:** Conselho Nacional de Justiça (CNJ), STF, STJ, TJs Estaduais e TRFs (Certidões de Distribuição Cível e Criminal, Processos de 2ª Instância e Ficha Limpa).
+- **Controladoria-Geral da União (CGU) & Siga Brasil:** Rastreabilidade de Emendas Parlamentares (Concurso Aberto vs Transferências Especiais/Emendas Pix).
+- **Fact-Checking:** Agências certificadas pela International Fact-Checking Network (IFCN) e Transcrição Oficial de Debates com IA (NotebookLM Engine).
+
+## Marco Jurídico e Proteção Constitucional
+- Constituição Federal de 1988: Art. 5º, incisos XXXIII e LX, e Art. 37 (Publicidade e Moralidade).
+- Lei nº 12.527/2011 (Lei de Acesso à Informação - LAI).
+- Lei nº 13.709/2018, Art. 7º, § 4º (LGPD - Tratamento de Dados Manifestamente Públicos).
+- Lei Complementar nº 135/2010 (Lei da Ficha Limpa).
+- Resolução TSE nº 23.610/2019 e Resolução TSE nº 23.732/2024 (Regulamentação de Inteligência Artificial e Vedação a Deepfakes no Pleito).
+
+## Indicadores Oficiais Auditados
+1. **Pontuação Geral (0 a 100):** Média ponderada multidimensional composta por Integridade (40%), Eficiência (25%), Transparência (15%), Coerência (10%) e Presença em Plenário (10%).
+2. **Índice de Presença em Plenário (%):** Presença real em sessões deliberativas nominais com votação em plenário.
+3. **Disciplina Fiscal da Cota (CEAP):** Comparativo mensal entre o teto permitido e o gasto auditado, com conversão em impacto cívico real.
+4. **Transparência de Emendas (% Aberto):** Percentual de verbas públicas direcionadas por editais públicos abertos e auditáveis (Selo de Integridade).
+5. **Cobertura de Gargalos Constitucionais (%):** Cruzamento algorítmico entre as 3 maiores dores do estado e as propostas protocoladas no TSE.
+6. **Veracidade no Debate Oficial (%):** Índice de consistência das falas transcritas em confrontos diretos televisionados.

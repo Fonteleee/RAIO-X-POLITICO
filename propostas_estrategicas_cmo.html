@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laboratório Estratégico do CMO • 8 Direções de Figurinha (A a H)</title>
+  
+  <!-- Tailwind CSS & Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            mono: ['"JetBrains Mono"', 'monospace'],
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            serif: ['"Playfair Display"', 'Georgia', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- html2canvas -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen antialiased selection:bg-rose-500 selection:text-white">
+
+  <!-- TOP HEADER -->
+  <header class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-white/10 px-4 py-3">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-rose-500 via-amber-500 to-sky-500 flex items-center justify-center text-white font-black text-xl shadow-lg">
+          🎯
+        </div>
+        <div>
+          <h1 class="text-base font-black tracking-tight text-white flex items-center gap-2">
+            Laboratório do CMO • 8 Opções de Redesign (A até H)
+          </h1>
+          <p class="text-xs text-slate-400">
+            Exploração completa com novos rodapés de impacto: <b>Retorno Cívico (ROI)</b>, <b>Evolução Patrimonial</b> e <b>Performance em Debates</b>.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2 text-xs">
+        <a href="http://localhost:8080/index.html" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-white/10 font-bold transition flex items-center gap-1.5">
+          <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Voltar ao Site Principal
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-7xl mx-auto px-4 py-8 space-y-16">
+
+    <!-- =========================================================================
+         SEÇÃO 5: OPÇÃO E - EXECUTIVE GOVERNANCE & ROI CÍVICO (SUBSTITUI RODAPÉ)
+         ========================================================================= -->
+    <section class="space-y-4">
+      <div class="flex items-center justify-between border-b border-white/10 pb-3">
+        <div>
+          <span class="text-[10px] font-black uppercase tracking-wider text-amber-400">Opção E • Novo Rodapé #1 (ROI Cívico)</span>
+          <h3 class="text-lg font-black text-white flex items-center gap-2">
+            🇪 Executive Governance • Foco em Retorno sobre Custo aos Cofres
+          </h3>
+          <p class="text-xs text-slate-400">
+            Substitui o rodapé de salários mínimos pelo <b>Retorno Cívico do Mandato (ROI)</b>: quanto o político entregou em obras/creches por real gasto no gabinete.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
+        
+        <!-- CARD E1: Eduardo Rocha -->
+        <div class="space-y-3 w-full max-w-[360px]">
+          <div class="flex items-center justify-between text-xs">
+            <span class="font-bold text-amber-400">E1. Eduardo Rocha (PSD)</span>
+            <button onclick="downloadCard('card-target-e1', 'opcao-e-eduardo')" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-[11px] font-bold text-slate-200 border border-white/10 flex items-center gap-1 transition">
+              <i data-lucide="download" class="w-3 h-3"></i> Baixar PNG
+            </button>
+          </div>
+
+          <!-- TARGET E1 -->
+          <div id="card-target-e1" class="w-full bg-[#fdfbf7] p-4 rounded-[28px] border-2 border-stone-400 text-stone-900 space-y-2.5 shadow-2xl relative font-sans">
+            <!-- Header -->
+            <div class="flex items-center justify-between border-b-2 border-stone-900 pb-1.5">
+              <span class="text-[9px] font-black uppercase tracking-widest text-stone-900 font-mono">EXECUTIVE GOVERNANCE DOSSIER</span>
+              <span class="text-[8.5px] font-mono font-black text-amber-800">ELEIÇÕES 2026</span>
+            </div>
+
+            <!-- Profile -->
+            <div class="flex items-center justify-between gap-2">
+              <div class="flex items-center gap-2.5 min-w-0">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400" class="w-14 h-14 rounded-2xl object-cover border-2 border-stone-900 shadow-md flex-shrink-0">
+                <div class="min-w-0 text-left space-y-0.5">
+                  <h4 class="font-black text-sm text-stone-950 uppercase tracking-tight truncate leading-tight">EDUARDO ROCHA</h4>
+                  <p class="text-[11px] font-bold text-stone-700 font-mono leading-none">PSD • Nº 55</p>
+                  <span class="text-[8.5px] font-medium text-stone-600 block">Pretensão: Governador (SP)</span>
+                </div>
+              </div>
+              <div class="p-1.5 rounded-2xl bg-stone-900 text-white text-center min-w-[58px] shadow-sm flex flex-col items-center justify-center">
+                <span class="text-[6px] uppercase font-bold text-amber-400 block tracking-wider">GOVERNANÇA</span>
+                <span class="text-xl font-black font-mono leading-none block my-0.5 text-white">91</span>
+              </div>
+            </div>
+
+            <!-- FICHA LIMPA & AUDITORIA -->
+            <div class="p-2 rounded-xl bg-emerald-50 border border-emerald-300 flex items-center justify-between text-left">
+              <span class="text-[8.5px] font-black text-emerald-950 flex items-center gap-1 font-mono">
+                <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-700"></i> FICHA LIMPA: 0 CONDENAÇÕES
+              </span>
+              <span class="text-[7.5px] font-bold text-emerald-800 bg-emerald-100 px-1.5 py-0.2 rounded border border-emerald-300">TSE • TRF3 HOMOLOGADO</span>
+            </div>
+
+            <!-- 2x2 KPIs -->
+            <div class="grid grid-cols-2 gap-1.5 text-left text-xs">
+              <div class="p-2 rounded-xl bg-stone-100 border border-stone-300 space-y-0.5">
+                <span class="text-[7px] uppercase font-bold text-stone-600 block">🏛️ Presença em Sessões</span>
+                <span class="text-xs font-black text-stone-950 font-mono block">93.8% (107 pres.)</span>
+                <span class="text-[7px] text-stone-500 block">0 falta não justificada</span>
+              </div>
+              <div class="p-2 rounded-xl bg-stone-100 border border-stone-300 space-y-0.5">
+                <span class="text-[7px] uppercase font-bold text-emerald-800 block">💰 Verba de Gabinete</span>
+                <span class="text-xs font-black text-emerald-900 font-mono block">70% do teto</span>
+                <span class="text-[7px] text-stone-500 block">Economizou R$ 115 mil</span>
+              </div>
+            </div>
+
+            <!-- EMENDAS DETALHADAS -->
+            <div class="p-2 rounded-xl bg-stone-100 border border-stone-300 text-left space-y-1">
+              <div class="flex items-center justify-between text-[7px] uppercase font-bold text-stone-600">
+                <span>Rastreabilidade de Emendas (Siga Brasil)</span>
+                <span class="font-bold text-stone-900 font-mono">91% Pago</span>
+              </div>
+              <span class="text-xs font-black text-stone-950 font-mono block">R$ 35.100.000,00 executados</span>
+              <div class="px-2 py-0.5 rounded-lg text-[8px] font-bold font-mono text-center bg-emerald-100 text-emerald-950 border border-emerald-400 truncate">
+                🟢 100% Destinadas via Edital Técnico Aberto
+              </div>
+            </div>
+
+            <!-- NOVO RODAPÉ DE ALTO IMPACTO: RETORNO CÍVICO (ROI) -->
+            <div class="p-2 rounded-xl bg-stone-900 text-white flex items-center justify-between text-[7.5px] font-bold">
+              <span class="text-amber-400 font-mono flex items-center gap-1">
+                <i data-lucide="trending-up" class="w-3 h-3 text-amber-400"></i> RETORNO CÍVICO DO MANDATO:
+              </span>
+              <span class="text-white font-mono">R$ 30,50 entregues por R$ 1 gasto</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD E2: Renata Vasconcelos -->
+        <div class="space-y-3 w-full max-w-[360px]">
+          <div class="flex items-center justify-between text-xs">
+            <span class="font-bold text-rose-400">E2. Renata Vasconcelos (REPUBLICANOS)</span>
+            <button onclick="downloadCard('card-target-e2', 'opcao-e-renata')" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-[11px] font-bold text-slate-200 border border-white/10 flex items-center gap-1 transition">
+              <i data-lucide="download" class="w-3 h-3"></i> Baixar PNG
+            </button>
+          </div>
+
+          <!-- TARGET E2 -->
+          <div id="card-target-e2" class="w-full bg-[#fdfbf7] p-4 rounded-[28px] border-2 border-stone-400 text-stone-900 space-y-2.5 shadow-2xl relative font-sans">
+            <!-- Header -->
+            <div class="flex items-center justify-between border-b-2 border-stone-900 pb-1.5">
+              <span class="text-[9px] font-black uppercase tracking-widest text-stone-900 font-mono">EXECUTIVE GOVERNANCE DOSSIER</span>
+              <span class="text-[8.5px] font-mono font-black text-amber-800">ELEIÇÕES 2026</span>
+            </div>
+
+            <!-- Profile -->
+            <div class="flex items-center justify-between gap-2">
+              <div class="flex items-center gap-2.5 min-w-0">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400" class="w-14 h-14 rounded-2xl object-cover border-2 border-stone-900 shadow-md flex-shrink-0">
+                <div class="min-w-0 text-left space-y-0.5">
+                  <h4 class="font-black text-sm text-stone-950 uppercase tracking-tight truncate leading-tight">RENATA VASCONCELOS</h4>
+                  <p class="text-[11px] font-bold text-stone-700 font-mono leading-none">REPUBLICANOS • Nº 10</p>
+                  <span class="text-[8.5px] font-medium text-stone-600 block">Pretensão: Governadora (SP)</span>
+                </div>
+              </div>
+              <div class="p-1.5 rounded-2xl bg-stone-900 text-white text-center min-w-[58px] shadow-sm flex flex-col items-center justify-center">
+                <span class="text-[6px] uppercase font-bold text-amber-400 block tracking-wider">GOVERNANÇA</span>
+                <span class="text-xl font-black font-mono leading-none block my-0.5 text-white">88</span>
+              </div>
+            </div>
+
+            <!-- FICHA LIMPA & AUDITORIA -->
+            <div class="p-2 rounded-xl bg-emerald-50 border border-emerald-300 flex items-center justify-between text-left">
+              <span class="text-[8.5px] font-black text-emerald-950 flex items-center gap-1 font-mono">
+                <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-700"></i> FICHA LIMPA: 0 CONDENAÇÕES
+              </span>
+              <span class="text-[7.5px] font-bold text-emerald-800 bg-emerald-100 px-1.5 py-0.2 rounded border border-emerald-300">TSE • TCE-SP HOMOLOGADO</span>
+            </div>
+
+            <!-- 2x2 KPIs -->
+            <div class="grid grid-cols-2 gap-1.5 text-left text-xs">
+              <div class="p-2 rounded-xl bg-stone-100 border border-stone-300 space-y-0.5">
+                <span class="text-[7px] uppercase font-bold text-stone-600 block">🏛️ Presença em Sessões</span>
+                <span class="text-xs font-black text-stone-950 font-mono block">88.6% (101 pres.)</span>
+                <span class="text-[7px] text-stone-500 block">0 falta não justificada</span>
+              </div>
+              <div class="p-2 rounded-xl bg-stone-100 border border-stone-300 space-y-0.5">
+                <span class="text-[7px] uppercase font-bold text-emerald-800 block">💰 Verba de Gabinete</span>
+                <span class="text-xs font-black text-emerald-900 font-mono block">59% do teto</span>
+                <span class="text-[7px] text-stone-500 block">Economizou R$ 138 mil</span>
+              </div>
+            </div>
+
+            <!-- EMENDAS DETALHADAS -->
+            <div class="p-2 rounded-xl bg-stone-100 border border-stone-300 text-left space-y-1">
+              <div class="flex items-center justify-between text-[7px] uppercase font-bold text-stone-600">
+                <span>Rastreabilidade de Emendas (Siga Brasil)</span>
+                <span class="font-bold text-stone-900 font-mono">88% Pago</span>
+              </div>
+              <span class="text-xs font-black text-stone-950 font-mono block">R$ 24.500.000,00 executados</span>
+              <div class="px-2 py-0.5 rounded-lg text-[8px] font-bold font-mono text-center bg-amber-100 text-amber-950 border border-amber-400 truncate">
+                🟡 85% Concurso de Creches • 15% Direta
+              </div>
+            </div>
+
+            <!-- NOVO RODAPÉ DE ALTO IMPACTO: RETORNO CÍVICO (ROI) -->
+            <div class="p-2 rounded-xl bg-stone-900 text-white flex items-center justify-between text-[7.5px] font-bold">
+              <span class="text-amber-400 font-mono flex items-center gap-1">
+                <i data-lucide="trending-up" class="w-3 h-3 text-amber-400"></i> RETORNO CÍVICO DO MANDATO:
+              </span>
+              <span class="text-white font-mono">R$ 28,20 entregues por R$ 1 gasto</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SEÇÃO 6: OPÇÃO F - PATRIMÔNIO DECLARADO & ÉTICA FISCAL (SUBSTITUI RODAPÉ)
+         ========================================================================= -->
+    <section class="space-y-4 pt-6 border-t border-white/10">
+      <div class="flex items-center justify-between border-b border-white/10 pb-3">
+        <div>
+          <span class="text-[10px] font-black uppercase tracking-wider text-emerald-400">Opção F • Novo Rodapé #2 (Evolução Patrimonial)</span>
+          <h3 class="text-lg font-black text-white flex items-center gap-2">
+            🇫 Transparência Patrimonial Declarada ao TSE
+          </h3>
+          <p class="text-xs text-slate-400">
+            Substitui o rodapé pela <b>Evolução do Patrimônio Declarado ao TSE</b> e compatibilidade com os subsídios recebidos, combatendo enriquecimento ilícito.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
+        
+        <!-- CARD F1: Eduardo Rocha -->
+        <div class="space-y-3 w-full max-w-[360px]">
+          <div class="flex items-center justify-between text-xs">
+            <span class="font-bold text-amber-400">F1. Eduardo Rocha (PSD)</span>
+            <button onclick="downloadCard('card-target-f1', 'opcao-f-eduardo')" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-[11px] font-bold text-slate-200 border border-white/10 flex items-center gap-1 transition">
+              <i data-lucide="download" class="w-3 h-3"></i> Baixar PNG
+            </button>
+          </div>
+
+          <!-- TARGET F1 -->
+          <div id="card-target-f1" class="w-full bg-white p-4 rounded-[28px] border-2 border-stone-300 text-stone-950 space-y-2.5 shadow-2xl relative font-sans">
+            <!-- Header -->
+            <div class="flex items-center justify-between border-b-2 border-stone-950 pb-1.5">
+              <div class="flex items-center gap-1.5">
+                <span class="w-3 h-3 bg-emerald-600 rounded-sm"></span>
+                <span class="text-[9px] font-black uppercase tracking-widest text-stone-950 font-mono">AUDITORIA PATRIMONIAL & ÉTICA</span>
+              </div>
+              <span class="text-[8.5px] font-mono font-black text-emerald-700">TSE REGULAR</span>
+            </div>
+
+            <!-- Profile -->
+            <div class="flex items-center justify-between gap-2">
+              <div class="flex items-center gap-2.5 min-w-0">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400" class="w-14 h-14 rounded-2xl object-cover border-2 border-stone-950 shadow-md flex-shrink-0">
+                <div class="min-w-0 text-left space-y-0.5">
+                  <h4 class="font-black text-sm text-stone-950 uppercase tracking-tight truncate leading-tight">EDUARDO ROCHA</h4>
+                  <p class="text-[11px] font-black text-emerald-700 font-mono leading-none">PSD • Nº 55</p>
+                  <span class="text-[8.5px] font-bold text-stone-600">Pretensão: Governador (SP)</span>
+                </div>
+              </div>
+              <div class="p-1.5 rounded-2xl bg-stone-950 text-white text-center min-w-[58px] shadow-sm flex flex-col items-center justify-center">
+                <span class="text-[6px] uppercase font-bold text-stone-400 block tracking-wider">PONTUAÇÃO</span>
+                <span class="text-xl font-black font-mono leading-none block my-0.5 text-white">91</span>
+              </div>
+            </div>
+
+            <!-- RADAR -->
+            <div class="bg-stone-50 rounded-2xl p-2 border border-stone-300">
+              <div class="flex items-center justify-between text-[7px] uppercase font-black text-stone-700 mb-0.5">
+                <span>Diagrama de Integridade</span>
+                <span class="text-stone-400 font-mono">6 DIMENSÕES</span>
+              </div>
+              <div class="w-full h-[115px] flex items-center justify-center">
+                <canvas id="radar-canvas-f1"></canvas>
+              </div>
+            </div>
+
+            <!-- 3 STATS ROW -->
+            <div class="grid grid-cols-3 gap-1.5 text-left">
+              <div class="p-1.5 rounded-xl bg-stone-50 border border-stone-200 space-y-0.2">
+                <span class="text-[6.5px] uppercase font-black text-stone-500 block truncate">Ficha Limpa</span>
+                <span class="text-xs font-black text-emerald-700 font-mono block">0 Conden.</span>
+                <span class="text-[6.5px] text-stone-500 block truncate">100% Ilibado</span>
+              </div>
+              <div class="p-1.5 rounded-xl bg-stone-50 border border-stone-200 space-y-0.2">
+                <span class="text-[6.5px] uppercase font-black text-stone-800 block truncate">Presença</span>
+                <span class="text-xs font-black text-stone-950 font-mono block">93.8%</span>
+                <span class="text-[6.5px] text-stone-500 block truncate">107 sessões</span>
+              </div>
+              <div class="p-1.5 rounded-xl bg-stone-50 border border-stone-200 space-y-0.2">
+                <span class="text-[6.5px] uppercase font-black text-emerald-700 block truncate">Economia Cota</span>
+                <span class="text-xs font-black text-emerald-800 font-mono block truncate">R$ 115 mil</span>
+                <span class="text-[6.5px] text-stone-600 block truncate font-bold">Salvos</span>
+              </div>
+            </div>
+
+            <!-- NOVO RODAPÉ: PATRIMÔNIO DECLARADO AO TSE -->
+            <div class="p-2 rounded-xl bg-emerald-950 text-emerald-100 flex items-center justify-between text-[7.5px] font-bold border border-emerald-500/30">
+              <span class="truncate mr-1 font-mono">📈 PATRIMÔNIO: R$ 1,62M (+11% no mandato)</span>
+              <span class="text-emerald-300 font-mono flex-shrink-0 bg-emerald-900/60 px-1 py-0.5 rounded border border-emerald-400/40">COMPATÍVEL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD F2: Renata Vasconcelos -->
+        <div class="space-y-3 w-full max-w-[360px]">
+          <div class="flex items-center justify-between text-xs">
+            <span class="font-bold text-rose-400">F2. Renata Vasconcelos (REPUBLICANOS)</span>
+            <button onclick="downloadCard('card-target-f2', 'opcao-f-renata')" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-[11px] font-bold text-slate-200 border border-white/10 flex items-center gap-1 transition">
+              <i data-lucide="download" class="w-3 h-3"></i> Baixar PNG
+            </button>
+          </div>
+
+          <!-- TARGET F2 -->
+          <div id="card-target-f2" class="w-full bg-white p-4 rounded-[28px] border-2 border-stone-300 text-stone-950 space-y-2.5 shadow-2xl relative font-sans">
+            <!-- Header -->
+            <div class="flex items-center justify-between border-b-2 border-stone-950 pb-1.5">
+              <div class="flex items-center gap-1.5">
+                <span class="w-3 h-3 bg-emerald-600 rounded-sm"></span>
+                <span class="text-[9px] font-black uppercase tracking-widest text-stone-950 font-mono">AUDITORIA PATRIMONIAL & ÉTICA</span>
+              </div>
+              <span class="text-[8.5px] font-mono font-black text-emerald-700">TSE REGULAR</span>
+            </div>
+
+            <!-- Profile -->
+            <div class="flex items-center justify-between gap-2">
+              <div class="flex items-center gap-2.5 min-w-0">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400" class="w-14 h-14 rounded-2xl object-cover border-2 border-stone-950 shadow-md flex-shrink-0">
+                <div class="min-w-0 text-left space-y-0.5">
+                  <h4 class="font-black text-sm text-stone-950 uppercase tracking-tight truncate leading-tight">RENATA VASCONCELOS</h4>
+                  <p class="text-[11px] font-black text-emerald-700 font-mono leading-none">REPUBLICANOS • Nº 10</p>
+                  <span class="text-[8.5px] font-bold text-stone-600">Pretensão: Governadora (SP)</span>
+                </div>
+              </div>
+              <div class="p-1.5 rounded-2xl bg-stone-950 text-white text-center min-w-[58px] shadow-sm flex flex-col items-center justify-center">
+                <span class="text-[6px] uppercase font-bold text-stone-400 block tracking-wider">PONTUAÇÃO</span>
+                <span class="text-xl font-black font-mono leading-none block my-0.5 text-white">88</span>
+              </div>
+            </div>
+
+            <!-- RADAR -->
+            <div class="bg-stone-50 rounded-2xl p-2 border border-stone-300">
+              <div class="flex items-center justify-between text-[7px] uppercase font-black text-stone-700 mb-0.5">
+                <span>Diagrama de Integridade</span>
+                <span class="text-stone-400 font-mono">6 DIMENSÕES</span>
+              </div>
+              <div class="w-full h-[115px] flex items-center justify-center">
+                <canvas id="radar-canvas-f2"></canvas>
+              </div>
+            </div>
+
+            <!-- 3 STATS ROW -->
+            <div class="grid grid-cols-3 gap-1.5 text-left">
+              <div class="p-1.5 rounded-xl bg-stone-50 border border-stone-200 space-y-0.2">
+                <span class="text-[6.5px] uppercase font-black text-stone-500 block truncate">Ficha Limpa</span>
+                <span class="text-xs font-black text-emerald-700 font-mono block">0 Conden.</span>
+                <span class="text-[6.5px] text-stone-500 block truncate">100% Ilibado</span>
+              </div>
+              <div class="p-1.5 rounded-xl bg-stone-50 border border-stone-200 space-y-0.2">
+                <span class="text-[6.5px] uppercase font-black text-stone-800 block truncate">Presença</span>
+                <span class="text-xs font-black text-stone-950 font-mono block">88.6%</span>
+                <span class="text-[6.5px] text-stone-500 block truncate">101 sessões</span>
+              </div>
+              <div class="p-1.5 rounded-xl bg-stone-50 border border-stone-200 space-y-0.2">
+                <span class="text-[6.5px] uppercase font-black text-emerald-700 block truncate">Economia Cota</span>
+                <span class="text-xs font-black text-emerald-800 font-mono block truncate">R$ 138 mil</span>
+                <span class="text-[6.5px] text-stone-600 block truncate font-bold">Salvos</span>
+              </div>
+            </div>
+
+            <!-- NOVO RODAPÉ: PATRIMÔNIO DECLARADO AO TSE -->
+            <div class="p-2 rounded-xl bg-emerald-950 text-emerald-100 flex items-center justify-between text-[7.5px] font-bold border border-emerald-500/30">
+              <span class="truncate mr-1 font-mono">📈 PATRIMÔNIO: R$ 1,58M (+14% no mandato)</span>
+              <span class="text-emerald-300 font-mono flex-shrink-0 bg-emerald-900/60 px-1 py-0.5 rounded border border-emerald-400/40">COMPATÍVEL</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SEÇÃO 7: OPÇÃO G - LIVE FACT-CHECK & DEBATE BADGE
+         ========================================================================= -->
+    <section class="space-y-4 pt-6 border-t border-white/10">
+      <div class="flex items-center justify-between border-b border-white/10 pb-3">
+        <div>
+          <span class="text-[10px] font-black uppercase tracking-wider text-rose-400">Opção G • Live Fact-Check</span>
+          <h3 class="text-lg font-black text-white flex items-center gap-2">
+            🇬 Plantão de Checagem & Veredicto Oficial
+          </h3>
+          <p class="text-xs text-slate-400">
+            Estilo breaking news / agência investigativa, com selo de veracidade em tempo real e destaque para fala checada.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
+        
+        <!-- CARD G1: Eduardo Rocha -->
+        <div class="space-y-3 w-full max-w-[360px]">
+          <div class="flex items-center justify-between text-xs">
+            <span class="font-bold text-amber-400">G1. Eduardo Rocha (PSD)</span>
+            <button onclick="downloadCard('card-target-g1', 'opcao-g-eduardo')" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-[11px] font-bold text-slate-200 border border-white/10 flex items-center gap-1 transition">
+              <i data-lucide="download" class="w-3 h-3"></i> Baixar PNG
+            </button>
+          </div>
+
+          <!-- TARGET G1 -->
+          <div id="card-target-g1" class="w-full bg-slate-900 p-4 rounded-[28px] border-2 border-rose-600 text-white space-y-2.5 shadow-2xl relative font-sans">
+            <!-- Header -->
+            <div class="flex items-center justify-between border-b border-white/10 pb-1.5">
+              <span class="text-[9px] font-black uppercase tracking-widest text-rose-400 flex items-center gap-1">
+                <span class="w-2 h-2 rounded-full bg-rose-500 animate-ping"></span> PLANTÃO FATO CHECADO
+              </span>
+              <span class="text-[8.5px] font-mono text-slate-400">AGÊNCIA INDEPENDENTE</span>
+            </div>
+
+            <!-- Profile & Verdict -->
+            <div class="flex items-center justify-between gap-2">
+              <div class="flex items-center gap-2.5 min-w-0">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400" class="w-14 h-14 rounded-2xl object-cover border-2 border-rose-500 shadow-md flex-shrink-0">
+                <div class="min-w-0 text-left space-y-0.5">
+                  <h4 class="font-black text-sm text-white uppercase tracking-tight truncate leading-tight">EDUARDO ROCHA</h4>
+                  <p class="text-[11px] font-black text-amber-400 font-mono leading-none">PSD • Nº 55 (Governador)</p>
+                  <span class="text-[8px] text-emerald-400 font-bold">🛡️ Ficha Limpa: 0 Processos</span>
+                </div>
+              </div>
+              <div class="p-1.5 rounded-2xl bg-emerald-600 text-white text-center min-w-[58px] shadow-sm flex flex-col items-center justify-center font-black">
+                <span class="text-[6px] uppercase tracking-wider block">VERDADE</span>
+                <span class="text-xl font-mono leading-none block my-0.5">80%</span>
+              </div>
+            </div>
+
+            <!-- STATEMENT CHECK BOX -->
+            <div class="p-2.5 rounded-xl bg-black/60 border border-white/10 text-left space-y-1">
+              <div class="flex items-center justify-between text-[7.5px]">
+                <span class="text-amber-300 font-bold font-mono">Declaração no Debate Band:</span>
+                <span class="px-1.5 py-0.2 rounded bg-emerald-500/20 text-emerald-300 font-bold border border-emerald-500/30">🟢 VERDADEIRO</span>
+              </div>
+              <p class="text-[9.5px] text-slate-200 italic leading-snug">
+                "Destinamos 100% das emendas via edital aberto sem nenhum real em emenda secreta."
+              </p>
+              <span class="text-[7.5px] text-slate-400 block border-t border-white/5 pt-0.5">Auditoria: Portal da Transparência Alesp</span>
+            </div>
+
+            <!-- 2x2 STATS -->
+            <div class="grid grid-cols-2 gap-1.5 text-left text-xs">
+              <div class="p-2 rounded-xl bg-black/40 border border-white/10 space-y-0.5">
+                <span class="text-[7px] uppercase font-bold text-slate-400 block">⏱️ Custo aos Cofres</span>
+                <span class="text-xs font-black text-rose-400 font-mono block">R$ 0,51 / min</span>
+                <span class="text-[7px] text-slate-400 block">70% da cota mensal</span>
+              </div>
+              <div class="p-2 rounded-xl bg-black/40 border border-white/10 space-y-0.5">
+                <span class="text-[7px] uppercase font-bold text-slate-400 block">🏛️ Presença Plenário</span>
+                <span class="text-xs font-black text-white font-mono block">93.8%</span>
+                <span class="text-[7px] text-slate-400 block">107 presenças</span>
+              </div>
+            </div>
+
+            <!-- FOOTER -->
+            <div class="p-2 rounded-xl bg-rose-950/60 border border-rose-500/40 flex items-center justify-between text-[7.5px] font-bold">
+              <span class="text-rose-200">🎙️ DEBATE BAND SP:</span>
+              <span class="text-white font-mono">18m 45s de Fala • 0 Direitos Concedidos</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD G2: Renata Vasconcelos -->
+        <div class="space-y-3 w-full max-w-[360px]">
+          <div class="flex items-center justify-between text-xs">
+            <span class="font-bold text-rose-400">G2. Renata Vasconcelos (REPUBLICANOS)</span>
+            <button onclick="downloadCard('card-target-g2', 'opcao-g-renata')" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-[11px] font-bold text-slate-200 border border-white/10 flex items-center gap-1 transition">
+              <i data-lucide="download" class="w-3 h-3"></i> Baixar PNG
+            </button>
+          </div>
+
+          <!-- TARGET G2 -->
+          <div id="card-target-g2" class="w-full bg-slate-900 p-4 rounded-[28px] border-2 border-rose-600 text-white space-y-2.5 shadow-2xl relative font-sans">
+            <!-- Header -->
+            <div class="flex items-center justify-between border-b border-white/10 pb-1.5">
+              <span class="text-[9px] font-black uppercase tracking-widest text-rose-400 flex items-center gap-1">
+                <span class="w-2 h-2 rounded-full bg-rose-500 animate-ping"></span> PLANTÃO FATO CHECADO
+              </span>
+              <span class="text-[8.5px] font-mono text-slate-400">AGÊNCIA INDEPENDENTE</span>
+            </div>
+
+            <!-- Profile & Verdict -->
+            <div class="flex items-center justify-between gap-2">
+              <div class="flex items-center gap-2.5 min-w-0">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400" class="w-14 h-14 rounded-2xl object-cover border-2 border-rose-500 shadow-md flex-shrink-0">
+                <div class="min-w-0 text-left space-y-0.5">
+                  <h4 class="font-black text-sm text-white uppercase tracking-tight truncate leading-tight">RENATA VASCONCELOS</h4>
+                  <p class="text-[11px] font-black text-rose-400 font-mono leading-none">REPUBLICANOS • Nº 10</p>
+                  <span class="text-[8px] text-emerald-400 font-bold">🛡️ Ficha Limpa: 0 Processos</span>
+                </div>
+              </div>
+              <div class="p-1.5 rounded-2xl bg-emerald-600 text-white text-center min-w-[58px] shadow-sm flex flex-col items-center justify-center font-black">
+                <span class="text-[6px] uppercase tracking-wider block">VERDADE</span>
+                <span class="text-xl font-mono leading-none block my-0.5">80%</span>
+              </div>
+            </div>
+
+            <!-- STATEMENT CHECK BOX -->
+            <div class="p-2.5 rounded-xl bg-black/60 border border-white/10 text-left space-y-1">
+              <div class="flex items-center justify-between text-[7.5px]">
+                <span class="text-amber-300 font-bold font-mono">Declaração no Debate Band:</span>
+                <span class="px-1.5 py-0.2 rounded bg-emerald-500/20 text-emerald-300 font-bold border border-emerald-500/30">🟢 VERDADEIRO</span>
+              </div>
+              <p class="text-[9.5px] text-slate-200 italic leading-snug">
+                "Vamos implantar o voucher creche para 100% das mães que aguardam vaga em até 12 meses."
+              </p>
+              <span class="text-[7.5px] text-slate-400 block border-t border-white/5 pt-0.5">Auditoria: Registro Oficial TSE (Protocolo 1092)</span>
+            </div>
+
+            <!-- 2x2 STATS -->
+            <div class="grid grid-cols-2 gap-1.5 text-left text-xs">
+              <div class="p-2 rounded-xl bg-black/40 border border-white/10 space-y-0.5">
+                <span class="text-[7px] uppercase font-bold text-slate-400 block">⏱️ Custo aos Cofres</span>
+                <span class="text-xs font-black text-rose-400 font-mono block">R$ 0,43 / min</span>
+                <span class="text-[7px] text-slate-400 block">59% da cota mensal</span>
+              </div>
+              <div class="p-2 rounded-xl bg-black/40 border border-white/10 space-y-0.5">
+                <span class="text-[7px] uppercase font-bold text-slate-400 block">🏛️ Presença Plenário</span>
+                <span class="text-xs font-black text-white font-mono block">88.6%</span>
+                <span class="text-[7px] text-slate-400 block">101 presenças</span>
+              </div>
+            </div>
+
+            <!-- FOOTER -->
+            <div class="p-2 rounded-xl bg-rose-950/60 border border-rose-500/40 flex items-center justify-between text-[7.5px] font-bold">
+              <span class="text-rose-200">🎙️ DEBATE BAND SP:</span>
+              <span class="text-white font-mono">19m 10s de Fala • 0 Direitos Concedidos</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SEÇÃO 8: OPÇÃO H - COMPACT BENTO GRID (ESTILO APPLE 2026)
+         ========================================================================= -->
+    <section class="space-y-4 pt-6 border-t border-white/10">
+      <div class="flex items-center justify-between border-b border-white/10 pb-3">
+        <div>
+          <span class="text-[10px] font-black uppercase tracking-wider text-sky-400">Opção H • Bento Grid 2026</span>
+          <h3 class="text-lg font-black text-white flex items-center gap-2">
+            🇭 Bento Grid Modular (Estilo UI Contemporâneo)
+          </h3>
+          <p class="text-xs text-slate-400">
+            Layout em cartões modulares independentes com micro-ícones, sombras suaves e estética de interface moderna.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
+        
+        <!-- CARD H1: Eduardo Rocha -->
+        <div class="space-y-3 w-full max-w-[360px]">
+          <div class="flex items-center justify-between text-xs">
+            <span class="font-bold text-amber-400">H1. Eduardo Rocha (PSD)</span>
+            <button onclick="downloadCard('card-target-h1', 'opcao-h-eduardo')" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-[11px] font-bold text-slate-200 border border-white/10 flex items-center gap-1 transition">
+              <i data-lucide="download" class="w-3 h-3"></i> Baixar PNG
+            </button>
+          </div>
+
+          <!-- TARGET H1 -->
+          <div id="card-target-h1" class="w-full bg-[#f8fafc] p-4 rounded-[30px] border border-slate-300 text-slate-900 space-y-2.5 shadow-2xl relative font-sans">
+            <!-- Header -->
+            <div class="flex items-center justify-between border-b border-slate-200 pb-1.5">
+              <span class="text-[9px] font-black uppercase tracking-widest text-slate-700 font-mono">CIVIC BENTO PROFILE</span>
+              <span class="text-[8px] font-bold px-2 py-0.5 rounded-full bg-slate-200 text-slate-700">OFICIAL TSE</span>
+            </div>
+
+            <!-- Profile & Score Card -->
+            <div class="p-3 bg-white rounded-2xl border border-slate-200 shadow-sm flex items-center justify-between gap-2">
+              <div class="flex items-center gap-2.5 min-w-0">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400" class="w-13 h-13 rounded-2xl object-cover border border-slate-200 shadow-sm flex-shrink-0">
+                <div class="min-w-0 text-left space-y-0.5">
+                  <h4 class="font-black text-sm text-slate-950 uppercase tracking-tight truncate leading-tight">EDUARDO ROCHA</h4>
+                  <p class="text-[11px] font-black text-sky-600 font-mono leading-none">PSD • Nº 55</p>
+                  <span class="text-[8.5px] font-medium text-slate-500 block">Pretensão: Governador (SP)</span>
+                </div>
+              </div>
+              <div class="p-1.5 rounded-2xl bg-slate-950 text-white text-center min-w-[56px] shadow-sm flex flex-col items-center justify-center font-black">
+                <span class="text-[6px] uppercase tracking-wider block text-slate-400">SCORE</span>
+                <span class="text-xl font-mono leading-none block my-0.5">91</span>
+              </div>
+            </div>
+
+            <!-- 4 BENTO CARDS GRID -->
+            <div class="grid grid-cols-2 gap-2 text-left text-xs">
+              <div class="p-2.5 bg-white rounded-2xl border border-slate-200 space-y-0.5 shadow-sm">
+                <span class="text-[7px] uppercase font-black text-emerald-700 flex items-center gap-1">
+                  <i data-lucide="shield-check" class="w-3 h-3 text-emerald-600"></i> Ficha Limpa
+                </span>
+                <strong class="text-xs font-black text-slate-900 block">0 Condenações</strong>
+                <span class="text-[7px] text-slate-500 block">TSE • TRF-3 Regular</span>
+              </div>
+
+              <div class="p-2.5 bg-white rounded-2xl border border-slate-200 space-y-0.5 shadow-sm">
+                <span class="text-[7px] uppercase font-black text-sky-700 flex items-center gap-1">
+                  <i data-lucide="calendar" class="w-3 h-3 text-sky-600"></i> Presença
+                </span>
+                <strong class="text-xs font-black text-slate-900 block font-mono">93.8%</strong>
+                <span class="text-[7px] text-slate-500 block">107 de 114 sessões</span>
+              </div>
+
+              <div class="p-2.5 bg-white rounded-2xl border border-slate-200 space-y-0.5 shadow-sm">
+                <span class="text-[7px] uppercase font-black text-emerald-700 flex items-center gap-1">
+                  <i data-lucide="wallet" class="w-3 h-3 text-emerald-600"></i> Economia
+                </span>
+                <strong class="text-xs font-black text-emerald-800 block font-mono">R$ 115 mil</strong>
+                <span class="text-[7px] text-slate-500 block">70% do teto legal</span>
+              </div>
+
+              <div class="p-2.5 bg-white rounded-2xl border border-slate-200 space-y-0.5 shadow-sm">
+                <span class="text-[7px] uppercase font-black text-purple-700 flex items-center gap-1">
+                  <i data-lucide="book-check" class="w-3 h-3 text-purple-600"></i> Leis em Vigor
+                </span>
+                <strong class="text-xs font-black text-slate-900 block font-mono">9 Leis</strong>
+                <span class="text-[7px] text-slate-500 block">23.7% taxa aprovação</span>
+              </div>
+            </div>
+
+            <!-- BENTO EMENDAS -->
+            <div class="p-2.5 bg-white rounded-2xl border border-slate-200 text-left space-y-1 shadow-sm">
+              <div class="flex items-center justify-between text-[7px] uppercase font-bold text-slate-500">
+                <span>R$ 35,1M em Emendas Entregues</span>
+                <span class="font-mono text-emerald-700 font-bold">91.2% Pago</span>
+              </div>
+              <div class="p-1 rounded-xl bg-emerald-50 text-emerald-900 border border-emerald-300 text-[8px] font-bold font-mono text-center truncate">
+                🟢 100% por Chamamento Público Aberto
+              </div>
+            </div>
+
+            <!-- FOOTER META PRIORITÁRIA -->
+            <div class="p-2 rounded-2xl bg-slate-950 text-white flex items-center justify-between text-[7.5px] font-bold">
+              <span class="text-slate-400">🎯 META #1:</span>
+              <span class="text-emerald-400 font-mono truncate max-w-[200px]">-45% Filas do SUS no 1º Ano</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD H2: Renata Vasconcelos -->
+        <div class="space-y-3 w-full max-w-[360px]">
+          <div class="flex items-center justify-between text-xs">
+            <span class="font-bold text-rose-400">H2. Renata Vasconcelos (REPUBLICANOS)</span>
+            <button onclick="downloadCard('card-target-h2', 'opcao-h-renata')" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-[11px] font-bold text-slate-200 border border-white/10 flex items-center gap-1 transition">
+              <i data-lucide="download" class="w-3 h-3"></i> Baixar PNG
+            </button>
+          </div>
+
+          <!-- TARGET H2 -->
+          <div id="card-target-h2" class="w-full bg-[#f8fafc] p-4 rounded-[30px] border border-slate-300 text-slate-900 space-y-2.5 shadow-2xl relative font-sans">
+            <!-- Header -->
+            <div class="flex items-center justify-between border-b border-slate-200 pb-1.5">
+              <span class="text-[9px] font-black uppercase tracking-widest text-slate-700 font-mono">CIVIC BENTO PROFILE</span>
+              <span class="text-[8px] font-bold px-2 py-0.5 rounded-full bg-slate-200 text-slate-700">OFICIAL TSE</span>
+            </div>
+
+            <!-- Profile & Score Card -->
+            <div class="p-3 bg-white rounded-2xl border border-slate-200 shadow-sm flex items-center justify-between gap-2">
+              <div class="flex items-center gap-2.5 min-w-0">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400" class="w-13 h-13 rounded-2xl object-cover border border-slate-200 shadow-sm flex-shrink-0">
+                <div class="min-w-0 text-left space-y-0.5">
+                  <h4 class="font-black text-sm text-slate-950 uppercase tracking-tight truncate leading-tight">RENATA VASCONCELOS</h4>
+                  <p class="text-[11px] font-black text-rose-600 font-mono leading-none">REPUBLICANOS • Nº 10</p>
+                  <span class="text-[8.5px] font-medium text-slate-500 block">Pretensão: Governadora (SP)</span>
+                </div>
+              </div>
+              <div class="p-1.5 rounded-2xl bg-slate-950 text-white text-center min-w-[56px] shadow-sm flex flex-col items-center justify-center font-black">
+                <span class="text-[6px] uppercase tracking-wider block text-slate-400">SCORE</span>
+                <span class="text-xl font-mono leading-none block my-0.5">88</span>
+              </div>
+            </div>
+
+            <!-- 4 BENTO CARDS GRID -->
+            <div class="grid grid-cols-2 gap-2 text-left text-xs">
+              <div class="p-2.5 bg-white rounded-2xl border border-slate-200 space-y-0.5 shadow-sm">
+                <span class="text-[7px] uppercase font-black text-emerald-700 flex items-center gap-1">
+                  <i data-lucide="shield-check" class="w-3 h-3 text-emerald-600"></i> Ficha Limpa
+                </span>
+                <strong class="text-xs font-black text-slate-900 block">0 Condenações</strong>
+                <span class="text-[7px] text-slate-500 block">TSE • TCE-SP Regular</span>
+              </div>
+
+              <div class="p-2.5 bg-white rounded-2xl border border-slate-200 space-y-0.5 shadow-sm">
+                <span class="text-[7px] uppercase font-black text-sky-700 flex items-center gap-1">
+                  <i data-lucide="calendar" class="w-3 h-3 text-sky-600"></i> Presença
+                </span>
+                <strong class="text-xs font-black text-slate-900 block font-mono">88.6%</strong>
+                <span class="text-[7px] text-slate-500 block">101 de 114 sessões</span>
+              </div>
+
+              <div class="p-2.5 bg-white rounded-2xl border border-slate-200 space-y-0.5 shadow-sm">
+                <span class="text-[7px] uppercase font-black text-emerald-700 flex items-center gap-1">
+                  <i data-lucide="wallet" class="w-3 h-3 text-emerald-600"></i> Economia
+                </span>
+                <strong class="text-xs font-black text-emerald-800 block font-mono">R$ 138 mil</strong>
+                <span class="text-[7px] text-slate-500 block">59% do teto legal</span>
+              </div>
+
+              <div class="p-2.5 bg-white rounded-2xl border border-slate-200 space-y-0.5 shadow-sm">
+                <span class="text-[7px] uppercase font-black text-purple-700 flex items-center gap-1">
+                  <i data-lucide="book-check" class="w-3 h-3 text-purple-600"></i> Leis em Vigor
+                </span>
+                <strong class="text-xs font-black text-slate-900 block font-mono">8 Leis</strong>
+                <span class="text-[7px] text-slate-500 block">27.5% taxa aprovação</span>
+              </div>
+            </div>
+
+            <!-- BENTO EMENDAS -->
+            <div class="p-2.5 bg-white rounded-2xl border border-slate-200 text-left space-y-1 shadow-sm">
+              <div class="flex items-center justify-between text-[7px] uppercase font-bold text-slate-500">
+                <span>R$ 24,5M em Emendas Entregues</span>
+                <span class="font-mono text-amber-700 font-bold">87.5% Pago</span>
+              </div>
+              <div class="p-1 rounded-xl bg-amber-50 text-amber-900 border border-amber-300 text-[8px] font-bold font-mono text-center truncate">
+                🟡 85% Concurso de Creches • 15% Direta
+              </div>
+            </div>
+
+            <!-- FOOTER META PRIORITÁRIA -->
+            <div class="p-2 rounded-2xl bg-slate-950 text-white flex items-center justify-between text-[7.5px] font-bold">
+              <span class="text-slate-400">🎯 META #1:</span>
+              <span class="text-emerald-400 font-mono truncate max-w-[200px]">Voucher Creche p/ 100% das Mães</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- RADAR INITIALIZATION & EXPORT SCRIPT -->
+  <script>
+    function initRadars() {
+      const labels = ['Integridade', 'Eficiência', 'Transparência', 'Coerência', 'Propostas', 'Presença'];
+      const dataEduardo = [88, 85, 96, 88, 90, 94];
+      const dataRenata = [88, 91, 85, 80, 88, 89];
+
+      // Radar F1
+      const c1 = document.getElementById('radar-canvas-f1');
+      if (c1) {
+        new Chart(c1.getContext('2d'), {
+          type: 'radar',
+          data: {
+            labels: labels,
+            datasets: [{
+              data: dataEduardo,
+              backgroundColor: 'rgba(16, 185, 129, 0.22)',
+              borderColor: '#10b981',
+              borderWidth: 2,
+              pointBackgroundColor: '#111827',
+              pointBorderColor: '#10b981',
+              pointRadius: 2.5
+            }]
+          },
+          options: {
+            responsive: true, maintainAspectRatio: false, animation: false,
+            plugins: { legend: { display: false }, tooltip: { enabled: false } },
+            scales: {
+              r: {
+                min: 0, max: 100,
+                ticks: { display: false, stepSize: 25 },
+                grid: { color: 'rgba(0, 0, 0, 0.12)' },
+                angleLines: { color: 'rgba(0, 0, 0, 0.12)' },
+                pointLabels: { color: '#111827', font: { size: 7, family: 'Inter', weight: 'bold' } }
+              }
+            }
+          }
+        });
+      }
+
+      // Radar F2
+      const c2 = document.getElementById('radar-canvas-f2');
+      if (c2) {
+        new Chart(c2.getContext('2d'), {
+          type: 'radar',
+          data: {
+            labels: labels,
+            datasets: [{
+              data: dataRenata,
+              backgroundColor: 'rgba(16, 185, 129, 0.22)',
+              borderColor: '#10b981',
+              borderWidth: 2,
+              pointBackgroundColor: '#111827',
+              pointBorderColor: '#10b981',
+              pointRadius: 2.5
+            }]
+          },
+          options: {
+            responsive: true, maintainAspectRatio: false, animation: false,
+            plugins: { legend: { display: false }, tooltip: { enabled: false } },
+            scales: {
+              r: {
+                min: 0, max: 100,
+                ticks: { display: false, stepSize: 25 },
+                grid: { color: 'rgba(0, 0, 0, 0.12)' },
+                angleLines: { color: 'rgba(0, 0, 0, 0.12)' },
+                pointLabels: { color: '#111827', font: { size: 7, family: 'Inter', weight: 'bold' } }
+              }
+            }
+          }
+        });
+      }
+
+      lucide.createIcons();
+    }
+
+    async function downloadCard(elementId, filename) {
+      const target = document.getElementById(elementId);
+      if (!target) return;
+
+      try {
+        const isDark = elementId.includes('g1') || elementId.includes('g2');
+        const canvas = await html2canvas(target, {
+          backgroundColor: isDark ? '#0f172a' : '#ffffff',
+          scale: 3,
+          useCORS: true,
+          logging: false
+        });
+
+        const link = document.createElement('a');
+        link.download = filename + '.png';
+        link.href = canvas.toDataURL('image/png', 0.95);
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      } catch(e) {
+        alert("Erro ao exportar o card. Tente novamente.");
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      initRadars();
+    });
+  </script>
+</body>
+</html>
