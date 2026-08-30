@@ -249,33 +249,7 @@
 </head>
 <body class="min-h-screen flex flex-col selection:bg-sky-500 selection:text-white">
 
-  <!-- ================= TOP VIRAL BRAND SELECTOR (SWITCHER DE NOMES) ================= -->
-  <div class="bg-slate-100 dark:bg-slate-900 border-b border-slate-200 dark:border-white/10 px-4 py-2 text-xs flex flex-wrap items-center justify-between gap-2 transition-colors">
-    <div class="flex items-center gap-2">
-      <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-sky-100 dark:bg-cyan-500/20 text-sky-700 dark:text-cyan-400 border border-sky-300 dark:border-cyan-500/30">
-        PROTÓTIPO DINÂMICO
-      </span>
-      <span class="text-slate-600 dark:text-slate-400 hidden sm:inline">Alternar identidade viral da marca:</span>
-    </div>
-    
-    <div class="flex items-center gap-1.5 overflow-x-auto py-1">
-      <button onclick="setBrandName('Raio-X Político', 'Veja o que está por trás do discurso.')" class="brand-btn active px-2.5 py-1 rounded-md bg-sky-600 text-white dark:bg-cyan-500/20 dark:text-cyan-300 dark:border dark:border-cyan-500/40 font-medium transition shadow-sm">
-        ⚡ Raio-X Político (Rec.)
-      </button>
-      <button onclick="setBrandName('Ficha Limpa AI', 'Inteligência de dados a serviço do seu voto.')" class="brand-btn px-2.5 py-1 rounded-md bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/5 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 transition">
-        🛡️ Ficha Limpa AI
-      </button>
-      <button onclick="setBrandName('PolitiCheck Brasil', 'Checagem, dados e a verdade sobre cada candidato.')" class="brand-btn px-2.5 py-1 rounded-md bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/5 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 transition">
-        🔍 PolitiCheck
-      </button>
-      <button onclick="setBrandName('Dossiê Cívico', 'O histórico completo de quem quer o seu voto.')" class="brand-btn px-2.5 py-1 rounded-md bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/5 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 transition">
-        📁 Dossiê Cívico
-      </button>
-      <button onclick="setBrandName('Quem Te Representa', 'Compare, audite e decida com fatos.')" class="brand-btn px-2.5 py-1 rounded-md bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/5 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 transition">
-        👥 Quem Te Representa
-      </button>
-    </div>
-  </div>
+
 
   <!-- ================= NAVBAR ================= -->
   <header class="sticky top-0 z-40 glass-panel">
@@ -4058,32 +4032,13 @@
 
     // State Variables
     let currentTab = 'feed';
-    let currentBrandName = 'Raio-X Político';
-    let currentBrandTagline = 'Veja o que está por trás do discurso.';
+    const currentBrandName = 'Raio-X Político';
+    const currentBrandTagline = 'Veja o que está por trás do discurso.';
     let activeFilter = 'todos';
     let selectedForCompare = ['cand-1', 'cand-2'];
     let activeDossieCandidate = candidatesData[0];
     let singleRadarChartInstance = null;
     let comparatorRadarChartInstance = null;
-
-    // ================= BRAND SELECTOR LOGIC =================
-    function setBrandName(name, tagline) {
-      currentBrandName = name;
-      currentBrandTagline = tagline;
-      
-      document.getElementById('brand-title').innerText = name;
-      document.getElementById('brand-tagline').innerText = tagline;
-      document.getElementById('footer-brand-name').innerText = name;
-      document.getElementById('export-card-brand').innerText = name;
-      
-      document.querySelectorAll('.brand-btn').forEach(btn => {
-        if (btn.innerText.includes(name.split(' ')[0])) {
-          btn.className = 'brand-btn active px-2.5 py-1 rounded-md bg-sky-600 text-white dark:bg-cyan-500/20 dark:text-cyan-300 dark:border dark:border-cyan-500/40 font-medium transition shadow-sm';
-        } else {
-          btn.className = 'brand-btn px-2.5 py-1 rounded-md bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/5 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 transition';
-        }
-      });
-    }
 
     // ================= NAVIGATION LOGIC =================
     function navigateTab(tabId) {
