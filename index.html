@@ -5109,7 +5109,7 @@
       lucide.createIcons();
     }
 
-        function voteProposal(candId, propId, type) {
+    async function voteProposal(candId, propId, type) {
       const cand = candidatesData.find(c => c.id === candId) || activeDossieCandidate;
       if (!cand) return;
       const prop = cand.proposals.find(p => p.id === propId);
@@ -5119,6 +5119,17 @@
       else prop.rejectVotes++;
 
       renderFilteredDossieProposals(cand, activeProposalCategory, activeProposalStatus);
+
+      // Persistência assíncrona no SQLite via API
+      try {
+        await fetch(`/api/proposals/${encodeURIComponent(propId)}/vote`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ voteType: type })
+        });
+      } catch (err) {
+        // Modo offline / fallback resiliente
+      }
     }
 
     // ================= RADAR CHART RENDERER (ADAPTIVE LIGHT / DARK) =================
@@ -7541,9 +7552,32 @@
       closeContraditoryModal();
     }
 
+    // ================= SINCRONIZAÇÃO REATIVA COM A API REST & SQLITE =================
+    async function syncWithBackend() {
+      try {
+        const res = await fetch('/api/candidates');
+        if (res.ok) {
+          const json = await res.json();
+          if (json.success && Array.isArray(json.data) && json.data.length > 0) {
+            console.log(`[Raio-X Político] Sincronizado com API SQLite: ${json.data.length} candidatos ativos.`);
+            json.data.forEach(apiCand => {
+              const localCand = candidatesData.find(c => c.id === apiCand.id);
+              if (localCand) {
+                localCand.overallScore = apiCand.overallScore;
+              }
+            });
+            renderCandidatesFeed();
+          }
+        }
+      } catch (e) {
+        // Fallback resiliente para operação local offline
+      }
+    }
+
     // Initialize Theme & Feed on Load
     initTheme();
     renderCandidatesFeed();
+    syncWithBackend();
   </script>
 </body>
 </html>

@@ -28,3 +28,8 @@ build/
 # Gemini / Antigravity internal runtime
 .gemini/
 .system_generated/
+
+# Local databases
+data/*.db
+data/*.sqlite
+

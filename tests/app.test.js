@@ -1,0 +1,114 @@
+// Raio-X Político - Testes Automatizados Essenciais
+// Utiliza o test runner nativo do Node.js (node --test)
+
+const test = require('node:test');
+const assert = require('node:assert/strict');
+const path = require('node:path');
+const { AppDatabase } = require('../src/db/database');
+const { NotebookLMBridge } = require('../src/ingestion/notebooklm_bridge');
+
+test('Banco de Dados: Inicialização e consultas parametrizadas essenciais', () => {
+  const db = new AppDatabase();
+  
+  // 1. Listagem de candidatos
+  const candidates = db.getAllCandidates();
+  assert.ok(Array.isArray(candidates), 'Deve retornar um array de candidatos');
+  assert.ok(candidates.length >= 2, 'Deve conter pelo menos 2 candidatos cadastrados');
+
+  // 2. Dossiê completo
+  const cand = db.getCandidateById('cand-1');
+  assert.ok(cand, 'Candidato cand-1 deve existir');
+  assert.equal(cand.id, 'cand-1');
+  assert.ok(cand.radar, 'Deve conter objeto de métricas de radar');
+  assert.ok(cand.attendance, 'Deve conter objeto de assiduidade');
+  assert.ok(cand.salary, 'Deve conter dados da cota CEAP');
+  assert.ok(cand.recentDebate, 'Deve conter dados do debate oficial');
+  assert.ok(Array.isArray(cand.recentDebate.statements), 'Deve conter array de falas transcritas');
+
+  // 3. Comparador 1v1
+  const comp = db.getComparison('cand-1', 'cand-2');
+  assert.ok(comp, 'Comparação deve ser gerada');
+  assert.equal(comp.cand1.id, 'cand-1');
+  assert.equal(comp.cand2.id, 'cand-2');
+
+  db.close();
+});
+
+test('NotebookLM Bridge: Ingestão de falas de debate no SQLite', async () => {
+  const db = new AppDatabase();
+  const bridge = new NotebookLMBridge(db);
+
+  const mockDebate = {
+    candidateId: 'cand-1',
+    event: 'Debate Band São Paulo 2026',
+    broadcaster: 'Band',
+    stage: '1º Turno Oficial',
+    date: '18/08/2026',
+    youtubeUrl: 'https://youtube.com/watch?v=debate-oficial',
+    transcriptionEngine: 'NotebookLM AI Audio Engine v2.4 (Diarização & Timestamps)',
+    truthfulnessPct: 92,
+    speakingTime: '19 min 10 seg',
+    rightOfReplyGranted: 1,
+    clashesCount: 5,
+    statements: [
+      {
+        id: 'stmt-test-1',
+        timestamp: '00:15:30',
+        theme: 'Transparência de Emendas',
+        quote: '100% das emendas do nosso mandato foram executadas por concurso público.',
+        verdict: 'Verdadeiro',
+        factCheckSummary: 'Portal da Transparência confirma seleção pública.',
+        officialSource: 'Portal da Transparência Alesp',
+        sourceLink: 'https://transparencia.alesp.sp.gov.br'
+      }
+    ]
+  };
+
+  const result = await bridge.ingestDebateResult(mockDebate);
+  assert.equal(result.success, true);
+  assert.equal(result.statementsCount, 1);
+
+  const updated = db.getCandidateById('cand-1');
+  assert.equal(updated.recentDebate.truthfulnessPct, 92);
+  assert.equal(updated.recentDebate.statements.length, 1);
+  assert.equal(updated.recentDebate.statements[0].quote, mockDebate.statements[0].quote);
+
+  db.close();
+});
+
+test('API REST: Endpoints HTTP essenciais respondem com 200 OK', async () => {
+  const { server } = require('../src/server');
+
+  await new Promise(resolve => server.listen(0, resolve));
+  const address = server.address();
+  const baseUrl = `http://localhost:${address.port}`;
+
+  try {
+    // 1. Health check
+    const healthRes = await fetch(`${baseUrl}/api/health`);
+    assert.equal(healthRes.status, 200);
+    const healthJson = await healthRes.json();
+    assert.equal(healthJson.status, 'online');
+
+    // 2. Lista de candidatos
+    const candsRes = await fetch(`${baseUrl}/api/candidates`);
+    assert.equal(candsRes.status, 200);
+    const candsJson = await candsRes.json();
+    assert.equal(candsJson.success, true);
+    assert.ok(candsJson.data.length >= 2);
+
+    // 3. Dossiê de candidato
+    const candRes = await fetch(`${baseUrl}/api/candidates/cand-1`);
+    assert.equal(candRes.status, 200);
+    const candJson = await candRes.json();
+    assert.equal(candJson.data.id, 'cand-1');
+
+    // 4. Comparador
+    const compRes = await fetch(`${baseUrl}/api/compare?c1=cand-1&c2=cand-2`);
+    assert.equal(compRes.status, 200);
+    const compJson = await compRes.json();
+    assert.equal(compJson.data.cand1.id, 'cand-1');
+  } finally {
+    await new Promise(resolve => server.close(resolve));
+  }
+});
