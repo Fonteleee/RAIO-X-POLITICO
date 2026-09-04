@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Protótipos de UX: Opções 1, 2 e 3 (Tema Nativo) | Raio-X Político</title>
+  <title>Protótipos de UX: Opções 1, 2 e 3 Completas | Raio-X Político</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -32,18 +32,10 @@
     }
     .font-mono { font-family: 'JetBrains Mono', monospace; }
 
-    /* Painéis e Cards nativos do Raio-X Político */
-    .glass-panel {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(16px);
-      border: 1px solid #e2e8f0;
-      box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.05);
-    }
-    html.dark .glass-panel {
-      background: rgba(15, 23, 42, 0.85);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.4);
-    }
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: rgba(148, 163, 184, 0.3); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(148, 163, 184, 0.5); }
   </style>
 </head>
 <body class="min-h-screen p-3 sm:p-6 transition-colors duration-200">
@@ -53,13 +45,13 @@
     <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
       <div class="space-y-1">
         <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-100 dark:bg-cyan-500/20 text-sky-800 dark:text-cyan-300 text-xs font-bold font-mono border border-sky-300 dark:border-cyan-500/30">
-          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-sky-600"></i> Validação de Design: Dossiê sem Rolagem
+          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-sky-600"></i> Laboratório de UX: As 3 Opções 100% Funcionais
         </div>
         <h1 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-          Comparador das 3 Opções no Tema Nativo Oficial
+          Visualização Completa das Opções 1, 2 e 3 (Tema Nativo)
         </h1>
         <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
-          Clique abaixo para alternar entre as 3 propostas e visualizar exatamente a eliminação de barras de rolagem e redundâncias.
+          Todas as seções (Radar, Presença, Gastos CEAP, Falas no Debate, Propostas e Pesquisas) estão implementadas e navegáveis em cada uma das opções.
         </p>
       </div>
 
@@ -79,15 +71,15 @@
           <span class="flex items-center gap-1.5 text-sm"><i data-lucide="columns" class="w-4 h-4"></i> Opção 1: Split-View 2 Colunas</span>
           <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-white/20 text-white font-black">RECOMENDADA</span>
         </div>
-        <p class="text-[11px] text-sky-100 font-normal">Candidato + Radar fixos à esquerda. Conteúdo direto à direita sem rolar.</p>
+        <p class="text-[11px] text-sky-100 font-normal">Candidato e radar fixos à esquerda. Abas com navegação ágil à direita sem scroll.</p>
       </button>
 
       <button onclick="switchPrototype(2)" id="btn-proto-2" class="proto-btn p-3.5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white font-bold text-xs text-left shadow-xs flex flex-col justify-between space-y-1 cursor-pointer transition">
         <div class="flex items-center justify-between">
-          <span class="flex items-center gap-1.5 text-sm"><i data-lucide="maximize-2" class="w-4 h-4"></i> Opção 2: Tela Cheia Imersiva</span>
+          <span class="flex items-center gap-1.5 text-sm"><i data-lucide="maximize-2" class="w-4 h-4"></i> Opção 2: Página Cheia Imersiva</span>
           <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-500 font-bold">FULL-PAGE</span>
         </div>
-        <p class="text-[11px] text-slate-500 dark:text-slate-400 font-normal">Substitui o modal por página limpa com scroll nativo livre do navegador.</p>
+        <p class="text-[11px] text-slate-500 dark:text-slate-400 font-normal">Sem modal. Visualização ampla com todas as 6 abas navegáveis e scroll natural.</p>
       </button>
 
       <button onclick="switchPrototype(3)" id="btn-proto-3" class="proto-btn p-3.5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white font-bold text-xs text-left shadow-xs flex flex-col justify-between space-y-1 cursor-pointer transition">
@@ -95,7 +87,7 @@
           <span class="flex items-center gap-1.5 text-sm"><i data-lucide="minimize-2" class="w-4 h-4"></i> Opção 3: Header Ultra-Compacto</span>
           <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-500 font-bold">MODAL ENXUTO</span>
         </div>
-        <p class="text-[11px] text-slate-500 dark:text-slate-400 font-normal">Header de 52px. Remove os 6 cards repetidos para o Radar subir imediatamente.</p>
+        <p class="text-[11px] text-slate-500 dark:text-slate-400 font-normal">Header de 52px em 1 linha. Todas as abas ativas cabem na primeira dobra.</p>
       </button>
     </div>
   </header>
@@ -104,18 +96,17 @@
   <main class="max-w-6xl mx-auto mt-6">
 
     <!-- ========================================================================= -->
-    <!-- OPÇÃO 1: SPLIT-VIEW DASHBOARD (TEMA NATIVO OFICIAL)                        -->
+    <!-- OPÇÃO 1: SPLIT-VIEW DASHBOARD (DUAS COLUNAS INTELIGENTES)                  -->
     <!-- ========================================================================= -->
     <div id="proto-view-1" class="proto-view space-y-3">
       <div class="p-3 bg-sky-50 dark:bg-sky-500/10 border border-sky-200 dark:border-cyan-500/20 rounded-2xl text-xs text-sky-900 dark:text-cyan-300 flex items-center justify-between">
         <div class="flex items-center gap-2">
           <i data-lucide="check-circle" class="w-4 h-4 text-sky-600 flex-shrink-0"></i>
-          <span><strong>Opção 1 em Ação:</strong> O modal aproveita a largura de tela com 2 colunas. A identidade e o radar ficam 100% visíveis à esquerda, enquanto o conteúdo à direita abre direto sem qualquer rolagem inicial.</span>
+          <span><strong>Opção 1 (Split-View):</strong> Identidade, Score Geral e Radar de 6 Eixos ficam 100% ancorados à esquerda. A navegação à direita é ágil, sem repetição de cards.</span>
         </div>
       </div>
 
-      <!-- Estrutura do Modal Split-View Nativo -->
-      <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/15 rounded-3xl overflow-hidden shadow-2xl flex flex-col lg:flex-row min-h-[580px]">
+      <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/15 rounded-3xl overflow-hidden shadow-2xl flex flex-col lg:flex-row min-h-[600px]">
         
         <!-- COLUNA ESQUERDA FIXA (320px) -->
         <aside class="lg:w-80 bg-slate-50 dark:bg-slate-950 border-b lg:border-b-0 lg:border-r border-slate-200 dark:border-white/10 p-5 flex flex-col justify-between space-y-4 flex-shrink-0">
@@ -174,7 +165,7 @@
           </div>
         </aside>
 
-        <!-- COLUNA DIREITA (CONTEÚDO DINÂMICO E SEM REDUNDÂNCIAS) -->
+        <!-- COLUNA DIREITA (CONTEÚDO DINÂMICO NAVEGÁVEL) -->
         <section class="flex-1 flex flex-col justify-between bg-white dark:bg-slate-900 overflow-hidden">
           
           <!-- Barra Superior de Abas em Pílulas -->
@@ -194,6 +185,9 @@
               </button>
               <button onclick="switchSplitSubTab('propostas')" id="split-btn-propostas" class="split-tab-btn px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white font-medium text-xs flex items-center gap-1.5 transition cursor-pointer">
                 <span>📜 Propostas TSE</span>
+              </button>
+              <button onclick="switchSplitSubTab('pesquisas')" id="split-btn-pesquisas" class="split-tab-btn px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white font-medium text-xs flex items-center gap-1.5 transition cursor-pointer">
+                <span>📈 Pesquisas</span>
               </button>
             </div>
 
@@ -217,43 +211,69 @@
                 </p>
               </div>
 
-              <!-- 3 Destaques Sem Repetições -->
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <div class="p-3.5 bg-slate-50 dark:bg-slate-850 rounded-2xl border border-slate-200 dark:border-white/5 space-y-1">
                   <span class="text-[10px] text-slate-500 dark:text-slate-400 uppercase font-bold block">Emendas Entregues</span>
                   <strong class="text-base font-black text-emerald-600 dark:text-emerald-400 font-mono block">R$ 35,1 Milhões</strong>
                   <span class="text-[10px] text-emerald-700 dark:text-emerald-300 font-bold">🟢 100% por Edital Aberto</span>
                 </div>
-
                 <div class="p-3.5 bg-slate-50 dark:bg-slate-850 rounded-2xl border border-slate-200 dark:border-white/5 space-y-1">
                   <span class="text-[10px] text-slate-500 dark:text-slate-400 uppercase font-bold block">Produção Legislativa</span>
                   <strong class="text-base font-black text-slate-900 dark:text-white font-mono block">9 Leis em Vigor</strong>
                   <span class="text-[10px] text-slate-500">Eficiência Legislativa: 94</span>
                 </div>
-
                 <div class="p-3.5 bg-slate-50 dark:bg-slate-850 rounded-2xl border border-slate-200 dark:border-white/5 space-y-1">
                   <span class="text-[10px] text-slate-500 dark:text-slate-400 uppercase font-bold block">Pesquisa Eleitoral</span>
                   <strong class="text-base font-black text-purple-600 dark:text-purple-400 font-mono block">34% Estimulada</strong>
                   <span class="text-[10px] text-slate-500">Datafolha (Reg. BR-08921)</span>
                 </div>
               </div>
+            </div>
 
-              <!-- Destaque do Debate Já na Primeira Tela -->
-              <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-white/5 space-y-2">
+            <!-- SUB-ABA 2: PRESENÇA X FALTAS -->
+            <div id="split-content-presenca" class="split-content-block hidden space-y-3">
+              <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-white/5 space-y-3">
                 <div class="flex items-center justify-between">
-                  <span class="text-xs font-bold text-slate-800 dark:text-slate-200 uppercase flex items-center gap-1.5">
-                    <i data-lucide="mic" class="w-3.5 h-3.5 text-rose-500"></i> Último Debate Oficial (Band SP):
-                  </span>
-                  <span class="text-[10px] text-emerald-700 dark:text-emerald-400 font-bold bg-emerald-100 dark:bg-emerald-500/20 px-2 py-0.5 rounded border border-emerald-300 dark:border-emerald-500/30">80% Verdadeiro</span>
+                  <h4 class="text-xs font-bold text-slate-900 dark:text-white uppercase">Registro Biométrico de Assiduidade</h4>
+                  <span class="text-xs font-mono font-bold text-emerald-600">Taxa de Presença: 93.8%</span>
                 </div>
-                <div class="p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/5 space-y-1 text-xs">
-                  <p class="italic text-slate-700 dark:text-slate-200">"Destinamos 100% das nossas emendas via edital aberto sem nenhum real em emenda secreta."</p>
-                  <span class="text-[10px] text-slate-500 font-mono block pt-0.5">🔍 Prova Oficial: Portal da Transparência Alesp (Protocolo 2026-SP-5501)</span>
+                <div class="grid grid-cols-3 gap-3 text-center font-mono">
+                  <div class="p-3 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-white/5">
+                    <span class="text-[10px] text-slate-500 font-sans block">Sessões Totais</span>
+                    <strong class="text-lg text-slate-900 dark:text-white">114</strong>
+                  </div>
+                  <div class="p-3 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-white/5">
+                    <span class="text-[10px] text-slate-500 font-sans block">Presenças Confirmadas</span>
+                    <strong class="text-lg text-emerald-600">107</strong>
+                  </div>
+                  <div class="p-3 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-white/5">
+                    <span class="text-[10px] text-slate-500 font-sans block">Faltas Não Justificadas</span>
+                    <strong class="text-lg text-slate-400">0</strong>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <!-- SUB-ABA 2: FALAS NO DEBATE -->
+            <!-- SUB-ABA 3: GASTOS CEAP -->
+            <div id="split-content-gastos" class="split-content-block hidden space-y-3">
+              <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-white/5 space-y-3">
+                <h4 class="text-xs font-bold text-slate-900 dark:text-white uppercase">Auditoria de Cota Parlamentar (CEAP)</h4>
+                <div class="grid grid-cols-2 gap-3 text-center font-mono">
+                  <div class="p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/5">
+                    <span class="text-[10px] text-slate-500 font-sans block">Gasto Médio Mensal</span>
+                    <strong class="text-base text-slate-900 dark:text-white">R$ 22.400,00</strong>
+                    <span class="text-[10px] text-slate-500 font-sans block">Teto Permitido: R$ 32.000</span>
+                  </div>
+                  <div class="p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/5">
+                    <span class="text-[10px] text-slate-500 font-sans block">Economia em 4 Anos</span>
+                    <strong class="text-base text-emerald-600">R$ 138.000,00</strong>
+                    <span class="text-[10px] text-emerald-700 font-sans block">30% abaixo do limite</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SUB-ABA 4: FALAS NO DEBATE -->
             <div id="split-content-debate" class="split-content-block hidden space-y-3">
               <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-white/5 space-y-3">
                 <div class="flex items-center justify-between">
@@ -275,22 +295,60 @@
                     </div>
                     <p class="text-slate-800 dark:text-slate-200 italic">"No nosso mandato, a presença em votações nominais superou 93%."</p>
                   </div>
+                  <div class="p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/5 space-y-1">
+                    <div class="flex items-center justify-between">
+                      <span class="text-[10px] font-mono text-sky-700 dark:text-cyan-400 font-bold">⏱️ 01:02:40 • Finanças Públicas</span>
+                      <span class="text-[10px] font-bold text-amber-600 bg-amber-100 dark:bg-amber-500/20 px-2 py-0.2 rounded">Impreciso</span>
+                    </div>
+                    <p class="text-slate-800 dark:text-slate-200 italic">"O estado de SP teve o maior superávit primário da história nos últimos dois anos."</p>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <!-- SUB-ABA 3: GASTOS CEAP -->
-            <div id="split-content-gastos" class="split-content-block hidden space-y-3">
-              <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-white/5 space-y-3">
-                <h4 class="text-xs font-bold text-slate-900 dark:text-white uppercase">Auditoria de Cota Parlamentar (CEAP)</h4>
-                <div class="grid grid-cols-2 gap-3 text-center font-mono">
-                  <div class="p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/5">
-                    <span class="text-[10px] text-slate-500 font-sans block">Gasto Médio Mensal</span>
-                    <strong class="text-base text-slate-900 dark:text-white">R$ 22.400,00</strong>
+            <!-- SUB-ABA 5: PROPOSTAS TSE -->
+            <div id="split-content-propostas" class="split-content-block hidden space-y-3">
+              <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-white/5 space-y-2.5">
+                <h4 class="text-xs font-bold text-slate-900 dark:text-white uppercase">Propostas Oficiais Registradas no TSE</h4>
+                <div class="space-y-2 text-xs">
+                  <div class="p-3 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-white/5 space-y-1">
+                    <div class="flex items-center justify-between">
+                      <strong class="text-slate-900 dark:text-white">1. Telemedicina Integrada SUS SP</strong>
+                      <span class="text-sky-700 dark:text-cyan-400 font-mono font-bold">Viabilidade IA: 9.2/10</span>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-300">Implantação de prontuário digital e consultas remotas para zerar filas de especialistas no interior.</p>
                   </div>
-                  <div class="p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/5">
-                    <span class="text-[10px] text-slate-500 font-sans block">Economia em 4 Anos</span>
-                    <strong class="text-base text-emerald-600">R$ 138.000,00</strong>
+                  <div class="p-3 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-white/5 space-y-1">
+                    <div class="flex items-center justify-between">
+                      <strong class="text-slate-900 dark:text-white">2. Conexão Ferroviária Intercidades</strong>
+                      <span class="text-sky-700 dark:text-cyan-400 font-mono font-bold">Viabilidade IA: 9.0/10</span>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-300">Expansão de trens rápidos de passageiros entre a capital, Campinas, Sorocaba e Vale do Paraíba.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SUB-ABA 6: PESQUISAS ELEITORAIS -->
+            <div id="split-content-pesquisas" class="split-content-block hidden space-y-3">
+              <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-white/5 space-y-3">
+                <h4 class="text-xs font-bold text-slate-900 dark:text-white uppercase">Consolidação de Institutos de Pesquisa Registrados no TSE</h4>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center font-mono">
+                  <div class="p-2.5 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-white/5">
+                    <span class="text-[10px] text-slate-500 font-sans block">Datafolha</span>
+                    <strong class="text-base text-sky-700 dark:text-cyan-400">34%</strong>
+                  </div>
+                  <div class="p-2.5 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-white/5">
+                    <span class="text-[10px] text-slate-500 font-sans block">Quaest</span>
+                    <strong class="text-base text-purple-600 dark:text-purple-400">35%</strong>
+                  </div>
+                  <div class="p-2.5 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-white/5">
+                    <span class="text-[10px] text-slate-500 font-sans block">Ipec</span>
+                    <strong class="text-base text-emerald-600 dark:text-emerald-400">33%</strong>
+                  </div>
+                  <div class="p-2.5 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-white/5">
+                    <span class="text-[10px] text-slate-500 font-sans block">AtlasIntel</span>
+                    <strong class="text-base text-amber-600 dark:text-amber-400">36%</strong>
                   </div>
                 </div>
               </div>
@@ -301,7 +359,7 @@
           <!-- Rodapé do Modal -->
           <footer class="p-3 bg-slate-100 dark:bg-slate-950 border-t border-slate-200 dark:border-white/10 flex items-center justify-between text-[11px] text-slate-500">
             <span>🛡️ Auditoria com base na Lei de Acesso à Informação (Lei 12.527/11).</span>
-            <span class="text-sky-700 dark:text-cyan-400 font-medium">Dados atualizados hoje</span>
+            <span class="text-sky-700 dark:text-cyan-400 font-medium">Dados auditados</span>
           </footer>
         </section>
 
@@ -309,20 +367,20 @@
     </div>
 
     <!-- ========================================================================= -->
-    <!-- OPÇÃO 2: PÁGINA CHEIA IMERSIVA (TEMA NATIVO OFICIAL)                       -->
+    <!-- OPÇÃO 2: PÁGINA CHEIA IMERSIVA (100% DESENVOLVIDA E NAVEGÁVEL)            -->
     <!-- ========================================================================= -->
     <div id="proto-view-2" class="proto-view hidden space-y-3">
       <div class="p-3 bg-blue-50 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/20 rounded-2xl text-xs text-blue-900 dark:text-blue-300 flex items-center justify-between">
         <div class="flex items-center gap-2">
           <i data-lucide="check-circle" class="w-4 h-4 text-blue-600 flex-shrink-0"></i>
-          <span><strong>Opção 2 em Ação:</strong> O usuário sai do conceito de "modal apertado". A página abre em tela cheia com barra superior minimalista e scroll nativo do navegador suave.</span>
+          <span><strong>Opção 2 Completa (Página Cheia):</strong> O usuário não fica preso a um modal. O dossiê abre em página dedicada com barra sticky no topo e todas as 6 abas funcionais abaixo.</span>
         </div>
       </div>
 
-      <!-- Simulador de Página Cheia Nativa -->
+      <!-- Estrutura de Página Cheia Nativa -->
       <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/15 rounded-3xl overflow-hidden shadow-2xl space-y-6">
         
-        <!-- Sticky Top Navigation Bar -->
+        <!-- Sticky Top Navigation Bar (56px) -->
         <div class="px-6 py-3.5 bg-slate-50 dark:bg-slate-950 border-b border-slate-200 dark:border-white/10 flex items-center justify-between sticky top-0 z-20">
           <div class="flex items-center gap-3">
             <button class="px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 hover:bg-slate-100 text-slate-800 dark:text-white font-bold text-xs flex items-center gap-1.5 transition cursor-pointer shadow-xs">
@@ -343,54 +401,187 @@
           </div>
         </div>
 
-        <!-- Conteúdo Espaçoso em Página Aberta -->
+        <!-- Barra de Abas Horizontais de Página Cheia -->
+        <div class="px-6 border-b border-slate-200 dark:border-white/10 flex items-center gap-2 overflow-x-auto pb-3">
+          <button onclick="switchFullSubTab('visao')" id="full-btn-visao" class="full-tab-btn active px-3.5 py-2 rounded-xl bg-sky-600 text-white font-bold text-xs flex items-center gap-1.5 shadow-sm transition cursor-pointer">
+            <span>📊 Visão Geral & Radar</span>
+          </button>
+          <button onclick="switchFullSubTab('presenca')" id="full-btn-presenca" class="full-tab-btn px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 font-medium text-xs flex items-center gap-1.5 transition cursor-pointer">
+            <span>🏛️ Presença (93.8%)</span>
+          </button>
+          <button onclick="switchFullSubTab('gastos')" id="full-btn-gastos" class="full-tab-btn px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 font-medium text-xs flex items-center gap-1.5 transition cursor-pointer">
+            <span>💰 Gastos CEAP</span>
+          </button>
+          <button onclick="switchFullSubTab('debate')" id="full-btn-debate" class="full-tab-btn px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 font-medium text-xs flex items-center gap-1.5 transition cursor-pointer">
+            <span>🔍 Falas no Debate</span>
+          </button>
+          <button onclick="switchFullSubTab('propostas')" id="full-btn-propostas" class="full-tab-btn px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 font-medium text-xs flex items-center gap-1.5 transition cursor-pointer">
+            <span>📜 Propostas TSE</span>
+          </button>
+          <button onclick="switchFullSubTab('pesquisas')" id="full-btn-pesquisas" class="full-tab-btn px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 font-medium text-xs flex items-center gap-1.5 transition cursor-pointer">
+            <span>📈 Pesquisas</span>
+          </button>
+        </div>
+
+        <!-- Conteúdo Completo de Página Cheia -->
         <div class="p-6 max-w-5xl mx-auto space-y-6">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-            <div class="space-y-3">
-              <h3 class="text-2xl font-black text-slate-900 dark:text-white tracking-tight">Dossiê de Governança & Eficiência Cívica</h3>
-              <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-sans">
-                Cruzamento de 4 fontes oficiais públicas. Todas as 107 sessões deliberativas da legislatura foram auditadas com registro de 93.8% de assiduidade e ausência de processos em tribunais superiores.
-              </p>
-              <div class="grid grid-cols-2 gap-3 pt-2 font-mono">
-                <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-white/5">
-                  <span class="text-[10px] text-slate-500 font-sans uppercase font-bold block">Presença Plenário</span>
-                  <span class="text-xl font-black text-emerald-600">93.8%</span>
-                </div>
-                <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-white/5">
-                  <span class="text-[10px] text-slate-500 font-sans uppercase font-bold block">Custo por Minuto</span>
-                  <span class="text-xl font-black text-amber-600">R$ 0,51</span>
+          
+          <!-- FULL VIEW 1: VISÃO GERAL -->
+          <div id="full-content-visao" class="full-content-block space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+              <div class="space-y-3">
+                <h3 class="text-2xl font-black text-slate-900 dark:text-white tracking-tight">Dossiê de Governança & Eficiência Cívica</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-sans">
+                  Cruzamento de 4 fontes oficiais públicas. Todas as 107 sessões deliberativas da legislatura foram auditadas com registro de 93.8% de assiduidade e ausência de processos em tribunais superiores.
+                </p>
+                <div class="grid grid-cols-2 gap-3 pt-2 font-mono">
+                  <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-white/5">
+                    <span class="text-[10px] text-slate-500 font-sans uppercase font-bold block">Presença Plenário</span>
+                    <span class="text-xl font-black text-emerald-600">93.8%</span>
+                  </div>
+                  <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-white/5">
+                    <span class="text-[10px] text-slate-500 font-sans uppercase font-bold block">Custo por Minuto</span>
+                    <span class="text-xl font-black text-amber-600">R$ 0,51</span>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Radar Grande em Página Aberta -->
-            <div class="p-4 rounded-3xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-white/5 flex flex-col items-center">
-              <span class="text-xs font-bold uppercase text-slate-500 mb-2">Radar Multidimensional (6 Eixos)</span>
-              <div class="w-full h-52 flex items-center justify-center">
-                <canvas id="fullPageRadarCanvas" width="280" height="200"></canvas>
+              <!-- Radar Grande em Página Aberta -->
+              <div class="p-4 rounded-3xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-white/5 flex flex-col items-center">
+                <span class="text-xs font-bold uppercase text-slate-500 mb-2">Radar Multidimensional (6 Eixos)</span>
+                <div class="w-full h-56 flex items-center justify-center">
+                  <canvas id="fullPageRadarCanvas" width="280" height="200"></canvas>
+                </div>
               </div>
             </div>
           </div>
+
+          <!-- FULL VIEW 2: PRESENÇA -->
+          <div id="full-content-presenca" class="full-content-block hidden space-y-4">
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Assiduidade e Registro Biométrico Completo</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 font-mono text-center">
+              <div class="p-4 bg-slate-50 dark:bg-slate-850 rounded-2xl border border-slate-200 dark:border-white/5">
+                <span class="text-xs text-slate-500 font-sans block">Sessões Convocadas</span>
+                <strong class="text-2xl text-slate-900 dark:text-white">114</strong>
+              </div>
+              <div class="p-4 bg-slate-50 dark:bg-slate-850 rounded-2xl border border-slate-200 dark:border-white/5">
+                <span class="text-xs text-slate-500 font-sans block">Presenças Validadas</span>
+                <strong class="text-2xl text-emerald-600">107 (93.8%)</strong>
+              </div>
+              <div class="p-4 bg-slate-50 dark:bg-slate-850 rounded-2xl border border-slate-200 dark:border-white/5">
+                <span class="text-xs text-slate-500 font-sans block">Faltas sem Justificativa</span>
+                <strong class="text-2xl text-slate-400">0</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- FULL VIEW 3: GASTOS -->
+          <div id="full-content-gastos" class="full-content-block hidden space-y-4">
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Uso da Cota Parlamentar (CEAP)</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 font-mono text-center">
+              <div class="p-4 bg-slate-50 dark:bg-slate-850 rounded-2xl border border-slate-200 dark:border-white/5">
+                <span class="text-xs text-slate-500 font-sans block">Média Mensal Consumida</span>
+                <strong class="text-2xl text-slate-900 dark:text-white">R$ 22.400,00</strong>
+                <span class="text-xs text-slate-500 font-sans block mt-1">Limite mensal permitido: R$ 32.000,00</span>
+              </div>
+              <div class="p-4 bg-slate-50 dark:bg-slate-850 rounded-2xl border border-slate-200 dark:border-white/5">
+                <span class="text-xs text-slate-500 font-sans block">Economia Real Devolvida</span>
+                <strong class="text-2xl text-emerald-600">R$ 138.000,00</strong>
+                <span class="text-xs text-emerald-700 font-sans block mt-1">30% abaixo do teto</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- FULL VIEW 4: DEBATE -->
+          <div id="full-content-debate" class="full-content-block hidden space-y-4">
+            <div class="flex items-center justify-between">
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white">Debate Oficial Band SP: 5 Falas Checadas</h3>
+              <span class="text-xs font-mono font-bold text-purple-700 bg-purple-100 dark:bg-purple-500/20 px-2.5 py-1 rounded-lg">NotebookLM v2.4</span>
+            </div>
+            <div class="space-y-3">
+              <div class="p-4 bg-slate-50 dark:bg-slate-850 rounded-2xl border border-slate-200 dark:border-white/5 space-y-1">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-mono font-bold text-sky-700">⏱️ 00:14:22 • Transparência Orçamentária</span>
+                  <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold text-xs">Verdadeiro</span>
+                </div>
+                <p class="text-sm italic text-slate-800 dark:text-slate-200">"Destinamos 100% das nossas emendas via edital aberto sem nenhum real em emenda secreta."</p>
+                <span class="text-xs text-slate-500 font-mono block pt-1">Fonte: Portal da Transparência Alesp (Protocolo 2026-SP-5501)</span>
+              </div>
+              <div class="p-4 bg-slate-50 dark:bg-slate-850 rounded-2xl border border-slate-200 dark:border-white/5 space-y-1">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-mono font-bold text-sky-700">⏱️ 00:38:15 • Dedicação Legislativa</span>
+                  <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold text-xs">Verdadeiro</span>
+                </div>
+                <p class="text-sm italic text-slate-800 dark:text-slate-200">"No nosso mandato, a presença em votações nominais superou 93%."</p>
+                <span class="text-xs text-slate-500 font-mono block pt-1">Fonte: Painel Eletrônico Alesp (Sessões 2023-2026)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- FULL VIEW 5: PROPOSTAS -->
+          <div id="full-content-propostas" class="full-content-block hidden space-y-4">
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Propostas Registradas no TSE</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="p-4 bg-slate-50 dark:bg-slate-850 rounded-2xl border border-slate-200 dark:border-white/5 space-y-2">
+                <div class="flex items-center justify-between">
+                  <strong class="text-sm font-bold text-slate-900 dark:text-white">SUS Digital & Telemedicina</strong>
+                  <span class="text-xs font-mono font-bold text-sky-700">Viabilidade: 9.2</span>
+                </div>
+                <p class="text-xs text-slate-600 dark:text-slate-300">Zerar filas de especialistas com teleconsultas e prontuário integrado em 100% dos hospitais estaduais.</p>
+              </div>
+              <div class="p-4 bg-slate-50 dark:bg-slate-850 rounded-2xl border border-slate-200 dark:border-white/5 space-y-2">
+                <div class="flex items-center justify-between">
+                  <strong class="text-sm font-bold text-slate-900 dark:text-white">Trem Intercidades SP-Campinas</strong>
+                  <span class="text-xs font-mono font-bold text-sky-700">Viabilidade: 9.0</span>
+                </div>
+                <p class="text-xs text-slate-600 dark:text-slate-300">Conexão ferroviária rápida de passageiros com integração metroviária e concessão estruturada.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FULL VIEW 6: PESQUISAS -->
+          <div id="full-content-pesquisas" class="full-content-block hidden space-y-4">
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Pesquisas Eleitorais Registradas no TSE</h3>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 font-mono text-center">
+              <div class="p-4 bg-slate-50 dark:bg-slate-850 rounded-2xl border border-slate-200 dark:border-white/5">
+                <span class="text-xs text-slate-500 font-sans block">Datafolha</span>
+                <strong class="text-2xl text-sky-700">34%</strong>
+              </div>
+              <div class="p-4 bg-slate-50 dark:bg-slate-850 rounded-2xl border border-slate-200 dark:border-white/5">
+                <span class="text-xs text-slate-500 font-sans block">Quaest</span>
+                <strong class="text-2xl text-purple-600">35%</strong>
+              </div>
+              <div class="p-4 bg-slate-50 dark:bg-slate-850 rounded-2xl border border-slate-200 dark:border-white/5">
+                <span class="text-xs text-slate-500 font-sans block">Ipec</span>
+                <strong class="text-2xl text-emerald-600">33%</strong>
+              </div>
+              <div class="p-4 bg-slate-50 dark:bg-slate-850 rounded-2xl border border-slate-200 dark:border-white/5">
+                <span class="text-xs text-slate-500 font-sans block">AtlasIntel</span>
+                <strong class="text-2xl text-amber-600">36%</strong>
+              </div>
+            </div>
+          </div>
+
         </div>
 
       </div>
     </div>
 
     <!-- ========================================================================= -->
-    <!-- OPÇÃO 3: HEADER ULTRA-COMPACTO (TEMA NATIVO OFICIAL)                       -->
+    <!-- OPÇÃO 3: HEADER ULTRA-COMPACTO NO MODAL (100% DESENVOLVIDA E NAVEGÁVEL)   -->
     <!-- ========================================================================= -->
     <div id="proto-view-3" class="proto-view hidden space-y-3">
       <div class="p-3 bg-purple-50 dark:bg-purple-500/10 border border-purple-200 dark:border-purple-500/20 rounded-2xl text-xs text-purple-900 dark:text-purple-300 flex items-center justify-between">
         <div class="flex items-center gap-2">
           <i data-lucide="check-circle" class="w-4 h-4 text-purple-600 flex-shrink-0"></i>
-          <span><strong>Opção 3 em Ação:</strong> O modal tradicional é mantido, mas o cabeçalho gigante foi reduzido para 52px e os cards redundantes foram excluídos. O Radar já aparece de cara!</span>
+          <span><strong>Opção 3 Completa (Modal Enxuto):</strong> O modal tradicional é mantido, mas o cabeçalho gigante foi reduzido para 52px e as 6 abas são 100% navegáveis. O Radar já aparece na tela sem rolagem!</span>
         </div>
       </div>
 
-      <!-- Simulador do Modal Ultra-Compacto Nativo -->
-      <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/15 rounded-3xl overflow-hidden shadow-2xl flex flex-col max-h-[640px]">
+      <!-- Estrutura do Modal Ultra-Compacto Nativo -->
+      <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/15 rounded-3xl overflow-hidden shadow-2xl flex flex-col min-h-[580px]">
         
-        <!-- Header Ultra-Compacto de 52px -->
+        <!-- Header Ultra-Compacto de 52px em 1 Linha -->
         <div class="px-5 py-2.5 bg-slate-50 dark:bg-slate-950 border-b border-slate-200 dark:border-white/10 flex items-center justify-between gap-4">
           <div class="flex items-center gap-3">
             <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=faces" class="w-9 h-9 rounded-xl object-cover border-2 border-sky-500">
@@ -412,48 +603,157 @@
           </div>
         </div>
 
-        <!-- Abas em 1 Linha com 4 Chips Compactos -->
-        <div class="px-5 py-2 bg-slate-100 dark:bg-slate-950/80 border-b border-slate-200 dark:border-white/10">
-          <div class="grid grid-cols-4 gap-1.5 text-xs">
-            <button class="py-1.5 rounded-xl bg-sky-600 text-white font-bold text-[11px] text-center shadow-xs cursor-pointer">📊 Visão Geral & Radar</button>
-            <button class="py-1.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-[11px] text-center cursor-pointer">🏛️ Presença (93.8%)</button>
-            <button class="py-1.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-[11px] text-center cursor-pointer">💰 Gastos CEAP</button>
-            <button class="py-1.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-[11px] text-center cursor-pointer">🔍 Falas no Debate</button>
-          </div>
+        <!-- Abas em 1 Linha com 6 Chips Compactos Navegáveis -->
+        <div class="px-5 py-2 bg-slate-100 dark:bg-slate-950/80 border-b border-slate-200 dark:border-white/10 flex items-center gap-1.5 overflow-x-auto">
+          <button onclick="switchCompactSubTab('visao')" id="compact-btn-visao" class="compact-tab-btn active px-3 py-1.5 rounded-xl bg-sky-600 text-white font-bold text-[11px] transition cursor-pointer">📊 Visão Geral</button>
+          <button onclick="switchCompactSubTab('presenca')" id="compact-btn-presenca" class="compact-tab-btn px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-[11px] transition cursor-pointer">🏛️ Presença (93.8%)</button>
+          <button onclick="switchCompactSubTab('gastos')" id="compact-btn-gastos" class="compact-tab-btn px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-[11px] transition cursor-pointer">💰 Gastos CEAP</button>
+          <button onclick="switchCompactSubTab('debate')" id="compact-btn-debate" class="compact-tab-btn px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-[11px] transition cursor-pointer">🔍 Falas no Debate</button>
+          <button onclick="switchCompactSubTab('propostas')" id="compact-btn-propostas" class="compact-tab-btn px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-[11px] transition cursor-pointer">📜 Propostas TSE</button>
+          <button onclick="switchCompactSubTab('pesquisas')" id="compact-btn-pesquisas" class="compact-tab-btn px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-[11px] transition cursor-pointer">📈 Pesquisas</button>
         </div>
 
-        <!-- Conteúdo Já Visível Sem Rolar -->
-        <div class="p-5 overflow-y-auto space-y-4">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
-            
-            <!-- Radar visível logo no topo -->
-            <div class="p-3.5 bg-slate-50 dark:bg-slate-850 rounded-2xl border border-slate-200 dark:border-white/5 flex flex-col items-center">
-              <span class="text-[11px] font-bold uppercase text-slate-500 mb-1">Radar de Intensidade (6 Eixos)</span>
-              <div class="w-full h-44 flex items-center justify-center">
-                <canvas id="compactRadarCanvas" width="260" height="170"></canvas>
-              </div>
-            </div>
-
-            <!-- Resumo e Métricas Lado a Lado -->
-            <div class="space-y-3 text-xs">
-              <div class="p-3 bg-slate-50 dark:bg-slate-850 rounded-xl border border-slate-200 dark:border-white/5 space-y-1">
-                <span class="font-bold text-slate-900 dark:text-white block">Avaliação de Ficha Limpa:</span>
-                <p class="text-slate-600 dark:text-slate-300 leading-relaxed font-sans">Nenhuma condenação em colegiado ou inquérito criminal no STF/CNJ. 100% de certidões negativas.</p>
-              </div>
-
-              <div class="grid grid-cols-2 gap-2 font-mono text-center">
-                <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-white/5">
-                  <span class="text-[10px] text-slate-500 font-sans block">Economia Cota</span>
-                  <strong class="text-emerald-600 text-sm">R$ 138 mil salvos</strong>
-                </div>
-                <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-white/5">
-                  <span class="text-[10px] text-slate-500 font-sans block">Veracidade Debate</span>
-                  <strong class="text-sky-600 text-sm">80% Verdadeiro</strong>
+        <!-- Conteúdo Completo do Modal Compacto -->
+        <div class="p-5 overflow-y-auto space-y-4 flex-1">
+          
+          <!-- COMPACT VIEW 1: VISÃO GERAL & RADAR (ABOVE THE FOLD) -->
+          <div id="compact-content-visao" class="compact-content-block space-y-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+              
+              <!-- Radar visível logo no topo sem rolar -->
+              <div class="p-3.5 bg-slate-50 dark:bg-slate-850 rounded-2xl border border-slate-200 dark:border-white/5 flex flex-col items-center">
+                <span class="text-[11px] font-bold uppercase text-slate-500 mb-1">Radar de Intensidade (6 Eixos)</span>
+                <div class="w-full h-44 flex items-center justify-center">
+                  <canvas id="compactRadarCanvas" width="260" height="170"></canvas>
                 </div>
               </div>
-            </div>
 
+              <!-- Resumo e Métricas Lado a Lado -->
+              <div class="space-y-3 text-xs">
+                <div class="p-3 bg-slate-50 dark:bg-slate-850 rounded-xl border border-slate-200 dark:border-white/5 space-y-1">
+                  <span class="font-bold text-slate-900 dark:text-white block">Avaliação de Ficha Limpa:</span>
+                  <p class="text-slate-600 dark:text-slate-300 leading-relaxed font-sans">Nenhuma condenação em colegiado ou inquérito criminal no STF/CNJ. 100% de certidões negativas válidas.</p>
+                </div>
+
+                <div class="grid grid-cols-2 gap-2 font-mono text-center">
+                  <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-white/5">
+                    <span class="text-[10px] text-slate-500 font-sans block">Economia Cota</span>
+                    <strong class="text-emerald-600 text-sm">R$ 138 mil salvos</strong>
+                  </div>
+                  <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-white/5">
+                    <span class="text-[10px] text-slate-500 font-sans block">Veracidade Debate</span>
+                    <strong class="text-sky-600 text-sm">80% Verdadeiro</strong>
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
+
+          <!-- COMPACT VIEW 2: PRESENÇA -->
+          <div id="compact-content-presenca" class="compact-content-block hidden space-y-3">
+            <h4 class="text-xs font-bold text-slate-900 dark:text-white uppercase">Assiduidade em Votações Nominais</h4>
+            <div class="grid grid-cols-3 gap-2 text-center font-mono">
+              <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-white/5">
+                <span class="text-[10px] text-slate-500 font-sans block">Total de Sessões</span>
+                <strong class="text-base text-slate-900 dark:text-white">114</strong>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-white/5">
+                <span class="text-[10px] text-slate-500 font-sans block">Presenças</span>
+                <strong class="text-base text-emerald-600">107 (93.8%)</strong>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-white/5">
+                <span class="text-[10px] text-slate-500 font-sans block">Faltas Injustificadas</span>
+                <strong class="text-base text-slate-400">0</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMPACT VIEW 3: GASTOS -->
+          <div id="compact-content-gastos" class="compact-content-block hidden space-y-3">
+            <h4 class="text-xs font-bold text-slate-900 dark:text-white uppercase">Gastos da Cota Parlamentar (CEAP)</h4>
+            <div class="grid grid-cols-2 gap-3 text-center font-mono">
+              <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-white/5">
+                <span class="text-[10px] text-slate-500 font-sans block">Média Mensal</span>
+                <strong class="text-base text-slate-900 dark:text-white">R$ 22.400,00</strong>
+                <span class="text-[10px] text-slate-500 font-sans block">Teto: R$ 32.000,00</span>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-white/5">
+                <span class="text-[10px] text-slate-500 font-sans block">Economia em 4 Anos</span>
+                <strong class="text-base text-emerald-600">R$ 138.000,00</strong>
+                <span class="text-[10px] text-emerald-700 font-sans block">30% economizados</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMPACT VIEW 4: DEBATE -->
+          <div id="compact-content-debate" class="compact-content-block hidden space-y-3">
+            <div class="flex items-center justify-between">
+              <h4 class="text-xs font-bold text-slate-900 dark:text-white uppercase">Debate Oficial Band SP: Falas Checadas</h4>
+              <span class="text-[10px] font-mono font-bold text-purple-700 bg-purple-100 px-2 py-0.5 rounded">NotebookLM</span>
+            </div>
+            <div class="space-y-2 text-xs">
+              <div class="p-3 bg-slate-50 dark:bg-slate-850 rounded-xl border border-slate-200 dark:border-white/5 space-y-1">
+                <div class="flex items-center justify-between">
+                  <span class="text-[10px] font-mono font-bold text-sky-700">⏱️ 00:14:22 • Emendas</span>
+                  <span class="text-[10px] font-bold text-emerald-600 bg-emerald-100 px-2 py-0.2 rounded">Verdadeiro</span>
+                </div>
+                <p class="text-slate-800 dark:text-slate-200 italic">"Destinamos 100% das nossas emendas via edital aberto sem nenhum real em emenda secreta."</p>
+              </div>
+              <div class="p-3 bg-slate-50 dark:bg-slate-850 rounded-xl border border-slate-200 dark:border-white/5 space-y-1">
+                <div class="flex items-center justify-between">
+                  <span class="text-[10px] font-mono font-bold text-sky-700">⏱️ 00:38:15 • Presença</span>
+                  <span class="text-[10px] font-bold text-emerald-600 bg-emerald-100 px-2 py-0.2 rounded">Verdadeiro</span>
+                </div>
+                <p class="text-slate-800 dark:text-slate-200 italic">"No nosso mandato, a presença em votações nominais superou 93%."</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMPACT VIEW 5: PROPOSTAS -->
+          <div id="compact-content-propostas" class="compact-content-block hidden space-y-3">
+            <h4 class="text-xs font-bold text-slate-900 dark:text-white uppercase">Propostas Oficiais Registradas no TSE</h4>
+            <div class="space-y-2 text-xs">
+              <div class="p-3 bg-slate-50 dark:bg-slate-850 rounded-xl border border-slate-200 dark:border-white/5 space-y-1">
+                <div class="flex items-center justify-between">
+                  <strong class="text-slate-900 dark:text-white">1. Telemedicina Integrada SUS SP</strong>
+                  <span class="text-sky-700 font-mono font-bold">Viabilidade: 9.2</span>
+                </div>
+                <p class="text-slate-600 dark:text-slate-300">Prontuário eletrônico unificado e teleconsultas gratuitas para o interior.</p>
+              </div>
+              <div class="p-3 bg-slate-50 dark:bg-slate-850 rounded-xl border border-slate-200 dark:border-white/5 space-y-1">
+                <div class="flex items-center justify-between">
+                  <strong class="text-slate-900 dark:text-white">2. Trem Intercidades SP-Campinas</strong>
+                  <span class="text-sky-700 font-mono font-bold">Viabilidade: 9.0</span>
+                </div>
+                <p class="text-slate-600 dark:text-slate-300">Linha ferroviária expressa para desafogar as rodovias Anhanguera e Bandeirantes.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMPACT VIEW 6: PESQUISAS -->
+          <div id="compact-content-pesquisas" class="compact-content-block hidden space-y-3">
+            <h4 class="text-xs font-bold text-slate-900 dark:text-white uppercase">Pesquisas Eleitorais TSE</h4>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center font-mono">
+              <div class="p-3 bg-slate-50 dark:bg-slate-850 rounded-xl border border-slate-200 dark:border-white/5">
+                <span class="text-[10px] text-slate-500 font-sans block">Datafolha</span>
+                <strong class="text-base text-sky-700">34%</strong>
+              </div>
+              <div class="p-3 bg-slate-50 dark:bg-slate-850 rounded-xl border border-slate-200 dark:border-white/5">
+                <span class="text-[10px] text-slate-500 font-sans block">Quaest</span>
+                <strong class="text-base text-purple-600">35%</strong>
+              </div>
+              <div class="p-3 bg-slate-50 dark:bg-slate-850 rounded-xl border border-slate-200 dark:border-white/5">
+                <span class="text-[10px] text-slate-500 font-sans block">Ipec</span>
+                <strong class="text-base text-emerald-600">33%</strong>
+              </div>
+              <div class="p-3 bg-slate-50 dark:bg-slate-850 rounded-xl border border-slate-200 dark:border-white/5">
+                <span class="text-[10px] text-slate-500 font-sans block">Atlas</span>
+                <strong class="text-base text-amber-600">36%</strong>
+              </div>
+            </div>
+          </div>
+
         </div>
 
       </div>
@@ -463,8 +763,7 @@
 
   <script>
     let currentProto = 1;
-    let isDarkMode = false; // Padrão tema claro nativo
-
+    let isDarkMode = false;
     let charts = {};
 
     const radarLabels = ['Integridade', 'Eficiência', 'Transparência', 'Coerência', 'Viabilidade', 'Presença'];
@@ -530,7 +829,6 @@
         }
       }
 
-      // Inicializa o gráfico correspondente após o DOM estar visível
       setTimeout(() => {
         if (num === 1) createOrUpdateRadar('splitViewRadarCanvas', isDarkMode);
         if (num === 2) createOrUpdateRadar('fullPageRadarCanvas', isDarkMode);
@@ -539,12 +837,13 @@
       }, 50);
     }
 
+    // NAVEGAÇÃO SUB-ABAS OPÇÃO 1
     function switchSplitSubTab(subTab) {
       document.querySelectorAll('.split-content-block').forEach(el => el.classList.add('hidden'));
       const active = document.getElementById(`split-content-${subTab}`);
       if (active) active.classList.remove('hidden');
 
-      ['resumo', 'presenca', 'gastos', 'debate', 'propostas'].forEach(tab => {
+      ['resumo', 'presenca', 'gastos', 'debate', 'propostas', 'pesquisas'].forEach(tab => {
         const btn = document.getElementById(`split-btn-${tab}`);
         if (btn) {
           if (tab === subTab) {
@@ -554,6 +853,52 @@
           }
         }
       });
+      lucide.createIcons();
+    }
+
+    // NAVEGAÇÃO SUB-ABAS OPÇÃO 2 (PÁGINA CHEIA)
+    function switchFullSubTab(subTab) {
+      document.querySelectorAll('.full-content-block').forEach(el => el.classList.add('hidden'));
+      const active = document.getElementById(`full-content-${subTab}`);
+      if (active) active.classList.remove('hidden');
+
+      ['visao', 'presenca', 'gastos', 'debate', 'propostas', 'pesquisas'].forEach(tab => {
+        const btn = document.getElementById(`full-btn-${tab}`);
+        if (btn) {
+          if (tab === subTab) {
+            btn.className = 'full-tab-btn active px-3.5 py-2 rounded-xl bg-sky-600 text-white font-bold text-xs flex items-center gap-1.5 shadow-sm transition cursor-pointer';
+          } else {
+            btn.className = 'full-tab-btn px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 font-medium text-xs flex items-center gap-1.5 transition cursor-pointer';
+          }
+        }
+      });
+
+      if (subTab === 'visao') {
+        setTimeout(() => createOrUpdateRadar('fullPageRadarCanvas', isDarkMode), 50);
+      }
+      lucide.createIcons();
+    }
+
+    // NAVEGAÇÃO SUB-ABAS OPÇÃO 3 (COMPACTO)
+    function switchCompactSubTab(subTab) {
+      document.querySelectorAll('.compact-content-block').forEach(el => el.classList.add('hidden'));
+      const active = document.getElementById(`compact-content-${subTab}`);
+      if (active) active.classList.remove('hidden');
+
+      ['visao', 'presenca', 'gastos', 'debate', 'propostas', 'pesquisas'].forEach(tab => {
+        const btn = document.getElementById(`compact-btn-${tab}`);
+        if (btn) {
+          if (tab === subTab) {
+            btn.className = 'compact-tab-btn active px-3 py-1.5 rounded-xl bg-sky-600 text-white font-bold text-[11px] transition cursor-pointer';
+          } else {
+            btn.className = 'compact-tab-btn px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-[11px] transition cursor-pointer';
+          }
+        }
+      });
+
+      if (subTab === 'visao') {
+        setTimeout(() => createOrUpdateRadar('compactRadarCanvas', isDarkMode), 50);
+      }
       lucide.createIcons();
     }
 
@@ -571,7 +916,6 @@
         themeIcon.setAttribute('data-lucide', 'moon');
       }
 
-      // Atualiza gráficos com as cores corretas
       if (currentProto === 1) createOrUpdateRadar('splitViewRadarCanvas', isDarkMode);
       if (currentProto === 2) createOrUpdateRadar('fullPageRadarCanvas', isDarkMode);
       if (currentProto === 3) createOrUpdateRadar('compactRadarCanvas', isDarkMode);
@@ -579,7 +923,6 @@
       lucide.createIcons();
     }
 
-    // Inicialização direta
     document.addEventListener('DOMContentLoaded', () => {
       lucide.createIcons();
       createOrUpdateRadar('splitViewRadarCanvas', isDarkMode);
