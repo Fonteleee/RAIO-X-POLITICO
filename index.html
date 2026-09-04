@@ -4455,8 +4455,16 @@
       renderCandidatesFeed(filtered);
     }
 
-    // ================= DOSSIE MODAL LOGIC =================
+    // ================= DOSSIE NAVIGATION LOGIC (PÁGINA COMPLETA DEDICADA) =================
     function openDossie(candId, initialSubTab = 'visao-geral') {
+      window.location.href = `dossie.html?id=${candId}&tab=${initialSubTab}`;
+    }
+
+    function openDossieModal(candId, initialSubTab = 'visao-geral') {
+      openDossie(candId, initialSubTab);
+    }
+
+    function _legacyPopulateDossieModal(candId, initialSubTab = 'visao-geral') {
       const cand = candidatesData.find(c => c.id === candId) || candidatesData[0];
       activeDossieCandidate = cand;
 
