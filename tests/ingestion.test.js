@@ -134,7 +134,11 @@ describe('Extratores de Dados Oficiais (Custo Zero)', () => {
 
     const campos = appDb.getCandidateById('cand-joao-campos');
     assert.ok(campos, 'João Campos must exist in database');
-    assert.strictEqual(campos.position, 'Prefeito');
+    assert.strictEqual(campos.position, 'Governador');
+
+    const nunes = appDb.getCandidateById('cand-ricardo-nunes');
+    assert.ok(nunes, 'Ricardo Nunes must exist in database');
+    assert.strictEqual(nunes.position, 'Prefeito');
   });
 
 });

@@ -842,12 +842,17 @@
       document.getElementById('cand-avatar').src = cand.avatar;
       document.getElementById('cand-name').innerText = cand.name;
       document.getElementById('cand-party-badge').innerText = `${cand.party} • Nº ${cand.number}`;
+      const isHistorical = cand.position && (cand.position.includes('Ex-') || cand.careerHistory?.includes('Inelegível'));
       const isExecutive = /Presidente|Governador|Prefeito/i.test(cand.position);
       const posElem = document.getElementById('cand-position-badge');
       if (posElem) {
-        posElem.innerHTML = isExecutive 
-          ? `<span class="text-amber-600 dark:text-amber-400 font-bold mr-1">🏛️ Executivo</span> • ${cand.position}`
-          : `<span class="text-indigo-600 dark:text-indigo-400 font-bold mr-1">⚖️ Legislativo</span> • ${cand.position}`;
+        if (isHistorical) {
+          posElem.innerHTML = `<span class="text-rose-600 dark:text-rose-400 font-bold mr-1">⚠️ Histórico / Inelegível</span> • ${cand.position}`;
+        } else if (isExecutive) {
+          posElem.innerHTML = `<span class="text-amber-600 dark:text-amber-400 font-bold mr-1">🏛️ Executivo</span> • ${cand.position}`;
+        } else {
+          posElem.innerHTML = `<span class="text-indigo-600 dark:text-indigo-400 font-bold mr-1">⚖️ Legislativo</span> • ${cand.position}`;
+        }
       }
 
       const ceapTitle = document.getElementById('cand-ceap-title');

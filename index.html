@@ -7132,9 +7132,14 @@
         
         const isExec = cand.position && (cand.position.includes('Presidente') || cand.position.includes('Governador') || cand.position.includes('Prefeito'));
         const isPresident = cand.position && cand.position.includes('Presidente');
-        const powerBadge = isExec
-          ? `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-500/30 inline-flex items-center gap-1"><i data-lucide="landmark" class="w-3 h-3 text-amber-600 dark:text-amber-400"></i> Executivo</span>`
-          : `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-indigo-100 dark:bg-indigo-500/20 text-indigo-800 dark:text-indigo-300 border border-indigo-300 dark:border-indigo-500/30 inline-flex items-center gap-1"><i data-lucide="scale" class="w-3 h-3 text-indigo-600 dark:text-indigo-400"></i> Legislativo</span>`;
+        let powerBadge;
+        if (cand.position && (cand.position.includes('Ex-') || cand.careerHistory?.includes('Inelegível'))) {
+          powerBadge = `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 border border-rose-300 dark:border-rose-500/30 inline-flex items-center gap-1"><i data-lucide="shield-alert" class="w-3 h-3 text-rose-600 dark:text-rose-400"></i> ${cand.position}</span>`;
+        } else if (isExec) {
+          powerBadge = `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-500/30 inline-flex items-center gap-1"><i data-lucide="landmark" class="w-3 h-3 text-amber-600 dark:text-amber-400"></i> Executivo</span>`;
+        } else {
+          powerBadge = `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-indigo-100 dark:bg-indigo-500/20 text-indigo-800 dark:text-indigo-300 border border-indigo-300 dark:border-indigo-500/30 inline-flex items-center gap-1"><i data-lucide="scale" class="w-3 h-3 text-indigo-600 dark:text-indigo-400"></i> Legislativo</span>`;
+        }
         
         const fiscalLabel = isExec ? 'Meta Fiscal' : 'Gasto CEAP';
         const fiscalValue = isExec ? (isPresident ? '100% TCU' : '100% TCE') : `${cand.salary?.spendingPercentage || 75}% teto`;
@@ -7145,6 +7150,13 @@
         const subtitleName = (cand.ballotName && cand.ballotName !== cand.name) 
           ? `<p class="text-[11px] text-slate-400 dark:text-slate-500 truncate leading-tight">${cand.name}</p>` 
           : '';
+
+        const officeBadge = (cand.careerHistory && cand.careerHistory !== 'Atuação Parlamentar') ? `
+          <div class="mt-1 flex items-center gap-1 text-[10px] font-medium text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-800/80 px-2 py-0.5 rounded-md border border-slate-200 dark:border-white/5 max-w-full">
+            <i data-lucide="award" class="w-3 h-3 text-amber-500 flex-shrink-0"></i>
+            <span class="truncate">${cand.careerHistory}</span>
+          </div>
+        ` : '';
 
         const mandateSalaryLabel = isExec ? 'Subsídio Mensal do Cargo:' : 'Cota CEAP Média / mês:';
         const mandateSalaryValue = cand.salary?.spendingCeapMonthly || (isExec ? 'R$ 35.800,00' : 'R$ 34.200,00');
@@ -7183,7 +7195,8 @@
                 </div>
                 <h3 class="font-extrabold text-base text-slate-900 dark:text-white mt-1 leading-snug truncate" title="${cand.name}">${displayName}</h3>
                 ${subtitleName}
-                <p class="text-xs text-slate-500 dark:text-slate-400 truncate mt-0.5">${cand.position} • ${cand.state} • ${cand.age} anos</p>
+                <p class="text-xs text-slate-500 dark:text-slate-400 truncate mt-0.5 font-medium">${cand.position} • ${cand.state} • ${cand.age} anos</p>
+                ${officeBadge}
                 
                 <!-- Party Affiliation + Election Date Pills -->
                 <div class="flex flex-wrap items-center gap-1.5 mt-2 text-[10px]">
@@ -7279,8 +7292,20 @@
         list = list.filter(c => {
           if (!c.position) return false;
           const cPosLower = c.position.toLowerCase();
+          if (posLower.includes('senad')) {
+            return cPosLower.includes('senad');
+          }
           if (posLower.includes('deputad')) {
             return cPosLower.includes('deputad');
+          }
+          if (posLower.includes('governad')) {
+            return cPosLower.includes('governad');
+          }
+          if (posLower.includes('prefeit')) {
+            return cPosLower.includes('prefeit');
+          }
+          if (posLower.includes('president')) {
+            return cPosLower.includes('president');
           }
           return cPosLower.includes(posLower);
         });

@@ -122,7 +122,12 @@ test('API REST: Endpoints HTTP essenciais respondem com 200 OK', async () => {
     const camposRes = await fetch(`${baseUrl}/api/candidates/cand-joao-campos`);
     assert.equal(camposRes.status, 200);
     const camposJson = await camposRes.json();
-    assert.equal(camposJson.data.position, 'Prefeito');
+    assert.equal(camposJson.data.position, 'Governador');
+
+    const nunesRes = await fetch(`${baseUrl}/api/candidates/cand-ricardo-nunes`);
+    assert.equal(nunesRes.status, 200);
+    const nunesJson = await nunesRes.json();
+    assert.equal(nunesJson.data.position, 'Prefeito');
 
     // 4. Comparador
     const compRes = await fetch(`${baseUrl}/api/compare?c1=cand-tabata-amaral&c2=cand-kim-kataguiri`);

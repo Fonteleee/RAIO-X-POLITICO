@@ -1,4 +1,4 @@
-// Raio-X Político - Base Oficial Curada Multi-Cargos
+// Raio-X Político - Base Oficial Curada Multi-Cargos (Eleições 2026 Atualizado)
 const EXECUTIVE_AND_SENATE_POLITICIANS = [
   {
     "id": "cand-lula",
@@ -7,15 +7,15 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "party": "PT",
     "number": "13",
     "position": "Presidente da República",
-    "state": "SP",
-    "city": "São Paulo / São Bernardo do Campo",
+    "state": "BR",
+    "city": "Brasília / São Paulo",
     "age": 79,
     "publicLifeYears": 46,
     "timesElected": 4,
     "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Foto_oficial_de_Luiz_In%C3%A1cio_Lula_da_Silva_%28ombros%29_denoise.jpg/330px-Foto_oficial_de_Luiz_In%C3%A1cio_Lula_da_Silva_%28ombros%29_denoise.jpg",
     "education": "Torneiro Mecânico (SENAI) • Doutor Honoris Causa por mais de 30 universidades",
     "careerHistory": "Líder Sindical dos Metalúrgicos do ABC (1975-1980), Deputado Federal Constituinte (1987-1991), Presidente da República (2003-2010 e 2023-atual).",
-    "aiSummary": "39º Presidente da República do Brasil em seu terceiro mandato histórico. Trajetória com foco em combate à fome, expansão de programas sociais (Bolsa Família, Farmácia Popular), valorização do salário mínimo e protagonismo na diplomacia climática e multilateral.",
+    "aiSummary": "Candidato à Reeleição à Presidência da República em 2026 pelo PT. 39º Presidente do Brasil, busca o quarto mandato com foco no aumento real do salário mínimo, isenção de IR para rendas até R$ 5.000, transição energética e protagonismo internacional do Sul Global.",
     "overallScore": 91,
     "radar": {
       "integridade": 89,
@@ -95,45 +95,25 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     },
     "proposals": [
       {
-        "id": "prop-lula-1",
-        "title": "Novo PAC (Programa de Aceleração do Crescimento) - Infraestrutura Verde & Transição Energética",
-        "description": "Investimento de R$ 1,7 trilhão em ferrovias, saneamento, energia solar/eólica e habitação popular Minha Casa Minha Vida.",
-        "costEstimate": "R$ 1.700.000.000.000,00",
-        "timelineYears": 4,
-        "category": "Infraestrutura & Energia",
-        "viabilityScore": 93,
-        "tseStatus": "Em Execução Orçamentária Federal",
-        "fundingSource": "Orçamento Geral da União (OGU) + BNDES + Parcerias Público-Privadas",
-        "supportVotes": 14200,
-        "rejectVotes": 3100
+        "id": 1,
+        "title": "Isenção de Imposto de Renda para até R$ 5.000",
+        "theme": "Economia",
+        "desc": "Justiça tributária com desoneração das famílias trabalhadoras e taxação de super-ricos."
       },
       {
-        "id": "prop-lula-2",
-        "title": "Programa Pé-de-Meia: Poupança e Incentivo Financeiro para Estudantes do Ensino Médio",
-        "description": "Poupança de até R$ 9.200 por aluno de escola pública cadastrado no CadÚnico para reduzir drasticamente a evasão escolar.",
-        "costEstimate": "R$ 7.100.000.000,00 / ano",
-        "timelineYears": 3,
-        "category": "Educação Básica",
-        "viabilityScore": 95,
-        "tseStatus": "Lei Sancionada nº 14.818/2024",
-        "fundingSource": "Fundo Fiduciário de Apoio ao Ensino Médio (MEC)",
-        "supportVotes": 18900,
-        "rejectVotes": 1200
+        "id": 2,
+        "title": "Novo PAC e Reindustrialização Verde",
+        "theme": "Indústria",
+        "desc": "Transição energética, matriz de hidrogênio verde e grandes obras de infraestrutura."
       },
       {
-        "id": "prop-lula-3",
-        "title": "Reforma Tributária sobre o Consumo (IVA Dual) e Isenção de Imposto de Renda até R$ 5 Mil",
-        "description": "Implementação da CBS e IBS para simplificar tributos federais e estaduais, acompanhada da isenção progressiva do IRPF até R$ 5.000.",
-        "costEstimate": "Neutro na arrecadação primária",
-        "timelineYears": 4,
-        "category": "Economia & Tributos",
-        "viabilityScore": 90,
-        "tseStatus": "Emenda Constitucional nº 132/2023",
-        "fundingSource": "Tributação de super-ricos e fundos exclusivos",
-        "supportVotes": 16500,
-        "rejectVotes": 2400
+        "id": 3,
+        "title": "Fortalecimento do SUS e Programa Mais Especialistas",
+        "theme": "Saúde",
+        "desc": "Redução das filas de exames especializados e consultas eletivas na rede pública."
       }
-    ]
+    ],
+    "currentOffice": "Presidente da República (Candidato à Reeleição 2026)"
   },
   {
     "id": "cand-jair-bolsonaro",
@@ -141,7 +121,7 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "ballotName": "Jair Bolsonaro",
     "party": "PL",
     "number": "22",
-    "position": "Presidente da República",
+    "position": "Ex-Presidente da República",
     "state": "RJ",
     "city": "Rio de Janeiro / Brasília",
     "age": 70,
@@ -150,7 +130,7 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Jair_Bolsonaro_2019_Portrait_%283x4_cropped_center%29.jpg/330px-Jair_Bolsonaro_2019_Portrait_%283x4_cropped_center%29.jpg",
     "education": "Oficial de Artilharia (Academia Militar das Agulhas Negras - AMAN) e Educação Física (EsEFEx)",
     "careerHistory": "Capitão do Exército (Reserva), Vereador do Rio de Janeiro (1989-1991), Deputado Federal por 7 mandatos (1991-2018), 38º Presidente da República (2019-2022).",
-    "aiSummary": "38º Presidente da República do Brasil e principal líder do conservadorismo nacional. Gestão marcada pela aprovação da Reforma da Previdência, Lei da Liberdade Econômica, Pix pelo Banco Central, Marco do Saneamento e defesa de pautas conservadoras e armamentistas.",
+    "aiSummary": "38º Presidente da República do Brasil (2019-2022). Declarado inelegível pelo Tribunal Superior Eleitoral até 2030, atua como principal articulador político e cabo eleitoral do Partido Liberal nas Eleições 2026 em apoio à chapa de Flávio Bolsonaro.",
     "overallScore": 89,
     "radar": {
       "integridade": 88,
@@ -226,45 +206,25 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     },
     "proposals": [
       {
-        "id": "prop-bolsonaro-1",
-        "title": "Revogação de Restrições a Armas de Fogo e Blindagem Jurídica Policial (Excludente de Ilicitude)",
-        "description": "Garantia de porte e posse para cidadãos sem antecedentes e proteção jurídica para policiais em serviço contra processos penais automáticos.",
-        "costEstimate": "Sem custo orçamentário direto",
-        "timelineYears": 2,
-        "category": "Segurança Pública & Defesa",
-        "viabilityScore": 89,
-        "tseStatus": "Bandeira Programática Central",
-        "fundingSource": "Desregulamentação e segurança jurídica",
-        "supportVotes": 13900,
-        "rejectVotes": 4200
+        "id": 1,
+        "title": "Apoio à Candidatura Presidencial de Flávio Bolsonaro (PL)",
+        "theme": "Articulação",
+        "desc": "Mobilização nacional da base conservadora e palanques estaduais do PL em 2026."
       },
       {
-        "id": "prop-bolsonaro-2",
-        "title": "Privatização de Estatais Estratégicas (Petrobras, Correios e Portos) e Desregulamentação",
-        "description": "Venda de participações acionárias e concessões integrais de infraestrutura para abatimento da dívida pública federal.",
-        "costEstimate": "Geração de receitas de R$ 300 bilhões",
-        "timelineYears": 4,
-        "category": "Economia & Mercado",
-        "viabilityScore": 88,
-        "tseStatus": "Proposta Econômica Consolidada",
-        "fundingSource": "Capitais privados nacionais e internacionais",
-        "supportVotes": 12800,
-        "rejectVotes": 4900
+        "id": 2,
+        "title": "Defesa de Anistia Ampla e Liberdades Civis",
+        "theme": "Direito",
+        "desc": "Proposição legislativa de anistia aos envolvidos nos atos do 8 de Janeiro."
       },
       {
-        "id": "prop-bolsonaro-3",
-        "title": "Escolas Cívico-Militares em Todas as Cidades com mais de 50 Mil Habitantes",
-        "description": "Ampliação do modelo de gestão compartilhada com forças de segurança para redução de violência escolar e reforço disciplinar.",
-        "costEstimate": "R$ 2.500.000.000,00",
-        "timelineYears": 3,
-        "category": "Educação & Cidadania",
-        "viabilityScore": 91,
-        "tseStatus": "Programa Nacional Sancionado em 2019",
-        "fundingSource": "MEC e Ministério da Defesa",
-        "supportVotes": 11900,
-        "rejectVotes": 5100
+        "id": 3,
+        "title": "Pautas da Família e Liberdade Econômica",
+        "theme": "Valores",
+        "desc": "Preservação de valores tradicionais, direito de defesa e redução da interferência estatal."
       }
-    ]
+    ],
+    "currentOffice": "Inelegível pelo TSE (Acórdão Aije 0600814-85)"
   },
   {
     "id": "cand-tarcisio-de-freitas",
@@ -274,14 +234,14 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "number": "10",
     "position": "Governador",
     "state": "SP",
-    "city": "São Paulo",
+    "city": "São Paulo, SP",
     "age": 50,
     "publicLifeYears": 16,
     "timesElected": 1,
     "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Governador_do_Estado_de_S%C3%A3o_Paulo%2C_Tarc%C3%ADsio_de_Freitas_-_Foto_Oficial_%28cropped%29.jpg/330px-Governador_do_Estado_de_S%C3%A3o_Paulo%2C_Tarc%C3%ADsio_de_Freitas_-_Foto_Oficial_%28cropped%29.jpg",
     "education": "Engenharia Civil (Instituto Militar de Engenharia - IME), Pós-Graduado em Gerenciamento de Projetos (FGV)",
     "careerHistory": "Oficial de Engenharia do Exército, Diretor-Geral do DNIT (2011-2015), Ministro da Infraestrutura (2019-2022), Governador do Estado de São Paulo (2023-atual).",
-    "aiSummary": "Governador de São Paulo e engenheiro militar com perfil de alta capacidade de entrega em infraestrutura. Responsável pelo maior pacote de leilões e concessões rodoviárias, ferroviárias e de saneamento do país (destaque para a desestatização da Sabesp).",
+    "aiSummary": "Candidato à Reeleição ao Governo do Estado de São Paulo em 2026 pelo Republicanos. Engenheiro militar e ex-ministro da Infraestrutura, lidera com plano centrado em privatizações (SABESP concluída), concessões ferroviárias e combate ao crime organizado.",
     "overallScore": 93,
     "radar": {
       "integridade": 95,
@@ -361,53 +321,33 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     },
     "proposals": [
       {
-        "id": "prop-tarcisio-1",
-        "title": "Trem Intercidades (TIC Eixo Norte: SP - Campinas) e Linha 7-Rubi",
-        "description": "Concessão de R$ 14,2 bilhões para trem de passageiros de média velocidade ligando a capital à Região Metropolitana de Campinas em 64 minutos.",
-        "costEstimate": "R$ 14.200.000.000,00",
-        "timelineYears": 5,
-        "category": "Mobilidade & Ferrovias",
-        "viabilityScore": 96,
-        "tseStatus": "Contrato Assinado e Obra em Andamento",
-        "fundingSource": "PPP com Consórcio CPTM TIC e BNDES",
-        "supportVotes": 17800,
-        "rejectVotes": 1400
+        "id": 1,
+        "title": "Trem Intercidades (TIC) Campinas e Vale do Paraíba",
+        "theme": "Mobilidade",
+        "desc": "Construção da malha ferroviária de passageiros de alta e média velocidade no estado."
       },
       {
-        "id": "prop-tarcisio-2",
-        "title": "Universalização do Saneamento Básico até 2029 pós-Desestatização da Sabesp",
-        "description": "Meta contratual de antecipar em quatro anos a coleta e tratamento de 100% do esgoto em 375 municípios paulistas com R$ 68 bilhões em investimentos.",
-        "costEstimate": "R$ 68.000.000.000,00",
-        "timelineYears": 5,
-        "category": "Saneamento & Meio Ambiente",
-        "viabilityScore": 94,
-        "tseStatus": "Leilão Concluído na B3",
-        "fundingSource": "Sabesp Privatizada + Fundo FAUSP",
-        "supportVotes": 15400,
-        "rejectVotes": 3200
+        "id": 2,
+        "title": "Muralha Paulista: Cerco Eletrônico Total com IA",
+        "theme": "Segurança",
+        "desc": "Integração de câmeras e reconhecimento facial nas divisas e rodovias de SP."
       },
       {
-        "id": "prop-tarcisio-3",
-        "title": "Novo Centro Administrativo do Governo de SP nos Campos Elíseos",
-        "description": "Transferência dos órgãos estaduais do Morumbi para o centro de São Paulo para revitalizar a região central e gerar 22 mil empregos.",
-        "costEstimate": "R$ 4.000.000.000,00",
-        "timelineYears": 4,
-        "category": "Revitalização Urbana",
-        "viabilityScore": 92,
-        "tseStatus": "Concurso Público de Arquitetura Homologado",
-        "fundingSource": "Alienação de imóveis públicos e PPP administrativa",
-        "supportVotes": 13900,
-        "rejectVotes": 2100
+        "id": 3,
+        "title": "Atração de Investimentos e Desestatizações Estratégicas",
+        "theme": "Economia",
+        "desc": "Novas rodadas de concessões e desregulamentação para atração de capitais privados."
       }
-    ]
+    ],
+    "currentOffice": "Governador de São Paulo (Candidato à Reeleição 2026)"
   },
   {
     "id": "cand-ciro-gomes",
     "name": "Ciro Ferreira Gomes",
     "ballotName": "Ciro Gomes",
-    "party": "PDT",
-    "number": "12",
-    "position": "Presidente da República",
+    "party": "PSDB",
+    "number": "45",
+    "position": "Governador",
     "state": "CE",
     "city": "Fortaleza / Sobral",
     "age": 68,
@@ -416,7 +356,7 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Presidente_Ciro_Gomes.png/330px-Presidente_Ciro_Gomes.png",
     "education": "Direito (Universidade Federal do Ceará - UFC) • Professor Visitante da Harvard Law School",
     "careerHistory": "Prefeito de Fortaleza (1989-1990), Governador do Ceará (1991-1994), Ministro da Fazenda (1994-1995, Plano Real), Ministro da Integração Nacional (2003-2006, Transposição do São Francisco), Deputado Federal (2007-2011).",
-    "aiSummary": "Economista e jurista, proponente do Projeto Nacional de Desenvolvimento (PND). Reconhecido pela formulação de reformas estruturantes em educação básica (modelo de Sobral replicado nacionalmente) e industrialização de base tecnológica.",
+    "aiSummary": "Candidato ao Governo do Ceará em 2026 pelo PSDB. Ex-governador do Ceará (1991-1994), ex-ministro da Fazenda e da Integração Nacional. Lidera a oposição no estado com foco em combate às facções criminosas, reestruturação da saúde regional e expansão do modelo educacional de Sobral.",
     "overallScore": 92,
     "radar": {
       "integridade": 93,
@@ -492,62 +432,42 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     },
     "proposals": [
       {
-        "id": "prop-ciro-1",
-        "title": "Programa Dívida Zero: Refinanciamento e Limpeza de Nome no SPC e Serasa",
-        "description": "Parceria do governo federal com bancos públicos (Caixa e BB) para renegociar dívidas de 65 milhões de pessoas inadimplentes com até 90% de desconto.",
-        "costEstimate": "R$ 12.000.000.000,00 (Fundo Garantidor)",
-        "timelineYears": 2,
-        "category": "Crédito & Cidadania",
-        "viabilityScore": 94,
-        "tseStatus": "Proposta Central de Plano de Governo",
-        "fundingSource": "Fundo Garantidor de Operações do Tesouro",
-        "supportVotes": 15300,
-        "rejectVotes": 1100
+        "id": 1,
+        "title": "Tolerância Zero contra Facções Criminosas",
+        "theme": "Segurança",
+        "desc": "Criação de força-tarefa especial e blindagem das fronteiras estaduais contra o narcotráfico."
       },
       {
-        "id": "prop-ciro-2",
-        "title": "Escola de Tempo Integral no Modelo de Sobral para 100% dos Alunos do Ensino Fundamental",
-        "description": "Universalização da jornada de 8 horas diárias com merenda qualificada, ensino profissionalizante e bonificação de professores por resultado.",
-        "costEstimate": "R$ 28.000.000.000,00",
-        "timelineYears": 4,
-        "category": "Educação Pública",
-        "viabilityScore": 92,
-        "tseStatus": "Metodologia Comprovada no IDEB Cearense",
-        "fundingSource": "Fundeb Ampliado e Royalties de Petróleo",
-        "supportVotes": 16200,
-        "rejectVotes": 850
+        "id": 2,
+        "title": "Expansão dos Hospitais Regionais no Interior",
+        "theme": "Saúde",
+        "desc": "Descentralização do SUS cearense para zerar filas de cirurgias eletivas no interior."
       },
       {
-        "id": "prop-ciro-3",
-        "title": "Complexo Industrial da Saúde e Químico para Produção Nacional de Vacinas e Remédios",
-        "description": "Redução da dependência internacional de insumos farmacêuticos (IFA) e equipamentos hospitalares via encomendas tecnológicas federais.",
-        "costEstimate": "R$ 18.000.000.000,00",
-        "timelineYears": 4,
-        "category": "Saúde & Soberania Industrial",
-        "viabilityScore": 90,
-        "tseStatus": "Diretriz do PND Nacional",
-        "fundingSource": "BNDES e Financiadora de Estudos e Projetos (Finep)",
-        "supportVotes": 14700,
-        "rejectVotes": 980
+        "id": 3,
+        "title": "Universalização do Ensino Integral (Modelo Sobral)",
+        "theme": "Educação",
+        "desc": "Implementação do premiado modelo pedagógico de tempo integral em todos os 184 municípios."
       }
-    ]
+    ],
+    "currentOffice": "Ex-Governador do Ceará e Ex-Ministro"
   },
   {
     "id": "cand-simone-tebet",
     "name": "Simone Nassar Tebet",
     "ballotName": "Simone Tebet",
-    "party": "MDB",
-    "number": "15",
-    "position": "Presidente da República",
-    "state": "MS",
-    "city": "Três Lagoas / Campo Grande",
+    "party": "PSB",
+    "number": "400",
+    "position": "Senadora",
+    "state": "SP",
+    "city": "São Paulo, SP",
     "age": 55,
     "publicLifeYears": 24,
     "timesElected": 4,
     "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/2024-08-28_Audi%C3%AAncia_entre_as_Ministras_Simone_Tebet_e_Luciana_Santos%2C_10_%28cropped%29.jpg/330px-2024-08-28_Audi%C3%AAncia_entre_as_Ministras_Simone_Tebet_e_Luciana_Santos%2C_10_%28cropped%29.jpg",
     "education": "Direito (Universidade Federal do Rio de Janeiro - UFRJ), Mestrado em Direito Constitucional (PUC-SP)",
     "careerHistory": "Deputada Estadual (2003-2004), Prefeita de Três Lagoas por 2 mandatos (2005-2010), Vice-Governadora de MS (2011-2014), Senadora da República (2015-2023), Ministra do Planejamento e Orçamento (2023-atual).",
-    "aiSummary": "Ministra do Planejamento e Orçamento e 3ª colocada na corrida presidencial de 2022. Liderou a bancada feminina no Senado Federal, com forte reputação em responsabilidade fiscal, planejamento orçamentário transparente e rotas de integração sul-americana.",
+    "aiSummary": "Candidata ao Senado Federal pelo estado de São Paulo em 2026 pelo PSB, com apoio do presidente Lula e do vice Geraldo Alckmin. Ex-senadora e ex-ministra do Planejamento, construiu a carreira na defesa da disciplina fiscal com sensibilidade social.",
     "overallScore": 93,
     "radar": {
       "integridade": 96,
@@ -623,45 +543,25 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     },
     "proposals": [
       {
-        "id": "prop-tebet-1",
-        "title": "5 Rotas de Integração Sul-Americana e Corredor Bioceânico (Atlântico ao Pacífico)",
-        "description": "Viabilização de 124 obras de rodovias, pontes e portos para baratear fretes agrícolas e industriais conectando o Centro-Oeste e o Norte aos portos do Chile e Peru.",
-        "costEstimate": "R$ 50.000.000.000,00",
-        "timelineYears": 4,
-        "category": "Infraestrutura & Comércio Exterior",
-        "viabilityScore": 94,
-        "tseStatus": "Em Execução pelo Ministério do Planejamento",
-        "fundingSource": "Banco de Desenvolvimento da América Latina (CAF), Fonplata e BID",
-        "supportVotes": 14800,
-        "rejectVotes": 890
+        "id": 1,
+        "title": "Orçamento Público com Foco na Primeira Infância",
+        "theme": "Social",
+        "desc": "Vinculação orçamentária prioritária para creches, nutrição infantil e educação básica."
       },
       {
-        "id": "prop-tebet-2",
-        "title": "Orçamento com Avaliação Periódica de Gastos (Spending Review) e Eficiência Pública",
-        "description": "Revisão obrigatória de subsídios fiscais ineficientes para economizar R$ 20 a 30 bilhões por ano e redirecionar para saúde e educação infantil.",
-        "costEstimate": "Economia estimada de R$ 25.000.000.000,00 / ano",
-        "timelineYears": 2,
-        "category": "Gestão Fiscal",
-        "viabilityScore": 95,
-        "tseStatus": "Marco Legal Integrado ao PPA 2024-2027",
-        "fundingSource": "Corte de desonerações sem contrapartida",
-        "supportVotes": 16100,
-        "rejectVotes": 750
+        "id": 2,
+        "title": "Competitividade da Indústria Paulista e Reforma Tributária",
+        "theme": "Desenvolvimento",
+        "desc": "Defesa de incentivos à inovação e desoneração da folha em setores estratégicos de SP."
       },
       {
-        "id": "prop-tebet-3",
-        "title": "Igualdade Salarial entre Homens e Mulheres na Mesma Função",
-        "description": "Fiscalização obrigatória por relatórios de transparência salarial com multas pesadas para empresas que descumprirem a equiparação.",
-        "costEstimate": "Sem custo orçamentário",
-        "timelineYears": 1,
-        "category": "Direitos & Trabalho",
-        "viabilityScore": 96,
-        "tseStatus": "Lei Sancionada nº 14.611/2023",
-        "fundingSource": "Fiscalização do Ministério do Trabalho e Emprego",
-        "supportVotes": 17900,
-        "rejectVotes": 620
+        "id": 3,
+        "title": "Governança Fiscal Transparente e Combate ao Desperdício",
+        "theme": "Economia",
+        "desc": "Revisão periódica de subsídios ineficientes e fortalecimento de metas fiscais de longo prazo."
       }
-    ]
+    ],
+    "currentOffice": "Ex-Ministra do Planejamento e Orçamento (2023-2026)"
   },
   {
     "id": "cand-romeu-zema",
@@ -669,16 +569,16 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "ballotName": "Romeu Zema",
     "party": "NOVO",
     "number": "30",
-    "position": "Governador",
-    "state": "MG",
-    "city": "Araxá / Belo Horizonte",
+    "position": "Presidente da República",
+    "state": "BR",
+    "city": "Belo Horizonte, MG",
     "age": 60,
     "publicLifeYears": 8,
     "timesElected": 2,
     "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Romeu_Zema%2C_December_2024_%28cropped%29.jpg/330px-Romeu_Zema%2C_December_2024_%28cropped%29.jpg",
     "education": "Administração de Empresas (Fundação Getulio Vargas - FGV)",
     "careerHistory": "Empresário do Grupo Zema por 30 anos, Governador de Minas Gerais reeleito no 1º turno (2019-atual).",
-    "aiSummary": "Governador de Minas Gerais com forte apelo em gestão austera, corte de cargos comissionados, atração recorde de investimentos privados (mais de R$ 350 bilhões) e equilíbrio fiscal das contas públicas estaduais.",
+    "aiSummary": "Candidato à Presidência da República em 2026 pelo Partido Novo com o senador Eduardo Girão de vice. Governador de Minas Gerais reeleito no 1º turno. Defende o programa \"O Brasil sem Intocáveis\", focado em reformas estruturantes, privatizações e redução do custo da máquina pública.",
     "overallScore": 92,
     "radar": {
       "integridade": 95,
@@ -754,62 +654,42 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     },
     "proposals": [
       {
-        "id": "prop-zema-1",
-        "title": "Regime de Recuperação Fiscal (RRF) e Renegociação Federativa da Dívida de MG",
-        "description": "Plano com a União para alongar dívida de R$ 160 bilhões em 30 anos preservando investimentos em saúde e segurança.",
-        "costEstimate": "Reestruturação de R$ 160.000.000.000,00",
-        "timelineYears": 4,
-        "category": "Equilíbrio Fiscal",
-        "viabilityScore": 91,
-        "tseStatus": "Acordo Homologado no STF",
-        "fundingSource": "Federalização de ativos estaduais (Cemig, Codemig, Copasa)",
-        "supportVotes": 13200,
-        "rejectVotes": 2400
+        "id": 1,
+        "title": "O Brasil sem Intocáveis: Fim dos Supersalários",
+        "theme": "Reforma",
+        "desc": "Corte de privilégios no setor público, teto salarial unificado e meritocracia."
       },
       {
-        "id": "prop-zema-2",
-        "title": "Programa Minas Livre para Crescer: Fim de Alvarás para 700+ Atividades Econômicas",
-        "description": "Desregulamentação radical eliminando burocracia para abertura de empresas e geração de empregos em todos os municípios mineiros.",
-        "costEstimate": "Custo zero (Economia de taxas)",
-        "timelineYears": 2,
-        "category": "Desregulamentação & Emprego",
-        "viabilityScore": 97,
-        "tseStatus": "Decreto Estadual em Plena Execução",
-        "fundingSource": "Digitalização de processos (Jucemg Digital)",
-        "supportVotes": 16800,
-        "rejectVotes": 720
+        "id": 2,
+        "title": "Desregulamentação e Amplo Programa de Privatizações",
+        "theme": "Economia",
+        "desc": "Venda de empresas estatais deficitárias e desregulamentação para atração de capitais."
       },
       {
-        "id": "prop-zema-3",
-        "title": "Universalização do Saneamento no Vale do Jequitinhonha e Norte de Minas",
-        "description": "Investimento focado na superação da pobreza hídrica em uma das regiões mais vulneráveis do estado com poços artesianos e redes de água tratada.",
-        "costEstimate": "R$ 3.800.000.000,00",
-        "timelineYears": 4,
-        "category": "Saneamento & Desenvolvimento Regional",
-        "viabilityScore": 93,
-        "tseStatus": "Programa de Metas Copasa 2026",
-        "fundingSource": "Copasa e Parcerias Privadas",
-        "supportVotes": 15400,
-        "rejectVotes": 610
+        "id": 3,
+        "title": "Pacto Federativo com Descentralização Tributária",
+        "theme": "Gestão",
+        "desc": "Mais recursos diretamente nos caixas dos municípios e governos estaduais."
       }
-    ]
+    ],
+    "currentOffice": "Governador de Minas Gerais (2019-2026)"
   },
   {
     "id": "cand-ronaldo-caiado",
     "name": "Ronaldo Ramos Caiado",
     "ballotName": "Ronaldo Caiado",
-    "party": "UNIÃO",
-    "number": "44",
-    "position": "Governador",
-    "state": "GO",
-    "city": "Anápolis / Goiânia",
+    "party": "PSD",
+    "number": "55",
+    "position": "Presidente da República",
+    "state": "BR",
+    "city": "Goiânia, GO",
     "age": 76,
     "publicLifeYears": 40,
     "timesElected": 7,
     "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Foto_oficial_do_governador_de_Goi%C3%A1s%2C_Ronaldo_Caiado_em_2023_%28ombros%29.jpg/330px-Foto_oficial_do_governador_de_Goi%C3%A1s%2C_Ronaldo_Caiado_em_2023_%28ombros%29.jpg",
     "education": "Medicina (Universidade Federal do Rio de Janeiro - UFRJ), Especialização em Cirurgia da Coluna Vertebral em Paris",
     "careerHistory": "Fundador da UDR, Deputado Federal por 5 mandatos (1991-2014), Senador da República (2015-2018), Governador de Goiás reeleito no 1º turno (2019-atual).",
-    "aiSummary": "Governador de Goiás e médico cirurgião, pré-candidato declarado à Presidência. Notabilizado pelos mais altos índices de aprovação estadual do país, com destaque para a liderança em segurança pública (tolerância zero ao crime organizado) e melhor nota do Brasil no IDEB.",
+    "aiSummary": "Candidato à Presidência da República em 2026 pelo PSD, tendo Gilberto Kassab como vice. Governador de Goiás por dois mandatos com índices de aprovação acima de 80%. Apresenta plano centrado em tolerância zero ao crime, rigor fiscal e fortalecimento do agronegócio.",
     "overallScore": 94,
     "radar": {
       "integridade": 96,
@@ -885,62 +765,42 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     },
     "proposals": [
       {
-        "id": "prop-caiado-1",
-        "title": "Modelo de Segurança Pública de Goiás para Nível Nacional: Tolerância Zero a Facções",
-        "description": "Integração de inteligência policial, presença ostensiva maciça e desarticulação financeira total do crime organizado nas fronteiras e centros urbanos.",
-        "costEstimate": "R$ 15.000.000.000,00",
-        "timelineYears": 3,
-        "category": "Segurança Pública",
-        "viabilityScore": 95,
-        "tseStatus": "Case de Sucesso Nacional Comprovado",
-        "fundingSource": "Fundo Nacional de Segurança Pública (FNSP)",
-        "supportVotes": 18200,
-        "rejectVotes": 1100
+        "id": 1,
+        "title": "Segurança Nacional com Modelo Goiano Tolerância Zero",
+        "theme": "Segurança",
+        "desc": "Integração das forças de segurança, presídios de isolamento estrito e combate às facções."
       },
       {
-        "id": "prop-caiado-2",
-        "title": "Liderança Nacional no IDEB com Bolsa Estudo e Escolas Padrão Século XXI",
-        "description": "Bolsa mensal de incentivo para alunos do Ensino Médio aliada a laboratórios científicos e qualificação de professores em todas as escolas públicas.",
-        "costEstimate": "R$ 4.200.000.000,00",
-        "timelineYears": 3,
-        "category": "Educação Básica",
-        "viabilityScore": 96,
-        "tseStatus": "Goiás 1º Lugar no IDEB Nacional",
-        "fundingSource": "Fundeb e Tesouro Estadual",
-        "supportVotes": 17100,
-        "rejectVotes": 640
+        "id": 2,
+        "title": "Rigor Fiscal e Eficiência Administrativa",
+        "theme": "Economia",
+        "desc": "Equilíbrio orçamentário rígido, controle de despesas e desburocratização."
       },
       {
-        "id": "prop-caiado-3",
-        "title": "Conexão Ferroviária da Ferrovia Norte-Sul aos Polos do Agronegócio Goiano",
-        "description": "Ramais ferroviários conectando Rio Verde, Anápolis e Cristalina para reduzir em 30% os custos de frete dos produtores rurais.",
-        "costEstimate": "R$ 8.500.000.000,00",
-        "timelineYears": 4,
-        "category": "Agronegócio & Logística",
-        "viabilityScore": 92,
-        "tseStatus": "Plano de Logística Integrada 2026",
-        "fundingSource": "Concessão Privada Rumo/VLI e BNDES",
-        "supportVotes": 15600,
-        "rejectVotes": 730
+        "id": 3,
+        "title": "Fortalecimento do Agronegócio e Infraestrutura Logística",
+        "theme": "Infraestrutura",
+        "desc": "Investimentos em ferrovias, armazenagem e abertura de novos mercados internacionais."
       }
-    ]
+    ],
+    "currentOffice": "Governador de Goiás (2019-2026)"
   },
   {
     "id": "cand-rodrigo-pacheco",
     "name": "Rodrigo Otavio Soares Pacheco",
     "ballotName": "Rodrigo Pacheco",
     "party": "PSD",
-    "number": "555",
+    "number": "55",
     "position": "Senador",
     "state": "MG",
-    "city": "Belo Horizonte / Passos",
+    "city": "Belo Horizonte / Passos, MG",
     "age": 49,
     "publicLifeYears": 12,
     "timesElected": 2,
     "avatar": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5982.jpg",
     "education": "Direito (PUC-Minas), Especialista em Direito Penal Econômico",
     "careerHistory": "Advogado Criminalista, Deputado Federal (2015-2019), Senador da República (2019-atual), Presidente do Senado Federal e do Congresso Nacional por 2 mandatos (2021-2025).",
-    "aiSummary": "Presidente do Senado Federal e do Congresso Nacional. Conduziu o Parlamento durante crises institucionais com perfil equilibrado, garantindo a aprovação da Reforma Tributária, a nova lei do Código Civil e a regulação da Inteligência Artificial.",
+    "aiSummary": "Presidente do Senado Federal (2021-2025) e Senador por Minas Gerais. Com indicação aprovada para o Tribunal de Contas da União (TCU) em setembro de 2026, consolidou papel de fiador da estabilidade institucional e da reforma tributária.",
     "overallScore": 91,
     "radar": {
       "integridade": 93,
@@ -1017,45 +877,25 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     },
     "proposals": [
       {
-        "id": "prop-pacheco-1",
-        "title": "Marco Legal da Inteligência Artificial no Brasil (PL 2338/2023)",
-        "description": "Diretrizes éticas, proteção contra discriminação algorítmica e fomento à inovação de IA preservando direitos autorais.",
-        "costEstimate": "Sem custo orçamentário direto",
-        "timelineYears": 2,
-        "category": "Tecnologia & Direitos Digitais",
-        "viabilityScore": 94,
-        "tseStatus": "Relatório Final em Votação no Senado",
-        "fundingSource": "Regulação Setorial",
-        "supportVotes": 14500,
-        "rejectVotes": 1100
+        "id": 1,
+        "title": "Fiscalização e Controle Preventivo no TCU",
+        "theme": "Controle",
+        "desc": "Auditoria contínua de grandes obras federais e combate ao desperdício no orçamento público."
       },
       {
-        "id": "prop-pacheco-2",
-        "title": "Reforma e Modernização do Código Civil Brasileiro",
-        "description": "Atualização do Código de 2002 para novas regras de contratos digitais, direito de família moderno e sucessão patrimonial.",
-        "costEstimate": "Custo de tramitação legislativa",
-        "timelineYears": 2,
-        "category": "Legislação & Cidadania",
-        "viabilityScore": 92,
-        "tseStatus": "Anteprojeto de Juristas Entregue ao Senado",
-        "fundingSource": "Orçamento Ordinário do Congresso",
-        "supportVotes": 13800,
-        "rejectVotes": 1300
+        "id": 2,
+        "title": "Regulamentação e Implementação da Reforma Tributária",
+        "theme": "Tributação",
+        "desc": "Vigilância sobre a transição do IBS e CBS para preservar a segurança jurídica."
       },
       {
-        "id": "prop-pacheco-3",
-        "title": "Compensação da Dívida dos Estados com Ativos de Estatais e Energia Limpa",
-        "description": "Programa federativo Propag para permitir que estados abatam dívidas com investimentos prioritários em infraestrutura.",
-        "costEstimate": "Impacto de repactuação de R$ 300 bilhões",
-        "timelineYears": 4,
-        "category": "Pacto Federativo",
-        "viabilityScore": 95,
-        "tseStatus": "PLP 121/2024 em Tramitação",
-        "fundingSource": "Ativos Estatais e Tesouro Nacional",
-        "supportVotes": 16200,
-        "rejectVotes": 890
+        "id": 3,
+        "title": "Defesa do Pacto Federativo e Dívida dos Estados",
+        "theme": "Economia",
+        "desc": "Mediação institucional para renegociação sustentável das dívidas estaduais com a União."
       }
-    ]
+    ],
+    "currentOffice": "Ministro Indicado do TCU / Senador (2019-2027)"
   },
   {
     "id": "cand-sergio-moro",
@@ -1325,17 +1165,17 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "name": "Flávio Nantes Bolsonaro",
     "ballotName": "Flávio Bolsonaro",
     "party": "PL",
-    "number": "222",
-    "position": "Senador",
-    "state": "RJ",
-    "city": "Rio de Janeiro",
+    "number": "22",
+    "position": "Presidente da República",
+    "state": "BR",
+    "city": "Rio de Janeiro / Brasília",
     "age": 44,
     "publicLifeYears": 22,
     "timesElected": 5,
     "avatar": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5894.jpg",
     "education": "Direito (Universidade Cândido Mendes), Pós-Graduado em Políticas Públicas (IUPERJ)",
     "careerHistory": "Deputado Estadual pelo Rio de Janeiro por 4 mandatos (2003-2018), Senador da República pelo Rio de Janeiro (2019-atual).",
-    "aiSummary": "Senador pelo Rio de Janeiro e líder político da bancada conservadora. Articulador da regulamentação de cassinos integrados a resorts para turismo, incentivos fiscais para o Rio de Janeiro e endurecimento penal contra facções armadas.",
+    "aiSummary": "Candidato oficial do Partido Liberal à Presidência da República em 2026, com Alfredo Gaspar de vice. Representa a continuidade das teses conservadoras com o plano \"Para o Brasil Vencer o Atraso\", pautado no endurecimento penal, austeridade e liberdade econômica.",
     "overallScore": 88,
     "radar": {
       "integridade": 86,
@@ -1411,45 +1251,25 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     },
     "proposals": [
       {
-        "id": "prop-flavio-1",
-        "title": "Marco dos Cassinos Integrados a Resorts para Alavancagem do Turismo e Emprego",
-        "description": "Autorização legal de complexos turísticos com cassinos e hotéis com arrecadação de R$ 20 bilhões em impostos para segurança e turismo.",
-        "costEstimate": "Arrecadação fiscal estimada em R$ 20.000.000.000,00",
-        "timelineYears": 2,
-        "category": "Turismo & Economia",
-        "viabilityScore": 90,
-        "tseStatus": "PL 2234/2022 Aprovado na CCJ do Senado",
-        "fundingSource": "Investimentos 100% Privados",
-        "supportVotes": 12400,
-        "rejectVotes": 4800
+        "id": 1,
+        "title": "Novo Teto de Gastos e Corte de 10 Ministérios",
+        "theme": "Economia",
+        "desc": "Tesouraço orçamentário, redução da carga tributária e simplificação fiscal."
       },
       {
-        "id": "prop-flavio-2",
-        "title": "Pena de Morte ou Prisão Perpétua para Crimes Hediondos com Morte de Policiais",
-        "description": "Proposta de plebiscito nacional para inclusão de penas exemplares contra membros de facções que executam agentes públicos de segurança.",
-        "costEstimate": "Sem custo orçamentário direto",
-        "timelineYears": 3,
-        "category": "Segurança Pública",
-        "viabilityScore": 84,
-        "tseStatus": "Bandeira Legislativa em Debate",
-        "fundingSource": "Sem impacto fiscal",
-        "supportVotes": 13900,
-        "rejectVotes": 5100
+        "id": 2,
+        "title": "Endurecimento Penal e Presídios Federais de Segurança Máxima",
+        "theme": "Segurança",
+        "desc": "Redução da maioridade, fim de progressão para crimes hediondos e enquadramento de facções."
       },
       {
-        "id": "prop-flavio-3",
-        "title": "Desoneração da Indústria Naval e do Petróleo Fluminense",
-        "description": "Manutenção de incentivos do Repetro para gerar 40 mil empregos em estaleiros de Niterói, Angra e São Gonçalo.",
-        "costEstimate": "R$ 3.000.000.000,00 em desonerações",
-        "timelineYears": 4,
-        "category": "Indústria & Petróleo",
-        "viabilityScore": 92,
-        "tseStatus": "Lei de Incentivo Setorial",
-        "fundingSource": "Compensação com royalties do pré-sal",
-        "supportVotes": 14100,
-        "rejectVotes": 1200
+        "id": 3,
+        "title": "Reforma do Judiciário e Fim da Reeleição no Executivo",
+        "theme": "Institucional",
+        "desc": "Mandatos com tempo determinado para ministros de tribunais superiores e mandato único de 5 anos."
       }
-    ]
+    ],
+    "currentOffice": "Senador da República (2019-2027)"
   },
   {
     "id": "cand-randolfe-rodrigues",
@@ -1587,18 +1407,18 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "id": "cand-eduardo-leite",
     "name": "Eduardo Figueiredo Cavalheiro Leite",
     "ballotName": "Eduardo Leite",
-    "party": "PSDB",
-    "number": "45",
+    "party": "PSD",
+    "number": "55",
     "position": "Governador",
     "state": "RS",
-    "city": "Pelotas / Porto Alegre",
+    "city": "Porto Alegre / Pelotas, RS",
     "age": 41,
     "publicLifeYears": 20,
     "timesElected": 3,
     "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/09.02.2026_%E2%80%93_Eduardo_Leite_in_February_2026_-_55087496770_%283x4%29.jpg/330px-09.02.2026_%E2%80%93_Eduardo_Leite_in_February_2026_-_55087496770_%283x4%29.jpg",
     "education": "Direito (UFPEL), Mestrado em Gestão Pública (Columbia University)",
     "careerHistory": "Vereador de Pelotas (2009-2012), Prefeito de Pelotas (2013-2016), Governador do Rio Grande do Sul reeleito (2019-2022 e 2023-atual).",
-    "aiSummary": "Governador do Rio Grande do Sul e primeiro reeleito da história do estado. Liderou a reconstrução do estado após as enchentes históricas de 2024 (Plano Rio Grande), além de reformas estruturais na previdência estadual e privatização de estatais deficitárias.",
+    "aiSummary": "Governador do Rio Grande do Sul em segundo mandato histórico. Filiado ao PSD, optou por permanecer no comando do executivo gaúcho até o fim de 2026 para liderar a reconstrução pós-enchentes e a modernização fiscal do estado.",
     "overallScore": 92,
     "radar": {
       "integridade": 94,
@@ -1674,62 +1494,42 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     },
     "proposals": [
       {
-        "id": "prop-leite-1",
-        "title": "Plano Rio Grande: Sistema Definitivo de Proteção Contra Cheias e Diques na Bacia do Guaíba",
-        "description": "Reconstrução resiliente com modernização de bombas de drenagem, alteamento de diques e bacias de contenção para cheias milenares.",
-        "costEstimate": "R$ 12.000.000.000,00",
-        "timelineYears": 4,
-        "category": "Adaptação Climática & Infraestrutura",
-        "viabilityScore": 95,
-        "tseStatus": "Fundo do Plano Rio Grande Homologado",
-        "fundingSource": "Fundoprec, Apoio Federal e Empréstimos BID/Bird",
-        "supportVotes": 17200,
-        "rejectVotes": 890
+        "id": 1,
+        "title": "Plano Rio Grande: Reconstrução Climática Resiliente",
+        "theme": "Sustentabilidade",
+        "desc": "Diques, macrodrenagem e reassentamento seguro de comunidades atingidas pelas enchentes."
       },
       {
-        "id": "prop-leite-2",
-        "title": "Reestruturação Fiscal e Pagamento em Dia do Salário de Servidores Públicos",
-        "description": "Manutenção do fim do parcelamento de salários que durou 5 anos antes de sua gestão com austeridade e responsabilidade fiscal.",
-        "costEstimate": "Manutenção da folha regular",
-        "timelineYears": 2,
-        "category": "Gestão Pública",
-        "viabilityScore": 96,
-        "tseStatus": "Conquista Fiscal Consolidada",
-        "fundingSource": "Ajuste de Despesas e Receitas Tributárias",
-        "supportVotes": 15900,
-        "rejectVotes": 980
+        "id": 2,
+        "title": "Responsabilidade Fiscal e Sustentabilidade da Previdência",
+        "theme": "Economia",
+        "desc": "Manutenção de superávits orçamentários e pagamento em dia dos serviços públicos."
       },
       {
-        "id": "prop-leite-3",
-        "title": "Programa Todo Jovem na Escola: Auxílio Financeiro para 120 Mil Alunos Gaúchos",
-        "description": "Bolsa mensal de incentivo vinculada a 80% de frequência escolar para reduzir a evasão de jovens vulneráveis.",
-        "costEstimate": "R$ 190.000.000,00 / ano",
-        "timelineYears": 3,
-        "category": "Educação & Assistência",
-        "viabilityScore": 94,
-        "tseStatus": "Programa em Execução Plena",
-        "fundingSource": "Fundo Estadual de Combate à Pobreza",
-        "supportVotes": 16400,
-        "rejectVotes": 620
+        "id": 3,
+        "title": "Ensino Médio Vocacionado e Inovação Tecnológica",
+        "theme": "Educação",
+        "desc": "Parcerias com o setor produtivo e modernização da infraestrutura escolar estadual."
       }
-    ]
+    ],
+    "currentOffice": "Governador do Rio Grande do Sul (em exercício)"
   },
   {
     "id": "cand-helder-barbalho",
     "name": "Helder Zahluth Barbalho",
     "ballotName": "Helder Barbalho",
     "party": "MDB",
-    "number": "15",
-    "position": "Governador",
+    "number": "150",
+    "position": "Senador",
     "state": "PA",
-    "city": "Ananindeua / Belém",
+    "city": "Belém / Ananindeua, PA",
     "age": 46,
     "publicLifeYears": 24,
     "timesElected": 5,
     "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Helder_Barbalho%2C_January_2023_%28cropped%29.jpg/330px-Helder_Barbalho%2C_January_2023_%28cropped%29.jpg",
     "education": "Administração de Empresas (UNAMA), Pós-Graduado em Gestão Pública",
     "careerHistory": "Vereador de Ananindeua (2001-2003), Deputado Estadual (2003-2005), Prefeito de Ananindeua por 2 mandatos (2005-2012), Ministro da Integração Nacional (2016-2018), Governador do Pará reeleito com 70% dos votos (2019-atual).",
-    "aiSummary": "Governador do Pará reeleito com a maior votação proporcional do país (70%). Líder do Consórcio Amazônia Legal e anfitrião da Conferência Mundial do Clima da ONU (COP30 em Belém, 2025), notabilizado por conciliar bioeconomia, saneamento e presença do Estado nas calhas dos rios.",
+    "aiSummary": "Candidato ao Senado Federal pelo estado do Pará em 2026 pelo MDB, com Jader Barbalho de suplente. Governador reeleito em 2022 com a maior votação percentual do Brasil (70,4%), liderou a agenda ambiental paraense que culminou na sede da COP30 em Belém.",
     "overallScore": 93,
     "radar": {
       "integridade": 92,
@@ -1805,45 +1605,25 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     },
     "proposals": [
       {
-        "id": "prop-helder-1",
-        "title": "Infraestrutura da COP30 em Belém: Parque da Cidade, Porto Futuro II e Drenagem",
-        "description": "Investimento de R$ 5 bilhões em requalificação urbana, hotelaria sustentável e macro-drenagem de canais na capital paraense.",
-        "costEstimate": "R$ 5.000.000.000,00",
-        "timelineYears": 2,
-        "category": "Infraestrutura Urbana & Clima",
-        "viabilityScore": 96,
-        "tseStatus": "Obras da COP30 em Ritmo Acelerado",
-        "fundingSource": "Governo Federal, Itaipu e Tesouro Estadual",
-        "supportVotes": 16800,
-        "rejectVotes": 920
+        "id": 1,
+        "title": "Marco Regulatório da Bioeconomia e Créditos de Carbono",
+        "theme": "Amazônia",
+        "desc": "Mecanismos econômicos que remunerem comunidades tradicionais pela preservação da floresta."
       },
       {
-        "id": "prop-helder-2",
-        "title": "Usinas da Paz: Complexos Comunitários de Cidadania, Esporte e Combate à Violência",
-        "description": "Expansão de centros integrados com mais de 70 serviços gratuitos (saúde, qualificação, cursos, teatro) nas periferias do Pará.",
-        "costEstimate": "R$ 900.000.000,00",
-        "timelineYears": 3,
-        "category": "Segurança & Cidadania Comunitária",
-        "viabilityScore": 97,
-        "tseStatus": "30 Usinas em Operação Plena",
-        "fundingSource": "Acordo com Mineradoras e Tesouro Estadual",
-        "supportVotes": 17900,
-        "rejectVotes": 510
+        "id": 2,
+        "title": "Compensação Tarifária para Estados Produtores de Energia",
+        "theme": "Energia",
+        "desc": "Legislação federal para baratear a conta de luz nos estados geradores como o Pará."
       },
       {
-        "id": "prop-helder-3",
-        "title": "Rastreabilidade Individual da Pecuária e Plano Amazônia Agora (Desmatamento Zero)",
-        "description": "Identificação por chip de 100% do rebanho bovino para garantir carne sustentável sem desmatamento ilegal nos mercados globais.",
-        "costEstimate": "R$ 350.000.000,00",
-        "timelineYears": 3,
-        "category": "Agronegócio Sustentável",
-        "viabilityScore": 93,
-        "tseStatus": "Decreto Estadual de Rastreabilidade",
-        "fundingSource": "Fundo Amazônia e Produtores Rurais",
-        "supportVotes": 15400,
-        "rejectVotes": 1100
+        "id": 3,
+        "title": "Infraestrutura Hidroviária e Logística Sustentável",
+        "theme": "Transportes",
+        "desc": "Dragagem sustentável e investimentos em terminais logísticos nos rios amazônicos."
       }
-    ]
+    ],
+    "currentOffice": "Ex-Governador do Pará (2019-2026)"
   },
   {
     "id": "cand-claudio-castro",
@@ -1851,16 +1631,16 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "ballotName": "Cláudio Castro",
     "party": "PL",
     "number": "22",
-    "position": "Governador",
+    "position": "Ex-Governador",
     "state": "RJ",
-    "city": "Rio de Janeiro",
+    "city": "Rio de Janeiro, RJ",
     "age": 46,
     "publicLifeYears": 14,
     "timesElected": 2,
     "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Claudio_Castro_como_Vice_Governador_do_Rio_de_Janeiro.jpg/330px-Claudio_Castro_como_Vice_Governador_do_Rio_de_Janeiro.jpg",
     "education": "Direito (Universidade Federal do Rio de Janeiro - UFRJ)",
     "careerHistory": "Chefe de Gabinete parlamentar, Vereador da Cidade do Rio de Janeiro (2017-2018), Vice-Governador do RJ (2019-2021), Governador reeleito em 1º turno (2021-atual).",
-    "aiSummary": "Governador do Estado do Rio de Janeiro reeleito no 1º turno em 2022. Conduziu o maior leilão de saneamento da história do país (Cedae), com aporte bilionário para investimentos municipais, além do programa Segurança Presente em dezenas de bairros e municípios.",
+    "aiSummary": "Ex-governador do Rio de Janeiro (2021-2026). Declarado inelegível pelo Tribunal Superior Eleitoral em março de 2026, abriu mão de sua pré-candidatura ao Senado Federal para focar em sua defesa judicial.",
     "overallScore": 89,
     "radar": {
       "integridade": 86,
@@ -1936,45 +1716,25 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     },
     "proposals": [
       {
-        "id": "prop-castro-1",
-        "title": "Expansão do Programa Segurança Presente para Todos os 92 Municípios Fluminenses",
-        "description": "Policiamento de proximidade com policiais de folga pagos por RAS para zerar furtos em centros comerciais e áreas turísticas.",
-        "costEstimate": "R$ 380.000.000,00 / ano",
-        "timelineYears": 3,
-        "category": "Segurança Pública",
-        "viabilityScore": 94,
-        "tseStatus": "Programa em 45 Bases Ativas",
-        "fundingSource": "Tesouro Estadual e Fundo de Segurança",
-        "supportVotes": 15400,
-        "rejectVotes": 1800
+        "id": 1,
+        "title": "Defesa Institucional e Recursos Judiciais",
+        "theme": "Jurídico",
+        "desc": "Acompanhamento processual de recursos perante o Superior Tribunal de Justiça e STF."
       },
       {
-        "id": "prop-castro-2",
-        "title": "Despoluição da Baía de Guanabara com Recursos da Concessão da Cedae",
-        "description": "Obras de coleta de esgoto em tempo seco e cinturões de proteção para despoluir praias da Zona Sul, Niterói e Ilha do Governador.",
-        "costEstimate": "R$ 4.500.000.000,00",
-        "timelineYears": 5,
-        "category": "Saneamento & Meio Ambiente",
-        "viabilityScore": 91,
-        "tseStatus": "Metas Contratuais da Águas do Rio e Iguá",
-        "fundingSource": "Concessionárias Privadas de Saneamento",
-        "supportVotes": 16700,
-        "rejectVotes": 1100
+        "id": 2,
+        "title": "Transição Administrativa do Estado do Rio de Janeiro",
+        "theme": "Gestão",
+        "desc": "Consolidação de dados do regime de recuperação fiscal e entrega de obras do governo."
       },
       {
-        "id": "prop-castro-3",
-        "title": "Metrô Leve de Superfície (VLT Metropolitano) na Baixada Fluminense",
-        "description": "Ligação sobre trilhos conectando Pavuna, São João de Meriti, Belford Roxo e Nova Iguaçu reaproveitando leitos ferroviários.",
-        "costEstimate": "R$ 3.200.000.000,00",
-        "timelineYears": 4,
-        "category": "Mobilidade Urbana",
-        "viabilityScore": 89,
-        "tseStatus": "Projeto Básico em Estudo na Setrans",
-        "fundingSource": "BNDES e PPP de Transporte",
-        "supportVotes": 14800,
-        "rejectVotes": 1400
+        "id": 3,
+        "title": "Apoio às Candidaturas Parlamentares do PL-RJ",
+        "theme": "Política",
+        "desc": "Colaboração com as chapas de deputados e senadores da aliança conservadora no estado."
       }
-    ]
+    ],
+    "currentOffice": "Inelegível pelo TSE / Afastado da disputa"
   },
   {
     "id": "cand-ricardo-nunes",
@@ -2113,16 +1873,16 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "ballotName": "Eduardo Paes",
     "party": "PSD",
     "number": "55",
-    "position": "Prefeito",
+    "position": "Governador",
     "state": "RJ",
-    "city": "Rio de Janeiro",
+    "city": "Rio de Janeiro, RJ",
     "age": 56,
     "publicLifeYears": 32,
     "timesElected": 4,
     "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Eduardo_Paes%2C_October_2024.jpg/330px-Eduardo_Paes%2C_October_2024.jpg",
     "education": "Direito (Pontifícia Universidade Católica do Rio de Janeiro - PUC-Rio)",
     "careerHistory": "Subprefeito da Barra e Jacarepaguá (1993-1996), Deputado Federal por 2 mandatos (1999-2007), Secretário Estadual de Turismo, Prefeito do Rio por 4 mandatos (2009-2016 e 2021-atual, reeleito em 2024 no 1º turno).",
-    "aiSummary": "Prefeito do Rio de Janeiro reeleito no 1º turno em 2024 para seu 4º mandato. Líder da transformação olímpica da cidade (Parque Olímpico, VLT Carioca, Transolímpica), revitalização do Porto Maravilha e recuperação das finanças municipais.",
+    "aiSummary": "Candidato ao Governo do Estado do Rio de Janeiro em 2026 pelo PSD, tendo Jane Reis (MDB) como vice. Quatro vezes prefeito da capital fluminense, lidera as pesquisas para o Palácio Guanabara com promessa de recuperar a segurança e a infraestrutura do estado.",
     "overallScore": 93,
     "radar": {
       "integridade": 93,
@@ -2198,45 +1958,25 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     },
     "proposals": [
       {
-        "id": "prop-paes-1",
-        "title": "Revitalização Completa e Expansão Residencial do Porto Maravilha",
-        "description": "Atração de 100 mil novos moradores para a região portuária com incentivos fiscais e prédios residenciais sustentáveis.",
-        "costEstimate": "R$ 6.000.000.000,00 em investimentos privados",
-        "timelineYears": 4,
-        "category": "Urbanismo & Habitação",
-        "viabilityScore": 96,
-        "tseStatus": "Mais de 15.000 Apartamentos em Construção",
-        "fundingSource": "Operação Urbana Consorciada Porto Maravilha",
-        "supportVotes": 17800,
-        "rejectVotes": 890
+        "id": 1,
+        "title": "Reestruturação da Segurança e Tolerância ao Crime",
+        "theme": "Segurança",
+        "desc": "Retomada do controle territorial pelo Estado com inteligência, tecnologia e valorização policial."
       },
       {
-        "id": "prop-paes-2",
-        "title": "Terminal Gentileza e Expansão da Conexão VLT ao BRT Transbrasil",
-        "description": "Hub intermodal de integração de ônibus urbanos, BRT e VLT para desafogar a Avenida Brasil e o centro do Rio.",
-        "costEstimate": "R$ 300.000.000,00",
-        "timelineYears": 2,
-        "category": "Mobilidade Urbana",
-        "viabilityScore": 98,
-        "tseStatus": "Terminal em Funcionamento Pleno",
-        "fundingSource": "Parceria com Caixa e Recursos Municipais",
-        "supportVotes": 18200,
-        "rejectVotes": 650
+        "id": 2,
+        "title": "Conexão Intermunicipal e Expansão de VLTs e Trens",
+        "theme": "Mobilidade",
+        "desc": "Modernização da malha da SuperVia e expansão do modelo do Terminal Gentileza na Baixada."
       },
       {
-        "id": "prop-paes-3",
-        "title": "Super Centro Carioca de Saúde e Redução das Filas do SISREG",
-        "description": "Maior complexo público municipal de especialidades médicas e cirurgias eletivas da América Latina com capacidade para 35 mil atendimentos/mês.",
-        "costEstimate": "R$ 250.000.000,00 / ano",
-        "timelineYears": 3,
-        "category": "Saúde Especializada",
-        "viabilityScore": 95,
-        "tseStatus": "Complexo Inaugurado e em Operação",
-        "fundingSource": "Secretaria Municipal de Saúde do Rio",
-        "supportVotes": 18900,
-        "rejectVotes": 510
+        "id": 3,
+        "title": "Polos Regionais de Saúde Especializada e Redução de Filas",
+        "theme": "Saúde",
+        "desc": "Construção de hospitais regionais de trauma e alta complexidade no interior e na Baixada."
       }
-    ]
+    ],
+    "currentOffice": "Ex-Prefeito do Rio de Janeiro"
   },
   {
     "id": "cand-joao-campos",
@@ -2244,16 +1984,16 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "ballotName": "João Campos",
     "party": "PSB",
     "number": "40",
-    "position": "Prefeito",
+    "position": "Governador",
     "state": "PE",
-    "city": "Recife",
+    "city": "Recife, PE",
     "age": 32,
     "publicLifeYears": 8,
     "timesElected": 3,
     "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Jo%C3%A3o_Campos_em_2_de_julho_de_2024%2C_por_Ricardo_Stuckert_%28rotation_%29.jpg/330px-Jo%C3%A3o_Campos_em_2_de_julho_de_2024%2C_por_Ricardo_Stuckert_%28rotation_%29.jpg",
     "education": "Engenharia Civil (Universidade Federal de Pernambuco - UFPE)",
     "careerHistory": "Deputado Federal mais votado de Pernambuco (2019-2020), Prefeito do Recife eleito em 2020 e reeleito em 2024 com recorde histórico de 78,1% dos votos.",
-    "aiSummary": "Prefeito do Recife e engenheiro civil, reeleito em 2024 com a maior votação percentual entre todas as capitais do Brasil (78,1%). Reconhecido pela gestão inovadora em tecnologia cívica (Conecta Recife, Embarque Digital), urbanismo social com os COMPAZ e macrodrenagem de morros.",
+    "aiSummary": "Candidato ao Governo de Pernambuco em 2026 pelo PSB, tendo Carlos Costa (Republicanos) como vice. Prefeito do Recife reeleito com histórico de 78,1% dos votos, apresenta o plano \"Pernambuco Pronto para Fazer História\" disputando o comando estadual contra Raquel Lyra.",
     "overallScore": 95,
     "radar": {
       "integridade": 96,
@@ -2329,45 +2069,25 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     },
     "proposals": [
       {
-        "id": "prop-campos-1",
-        "title": "Programa Embarque Digital: Ensino Superior Gratuito em Tecnologia para Jovens de Escola Pública",
-        "description": "Financiamento de graduação completa em Análise de Sistemas e Ciência de Dados no Porto Digital com empregabilidade imediata.",
-        "costEstimate": "R$ 45.000.000,00 / ano",
-        "timelineYears": 4,
-        "category": "Educação Superior & Tecnologia",
-        "viabilityScore": 98,
-        "tseStatus": "Mais de 2.000 Alunos Formados",
-        "fundingSource": "Recursos Próprios da Prefeitura do Recife e Porto Digital",
-        "supportVotes": 19500,
-        "rejectVotes": 210
+        "id": 1,
+        "title": "Pacto Antifacção e Inteligência de Segurança Pública",
+        "theme": "Segurança",
+        "desc": "Plano integrado contra homicídios e controle penitenciário severo em Pernambuco."
       },
       {
-        "id": "prop-campos-2",
-        "title": "Expansão da Rede COMPAZ (Centros Comunitários da Paz) - Prêmio ONU de Serviço Público",
-        "description": "Equipamentos de acolhimento social, bibliotecas, piscinas e apoio psicológico nas áreas de maior vulnerabilidade para zerar homicídios.",
-        "costEstimate": "R$ 180.000.000,00",
-        "timelineYears": 3,
-        "category": "Cidadania & Segurança Cidadã",
-        "viabilityScore": 97,
-        "tseStatus": "Reconhecido pela ONU como Melhor Serviço Público",
-        "fundingSource": "Banco Interamericano de Desenvolvimento (BID)",
-        "supportVotes": 19800,
-        "rejectVotes": 150
+        "id": 2,
+        "title": "Hospital da Criança no Agreste e Saúde no Sertão",
+        "theme": "Saúde",
+        "desc": "Criação de novos complexos cirúrgicos pediátricos e descentralização do atendimento do Recife."
       },
       {
-        "id": "prop-campos-3",
-        "title": "Programa ProMorar: Obras de Contenção de Encostas e Drenagem em 40 Morros do Recife",
-        "description": "Maior pacote de contenção de geomantas e muros de arrimo da história da cidade para garantir risco zero de deslizamento no inverno.",
-        "costEstimate": "R$ 2.000.000.000,00",
-        "timelineYears": 4,
-        "category": "Defesa Civil & Infraestrutura",
-        "viabilityScore": 96,
-        "tseStatus": "Contrato de R$ 2 Bilhões Assinado com o BID",
-        "fundingSource": "Empréstimo BID e Tesouro Municipal",
-        "supportVotes": 18700,
-        "rejectVotes": 320
+        "id": 3,
+        "title": "Programa Embarque Digital Estadual e Triplicação da BR-101",
+        "theme": "Desenvolvimento",
+        "desc": "Bolsas integrais de tecnologia para jovens e infraestrutura rodoviária estruturante."
       }
-    ]
+    ],
+    "currentOffice": "Ex-Prefeito do Recife"
   },
   {
     "id": "cand-fuad-noman",

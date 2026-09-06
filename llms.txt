@@ -16,33 +16,33 @@ O Score Geral (0 a 100) é calculado a partir de 7 critérios auditáveis:
 
 ## Índice de Personalidades Auditadas (Eleições 2026)
 
-### Presidência da República / Presidenciáveis
-- **Luiz Inácio Lula da Silva** (PT-SP, Nº 13) — Score: 91/100. Pautas: Novo PAC Transição Energética, Pé-de-Meia, Reforma Tributária IVA Dual.
-- **Jair Messias Bolsonaro** (PL-RJ, Nº 22) — Score: 89/100. Pautas: Redução do Estado, Marco Legal das Garantias, Pacote Antimafia.
-- **Ciro Ferreira Gomes** (PDT-CE, Nº 12) — Score: 90/100. Pautas: Projeto Nacional de Desenvolvimento (PND), Renda Básica Cidadã, Refinanciamento de Dívidas.
-- **Simone Nassar Tebet** (MDB-MS, Nº 15) — Score: 92/100. Pautas: Rotas de Integração Sul-Americana, Revisão de Gastos Tributários, Poupança Estudantil.
+### Presidência da República (Eleições 2026)
+- **Luiz Inácio Lula da Silva** (PT-BR, Nº 13) — Score: 91/100. Candidato à Reeleição Presidencial. Pautas: Isenção de IR até R$ 5.000, Reindustrialização Verde, Novo PAC.
+- **Flávio Nantes Bolsonaro** (PL-BR, Nº 22) — Score: 88/100. Candidato oficial do PL à Presidência (Vice: Alfredo Gaspar). Pautas: "Para o Brasil Vencer o Atraso", novo teto e corte de ministérios.
+- **Ronaldo Ramos Caiado** (PSD-BR, Nº 55) — Score: 94/100. Candidato oficial do PSD à Presidência (Vice: Gilberto Kassab). Pautas: Modelo goiano de tolerância zero, rigor fiscal e agronegócio.
+- **Romeu Zema Neto** (NOVO-BR, Nº 30) — Score: 93/100. Candidato oficial do NOVO à Presidência (Vice: Eduardo Girão). Pautas: "O Brasil sem Intocáveis", fim de privilégios e privatizações.
+- **Jair Messias Bolsonaro** (PL-RJ, Nº 22) — Score: 89/100. Ex-Presidente da República (Inelegível pelo TSE). Principal articulador do PL.
 
-### Governos Estaduais
-- **Tarcísio Gomes de Freitas** (REPUBLICANOS-SP) — Score: 93/100. Gestão do Estado de São Paulo, obras do Trem Intercidades, Desestatização da SABESP.
-- **Romeu Zema Neto** (NOVO-MG) — Score: 91/100. Gestão do Estado de Minas Gerais, Regime de Recuperação Fiscal, digitalização pública.
-- **Ronaldo Ramos Caiado** (UNIÃO-GO) — Score: 92/100. Gestão do Estado de Goiás, tolerância zero à criminalidade, Polo Farmoquímico.
-- **Eduardo Figueiredo Leite** (PSDB-RS) — Score: 90/100. Gestão do Estado do Rio Grande do Sul, Plano Rio Grande de reconstrução e resiliência climática.
-- **Helder Zahluth Barbalho** (MDB-PA) — Score: 91/100. Gestão do Estado do Pará, legado de infraestrutura da COP30 em Belém, Amazônia Agora.
-- **Cláudio Bonfim de Castro** (PL-RJ) — Score: 84/100. Gestão do Estado do Rio de Janeiro, expansão do Segurança Presente e Pacto RJ.
+### Governos Estaduais (Eleições 2026)
+- **Tarcísio Gomes de Freitas** (REPUBLICANOS-SP, Nº 10) — Score: 94/100. Candidato à Reeleição ao Governo de São Paulo. Obras do Trem Intercidades e desestatizações.
+- **Ciro Ferreira Gomes** (PSDB-CE, Nº 45) — Score: 93/100. Candidato ao Governo do Ceará (Vice: Roberto Cláudio). Pautas: Tolerância zero contra facções, hospitais regionais e modelo Sobral.
+- **Eduardo da Costa Paes** (PSD-RJ, Nº 55) — Score: 93/100. Candidato ao Governo do Rio de Janeiro (Vice: Jane Reis). Pautas: Recuperação da segurança pública e conexões intermunicipais.
+- **João Henrique Campos** (PSB-PE, Nº 40) — Score: 95/100. Candidato ao Governo de Pernambuco (Vice: Carlos Costa). Pautas: "Pernambuco Pronto para Fazer História", saúde regional e infraestrutura.
+- **Eduardo Figueiredo Leite** (PSD-RS) — Score: 90/100. Governador do Rio Grande do Sul (em exercício até dez/2026). Foco no Plano Rio Grande de reconstrução climática.
+- **Cláudio Bonfim de Castro** (PL-RJ) — Score: 84/100. Ex-Governador do Rio de Janeiro (Inelegível pelo TSE).
 
-### Senado Federal
-- **Rodrigo Otavio Pacheco** (PSD-MG) — Score: 92/100. Presidente do Senado, Marco Legal da Inteligência Artificial (PL 2338/2023), Reforma do Código Civil.
-- **Sergio Fernando Moro** (UNIÃO-PR) — Score: 91/100. Foco em combate à corrupção, prisão em 2ª instância e reforma processual penal.
-- **Marcos Cesar Pontes** (PL-SP) — Score: 89/100. Foco em ciência espacial, incentivo a DeepTechs e desenvolvimento do Semiárido.
-- **Flávio Nantes Bolsonaro** (PL-RJ) — Score: 87/100. Foco em liberdade econômica, privatizações e Marco Legal de Cassinos e Resorts.
-- **Randolfe Rodrigues** (PT-AP) — Score: 91/100. Líder de governo no Congresso, proteção ambiental amazônica, Lei Aldir Blanc permanente.
+### Senado Federal (Eleições 2026)
+- **Simone Nassar Tebet** (PSB-SP, Nº 400) — Score: 94/100. Candidata ao Senado Federal por São Paulo. Pautas: Orçamento para primeira infância, responsabilidade fiscal e indústria paulista.
+- **Helder Zahluth Barbalho** (MDB-PA, Nº 150) — Score: 92/100. Candidato ao Senado Federal pelo Pará. Pautas: Marco da bioeconomia amazônica e compensação tarifária de energia.
+- **Sergio Fernando Moro** (UNIÃO-PR) — Score: 91/100. Senador em exercício (mandato até 2030). Combate à corrupção, lavagem de dinheiro e reformas penais.
+- **Marcos Cesar Pontes** (PL-SP) — Score: 89/100. Senador em exercício (mandato até 2030). Ciência espacial, tecnologia e semiárido.
+- **Randolfe Rodrigues** (PT-AP, Nº 131) — Score: 91/100. Candidato à Reeleição ao Senado pelo Amapá. Líder de governo, sustentabilidade amazônica e cultura.
+- **Rodrigo Otavio Pacheco** (PSD-MG) — Score: 92/100. Presidente do Senado (2021-2025) e indicado aprovado ao Tribunal de Contas da União (TCU).
 
-### Prefeituras de Capitais Estratégicas
-- **Ricardo Luis Reis Nunes** (MDB-SP) — Score: 89/100. Prefeitura de São Paulo, Domingão Tarifa Zero, expansão da Faixa Azul de motos.
-- **Eduardo da Costa Paes** (PSD-RJ) — Score: 92/100. Prefeitura do Rio de Janeiro, BRT Transbrasil, Porto Maravalley Hub Tecnológico.
-- **João Henrique Campos** (PSB-Recife) — Score: 94/100. Prefeitura de Recife, Embarque Digital, Centros Comunitários da Paz (Compaz).
-- **Fuad Jorge Noman Filho** (PSD-BH) — Score: 89/100. Prefeitura de Belo Horizonte, macrodrenagem do Vilarinho e Pampulha, novos Centros de Saúde.
-- **Bruno Soares Reis** (UNIÃO-Salvador) — Score: 93/100. Prefeitura de Salvador, BRT 100% Elétrico, Programa Mané Dendê de saneamento.
+### Prefeituras de Capitais (Mandatários em Exercício)
+- **Ricardo Luis Reis Nunes** (MDB-SP, Nº 15) — Score: 89/100. Prefeito de São Paulo (2025-2028).
+- **Bruno Soares Reis** (UNIÃO-BA, Nº 44) — Score: 94/100. Prefeito de Salvador (2025-2028).
+- **Fuad Jorge Noman Filho** (PSD-MG, Nº 55) — Score: 89/100. Prefeito de Belo Horizonte (2025-2028).
 
 ### Câmara dos Deputados (Amostra de Lideranças Nacionais)
 - **Tabata Amaral** (PSB-SP) — Score: 94/100. Programa Pé-de-Meia, Política Nacional de Saúde Mental, transparência 100% na cota CEAP.

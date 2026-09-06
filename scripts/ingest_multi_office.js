@@ -288,8 +288,9 @@ function ingestMultiOffice() {
       deleteProposals.run(p.id);
       if (Array.isArray(p.proposals) && p.proposals.length > 0) {
         for (const prop of p.proposals) {
+          const propId = String(prop.id).startsWith(p.id) ? String(prop.id) : `${p.id}-prop-${prop.id}`;
           insertProposal.run(
-            prop.id,
+            propId,
             p.id,
             prop.title,
             prop.category || 'Gestão Pública',

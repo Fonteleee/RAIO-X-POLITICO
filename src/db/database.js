@@ -40,11 +40,13 @@ class AppDatabase {
     const stmt = this.db.prepare(`
       SELECT 
         c.id, c.name, c.ballot_name as ballotName, c.party, c.number, c.position, 
-        c.state, c.city, c.age, c.avatar, c.overall_score as overallScore,
+        c.state, c.city, c.age, c.avatar, c.education, c.career_history as careerHistory,
+        c.ai_summary as aiSummary, c.overall_score as overallScore,
         m.integridade, m.eficiencia, m.transparencia, m.coerencia, m.viabilidade, m.assiduidade,
         a.rate_pct as attendanceRate, a.present_count as presentCount, a.total_sessions as totalSessions,
         s.monthly_spent as spendingCeapMonthly, s.spending_pct as spendingPercentage,
         s.cost_per_minute as costPerMinute, s.cost_per_citizen as costPerCitizen,
+        s.roi_text as roiText,
         am.total_executed as amendmentsExecuted, am.open_bid_pct as openBidPct, am.seal_badge as amendmentsSeal,
         p.datafolha as pollDatafolha, p.quaest as pollQuaest
       FROM candidates c
@@ -86,7 +88,8 @@ class AppDatabase {
         civicConversion: {
           costPerMinute: cand.costPerMinute || 'R$ 0,54 / min',
           costPerCitizen: cand.costPerCitizen || 'R$ 0,004 / ano',
-          salariosMinimos: 190
+          salariosMinimos: 190,
+          roiText: cand.roiText || 'R$ 28,50 por R$ 1 gasto'
         }
       };
     }
