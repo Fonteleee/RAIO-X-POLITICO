@@ -129,6 +129,14 @@ test('API REST: Endpoints HTTP essenciais respondem com 200 OK', async () => {
     assert.equal(compRes.status, 200);
     const compJson = await compRes.json();
     assert.equal(compJson.data.cand1.id, 'cand-tabata-amaral');
+
+    // 5. AI-SEO: llms.txt
+    const llmsRes = await fetch(`${baseUrl}/llms.txt`);
+    assert.equal(llmsRes.status, 200);
+    const llmsText = await llmsRes.text();
+    assert.ok(llmsText.includes('# Raio-X Político 2026'));
+    assert.ok(llmsText.includes('Luiz Inácio Lula da Silva'));
+    assert.ok(llmsText.includes('Tarcísio Gomes de Freitas'));
   } finally {
     await new Promise(resolve => server.close(resolve));
   }

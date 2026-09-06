@@ -61,9 +61,16 @@
         <div class="h-5 w-px bg-slate-200 dark:bg-white/10 hidden sm:block"></div>
         <div class="flex items-center gap-2">
           <span class="text-xs font-black tracking-widest text-sky-600 dark:text-cyan-400 uppercase">DOSSIÊ ELEITORAL 2026</span>
-          <span class="hidden md:inline-flex items-center gap-1 text-[11px] font-medium text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 px-2 py-0.5 rounded-md border border-emerald-200 dark:border-emerald-500/20">
+          <span class="hidden xl:inline-flex items-center gap-1 text-[11px] font-medium text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 px-2 py-0.5 rounded-md border border-emerald-200 dark:border-emerald-500/20">
             <i data-lucide="shield-check" class="w-3.5 h-3.5"></i> Dados Oficiais Auditados
           </span>
+        </div>
+
+        <!-- Seletor Rápido de Candidato -->
+        <div class="hidden sm:flex items-center ml-2">
+          <select id="quick-cand-select" onchange="switchCandidateDossie(this.value)" class="bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-white/10 rounded-xl px-2.5 py-1 text-xs font-bold focus:outline-none focus:border-sky-500 cursor-pointer max-w-[200px] sm:max-w-[260px] truncate">
+            <option value="">Alternar candidato...</option>
+          </select>
         </div>
       </div>
 
@@ -333,8 +340,8 @@
             <div class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 shadow-xs space-y-6">
               <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-200 dark:border-white/10 pb-4">
                 <div>
-                  <h3 class="text-lg font-black text-slate-900 dark:text-white">Cota para o Exercício da Atividade Parlamentar (CEAP)</h3>
-                  <p class="text-xs text-slate-500 dark:text-slate-400">Verba indenizatória legal com prestação de contas mensal</p>
+                  <h3 id="cand-ceap-title" class="text-lg font-black text-slate-900 dark:text-white">Cota para o Exercício da Atividade Parlamentar (CEAP)</h3>
+                  <p id="cand-ceap-desc" class="text-xs text-slate-500 dark:text-slate-400">Verba indenizatória legal com prestação de contas mensal</p>
                 </div>
                 <div class="text-right">
                   <span id="cand-ceap-spent" class="text-2xl font-black font-mono text-slate-900 dark:text-white">R$ 342.150</span>
@@ -696,6 +703,7 @@
       }
 
       renderCandidateProfile(currentCand);
+      populateQuickSwitcher(candId);
       switchTab(initialTab, false);
       lucide.createIcons();
 
@@ -706,6 +714,40 @@
         }
       });
     }
+
+    async function populateQuickSwitcher(currentCandId) {
+      const select = document.getElementById('quick-cand-select');
+      if (!select) return;
+
+      let list = [];
+      try {
+        const response = await fetch('/api/candidates');
+        if (response.ok) {
+          const resJson = await response.json();
+          if (resJson.success && Array.isArray(resJson.data)) {
+            list = resJson.data;
+          }
+        }
+      } catch (e) {
+        console.warn('API /api/candidates inacessível para o switcher:', e);
+      }
+
+      if (!list.length) {
+        list = Object.values(fallbackCandidates);
+      }
+
+      list.sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+
+      select.innerHTML = '<option value="">Alternar candidato (45)...</option>' + 
+        list.map(c => `<option value="${c.id}" ${c.id === currentCandId ? 'selected' : ''}>${c.name} (${c.position} - ${c.state || c.city || 'BR'})</option>`).join('');
+    }
+
+    function switchCandidateDossie(candId) {
+      if (!candId) return;
+      const currentTab = new URLSearchParams(window.location.search).get('tab') || 'visao-geral';
+      window.location.href = `dossie.html?id=${encodeURIComponent(candId)}&tab=${encodeURIComponent(currentTab)}`;
+    }
+    window.switchCandidateDossie = switchCandidateDossie;
 
     function normalizeCandidateData(apiCand) {
       const fb = fallbackCandidates['cand-tabata-amaral'];
@@ -799,7 +841,27 @@
       document.getElementById('cand-avatar').src = cand.avatar;
       document.getElementById('cand-name').innerText = cand.name;
       document.getElementById('cand-party-badge').innerText = `${cand.party} • Nº ${cand.number}`;
-      document.getElementById('cand-position-badge').innerText = cand.position;
+      const isExecutive = /Presidente|Governador|Prefeito/i.test(cand.position);
+      const posElem = document.getElementById('cand-position-badge');
+      if (posElem) {
+        posElem.innerHTML = isExecutive 
+          ? `<span class="text-amber-600 dark:text-amber-400 font-bold mr-1">🏛️ Executivo</span> • ${cand.position}`
+          : `<span class="text-indigo-600 dark:text-indigo-400 font-bold mr-1">⚖️ Legislativo</span> • ${cand.position}`;
+      }
+
+      const ceapTitle = document.getElementById('cand-ceap-title');
+      const ceapDesc = document.getElementById('cand-ceap-desc');
+      if (ceapTitle) {
+        ceapTitle.innerText = isExecutive 
+          ? 'Execução Orçamentária & Responsabilidade Fiscal (RREO/TCU)' 
+          : 'Cota para o Exercício da Atividade Parlamentar (CEAP)';
+      }
+      if (ceapDesc) {
+        ceapDesc.innerText = isExecutive
+          ? 'Execução orçamentária do mandato com prestação de contas aos órgãos de controle'
+          : 'Verba indenizatória legal com prestação de contas mensal';
+      }
+
       document.getElementById('cand-subinfo').innerText = `${cand.city}, ${cand.state} • ${cand.age} anos • Eleito ${cand.timesElected}x`;
       document.getElementById('cand-score').innerText = cand.overallScore;
       document.getElementById('cand-clean-record').innerText = cand.cleanRecord;
@@ -811,15 +873,31 @@
       document.getElementById('cand-education').innerText = cand.education;
       document.getElementById('cand-career').innerText = cand.careerHistory;
 
-      // Pilares do Radar
+      // Pilares do Radar adaptados
       const pillarsGrid = document.getElementById('cand-pillars-grid');
       const pillars = [
         { label: 'Integridade Jurídica', value: cand.radar.integridade, desc: 'Ausência de processos transitados em julgado e transparência fiscal.' },
-        { label: 'Eficiência de Mandato', value: cand.radar.eficiencia, desc: 'Economia da cota CEAP e proposição legislativa de alto impacto.' },
-        { label: 'Transparência Ativa', value: cand.radar.transparencia, desc: 'Prestação de contas abertas e publicação de notas fiscais.' },
-        { label: 'Coerência Partidária', value: cand.radar.coerencia, desc: 'Fidelidade às teses defendidas em campanha e histórico de votos.' },
-        { label: 'Viabilidade Orçamentária', value: cand.radar.viabilidade, desc: 'Propostas compatíveis com o orçamento estadual e teto de gastos.' },
-        { label: 'Presença em Plenário', value: cand.radar.presenca, desc: 'Assiduidade comprovada nas votações deliberativas.' }
+        { 
+          label: isExecutive ? 'Eficiência de Gestão' : 'Eficiência de Mandato', 
+          value: cand.radar.eficiencia, 
+          desc: isExecutive ? 'Execução orçamentária responsável e gestão de políticas públicas.' : 'Economia da cota CEAP e proposição legislativa de alto impacto.' 
+        },
+        { label: 'Transparência Ativa', value: cand.radar.transparencia, desc: 'Prestação de contas abertas e publicação de relatórios fiscais.' },
+        { 
+          label: isExecutive ? 'Coerência Programática' : 'Coerência Partidária', 
+          value: cand.radar.coerencia, 
+          desc: isExecutive ? 'Fidelidade ao plano de governo registrado no TSE e histórico administrativo.' : 'Fidelidade às teses defendidas em campanha e histórico de votos.' 
+        },
+        { 
+          label: isExecutive ? 'Responsabilidade Fiscal' : 'Viabilidade Orçamentária', 
+          value: cand.radar.viabilidade, 
+          desc: isExecutive ? 'Gestão compatível com a LRF, teto de gastos e superávit primário.' : 'Propostas compatíveis com o orçamento estadual e teto de gastos.' 
+        },
+        { 
+          label: isExecutive ? 'Capacidade de Entregas' : 'Presença em Plenário', 
+          value: cand.radar.presenca, 
+          desc: isExecutive ? 'Cumprimento de metas do plano plurianual e entregas à sociedade.' : 'Assiduidade comprovada nas votações deliberativas.' 
+        }
       ];
 
       pillarsGrid.innerHTML = pillars.map(p => `

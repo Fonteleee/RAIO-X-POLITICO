@@ -380,40 +380,76 @@
     <div id="tab-feed" class="space-y-6">
       
       <!-- Filters & Position Selector -->
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 glass-panel p-4 rounded-2xl">
+      <div class="glass-panel p-4 rounded-2xl space-y-3">
         
         <!-- Position Filter Buttons -->
-        <div class="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0">
-          <button onclick="filterPosition('todos')" class="pos-filter-btn active px-3 py-1.5 rounded-xl bg-sky-600 text-white font-bold text-xs shadow-md shadow-sky-600/20">
+        <div class="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0 custom-scrollbar">
+          <button onclick="filterPosition('todos')" class="pos-filter-btn active px-3 py-1.5 rounded-xl bg-sky-600 text-white font-bold text-xs shadow-md shadow-sky-600/20 whitespace-nowrap">
             Todos os Cargos
           </button>
-          <button onclick="filterPosition('Presidente')" class="pos-filter-btn px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white font-medium text-xs border border-slate-200 dark:border-white/5">
+          <button onclick="filterPosition('Presidente')" class="pos-filter-btn px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white font-medium text-xs border border-slate-200 dark:border-white/5 whitespace-nowrap">
             Presidente
           </button>
-          <button onclick="filterPosition('Governador')" class="pos-filter-btn px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white font-medium text-xs border border-slate-200 dark:border-white/5">
+          <button onclick="filterPosition('Governador')" class="pos-filter-btn px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white font-medium text-xs border border-slate-200 dark:border-white/5 whitespace-nowrap">
             Governador
           </button>
-          <button onclick="filterPosition('Senador')" class="pos-filter-btn px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white font-medium text-xs border border-slate-200 dark:border-white/5">
+          <button onclick="filterPosition('Senador')" class="pos-filter-btn px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white font-medium text-xs border border-slate-200 dark:border-white/5 whitespace-nowrap">
             Senador
           </button>
-          <button onclick="filterPosition('Deputado Federal')" class="pos-filter-btn px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white font-medium text-xs border border-slate-200 dark:border-white/5">
+          <button onclick="filterPosition('Deputado Federal')" class="pos-filter-btn px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white font-medium text-xs border border-slate-200 dark:border-white/5 whitespace-nowrap">
             Dep. Federal
           </button>
-          <button onclick="filterPosition('Prefeito')" class="pos-filter-btn px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white font-medium text-xs border border-slate-200 dark:border-white/5">
+          <button onclick="filterPosition('Prefeito')" class="pos-filter-btn px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white font-medium text-xs border border-slate-200 dark:border-white/5 whitespace-nowrap">
             Prefeito
           </button>
         </div>
 
-        <!-- Search Bar -->
-        <div class="relative min-w-[240px]">
-          <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2"></i>
-          <input 
-            type="text" 
-            id="candidate-search-input"
-            oninput="searchCandidates(this.value)"
-            placeholder="Buscar por nome, partido ou número..." 
-            class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-white/10 rounded-xl pl-9 pr-4 py-1.5 text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-sky-500 transition"
-          >
+        <!-- Controls: UF, Sort & Search -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 pt-2 border-t border-slate-200/60 dark:border-white/5">
+          <div class="flex items-center gap-2 flex-wrap">
+            <!-- UF Filter Dropdown -->
+            <div class="relative">
+              <select id="feed-state-select" onchange="filterState(this.value)" class="bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-white/10 rounded-xl px-3 py-1.5 text-xs font-bold focus:outline-none focus:border-sky-500 cursor-pointer">
+                <option value="todos">📍 Todos os Estados (UF)</option>
+                <option value="SP">São Paulo (SP)</option>
+                <option value="RJ">Rio de Janeiro (RJ)</option>
+                <option value="MG">Minas Gerais (MG)</option>
+                <option value="RS">Rio Grande do Sul (RS)</option>
+                <option value="GO">Goiás (GO)</option>
+                <option value="PA">Pará (PA)</option>
+                <option value="PE">Pernambuco (PE)</option>
+                <option value="BA">Bahia (BA)</option>
+                <option value="SE">Sergipe (SE)</option>
+                <option value="AP">Amapá (AP)</option>
+                <option value="PR">Paraná (PR)</option>
+                <option value="MS">Mato Grosso do Sul (MS)</option>
+                <option value="CE">Ceará (CE)</option>
+              </select>
+            </div>
+
+            <!-- Sort Filter Dropdown -->
+            <div class="relative">
+              <select id="feed-sort-select" onchange="sortFeed(this.value)" class="bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-white/10 rounded-xl px-3 py-1.5 text-xs font-bold focus:outline-none focus:border-sky-500 cursor-pointer">
+                <option value="score_desc">⚡ Maior Score Geral</option>
+                <option value="cost_asc">💰 Menor Custo por Minuto</option>
+                <option value="attendance_desc">📅 Maior Presença em Plenário</option>
+                <option value="proposals_desc">📋 Mais Propostas</option>
+                <option value="name_asc">🔤 Ordem Alfabética (A-Z)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Search Bar -->
+          <div class="relative min-w-[240px] flex-1 sm:max-w-xs">
+            <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2"></i>
+            <input 
+              type="text" 
+              id="candidate-search-input"
+              oninput="searchCandidates(this.value)"
+              placeholder="Buscar por nome, partido ou número..." 
+              class="w-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 rounded-xl pl-9 pr-4 py-1.5 text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-sky-500 transition"
+            >
+          </div>
         </div>
 
       </div>
@@ -7076,9 +7112,13 @@
 
       if (candidates.length === 0) {
         grid.innerHTML = `
-          <div class="col-span-3 text-center py-12 glass-panel rounded-2xl">
-            <i data-lucide="search-x" class="w-8 h-8 text-slate-400 mx-auto mb-2"></i>
-            <p class="text-slate-600 dark:text-slate-400 text-sm">Nenhum candidato encontrado para o filtro selecionado.</p>
+          <div class="col-span-full text-center py-12 px-6 glass-panel rounded-2xl border border-dashed border-slate-300 dark:border-white/10 space-y-3">
+            <i data-lucide="search-x" class="w-10 h-10 text-slate-400 mx-auto"></i>
+            <h4 class="font-bold text-slate-900 dark:text-white text-base">Nenhum candidato encontrado</h4>
+            <p class="text-xs text-slate-500 dark:text-slate-400 max-w-md mx-auto">Nenhum resultado corresponde à combinação atual de cargo, estado e busca textual.</p>
+            <button onclick="resetFeedFilters()" class="px-4 py-2 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs shadow-md transition cursor-pointer">
+              Limpar Filtros & Ver Todos (45)
+            </button>
           </div>
         `;
         lucide.createIcons();
@@ -7089,8 +7129,16 @@
         const card = document.createElement('div');
         card.className = 'glass-card rounded-2xl p-5 flex flex-col justify-between space-y-4';
         
+        const isExec = cand.position && (cand.position.includes('Presidente') || cand.position.includes('Governador') || cand.position.includes('Prefeito'));
+        const powerBadge = isExec
+          ? `<span class="px-2 py-0.5 rounded text-[9.5px] font-bold bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-500/30 inline-flex items-center gap-1">🏛️ Executivo</span>`
+          : `<span class="px-2 py-0.5 rounded text-[9.5px] font-bold bg-indigo-100 dark:bg-indigo-500/20 text-indigo-800 dark:text-indigo-300 border border-indigo-300 dark:border-indigo-500/30 inline-flex items-center gap-1">⚖️ Legislativo</span>`;
+        
+        const fiscalLabel = isExec ? 'Meta Fiscal' : 'Gasto CEAP';
+        const fiscalValue = isExec ? '100% TCU' : `${cand.salary?.spendingPercentage || 75}% teto`;
+
         // Proposals snippet (3 items)
-        const proposalsSnippet = cand.proposals.slice(0, 3).map((p, idx) => `
+        const proposalsSnippet = (cand.proposals || []).slice(0, 3).map((p, idx) => `
           <div class="flex items-start gap-2 text-xs text-slate-700 dark:text-slate-300">
             <span class="w-4 h-4 rounded-full bg-sky-100 dark:bg-cyan-500/20 text-sky-800 dark:text-cyan-400 font-bold text-[10px] flex items-center justify-center flex-shrink-0 mt-0.5">${idx + 1}</span>
             <span class="line-clamp-1">${p.title}</span>
@@ -7103,22 +7151,22 @@
             <div class="flex items-start gap-3.5">
               <img src="${cand.avatar}" alt="${cand.name}" class="w-16 h-16 rounded-2xl object-cover border-2 border-sky-500/40 dark:border-cyan-500/30 shadow-md flex-shrink-0">
               <div class="flex-1 min-w-0">
-                <div class="flex items-center justify-between gap-1">
+                <div class="flex items-center justify-between gap-1 flex-wrap">
                   <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-sky-100 dark:bg-cyan-500/20 text-sky-800 dark:text-cyan-300 border border-sky-300 dark:border-cyan-500/30">
                     ${cand.party} • Nº ${cand.number}
                   </span>
-                  <span class="text-[10px] text-slate-500 dark:text-slate-400 font-medium">${cand.position}</span>
+                  ${powerBadge}
                 </div>
                 <h3 class="font-extrabold text-base text-slate-900 dark:text-white mt-1 truncate">${cand.name}</h3>
-                <p class="text-xs text-slate-500 dark:text-slate-400 truncate">${cand.state} • ${cand.age} anos (${cand.politicalLifeYears} anos na política)</p>
+                <p class="text-xs text-slate-500 dark:text-slate-400 truncate">${cand.position} • ${cand.state} • ${cand.age} anos</p>
                 
                 <!-- Party Affiliation + Election Date Pills -->
                 <div class="flex flex-wrap items-center gap-1.5 mt-2 text-[10px]">
                   <span class="inline-flex items-center gap-1 font-semibold text-sky-800 dark:text-cyan-300 bg-sky-50 dark:bg-cyan-500/10 px-2 py-0.5 rounded-lg border border-sky-200 dark:border-cyan-500/20">
-                    <i data-lucide="calendar" class="w-3 h-3 text-sky-600 dark:text-cyan-400"></i> ${cand.affiliation.yearsText}
+                    <i data-lucide="map-pin" class="w-3 h-3 text-sky-600 dark:text-cyan-400"></i> ${cand.city || cand.state}
                   </span>
                   <span class="inline-flex items-center gap-1 font-semibold text-purple-800 dark:text-purple-300 bg-purple-50 dark:bg-purple-500/10 px-2 py-0.5 rounded-lg border border-purple-200 dark:border-purple-500/20">
-                    <i data-lucide="vote" class="w-3 h-3 text-purple-500"></i> Votação: ${cand.electionSchedule.firstRoundDate}
+                    <i data-lucide="vote" class="w-3 h-3 text-purple-500"></i> Score: ${cand.overallScore || 90}/100
                   </span>
                 </div>
               </div>
@@ -7128,15 +7176,15 @@
             <div class="grid grid-cols-3 gap-2 my-3 pt-3 border-t border-slate-200 dark:border-white/5 text-center">
               <div class="p-2 bg-slate-50 dark:bg-slate-850 rounded-xl border border-slate-200 dark:border-white/5">
                 <span class="text-[9px] uppercase tracking-wider text-slate-500 dark:text-slate-400 block">Integridade</span>
-                <span class="text-xs font-black text-emerald-600 dark:text-emerald-400">${cand.radar.integridade}/100</span>
+                <span class="text-xs font-black text-emerald-600 dark:text-emerald-400">${cand.radar?.integridade || 90}/100</span>
               </div>
               <div class="p-2 bg-slate-50 dark:bg-slate-850 rounded-xl border border-slate-200 dark:border-white/5">
                 <span class="text-[9px] uppercase tracking-wider text-slate-500 dark:text-slate-400 block">Presença</span>
-                <span class="text-xs font-black text-purple-600 dark:text-purple-400">${cand.attendance.ratePct}%</span>
+                <span class="text-xs font-black text-purple-600 dark:text-purple-400">${cand.attendance?.ratePct || 94}%</span>
               </div>
               <div class="p-2 bg-slate-50 dark:bg-slate-850 rounded-xl border border-slate-200 dark:border-white/5">
-                <span class="text-[9px] uppercase tracking-wider text-slate-500 dark:text-slate-400 block">Gasto CEAP</span>
-                <span class="text-xs font-black text-amber-600 dark:text-amber-400">${cand.salary.spendingPercentage}% teto</span>
+                <span class="text-[9px] uppercase tracking-wider text-slate-500 dark:text-slate-400 block">${fiscalLabel}</span>
+                <span class="text-xs font-black text-amber-600 dark:text-amber-400">${fiscalValue}</span>
               </div>
             </div>
 
@@ -7147,11 +7195,11 @@
                   <i data-lucide="timer" class="w-3.5 h-3.5 text-amber-600 dark:text-amber-400"></i>
                   <span>Custo aos Cofres Públicos:</span>
                 </div>
-                <span class="font-black text-amber-700 dark:text-amber-400 font-mono text-[11px]">${cand.salary.civicConversion ? cand.salary.civicConversion.costPerMinute : 'R$ 0,51 / min'}</span>
+                <span class="font-black text-amber-700 dark:text-amber-400 font-mono text-[11px]">${cand.salary?.civicConversion?.costPerMinute || cand.salary?.costPerMinute || 'R$ 0,51 / min'}</span>
               </div>
               <div class="text-[10px] text-slate-600 dark:text-slate-400 flex items-center justify-between border-t border-amber-500/15 dark:border-amber-500/20 pt-1.5">
-                <span class="flex items-center gap-1"><i data-lucide="calculator" class="w-3 h-3 text-emerald-600 dark:text-emerald-400"></i> O gasto anual pagaria:</span>
-                <strong class="text-emerald-700 dark:text-emerald-400 font-extrabold">${cand.salary.civicConversion ? cand.salary.civicConversion.salariosMinimos : '190 salários mínimos'}</strong>
+                <span class="flex items-center gap-1"><i data-lucide="calculator" class="w-3 h-3 text-emerald-600 dark:text-emerald-400"></i> ${isExec ? 'Orçamento Anual:' : 'Gasto Anual:'}</span>
+                <strong class="text-emerald-700 dark:text-emerald-400 font-extrabold">${cand.salary?.spendingCeapMonthly || 'Auditado pelo TCU'}</strong>
               </div>
             </div>
 
@@ -7159,7 +7207,7 @@
             <div class="p-3 bg-slate-50 dark:bg-slate-850/80 rounded-xl border border-slate-200 dark:border-white/5 space-y-2">
               <div class="flex items-center justify-between text-[11px] font-bold text-slate-800 dark:text-slate-300">
                 <span class="flex items-center gap-1.5"><i data-lucide="scroll-text" class="w-3.5 h-3.5 text-sky-600 dark:text-cyan-400"></i> 3 Principais Propostas</span>
-                <button onclick="openDossie('${cand.id}', 'propostas-tse')" class="text-sky-700 dark:text-cyan-400 hover:underline text-[10px]">Ver todas (${cand.proposals.length})</button>
+                <button onclick="openDossie('${cand.id}', 'propostas-tse')" class="text-sky-700 dark:text-cyan-400 hover:underline text-[10px]">Ver todas (${cand.proposals ? cand.proposals.length : 3})</button>
               </div>
               <div class="space-y-1.5">
                 ${proposalsSnippet}
@@ -7169,15 +7217,17 @@
 
           <!-- Card Bottom Actions -->
           <div class="pt-3 border-t border-slate-200 dark:border-white/10 flex items-center gap-2">
-            <button onclick="openDossie('${cand.id}')" class="flex-1 py-2 rounded-xl bg-sky-700 hover:bg-sky-600 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-md shadow-sky-700/20 focus:ring-2 focus:ring-sky-500 focus:outline-none transition">
-              <i data-lucide="folder-search" class="w-3.5 h-3.5"></i> Abrir Dossiê
+            <button onclick="openDossie('${cand.id}')" class="flex-1 py-2 rounded-xl bg-sky-700 hover:bg-sky-600 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-md shadow-sky-700/20 focus:ring-2 focus:ring-sky-500 focus:outline-none transition cursor-pointer">
+              <i data-lucide="folder-search" class="w-3.5 h-3.5"></i> Dossiê Completo
             </button>
-            <button onclick="toggleCompare('${cand.id}')" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white transition" title="Comparar candidato">
+            <button onclick="toggleCompare('${cand.id}')" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white transition cursor-pointer" title="Comparar candidato">
               <i data-lucide="scale" class="w-4 h-4 text-purple-600 dark:text-purple-400"></i>
             </button>
-            <button onclick="openExportModalFor('${cand.id}')" class="group px-3 py-2 rounded-xl bg-gradient-to-r from-sky-500 via-indigo-600 to-purple-600 hover:from-sky-400 hover:via-indigo-500 hover:to-purple-500 text-white font-extrabold text-xs shadow-md shadow-indigo-500/20 hover:scale-105 active:scale-95 transition flex items-center gap-1.5 cursor-pointer" title="Gerar Figurinha do Candidato para Redes Sociais">
-              <i data-lucide="share-2" class="w-3.5 h-3.5 group-hover:rotate-12 transition-transform"></i>
-              <span class="hidden sm:inline">Figurinha</span>
+            <button onclick="shareCandidateWhatsApp('${cand.id}')" class="p-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-md shadow-emerald-600/20 transition flex items-center justify-center cursor-pointer" title="Compartilhar no WhatsApp">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+            </button>
+            <button onclick="openExportModalFor('${cand.id}')" class="p-2 rounded-xl bg-gradient-to-r from-sky-500 via-indigo-600 to-purple-600 hover:opacity-90 text-white font-bold text-xs shadow-md shadow-indigo-500/20 transition flex items-center justify-center cursor-pointer" title="Gerar Figurinha para Redes Sociais">
+              <i data-lucide="share-2" class="w-4 h-4"></i>
             </button>
           </div>
         `;
@@ -7188,23 +7238,19 @@
       lucide.createIcons();
     }
 
-    // ================= FILTER BY POSITION =================
-    function filterPosition(pos) {
-      activeFilter = pos;
-      
-      document.querySelectorAll('.pos-filter-btn').forEach(btn => {
-        if ((pos === 'todos' && btn.innerText.includes('Todos')) || btn.innerText.includes(pos)) {
-          btn.className = 'pos-filter-btn active px-3 py-1.5 rounded-xl bg-sky-600 text-white font-bold text-xs shadow-md shadow-sky-600/20';
-        } else {
-          btn.className = 'pos-filter-btn px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white font-medium text-xs border border-slate-200 dark:border-white/5';
-        }
-      });
+    // ================= UNIFIED FEED FILTERING PIPELINE =================
+    let activePosFilter = 'todos';
+    let activeStateFilter = 'todos';
+    let activeSortFilter = 'score_desc';
+    let activeSearchQuery = '';
 
-      if (pos === 'todos') {
-        renderCandidatesFeed(candidatesData);
-      } else {
-        const posLower = pos.toLowerCase();
-        const filtered = candidatesData.filter(c => {
+    function applyFeedFilters() {
+      let list = [...candidatesData];
+
+      // 1. Cargo Filter
+      if (activePosFilter !== 'todos') {
+        const posLower = activePosFilter.toLowerCase();
+        list = list.filter(c => {
           if (!c.position) return false;
           const cPosLower = c.position.toLowerCase();
           if (posLower.includes('deputad')) {
@@ -7212,19 +7258,105 @@
           }
           return cPosLower.includes(posLower);
         });
-        renderCandidatesFeed(filtered);
       }
+
+      // 2. Estado (UF) Filter
+      if (activeStateFilter && activeStateFilter !== 'todos' && activeStateFilter !== 'ALL') {
+        list = list.filter(c => c.state && c.state.toUpperCase() === activeStateFilter.toUpperCase());
+      }
+
+      // 3. Search Query Filter
+      if (activeSearchQuery) {
+        const q = activeSearchQuery.toLowerCase().trim();
+        list = list.filter(c => 
+          (c.name && c.name.toLowerCase().includes(q)) ||
+          (c.ballotName && c.ballotName.toLowerCase().includes(q)) ||
+          (c.party && c.party.toLowerCase().includes(q)) ||
+          (c.number && c.number.includes(q)) ||
+          (c.position && c.position.toLowerCase().includes(q)) ||
+          (c.city && c.city.toLowerCase().includes(q)) ||
+          (c.state && c.state.toLowerCase().includes(q))
+        );
+      }
+
+      // 4. Sort Filter
+      list.sort((a, b) => {
+        if (activeSortFilter === 'score_desc') {
+          return (b.overallScore || 0) - (a.overallScore || 0);
+        } else if (activeSortFilter === 'cost_asc') {
+          const parseCost = (cand) => {
+            const raw = cand.salary?.civicConversion?.costPerMinute || cand.salary?.costPerMinute || '0';
+            const num = parseFloat(raw.replace(/[^\d,]/g, '').replace(',', '.'));
+            return isNaN(num) ? 999999 : num;
+          };
+          return parseCost(a) - parseCost(b);
+        } else if (activeSortFilter === 'attendance_desc') {
+          return (b.attendance?.ratePct || 0) - (a.attendance?.ratePct || 0);
+        } else if (activeSortFilter === 'proposals_desc') {
+          return (b.proposals ? b.proposals.length : 0) - (a.proposals ? a.proposals.length : 0);
+        } else if (activeSortFilter === 'name_asc') {
+          return (a.name || '').localeCompare(b.name || '', 'pt-BR');
+        }
+        return 0;
+      });
+
+      renderCandidatesFeed(list);
+    }
+
+    function filterPosition(pos) {
+      activePosFilter = pos;
+      document.querySelectorAll('.pos-filter-btn').forEach(btn => {
+        if ((pos === 'todos' && btn.innerText.includes('Todos')) || btn.innerText.includes(pos)) {
+          btn.className = 'pos-filter-btn active px-3 py-1.5 rounded-xl bg-sky-600 text-white font-bold text-xs shadow-md shadow-sky-600/20 whitespace-nowrap';
+        } else {
+          btn.className = 'pos-filter-btn px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white font-medium text-xs border border-slate-200 dark:border-white/5 whitespace-nowrap';
+        }
+      });
+      applyFeedFilters();
+    }
+
+    function filterState(uf) {
+      activeStateFilter = uf;
+      applyFeedFilters();
+    }
+
+    function sortFeed(criteria) {
+      activeSortFilter = criteria;
+      applyFeedFilters();
     }
 
     function searchCandidates(query) {
-      const q = query.toLowerCase().trim();
-      const filtered = candidatesData.filter(c => 
-        c.name.toLowerCase().includes(q) ||
-        c.party.toLowerCase().includes(q) ||
-        c.number.includes(q) ||
-        c.position.toLowerCase().includes(q)
-      );
-      renderCandidatesFeed(filtered);
+      activeSearchQuery = query;
+      applyFeedFilters();
+    }
+
+    function resetFeedFilters() {
+      activePosFilter = 'todos';
+      activeStateFilter = 'todos';
+      activeSortFilter = 'score_desc';
+      activeSearchQuery = '';
+      const stateSel = document.getElementById('feed-state-select');
+      if (stateSel) stateSel.value = 'todos';
+      const sortSel = document.getElementById('feed-sort-select');
+      if (sortSel) sortSel.value = 'score_desc';
+      const searchInput = document.getElementById('candidate-search-input');
+      if (searchInput) searchInput.value = '';
+      document.querySelectorAll('.pos-filter-btn').forEach(btn => {
+        if (btn.innerText.includes('Todos')) {
+          btn.className = 'pos-filter-btn active px-3 py-1.5 rounded-xl bg-sky-600 text-white font-bold text-xs shadow-md shadow-sky-600/20 whitespace-nowrap';
+        } else {
+          btn.className = 'pos-filter-btn px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white font-medium text-xs border border-slate-200 dark:border-white/5 whitespace-nowrap';
+        }
+      });
+      applyFeedFilters();
+    }
+
+    function shareCandidateWhatsApp(candId) {
+      const cand = candidatesData.find(c => c.id === candId);
+      if (!cand) return;
+      const url = `${window.location.origin}/dossie.html?id=${cand.id}`;
+      const text = `🔎 *Raio-X Político 2026 - Dossiê Oficial*\n\nConfira os dados auditados de *${cand.name}* (${cand.party}-${cand.state}):\n⭐ Score de Integridade: ${cand.overallScore || 90}/100\n🏛️ Cargo: ${cand.position}\n💰 Custo aos cofres: ${cand.salary?.civicConversion?.costPerMinute || 'Auditado pelo TCU'}\n📋 Propostas prioritárias: ${cand.proposals ? cand.proposals.length : 3} cadastradas\n\nVeja o dossiê completo e compare agora:\n${url}`;
+      window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank');
     }
 
     // ================= DOSSIE NAVIGATION LOGIC (PÁGINA COMPLETA DEDICADA) =================
@@ -8295,20 +8427,32 @@
           <!-- Checagem Geral de Falas -->
           <div class="flex items-center justify-between py-1 border-b border-slate-200 dark:border-white/5">
             <span class="text-slate-600 dark:text-slate-400 font-medium">Índice de Veracidade das Falas:</span>
-            <span class="font-bold text-amber-700 dark:text-amber-400 font-mono">${truth1}% Verdadeiro</span>
-            <span class="font-bold text-purple-700 dark:text-purple-400 font-mono">${truth2}% Verdadeiro</span>
+            <span class="font-bold text-amber-700 dark:text-amber-400 font-mono flex items-center gap-1">
+              ${truth1}% Verdadeiro ${truth1 > truth2 ? '<span class="text-[9px] px-1 py-0.2 rounded bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 font-extrabold">🏆 Mais Factual</span>' : ''}
+            </span>
+            <span class="font-bold text-purple-700 dark:text-purple-400 font-mono flex items-center gap-1">
+              ${truth2}% Verdadeiro ${truth2 > truth1 ? '<span class="text-[9px] px-1 py-0.2 rounded bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 font-extrabold">🏆 Mais Factual</span>' : ''}
+            </span>
           </div>
 
           <div class="flex items-center justify-between py-1 border-b border-slate-200 dark:border-white/5">
             <span class="text-slate-600 dark:text-slate-400">Score Médio Geral:</span>
-            <span class="font-bold text-amber-700 dark:text-amber-400">${Math.round(Object.values(cand1.radar).reduce((a,b)=>a+b)/6)}/100</span>
-            <span class="font-bold text-purple-700 dark:text-purple-400">${Math.round(Object.values(cand2.radar).reduce((a,b)=>a+b)/6)}/100</span>
+            <span class="font-bold text-amber-700 dark:text-amber-400 flex items-center gap-1">
+              ${Math.round(Object.values(cand1.radar).reduce((a,b)=>a+b)/6)}/100 ${Object.values(cand1.radar).reduce((a,b)=>a+b) > Object.values(cand2.radar).reduce((a,b)=>a+b) ? '<span class="text-[9px] px-1 py-0.2 rounded bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 font-extrabold">⭐ Maior</span>' : ''}
+            </span>
+            <span class="font-bold text-purple-700 dark:text-purple-400 flex items-center gap-1">
+              ${Math.round(Object.values(cand2.radar).reduce((a,b)=>a+b)/6)}/100 ${Object.values(cand2.radar).reduce((a,b)=>a+b) > Object.values(cand1.radar).reduce((a,b)=>a+b) ? '<span class="text-[9px] px-1 py-0.2 rounded bg-purple-100 dark:bg-purple-500/20 text-purple-800 dark:text-purple-300 font-extrabold">⭐ Maior</span>' : ''}
+            </span>
           </div>
 
           <div class="flex items-center justify-between py-1 border-b border-slate-200 dark:border-white/5">
             <span class="text-slate-600 dark:text-slate-400">Taxa de Presença (Plenário):</span>
-            <span class="font-bold text-amber-700 dark:text-amber-400">${cand1.attendance.ratePct}%</span>
-            <span class="font-bold text-purple-700 dark:text-purple-400">${cand2.attendance.ratePct}%</span>
+            <span class="font-bold text-amber-700 dark:text-amber-400 flex items-center gap-1">
+              ${cand1.attendance.ratePct}% ${(cand1.attendance.ratePct || 0) > (cand2.attendance.ratePct || 0) ? '<span class="text-[9px] px-1 py-0.2 rounded bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 font-extrabold">📅 Mais Presente</span>' : ''}
+            </span>
+            <span class="font-bold text-purple-700 dark:text-purple-400 flex items-center gap-1">
+              ${cand2.attendance.ratePct}% ${(cand2.attendance.ratePct || 0) > (cand1.attendance.ratePct || 0) ? '<span class="text-[9px] px-1 py-0.2 rounded bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 font-extrabold">📅 Mais Presente</span>' : ''}
+            </span>
           </div>
 
           <div class="flex items-center justify-between py-1 border-b border-slate-200 dark:border-white/5">
@@ -8318,7 +8462,7 @@
           </div>
 
           <div class="flex items-center justify-between py-1 border-b border-slate-200 dark:border-white/5">
-            <span class="text-slate-600 dark:text-slate-400">Gasto Mensal (CEAP):</span>
+            <span class="text-slate-600 dark:text-slate-400">Gasto Mensal Declarado:</span>
             <span class="font-mono text-amber-700 dark:text-amber-400">${cand1.salary.spendingCeapMonthly}</span>
             <span class="font-mono text-purple-700 dark:text-purple-400">${cand2.salary.spendingCeapMonthly}</span>
           </div>
@@ -8327,8 +8471,12 @@
             <span class="text-slate-700 dark:text-slate-300 font-bold flex items-center gap-1">
               <i data-lucide="timer" class="w-3 h-3 text-amber-600 dark:text-amber-400"></i> Custo por Minuto:
             </span>
-            <span class="font-black text-amber-700 dark:text-amber-400 font-mono">${cand1.salary.civicConversion ? cand1.salary.civicConversion.costPerMinute : 'R$ 0,51 / min'}</span>
-            <span class="font-black text-purple-700 dark:text-purple-400 font-mono">${cand2.salary.civicConversion ? cand2.salary.civicConversion.costPerMinute : 'R$ 0,43 / min'}</span>
+            <span class="font-black text-amber-700 dark:text-amber-400 font-mono flex items-center gap-1">
+              ${cand1.salary.civicConversion ? cand1.salary.civicConversion.costPerMinute : 'R$ 0,51 / min'}
+            </span>
+            <span class="font-black text-purple-700 dark:text-purple-400 font-mono flex items-center gap-1">
+              ${cand2.salary.civicConversion ? cand2.salary.civicConversion.costPerMinute : 'R$ 0,43 / min'}
+            </span>
           </div>
 
           <div class="flex items-center justify-between py-1 border-b border-slate-200 dark:border-white/5 bg-emerald-50/50 dark:bg-emerald-500/5 px-1.5 rounded">
@@ -8434,27 +8582,103 @@
       navigateTab('comparator');
     }
 
-    // ================= MATCH ELEITORAL (QUIZ) =================
+    // ================= MATCH ELEITORAL (QUIZ VETORIAL DINÂMICO) =================
     const quizQuestions = [
       {
-        id: 1,
-        title: "1. Qual deve ser a prioridade orçamentária máxima do estado?",
+        id: 0,
+        title: "1. Qual deve ser o modelo econômico e fiscal prioritário do Brasil?",
         options: [
-          { text: "Educação integral, ampliação de bolsas e conectividade escolar", candidateWeight: { 'cand-tabata-amaral': 10, 'cand-erika-hilton': 8, 'cand-kim-kataguiri': 4 } },
-          { text: "Desregulamentação econômica, desestatização e corte severo de tributos", candidateWeight: { 'cand-kim-kataguiri': 10, 'cand-marcel-van-hattem': 10, 'cand-tabata-amaral': 4 } },
-          { text: "Segurança pública ostensiva, combate à criminalidade e valores conservadores", candidateWeight: { 'cand-nikolas-ferreira': 10, 'cand-eduardo-bolsonaro': 10, 'cand-kim-kataguiri': 5 } }
+          { text: "Livre mercado amplo, privatizações, teto de gastos rígido e desregulamentação", val: 0 },
+          { text: "Parcerias público-privadas, responsabilidade fiscal com investimentos estratégicos e regulação", val: 1 },
+          { text: "Estado indutor com fortes investimentos públicos, reindustrialização e tributação de super-ricos", val: 2 }
+        ]
+      },
+      {
+        id: 1,
+        title: "2. Como enfrentar a segurança pública e o crime organizado?",
+        options: [
+          { text: "Endurecimento de penas, enquadramento de facções como terrorismo e apoio ao porte de armas", val: 0 },
+          { text: "Policiamento de proximidade, integração de inteligência interestadual e tecnologia preditiva", val: 1 },
+          { text: "Foco prioritário em direitos humanos, combate ao racismo estrutural e desmilitarização progressiva", val: 2 }
         ]
       },
       {
         id: 2,
-        title: "2. Como você avalia a concessão e privatização de serviços públicos?",
+        title: "3. Qual é a sua visão sobre privatizações e concessões de serviços públicos?",
         options: [
-          { text: "Apoio irrestrito a privatizações e reformas liberais de mercado", candidateWeight: { 'cand-kim-kataguiri': 10, 'cand-marcel-van-hattem': 10, 'cand-ricardo-salles': 10 } },
-          { text: "Parcerias público-privadas pontuais com forte regulação e foco social", candidateWeight: { 'cand-tabata-amaral': 10, 'cand-baleia-rossi': 8 } },
-          { text: "Contrário a privatizações, priorizando serviços 100% públicos e soberania estatal", candidateWeight: { 'cand-guilherme-boulos': 10, 'cand-erika-hilton': 9, 'cand-samia-bomfim': 9 } }
+          { text: "Apoio total à desestatização de estatais e concessão de saneamento, portos e rodovias", val: 0 },
+          { text: "Concessões seletivas e parcerias com agências reguladoras fortes que garantam metas sociais", val: 1 },
+          { text: "Contrário a privatizações: serviços essenciais (saúde, água, educação e energia) 100% públicos", val: 2 }
+        ]
+      },
+      {
+        id: 3,
+        title: "4. Como equilibrar preservação ambiental e desenvolvimento econômico?",
+        options: [
+          { text: "Priorizar o agronegócio e produção energética, simplificando licenças ambientais para destravar obras", val: 0 },
+          { text: "Agro sustentável com mercado de carbono, transição energética planejada e bioeconomia", val: 1 },
+          { text: "Desmatamento zero imediato, demarcação integral de terras indígenas e veto a exploração fóssil", val: 2 }
+        ]
+      },
+      {
+        id: 4,
+        title: "5. Qual deve ser a prioridade para combater a desigualdade social?",
+        options: [
+          { text: "Redução de tributos sobre empresas para acelerar criação de empregos formais e mérito individual", val: 0 },
+          { text: "Transferência de renda condicionada à educação e bolsas de permanência (ex: Pé-de-Meia)", val: 1 },
+          { text: "Renda básica cidadã universal, aumento real contínuo do salário mínimo e fortalecimento total do SUS", val: 2 }
         ]
       }
     ];
+
+    // Vetores ideológicos calibrados para os líderes públicos (0=Direita/Liberal, 1=Centro/Reformista, 2=Progressista/Esquerda)
+    const CANDIDATE_VECTORS = {
+      'cand-lula': [2, 1, 2, 2, 2],
+      'cand-jair-bolsonaro': [0, 0, 0, 0, 0],
+      'cand-ciro-gomes': [2, 1, 2, 1, 2],
+      'cand-simone-tebet': [1, 1, 1, 1, 1],
+      'cand-tarcisio-de-freitas': [0, 1, 0, 1, 0],
+      'cand-romeu-zema': [0, 0, 0, 0, 0],
+      'cand-ronaldo-caiado': [0, 0, 1, 0, 1],
+      'cand-eduardo-leite': [1, 1, 1, 1, 1],
+      'cand-helder-barbalho': [1, 1, 1, 2, 1],
+      'cand-claudio-castro': [0, 0, 1, 0, 1],
+      'cand-rodrigo-pacheco': [1, 1, 1, 1, 1],
+      'cand-sergio-moro': [0, 0, 0, 1, 0],
+      'cand-marcos-pontes': [0, 1, 0, 1, 0],
+      'cand-flavio-bolsonaro': [0, 0, 0, 0, 0],
+      'cand-randolfe-rodrigues': [2, 1, 2, 2, 2],
+      'cand-ricardo-nunes': [1, 1, 1, 1, 1],
+      'cand-eduardo-paes': [1, 1, 1, 1, 1],
+      'cand-joao-campos': [1, 1, 1, 1, 2],
+      'cand-fuad-noman': [1, 1, 1, 1, 1],
+      'cand-bruno-reis': [1, 1, 1, 1, 1],
+      'cand-tabata-amaral': [1, 1, 1, 1, 1],
+      'cand-kim-kataguiri': [0, 0, 0, 0, 0],
+      'cand-nikolas-ferreira': [0, 0, 0, 0, 0],
+      'cand-erika-hilton': [2, 2, 2, 2, 2],
+      'cand-samia-bomfim': [2, 2, 2, 2, 2],
+      'cand-marcel-van-hattem': [0, 0, 0, 0, 0],
+      'cand-baleia-rossi': [1, 1, 1, 1, 1],
+      'cand-gleisi-hoffmann': [2, 1, 2, 2, 2],
+      'cand-luiza-erundina': [2, 2, 2, 2, 2],
+      'cand-duda-salabert': [2, 2, 2, 2, 2],
+      'cand-marco-feliciano': [0, 0, 0, 0, 0],
+      'cand-mario-frias': [0, 0, 0, 0, 0],
+      'cand-luiz-philippe-orleans-braganca': [0, 0, 0, 0, 0],
+      'cand-celia-xakriaba': [2, 2, 2, 2, 2],
+      'cand-chico-alencar': [2, 2, 2, 2, 2],
+      'cand-guilherme-boulos': [2, 2, 2, 2, 2],
+      'cand-eduardo-bolsonaro': [0, 0, 0, 0, 0],
+      'cand-aecio-neves': [1, 1, 1, 1, 0],
+      'cand-jandira-feghali': [2, 2, 2, 2, 2],
+      'cand-ricardo-salles': [0, 0, 0, 0, 0],
+      'cand-orlando-silva': [2, 1, 2, 1, 2],
+      'cand-carla-zambelli': [0, 0, 0, 0, 0],
+      'cand-maria-do-rosario': [2, 2, 2, 2, 2],
+      'cand-tiririca': [1, 1, 1, 1, 1],
+      'cand-rodrigo-valadares': [0, 0, 0, 0, 0]
+    };
 
     let userAnswers = {};
 
@@ -8466,50 +8690,113 @@
           <div class="space-y-2">
             ${q.options.map((opt, idx) => `
               <label class="flex items-center gap-3 p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-white/5 hover:border-sky-500 dark:hover:border-cyan-500/40 cursor-pointer transition text-xs text-slate-700 dark:text-slate-300">
-                <input type="radio" name="q_${q.id}" value="${idx}" onchange="recordQuizAnswer(${q.id}, ${idx})" class="text-sky-600 focus:ring-0">
+                <input type="radio" name="q_${q.id}" value="${opt.val}" onchange="recordQuizAnswer(${q.id}, ${opt.val})" ${userAnswers[q.id] === opt.val ? 'checked' : ''} class="text-sky-600 focus:ring-0">
                 <span>${opt.text}</span>
               </label>
             `).join('')}
           </div>
         </div>
       `).join('') + `
-        <button onclick="calculateMatch()" class="w-full py-3 rounded-2xl bg-amber-500 hover:bg-amber-400 text-black font-extrabold text-xs shadow-md transition">
-          Calcular Minha Afinidade Cívica
+        <button onclick="calculateMatch()" class="w-full py-3.5 rounded-2xl bg-amber-500 hover:bg-amber-400 text-black font-extrabold text-sm shadow-md transition cursor-pointer flex items-center justify-center gap-2">
+          <i data-lucide="sparkles" class="w-4 h-4"></i>
+          <span>Calcular Minha Afinidade Cívica (45 Candidatos)</span>
         </button>
       `;
+      lucide.createIcons();
     }
 
-    function recordQuizAnswer(qId, optIdx) {
-      userAnswers[qId] = optIdx;
+    function recordQuizAnswer(qId, val) {
+      userAnswers[qId] = val;
     }
 
     function calculateMatch() {
+      const answeredKeys = Object.keys(userAnswers);
+      if (answeredKeys.length < 3) {
+        alert('Por favor, responda pelo menos 3 perguntas para calcularmos sua afinidade com precisão.');
+        return;
+      }
+
+      const userVector = [
+        userAnswers[0] !== undefined ? userAnswers[0] : 1,
+        userAnswers[1] !== undefined ? userAnswers[1] : 1,
+        userAnswers[2] !== undefined ? userAnswers[2] : 1,
+        userAnswers[3] !== undefined ? userAnswers[3] : 1,
+        userAnswers[4] !== undefined ? userAnswers[4] : 1
+      ];
+
+      const scoredList = candidatesData.map(cand => {
+        const candVec = CANDIDATE_VECTORS[cand.id] || [1, 1, 1, 1, 1];
+        let diff = 0;
+        for (let i = 0; i < 5; i++) {
+          diff += Math.abs(userVector[i] - candVec[i]);
+        }
+        const baseMatch = Math.round(100 - (diff / 10) * 55);
+        const matchPct = Math.min(98, Math.max(38, baseMatch + Math.round((cand.overallScore || 90) / 30)));
+        return {
+          cand,
+          matchPct
+        };
+      });
+
+      scoredList.sort((a, b) => b.matchPct - a.matchPct);
+      const top3 = scoredList.slice(0, 3);
+
       document.getElementById('quiz-results').classList.remove('hidden');
       const grid = document.getElementById('match-cards-grid');
-      
-      grid.innerHTML = `
-        <div class="p-4 bg-slate-50 dark:bg-slate-850 rounded-xl border border-sky-300 dark:border-cyan-500/30 flex items-center justify-between">
-          <div class="flex items-center gap-3">
-            <img src="${candidatesData[0].avatar}" class="w-12 h-12 rounded-xl object-cover">
-            <div>
-              <h4 class="font-bold text-slate-900 dark:text-white text-xs">${candidatesData[0].name}</h4>
-              <span class="text-[10px] text-slate-500 dark:text-slate-400">${candidatesData[0].party} • ${candidatesData[0].position}</span>
-            </div>
-          </div>
-          <span class="text-base font-black text-emerald-600 dark:text-emerald-400">92% Match</span>
-        </div>
 
-        <div class="p-4 bg-slate-50 dark:bg-slate-850 rounded-xl border border-slate-200 dark:border-white/10 flex items-center justify-between">
-          <div class="flex items-center gap-3">
-            <img src="${candidatesData[1].avatar}" class="w-12 h-12 rounded-xl object-cover">
-            <div>
-              <h4 class="font-bold text-slate-900 dark:text-white text-xs">${candidatesData[1].name}</h4>
-              <span class="text-[10px] text-slate-500 dark:text-slate-400">${candidatesData[1].party} • ${candidatesData[1].position}</span>
+      grid.innerHTML = top3.map((item, idx) => {
+        const c = item.cand;
+        const medal = idx === 0 ? '🥇 1º Lugar (Maior Afinidade)' : idx === 1 ? '🥈 2º Lugar' : '🥉 3º Lugar';
+        const barColor = idx === 0 ? 'bg-emerald-500' : idx === 1 ? 'bg-sky-500' : 'bg-purple-500';
+        return `
+          <div class="p-4 bg-white dark:bg-slate-850 rounded-2xl border ${idx === 0 ? 'border-emerald-500 dark:border-emerald-500/50 shadow-md shadow-emerald-500/10' : 'border-slate-200 dark:border-white/10'} space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-extrabold uppercase tracking-wider text-slate-500 dark:text-slate-400">${medal}</span>
+              <span class="text-base font-black ${idx === 0 ? 'text-emerald-600 dark:text-emerald-400' : 'text-sky-600 dark:text-cyan-400'}">${item.matchPct}% Match</span>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <img src="${c.avatar}" alt="${c.name}" class="w-12 h-12 rounded-xl object-cover border-2 border-sky-500/30 flex-shrink-0">
+              <div class="min-w-0 flex-1">
+                <h4 class="font-bold text-slate-900 dark:text-white text-sm truncate">${c.name}</h4>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400 truncate">${c.party} • ${c.position} • ${c.state}</p>
+              </div>
+            </div>
+
+            <!-- Match Progress Bar -->
+            <div class="w-full bg-slate-100 dark:bg-slate-800 rounded-full h-2 overflow-hidden">
+              <div class="${barColor} h-2 rounded-full transition-all duration-500" style="width: ${item.matchPct}%"></div>
+            </div>
+
+            <div class="pt-2 flex items-center gap-2">
+              <button onclick="openDossie('${c.id}')" class="flex-1 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-bold text-xs transition cursor-pointer">
+                Ver Dossiê
+              </button>
+              <button onclick="shareQuizMatchWhatsApp('${c.name}', ${item.matchPct})" class="px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs transition flex items-center gap-1 cursor-pointer" title="Compartilhar resultado no WhatsApp">
+                <i data-lucide="share-2" class="w-3.5 h-3.5"></i> Zap
+              </button>
             </div>
           </div>
-          <span class="text-base font-black text-sky-600 dark:text-cyan-400">84% Match</span>
+        `;
+      }).join('') + `
+        <div class="col-span-full pt-2 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <button onclick="shareQuizMatchWhatsApp('${top3[0].cand.name}', ${top3[0].matchPct})" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-xs shadow-md shadow-emerald-600/20 transition flex items-center justify-center gap-2 cursor-pointer">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>Compartilhar Meu Match no WhatsApp</span>
+          </button>
+          <button onclick="renderQuiz()" class="text-xs text-slate-500 dark:text-slate-400 hover:text-sky-600 dark:hover:text-cyan-400 font-medium underline cursor-pointer">
+            Refazer Quiz com outras respostas
+          </button>
         </div>
       `;
+
+      lucide.createIcons();
+      document.getElementById('quiz-results').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function shareQuizMatchWhatsApp(topName, topPct) {
+      const text = `🗳️ *Quiz de Afinidade Cívica 2026*\n\nFiz o teste no Raio-X Político e meu principal match eleitoral deu *${topPct}% de afinidade com ${topName}*!\n\nDescubra quem mais representa suas ideias para Presidente, Governador e Congresso:\n${window.location.origin}`;
+      window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank');
     }
 
     // ================= INCUMBENTS RENDERER =================

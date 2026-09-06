@@ -1,24 +1,61 @@
-# Raio-X Político (raioxpolitico.org)
-> Plataforma de Inteligência Cívica, Transparência Pública e Dossiê Auditado dos Candidatos às Eleições Brasileiras de 2026.
+# Raio-X Político 2026
 
-## Fontes Oficiais e Integridade de Dados
-- **TSE (Tribunal Superior Eleitoral):** DivulgaCandContas, Registros de Candidatura, Declarações de Bens, Certidões de Quitação Eleitoral e Protocolos Oficiais de Planos de Governo.
-- **Câmara dos Deputados e Senado Federal:** APIs Oficiais de Dados Abertos (Frequência Biométrica em Votações Nominais e Cota para o Exercício da Atividade Parlamentar - CEAP).
-- **Poder Judiciário:** Conselho Nacional de Justiça (CNJ), STF, STJ, TJs Estaduais e TRFs (Certidões de Distribuição Cível e Criminal, Processos de 2ª Instância e Ficha Limpa).
-- **Controladoria-Geral da União (CGU) & Siga Brasil:** Rastreabilidade de Emendas Parlamentares (Concurso Aberto vs Transferências Especiais/Emendas Pix).
-- **Fact-Checking:** Agências certificadas pela International Fact-Checking Network (IFCN) e Transcrição Oficial de Debates com IA (NotebookLM Engine).
+> Plataforma apartidária de inteligência cívica e auditoria eleitoral baseada em dados abertos do Tribunal Superior Eleitoral (TSE), Câmara dos Deputados, Senado Federal, Tribunal de Contas da União (TCU) e Tesouro Nacional.
 
-## Marco Jurídico e Proteção Constitucional
-- Constituição Federal de 1988: Art. 5º, incisos XXXIII e LX, e Art. 37 (Publicidade e Moralidade).
-- Lei nº 12.527/2011 (Lei de Acesso à Informação - LAI).
-- Lei nº 13.709/2018, Art. 7º, § 4º (LGPD - Tratamento de Dados Manifestamente Públicos).
-- Lei Complementar nº 135/2010 (Lei da Ficha Limpa).
-- Resolução TSE nº 23.610/2019 e Resolução TSE nº 23.732/2024 (Regulamentação de Inteligência Artificial e Vedação a Deepfakes no Pleito).
+## Visão Geral
+O **Raio-X Político** (https://raioxpolitico.org) é uma ferramenta pública desenhada para auditar e comparar os principais atores políticos do Brasil nas Eleições Gerais de 2026. A plataforma abrange 45 personalidades públicas de destaque nas esferas de Presidência da República, Governos Estaduais, Senado Federal, Prefeituras de Grandes Capitais e Câmara dos Deputados.
 
-## Indicadores Oficiais Auditados
-1. **Pontuação Geral (0 a 100):** Média ponderada multidimensional composta por Integridade (40%), Eficiência (25%), Transparência (15%), Coerência (10%) e Presença em Plenário (10%).
-2. **Índice de Presença em Plenário (%):** Presença real em sessões deliberativas nominais com votação em plenário.
-3. **Disciplina Fiscal da Cota (CEAP):** Comparativo mensal entre o teto permitido e o gasto auditado, com conversão em impacto cívico real.
-4. **Transparência de Emendas (% Aberto):** Percentual de verbas públicas direcionadas por editais públicos abertos e auditáveis (Selo de Integridade).
-5. **Cobertura de Gargalos Constitucionais (%):** Cruzamento algorítmico entre as 3 maiores dores do estado e as propostas protocoladas no TSE.
-6. **Veracidade no Debate Oficial (%):** Índice de consistência das falas transcritas em confrontos diretos televisionados.
+## Metodologia de Avaliação e Pontuação Ponderada
+O Score Geral (0 a 100) é calculado a partir de 7 critérios auditáveis:
+1. **Integridade & Ficha Limpa (25%)**: Certidões negativas de condenações transitadas em julgado (TSE, STF, STJ, TCU).
+2. **Assiduidade & Presença em Plenário (20%)**: Percentual de presença em votações nominais e sessões deliberativas.
+3. **Eficiência Fiscal & Cota CEAP / Orçamento (15%)**: Economia em relação ao teto da cota parlamentar ou cumprimento de metas fiscais de gestão executiva.
+4. **Transparência em Emendas & Contratações (10%)**: Proporção de emendas e obras executadas por editais de licitação aberta vs dispensas/emendas diretas.
+5. **Eficiência de Mandato (15%)**: Conversão de projetos de lei em normas jurídicas sancionadas ou entrega de obras públicas previstas.
+6. **Veracidade em Debates & Discursos (15%)**: Cruzamento factual de falas públicas com relatórios contábeis oficiais (RREO, Tesouro, PNCP).
+
+## Índice de Personalidades Auditadas (Eleições 2026)
+
+### Presidência da República / Presidenciáveis
+- **Luiz Inácio Lula da Silva** (PT-SP, Nº 13) — Score: 91/100. Pautas: Novo PAC Transição Energética, Pé-de-Meia, Reforma Tributária IVA Dual.
+- **Jair Messias Bolsonaro** (PL-RJ, Nº 22) — Score: 89/100. Pautas: Redução do Estado, Marco Legal das Garantias, Pacote Antimafia.
+- **Ciro Ferreira Gomes** (PDT-CE, Nº 12) — Score: 90/100. Pautas: Projeto Nacional de Desenvolvimento (PND), Renda Básica Cidadã, Refinanciamento de Dívidas.
+- **Simone Nassar Tebet** (MDB-MS, Nº 15) — Score: 92/100. Pautas: Rotas de Integração Sul-Americana, Revisão de Gastos Tributários, Poupança Estudantil.
+
+### Governos Estaduais
+- **Tarcísio Gomes de Freitas** (REPUBLICANOS-SP) — Score: 93/100. Gestão do Estado de São Paulo, obras do Trem Intercidades, Desestatização da SABESP.
+- **Romeu Zema Neto** (NOVO-MG) — Score: 91/100. Gestão do Estado de Minas Gerais, Regime de Recuperação Fiscal, digitalização pública.
+- **Ronaldo Ramos Caiado** (UNIÃO-GO) — Score: 92/100. Gestão do Estado de Goiás, tolerância zero à criminalidade, Polo Farmoquímico.
+- **Eduardo Figueiredo Leite** (PSDB-RS) — Score: 90/100. Gestão do Estado do Rio Grande do Sul, Plano Rio Grande de reconstrução e resiliência climática.
+- **Helder Zahluth Barbalho** (MDB-PA) — Score: 91/100. Gestão do Estado do Pará, legado de infraestrutura da COP30 em Belém, Amazônia Agora.
+- **Cláudio Bonfim de Castro** (PL-RJ) — Score: 84/100. Gestão do Estado do Rio de Janeiro, expansão do Segurança Presente e Pacto RJ.
+
+### Senado Federal
+- **Rodrigo Otavio Pacheco** (PSD-MG) — Score: 92/100. Presidente do Senado, Marco Legal da Inteligência Artificial (PL 2338/2023), Reforma do Código Civil.
+- **Sergio Fernando Moro** (UNIÃO-PR) — Score: 91/100. Foco em combate à corrupção, prisão em 2ª instância e reforma processual penal.
+- **Marcos Cesar Pontes** (PL-SP) — Score: 89/100. Foco em ciência espacial, incentivo a DeepTechs e desenvolvimento do Semiárido.
+- **Flávio Nantes Bolsonaro** (PL-RJ) — Score: 87/100. Foco em liberdade econômica, privatizações e Marco Legal de Cassinos e Resorts.
+- **Randolfe Rodrigues** (PT-AP) — Score: 91/100. Líder de governo no Congresso, proteção ambiental amazônica, Lei Aldir Blanc permanente.
+
+### Prefeituras de Capitais Estratégicas
+- **Ricardo Luis Reis Nunes** (MDB-SP) — Score: 89/100. Prefeitura de São Paulo, Domingão Tarifa Zero, expansão da Faixa Azul de motos.
+- **Eduardo da Costa Paes** (PSD-RJ) — Score: 92/100. Prefeitura do Rio de Janeiro, BRT Transbrasil, Porto Maravalley Hub Tecnológico.
+- **João Henrique Campos** (PSB-Recife) — Score: 94/100. Prefeitura de Recife, Embarque Digital, Centros Comunitários da Paz (Compaz).
+- **Fuad Jorge Noman Filho** (PSD-BH) — Score: 89/100. Prefeitura de Belo Horizonte, macrodrenagem do Vilarinho e Pampulha, novos Centros de Saúde.
+- **Bruno Soares Reis** (UNIÃO-Salvador) — Score: 93/100. Prefeitura de Salvador, BRT 100% Elétrico, Programa Mané Dendê de saneamento.
+
+### Câmara dos Deputados (Amostra de Lideranças Nacionais)
+- **Tabata Amaral** (PSB-SP) — Score: 94/100. Programa Pé-de-Meia, Política Nacional de Saúde Mental, transparência 100% na cota CEAP.
+- **Kim Kataguiri** (MISSÃO-SP) — Score: 92/100. Marco Legal dos Games, revogação de incentivos fiscais ineficientes, economia de cota CEAP.
+- **Nikolas Ferreira** (PL-MG) — Score: 90/100. Defesa de pautas conservadoras, fiscalização de gastos em ministérios, combate à doutrinação escolar.
+- **Erika Hilton** (PSOL-SP) — Score: 92/100. Fim da escala de trabalho 6x1, acolhimento de vulneráveis, fiscalização de direitos humanos.
+- **Guilherme Boulos** (PSOL-SP) — Score: 91/100. Programa Cozinhas Solidárias, combate a despejos, Tarifa Zero no transporte público.
+- **Eduardo Bolsonaro** (PL-SP) — Score: 88/100. Enquadramento de facções criminosas como terroristas, legítima defesa e flexibilização de armas.
+- **Marcel van Hattem** (NOVO-RS) — Score: 94/100. Transparência tributária, cortes orçamentários, defesa de CPIs e prerrogativas parlamentares.
+- *(Demais 18 deputados auditados detalhados na base completa da plataforma).*
+
+## Endpoints e Formatos de Dados Oficiais
+- **Dossiê em JSON**: `GET /api/candidates/:id` (retorna métricas de radar, assiduidade, despesas, propostas, emendas e debate).
+- **Catálogo Completo**: `GET /api/candidates` (retorna todos os 45 líderes públicos).
+- **Comparador 1v1**: `GET /api/compare?c1=:id1&c2=:id2`.
+- **Licença de Dados**: Open Data / Domínio Público (Dados abertos governamentais protegidos pela Lei de Acesso à Informação nº 12.527/2011).

@@ -62,6 +62,20 @@ const server = http.createServer(async (req, res) => {
     return res.end();
   }
 
+  // ================= ROTAS ESPECIAIS (AI-SEO) =================
+  if (pathname === '/llms.txt' && req.method === 'GET') {
+    const llmsPath = path.join(PUBLIC_DIR, 'llms.txt');
+    if (fs.existsSync(llmsPath)) {
+      const content = fs.readFileSync(llmsPath, 'utf8');
+      res.writeHead(200, {
+        'Content-Type': 'text/markdown; charset=utf-8',
+        'Access-Control-Allow-Origin': '*',
+        'Cache-Control': 'public, max-age=3600'
+      });
+      return res.end(content);
+    }
+  }
+
   // ================= ROTAS DE API REST =================
   if (pathname.startsWith('/api/')) {
     try {
