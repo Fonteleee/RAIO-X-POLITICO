@@ -533,23 +533,23 @@
 
     // Dados de Fallback de Alta Fidelidade (para execução estática ou offline)
     const fallbackCandidates = {
-      'cand-1': {
-        id: 'cand-1',
-        name: 'Eduardo Rocha',
-        ballotName: 'Eduardo Rocha',
-        party: 'PSD',
-        number: '55',
-        position: 'Governador',
+      'cand-tabata-amaral': {
+        id: 'cand-tabata-amaral',
+        name: 'Tabata Amaral',
+        ballotName: 'Tabata Amaral',
+        party: 'PSB',
+        number: '4000',
+        position: 'Deputada Federal',
         state: 'SP',
         city: 'São Paulo',
-        age: 51,
-        timesElected: 3,
-        politicalLifeYears: 18,
-        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=faces',
-        education: 'Economia (USP), Mestrado em Políticas Públicas (Columbia University)',
-        careerHistory: 'Secretário Municipal de Finanças (2017-2020), Deputado Federal por 2 mandatos (2015-2022). Relator do Marco Fiscal.',
-        aiSummary: 'Perfil técnico e centrista, com forte foco em responsabilidade fiscal, desregulamentação e atração de investimentos privados. Destaca-se pela alta assiduidade (93.8%) e 100% de transparência em emendas abertas, sem condenações em nenhuma instância.',
-        overallScore: 92,
+        age: 32,
+        timesElected: 2,
+        politicalLifeYears: 6,
+        avatar: 'https://www.camara.leg.br/internet/deputado/bandep/204534.jpg',
+        education: 'Ciências Políticas e Astrofísica (Harvard University)',
+        careerHistory: 'Deputada Federal por SP (2019-2026). Atuação destacada na Educação Básica, Novo Ensino Médio e conectividade escolar.',
+        aiSummary: 'Perfil voltado à educação pública de qualidade, transparência institucional e redução de desigualdades. Destaca-se por 100% de transparência em emendas via editais abertos e alta assiduidade nas sessões deliberativas.',
+        overallScore: 90,
         cleanRecord: '0 Condenações',
         radar: {
           integridade: 96,
@@ -667,7 +667,7 @@
     // Inicialização da Página
     async function initDossiePage() {
       const urlParams = new URLSearchParams(window.location.search);
-      const candId = urlParams.get('id') || 'cand-1';
+      const candId = urlParams.get('id') || 'cand-tabata-amaral';
       const initialTab = urlParams.get('tab') || 'visao-geral';
 
       // Sincroniza Tema Escuro/Claro
@@ -692,7 +692,7 @@
       }
 
       if (!currentCand) {
-        currentCand = fallbackCandidates[candId] || fallbackCandidates['cand-1'];
+        currentCand = fallbackCandidates[candId] || fallbackCandidates['cand-tabata-amaral'];
       }
 
       renderCandidateProfile(currentCand);
@@ -708,7 +708,7 @@
     }
 
     function normalizeCandidateData(apiCand) {
-      const fb = fallbackCandidates['cand-1'];
+      const fb = fallbackCandidates['cand-tabata-amaral'];
       const radar = apiCand.radar || fb.radar;
       return {
         id: apiCand.id,
@@ -903,7 +903,7 @@
       `).join('');
 
       // Emendas
-      const amendments = cand.amendments || fallbackCandidates['cand-1'].amendments;
+      const amendments = cand.amendments || fallbackCandidates['cand-tabata-amaral'].amendments;
       const elAmTotal = document.getElementById('cand-amendments-total');
       if (elAmTotal) elAmTotal.innerText = amendments.total || 'R$ 28.500.000';
       const elAmOpen = document.getElementById('cand-amendments-open');
@@ -912,7 +912,7 @@
       if (elAmRate) elAmRate.innerText = amendments.executionRate || '90%';
       const elAmTable = document.getElementById('cand-amendments-table');
       if (elAmTable) {
-        const tableData = (amendments.table && amendments.table.length > 0) ? amendments.table : fallbackCandidates['cand-1'].amendments.table;
+        const tableData = (amendments.table && amendments.table.length > 0) ? amendments.table : fallbackCandidates['cand-tabata-amaral'].amendments.table;
         elAmTable.innerHTML = tableData.map(em => `
           <tr class="hover:bg-slate-50 dark:hover:bg-white/5 transition">
             <td class="py-2.5 px-3 font-bold text-slate-900 dark:text-white">${em.city}</td>
@@ -925,7 +925,7 @@
       }
 
       // Histórico Ético
-      const ethics = (cand.ethics && Array.isArray(cand.ethics) && cand.ethics.length > 0) ? cand.ethics : fallbackCandidates['cand-1'].ethics;
+      const ethics = (cand.ethics && Array.isArray(cand.ethics) && cand.ethics.length > 0) ? cand.ethics : fallbackCandidates['cand-tabata-amaral'].ethics;
       const elEthics = document.getElementById('cand-ethics-grid');
       if (elEthics) {
         elEthics.innerHTML = ethics.map(eth => `
@@ -940,7 +940,7 @@
       }
 
       // Pesquisas
-      const polls = cand.polls || fallbackCandidates['cand-1'].polls;
+      const polls = cand.polls || fallbackCandidates['cand-tabata-amaral'].polls;
       const elPolls = document.getElementById('cand-polls-content');
       if (elPolls && polls) {
         elPolls.innerHTML = `
@@ -1027,7 +1027,7 @@
       const ctx = canvas.getContext('2d');
       const gridColor = isDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.06)';
       const labelColor = isDarkMode ? '#94a3b8' : '#64748b';
-      const tl = (Array.isArray(timeline) && timeline.length > 0) ? timeline : fallbackCandidates['cand-1'].salary.timeline;
+      const tl = (Array.isArray(timeline) && timeline.length > 0) ? timeline : fallbackCandidates['cand-tabata-amaral'].salary.timeline;
 
       ceapChart = new Chart(ctx, {
         type: 'line',

@@ -65,9 +65,9 @@ describe('Extratores de Dados Oficiais (Custo Zero)', () => {
     assert.strictEqual(timestamp, '14 min 32 seg');
 
     // Teste de construção de prompt para IA
-    const promptData = ytExtractor.buildFactCheckingPrompt('Eduardo Rocha', '[14:32] Reduzimos gastos em 14%');
+    const promptData = ytExtractor.buildFactCheckingPrompt('Tabata Amaral', '[14:32] Reduzimos gastos em 14%');
     assert.strictEqual(promptData.recommendedModel, 'gemini-1.5-flash');
-    assert.ok(promptData.userPrompt.includes('Eduardo Rocha'));
+    assert.ok(promptData.userPrompt.includes('Tabata Amaral'));
 
     // Teste de formatação e ingestão no banco
     const mockAiOutput = {
@@ -84,8 +84,8 @@ describe('Extratores de Dados Oficiais (Custo Zero)', () => {
       ]
     };
 
-    const formatted = ytExtractor.formatForDatabaseIngestion('cand-1', 'Debate Record', 'Record TV', 'https://youtube.com/watch?v=dQw4w9WgXcQ', mockAiOutput);
-    assert.strictEqual(formatted.candidateId, 'cand-1');
+    const formatted = ytExtractor.formatForDatabaseIngestion('cand-tabata-amaral', 'Debate Record', 'Record TV', 'https://youtube.com/watch?v=dQw4w9WgXcQ', mockAiOutput);
+    assert.strictEqual(formatted.candidateId, 'cand-tabata-amaral');
     assert.strictEqual(formatted.statements.length, 1);
 
     // Salva no banco de dados com candidatos válidos
@@ -93,7 +93,7 @@ describe('Extratores de Dados Oficiais (Custo Zero)', () => {
     const bridge = new NotebookLMBridge(appDb);
     await bridge.ingestDebateResult(formatted);
 
-    const cand = appDb.getCandidateById('cand-1');
+    const cand = appDb.getCandidateById('cand-tabata-amaral');
     assert.strictEqual(cand.recentDebate.event, 'Debate Record');
     assert.strictEqual(cand.recentDebate.statements.length, 1);
     assert.strictEqual(cand.recentDebate.statements[0].theme, 'Segurança Pública');
@@ -111,7 +111,7 @@ describe('Extratores de Dados Oficiais (Custo Zero)', () => {
     assert.strictEqual(cand.radar.presenca, cand.radar.assiduidade);
 
     const all = appDb.getAllCandidates();
-    assert.strictEqual(all.length, 18, 'Must have 18 candidates');
+    assert.strictEqual(all.length, 25, 'Must have 25 candidates');
     all.forEach(c => {
       assert.ok(c.proposals && c.proposals.length > 0, `Candidate ${c.id} must have proposals in getAllCandidates`);
       assert.ok(c.radar && c.radar.integridade > 0);

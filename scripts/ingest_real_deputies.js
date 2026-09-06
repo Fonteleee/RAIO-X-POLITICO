@@ -6,7 +6,7 @@ const { AppDatabase } = require('../src/db/database');
 const { CamaraExtractor } = require('../src/ingestion/camara_extractor');
 const { REAL_PROPOSALS } = require('../src/ingestion/curated_proposals');
 
-// Lista curada de 15 deputados reais plurais e de grande expressão pública
+// Lista curada de 25 deputados reais plurais e de grande expressão pública da 57ª Legislatura
 const TARGET_DEPUTIES = [
   { id: 204534, slug: 'cand-tabata-amaral', number: '4000', position: 'Deputada Federal', state: 'SP', city: 'São Paulo', age: 32, publicLifeYears: 6, timesElected: 2 },
   { id: 204536, slug: 'cand-kim-kataguiri', number: '4433', position: 'Deputado Federal', state: 'SP', city: 'São Paulo', age: 30, publicLifeYears: 8, timesElected: 2 },
@@ -22,7 +22,17 @@ const TARGET_DEPUTIES = [
   { id: 220655, slug: 'cand-mario-frias', number: '2200', position: 'Deputado Federal', state: 'SP', city: 'São Paulo', age: 54, publicLifeYears: 6, timesElected: 1 },
   { id: 204526, slug: 'cand-luiz-philippe', number: '2288', position: 'Deputado Federal', state: 'SP', city: 'São Paulo', age: 57, publicLifeYears: 8, timesElected: 2 },
   { id: 206018, slug: 'cand-celia-xakriaba', number: '5005', position: 'Deputada Federal', state: 'MG', city: 'Belo Horizonte', age: 36, publicLifeYears: 6, timesElected: 1 },
-  { id: 74171, slug: 'cand-chico-alencar', number: '5022', position: 'Deputado Federal', state: 'RJ', city: 'Rio de Janeiro', age: 76, publicLifeYears: 40, timesElected: 7 }
+  { id: 74171, slug: 'cand-chico-alencar', number: '5022', position: 'Deputado Federal', state: 'RJ', city: 'Rio de Janeiro', age: 76, publicLifeYears: 40, timesElected: 7 },
+  { id: 220639, slug: 'cand-guilherme-boulos', number: '5010', position: 'Deputado Federal', state: 'SP', city: 'São Paulo', age: 44, publicLifeYears: 6, timesElected: 1 },
+  { id: 92346, slug: 'cand-eduardo-bolsonaro', number: '2222', position: 'Deputado Federal', state: 'SP', city: 'São Paulo', age: 41, publicLifeYears: 12, timesElected: 3 },
+  { id: 74646, slug: 'cand-aecio-neves', number: '4545', position: 'Deputado Federal', state: 'MG', city: 'Belo Horizonte', age: 66, publicLifeYears: 38, timesElected: 6 },
+  { id: 74848, slug: 'cand-jandira-feghali', number: '6565', position: 'Deputada Federal', state: 'RJ', city: 'Rio de Janeiro', age: 68, publicLifeYears: 34, timesElected: 7 },
+  { id: 220633, slug: 'cand-ricardo-salles', number: '3000', position: 'Deputado Federal', state: 'SP', city: 'São Paulo', age: 50, publicLifeYears: 10, timesElected: 1 },
+  { id: 178987, slug: 'cand-orlando-silva', number: '6555', position: 'Deputado Federal', state: 'SP', city: 'São Paulo', age: 54, publicLifeYears: 22, timesElected: 3 },
+  { id: 204507, slug: 'cand-carla-zambelli', number: '2211', position: 'Deputada Federal', state: 'SP', city: 'São Paulo', age: 45, publicLifeYears: 8, timesElected: 2 },
+  { id: 74398, slug: 'cand-maria-do-rosario', number: '1370', position: 'Deputada Federal', state: 'RS', city: 'Porto Alegre', age: 59, publicLifeYears: 30, timesElected: 6 },
+  { id: 160976, slug: 'cand-tiririca', number: '2220', position: 'Deputado Federal', state: 'SP', city: 'São Paulo', age: 60, publicLifeYears: 16, timesElected: 4 },
+  { id: 165470, slug: 'cand-rodrigo-valadares', number: '4455', position: 'Deputado Federal', state: 'SE', city: 'Aracaju', age: 36, publicLifeYears: 8, timesElected: 2 }
 ];
 
 async function ingestDeputies() {
@@ -33,6 +43,10 @@ async function ingestDeputies() {
   const db = new AppDatabase();
   const rawDb = db.db;
   const extractor = new CamaraExtractor();
+
+  // Purga definitiva de políticos fictícios/mockados
+  console.log('🧹 Purgando candidatos fictícios (cand-1, cand-2, cand-3)...');
+  rawDb.prepare("DELETE FROM candidates WHERE id IN ('cand-1', 'cand-2', 'cand-3')").run();
 
   console.log(`\nIniciando coleta para ${TARGET_DEPUTIES.length} parlamentares de destaque nacional...\n`);
 

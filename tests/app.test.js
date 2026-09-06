@@ -16,9 +16,9 @@ test('Banco de Dados: Inicialização e consultas parametrizadas essenciais', ()
   assert.ok(candidates.length >= 2, 'Deve conter pelo menos 2 candidatos cadastrados');
 
   // 2. Dossiê completo
-  const cand = db.getCandidateById('cand-1');
-  assert.ok(cand, 'Candidato cand-1 deve existir');
-  assert.equal(cand.id, 'cand-1');
+  const cand = db.getCandidateById('cand-tabata-amaral');
+  assert.ok(cand, 'Candidata cand-tabata-amaral deve existir');
+  assert.equal(cand.id, 'cand-tabata-amaral');
   assert.ok(cand.radar, 'Deve conter objeto de métricas de radar');
   assert.ok(cand.attendance, 'Deve conter objeto de assiduidade');
   assert.ok(cand.salary, 'Deve conter dados da cota CEAP');
@@ -26,10 +26,10 @@ test('Banco de Dados: Inicialização e consultas parametrizadas essenciais', ()
   assert.ok(Array.isArray(cand.recentDebate.statements), 'Deve conter array de falas transcritas');
 
   // 3. Comparador 1v1
-  const comp = db.getComparison('cand-1', 'cand-2');
+  const comp = db.getComparison('cand-tabata-amaral', 'cand-kim-kataguiri');
   assert.ok(comp, 'Comparação deve ser gerada');
-  assert.equal(comp.cand1.id, 'cand-1');
-  assert.equal(comp.cand2.id, 'cand-2');
+  assert.equal(comp.cand1.id, 'cand-tabata-amaral');
+  assert.equal(comp.cand2.id, 'cand-kim-kataguiri');
 
   db.close();
 });
@@ -39,7 +39,7 @@ test('NotebookLM Bridge: Ingestão de falas de debate no SQLite', async () => {
   const bridge = new NotebookLMBridge(db);
 
   const mockDebate = {
-    candidateId: 'cand-1',
+    candidateId: 'cand-tabata-amaral',
     event: 'Debate Band São Paulo 2026',
     broadcaster: 'Band',
     stage: '1º Turno Oficial',
@@ -68,7 +68,7 @@ test('NotebookLM Bridge: Ingestão de falas de debate no SQLite', async () => {
   assert.equal(result.success, true);
   assert.equal(result.statementsCount, 1);
 
-  const updated = db.getCandidateById('cand-1');
+  const updated = db.getCandidateById('cand-tabata-amaral');
   assert.equal(updated.recentDebate.truthfulnessPct, 92);
   assert.equal(updated.recentDebate.statements.length, 1);
   assert.equal(updated.recentDebate.statements[0].quote, mockDebate.statements[0].quote);
@@ -98,16 +98,16 @@ test('API REST: Endpoints HTTP essenciais respondem com 200 OK', async () => {
     assert.ok(candsJson.data.length >= 2);
 
     // 3. Dossiê de candidato
-    const candRes = await fetch(`${baseUrl}/api/candidates/cand-1`);
+    const candRes = await fetch(`${baseUrl}/api/candidates/cand-tabata-amaral`);
     assert.equal(candRes.status, 200);
     const candJson = await candRes.json();
-    assert.equal(candJson.data.id, 'cand-1');
+    assert.equal(candJson.data.id, 'cand-tabata-amaral');
 
     // 4. Comparador
-    const compRes = await fetch(`${baseUrl}/api/compare?c1=cand-1&c2=cand-2`);
+    const compRes = await fetch(`${baseUrl}/api/compare?c1=cand-tabata-amaral&c2=cand-kim-kataguiri`);
     assert.equal(compRes.status, 200);
     const compJson = await compRes.json();
-    assert.equal(compJson.data.cand1.id, 'cand-1');
+    assert.equal(compJson.data.cand1.id, 'cand-tabata-amaral');
   } finally {
     await new Promise(resolve => server.close(resolve));
   }
