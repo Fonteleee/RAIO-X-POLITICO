@@ -111,11 +111,30 @@ describe('Extratores de Dados Oficiais (Custo Zero)', () => {
     assert.strictEqual(cand.radar.presenca, cand.radar.assiduidade);
 
     const all = appDb.getAllCandidates();
-    assert.strictEqual(all.length, 25, 'Must have 25 candidates');
+    assert.ok(all.length >= 45, 'Must have at least 45 candidates with multi-office database');
     all.forEach(c => {
       assert.ok(c.proposals && c.proposals.length > 0, `Candidate ${c.id} must have proposals in getAllCandidates`);
       assert.ok(c.radar && c.radar.integridade > 0);
     });
+
+    // Validação de Personalidades Multi-Cargos (Executivo & Senado)
+    const lula = appDb.getCandidateById('cand-lula');
+    assert.ok(lula, 'Lula must exist in database');
+    assert.strictEqual(lula.party, 'PT');
+    assert.strictEqual(lula.position, 'Presidente da República');
+    assert.ok(lula.proposals.length >= 3, 'Lula must have at least 3 proposals');
+
+    const tarcisio = appDb.getCandidateById('cand-tarcisio-de-freitas');
+    assert.ok(tarcisio, 'Tarcísio must exist in database');
+    assert.strictEqual(tarcisio.position, 'Governador');
+
+    const moro = appDb.getCandidateById('cand-sergio-moro');
+    assert.ok(moro, 'Moro must exist in database');
+    assert.strictEqual(moro.position, 'Senador');
+
+    const campos = appDb.getCandidateById('cand-joao-campos');
+    assert.ok(campos, 'João Campos must exist in database');
+    assert.strictEqual(campos.position, 'Prefeito');
   });
 
 });

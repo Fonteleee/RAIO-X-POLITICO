@@ -2592,7 +2592,7 @@
     }
 
     // ================= DATA STORE (CANDIDATOS COM FILIAÇÃO, DATAS DE ELEIÇÃO & PROPOSTAS DETALHADAS) =================
-    const candidatesData = [
+    let candidatesData = [
   {
     "id": "cand-tabata-amaral",
     "name": "Tabata Amaral",
@@ -6902,7 +6902,8 @@
     function renderRankingTab() {
       let list = [...candidatesData];
       if (currentRankingOffice !== 'todos') {
-        list = list.filter(c => c.position === currentRankingOffice);
+        const offLower = currentRankingOffice.toLowerCase();
+        list = list.filter(c => c.position && c.position.toLowerCase().includes(offLower));
       }
 
       // Add calculated Pontuação
@@ -7202,7 +7203,15 @@
       if (pos === 'todos') {
         renderCandidatesFeed(candidatesData);
       } else {
-        const filtered = candidatesData.filter(c => c.position === pos);
+        const posLower = pos.toLowerCase();
+        const filtered = candidatesData.filter(c => {
+          if (!c.position) return false;
+          const cPosLower = c.position.toLowerCase();
+          if (posLower.includes('deputad')) {
+            return cPosLower.includes('deputad');
+          }
+          return cPosLower.includes(posLower);
+        });
         renderCandidatesFeed(filtered);
       }
     }

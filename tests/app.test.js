@@ -97,11 +97,32 @@ test('API REST: Endpoints HTTP essenciais respondem com 200 OK', async () => {
     assert.equal(candsJson.success, true);
     assert.ok(candsJson.data.length >= 2);
 
-    // 3. Dossiê de candidato
+    // 3. Dossiê de candidato (Deputada Federal, Presidente, Governador, Senador, Prefeito)
     const candRes = await fetch(`${baseUrl}/api/candidates/cand-tabata-amaral`);
     assert.equal(candRes.status, 200);
     const candJson = await candRes.json();
     assert.equal(candJson.data.id, 'cand-tabata-amaral');
+
+    const lulaRes = await fetch(`${baseUrl}/api/candidates/cand-lula`);
+    assert.equal(lulaRes.status, 200);
+    const lulaJson = await lulaRes.json();
+    assert.equal(lulaJson.data.position, 'Presidente da República');
+    assert.ok(lulaJson.data.proposals.length >= 3);
+
+    const tarcisioRes = await fetch(`${baseUrl}/api/candidates/cand-tarcisio-de-freitas`);
+    assert.equal(tarcisioRes.status, 200);
+    const tarcisioJson = await tarcisioRes.json();
+    assert.equal(tarcisioJson.data.position, 'Governador');
+
+    const moroRes = await fetch(`${baseUrl}/api/candidates/cand-sergio-moro`);
+    assert.equal(moroRes.status, 200);
+    const moroJson = await moroRes.json();
+    assert.equal(moroJson.data.position, 'Senador');
+
+    const camposRes = await fetch(`${baseUrl}/api/candidates/cand-joao-campos`);
+    assert.equal(camposRes.status, 200);
+    const camposJson = await camposRes.json();
+    assert.equal(camposJson.data.position, 'Prefeito');
 
     // 4. Comparador
     const compRes = await fetch(`${baseUrl}/api/compare?c1=cand-tabata-amaral&c2=cand-kim-kataguiri`);
