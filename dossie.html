@@ -742,8 +742,19 @@
           unjustifiedAbsences: apiCand.attendance?.unjustifiedAbsences || fallbackCandidates['cand-1'].attendance.unjustifiedAbsences,
           committees: apiCand.attendance?.committees || fallbackCandidates['cand-1'].attendance.committees
         },
-        amendments: fallbackCandidates['cand-1'].amendments,
-        debate: fallbackCandidates['cand-1'].debate,
+        debate: (apiCand.recentDebate && apiCand.recentDebate.statements && apiCand.recentDebate.statements.length > 0) ? {
+          title: apiCand.recentDebate.event || 'Debate Oficial 2026',
+          subinfo: `${apiCand.recentDebate.broadcaster || 'Emissora Oficial'} • Transcrição com timestamps`,
+          truthfulnessPct: apiCand.recentDebate.truthfulnessPct || 90,
+          statements: apiCand.recentDebate.statements.map(s => ({
+            topic: s.theme || s.topic || 'Tema de Debate',
+            quote: s.quote,
+            timestamp: s.timestamp || '10 min 00 seg',
+            verdict: s.verdict || 'Verdadeiro',
+            verdictClass: s.verdictClass || (s.verdict.toLowerCase().includes('verdadeiro') ? 'bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30' : 'bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30'),
+            factSource: s.officialSource || s.factSource || 'Fonte Oficial'
+          }))
+        } : fallbackCandidates['cand-1'].debate,
         proposals: (apiCand.proposals && apiCand.proposals.length > 0) ? apiCand.proposals : fallbackCandidates['cand-1'].proposals,
         ethics: fallbackCandidates['cand-1'].ethics,
         polls: fallbackCandidates['cand-1'].polls

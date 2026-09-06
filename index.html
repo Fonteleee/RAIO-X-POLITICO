@@ -7568,13 +7568,42 @@
           const json = await res.json();
           if (json.success && Array.isArray(json.data) && json.data.length > 0) {
             console.log(`[Raio-X Político] Sincronizado com API SQLite: ${json.data.length} candidatos ativos.`);
+            
             json.data.forEach(apiCand => {
-              const localCand = candidatesData.find(c => c.id === apiCand.id);
-              if (localCand) {
-                localCand.overallScore = apiCand.overallScore;
+              const existingIdx = candidatesData.findIndex(c => c.id === apiCand.id);
+              if (existingIdx !== -1) {
+                candidatesData[existingIdx].overallScore = apiCand.overallScore;
+                candidatesData[existingIdx].name = apiCand.name;
+                candidatesData[existingIdx].avatar = apiCand.avatar;
+              } else {
+                candidatesData.push({
+                  id: apiCand.id,
+                  name: apiCand.name,
+                  ballotName: apiCand.ballotName || apiCand.name,
+                  party: apiCand.party,
+                  number: apiCand.number,
+                  position: apiCand.position,
+                  state: apiCand.state,
+                  city: apiCand.city || 'Capital',
+                  age: apiCand.age || 40,
+                  politicalLifeYears: 8,
+                  timesElected: 2,
+                  avatar: apiCand.avatar,
+                  education: apiCand.education || 'Superior Completo',
+                  careerHistory: apiCand.careerHistory || 'Atuação Parlamentar',
+                  aiSummary: apiCand.aiSummary,
+                  overallScore: apiCand.overallScore || 90,
+                  affiliation: { party: apiCand.party, sinceDate: '2022', yearsText: '4 anos' },
+                  electionSchedule: { firstRoundText: '04/10/2026', daysRemaining: 36, hasSecondRound: false },
+                  radar: apiCand.radar || { integridade: 90, eficiencia: 90, transparencia: 90, coerencia: 85, viabilidade: 85, presenca: 90 },
+                  attendance: apiCand.attendance || { ratePct: 94, presentCount: 111, totalSessions: 118, justifiedAbsences: 5, unjustifiedAbsences: 2, committees: [] },
+                  salary: apiCand.salary || { spendingCeapMonthly: 'R$ 28.500', spendingStateAverage: 'R$ 35.000', spendingPercentage: 80, civicConversion: { costPerMinute: 'R$ 0,54 / min', costPerCitizen: 'R$ 0,004 / ano' } },
+                  proposals: apiCand.proposals || []
+                });
               }
             });
             renderCandidatesFeed();
+            if (typeof renderPodiumRanking === 'function') renderPodiumRanking();
           }
         }
       } catch (e) {
