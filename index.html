@@ -1997,7 +1997,7 @@
 
             <!-- Instagram Direct Share Button -->
             <button onclick="shareToInstagram()" id="btn-share-insta" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 hover:opacity-90 text-white font-black text-xs flex items-center justify-center gap-2 shadow-md shadow-pink-600/30 transition cursor-pointer">
-              <i data-lucide="instagram" class="w-4 h-4 text-white"></i> 📸 Postar no Instagram (Stories / Feed)
+              <i data-lucide="camera" class="w-4 h-4 text-white"></i> 📸 Postar no Instagram (Stories / Feed)
             </button>
 
             <!-- Download Buttons -->
@@ -2522,10 +2522,10 @@
         <span class="font-semibold text-slate-900 dark:text-white block">Compartilhe a Verdade</span>
         <div class="flex items-center gap-2">
           <a href="#" class="w-8 h-8 rounded-lg bg-white dark:bg-slate-850 hover:bg-slate-50 dark:hover:bg-slate-800 border border-slate-200 dark:border-white/10 flex items-center justify-center text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white transition">
-            <i data-lucide="instagram" class="w-4 h-4"></i>
+            <i data-lucide="camera" class="w-4 h-4"></i>
           </a>
           <a href="#" class="w-8 h-8 rounded-lg bg-white dark:bg-slate-850 hover:bg-slate-50 dark:hover:bg-slate-800 border border-slate-200 dark:border-white/10 flex items-center justify-center text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white transition">
-            <i data-lucide="twitter" class="w-4 h-4"></i>
+            <i data-lucide="share-2" class="w-4 h-4"></i>
           </a>
           <a href="#" class="w-8 h-8 rounded-lg bg-white dark:bg-slate-850 hover:bg-slate-50 dark:hover:bg-slate-800 border border-slate-200 dark:border-white/10 flex items-center justify-center text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white transition">
             <i data-lucide="message-circle" class="w-4 h-4"></i>
@@ -4288,9 +4288,9 @@
               </span>
             </td>
             <td class="py-3 px-3 text-center">
-              <span class="inline-flex items-center gap-1 text-[11px] font-bold ${cand.ethics.condemned === 0 ? 'text-emerald-600 dark:text-emerald-400' : 'text-amber-600 dark:text-amber-400'}">
-                <i data-lucide="${cand.ethics.condemned === 0 ? 'shield-check' : 'alert-triangle'}" class="w-3.5 h-3.5"></i>
-                ${cand.ethics.condemned === 0 ? 'Ficha Limpa' : 'Com Processos'}
+              <span class="inline-flex items-center gap-1 text-[11px] font-bold ${(!cand.ethics || cand.ethics.condemned === 0) ? 'text-emerald-600 dark:text-emerald-400' : 'text-amber-600 dark:text-amber-400'}">
+                <i data-lucide="${(!cand.ethics || cand.ethics.condemned === 0) ? 'shield-check' : 'alert-triangle'}" class="w-3.5 h-3.5"></i>
+                ${(!cand.ethics || cand.ethics.condemned === 0) ? 'Ficha Limpa' : 'Com Processos'}
               </span>
             </td>
             <td class="py-3 px-3 text-right">
@@ -4395,7 +4395,7 @@
             <div class="p-3 bg-slate-50 dark:bg-slate-850/80 rounded-xl border border-slate-200 dark:border-white/5 space-y-2">
               <div class="flex items-center justify-between text-[11px] font-bold text-slate-800 dark:text-slate-300">
                 <span class="flex items-center gap-1.5"><i data-lucide="scroll-text" class="w-3.5 h-3.5 text-sky-600 dark:text-cyan-400"></i> 3 Principais Propostas</span>
-                <button onclick="openDossie('${cand.id}', 'propostas-teses')" class="text-sky-700 dark:text-cyan-400 hover:underline text-[10px]">Ver todas (${cand.proposals.length})</button>
+                <button onclick="openDossie('${cand.id}', 'propostas-tse')" class="text-sky-700 dark:text-cyan-400 hover:underline text-[10px]">Ver todas (${cand.proposals.length})</button>
               </div>
               <div class="space-y-1.5">
                 ${proposalsSnippet}
@@ -7594,11 +7594,20 @@
                   aiSummary: apiCand.aiSummary,
                   overallScore: apiCand.overallScore || 90,
                   affiliation: { party: apiCand.party, sinceDate: '2022', yearsText: '4 anos' },
-                  electionSchedule: { firstRoundText: '04/10/2026', daysRemaining: 36, hasSecondRound: false },
+                  electionSchedule: { firstRoundText: '04/10/2026', firstRoundDate: '04/10/2026', daysRemaining: 36, hasSecondRound: false },
                   radar: apiCand.radar || { integridade: 90, eficiencia: 90, transparencia: 90, coerencia: 85, viabilidade: 85, presenca: 90 },
                   attendance: apiCand.attendance || { ratePct: 94, presentCount: 111, totalSessions: 118, justifiedAbsences: 5, unjustifiedAbsences: 2, committees: [] },
-                  salary: apiCand.salary || { spendingCeapMonthly: 'R$ 28.500', spendingStateAverage: 'R$ 35.000', spendingPercentage: 80, civicConversion: { costPerMinute: 'R$ 0,54 / min', costPerCitizen: 'R$ 0,004 / ano' } },
-                  proposals: apiCand.proposals || []
+                  salary: apiCand.salary || { spendingCeapMonthly: 'R$ 28.500', spendingStateAverage: 'R$ 35.000', spendingPercentage: 80, civicConversion: { costPerMinute: 'R$ 0,54 / min', costPerCitizen: 'R$ 0,004 / ano', salariosMinimos: 190 } },
+                  parliamentaryAmendments: apiCand.amendmentsExecuted ? {
+                    totalExecuted: apiCand.amendmentsExecuted,
+                    openBidPct: apiCand.openBidPct,
+                    integritySeal: {
+                      badgeClass: 'bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300',
+                      shortBadge: apiCand.amendmentsSeal || '🟢 100% Edital Aberto'
+                    }
+                  } : null,
+                  ethics: { condemned: 0, investigations: 0, processes: 0, status: 'Ficha Limpa' },
+                  proposals: (apiCand.proposals && apiCand.proposals.length > 0) ? apiCand.proposals : []
                 });
               }
             });

@@ -118,7 +118,7 @@ const server = http.createServer(async (req, res) => {
       if (voteMatch && req.method === 'POST') {
         const proposalId = voteMatch[1];
         const body = await parseBody(req);
-        const voteType = body.voteType; // 'support' ou 'reject'
+        const voteType = body.voteType || body.type; // 'support' ou 'reject'
 
         if (!['support', 'reject'].includes(voteType)) {
           return sendJson(res, 400, { error: 'voteType deve ser "support" ou "reject"' });

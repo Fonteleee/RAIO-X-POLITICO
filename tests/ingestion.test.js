@@ -99,4 +99,23 @@ describe('Extratores de Dados Oficiais (Custo Zero)', () => {
     assert.strictEqual(cand.recentDebate.statements[0].theme, 'Segurança Pública');
   });
 
+  it('Validates real deputies proposals and amendments in SQLite', () => {
+    const appDb = new AppDatabase();
+    const cand = appDb.getCandidateById('cand-tabata-amaral');
+    assert.ok(cand, 'Tabata Amaral must exist in database');
+    assert.strictEqual(cand.party, 'PSB');
+    assert.ok(cand.proposals.length >= 3, 'Must have at least 3 proposals');
+    assert.ok(cand.proposals[0].title.includes('Pé-de-Meia'));
+    assert.ok(cand.parliamentaryAmendments, 'Must have parliamentaryAmendments');
+    assert.ok(cand.parliamentaryAmendments.totalAllocated);
+    assert.strictEqual(cand.radar.presenca, cand.radar.assiduidade);
+
+    const all = appDb.getAllCandidates();
+    assert.strictEqual(all.length, 18, 'Must have 18 candidates');
+    all.forEach(c => {
+      assert.ok(c.proposals && c.proposals.length > 0, `Candidate ${c.id} must have proposals in getAllCandidates`);
+      assert.ok(c.radar && c.radar.integridade > 0);
+    });
+  });
+
 });

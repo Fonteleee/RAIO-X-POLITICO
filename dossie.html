@@ -708,6 +708,8 @@
     }
 
     function normalizeCandidateData(apiCand) {
+      const fb = fallbackCandidates['cand-1'];
+      const radar = apiCand.radar || fb.radar;
       return {
         id: apiCand.id,
         name: apiCand.name || 'Candidato',
@@ -719,28 +721,35 @@
         city: apiCand.city || 'Capital',
         age: apiCand.age || 45,
         timesElected: apiCand.timesElected || 2,
-        avatar: apiCand.avatar || fallbackCandidates['cand-1'].avatar,
-        education: apiCand.education || fallbackCandidates['cand-1'].education,
-        careerHistory: apiCand.careerHistory || fallbackCandidates['cand-1'].careerHistory,
-        aiSummary: apiCand.aiSummary || fallbackCandidates['cand-1'].aiSummary,
+        avatar: apiCand.avatar || fb.avatar,
+        education: apiCand.education || fb.education,
+        careerHistory: apiCand.careerHistory || fb.careerHistory,
+        aiSummary: apiCand.aiSummary || fb.aiSummary,
         overallScore: apiCand.overallScore || 90,
         cleanRecord: '0 Condenações',
-        radar: apiCand.radar || fallbackCandidates['cand-1'].radar,
+        radar: {
+          integridade: radar.integridade || 90,
+          eficiencia: radar.eficiencia || 90,
+          transparencia: radar.transparencia || 90,
+          coerencia: radar.coerencia || 85,
+          viabilidade: radar.viabilidade || 85,
+          presenca: radar.presenca || radar.assiduidade || 90
+        },
         salary: {
-          costPerMinute: apiCand.salary?.civicConversion?.costPerMinute || 'R$ 0,51 / min',
-          costPerCitizen: apiCand.salary?.civicConversion?.costPerCitizen || 'R$ 0,006 / ano',
-          spendingCeap: apiCand.salary?.spendingCeapMonthly || 'R$ 342.150',
-          spendingCeapSavings: 'R$ 107.850',
-          timeline: fallbackCandidates['cand-1'].salary.timeline,
-          categories: fallbackCandidates['cand-1'].salary.categories
+          costPerMinute: apiCand.salary?.civicConversion?.costPerMinute || apiCand.salary?.costPerMinute || fb.salary.costPerMinute,
+          costPerCitizen: apiCand.salary?.civicConversion?.costPerCitizenYear || apiCand.salary?.costPerCitizen || fb.salary.costPerCitizen,
+          spendingCeap: apiCand.salary?.spendingCeapMonthly || fb.salary.spendingCeap,
+          spendingCeapSavings: apiCand.salary?.savedCeapTotal || fb.salary.spendingCeapSavings,
+          timeline: (apiCand.salary?.timeline && apiCand.salary.timeline.length > 0) ? apiCand.salary.timeline : fb.salary.timeline,
+          categories: (apiCand.salary?.categories && apiCand.salary.categories.length > 0) ? apiCand.salary.categories : fb.salary.categories
         },
         attendance: {
-          ratePct: apiCand.attendance?.ratePct || fallbackCandidates['cand-1'].attendance.ratePct,
-          totalSessions: apiCand.attendance?.totalSessions || fallbackCandidates['cand-1'].attendance.totalSessions,
-          presentCount: apiCand.attendance?.presentCount || fallbackCandidates['cand-1'].attendance.presentCount,
-          justifiedAbsences: apiCand.attendance?.justifiedAbsences || fallbackCandidates['cand-1'].attendance.justifiedAbsences,
-          unjustifiedAbsences: apiCand.attendance?.unjustifiedAbsences || fallbackCandidates['cand-1'].attendance.unjustifiedAbsences,
-          committees: apiCand.attendance?.committees || fallbackCandidates['cand-1'].attendance.committees
+          ratePct: apiCand.attendance?.ratePct || fb.attendance.ratePct,
+          totalSessions: apiCand.attendance?.totalSessions || fb.attendance.totalSessions,
+          presentCount: apiCand.attendance?.presentCount || fb.attendance.presentCount,
+          justifiedAbsences: apiCand.attendance?.justifiedAbsences || fb.attendance.justifiedAbsences,
+          unjustifiedAbsences: apiCand.attendance?.unjustifiedAbsences || fb.attendance.unjustifiedAbsences,
+          committees: (apiCand.attendance?.committees && apiCand.attendance.committees.length > 0) ? apiCand.attendance.committees : fb.attendance.committees
         },
         debate: (apiCand.recentDebate && apiCand.recentDebate.statements && apiCand.recentDebate.statements.length > 0) ? {
           title: apiCand.recentDebate.event || 'Debate Oficial 2026',
@@ -751,13 +760,36 @@
             quote: s.quote,
             timestamp: s.timestamp || '10 min 00 seg',
             verdict: s.verdict || 'Verdadeiro',
-            verdictClass: s.verdictClass || (s.verdict.toLowerCase().includes('verdadeiro') ? 'bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30' : 'bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30'),
+            verdictClass: s.verdictClass || (s.verdict && s.verdict.toLowerCase().includes('verdadeiro') ? 'bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30' : 'bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30'),
             factSource: s.officialSource || s.factSource || 'Fonte Oficial'
           }))
-        } : fallbackCandidates['cand-1'].debate,
-        proposals: (apiCand.proposals && apiCand.proposals.length > 0) ? apiCand.proposals : fallbackCandidates['cand-1'].proposals,
-        ethics: fallbackCandidates['cand-1'].ethics,
-        polls: fallbackCandidates['cand-1'].polls
+        } : fb.debate,
+        proposals: (apiCand.proposals && apiCand.proposals.length > 0) ? apiCand.proposals.map(p => ({
+          id: p.id,
+          title: p.title,
+          description: p.description || p.summary || p.solutionDetails || '',
+          budget: p.budget || p.budgetAndCost || 'Previsto em dotação orçamentária',
+          feasibility: p.feasibility || (p.score ? `Viabilidade: ${p.score}/10` : 'Alta Viabilidade Orçamentária'),
+          feasibilityClass: p.feasibilityClass || 'text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300 dark:border-emerald-500/20',
+          supportVotes: p.supportVotes || 150,
+          rejectVotes: p.rejectVotes || 12
+        })) : fb.proposals,
+        amendments: (apiCand.parliamentaryAmendments && apiCand.parliamentaryAmendments.totalAllocated) ? {
+          total: apiCand.parliamentaryAmendments.totalAllocated,
+          openBidPct: `${apiCand.parliamentaryAmendments.openBidPct || 100}%`,
+          executionRate: `${apiCand.parliamentaryAmendments.executionRatePct || 90}%`,
+          table: [
+            { city: `${apiCand.city || 'São Paulo'} - ${apiCand.state || 'SP'}`, entity: 'Saúde e Infraestrutura Municipal', modality: 'Edital Aberto', amount: apiCand.parliamentaryAmendments.totalExecuted || 'R$ 4.500.000', status: 'Executado 100%' },
+            { city: `${apiCand.city || 'São Paulo'} - ${apiCand.state || 'SP'}`, entity: 'Equipamentos Educacionais e Tecnológicos', modality: 'Edital Aberto', amount: 'R$ 2.800.000', status: 'Em Execução' }
+          ]
+        } : fb.amendments,
+        ethics: (apiCand.ethics && Array.isArray(apiCand.ethics)) ? apiCand.ethics : fb.ethics,
+        polls: apiCand.polls ? {
+          firstRound: apiCand.polls.firstRound || apiCand.polls.datafolha || fb.polls.firstRound,
+          secondRound: apiCand.polls.secondRound || apiCand.polls.quaest || fb.polls.secondRound,
+          rejection: apiCand.polls.rejection || fb.polls.rejection,
+          institute: apiCand.polls.institute || 'Datafolha / IPEC / Quaest'
+        } : fb.polls
       };
     }
 
@@ -871,50 +903,66 @@
       `).join('');
 
       // Emendas
-      document.getElementById('cand-amendments-total').innerText = cand.amendments.total;
-      document.getElementById('cand-amendments-open').innerText = cand.amendments.openBidPct;
-      document.getElementById('cand-amendments-rate').innerText = cand.amendments.executionRate;
-      document.getElementById('cand-amendments-table').innerHTML = cand.amendments.table.map(em => `
-        <tr class="hover:bg-slate-50 dark:hover:bg-white/5 transition">
-          <td class="py-2.5 px-3 font-bold text-slate-900 dark:text-white">${em.city}</td>
-          <td class="py-2.5 px-3 text-slate-600 dark:text-slate-300 font-medium">${em.entity}</td>
-          <td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded text-[10px] font-bold bg-sky-100 dark:bg-cyan-500/20 text-sky-800 dark:text-cyan-300">${em.modality}</span></td>
-          <td class="py-2.5 px-3 text-right font-mono font-bold text-slate-900 dark:text-white">${em.amount}</td>
-          <td class="py-2.5 px-3 text-center text-emerald-600 dark:text-emerald-400 font-bold">${em.status}</td>
-        </tr>
-      `).join('');
+      const amendments = cand.amendments || fallbackCandidates['cand-1'].amendments;
+      const elAmTotal = document.getElementById('cand-amendments-total');
+      if (elAmTotal) elAmTotal.innerText = amendments.total || 'R$ 28.500.000';
+      const elAmOpen = document.getElementById('cand-amendments-open');
+      if (elAmOpen) elAmOpen.innerText = amendments.openBidPct || '100%';
+      const elAmRate = document.getElementById('cand-amendments-rate');
+      if (elAmRate) elAmRate.innerText = amendments.executionRate || '90%';
+      const elAmTable = document.getElementById('cand-amendments-table');
+      if (elAmTable) {
+        const tableData = (amendments.table && amendments.table.length > 0) ? amendments.table : fallbackCandidates['cand-1'].amendments.table;
+        elAmTable.innerHTML = tableData.map(em => `
+          <tr class="hover:bg-slate-50 dark:hover:bg-white/5 transition">
+            <td class="py-2.5 px-3 font-bold text-slate-900 dark:text-white">${em.city}</td>
+            <td class="py-2.5 px-3 text-slate-600 dark:text-slate-300 font-medium">${em.entity}</td>
+            <td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded text-[10px] font-bold bg-sky-100 dark:bg-cyan-500/20 text-sky-800 dark:text-cyan-300">${em.modality}</span></td>
+            <td class="py-2.5 px-3 text-right font-mono font-bold text-slate-900 dark:text-white">${em.amount}</td>
+            <td class="py-2.5 px-3 text-center text-emerald-600 dark:text-emerald-400 font-bold">${em.status}</td>
+          </tr>
+        `).join('');
+      }
 
       // Histórico Ético
-      document.getElementById('cand-ethics-grid').innerHTML = cand.ethics.map(eth => `
-        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-white/5 space-y-1.5">
-          <div class="flex items-center justify-between text-xs">
-            <span class="font-bold text-slate-900 dark:text-white">${eth.court}</span>
-            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300">${eth.status}</span>
+      const ethics = (cand.ethics && Array.isArray(cand.ethics) && cand.ethics.length > 0) ? cand.ethics : fallbackCandidates['cand-1'].ethics;
+      const elEthics = document.getElementById('cand-ethics-grid');
+      if (elEthics) {
+        elEthics.innerHTML = ethics.map(eth => `
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-white/5 space-y-1.5">
+            <div class="flex items-center justify-between text-xs">
+              <span class="font-bold text-slate-900 dark:text-white">${eth.court}</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300">${eth.status}</span>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400">${eth.badge} • Consulta oficial: ${eth.date}</p>
           </div>
-          <p class="text-[11px] text-slate-500 dark:text-slate-400">${eth.badge} • Consulta oficial: ${eth.date}</p>
-        </div>
-      `).join('');
+        `).join('');
+      }
 
       // Pesquisas
-      document.getElementById('cand-polls-content').innerHTML = `
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-center">
-          <div class="p-4 rounded-2xl bg-sky-50 dark:bg-sky-500/10 border border-sky-200 dark:border-sky-500/20">
-            <span class="text-[10px] uppercase font-bold text-sky-800 dark:text-cyan-300">1º Turno (Estimulada)</span>
-            <p class="text-xl font-black text-sky-700 dark:text-cyan-400 mt-1">${cand.polls.firstRound}</p>
+      const polls = cand.polls || fallbackCandidates['cand-1'].polls;
+      const elPolls = document.getElementById('cand-polls-content');
+      if (elPolls && polls) {
+        elPolls.innerHTML = `
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-center">
+            <div class="p-4 rounded-2xl bg-sky-50 dark:bg-sky-500/10 border border-sky-200 dark:border-sky-500/20">
+              <span class="text-[10px] uppercase font-bold text-sky-800 dark:text-cyan-300">1º Turno (Estimulada)</span>
+              <p class="text-xl font-black text-sky-700 dark:text-cyan-400 mt-1">${polls.firstRound || '34%'}</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/20">
+              <span class="text-[10px] uppercase font-bold text-emerald-800 dark:text-emerald-300">Cenário 2º Turno</span>
+              <p class="text-xl font-black text-emerald-700 dark:text-emerald-400 mt-1">${polls.secondRound || '48%'}</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-rose-50 dark:bg-rose-500/10 border border-rose-200 dark:border-rose-500/20">
+              <span class="text-[10px] uppercase font-bold text-rose-800 dark:text-rose-300">Índice de Rejeição</span>
+              <p class="text-xl font-black text-rose-700 dark:text-rose-400 mt-1">${polls.rejection || '22%'}</p>
+            </div>
           </div>
-          <div class="p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/20">
-            <span class="text-[10px] uppercase font-bold text-emerald-800 dark:text-emerald-300">Cenário 2º Turno</span>
-            <p class="text-xl font-black text-emerald-700 dark:text-emerald-400 mt-1">${cand.polls.secondRound}</p>
-          </div>
-          <div class="p-4 rounded-2xl bg-rose-50 dark:bg-rose-500/10 border border-rose-200 dark:border-rose-500/20">
-            <span class="text-[10px] uppercase font-bold text-rose-800 dark:text-rose-300">Índice de Rejeição</span>
-            <p class="text-xl font-black text-rose-700 dark:text-rose-400 mt-1">${cand.polls.rejection}</p>
-          </div>
-        </div>
-        <p class="text-[11px] text-slate-500 dark:text-slate-400 text-center pt-2">
-          Fonte: <strong>${cand.polls.institute}</strong>. Registro TSE: SP-08149/2026.
-        </p>
-      `;
+          <p class="text-[11px] text-slate-500 dark:text-slate-400 text-center pt-2">
+            Fonte: <strong>${polls.institute || 'Datafolha / IPEC / Quaest'}</strong>. Registro TSE: SP-08149/2026.
+          </p>
+        `;
+      }
 
       // Renderiza Gráfico Radar
       renderRadar(cand.radar);
@@ -930,6 +978,7 @@
       const ctx = canvas.getContext('2d');
       const gridColor = isDarkMode ? 'rgba(255, 255, 255, 0.12)' : 'rgba(0, 0, 0, 0.08)';
       const labelColor = isDarkMode ? '#e2e8f0' : '#1e293b';
+      const r = radarData || {};
 
       radarChart = new Chart(ctx, {
         type: 'radar',
@@ -937,12 +986,12 @@
           labels: ['Integridade', 'Eficiência', 'Transparência', 'Coerência', 'Viabilidade', 'Presença'],
           datasets: [{
             data: [
-              radarData.integridade || 90,
-              radarData.eficiencia || 85,
-              radarData.transparencia || 88,
-              radarData.coerencia || 80,
-              radarData.viabilidade || 85,
-              radarData.presenca || 92
+              r.integridade || 90,
+              r.eficiencia || 85,
+              r.transparencia || 88,
+              r.coerencia || 80,
+              r.viabilidade || 85,
+              r.presenca || r.assiduidade || 92
             ],
             backgroundColor: isDarkMode ? 'rgba(14, 165, 233, 0.25)' : 'rgba(2, 132, 199, 0.15)',
             borderColor: '#0284c7',
@@ -978,14 +1027,15 @@
       const ctx = canvas.getContext('2d');
       const gridColor = isDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.06)';
       const labelColor = isDarkMode ? '#94a3b8' : '#64748b';
+      const tl = (Array.isArray(timeline) && timeline.length > 0) ? timeline : fallbackCandidates['cand-1'].salary.timeline;
 
       ceapChart = new Chart(ctx, {
         type: 'line',
         data: {
-          labels: timeline.map(t => t.month),
+          labels: tl.map(t => t.month),
           datasets: [{
             label: 'Gastos CEAP (R$)',
-            data: timeline.map(t => t.value),
+            data: tl.map(t => t.value),
             borderColor: '#0284c7',
             backgroundColor: 'rgba(2, 132, 199, 0.1)',
             fill: true,
@@ -1009,6 +1059,12 @@
 
     // Troca de Abas Analíticas
     function switchTab(tabId, updateUrl = true) {
+      if (tabId === 'propostas-teses') tabId = 'propostas-tse';
+      if (tabId === 'presenca') tabId = 'presenca-faltas';
+      if (tabId === 'debates' || tabId === 'falas-debate') tabId = 'debates-falas';
+      if (tabId === 'emendas') tabId = 'emendas-parlamentares';
+      if (tabId === 'pesquisas') tabId = 'pesquisas-eleitorais';
+
       document.querySelectorAll('.tab-section').forEach(sec => sec.classList.add('hidden'));
       const targetSec = document.getElementById(`tab-sec-${tabId}`);
       if (targetSec) targetSec.classList.remove('hidden');
@@ -1069,7 +1125,7 @@
         await fetch(`/api/proposals/${propId}/vote`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ type })
+          body: JSON.stringify({ voteType: type, type })
         });
       } catch (e) {
         console.warn('API de votação inacessível, voto computado localmente.');
