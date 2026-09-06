@@ -120,9 +120,9 @@ function seedDatabase(dbPath = DEFAULT_DB_PATH) {
         cand.city || '',
         cand.age || 0,
         cand.avatar || '',
-        cand.education || '',
-        cand.careerHistory || '',
-        cand.aiSummary || '',
+        cand.education || 'Ensino Superior Completo',
+        cand.careerHistory || `${cand.publicLifeYears || 8} anos de vida pública • Atuação na 57ª Legislatura da Câmara`,
+        cand.aiSummary || `Parlamentar em exercício na Câmara dos Deputados pelo ${cand.party}-${cand.state}. Atuação focada em matérias de ${cand.position} e fiscalização cívica.`,
         overallScore
       );
 
