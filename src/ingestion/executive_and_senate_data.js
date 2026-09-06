@@ -1,7 +1,4 @@
 // Raio-X Político - Base Oficial Curada Multi-Cargos
-// Presidentes, Senadores, Governadores e Prefeitos das Principais Capitais
-// Dados Auditados e Factualmente Checados (Fontes: TSE, Senado Federal, Câmaras Municipais e Portais da Transparência)
-
 const EXECUTIVE_AND_SENATE_POLITICIANS = [
   {
     "id": "cand-lula",
@@ -15,7 +12,7 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "age": 79,
     "publicLifeYears": 46,
     "timesElected": 4,
-    "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Lula_oficial_1.jpg/480px-Lula_oficial_1.jpg",
+    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Foto_oficial_de_Luiz_In%C3%A1cio_Lula_da_Silva_%28ombros%29_denoise.jpg/330px-Foto_oficial_de_Luiz_In%C3%A1cio_Lula_da_Silva_%28ombros%29_denoise.jpg",
     "education": "Torneiro Mecânico (SENAI) • Doutor Honoris Causa por mais de 30 universidades",
     "careerHistory": "Líder Sindical dos Metalúrgicos do ABC (1975-1980), Deputado Federal Constituinte (1987-1991), Presidente da República (2003-2010 e 2023-atual).",
     "aiSummary": "39º Presidente da República do Brasil em seu terceiro mandato histórico. Trajetória com foco em combate à fome, expansão de programas sociais (Bolsa Família, Farmácia Popular), valorização do salário mínimo e protagonismo na diplomacia climática e multilateral.",
@@ -150,7 +147,7 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "age": 70,
     "publicLifeYears": 36,
     "timesElected": 8,
-    "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Foto_Oficial_de_Jair_Bolsonaro_outubro_2022.jpg/480px-Foto_Oficial_de_Jair_Bolsonaro_outubro_2022.jpg",
+    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Jair_Bolsonaro_2019_Portrait_%283x4_cropped_center%29.jpg/330px-Jair_Bolsonaro_2019_Portrait_%283x4_cropped_center%29.jpg",
     "education": "Oficial de Artilharia (Academia Militar das Agulhas Negras - AMAN) e Educação Física (EsEFEx)",
     "careerHistory": "Capitão do Exército (Reserva), Vereador do Rio de Janeiro (1989-1991), Deputado Federal por 7 mandatos (1991-2018), 38º Presidente da República (2019-2022).",
     "aiSummary": "38º Presidente da República do Brasil e principal líder do conservadorismo nacional. Gestão marcada pela aprovação da Reforma da Previdência, Lei da Liberdade Econômica, Pix pelo Banco Central, Marco do Saneamento e defesa de pautas conservadoras e armamentistas.",
@@ -281,7 +278,7 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "age": 50,
     "publicLifeYears": 16,
     "timesElected": 1,
-    "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Foto_Oficial_Tarc%C3%ADsio_de_Freitas.jpg/480px-Foto_Oficial_Tarc%C3%ADsio_de_Freitas.jpg",
+    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Governador_do_Estado_de_S%C3%A3o_Paulo%2C_Tarc%C3%ADsio_de_Freitas_-_Foto_Oficial_%28cropped%29.jpg/330px-Governador_do_Estado_de_S%C3%A3o_Paulo%2C_Tarc%C3%ADsio_de_Freitas_-_Foto_Oficial_%28cropped%29.jpg",
     "education": "Engenharia Civil (Instituto Militar de Engenharia - IME), Pós-Graduado em Gerenciamento de Projetos (FGV)",
     "careerHistory": "Oficial de Engenharia do Exército, Diretor-Geral do DNIT (2011-2015), Ministro da Infraestrutura (2019-2022), Governador do Estado de São Paulo (2023-atual).",
     "aiSummary": "Governador de São Paulo e engenheiro militar com perfil de alta capacidade de entrega em infraestrutura. Responsável pelo maior pacote de leilões e concessões rodoviárias, ferroviárias e de saneamento do país (destaque para a desestatização da Sabesp).",
@@ -416,7 +413,7 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "age": 68,
     "publicLifeYears": 42,
     "timesElected": 6,
-    "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Ciro_Gomes_2022.jpg/480px-Ciro_Gomes_2022.jpg",
+    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Presidente_Ciro_Gomes.png/330px-Presidente_Ciro_Gomes.png",
     "education": "Direito (Universidade Federal do Ceará - UFC) • Professor Visitante da Harvard Law School",
     "careerHistory": "Prefeito de Fortaleza (1989-1990), Governador do Ceará (1991-1994), Ministro da Fazenda (1994-1995, Plano Real), Ministro da Integração Nacional (2003-2006, Transposição do São Francisco), Deputado Federal (2007-2011).",
     "aiSummary": "Economista e jurista, proponente do Projeto Nacional de Desenvolvimento (PND). Reconhecido pela formulação de reformas estruturantes em educação básica (modelo de Sobral replicado nacionalmente) e industrialização de base tecnológica.",
@@ -547,7 +544,7 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "age": 55,
     "publicLifeYears": 24,
     "timesElected": 4,
-    "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Simone_Tebet_foto_oficial.jpg/480px-Simone_Tebet_foto_oficial.jpg",
+    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/2024-08-28_Audi%C3%AAncia_entre_as_Ministras_Simone_Tebet_e_Luciana_Santos%2C_10_%28cropped%29.jpg/330px-2024-08-28_Audi%C3%AAncia_entre_as_Ministras_Simone_Tebet_e_Luciana_Santos%2C_10_%28cropped%29.jpg",
     "education": "Direito (Universidade Federal do Rio de Janeiro - UFRJ), Mestrado em Direito Constitucional (PUC-SP)",
     "careerHistory": "Deputada Estadual (2003-2004), Prefeita de Três Lagoas por 2 mandatos (2005-2010), Vice-Governadora de MS (2011-2014), Senadora da República (2015-2023), Ministra do Planejamento e Orçamento (2023-atual).",
     "aiSummary": "Ministra do Planejamento e Orçamento e 3ª colocada na corrida presidencial de 2022. Liderou a bancada feminina no Senado Federal, com forte reputação em responsabilidade fiscal, planejamento orçamentário transparente e rotas de integração sul-americana.",
@@ -678,7 +675,7 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "age": 60,
     "publicLifeYears": 8,
     "timesElected": 2,
-    "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Romeu_Zema_em_2023.jpg/480px-Romeu_Zema_em_2023.jpg",
+    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Romeu_Zema%2C_December_2024_%28cropped%29.jpg/330px-Romeu_Zema%2C_December_2024_%28cropped%29.jpg",
     "education": "Administração de Empresas (Fundação Getulio Vargas - FGV)",
     "careerHistory": "Empresário do Grupo Zema por 30 anos, Governador de Minas Gerais reeleito no 1º turno (2019-atual).",
     "aiSummary": "Governador de Minas Gerais com forte apelo em gestão austera, corte de cargos comissionados, atração recorde de investimentos privados (mais de R$ 350 bilhões) e equilíbrio fiscal das contas públicas estaduais.",
@@ -809,7 +806,7 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "age": 76,
     "publicLifeYears": 40,
     "timesElected": 7,
-    "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Ronaldo_Caiado_foto_oficial.jpg/480px-Ronaldo_Caiado_foto_oficial.jpg",
+    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Foto_oficial_do_governador_de_Goi%C3%A1s%2C_Ronaldo_Caiado_em_2023_%28ombros%29.jpg/330px-Foto_oficial_do_governador_de_Goi%C3%A1s%2C_Ronaldo_Caiado_em_2023_%28ombros%29.jpg",
     "education": "Medicina (Universidade Federal do Rio de Janeiro - UFRJ), Especialização em Cirurgia da Coluna Vertebral em Paris",
     "careerHistory": "Fundador da UDR, Deputado Federal por 5 mandatos (1991-2014), Senador da República (2015-2018), Governador de Goiás reeleito no 1º turno (2019-atual).",
     "aiSummary": "Governador de Goiás e médico cirurgião, pré-candidato declarado à Presidência. Notabilizado pelos mais altos índices de aprovação estadual do país, com destaque para a liderança em segurança pública (tolerância zero ao crime organizado) e melhor nota do Brasil no IDEB.",
@@ -1598,7 +1595,7 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "age": 41,
     "publicLifeYears": 20,
     "timesElected": 3,
-    "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Eduardo_Leite_foto_oficial.jpg/480px-Eduardo_Leite_foto_oficial.jpg",
+    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/09.02.2026_%E2%80%93_Eduardo_Leite_in_February_2026_-_55087496770_%283x4%29.jpg/330px-09.02.2026_%E2%80%93_Eduardo_Leite_in_February_2026_-_55087496770_%283x4%29.jpg",
     "education": "Direito (UFPEL), Mestrado em Gestão Pública (Columbia University)",
     "careerHistory": "Vereador de Pelotas (2009-2012), Prefeito de Pelotas (2013-2016), Governador do Rio Grande do Sul reeleito (2019-2022 e 2023-atual).",
     "aiSummary": "Governador do Rio Grande do Sul e primeiro reeleito da história do estado. Liderou a reconstrução do estado após as enchentes históricas de 2024 (Plano Rio Grande), além de reformas estruturais na previdência estadual e privatização de estatais deficitárias.",
@@ -1729,7 +1726,7 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "age": 46,
     "publicLifeYears": 24,
     "timesElected": 5,
-    "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Helder_Barbalho_2023.jpg/480px-Helder_Barbalho_2023.jpg",
+    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Helder_Barbalho%2C_January_2023_%28cropped%29.jpg/330px-Helder_Barbalho%2C_January_2023_%28cropped%29.jpg",
     "education": "Administração de Empresas (UNAMA), Pós-Graduado em Gestão Pública",
     "careerHistory": "Vereador de Ananindeua (2001-2003), Deputado Estadual (2003-2005), Prefeito de Ananindeua por 2 mandatos (2005-2012), Ministro da Integração Nacional (2016-2018), Governador do Pará reeleito com 70% dos votos (2019-atual).",
     "aiSummary": "Governador do Pará reeleito com a maior votação proporcional do país (70%). Líder do Consórcio Amazônia Legal e anfitrião da Conferência Mundial do Clima da ONU (COP30 em Belém, 2025), notabilizado por conciliar bioeconomia, saneamento e presença do Estado nas calhas dos rios.",
@@ -1860,7 +1857,7 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "age": 46,
     "publicLifeYears": 14,
     "timesElected": 2,
-    "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Claudio_Castro_2022.jpg/480px-Claudio_Castro_2022.jpg",
+    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Claudio_Castro_como_Vice_Governador_do_Rio_de_Janeiro.jpg/330px-Claudio_Castro_como_Vice_Governador_do_Rio_de_Janeiro.jpg",
     "education": "Direito (Universidade Federal do Rio de Janeiro - UFRJ)",
     "careerHistory": "Chefe de Gabinete parlamentar, Vereador da Cidade do Rio de Janeiro (2017-2018), Vice-Governador do RJ (2019-2021), Governador reeleito em 1º turno (2021-atual).",
     "aiSummary": "Governador do Estado do Rio de Janeiro reeleito no 1º turno em 2022. Conduziu o maior leilão de saneamento da história do país (Cedae), com aporte bilionário para investimentos municipais, além do programa Segurança Presente em dezenas de bairros e municípios.",
@@ -1991,7 +1988,7 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "age": 57,
     "publicLifeYears": 14,
     "timesElected": 3,
-    "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Ricardo_Nunes_2022.jpg/480px-Ricardo_Nunes_2022.jpg",
+    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Reuni%C3%A3o_com_o_Senhor_Ricardo_Nunes%2C_Prefeito_do_Munic%C3%ADpio_de_S%C3%A3o_Paulo_e_Secret%C3%A1rios_%28cropped%29.jpg/330px-Reuni%C3%A3o_com_o_Senhor_Ricardo_Nunes%2C_Prefeito_do_Munic%C3%ADpio_de_S%C3%A3o_Paulo_e_Secret%C3%A1rios_%28cropped%29.jpg",
     "education": "Direito (Universidade Santo Amaro - UNISA)",
     "careerHistory": "Empresário do setor de eventos, Vereador de São Paulo por 2 mandatos (2013-2020), Vice-Prefeito de Bruno Covas (2021), Prefeito da Cidade de São Paulo (2021-atual, reeleito em 2024).",
     "aiSummary": "Prefeito da maior metrópole da América Latina reeleito com ampla coalizão política em 2024. Gestão caracterizada pelo recorde de caixa público municipal (R$ 35 bilhões em investimentos), Tarifa Zero aos domingos no transporte público, recapeamento massivo e expansão das vagas de creche.",
@@ -2122,7 +2119,7 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "age": 56,
     "publicLifeYears": 32,
     "timesElected": 4,
-    "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Eduardo_Paes_2021.jpg/480px-Eduardo_Paes_2021.jpg",
+    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Eduardo_Paes%2C_October_2024.jpg/330px-Eduardo_Paes%2C_October_2024.jpg",
     "education": "Direito (Pontifícia Universidade Católica do Rio de Janeiro - PUC-Rio)",
     "careerHistory": "Subprefeito da Barra e Jacarepaguá (1993-1996), Deputado Federal por 2 mandatos (1999-2007), Secretário Estadual de Turismo, Prefeito do Rio por 4 mandatos (2009-2016 e 2021-atual, reeleito em 2024 no 1º turno).",
     "aiSummary": "Prefeito do Rio de Janeiro reeleito no 1º turno em 2024 para seu 4º mandato. Líder da transformação olímpica da cidade (Parque Olímpico, VLT Carioca, Transolímpica), revitalização do Porto Maravilha e recuperação das finanças municipais.",
@@ -2253,7 +2250,7 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "age": 32,
     "publicLifeYears": 8,
     "timesElected": 3,
-    "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Jo%C3%A3o_Campos_2024.jpg/480px-Jo%C3%A3o_Campos_2024.jpg",
+    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Jo%C3%A3o_Campos_em_2_de_julho_de_2024%2C_por_Ricardo_Stuckert_%28rotation_%29.jpg/330px-Jo%C3%A3o_Campos_em_2_de_julho_de_2024%2C_por_Ricardo_Stuckert_%28rotation_%29.jpg",
     "education": "Engenharia Civil (Universidade Federal de Pernambuco - UFPE)",
     "careerHistory": "Deputado Federal mais votado de Pernambuco (2019-2020), Prefeito do Recife eleito em 2020 e reeleito em 2024 com recorde histórico de 78,1% dos votos.",
     "aiSummary": "Prefeito do Recife e engenheiro civil, reeleito em 2024 com a maior votação percentual entre todas as capitais do Brasil (78,1%). Reconhecido pela gestão inovadora em tecnologia cívica (Conecta Recife, Embarque Digital), urbanismo social com os COMPAZ e macrodrenagem de morros.",
@@ -2384,7 +2381,7 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "age": 78,
     "publicLifeYears": 48,
     "timesElected": 2,
-    "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Fuad_Noman_2022.jpg/480px-Fuad_Noman_2022.jpg",
+    "avatar": "https://upload.wikimedia.org/wikipedia/commons/9/97/2024_FUAD_NOMAN_CANDIDATO_PREFEITO_MG_BELO_HORIZONTE_TSE_%28130001975610%29.jpg",
     "education": "Ciências Econômicas (Centro de Ensino Unificado de Brasília - CEUB)",
     "careerHistory": "Economista de carreira do Banco Central, Secretário de Fazenda de MG (2003-2007), Ministro interino da Fazenda, Prefeito de Belo Horizonte (2022-atual, reeleito em 2024).",
     "aiSummary": "Prefeito de Belo Horizonte reeleito em 2024, economista sênior com vasta experiência em gestão pública e equilíbrio orçamentário. Foco em obras antienchentes históricas (bacias de contenção na Vilarinho), recapeamento viário e saúde básica nos centros de saúde.",
@@ -2515,7 +2512,7 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "age": 48,
     "publicLifeYears": 24,
     "timesElected": 4,
-    "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Bruno_Reis_2021.jpg/480px-Bruno_Reis_2021.jpg",
+    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Bruno_Reis_%28foto_oficial_para_o_TSE%29.png/330px-Bruno_Reis_%28foto_oficial_para_o_TSE%29.png",
     "education": "Direito (Universidade Católica do Salvador - UCSal), Especialização em Gestão Pública (FGV)",
     "careerHistory": "Deputado Estadual por 2 mandatos (2011-2016), Vice-Prefeito de ACM Neto (2017-2020), Prefeito de Salvador (2021-atual, reeleito em 2024 com 78,6% dos votos no 1º turno).",
     "aiSummary": "Prefeito de Salvador reeleito com uma das maiores votações do Brasil em 2024 (78,6%). Notabilizado pela gestão fiscal sólida com nota Capag A do Tesouro Nacional, implantação do BRT de Salvador, requalificação da orla e liderança na geração de empregos no setor de turismo e serviços.",
@@ -2636,6 +2633,4 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
   }
 ];
 
-module.exports = {
-  EXECUTIVE_AND_SENATE_POLITICIANS
-};
+module.exports = { EXECUTIVE_AND_SENATE_POLITICIANS };

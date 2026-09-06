@@ -7,6 +7,7 @@
   
   <meta name="description" content="Auditoria completa, gastos da cota parlamentar (CEAP), presença em plenário e propostas do candidato auditadas pelo Raio-X Político.">
   <meta name="robots" content="index, follow">
+  <meta name="referrer" content="no-referrer">
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -107,7 +108,7 @@
         <div class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 shadow-sm space-y-4">
           
           <div class="flex items-start gap-4">
-            <img id="cand-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=faces" alt="Candidato" class="w-20 h-20 rounded-2xl object-cover border-2 border-sky-500 dark:border-cyan-500/50 shadow-md flex-shrink-0">
+            <img id="cand-avatar" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=' + encodeURIComponent(document.getElementById('cand-name')?.innerText || 'Candidato') + '&background=0284c7&color=fff&bold=true&size=160';" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=faces" alt="Candidato" class="w-20 h-20 rounded-2xl object-cover border-2 border-sky-500 dark:border-cyan-500/50 shadow-md flex-shrink-0 bg-slate-100 dark:bg-slate-800">
             <div class="min-w-0 space-y-1">
               <h1 id="cand-name" class="text-xl font-black text-slate-900 dark:text-white leading-tight">Eduardo Rocha</h1>
               <div class="flex flex-wrap items-center gap-1.5">

@@ -11,6 +11,7 @@
   <meta name="robots" content="index, follow">
   <meta name="author" content="Raio-X Político - Observatório Cívico Independente">
   <link rel="canonical" href="https://raioxpolitico.org/">
+  <meta name="referrer" content="no-referrer">
 
   <!-- Open Graph (WhatsApp, Facebook, Telegram, LinkedIn) -->
   <meta property="og:type" content="website">
@@ -7130,12 +7131,29 @@
         card.className = 'glass-card rounded-2xl p-5 flex flex-col justify-between space-y-4';
         
         const isExec = cand.position && (cand.position.includes('Presidente') || cand.position.includes('Governador') || cand.position.includes('Prefeito'));
+        const isPresident = cand.position && cand.position.includes('Presidente');
         const powerBadge = isExec
-          ? `<span class="px-2 py-0.5 rounded text-[9.5px] font-bold bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-500/30 inline-flex items-center gap-1">🏛️ Executivo</span>`
-          : `<span class="px-2 py-0.5 rounded text-[9.5px] font-bold bg-indigo-100 dark:bg-indigo-500/20 text-indigo-800 dark:text-indigo-300 border border-indigo-300 dark:border-indigo-500/30 inline-flex items-center gap-1">⚖️ Legislativo</span>`;
+          ? `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-500/30 inline-flex items-center gap-1"><i data-lucide="landmark" class="w-3 h-3 text-amber-600 dark:text-amber-400"></i> Executivo</span>`
+          : `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-indigo-100 dark:bg-indigo-500/20 text-indigo-800 dark:text-indigo-300 border border-indigo-300 dark:border-indigo-500/30 inline-flex items-center gap-1"><i data-lucide="scale" class="w-3 h-3 text-indigo-600 dark:text-indigo-400"></i> Legislativo</span>`;
         
         const fiscalLabel = isExec ? 'Meta Fiscal' : 'Gasto CEAP';
-        const fiscalValue = isExec ? '100% TCU' : `${cand.salary?.spendingPercentage || 75}% teto`;
+        const fiscalValue = isExec ? (isPresident ? '100% TCU' : '100% TCE') : `${cand.salary?.spendingPercentage || 75}% teto`;
+        const attendanceLabel = isExec ? 'Gestão' : 'Presença';
+        const attendanceValue = isExec ? `${cand.attendance?.ratePct || 98}% Metas` : `${cand.attendance?.ratePct || 94}%`;
+
+        const displayName = cand.ballotName || cand.name;
+        const subtitleName = (cand.ballotName && cand.ballotName !== cand.name) 
+          ? `<p class="text-[11px] text-slate-400 dark:text-slate-500 truncate leading-tight">${cand.name}</p>` 
+          : '';
+
+        const mandateSalaryLabel = isExec ? 'Subsídio Mensal do Cargo:' : 'Cota CEAP Média / mês:';
+        const mandateSalaryValue = cand.salary?.spendingCeapMonthly || (isExec ? 'R$ 35.800,00' : 'R$ 34.200,00');
+        const roiBudgetSnippet = (isExec && cand.salary?.civicConversion?.roiText) ? `
+          <div class="text-[9.5px] text-slate-500 dark:text-slate-400 flex items-center justify-between border-t border-amber-500/15 dark:border-amber-500/20 pt-1">
+            <span class="flex items-center gap-1"><i data-lucide="landmark" class="w-3 h-3 text-sky-600 dark:text-cyan-400"></i> Orçamento Sob Gestão:</span>
+            <span class="font-semibold text-slate-700 dark:text-slate-300 truncate max-w-[190px]">${cand.salary.civicConversion.roiText.replace('Gestão de ', '')}</span>
+          </div>
+        ` : '';
 
         // Proposals snippet (3 items)
         const proposalsSnippet = (cand.proposals || []).slice(0, 3).map((p, idx) => `
@@ -7149,7 +7167,13 @@
           <div>
             <!-- Header: Photo + Core Info -->
             <div class="flex items-start gap-3.5">
-              <img src="${cand.avatar}" alt="${cand.name}" class="w-16 h-16 rounded-2xl object-cover border-2 border-sky-500/40 dark:border-cyan-500/30 shadow-md flex-shrink-0">
+              <img 
+                src="${cand.avatar}" 
+                alt="${displayName}" 
+                referrerpolicy="no-referrer"
+                onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(displayName)}&background=0284c7&color=fff&bold=true&size=128';"
+                class="w-16 h-16 rounded-2xl object-cover border-2 border-sky-500/40 dark:border-cyan-500/30 shadow-md flex-shrink-0 bg-slate-100 dark:bg-slate-800"
+              >
               <div class="flex-1 min-w-0">
                 <div class="flex items-center justify-between gap-1 flex-wrap">
                   <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-sky-100 dark:bg-cyan-500/20 text-sky-800 dark:text-cyan-300 border border-sky-300 dark:border-cyan-500/30">
@@ -7157,8 +7181,9 @@
                   </span>
                   ${powerBadge}
                 </div>
-                <h3 class="font-extrabold text-base text-slate-900 dark:text-white mt-1 truncate">${cand.name}</h3>
-                <p class="text-xs text-slate-500 dark:text-slate-400 truncate">${cand.position} • ${cand.state} • ${cand.age} anos</p>
+                <h3 class="font-extrabold text-base text-slate-900 dark:text-white mt-1 leading-snug truncate" title="${cand.name}">${displayName}</h3>
+                ${subtitleName}
+                <p class="text-xs text-slate-500 dark:text-slate-400 truncate mt-0.5">${cand.position} • ${cand.state} • ${cand.age} anos</p>
                 
                 <!-- Party Affiliation + Election Date Pills -->
                 <div class="flex flex-wrap items-center gap-1.5 mt-2 text-[10px]">
@@ -7179,8 +7204,8 @@
                 <span class="text-xs font-black text-emerald-600 dark:text-emerald-400">${cand.radar?.integridade || 90}/100</span>
               </div>
               <div class="p-2 bg-slate-50 dark:bg-slate-850 rounded-xl border border-slate-200 dark:border-white/5">
-                <span class="text-[9px] uppercase tracking-wider text-slate-500 dark:text-slate-400 block">Presença</span>
-                <span class="text-xs font-black text-purple-600 dark:text-purple-400">${cand.attendance?.ratePct || 94}%</span>
+                <span class="text-[9px] uppercase tracking-wider text-slate-500 dark:text-slate-400 block">${attendanceLabel}</span>
+                <span class="text-xs font-black text-purple-600 dark:text-purple-400">${attendanceValue}</span>
               </div>
               <div class="p-2 bg-slate-50 dark:bg-slate-850 rounded-xl border border-slate-200 dark:border-white/5">
                 <span class="text-[9px] uppercase tracking-wider text-slate-500 dark:text-slate-400 block">${fiscalLabel}</span>
@@ -7198,9 +7223,10 @@
                 <span class="font-black text-amber-700 dark:text-amber-400 font-mono text-[11px]">${cand.salary?.civicConversion?.costPerMinute || cand.salary?.costPerMinute || 'R$ 0,51 / min'}</span>
               </div>
               <div class="text-[10px] text-slate-600 dark:text-slate-400 flex items-center justify-between border-t border-amber-500/15 dark:border-amber-500/20 pt-1.5">
-                <span class="flex items-center gap-1"><i data-lucide="calculator" class="w-3 h-3 text-emerald-600 dark:text-emerald-400"></i> ${isExec ? 'Orçamento Anual:' : 'Gasto Anual:'}</span>
-                <strong class="text-emerald-700 dark:text-emerald-400 font-extrabold">${cand.salary?.spendingCeapMonthly || 'Auditado pelo TCU'}</strong>
+                <span class="flex items-center gap-1"><i data-lucide="wallet" class="w-3 h-3 text-emerald-600 dark:text-emerald-400"></i> ${mandateSalaryLabel}</span>
+                <strong class="text-emerald-700 dark:text-emerald-400 font-extrabold">${mandateSalaryValue}</strong>
               </div>
+              ${roiBudgetSnippet}
             </div>
 
             <!-- 3 Main Proposals Card -->
