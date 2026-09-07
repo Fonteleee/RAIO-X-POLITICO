@@ -135,7 +135,7 @@
       // Side by Side Table Breakdown
       const breakdown = document.getElementById('comparison-breakdown');
       breakdown.innerHTML = `
-        <div class="bg-slate-50 dark:bg-slate-850 p-4 rounded-2xl border border-slate-200 dark:border-white/5 space-y-3 text-xs">
+        <div class="bg-slate-50 dark:bg-slate-800/90 p-4 rounded-2xl border border-slate-200 dark:border-white/5 space-y-3 text-xs">
           <h4 class="font-bold text-slate-900 dark:text-white text-sm border-b border-slate-200 dark:border-white/10 pb-2 flex items-center justify-between">
             <span>Métrica de Comparação</span>
             <span class="text-amber-700 dark:text-amber-400 font-bold">${cand1.name.split(' ')[0]}</span>
@@ -234,7 +234,7 @@
         </div>
 
         <!-- DUELO NO ÚLTIMO DEBATE OFICIAL (CONFRONTO DIRETO) -->
-        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-white/10 space-y-4">
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/90 border border-slate-200 dark:border-white/10 space-y-4">
           <div class="flex items-center justify-between border-b border-slate-200 dark:border-white/10 pb-3">
             <div class="flex items-center gap-2">
               <span class="w-3 h-3 rounded-full bg-rose-500 animate-pulse"></span>

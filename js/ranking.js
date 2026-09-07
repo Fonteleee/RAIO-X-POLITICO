@@ -173,7 +173,7 @@
               </div>
             </div>
 
-            <div class="grid grid-cols-2 gap-2 text-[11px] bg-slate-50 dark:bg-slate-850 p-2.5 rounded-xl border border-slate-200 dark:border-white/5">
+            <div class="grid grid-cols-2 gap-2 text-[11px] bg-slate-50 dark:bg-slate-800/90 p-2.5 rounded-xl border border-slate-200 dark:border-white/5">
               <div>
                 <span class="text-slate-400 block text-[9px] uppercase font-bold">Presença:</span>
                 <strong class="text-slate-800 dark:text-slate-200 font-bold">${cand.attendance.ratePct}% (${cand.attendance.presentCount} sessões)</strong>
@@ -333,8 +333,8 @@
 
         // Proposals snippet (3 items)
         const proposalsSnippet = (cand.proposals || []).slice(0, 3).map((p, idx) => `
-          <div class="flex items-start gap-2 text-xs text-slate-700 dark:text-slate-300">
-            <span class="w-4 h-4 rounded-full bg-sky-100 dark:bg-cyan-500/20 text-sky-800 dark:text-cyan-400 font-bold text-[10px] flex items-center justify-center flex-shrink-0 mt-0.5">${idx + 1}</span>
+          <div class="flex items-start gap-2 text-xs text-slate-800 dark:text-slate-200 font-medium">
+            <span class="w-4 h-4 rounded-full bg-sky-200 dark:bg-cyan-500/30 text-sky-900 dark:text-cyan-200 font-black text-[10px] flex items-center justify-center flex-shrink-0 mt-0.5">${idx + 1}</span>
             <span class="line-clamp-1">${p.title}</span>
           </div>
         `).join('');
@@ -375,42 +375,42 @@
             </div>
 
             <!-- Mini Indicators Bento -->
-            <div class="grid grid-cols-3 gap-2 my-3 pt-3 border-t border-slate-200 dark:border-white/5 text-center">
-              <div class="p-2 bg-slate-50 dark:bg-slate-850 rounded-xl border border-slate-200 dark:border-white/5">
-                <span class="text-[9px] uppercase tracking-wider text-slate-500 dark:text-slate-400 block">Integridade</span>
-                <span class="text-xs font-black text-emerald-600 dark:text-emerald-400">${cand.radar?.integridade || 90}/100</span>
+            <div class="grid grid-cols-3 gap-2 my-3 pt-3 border-t border-slate-200 dark:border-white/10 text-center">
+              <div class="p-2 bg-slate-100/90 dark:bg-slate-800/90 rounded-xl border border-slate-200/80 dark:border-white/10 shadow-xs">
+                <span class="text-[9px] uppercase tracking-wider font-bold text-slate-600 dark:text-slate-400 block">Integridade</span>
+                <span class="text-xs font-black text-emerald-700 dark:text-emerald-400">${cand.radar?.integridade || 90}/100</span>
               </div>
-              <div class="p-2 bg-slate-50 dark:bg-slate-850 rounded-xl border border-slate-200 dark:border-white/5">
-                <span class="text-[9px] uppercase tracking-wider text-slate-500 dark:text-slate-400 block">${attendanceLabel}</span>
-                <span class="text-xs font-black text-purple-600 dark:text-purple-400">${attendanceValue}</span>
+              <div class="p-2 bg-slate-100/90 dark:bg-slate-800/90 rounded-xl border border-slate-200/80 dark:border-white/10 shadow-xs">
+                <span class="text-[9px] uppercase tracking-wider font-bold text-slate-600 dark:text-slate-400 block">${attendanceLabel}</span>
+                <span class="text-xs font-black text-purple-700 dark:text-purple-400">${attendanceValue}</span>
               </div>
-              <div class="p-2 bg-slate-50 dark:bg-slate-850 rounded-xl border border-slate-200 dark:border-white/5">
-                <span class="text-[9px] uppercase tracking-wider text-slate-500 dark:text-slate-400 block">${fiscalLabel}</span>
-                <span class="text-xs font-black text-amber-600 dark:text-amber-400">${fiscalValue}</span>
+              <div class="p-2 bg-slate-100/90 dark:bg-slate-800/90 rounded-xl border border-slate-200/80 dark:border-white/10 shadow-xs">
+                <span class="text-[9px] uppercase tracking-wider font-bold text-slate-600 dark:text-slate-400 block">${fiscalLabel}</span>
+                <span class="text-xs font-black text-amber-700 dark:text-amber-400">${fiscalValue}</span>
               </div>
             </div>
 
             <!-- Civic Mandate Cost Highlight (Custo aos Cofres & Equivalência Social) -->
-            <div class="p-2.5 rounded-xl bg-gradient-to-r from-amber-500/10 via-amber-500/5 to-emerald-500/10 dark:from-amber-500/15 dark:to-emerald-500/15 border border-amber-500/20 dark:border-amber-500/30 space-y-1.5 my-2.5 shadow-sm text-xs">
+            <div class="p-2.5 rounded-xl bg-amber-500/10 dark:bg-amber-950/25 border border-amber-500/30 dark:border-amber-500/40 space-y-1.5 my-2.5 shadow-xs text-xs">
               <div class="flex items-center justify-between">
-                <div class="flex items-center gap-1.5 font-extrabold text-amber-900 dark:text-amber-300 text-[11px]">
+                <div class="flex items-center gap-1.5 font-extrabold text-amber-950 dark:text-amber-300 text-[11px]">
                   <i data-lucide="timer" class="w-3.5 h-3.5 text-amber-600 dark:text-amber-400"></i>
                   <span>Custo aos Cofres Públicos:</span>
                 </div>
-                <span class="font-black text-amber-700 dark:text-amber-400 font-mono text-[11px]">${cand.salary?.civicConversion?.costPerMinute || cand.salary?.costPerMinute || 'R$ 0,51 / min'}</span>
+                <span class="font-black text-amber-800 dark:text-amber-300 font-mono text-[11px]">${cand.salary?.civicConversion?.costPerMinute || cand.salary?.costPerMinute || 'R$ 0,51 / min'}</span>
               </div>
-              <div class="text-[10px] text-slate-600 dark:text-slate-400 flex items-center justify-between border-t border-amber-500/15 dark:border-amber-500/20 pt-1.5">
-                <span class="flex items-center gap-1"><i data-lucide="wallet" class="w-3 h-3 text-emerald-600 dark:text-emerald-400"></i> ${mandateSalaryLabel}</span>
-                <strong class="text-emerald-700 dark:text-emerald-400 font-extrabold">${mandateSalaryValue}</strong>
+              <div class="text-[10px] text-slate-700 dark:text-slate-300 flex items-center justify-between border-t border-amber-500/20 dark:border-amber-500/30 pt-1.5">
+                <span class="flex items-center gap-1 font-medium"><i data-lucide="wallet" class="w-3 h-3 text-emerald-600 dark:text-emerald-400"></i> ${mandateSalaryLabel}</span>
+                <strong class="text-emerald-800 dark:text-emerald-300 font-black">${mandateSalaryValue}</strong>
               </div>
               ${roiBudgetSnippet}
             </div>
 
             <!-- 3 Main Proposals Card -->
-            <div class="p-3 bg-slate-50 dark:bg-slate-850/80 rounded-xl border border-slate-200 dark:border-white/5 space-y-2">
-              <div class="flex items-center justify-between text-[11px] font-bold text-slate-800 dark:text-slate-300">
+            <div class="p-3 bg-slate-100/90 dark:bg-slate-800/80 rounded-xl border border-slate-200/80 dark:border-white/10 space-y-2 shadow-xs">
+              <div class="flex items-center justify-between text-[11px] font-extrabold text-slate-900 dark:text-white">
                 <span class="flex items-center gap-1.5"><i data-lucide="scroll-text" class="w-3.5 h-3.5 text-sky-600 dark:text-cyan-400"></i> 3 Principais Propostas</span>
-                <button onclick="openDossie('${cand.id}', 'propostas-tse')" class="text-sky-700 dark:text-cyan-400 hover:underline text-[10px]">Ver todas (${cand.proposals ? cand.proposals.length : 3})</button>
+                <button onclick="openDossie('${cand.id}', 'propostas-tse')" class="text-sky-700 dark:text-cyan-400 hover:underline font-bold text-[10px]">Ver todas (${cand.proposals ? cand.proposals.length : 3})</button>
               </div>
               <div class="space-y-1.5">
                 ${proposalsSnippet}

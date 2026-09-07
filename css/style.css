@@ -95,3 +95,21 @@
       max-width: 440px;
       margin: 0 auto;
     }
+
+/* Hardened Dark Mode Card & Panel Overrides */
+html.dark .glass-card {
+  background-color: #0f172a !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  color: #f1f5f9 !important;
+}
+
+html.dark .glass-panel {
+  background-color: rgba(15, 23, 42, 0.95) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  color: #f1f5f9 !important;
+}
+
+html.dark body {
+  background-color: #090d16 !important;
+  color: #f1f5f9 !important;
+}

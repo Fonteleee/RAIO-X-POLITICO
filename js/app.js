@@ -167,7 +167,7 @@
         if (btn.innerText.trim().toLowerCase() === category.toLowerCase()) {
           btn.className = 'prop-filter-btn active px-3 py-1 rounded-lg bg-sky-600 text-white font-bold transition';
         } else {
-          btn.className = 'prop-filter-btn px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-850 text-slate-700 dark:text-slate-300 font-medium hover:bg-slate-200 dark:hover:bg-slate-800 transition';
+          btn.className = 'prop-filter-btn px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-800/90 text-slate-700 dark:text-slate-300 font-medium hover:bg-slate-200 dark:hover:bg-slate-800 transition';
         }
       });
       renderFilteredDossieProposals(activeDossieCandidate, category, activeProposalStatus);
@@ -179,7 +179,7 @@
         if (btn.getAttribute('data-status') === status) {
           btn.className = 'prop-status-filter-btn active px-3 py-1 rounded-lg bg-purple-600 text-white font-bold text-xs transition';
         } else {
-          btn.className = 'prop-status-filter-btn px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-850 text-slate-700 dark:text-slate-300 font-medium text-xs hover:bg-slate-200 dark:hover:bg-slate-800 transition';
+          btn.className = 'prop-status-filter-btn px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-800/90 text-slate-700 dark:text-slate-300 font-medium text-xs hover:bg-slate-200 dark:hover:bg-slate-800 transition';
         }
       });
       renderFilteredDossieProposals(activeDossieCandidate, activeProposalCategory, status);
@@ -255,7 +255,7 @@
       }
 
       if (filtered.length === 0) {
-        list.innerHTML = `<div class="p-6 text-center text-xs text-slate-500 bg-slate-50 dark:bg-slate-850 rounded-2xl border border-slate-200 dark:border-white/5">Nenhuma proposta encontrada com esses filtros no plano oficial registrado no TSE.</div>`;
+        list.innerHTML = `<div class="p-6 text-center text-xs text-slate-500 bg-slate-50 dark:bg-slate-800/90 rounded-2xl border border-slate-200 dark:border-white/5">Nenhuma proposta encontrada com esses filtros no plano oficial registrado no TSE.</div>`;
         return;
       }
 
@@ -270,7 +270,7 @@
           : 'bg-sky-100 dark:bg-cyan-500/20 text-sky-800 dark:text-cyan-300 border-sky-300 dark:border-cyan-500/30';
 
         return `
-          <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-white/5 space-y-3.5 hover:border-sky-400/50 transition">
+          <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/90 border border-slate-200 dark:border-white/5 space-y-3.5 hover:border-sky-400/50 transition">
             
             <!-- Category, Status and Score Bar -->
             <div class="flex flex-wrap items-center justify-between gap-2">

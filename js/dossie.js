@@ -150,7 +150,7 @@
         procList.innerHTML = `<div class="p-3 bg-emerald-50 dark:bg-emerald-500/10 rounded-xl border border-emerald-300 dark:border-emerald-500/20 text-emerald-800 dark:text-emerald-300 text-xs">✓ Nenhuma ação penal ou por improbidade em curso encontrada nos tribunais oficiais.</div>`;
       } else {
         procList.innerHTML = cand.ethics.processes.map(p => `
-          <div class="p-4 bg-slate-50 dark:bg-slate-850 rounded-2xl border border-slate-200 dark:border-white/5 space-y-2 text-xs">
+          <div class="p-4 bg-slate-50 dark:bg-slate-800/90 rounded-2xl border border-slate-200 dark:border-white/5 space-y-2 text-xs">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 border-b border-slate-200 dark:border-white/10 pb-2">
               <div>
                 <span class="font-black text-slate-900 dark:text-white">${p.court}</span>
@@ -209,12 +209,12 @@
       document.querySelectorAll('.prop-filter-btn').forEach((btn, idx) => {
         btn.className = idx === 0 
           ? 'prop-filter-btn active px-3 py-1 rounded-lg bg-sky-600 text-white font-bold transition'
-          : 'prop-filter-btn px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-850 text-slate-700 dark:text-slate-300 font-medium hover:bg-slate-200 dark:hover:bg-slate-800 transition';
+          : 'prop-filter-btn px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-800/90 text-slate-700 dark:text-slate-300 font-medium hover:bg-slate-200 dark:hover:bg-slate-800 transition';
       });
       document.querySelectorAll('.prop-status-filter-btn').forEach((btn, idx) => {
         btn.className = idx === 0 
           ? 'prop-status-filter-btn active px-3 py-1 rounded-lg bg-purple-600 text-white font-bold text-xs transition'
-          : 'prop-status-filter-btn px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-850 text-slate-700 dark:text-slate-300 font-medium text-xs hover:bg-slate-200 dark:hover:bg-slate-800 transition';
+          : 'prop-status-filter-btn px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-800/90 text-slate-700 dark:text-slate-300 font-medium text-xs hover:bg-slate-200 dark:hover:bg-slate-800 transition';
       });
       renderFilteredDossieProposals(cand, 'todas', 'todos');
 
@@ -261,7 +261,7 @@
 
       // Highlight Bills
       document.getElementById('dossie-pls-list').innerHTML = cand.bills.highlightList.map(pl => `
-        <div class="p-3 bg-slate-50 dark:bg-slate-850 rounded-xl border border-slate-200 dark:border-white/5 flex items-center justify-between text-xs">
+        <div class="p-3 bg-slate-50 dark:bg-slate-800/90 rounded-xl border border-slate-200 dark:border-white/5 flex items-center justify-between text-xs">
           <div class="flex items-center gap-2">
             <span class="w-6 h-6 rounded-lg bg-sky-100 dark:bg-cyan-500/20 text-sky-700 dark:text-cyan-400 flex items-center justify-center font-bold text-[10px]">
               ${pl.year || 'LEI'}
@@ -391,7 +391,7 @@
 
             <!-- Diagnosis vs Proposed Solution -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
-              <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-white/5 space-y-1">
+              <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/90 border border-slate-200 dark:border-white/5 space-y-1">
                 <span class="text-[10px] uppercase font-bold text-red-600 dark:text-red-400 flex items-center gap-1">
                   <i data-lucide="alert-octagon" class="w-3 h-3"></i> O Problema Real da População:
                 </span>
@@ -482,7 +482,7 @@
                 <span class="px-2.5 py-1 rounded-lg text-[10px] font-bold border ${v.riskClass}">${v.riskBadge}</span>
               </div>
             </div>
-            <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-white/5 text-[11px] text-slate-600 dark:text-slate-400 flex items-start gap-2">
+            <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/90 border border-slate-200 dark:border-white/5 text-[11px] text-slate-600 dark:text-slate-400 flex items-start gap-2">
               <i data-lucide="bot" class="w-3.5 h-3.5 text-purple-500 flex-shrink-0 mt-0.5"></i>
               <span><strong>Parecer de Inteligência Cívica:</strong> ${v.aiInsight}</span>
             </div>
@@ -883,7 +883,7 @@
       // General Statements with Speech Date
       if (factListContainer && cand.factChecking) {
         factListContainer.innerHTML = cand.factChecking.map(f => `
-          <div class="p-4 bg-slate-50 dark:bg-slate-850 rounded-2xl border border-slate-200 dark:border-white/5 space-y-2">
+          <div class="p-4 bg-slate-50 dark:bg-slate-800/90 rounded-2xl border border-slate-200 dark:border-white/5 space-y-2">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-200 dark:border-white/5 pb-2">
               <div class="flex items-center gap-2">
                 <span class="px-2 py-0.5 rounded-md bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 text-[10px] font-mono font-bold flex items-center gap-1">

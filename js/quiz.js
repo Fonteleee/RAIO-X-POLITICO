@@ -103,7 +103,7 @@
     function renderQuiz() {
       const container = document.getElementById('quiz-container');
       container.innerHTML = quizQuestions.map(q => `
-        <div class="p-4 bg-slate-50 dark:bg-slate-850 rounded-2xl border border-slate-200 dark:border-white/5 space-y-3">
+        <div class="p-4 bg-slate-50 dark:bg-slate-800/90 rounded-2xl border border-slate-200 dark:border-white/5 space-y-3">
           <h4 class="font-bold text-slate-900 dark:text-white text-sm">${q.title}</h4>
           <div class="space-y-2">
             ${q.options.map((opt, idx) => `
@@ -167,7 +167,7 @@
         const medal = idx === 0 ? '🥇 1º Lugar (Maior Afinidade)' : idx === 1 ? '🥈 2º Lugar' : '🥉 3º Lugar';
         const barColor = idx === 0 ? 'bg-emerald-500' : idx === 1 ? 'bg-sky-500' : 'bg-purple-500';
         return `
-          <div class="p-4 bg-white dark:bg-slate-850 rounded-2xl border ${idx === 0 ? 'border-emerald-500 dark:border-emerald-500/50 shadow-md shadow-emerald-500/10' : 'border-slate-200 dark:border-white/10'} space-y-3">
+          <div class="p-4 bg-white dark:bg-slate-800/90 rounded-2xl border ${idx === 0 ? 'border-emerald-500 dark:border-emerald-500/50 shadow-md shadow-emerald-500/10' : 'border-slate-200 dark:border-white/10'} space-y-3">
             <div class="flex items-center justify-between">
               <span class="text-[10px] font-extrabold uppercase tracking-wider text-slate-500 dark:text-slate-400">${medal}</span>
               <span class="text-base font-black ${idx === 0 ? 'text-emerald-600 dark:text-emerald-400' : 'text-sky-600 dark:text-cyan-400'}">${item.matchPct}% Match</span>

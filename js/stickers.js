@@ -15,7 +15,7 @@
               <p class="text-xs text-slate-500 dark:text-slate-400">${inc.office}</p>
             </div>
           </div>
-          <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed bg-slate-50 dark:bg-slate-850 p-3 rounded-xl border border-slate-200 dark:border-white/5">${inc.highlights}</p>
+          <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed bg-slate-50 dark:bg-slate-800/90 p-3 rounded-xl border border-slate-200 dark:border-white/5">${inc.highlights}</p>
           <div class="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 pt-2 border-t border-slate-200 dark:border-white/5">
             <span>Presença no Mandato:</span>
             <span class="text-emerald-600 dark:text-emerald-400 font-bold">${inc.attendance}</span>
