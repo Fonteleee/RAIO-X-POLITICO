@@ -26,14 +26,14 @@
         html.classList.add('dark');
         html.classList.remove('light');
         localStorage.setItem('civic_theme', 'dark');
-        themeIcon.setAttribute('data-lucide', 'sun');
-        themeText.innerText = 'Modo Claro';
+        if (themeIcon) themeIcon.setAttribute('data-lucide', 'sun');
+        if (themeText) themeText.innerText = 'Modo Claro';
       } else {
         html.classList.remove('dark');
         html.classList.add('light');
         localStorage.setItem('civic_theme', 'light');
-        themeIcon.setAttribute('data-lucide', 'moon');
-        themeText.innerText = 'Modo Escuro';
+        if (themeIcon) themeIcon.setAttribute('data-lucide', 'moon');
+        if (themeText) themeText.innerText = 'Modo Escuro';
       }
       lucide.createIcons();
 

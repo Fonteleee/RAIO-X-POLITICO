@@ -316,7 +316,6 @@ class AppDatabase {
         publicFundPct: cRow.publicFundPct,
         privateDonationsPct: cRow.privateDonationsPct,
         ownResourcesPct: cRow.ownResourcesPct,
-        crowdfundingPct: cRow.crowdfundingPct,
         topDonors: cRow.topDonorsJson ? JSON.parse(cRow.topDonorsJson) : [],
         topExpenses: cRow.topExpensesJson ? JSON.parse(cRow.topExpensesJson) : [],
         tseUrl: cRow.tseUrl || 'https://divulgacandcontas.tse.jus.br/'
@@ -324,6 +323,38 @@ class AppDatabase {
     } else {
       cand.campaignFinance = null;
     }
+
+    // Histórico Ético Aprofundado & Fórmula de Integridade
+    const ethicsStmt = this.db.prepare(`
+      SELECT clean_record_status as cleanRecordStatus, active_lawsuits_count as activeLawsuitsCount,
+             stf_stj_inquiries_count as stfStjInquiriesCount, tcu_tce_irregular_accounts as tcuTceIrregularAccounts,
+             dismissed_archived_count as dismissedArchivedCount, party_compliance_score as partyComplianceScore,
+             integrity_score as integrityScore, integrity_formula_json as integrityFormulaJson, lawsuits_json as lawsuitsJson
+      FROM candidate_ethics WHERE candidate_id = ?
+    `);
+    const ethRow = ethicsStmt.get(id);
+    if (ethRow) {
+      cand.ethicsDetailed = {
+        cleanRecordStatus: ethRow.cleanRecordStatus,
+        activeLawsuitsCount: ethRow.activeLawsuitsCount,
+        stfStjInquiriesCount: ethRow.stfStjInquiriesCount,
+        tcuTceIrregularAccounts: ethRow.tcuTceIrregularAccounts,
+        dismissedArchivedCount: ethRow.dismissedArchivedCount,
+        partyComplianceScore: ethRow.partyComplianceScore,
+        integrityScore: ethRow.integrityScore,
+        integrityFormula: ethRow.integrityFormulaJson ? JSON.parse(ethRow.integrityFormulaJson) : null,
+        lawsuits: ethRow.lawsuitsJson ? JSON.parse(ethRow.lawsuitsJson) : []
+      };
+    }
+
+    // 5 Falas Públicas Recentes & Fact-Checking Oficial
+    const stmtStmt = this.db.prepare(`
+      SELECT id, context_source as contextSource, statement_date as statementDate, quote, verdict,
+             verdict_class as verdictClass, fact_check_summary as factCheckSummary,
+             official_source as officialSource, source_link as sourceLink, order_index as orderIndex
+      FROM candidate_statements WHERE candidate_id = ? ORDER BY order_index ASC
+    `);
+    cand.recentStatements = stmtStmt.all(id) || [];
 
     return cand;
   }

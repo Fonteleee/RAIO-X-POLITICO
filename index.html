@@ -181,13 +181,13 @@
       <!-- Center Nav Links -->
       <nav class="hidden lg:flex items-center gap-1 bg-slate-200/80 dark:bg-slate-900/90 p-1.5 rounded-xl border border-slate-300/80 dark:border-white/10 shadow-xs backdrop-blur-md">
         <button onclick="navigateTab('feed')" id="nav-feed" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-white bg-sky-600 dark:bg-cyan-600/30 dark:border dark:border-cyan-500/30 transition flex items-center gap-1.5 shadow-sm">
-          <i data-lucide="layout-grid" class="w-3.5 h-3.5 text-white dark:text-cyan-400"></i> Feed
+          <i data-lucide="layout-grid" class="w-3.5 h-3.5 text-current"></i> Feed
         </button>
         <button onclick="navigateTab('ranking')" id="nav-ranking" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-slate-950 dark:hover:text-white hover:bg-slate-300/40 dark:hover:bg-slate-800/60 transition flex items-center gap-1.5">
           <i data-lucide="trophy" class="w-3.5 h-3.5 text-amber-500"></i> Ranking
         </button>
         <button onclick="navigateTab('comparator')" id="nav-comparator" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-slate-950 dark:hover:text-white hover:bg-slate-300/40 dark:hover:bg-slate-800/60 transition flex items-center gap-1.5">
-          <i data-lucide="scale" class="w-3.5 h-3.5"></i> Comparador
+          <i data-lucide="scale" class="w-3.5 h-3.5 text-current"></i> Comparador
           <span id="compare-badge" class="hidden px-1.5 py-0.2 text-[10px] bg-purple-600 text-white rounded-full font-bold">2</span>
         </button>
         <button onclick="navigateTab('match')" id="nav-match" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-slate-950 dark:hover:text-white hover:bg-slate-300/40 dark:hover:bg-slate-800/60 transition flex items-center gap-1.5">
@@ -198,19 +198,19 @@
         </button>
       </nav>
 
-      <!-- Global Search Bar with Live Instant Autocomplete Dropdown -->
-      <div class="relative flex-1 max-w-xs sm:max-w-sm hidden md:block">
-        <div class="relative flex items-center">
-          <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3 pointer-events-none"></i>
+      <!-- Global Search Bar with Live Instant Autocomplete Dropdown (Enhanced & Evident) -->
+      <div class="relative flex-1 max-w-sm lg:max-w-md hidden md:block">
+        <div class="relative flex items-center shadow-xs">
+          <i data-lucide="search" class="w-4 h-4 text-sky-600 dark:text-cyan-400 absolute left-3.5 pointer-events-none"></i>
           <input 
             type="text" 
             id="global-search-input"
             oninput="handleGlobalSearch(this.value)"
             onfocus="handleGlobalSearch(this.value)"
             placeholder="Buscar político, partido, estado ou nº..." 
-            class="w-full pl-9 pr-14 py-1.5 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-white/10 rounded-xl text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition shadow-inner"
+            class="w-full pl-10 pr-16 py-2 bg-white dark:bg-slate-900 border-2 border-slate-300 dark:border-cyan-500/35 rounded-xl text-xs font-medium text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-sky-500 dark:focus:border-cyan-400 focus:ring-2 focus:ring-sky-500/20 dark:focus:ring-cyan-500/20 transition"
           >
-          <span class="absolute right-2 px-1.5 py-0.5 rounded bg-slate-200 dark:bg-slate-700 text-[10px] font-mono text-slate-500 dark:text-slate-300 pointer-events-none">
+          <span class="absolute right-2 px-2 py-0.5 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-white/10 text-[10px] font-mono font-bold text-slate-600 dark:text-slate-300 pointer-events-none">
             Ctrl+K
           </span>
         </div>
@@ -233,10 +233,10 @@
         <!-- THEME SWITCHER (LIGHT NATIVO / DARK ALTERNATIVO) -->
         <button onclick="toggleTheme()" id="theme-toggle-btn" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 text-xs font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700 transition shadow-sm" title="Alternar entre Modo Claro (Nativo) e Modo Escuro">
           <i id="theme-icon" data-lucide="moon" class="w-3.5 h-3.5 text-slate-600 dark:text-amber-400"></i>
-          <span id="theme-text" class="hidden xl:inline">Modo Escuro</span>
+          <span id="theme-label" class="hidden sm:inline">Modo Escuro</span>
         </button>
 
-        <!-- Location Picker Trigger -->
+        <!-- Geo Location Selector -->
         <button onclick="openLocationModal()" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-cyan-500/30 hover:border-sky-500 text-xs text-slate-800 dark:text-slate-200 transition group shadow-sm">
           <i data-lucide="map-pin" class="w-3.5 h-3.5 text-sky-600 dark:text-cyan-400 group-hover:animate-bounce"></i>
           <span id="current-location-display" class="font-medium hidden sm:inline">São Paulo, SP</span>
@@ -252,29 +252,33 @@
     </div>
   </header>
 
-  <!-- ================= SUB-HEADER: ELECTION TIMELINE & CONSENSUS STATS ================= -->
-  <section class="bg-slate-100 dark:bg-gradient-to-b dark:from-slate-900 dark:to-slate-950 border-b border-slate-200 dark:border-white/5 py-3 px-4 transition-colors">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3 text-xs">
+  <!-- ================= SUB-HEADER: ELECTION TIMELINE, APURAÇÃO & 10 FONTES OFICIAIS ================= -->
+  <section class="bg-slate-100 dark:bg-slate-900 border-b border-slate-200 dark:border-white/10 py-3 px-4">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-3 text-xs">
       
-      <!-- Election Countdown & Dates -->
-      <div class="flex items-center gap-3">
-        <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-100 dark:bg-emerald-500/10 border border-emerald-300 dark:border-emerald-500/20 text-emerald-800 dark:text-emerald-300 font-medium">
-          <i data-lucide="calendar-check" class="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400"></i>
-          <span><strong>1º Turno:</strong> 04/Outubro | <strong>2º Turno:</strong> 25/Outubro</span>
+      <!-- Election Countdown & Vote Tallying Highlights (Destaque Apuração Eleições 2026) -->
+      <div class="flex flex-wrap items-center gap-2.5 w-full lg:w-auto justify-between lg:justify-start">
+        <div class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-sky-50 dark:bg-cyan-500/10 border border-sky-300 dark:border-cyan-500/30 text-sky-950 dark:text-cyan-200 font-semibold shadow-xs">
+          <i data-lucide="vote" class="w-4 h-4 text-sky-600 dark:text-cyan-400 animate-pulse"></i>
+          <span>
+            <strong>Apuração TSE 2026:</strong> 
+            <span class="text-sky-700 dark:text-cyan-300">1º Turno em <strong>04/10/2026 (17h)</strong></span> • 
+            <span class="text-purple-700 dark:text-purple-300">2º Turno em <strong>25/10/2026 (17h)</strong></span>
+          </span>
         </div>
-        <div class="hidden lg:flex items-center gap-1.5 text-slate-600 dark:text-slate-400">
-          <i data-lucide="help-circle" class="w-3.5 h-3.5 text-sky-600 dark:text-cyan-400"></i>
-          <span class="cursor-pointer hover:underline decoration-dotted" onclick="openElectoralInfoModal()">Como funciona candidatura, eleição e posse?</span>
+        <div class="hidden sm:flex items-center gap-1.5 text-slate-600 dark:text-slate-400">
+          <i data-lucide="clock" class="w-3.5 h-3.5 text-amber-500"></i>
+          <span>Definição de Presidente, Governadores, Senadores e Deputados</span>
         </div>
       </div>
 
-      <!-- 4-Source Consensus Pill (Clickable to open Legal & Audit Modal) -->
-      <div class="flex items-center gap-2">
-        <span class="text-slate-600 dark:text-slate-400 hidden sm:inline">Auditoria & Integridade:</span>
-        <button onclick="openLegalSourcesModal()" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 hover:bg-emerald-100 dark:hover:bg-emerald-950/60 border border-emerald-300 dark:border-emerald-500/30 text-emerald-800 dark:text-emerald-300 font-mono text-[11px] shadow-sm transition cursor-pointer" title="Clique para ver o marco legal, fontes oficiais e blindagem jurídica">
+      <!-- 10-Source Consensus Pill (Auditadas e Cruzadas) -->
+      <div class="flex items-center gap-2 self-end lg:self-auto">
+        <span class="text-slate-600 dark:text-slate-400 hidden xl:inline font-medium">Auditoria Cívica:</span>
+        <button onclick="openLegalSourcesModal()" class="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 hover:bg-emerald-100 dark:hover:bg-emerald-950/60 border border-emerald-300 dark:border-emerald-500/30 text-emerald-800 dark:text-emerald-300 font-mono text-[11px] shadow-sm transition cursor-pointer" title="Clique para ver o marco legal, as 10 fontes oficiais e a blindagem jurídica">
           <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-          <span class="font-bold">4 Fontes Oficiais Cruzadas (LAI / TSE / STF)</span>
-          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 ml-1"></i>
+          <span class="font-bold">10 Fontes Oficiais Auditadas (TSE / TCU / CGU / STF / Congresso)</span>
+          <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600 dark:text-emerald-400"></i>
         </button>
       </div>
 
@@ -1957,11 +1961,11 @@
 
             <!-- Copy Actions -->
             <div class="grid grid-cols-2 gap-2 pt-1">
-              <button onclick="copyCardImageToClipboard()" id="btn-copy-img" class="py-2 rounded-xl bg-white dark:bg-slate-750 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-200 dark:border-white/10 text-slate-800 dark:text-white font-bold text-xs flex items-center justify-center gap-1.5 transition">
-                <i data-lucide="image" class="w-3.5 h-3.5"></i> Copiar Imagem
+              <button onclick="copyCardImageToClipboard()" id="btn-copy-img" class="py-2 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-300 dark:border-white/10 text-slate-800 dark:text-slate-100 font-bold text-xs flex items-center justify-center gap-1.5 transition shadow-xs cursor-pointer">
+                <i data-lucide="image" class="w-3.5 h-3.5 text-sky-600 dark:text-cyan-400"></i> Copiar Imagem
               </button>
-              <button onclick="copyToClipboardShare()" class="py-2 rounded-xl bg-white dark:bg-slate-750 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-200 dark:border-white/10 text-slate-800 dark:text-white font-bold text-xs flex items-center justify-center gap-1.5 transition">
-                <i data-lucide="link" class="w-3.5 h-3.5"></i> Copiar Link
+              <button onclick="copyToClipboardShare()" class="py-2 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-300 dark:border-white/10 text-slate-800 dark:text-slate-100 font-bold text-xs flex items-center justify-center gap-1.5 transition shadow-xs cursor-pointer">
+                <i data-lucide="link" class="w-3.5 h-3.5 text-purple-600 dark:text-purple-400"></i> Copiar Link
               </button>
             </div>
 

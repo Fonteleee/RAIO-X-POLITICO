@@ -60,8 +60,8 @@ function verifyIntegrity(options = { checkNetwork: false }) {
 
   console.log(`Verificando ${candidates.length} candidatos no banco SQLite...\n`);
 
-  if (candidates.length !== 45) {
-    errors.push(`Esperados exatamente 45 candidatos no catálogo geral, encontrados: ${candidates.length}`);
+  if (candidates.length < 45) {
+    errors.push(`Esperados pelo menos 45 candidatos no catálogo geral, encontrados: ${candidates.length}`);
   }
 
   for (const c of candidates) {

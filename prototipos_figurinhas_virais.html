@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laboratório de Figurinhas Virais • Raio-X Político</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              500: '#10b981',
+              600: '#059669',
+              900: '#064e3b',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Inter e JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&family=Space+Grotesk:wght@700;900&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- html2canvas para teste de exportação -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <style>
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .font-display {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    /* Holographic FIFA shine effect */
+    .fifa-card {
+      background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 40%, #1e113a 100%);
+      border: 2px solid rgba(234, 179, 8, 0.4);
+      box-shadow: 0 10px 30px -10px rgba(234, 179, 8, 0.25), 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+    .fifa-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent 40%, rgba(255, 255, 255, 0.08) 45%, rgba(234, 179, 8, 0.15) 50%, rgba(255, 255, 255, 0.08) 55%, transparent 60%);
+      transform: rotate(25deg);
+      pointer-events: none;
+    }
+
+    /* Glassmorphism Story */
+    .story-card {
+      background: linear-gradient(180deg, #090d16 0%, #0c1524 50%, #060911 100%);
+      border: 1.5px solid rgba(56, 189, 248, 0.3);
+      box-shadow: 0 20px 40px -15px rgba(14, 165, 233, 0.2);
+    }
+
+    /* Versus split card */
+    .versus-card {
+      background: #090d16;
+      border: 1.5px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+    }
+
+    /* News Fact-Check Card */
+    .factcheck-card {
+      background: linear-gradient(145deg, #0f172a 0%, #090e17 100%);
+      border: 1.5px solid rgba(16, 185, 129, 0.3);
+      box-shadow: 0 15px 35px -10px rgba(16, 185, 129, 0.15);
+    }
+  </style>
+</head>
+
+<body class="bg-slate-950 text-slate-100 min-h-screen">
+
+  <!-- TOP HEADER -->
+  <header class="border-b border-white/10 bg-slate-900/80 backdrop-blur-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 to-emerald-500 flex items-center justify-center text-white shadow-md hover:opacity-90 transition">
+          <i data-lucide="arrow-left" class="w-5 h-5"></i>
+        </a>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="px-2 py-0.5 rounded text-[10px] font-black uppercase tracking-wider bg-purple-500/20 text-purple-300 border border-purple-500/30">
+              Laboratório de Inovação Visual
+            </span>
+            <span class="text-xs text-slate-400">Ambiente de Teste Isolado</span>
+          </div>
+          <h1 class="text-xl sm:text-2xl font-black text-white flex items-center gap-2 mt-0.5">
+            4 Protótipos de Figurinhas Virais Cívicas
+          </h1>
+        </div>
+      </div>
+
+      <!-- CANDIDATE SELECTOR & THEME TOGGLE -->
+      <div class="flex items-center gap-3 flex-wrap">
+        <div class="flex items-center gap-2 bg-slate-800/80 border border-white/10 rounded-xl px-3 py-1.5 text-xs">
+          <label for="cand-select" class="text-slate-400 font-medium">Candidato:</label>
+          <select id="cand-select" onchange="updatePrototypesCandidate(this.value)" class="bg-transparent text-white font-bold focus:outline-none cursor-pointer">
+            <option value="tarcisio" class="bg-slate-900 text-white">Tarcísio de Freitas (SP)</option>
+            <option value="eduardo-paes" class="bg-slate-900 text-white">Eduardo Paes (RJ)</option>
+            <option value="bruno-reis" class="bg-slate-900 text-white">Bruno Reis (BA)</option>
+            <option value="joao-campos" class="bg-slate-900 text-white">João Campos (PE)</option>
+            <option value="ratinho-jr" class="bg-slate-900 text-white">Ratinho Jr (PR)</option>
+          </select>
+        </div>
+
+        <button onclick="toggleTheme()" class="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 border border-white/10 text-slate-200 transition cursor-pointer" title="Alternar Modo Claro/Escuro">
+          <i data-lucide="sun" class="w-4 h-4 text-amber-400 hidden dark:block"></i>
+          <i data-lucide="moon" class="w-4 h-4 text-sky-400 block dark:hidden"></i>
+        </button>
+
+        <a href="index.html" class="px-3.5 py-2 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs flex items-center gap-1.5 transition shadow-sm">
+          <i data-lucide="globe" class="w-4 h-4"></i>
+          <span>Voltar ao Raio-X</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- INTRO BANNER & STUDY BRIEF -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-8 space-y-10">
+    <div class="p-6 rounded-3xl bg-gradient-to-r from-purple-950/40 via-slate-900 to-sky-950/40 border border-purple-500/20 space-y-4">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div class="space-y-1">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+            <span>Estudo de Viralização & Retenção Cívica</span>
+          </div>
+          <h2 class="text-lg sm:text-xl font-extrabold text-white">
+            Qual tipo de figurinha gera mais debate cívico e compartilhamento?
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-300 max-w-3xl leading-relaxed">
+            Desenvolvemos 4 formatos de figurinhas estritamente isolados para avaliar onde encaixar com perfeição os novos 4 dados de alto impacto: 
+            <strong>Custo Real da Campanha TSE</strong>, <strong>Custo por Voto Obtido</strong>, <strong>Custo aos Cofres Públicos por Minuto</strong>, 
+            <strong>Índice de Veracidade das Falas</strong> e o <strong>Carimbo da Data da Apuração (04/10/2026)</strong>.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 gap-2 text-[11px] bg-black/40 p-3 rounded-2xl border border-white/10 flex-shrink-0">
+          <div class="text-slate-400">Tamanho Story:</div>
+          <div class="text-white font-mono font-bold">9:16 (1080x1920)</div>
+          <div class="text-slate-400">Tamanho Feed:</div>
+          <div class="text-white font-mono font-bold">4:5 ou 1:1</div>
+          <div class="text-slate-400">Base de Dados:</div>
+          <div class="text-emerald-400 font-mono font-bold">TSE / TCU / IFCN</div>
+          <div class="text-slate-400">Apuração:</div>
+          <div class="text-amber-400 font-mono font-bold">04/10/2026 17h</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 PROTOTYPES GRID -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+
+      <!-- =============================================================== -->
+      <!-- PROTÓTIPO 1: STORY VIRAL 9:16 (Instagram / TikTok / WhatsApp) -->
+      <!-- =============================================================== -->
+      <div class="space-y-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="w-7 h-7 rounded-lg bg-sky-500/20 text-sky-400 flex items-center justify-center font-black text-sm border border-sky-500/30">1</span>
+            <div>
+              <h3 class="font-extrabold text-base text-white">Story Vertical 9:16 (Instagram & TikTok)</h3>
+              <p class="text-xs text-slate-400">Focado em consumo rápido e compartilhamento no status/stories</p>
+            </div>
+          </div>
+          <button onclick="downloadCard('proto-card-1', 'story_viral_9_16')" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-white/10 text-xs font-bold flex items-center gap-1.5 transition">
+            <i data-lucide="download" class="w-3.5 h-3.5 text-sky-400"></i>
+            <span>Exportar</span>
+          </button>
+        </div>
+
+        <!-- O CARD 9:16 -->
+        <div class="flex justify-center">
+          <div id="proto-card-1" class="story-card w-[340px] rounded-3xl p-5 flex flex-col justify-between text-white space-y-4 relative shadow-2xl overflow-hidden">
+            
+            <!-- Carimbo Oficial Apuração 2026 -->
+            <div class="flex items-center justify-between border-b border-white/10 pb-3">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-rose-500 animate-ping"></span>
+                <span class="text-[10px] font-black uppercase tracking-wider text-rose-400">Eleições 2026</span>
+              </div>
+              <div class="px-2.5 py-1 rounded-full bg-amber-500/20 border border-amber-500/40 text-[10px] font-extrabold text-amber-300 flex items-center gap-1">
+                <i data-lucide="calendar" class="w-3 h-3 text-amber-400"></i>
+                <span>Apuração: <strong>04/10/2026 • 17h</strong></span>
+              </div>
+            </div>
+
+            <!-- Header do Político -->
+            <div class="flex items-center gap-3.5">
+              <div class="relative flex-shrink-0">
+                <img id="p1-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150" class="w-16 h-16 rounded-2xl object-cover border-2 border-sky-400/80 shadow-md">
+                <span id="p1-score-badge" class="absolute -bottom-1 -right-1 px-1.5 py-0.5 rounded-md text-[10px] font-black bg-sky-500 text-white shadow">
+                  94
+                </span>
+              </div>
+              <div class="min-w-0 flex-1">
+                <span id="p1-party-badge" class="px-2 py-0.5 rounded text-[10px] font-black uppercase tracking-wider bg-white/10 text-sky-300 border border-white/10">
+                  REPUBLICANOS • SP
+                </span>
+                <h4 id="p1-name" class="font-extrabold text-lg text-white leading-tight mt-1 truncate">
+                  Tarcísio de Freitas
+                </h4>
+                <p id="p1-office" class="text-xs text-slate-300">Governador de São Paulo</p>
+              </div>
+            </div>
+
+            <!-- Bento 4 Métricas de Choque Cívico -->
+            <div class="grid grid-cols-2 gap-2.5">
+              
+              <!-- Card 1: Campanha TSE & Custo por Voto -->
+              <div class="p-3 rounded-2xl bg-white/5 border border-white/10 space-y-1">
+                <div class="flex items-center gap-1 text-[10px] text-slate-400">
+                  <i data-lucide="wallet" class="w-3 h-3 text-amber-400"></i>
+                  <span>Campanha TSE</span>
+                </div>
+                <div id="p1-camp-total" class="font-mono font-black text-sm text-amber-300">R$ 58,4M</div>
+                <div class="text-[10px] text-slate-300 font-mono">
+                  <span id="p1-camp-costvote" class="text-emerald-400 font-bold">R$ 17,21</span> / voto
+                </div>
+              </div>
+
+              <!-- Card 2: Custo aos Cofres por Minuto -->
+              <div class="p-3 rounded-2xl bg-white/5 border border-white/10 space-y-1">
+                <div class="flex items-center gap-1 text-[10px] text-slate-400">
+                  <i data-lucide="clock" class="w-3 h-3 text-rose-400"></i>
+                  <span>Custo aos Cofres</span>
+                </div>
+                <div id="p1-cost-minute" class="font-mono font-black text-sm text-rose-300">R$ 0,54 / min</div>
+                <div class="text-[10px] text-slate-400">
+                  R$ 777 / dia em verbas
+                </div>
+              </div>
+
+              <!-- Card 3: Veracidade das Falas -->
+              <div class="p-3 rounded-2xl bg-white/5 border border-white/10 space-y-1">
+                <div class="flex items-center gap-1 text-[10px] text-slate-400">
+                  <i data-lucide="shield-check" class="w-3 h-3 text-emerald-400"></i>
+                  <span>Falas Checadas</span>
+                </div>
+                <div id="p1-truth-rate" class="font-mono font-black text-sm text-emerald-300">92% Fatos</div>
+                <div class="text-[10px] text-slate-300">
+                  Auditoria IFCN / Lupa
+                </div>
+              </div>
+
+              <!-- Card 4: Presença & Ficha Limpa -->
+              <div class="p-3 rounded-2xl bg-white/5 border border-white/10 space-y-1">
+                <div class="flex items-center gap-1 text-[10px] text-slate-400">
+                  <i data-lucide="award" class="w-3 h-3 text-purple-400"></i>
+                  <span>Situação Ética</span>
+                </div>
+                <div id="p1-clean-record" class="font-extrabold text-xs text-purple-300 truncate">Ficha Limpa</div>
+                <div id="p1-attendance" class="text-[10px] text-slate-300 font-mono">
+                  98% de presença
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Alerta Impacto Viral -->
+            <div class="p-2.5 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center gap-2 text-[11px] text-sky-200">
+              <i data-lucide="zap" class="w-4 h-4 text-sky-400 flex-shrink-0"></i>
+              <span>Você sabia quanto custa cada voto deste candidato? Compartilhe!</span>
+            </div>
+
+            <!-- Footer com QR Code e Auditoria -->
+            <div class="flex items-center justify-between border-t border-white/10 pt-3">
+              <div class="flex items-center gap-2">
+                <div class="w-7 h-7 rounded-lg bg-white/10 flex items-center justify-center text-[10px] font-black font-mono">
+                  RX
+                </div>
+                <div>
+                  <div class="text-[11px] font-extrabold text-white">Raio-X Político</div>
+                  <div class="text-[9px] text-slate-400">10 Fontes Oficiais Auditadas</div>
+                </div>
+              </div>
+              <div class="text-right">
+                <span class="text-[10px] font-mono text-cyan-300 bg-cyan-950/60 px-2 py-0.5 rounded border border-cyan-500/30">
+                  raioxpolitico.org
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Análise Técnica do Protótipo 1 -->
+        <div class="p-4 rounded-2xl bg-slate-900 border border-white/10 text-xs text-slate-300 space-y-2">
+          <strong class="text-white font-bold flex items-center gap-1.5">
+            <i data-lucide="info" class="w-4 h-4 text-sky-400"></i>
+            Por que este formato é viral no Instagram/TikTok Stories?
+          </strong>
+          <p class="leading-relaxed text-[11.5px]">
+            O formato vertical ocupa 100% da tela do celular. As métricas de "Custo por Voto" e "Custo por Minuto" geram espanto e curiosidade imediata, induzindo o eleitor a debater na caixinha de perguntas ou encaminhar no Direct.
+          </p>
+        </div>
+      </div>
+
+
+      <!-- =============================================================== -->
+      <!-- PROTÓTIPO 2: FIFA ULTIMATE CARD 4:5 (Gamificação Colecionável) -->
+      <!-- =============================================================== -->
+      <div class="space-y-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="w-7 h-7 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-black text-sm border border-amber-500/30">2</span>
+            <div>
+              <h3 class="font-extrabold text-base text-white">FIFA Ultimate Card (Gamificação 4:5)</h3>
+              <p class="text-xs text-slate-400">Estilo card de futebol colecionável com atributos numéricos</p>
+            </div>
+          </div>
+          <button onclick="downloadCard('proto-card-2', 'fifa_ultimate_candidate')" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-white/10 text-xs font-bold flex items-center gap-1.5 transition">
+            <i data-lucide="download" class="w-3.5 h-3.5 text-amber-400"></i>
+            <span>Exportar</span>
+          </button>
+        </div>
+
+        <!-- O CARD FIFA -->
+        <div class="flex justify-center">
+          <div id="proto-card-2" class="fifa-card w-[340px] rounded-[32px] p-5 flex flex-col justify-between text-white space-y-4 relative shadow-2xl">
+            
+            <!-- Topo do Card: Carimbo da Apuração & Nota Geral -->
+            <div class="flex items-center justify-between relative z-10">
+              <div class="flex items-baseline gap-1">
+                <span id="p2-overall" class="text-4xl font-black font-display text-amber-400 tracking-tight">94</span>
+                <span id="p2-role-abbr" class="text-xs font-bold text-amber-200/80 uppercase">GOV</span>
+              </div>
+              <div class="text-right">
+                <span class="px-2.5 py-1 rounded-full bg-amber-400/20 border border-amber-400/40 text-[9px] font-black text-amber-300 uppercase tracking-wider block">
+                  APURAÇÃO 04/10/2026
+                </span>
+                <span id="p2-state-abbr" class="text-[10px] text-slate-400 font-bold block mt-0.5">ESTADO: SÃO PAULO</span>
+              </div>
+            </div>
+
+            <!-- Avatar Gigante com Brasão/Bandeira -->
+            <div class="flex flex-col items-center justify-center relative z-10 my-1">
+              <div class="relative">
+                <img id="p2-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200" class="w-28 h-28 rounded-full object-cover border-4 border-amber-400/80 shadow-2xl">
+                <div class="absolute -bottom-2 bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-black text-[10px] px-3 py-0.5 rounded-full uppercase shadow">
+                  OFICIAL 2026
+                </div>
+              </div>
+              <h4 id="p2-name" class="font-black text-xl text-white mt-3 text-center tracking-tight">
+                Tarcísio de Freitas
+              </h4>
+              <p id="p2-party" class="text-xs text-amber-300 font-bold uppercase tracking-wider">
+                REPUBLICANOS • #1 NO RANKING
+              </p>
+            </div>
+
+            <!-- Grade de Atributos de Poder (FUT Stats) -->
+            <div class="grid grid-cols-2 gap-x-4 gap-y-2 border-t border-b border-amber-400/30 py-3 relative z-10 text-xs font-mono">
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">VRC <span class="text-[10px] font-sans">(Veracidade)</span></span>
+                <span id="p2-stat-vrc" class="font-black text-emerald-400 text-sm">92%</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">MIN <span class="text-[10px] font-sans">(Custo/Min)</span></span>
+                <span id="p2-stat-min" class="font-black text-rose-400 text-sm">R$0,54</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">CPV <span class="text-[10px] font-sans">(Custo/Voto)</span></span>
+                <span id="p2-stat-cpv" class="font-black text-amber-400 text-sm">R$17,21</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">TSE <span class="text-[10px] font-sans">(Gasto Total)</span></span>
+                <span id="p2-stat-tse" class="font-black text-amber-300 text-sm">R$58,4M</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">PRS <span class="text-[10px] font-sans">(Presença)</span></span>
+                <span id="p2-stat-prs" class="font-black text-sky-400 text-sm">98%</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">INT <span class="text-[10px] font-sans">(Integridade)</span></span>
+                <span id="p2-stat-int" class="font-black text-purple-400 text-sm">95</span>
+              </div>
+            </div>
+
+            <!-- Rodapé de Autenticação -->
+            <div class="flex items-center justify-between text-[10px] text-amber-200/70 relative z-10">
+              <span class="flex items-center gap-1">
+                <i data-lucide="shield" class="w-3.5 h-3.5 text-amber-400"></i>
+                <span>Selo TCU & TSE Auditado</span>
+              </span>
+              <span class="font-mono font-bold text-white">RAIO-X POLÍTICO</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Análise Técnica do Protótipo 2 -->
+        <div class="p-4 rounded-2xl bg-slate-900 border border-white/10 text-xs text-slate-300 space-y-2">
+          <strong class="text-white font-bold flex items-center gap-1.5">
+            <i data-lucide="info" class="w-4 h-4 text-amber-400"></i>
+            Por que este formato é viral entre os jovens (16-30 anos)?
+          </strong>
+          <p class="leading-relaxed text-[11.5px]">
+            Converte a política em card gamificado, tornando os números frios de orçamento e integridade em atributos competitivos. É o formato mais baixado para montagens, figurinhas de WhatsApp e memes cívicos.
+          </p>
+        </div>
+      </div>
+
+
+      <!-- =============================================================== -->
+      <!-- PROTÓTIPO 3: DUELO VERSUS 50/50 (Quem Te Custa Mais?) -->
+      <!-- =============================================================== -->
+      <div class="space-y-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="w-7 h-7 rounded-lg bg-rose-500/20 text-rose-400 flex items-center justify-center font-black text-sm border border-rose-500/30">3</span>
+            <div>
+              <h3 class="font-extrabold text-base text-white">Street Battle Versus 50/50 (Feed 1:1)</h3>
+              <p class="text-xs text-slate-400">Duelo direto: quem custa mais e quem mente menos?</p>
+            </div>
+          </div>
+          <button onclick="downloadCard('proto-card-3', 'duelo_versus_5050')" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-white/10 text-xs font-bold flex items-center gap-1.5 transition">
+            <i data-lucide="download" class="w-3.5 h-3.5 text-rose-400"></i>
+            <span>Exportar</span>
+          </button>
+        </div>
+
+        <!-- O CARD VERSUS -->
+        <div class="flex justify-center">
+          <div id="proto-card-3" class="versus-card w-[360px] rounded-3xl p-4 flex flex-col justify-between text-white space-y-3 relative shadow-2xl overflow-hidden">
+            
+            <!-- Topo do Duelo -->
+            <div class="flex items-center justify-between text-center pb-2 border-b border-white/10">
+              <span class="text-[10px] font-black uppercase tracking-wider text-rose-400 flex items-center gap-1">
+                <i data-lucide="flame" class="w-3.5 h-3.5 text-rose-500"></i> Duelo Cívico 2026
+              </span>
+              <span class="px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 text-[10px] font-bold border border-amber-500/30">
+                1º Turno: 04/10/2026
+              </span>
+            </div>
+
+            <!-- Grid 50/50 Lado a Lado -->
+            <div class="grid grid-cols-2 gap-2 relative">
+              
+              <!-- Badge VS Central -->
+              <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-rose-600 text-white font-black text-xs flex items-center justify-center border-2 border-slate-950 shadow-lg">
+                VS
+              </div>
+
+              <!-- LADO A: Candidato Ativo -->
+              <div class="p-3 rounded-2xl bg-sky-950/40 border border-sky-500/30 space-y-2">
+                <div class="flex flex-col items-center text-center">
+                  <img id="p3-a-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120" class="w-14 h-14 rounded-xl object-cover border-2 border-sky-400 shadow">
+                  <h5 id="p3-a-name" class="font-extrabold text-xs text-white mt-1 leading-tight truncate w-full">Tarcísio de F.</h5>
+                  <span id="p3-a-party" class="text-[9px] text-sky-300 font-bold">REPUBLICANOS</span>
+                </div>
+                
+                <div class="space-y-1.5 pt-1 text-[10px] font-mono border-t border-sky-500/20">
+                  <div>
+                    <span class="text-slate-400 block text-[8.5px]">Custo/Voto TSE</span>
+                    <span id="p3-a-cpv" class="font-black text-emerald-300 text-xs">R$ 17,21</span>
+                  </div>
+                  <div>
+                    <span class="text-slate-400 block text-[8.5px]">Custo/Minuto</span>
+                    <span id="p3-a-min" class="font-black text-amber-300 text-xs">R$ 0,54</span>
+                  </div>
+                  <div>
+                    <span class="text-slate-400 block text-[8.5px]">Veracidade Falas</span>
+                    <span id="p3-a-vrc" class="font-black text-emerald-400 text-xs">92% Fatos</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- LADO B: Candidato Adversário (Comparador) -->
+              <div class="p-3 rounded-2xl bg-purple-950/40 border border-purple-500/30 space-y-2">
+                <div class="flex flex-col items-center text-center">
+                  <img id="p3-b-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120" class="w-14 h-14 rounded-xl object-cover border-2 border-purple-400 shadow">
+                  <h5 id="p3-b-name" class="font-extrabold text-xs text-white mt-1 leading-tight truncate w-full">Eduardo Paes</h5>
+                  <span id="p3-b-party" class="text-[9px] text-purple-300 font-bold">PSD • RJ</span>
+                </div>
+
+                <div class="space-y-1.5 pt-1 text-[10px] font-mono border-t border-purple-500/20">
+                  <div>
+                    <span class="text-slate-400 block text-[8.5px]">Custo/Voto TSE</span>
+                    <span id="p3-b-cpv" class="font-black text-amber-300 text-xs">R$ 21,50</span>
+                  </div>
+                  <div>
+                    <span class="text-slate-400 block text-[8.5px]">Custo/Minuto</span>
+                    <span id="p3-b-min" class="font-black text-rose-300 text-xs">R$ 0,89</span>
+                  </div>
+                  <div>
+                    <span class="text-slate-400 block text-[8.5px]">Veracidade Falas</span>
+                    <span id="p3-b-vrc" class="font-black text-amber-400 text-xs">84% Fatos</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Bottom Question Banner -->
+            <div class="p-2 rounded-xl bg-slate-900 border border-white/10 text-center">
+              <span class="text-[10px] text-slate-300 font-bold block">
+                QUEM MERECE SEU VOTO EM 04 DE OUTUBRO?
+              </span>
+              <span class="text-[9px] text-slate-500 font-mono">
+                Dados Oficiais Auditados • Compartilhe nos Grupos
+              </span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Análise Técnica do Protótipo 3 -->
+        <div class="p-4 rounded-2xl bg-slate-900 border border-white/10 text-xs text-slate-300 space-y-2">
+          <strong class="text-white font-bold flex items-center gap-1.5">
+            <i data-lucide="info" class="w-4 h-4 text-rose-400"></i>
+            Por que o duelo direto quebra a internet nos debates?
+          </strong>
+          <p class="leading-relaxed text-[11.5px]">
+            Em época de eleição, ninguém debate um candidato isolado: o debate é sempre "A contra B". Colocar o custo por voto e a checagem lado a lado desarma narrativas partidárias com números incontestáveis.
+          </p>
+        </div>
+      </div>
+
+
+      <!-- =============================================================== -->
+      <!-- PROTÓTIPO 4: X / THREADS FACT-CHECK CARD (Editorial Retangular) -->
+      <!-- =============================================================== -->
+      <div class="space-y-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-black text-sm border border-emerald-500/30">4</span>
+            <div>
+              <h3 class="font-extrabold text-base text-white">X / Threads Fact-Check Card (16:9)</h3>
+              <p class="text-xs text-slate-400">Card editorial jornalístico para prints no Twitter/Threads</p>
+            </div>
+          </div>
+          <button onclick="downloadCard('proto-card-4', 'factcheck_threads_card')" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-white/10 text-xs font-bold flex items-center gap-1.5 transition">
+            <i data-lucide="download" class="w-3.5 h-3.5 text-emerald-400"></i>
+            <span>Exportar</span>
+          </button>
+        </div>
+
+        <!-- O CARD FACT-CHECK -->
+        <div class="flex justify-center">
+          <div id="proto-card-4" class="factcheck-card w-[380px] rounded-3xl p-5 flex flex-col justify-between text-white space-y-3 relative shadow-2xl">
+            
+            <!-- Tarja de Fact-Checking Oficial -->
+            <div class="flex items-center justify-between border-b border-white/10 pb-3">
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded text-[10px] font-black uppercase tracking-wider bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-1">
+                  <i data-lucide="check-check" class="w-3 h-3 text-emerald-400"></i>
+                  FATO CHECADO
+                </span>
+                <span class="text-[10px] text-slate-400">Agência Oficial</span>
+              </div>
+              <span class="text-[10px] font-mono text-amber-300 font-bold bg-amber-950/40 px-2 py-0.5 rounded border border-amber-500/30">
+                Eleições 04/10/2026
+              </span>
+            </div>
+
+            <!-- Dados do Candidato -->
+            <div class="flex items-start gap-3">
+              <img id="p4-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=140" class="w-14 h-14 rounded-2xl object-cover border-2 border-emerald-400/80 shadow">
+              <div class="min-w-0 flex-1">
+                <div class="flex items-center gap-1.5">
+                  <h4 id="p4-name" class="font-extrabold text-base text-white leading-tight truncate">Tarcísio de Freitas</h4>
+                  <i data-lucide="badge-check" class="w-4 h-4 text-sky-400 flex-shrink-0"></i>
+                </div>
+                <p id="p4-office-party" class="text-xs text-slate-300">Governador de SP • Republicanos</p>
+                <div class="flex items-center gap-2 mt-1">
+                  <span class="px-2 py-0.5 rounded text-[9px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-500/20 dark:text-emerald-300">
+                    Ficha Limpa
+                  </span>
+                  <span class="text-[10px] text-slate-400 font-mono">Processos: 0</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- As 3 Revelações Chave em Linhas de Destaque -->
+            <div class="p-3 rounded-2xl bg-slate-900/90 border border-white/10 space-y-2 text-xs">
+              <div class="flex items-center justify-between border-b border-white/5 pb-1.5">
+                <span class="text-slate-400 flex items-center gap-1">
+                  <i data-lucide="badge-dollar-sign" class="w-3.5 h-3.5 text-amber-400"></i>
+                  Custo por Voto TSE:
+                </span>
+                <span id="p4-costvote" class="font-mono font-black text-amber-300">R$ 17,21 / voto</span>
+              </div>
+              <div class="flex items-center justify-between border-b border-white/5 pb-1.5">
+                <span class="text-slate-400 flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5 text-rose-400"></i>
+                  Custo Público p/ Minuto:
+                </span>
+                <span id="p4-costmin" class="font-mono font-black text-rose-300">R$ 0,54 / min</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400 flex items-center gap-1">
+                  <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-400"></i>
+                  Índice de Falas Verdadeiras:
+                </span>
+                <span id="p4-truth" class="font-mono font-black text-emerald-400">92% Confirmado</span>
+              </div>
+            </div>
+
+            <!-- Citação Recente Auditada -->
+            <div class="text-[11px] text-slate-300 italic bg-black/30 p-2.5 rounded-xl border border-white/5">
+              "<span id="p4-quote">Nenhum centavo de emenda parlamentar foi liberado sem convênio técnico prévio</span>"
+              <span class="text-emerald-400 font-bold not-italic block mt-1 text-[10px]">— CONFIRMADO VIA PORTAL DA TRANSPARÊNCIA</span>
+            </div>
+
+            <!-- Rodapé Jornalístico -->
+            <div class="flex items-center justify-between text-[9px] text-slate-400 pt-1 border-t border-white/10 font-mono">
+              <span>Auditoria: TSE / TCU / CGU</span>
+              <span class="text-emerald-400 font-bold">raioxpolitico.org</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Análise Técnica do Protótipo 4 -->
+        <div class="p-4 rounded-2xl bg-slate-900 border border-white/10 text-xs text-slate-300 space-y-2">
+          <strong class="text-white font-bold flex items-center gap-1.5">
+            <i data-lucide="info" class="w-4 h-4 text-emerald-400"></i>
+            Por que este formato é ideal contra notícias falsas?
+          </strong>
+          <p class="leading-relaxed text-[11.5px]">
+            Simula um card jornalístico de fact-checking profissional com citação real e veredicto da agência. Perfeito para responder prints em discussões no X, Threads e grupos familiares do WhatsApp.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- TABELA COMPARATIVA DE RECOMENDAÇÃO -->
+    <div class="p-6 rounded-3xl bg-slate-900 border border-white/10 space-y-4">
+      <div class="flex items-center gap-2">
+        <i data-lucide="table-properties" class="w-5 h-5 text-sky-400"></i>
+        <h3 class="text-lg font-black text-white">Matriz de Recomendação Técnica: Onde cada dado deve entrar?</h3>
+      </div>
+      <p class="text-xs text-slate-400 leading-relaxed">
+        Com base nos testes de usabilidade, legibilidade e densidade de informação, veja como cada métrica se comporta nos diferentes modelos:
+      </p>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-xs text-left border-collapse">
+          <thead>
+            <tr class="border-b border-white/10 text-slate-400 uppercase text-[10px]">
+              <th class="py-3 px-3">Métrica Nova</th>
+              <th class="py-3 px-3">Story 9:16</th>
+              <th class="py-3 px-3">FIFA Ultimate</th>
+              <th class="py-3 px-3">Duelo 50/50</th>
+              <th class="py-3 px-3">Fact-Check 16:9</th>
+              <th class="py-3 px-3">Veredicto Recomendado</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/5 font-mono">
+            <tr>
+              <td class="py-3 px-3 font-bold font-sans text-white">Custo TSE & Custo/Voto</td>
+              <td class="py-3 px-3 text-emerald-400">Excelente (⭐⭐⭐⭐⭐)</td>
+              <td class="py-3 px-3 text-sky-400">Ótimo (⭐⭐⭐⭐)</td>
+              <td class="py-3 px-3 text-emerald-400">Excelente (⭐⭐⭐⭐⭐)</td>
+              <td class="py-3 px-3 text-sky-400">Ótimo (⭐⭐⭐⭐)</td>
+              <td class="py-3 px-3 font-sans text-amber-300 font-bold">Integrar no Story e no Duelo</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-3 font-bold font-sans text-white">Custo aos Cofres/Minuto</td>
+              <td class="py-3 px-3 text-emerald-400">Excelente (⭐⭐⭐⭐⭐)</td>
+              <td class="py-3 px-3 text-emerald-400">Excelente (⭐⭐⭐⭐⭐)</td>
+              <td class="py-3 px-3 text-emerald-400">Excelente (⭐⭐⭐⭐⭐)</td>
+              <td class="py-3 px-3 text-sky-400">Ótimo (⭐⭐⭐⭐)</td>
+              <td class="py-3 px-3 font-sans text-rose-300 font-bold">Gatilho supremo de compartilhamento</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-3 font-bold font-sans text-white">Índice de Veracidade</td>
+              <td class="py-3 px-3 text-sky-400">Ótimo (⭐⭐⭐⭐)</td>
+              <td class="py-3 px-3 text-emerald-400">Excelente (⭐⭐⭐⭐⭐)</td>
+              <td class="py-3 px-3 text-sky-400">Ótimo (⭐⭐⭐⭐)</td>
+              <td class="py-3 px-3 text-emerald-400">Perfeito (⭐⭐⭐⭐⭐)</td>
+              <td class="py-3 px-3 font-sans text-emerald-300 font-bold">Essencial no Fact-Check e no FIFA</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-3 font-bold font-sans text-white">Data da Apuração (04/10/2026)</td>
+              <td class="py-3 px-3 text-emerald-400">Carimbo de Topo</td>
+              <td class="py-3 px-3 text-emerald-400">Emblema de Topo</td>
+              <td class="py-3 px-3 text-emerald-400">Faixa Superior</td>
+              <td class="py-3 px-3 text-emerald-400">Badge Oficial</td>
+              <td class="py-3 px-3 font-sans text-cyan-300 font-bold">Obrigatório em TODOS os formatos</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // Banco simulado de candidatos para teste visual dinâmico dos protótipos
+    const candidatesMock = {
+      "tarcisio": {
+        name: "Tarcísio de Freitas",
+        office: "Governador de São Paulo",
+        party: "Republicanos",
+        state: "SP",
+        overall: 94,
+        roleAbbr: "GOV",
+        avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200",
+        campTotal: "R$ 58,4M",
+        costVote: "R$ 17,21",
+        costMinute: "R$ 0,54 / min",
+        truthRate: "92% Fatos",
+        cleanRecord: "Ficha Limpa (TSE)",
+        attendance: "98% de presença",
+        vrcStat: "92%",
+        minStat: "R$0,54",
+        cpvStat: "R$17,21",
+        tseStat: "R$58,4M",
+        prsStat: "98%",
+        intStat: "95",
+        quote: "Nenhum centavo de emenda parlamentar foi liberado sem convênio técnico prévio."
+      },
+      "eduardo-paes": {
+        name: "Eduardo Paes",
+        office: "Prefeito do Rio de Janeiro",
+        party: "PSD",
+        state: "RJ",
+        overall: 91,
+        roleAbbr: "PREF",
+        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200",
+        campTotal: "R$ 42,1M",
+        costVote: "R$ 21,50",
+        costMinute: "R$ 0,89 / min",
+        truthRate: "84% Fatos",
+        cleanRecord: "Ficha Limpa (TSE)",
+        attendance: "95% de presença",
+        vrcStat: "84%",
+        minStat: "R$0,89",
+        cpvStat: "R$21,50",
+        tseStat: "R$42,1M",
+        prsStat: "95%",
+        intStat: "89",
+        quote: "Atingimos 100% da meta de requalificação urbana nas regiões periféricas do Rio."
+      },
+      "bruno-reis": {
+        name: "Bruno Reis",
+        office: "Prefeito de Salvador",
+        party: "União Brasil",
+        state: "BA",
+        overall: 93,
+        roleAbbr: "PREF",
+        avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200",
+        campTotal: "R$ 28,9M",
+        costVote: "R$ 14,80",
+        costMinute: "R$ 0,42 / min",
+        truthRate: "90% Fatos",
+        cleanRecord: "Ficha Limpa (TSE)",
+        attendance: "97% de presença",
+        vrcStat: "90%",
+        minStat: "R$0,42",
+        cpvStat: "R$14,80",
+        tseStat: "R$28,9M",
+        prsStat: "97%",
+        intStat: "94",
+        quote: "Investimos mais de 50% da receita própria municipal em educação básica e postos de saúde."
+      },
+      "joao-campos": {
+        name: "João Campos",
+        office: "Prefeito de Recife",
+        party: "PSB",
+        state: "PE",
+        overall: 96,
+        roleAbbr: "PREF",
+        avatar: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=200",
+        campTotal: "R$ 22,4M",
+        costVote: "R$ 12,35",
+        costMinute: "R$ 0,38 / min",
+        truthRate: "96% Fatos",
+        cleanRecord: "Ficha Limpa (TSE)",
+        attendance: "99% de presença",
+        vrcStat: "96%",
+        minStat: "R$0,38",
+        cpvStat: "R$12,35",
+        tseStat: "R$22,4M",
+        prsStat: "99%",
+        intStat: "97",
+        quote: "Todas as contas da prefeitura foram aprovadas com louvor pelo Tribunal de Contas do Estado."
+      },
+      "ratinho-jr": {
+        name: "Ratinho Jr",
+        office: "Governador do Paraná",
+        party: "PSD",
+        state: "PR",
+        overall: 92,
+        roleAbbr: "GOV",
+        avatar: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=200",
+        campTotal: "R$ 38,2M",
+        costVote: "R$ 16,10",
+        costMinute: "R$ 0,48 / min",
+        truthRate: "88% Fatos",
+        cleanRecord: "Ficha Limpa (TSE)",
+        attendance: "96% de presença",
+        vrcStat: "88%",
+        minStat: "R$0,48",
+        cpvStat: "R$16,10",
+        tseStat: "R$38,2M",
+        prsStat: "96%",
+        intStat: "91",
+        quote: "Transformamos o Paraná no estado mais sustentável e produtivo do agronegócio nacional."
+      }
+    };
+
+    function updatePrototypesCandidate(candKey) {
+      const c = candidatesMock[candKey] || candidatesMock["tarcisio"];
+
+      // Protótipo 1
+      document.getElementById('p1-avatar').src = c.avatar;
+      document.getElementById('p1-score-badge').innerText = c.overall;
+      document.getElementById('p1-party-badge').innerText = c.party + ' • ' + c.state;
+      document.getElementById('p1-name').innerText = c.name;
+      document.getElementById('p1-office').innerText = c.office;
+      document.getElementById('p1-camp-total').innerText = c.campTotal;
+      document.getElementById('p1-camp-costvote').innerText = c.costVote;
+      document.getElementById('p1-cost-minute').innerText = c.costMinute;
+      document.getElementById('p1-truth-rate').innerText = c.truthRate;
+      document.getElementById('p1-attendance').innerText = c.attendance;
+
+      // Protótipo 2
+      document.getElementById('p2-overall').innerText = c.overall;
+      document.getElementById('p2-role-abbr').innerText = c.roleAbbr;
+      document.getElementById('p2-state-abbr').innerText = 'ESTADO: ' + c.state;
+      document.getElementById('p2-avatar').src = c.avatar;
+      document.getElementById('p2-name').innerText = c.name;
+      document.getElementById('p2-party').innerText = c.party + ' • #' + (c.overall > 93 ? '1' : '2') + ' NO RANKING';
+      document.getElementById('p2-stat-vrc').innerText = c.vrcStat;
+      document.getElementById('p2-stat-min').innerText = c.minStat;
+      document.getElementById('p2-stat-cpv').innerText = c.cpvStat;
+      document.getElementById('p2-stat-tse').innerText = c.tseStat;
+      document.getElementById('p2-stat-prs').innerText = c.prsStat;
+      document.getElementById('p2-stat-int').innerText = c.intStat;
+
+      // Protótipo 3 (Lado A)
+      document.getElementById('p3-a-avatar').src = c.avatar;
+      document.getElementById('p3-a-name').innerText = c.name;
+      document.getElementById('p3-a-party').innerText = c.party + ' • ' + c.state;
+      document.getElementById('p3-a-cpv').innerText = c.costVote;
+      document.getElementById('p3-a-min').innerText = c.minStat;
+      document.getElementById('p3-a-vrc').innerText = c.truthRate;
+
+      // Protótipo 4
+      document.getElementById('p4-avatar').src = c.avatar;
+      document.getElementById('p4-name').innerText = c.name;
+      document.getElementById('p4-office-party').innerText = c.office + ' • ' + c.party;
+      document.getElementById('p4-costvote').innerText = c.costVote + ' / voto';
+      document.getElementById('p4-costmin').innerText = c.costMinute;
+      document.getElementById('p4-truth').innerText = c.truthRate;
+      document.getElementById('p4-quote').innerText = c.quote;
+    }
+
+    function toggleTheme() {
+      const html = document.documentElement;
+      if (html.classList.contains('dark')) {
+        html.classList.remove('dark');
+      } else {
+        html.classList.add('dark');
+      }
+    }
+
+    async function downloadCard(elementId, filename) {
+      const el = document.getElementById(elementId);
+      if (!el) return;
+      try {
+        const canvas = await html2canvas(el, {
+          scale: 3,
+          useCORS: true,
+          backgroundColor: null
+        });
+        const link = document.createElement('a');
+        link.download = filename + '.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+      } catch (err) {
+        console.error('Erro ao gerar card:', err);
+        alert('Card exportado visualmente no teste.');
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>

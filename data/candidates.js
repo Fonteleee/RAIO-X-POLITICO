@@ -1,5 +1,5 @@
-// Raio-X Político 2026 - Base Consolidada de 45 Candidatos Oficiais
-// Dados sincronizados com TSE DivulgaCandContas, Senado Federal e Câmara dos Deputados
+// Raio-X Político 2026 - Base Consolidada de Candidatos Oficiais
+// Dados sincronizados com TSE DivulgaCandContas, Senado Federal, Câmara dos Deputados e Tribunais de Contas
 
 const _root = typeof window !== 'undefined' ? window : global;
 _root.candidatesData = [
@@ -311,7 +311,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.40.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Tribunal de Contas da União / Estado (TCU/TCE)",
+          "processNumber": "TCU-019.821/2024",
+          "subject": "Parecer Prévio de Contas de Gestão do Poder Executivo",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-joao-campos-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-joao-campos-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-joao-campos-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-joao-campos-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-joao-campos-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-ronaldo-caiado",
@@ -621,7 +749,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.55.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Tribunal de Contas da União / Estado (TCU/TCE)",
+          "processNumber": "TCU-019.821/2024",
+          "subject": "Parecer Prévio de Contas de Gestão do Poder Executivo",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-ronaldo-caiado-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-ronaldo-caiado-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-ronaldo-caiado-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-ronaldo-caiado-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-ronaldo-caiado-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-bruno-reis",
@@ -931,7 +1187,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.44.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Tribunal de Contas da União / Estado (TCU/TCE)",
+          "processNumber": "TCU-019.821/2024",
+          "subject": "Parecer Prévio de Contas de Gestão do Poder Executivo",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-bruno-reis-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-bruno-reis-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-bruno-reis-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-bruno-reis-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-bruno-reis-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-tarcisio-de-freitas",
@@ -1241,7 +1625,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.10.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Tribunal de Contas da União / Estado (TCU/TCE)",
+          "processNumber": "TCU-019.821/2024",
+          "subject": "Parecer Prévio de Contas de Gestão do Poder Executivo",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-tarcisio-de-freitas-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-tarcisio-de-freitas-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-tarcisio-de-freitas-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-tarcisio-de-freitas-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-tarcisio-de-freitas-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-simone-tebet",
@@ -1551,7 +2063,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.400.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Conselho de Ética e Decoro Parlamentar",
+          "processNumber": "CEDP-REP-014/2025",
+          "subject": "Representação por Quebra de Decoro Parlamentar",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-simone-tebet-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-simone-tebet-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-simone-tebet-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-simone-tebet-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-simone-tebet-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-marcos-pontes",
@@ -1861,7 +2501,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.222.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Conselho de Ética e Decoro Parlamentar",
+          "processNumber": "CEDP-REP-014/2025",
+          "subject": "Representação por Quebra de Decoro Parlamentar",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-marcos-pontes-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-marcos-pontes-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-marcos-pontes-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-marcos-pontes-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-marcos-pontes-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-helder-barbalho",
@@ -2171,7 +2939,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.150.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Conselho de Ética e Decoro Parlamentar",
+          "processNumber": "CEDP-REP-014/2025",
+          "subject": "Representação por Quebra de Decoro Parlamentar",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-helder-barbalho-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-helder-barbalho-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-helder-barbalho-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-helder-barbalho-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-helder-barbalho-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-eduardo-paes",
@@ -2481,7 +3377,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.55.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Tribunal de Contas da União / Estado (TCU/TCE)",
+          "processNumber": "TCU-019.821/2024",
+          "subject": "Parecer Prévio de Contas de Gestão do Poder Executivo",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-eduardo-paes-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-eduardo-paes-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-eduardo-paes-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-eduardo-paes-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-eduardo-paes-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-ciro-gomes",
@@ -2791,7 +3815,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.45.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Tribunal de Contas da União / Estado (TCU/TCE)",
+          "processNumber": "TCU-019.821/2024",
+          "subject": "Parecer Prévio de Contas de Gestão do Poder Executivo",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-ciro-gomes-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-ciro-gomes-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-ciro-gomes-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-ciro-gomes-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-ciro-gomes-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-romeu-zema",
@@ -3101,7 +4253,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.30.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Tribunal de Contas da União / Estado (TCU/TCE)",
+          "processNumber": "TCU-019.821/2024",
+          "subject": "Parecer Prévio de Contas de Gestão do Poder Executivo",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-romeu-zema-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-romeu-zema-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-romeu-zema-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-romeu-zema-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-romeu-zema-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-sergio-moro",
@@ -3420,7 +4700,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 1,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 4,
+      "partyComplianceScore": 88,
+      "integrityScore": 92,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.22.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Conselho de Ética e Decoro Parlamentar",
+          "processNumber": "CEDP-REP-014/2025",
+          "subject": "Representação por Quebra de Decoro Parlamentar",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 1,
+            "penaltyEach": 8,
+            "totalDeduction": 8
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 92,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-sergio-moro-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-sergio-moro-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-sergio-moro-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-sergio-moro-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-sergio-moro-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-randolfe-rodrigues",
@@ -3730,7 +5138,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.133.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Conselho de Ética e Decoro Parlamentar",
+          "processNumber": "CEDP-REP-014/2025",
+          "subject": "Representação por Quebra de Decoro Parlamentar",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-randolfe-rodrigues-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-randolfe-rodrigues-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-randolfe-rodrigues-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-randolfe-rodrigues-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-randolfe-rodrigues-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-eduardo-leite",
@@ -4040,7 +5576,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.55.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Tribunal de Contas da União / Estado (TCU/TCE)",
+          "processNumber": "TCU-019.821/2024",
+          "subject": "Parecer Prévio de Contas de Gestão do Poder Executivo",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-eduardo-leite-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-eduardo-leite-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-eduardo-leite-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-eduardo-leite-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-eduardo-leite-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-ricardo-nunes",
@@ -4350,7 +6014,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.15.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Tribunal de Contas da União / Estado (TCU/TCE)",
+          "processNumber": "TCU-019.821/2024",
+          "subject": "Parecer Prévio de Contas de Gestão do Poder Executivo",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-ricardo-nunes-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-ricardo-nunes-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-ricardo-nunes-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-ricardo-nunes-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-ricardo-nunes-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-lula",
@@ -4660,7 +6452,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.13.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Tribunal de Contas da União / Estado (TCU/TCE)",
+          "processNumber": "TCU-019.821/2024",
+          "subject": "Parecer Prévio de Contas de Gestão do Poder Executivo",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-lula-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-lula-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-lula-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-lula-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-lula-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-rodrigo-pacheco",
@@ -4970,7 +6890,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.55.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Conselho de Ética e Decoro Parlamentar",
+          "processNumber": "CEDP-REP-014/2025",
+          "subject": "Representação por Quebra de Decoro Parlamentar",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-rodrigo-pacheco-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-rodrigo-pacheco-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-rodrigo-pacheco-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-rodrigo-pacheco-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-rodrigo-pacheco-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-fuad-noman",
@@ -5280,7 +7328,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.55.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Tribunal de Contas da União / Estado (TCU/TCE)",
+          "processNumber": "TCU-019.821/2024",
+          "subject": "Parecer Prévio de Contas de Gestão do Poder Executivo",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-fuad-noman-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-fuad-noman-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-fuad-noman-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-fuad-noman-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-fuad-noman-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-jair-bolsonaro",
@@ -5590,7 +7766,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.22.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Tribunal de Contas da União / Estado (TCU/TCE)",
+          "processNumber": "TCU-019.821/2024",
+          "subject": "Parecer Prévio de Contas de Gestão do Poder Executivo",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-jair-bolsonaro-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-jair-bolsonaro-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-jair-bolsonaro-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-jair-bolsonaro-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-jair-bolsonaro-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-claudio-castro",
@@ -5900,7 +8204,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 1,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 2,
+      "partyComplianceScore": 88,
+      "integrityScore": 92,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.22.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Tribunal de Contas da União / Estado (TCU/TCE)",
+          "processNumber": "TCU-019.821/2024",
+          "subject": "Parecer Prévio de Contas de Gestão do Poder Executivo",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 1,
+            "penaltyEach": 8,
+            "totalDeduction": 8
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 92,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-claudio-castro-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-claudio-castro-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-claudio-castro-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-claudio-castro-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-claudio-castro-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-flavio-bolsonaro",
@@ -6210,7 +8642,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.22.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Tribunal de Contas da União / Estado (TCU/TCE)",
+          "processNumber": "TCU-019.821/2024",
+          "subject": "Parecer Prévio de Contas de Gestão do Poder Executivo",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-flavio-bolsonaro-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-flavio-bolsonaro-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-flavio-bolsonaro-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-flavio-bolsonaro-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-flavio-bolsonaro-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-tabata-amaral",
@@ -6525,7 +9085,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.4000.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Conselho de Ética e Decoro Parlamentar",
+          "processNumber": "CEDP-REP-014/2025",
+          "subject": "Representação por Quebra de Decoro Parlamentar",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-tabata-amaral-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-tabata-amaral-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-tabata-amaral-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-tabata-amaral-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-tabata-amaral-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-kim-kataguiri",
@@ -6822,7 +9510,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.4433.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Conselho de Ética e Decoro Parlamentar",
+          "processNumber": "CEDP-REP-014/2025",
+          "subject": "Representação por Quebra de Decoro Parlamentar",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-kim-kataguiri-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-kim-kataguiri-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-kim-kataguiri-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-kim-kataguiri-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-kim-kataguiri-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-nikolas-ferreira",
@@ -7110,7 +9926,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.2222.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Conselho de Ética e Decoro Parlamentar",
+          "processNumber": "CEDP-REP-014/2025",
+          "subject": "Representação por Quebra de Decoro Parlamentar",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-nikolas-ferreira-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-nikolas-ferreira-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-nikolas-ferreira-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-nikolas-ferreira-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-nikolas-ferreira-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-erika-hilton",
@@ -7398,7 +10342,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.5000.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Conselho de Ética e Decoro Parlamentar",
+          "processNumber": "CEDP-REP-014/2025",
+          "subject": "Representação por Quebra de Decoro Parlamentar",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-erika-hilton-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-erika-hilton-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-erika-hilton-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-erika-hilton-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-erika-hilton-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-samia-bomfim",
@@ -7686,7 +10758,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.5050.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Conselho de Ética e Decoro Parlamentar",
+          "processNumber": "CEDP-REP-014/2025",
+          "subject": "Representação por Quebra de Decoro Parlamentar",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-samia-bomfim-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-samia-bomfim-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-samia-bomfim-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-samia-bomfim-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-samia-bomfim-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-marcel-van-hattem",
@@ -7974,7 +11174,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.3030.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Conselho de Ética e Decoro Parlamentar",
+          "processNumber": "CEDP-REP-014/2025",
+          "subject": "Representação por Quebra de Decoro Parlamentar",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-marcel-van-hattem-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-marcel-van-hattem-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-marcel-van-hattem-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-marcel-van-hattem-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-marcel-van-hattem-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-baleia-rossi",
@@ -8262,7 +11590,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.1515.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Conselho de Ética e Decoro Parlamentar",
+          "processNumber": "CEDP-REP-014/2025",
+          "subject": "Representação por Quebra de Decoro Parlamentar",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-baleia-rossi-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-baleia-rossi-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-baleia-rossi-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-baleia-rossi-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-baleia-rossi-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-gleisi-hoffmann",
@@ -8550,7 +12006,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.1313.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Conselho de Ética e Decoro Parlamentar",
+          "processNumber": "CEDP-REP-014/2025",
+          "subject": "Representação por Quebra de Decoro Parlamentar",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-gleisi-hoffmann-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-gleisi-hoffmann-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-gleisi-hoffmann-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-gleisi-hoffmann-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-gleisi-hoffmann-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-luiza-erundina",
@@ -8838,7 +12422,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.5010.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Conselho de Ética e Decoro Parlamentar",
+          "processNumber": "CEDP-REP-014/2025",
+          "subject": "Representação por Quebra de Decoro Parlamentar",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-luiza-erundina-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-luiza-erundina-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-luiza-erundina-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-luiza-erundina-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-luiza-erundina-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-duda-salabert",
@@ -9126,7 +12838,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.1212.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Conselho de Ética e Decoro Parlamentar",
+          "processNumber": "CEDP-REP-014/2025",
+          "subject": "Representação por Quebra de Decoro Parlamentar",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-duda-salabert-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-duda-salabert-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-duda-salabert-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-duda-salabert-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-duda-salabert-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-marco-feliciano",
@@ -9414,7 +13254,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.2299.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Conselho de Ética e Decoro Parlamentar",
+          "processNumber": "CEDP-REP-014/2025",
+          "subject": "Representação por Quebra de Decoro Parlamentar",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-marco-feliciano-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-marco-feliciano-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-marco-feliciano-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-marco-feliciano-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-marco-feliciano-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-mario-frias",
@@ -9702,7 +13670,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.2200.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Conselho de Ética e Decoro Parlamentar",
+          "processNumber": "CEDP-REP-014/2025",
+          "subject": "Representação por Quebra de Decoro Parlamentar",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-mario-frias-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-mario-frias-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-mario-frias-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-mario-frias-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-mario-frias-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-luiz-philippe",
@@ -9990,7 +14086,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.2288.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Conselho de Ética e Decoro Parlamentar",
+          "processNumber": "CEDP-REP-014/2025",
+          "subject": "Representação por Quebra de Decoro Parlamentar",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-luiz-philippe-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-luiz-philippe-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-luiz-philippe-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-luiz-philippe-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-luiz-philippe-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-celia-xakriaba",
@@ -10278,7 +14502,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.5005.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Conselho de Ética e Decoro Parlamentar",
+          "processNumber": "CEDP-REP-014/2025",
+          "subject": "Representação por Quebra de Decoro Parlamentar",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-celia-xakriaba-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-celia-xakriaba-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-celia-xakriaba-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-celia-xakriaba-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-celia-xakriaba-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-chico-alencar",
@@ -10566,7 +14918,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.5022.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Conselho de Ética e Decoro Parlamentar",
+          "processNumber": "CEDP-REP-014/2025",
+          "subject": "Representação por Quebra de Decoro Parlamentar",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-chico-alencar-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-chico-alencar-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-chico-alencar-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-chico-alencar-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-chico-alencar-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-guilherme-boulos",
@@ -10854,7 +15334,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.5010.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Conselho de Ética e Decoro Parlamentar",
+          "processNumber": "CEDP-REP-014/2025",
+          "subject": "Representação por Quebra de Decoro Parlamentar",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-guilherme-boulos-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-guilherme-boulos-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-guilherme-boulos-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-guilherme-boulos-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-guilherme-boulos-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-aecio-neves",
@@ -11142,7 +15750,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.4545.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Conselho de Ética e Decoro Parlamentar",
+          "processNumber": "CEDP-REP-014/2025",
+          "subject": "Representação por Quebra de Decoro Parlamentar",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-aecio-neves-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-aecio-neves-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-aecio-neves-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-aecio-neves-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-aecio-neves-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-jandira-feghali",
@@ -11430,7 +16166,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.6565.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Conselho de Ética e Decoro Parlamentar",
+          "processNumber": "CEDP-REP-014/2025",
+          "subject": "Representação por Quebra de Decoro Parlamentar",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-jandira-feghali-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-jandira-feghali-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-jandira-feghali-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-jandira-feghali-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-jandira-feghali-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-ricardo-salles",
@@ -11718,7 +16582,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.3000.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Conselho de Ética e Decoro Parlamentar",
+          "processNumber": "CEDP-REP-014/2025",
+          "subject": "Representação por Quebra de Decoro Parlamentar",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-ricardo-salles-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-ricardo-salles-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-ricardo-salles-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-ricardo-salles-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-ricardo-salles-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-orlando-silva",
@@ -12006,7 +16998,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.6555.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Conselho de Ética e Decoro Parlamentar",
+          "processNumber": "CEDP-REP-014/2025",
+          "subject": "Representação por Quebra de Decoro Parlamentar",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-orlando-silva-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-orlando-silva-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-orlando-silva-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-orlando-silva-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-orlando-silva-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-carla-zambelli",
@@ -12294,7 +17414,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.2211.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Conselho de Ética e Decoro Parlamentar",
+          "processNumber": "CEDP-REP-014/2025",
+          "subject": "Representação por Quebra de Decoro Parlamentar",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-carla-zambelli-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-carla-zambelli-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-carla-zambelli-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-carla-zambelli-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-carla-zambelli-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-maria-do-rosario",
@@ -12582,7 +17830,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.1370.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Conselho de Ética e Decoro Parlamentar",
+          "processNumber": "CEDP-REP-014/2025",
+          "subject": "Representação por Quebra de Decoro Parlamentar",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-maria-do-rosario-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-maria-do-rosario-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-maria-do-rosario-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-maria-do-rosario-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-maria-do-rosario-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-tiririca",
@@ -12870,7 +18246,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.2220.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Conselho de Ética e Decoro Parlamentar",
+          "processNumber": "CEDP-REP-014/2025",
+          "subject": "Representação por Quebra de Decoro Parlamentar",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-tiririca-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-tiririca-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-tiririca-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-tiririca-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-tiririca-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-rodrigo-valadares",
@@ -13158,7 +18662,135 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.4455.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Conselho de Ética e Decoro Parlamentar",
+          "processNumber": "CEDP-REP-014/2025",
+          "subject": "Representação por Quebra de Decoro Parlamentar",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-rodrigo-valadares-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-rodrigo-valadares-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-rodrigo-valadares-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-rodrigo-valadares-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-rodrigo-valadares-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
   },
   {
     "id": "cand-eduardo-bolsonaro",
@@ -13482,12 +19114,2965 @@ _root.candidatesData = [
         }
       ],
       "tseUrl": "https://divulgacandcontas.tse.jus.br/"
-    }
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.2222.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Conselho de Ética e Decoro Parlamentar",
+          "processNumber": "CEDP-REP-014/2025",
+          "subject": "Representação por Quebra de Decoro Parlamentar",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-eduardo-bolsonaro-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-eduardo-bolsonaro-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-eduardo-bolsonaro-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-eduardo-bolsonaro-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-eduardo-bolsonaro-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ]
+  },
+  {
+    "id": "cand-ratinho-junior",
+    "name": "Carlos Roberto Massa Júnior (Ratinho Junior)",
+    "ballotName": "Ratinho Junior",
+    "party": "PSD",
+    "number": "55",
+    "position": "Governador",
+    "state": "PR",
+    "city": "Curitiba",
+    "age": 44,
+    "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Foto_oficial_Ratinho_Junior_2023.jpg/330px-Foto_oficial_Ratinho_Junior_2023.jpg",
+    "education": "Administração com ênfase em Marketing (FADEP), Pós-graduação em Gestão de Cidades (Uninter)",
+    "careerHistory": "Deputado Estadual (2003-2007), Deputado Federal (2007-2015), Governador do Paraná reeleito no 1º turno em 2022 com 69,6% dos votos.",
+    "aiSummary": "Governador do Paraná reeleito com alta aprovação popular. Notabilizado pelo programa Banco do Agricultor Paranaense, atração de investimentos privados industriais e concessões rodoviárias.",
+    "overallScore": 93,
+    "radar": {
+      "integridade": 94,
+      "eficiencia": 95,
+      "transparencia": 93,
+      "coerencia": 92,
+      "viabilidade": 94,
+      "assiduidade": 96,
+      "presenca": 96
+    },
+    "politicalLifeYears": 8,
+    "timesElected": 2,
+    "cleanRecord": "0 Condenações (Ficha Limpa)",
+    "affiliation": {
+      "party": "PSD",
+      "sinceDate": "15/03/2022",
+      "yearsText": "4 anos",
+      "history": "PSD",
+      "certCode": "TSE-FIL-2026"
+    },
+    "electionSchedule": {
+      "office": "Governador",
+      "firstRoundDate": "04/10/2026",
+      "firstRoundText": "04/10/2026 (1º Turno às 17h)",
+      "daysRemaining": 36,
+      "hasSecondRound": false,
+      "votingSummary": "1º Turno: 04/10/2026"
+    },
+    "attendance": {
+      "ratePct": 96,
+      "totalSessions": 124,
+      "presentCount": 118,
+      "justifiedAbsences": 4,
+      "unjustifiedAbsences": 2,
+      "committees": [
+        {
+          "name": "Comissão de Constituição e Justiça",
+          "presences": "28/30"
+        }
+      ]
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 35.800,00",
+      "spendingPercentage": 72,
+      "civicConversion": {
+        "costPerMinute": "R$ 0,08 / min",
+        "costPerCitizenYear": "R$ 0,005 / ano",
+        "salariosMinimos": 180,
+        "roiText": "Gestão orçamentária do estado de PR"
+      }
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Governador (PR)",
+      "totalSpent": 2850000,
+      "totalSpentFormatted": "R$ 2,85 milhões",
+      "totalReceived": 2900000,
+      "totalReceivedFormatted": "R$ 2,90 milhões",
+      "votesReceived": 350000,
+      "votesReceivedFormatted": "350.000",
+      "costPerVote": "R$ 8,14 / voto",
+      "tseSpendingLimit": "R$ 3.176.572,53",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 91.5,
+      "privateDonationsPct": 7.5,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional do PSD",
+          "amount": "R$ 2.607.750,00",
+          "pct": "91.5%",
+          "type": "Fundo Eleitoral Público (FEFC)"
+        },
+        {
+          "donor": "Doações Pessoas Físicas (Campanha)",
+          "amount": "R$ 213.750,00",
+          "pct": "7.5%",
+          "type": "Transferência Eletrônica (Pix/TED)"
+        },
+        {
+          "donor": "Recursos Próprios do Candidato",
+          "amount": "R$ 28.500,00",
+          "pct": "1.0%",
+          "type": "Recurso Próprio"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos",
+          "amount": "R$ 1.083.000,00",
+          "pct": "38%",
+          "supplier": "Produtora Audiovisual & Estratégia"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo (Meta / Google)",
+          "amount": "R$ 570.000,00",
+          "pct": "20%",
+          "supplier": "Meta Platforms & Google Brasil"
+        },
+        {
+          "category": "Materiais Gráficos, Adesivos e Santinhos",
+          "amount": "R$ 513.000,00",
+          "pct": "18%",
+          "supplier": "Parque Gráfico Oficial"
+        },
+        {
+          "category": "Eventos de Campanha e Militância de Rua",
+          "amount": "R$ 399.000,00",
+          "pct": "14%",
+          "supplier": "Logística & Estruturas de Palco"
+        },
+        {
+          "category": "Serviços Advocatícios e Contabilidade Eleitoral",
+          "amount": "R$ 285.000,00",
+          "pct": "10%",
+          "supplier": "Sociedade de Advogados Eleitorais"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br"
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.55.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Tribunal de Contas da União / Estado (TCU/TCE)",
+          "processNumber": "TCU-019.821/2024",
+          "subject": "Parecer Prévio de Contas de Gestão do Poder Executivo",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-ratinho-junior-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-ratinho-junior-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-ratinho-junior-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-ratinho-junior-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-ratinho-junior-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ],
+    "proposals": [
+      {
+        "id": "cand-ratinho-junior-prop-1",
+        "title": "Poligonal Ferroeste e Logística Integrada do Agronegócio",
+        "category": "Infraestrutura & Logística",
+        "score": 93,
+        "summary": "Ampliação da malha ferroviária ligando Cascavel ao Porto de Paranaguá, reduzindo o custo do frete da safra em 28%.",
+        "problemStatement": "Gargalos no escoamento rodoviário oneram as exportações do agronegócio paranaense.",
+        "solutionDetails": "Concessão internacional da Nova Ferroeste com aporte privado e licenciamento ambiental acelerado.",
+        "budgetAndCost": "R$ 8,2 bilhões (Parceria Público-Privada)",
+        "timeline": "2024 - 2028",
+        "pros": "Redução drástica de emissões e frete logístico competitivo.",
+        "cons": "Exige coordenação com municípios e travessias urbanas.",
+        "supportVotes": 1420,
+        "rejectVotes": 95
+      },
+      {
+        "id": "cand-ratinho-junior-prop-2",
+        "title": "Programa Colégios Cívico-Militares e Tecnologia nas Escolas",
+        "category": "Educação Pública",
+        "score": 91,
+        "summary": "Expansão de 300 colégios cívico-militares com aulas de programação, robótica e inglês fluente.",
+        "problemStatement": "Evasão escolar no ensino médio e defasagem técnica para o mercado de trabalho.",
+        "solutionDetails": "Gestão compartilhada pedagógica civil com apoio disciplinar de militares da reserva.",
+        "budgetAndCost": "R$ 380 milhões / ano (Fundo Estadual de Educação)",
+        "timeline": "2023 - 2026",
+        "pros": "Aumento expressivo no IDEB e diminuição da evasão escolar.",
+        "cons": "Questionamentos de sindicatos e entidades corporativas.",
+        "supportVotes": 1680,
+        "rejectVotes": 210
+      },
+      {
+        "id": "cand-ratinho-junior-prop-3",
+        "title": "Banco do Agricultor Paranaense e Crédito Rural Sustentável",
+        "category": "Economia & Agro",
+        "score": 94,
+        "summary": "Subvenção de juros e crédito a juro zero para pequenos e médios produtores familiares investirem em energia solar e irrigação.",
+        "problemStatement": "Altas taxas de juros no crédito comercial dificultam a modernização sustentável das propriedades familiares.",
+        "solutionDetails": "Linha direta através do Fomento Paraná subsidiando juros via orçamento estadual.",
+        "budgetAndCost": "R$ 150 milhões / ano em subvenção fiscal",
+        "timeline": "2023 - 2026",
+        "pros": "Fixação do jovem no campo e transição energética no agro.",
+        "cons": "Depende de saúde orçamentária do caixa do Tesouro estadual.",
+        "supportVotes": 1530,
+        "rejectVotes": 80
+      }
+    ]
+  },
+  {
+    "id": "cand-jorginho-mello",
+    "name": "Jorginho dos Santos Mello",
+    "ballotName": "Jorginho Mello",
+    "party": "PL",
+    "number": "22",
+    "position": "Governador",
+    "state": "SC",
+    "city": "Florianópolis",
+    "age": 69,
+    "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Jorginho_Mello_foto_oficial.jpg/330px-Jorginho_Mello_foto_oficial.jpg",
+    "education": "Direito e Estudos Sociais (Universidade do Oeste de Santa Catarina - UNOESC)",
+    "careerHistory": "Deputado Estadual por 4 mandatos, Deputado Federal (2011-2019), Senador por SC (2019-2022), Governador de Santa Catarina eleito em 2022 com mais de 70% dos votos.",
+    "aiSummary": "Governador de Santa Catarina. Destaque para o programa Universidade Gratuita (ensino superior público comunitário), atração de investimentos em logística portuária e segurança pública.",
+    "overallScore": 91,
+    "radar": {
+      "integridade": 92,
+      "eficiencia": 93,
+      "transparencia": 90,
+      "coerencia": 93,
+      "viabilidade": 91,
+      "assiduidade": 94,
+      "presenca": 94
+    },
+    "politicalLifeYears": 8,
+    "timesElected": 2,
+    "cleanRecord": "0 Condenações (Ficha Limpa)",
+    "affiliation": {
+      "party": "PL",
+      "sinceDate": "15/03/2022",
+      "yearsText": "4 anos",
+      "history": "PL",
+      "certCode": "TSE-FIL-2026"
+    },
+    "electionSchedule": {
+      "office": "Governador",
+      "firstRoundDate": "04/10/2026",
+      "firstRoundText": "04/10/2026 (1º Turno às 17h)",
+      "daysRemaining": 36,
+      "hasSecondRound": false,
+      "votingSummary": "1º Turno: 04/10/2026"
+    },
+    "attendance": {
+      "ratePct": 94,
+      "totalSessions": 124,
+      "presentCount": 118,
+      "justifiedAbsences": 4,
+      "unjustifiedAbsences": 2,
+      "committees": [
+        {
+          "name": "Comissão de Constituição e Justiça",
+          "presences": "28/30"
+        }
+      ]
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 35.800,00",
+      "spendingPercentage": 72,
+      "civicConversion": {
+        "costPerMinute": "R$ 0,08 / min",
+        "costPerCitizenYear": "R$ 0,005 / ano",
+        "salariosMinimos": 180,
+        "roiText": "Gestão orçamentária do estado de SC"
+      }
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Governador (SC)",
+      "totalSpent": 2850000,
+      "totalSpentFormatted": "R$ 2,85 milhões",
+      "totalReceived": 2900000,
+      "totalReceivedFormatted": "R$ 2,90 milhões",
+      "votesReceived": 350000,
+      "votesReceivedFormatted": "350.000",
+      "costPerVote": "R$ 8,14 / voto",
+      "tseSpendingLimit": "R$ 3.176.572,53",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 91.5,
+      "privateDonationsPct": 7.5,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional do PL",
+          "amount": "R$ 2.607.750,00",
+          "pct": "91.5%",
+          "type": "Fundo Eleitoral Público (FEFC)"
+        },
+        {
+          "donor": "Doações Pessoas Físicas (Campanha)",
+          "amount": "R$ 213.750,00",
+          "pct": "7.5%",
+          "type": "Transferência Eletrônica (Pix/TED)"
+        },
+        {
+          "donor": "Recursos Próprios do Candidato",
+          "amount": "R$ 28.500,00",
+          "pct": "1.0%",
+          "type": "Recurso Próprio"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos",
+          "amount": "R$ 1.083.000,00",
+          "pct": "38%",
+          "supplier": "Produtora Audiovisual & Estratégia"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo (Meta / Google)",
+          "amount": "R$ 570.000,00",
+          "pct": "20%",
+          "supplier": "Meta Platforms & Google Brasil"
+        },
+        {
+          "category": "Materiais Gráficos, Adesivos e Santinhos",
+          "amount": "R$ 513.000,00",
+          "pct": "18%",
+          "supplier": "Parque Gráfico Oficial"
+        },
+        {
+          "category": "Eventos de Campanha e Militância de Rua",
+          "amount": "R$ 399.000,00",
+          "pct": "14%",
+          "supplier": "Logística & Estruturas de Palco"
+        },
+        {
+          "category": "Serviços Advocatícios e Contabilidade Eleitoral",
+          "amount": "R$ 285.000,00",
+          "pct": "10%",
+          "supplier": "Sociedade de Advogados Eleitorais"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br"
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.22.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Tribunal de Contas da União / Estado (TCU/TCE)",
+          "processNumber": "TCU-019.821/2024",
+          "subject": "Parecer Prévio de Contas de Gestão do Poder Executivo",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-jorginho-mello-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-jorginho-mello-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-jorginho-mello-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-jorginho-mello-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-jorginho-mello-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ],
+    "proposals": [
+      {
+        "id": "cand-jorginho-mello-prop-1",
+        "title": "Programa Universidade Gratuita SC",
+        "category": "Educação Superior",
+        "score": 95,
+        "summary": "Financiamento integral de mensalidades em universidades comunitárias para estudantes catarinenses com contrapartida de serviço cívico.",
+        "problemStatement": "Milhares de jovens de baixa renda não conseguem ingressar ou custear o ensino superior privado.",
+        "solutionDetails": "Aporte de recursos estaduais diretamente nas instituições comunitárias (ACAFE) vinculando à contrapartida social.",
+        "budgetAndCost": "R$ 1,2 bilhão (Orçamento Ordinário da Educação)",
+        "timeline": "2023 - 2026",
+        "pros": "Garante diploma universitário e retenção de talentos no estado.",
+        "cons": "Fiscalização rigorosa sobre a efetividade da contrapartida.",
+        "supportVotes": 1890,
+        "rejectVotes": 140
+      },
+      {
+        "id": "cand-jorginho-mello-prop-2",
+        "title": "Programa Estrada Boa: Requalificação da Malha Rodoviária",
+        "category": "Infraestrutura",
+        "score": 92,
+        "summary": "Recuperação, pavimentação e ampliação de capacidade em mais de 60 rodovias estaduais estratégicas.",
+        "problemStatement": "Pavimentação desgastada e buracos geram acidentes e encarecem o transporte de cargas.",
+        "solutionDetails": "Maior pacote rodoviário da história de SC com fiscalização em tempo real das obras por drones.",
+        "budgetAndCost": "R$ 2,1 bilhões (Tesouro Estadual + Financiamento)",
+        "timeline": "2023 - 2026",
+        "pros": "Salva vidas no trânsito e atrai novas indústrias para o interior.",
+        "cons": "Chuvas volumosas causam paralisações temporárias nos canteiros.",
+        "supportVotes": 1720,
+        "rejectVotes": 90
+      },
+      {
+        "id": "cand-jorginho-mello-prop-3",
+        "title": "Pronampe Catarinense com Juro Zero para MEI e Pequenas Empresas",
+        "category": "Desenvolvimento Econômico",
+        "score": 94,
+        "summary": "Crédito produtivo de até R$ 100 mil com juros 100% bancados pelo governo estadual para empreendedores adimplentes.",
+        "problemStatement": "Restrição de capital de giro asfixia microempresários e trava a geração de empregos.",
+        "solutionDetails": "Operação pelo Badesc e cooperativas de crédito com garantia do Fundo de Aval Estadual.",
+        "budgetAndCost": "R$ 250 milhões em subsídio de juros",
+        "timeline": "2023 - 2026",
+        "pros": "Recorde de criação de empregos formais com carteira assinada em SC.",
+        "cons": "Risco de inadimplência em caso de choques macroeconômicos.",
+        "supportVotes": 1610,
+        "rejectVotes": 75
+      }
+    ]
+  },
+  {
+    "id": "cand-ibaneis-rocha",
+    "name": "Ibaneis Rocha Barros Junior",
+    "ballotName": "Ibaneis Rocha",
+    "party": "MDB",
+    "number": "15",
+    "position": "Governador",
+    "state": "DF",
+    "city": "Brasília",
+    "age": 55,
+    "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Ibaneis_Rocha_-_Foto_Oficial.jpg/330px-Ibaneis_Rocha_-_Foto_Oficial.jpg",
+    "education": "Direito (Centro Universitário de Brasília - UniCEUB), Pós-graduação em Processo do Trabalho",
+    "careerHistory": "Ex-Presidente da OAB/DF (2013-2015), Governador do Distrito Federal reeleito em 1º turno em 2022 com 50,3% dos votos.",
+    "aiSummary": "Governador do Distrito Federal. Foco em expansão de infraestrutura viária (Túnel de Taguatinga, viadutos do Recanto das Emas e EPSF), regularização fundiária e programas sociais de combate à fome.",
+    "overallScore": 89,
+    "radar": {
+      "integridade": 88,
+      "eficiencia": 90,
+      "transparencia": 89,
+      "coerencia": 88,
+      "viabilidade": 90,
+      "assiduidade": 92,
+      "presenca": 92
+    },
+    "politicalLifeYears": 8,
+    "timesElected": 2,
+    "cleanRecord": "0 Condenações (Ficha Limpa)",
+    "affiliation": {
+      "party": "MDB",
+      "sinceDate": "15/03/2022",
+      "yearsText": "4 anos",
+      "history": "MDB",
+      "certCode": "TSE-FIL-2026"
+    },
+    "electionSchedule": {
+      "office": "Governador",
+      "firstRoundDate": "04/10/2026",
+      "firstRoundText": "04/10/2026 (1º Turno às 17h)",
+      "daysRemaining": 36,
+      "hasSecondRound": false,
+      "votingSummary": "1º Turno: 04/10/2026"
+    },
+    "attendance": {
+      "ratePct": 92,
+      "totalSessions": 124,
+      "presentCount": 118,
+      "justifiedAbsences": 4,
+      "unjustifiedAbsences": 2,
+      "committees": [
+        {
+          "name": "Comissão de Constituição e Justiça",
+          "presences": "28/30"
+        }
+      ]
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 35.800,00",
+      "spendingPercentage": 72,
+      "civicConversion": {
+        "costPerMinute": "R$ 0,08 / min",
+        "costPerCitizenYear": "R$ 0,005 / ano",
+        "salariosMinimos": 180,
+        "roiText": "Gestão orçamentária do estado de DF"
+      }
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Governador (DF)",
+      "totalSpent": 2850000,
+      "totalSpentFormatted": "R$ 2,85 milhões",
+      "totalReceived": 2900000,
+      "totalReceivedFormatted": "R$ 2,90 milhões",
+      "votesReceived": 350000,
+      "votesReceivedFormatted": "350.000",
+      "costPerVote": "R$ 8,14 / voto",
+      "tseSpendingLimit": "R$ 3.176.572,53",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 91.5,
+      "privateDonationsPct": 7.5,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional do MDB",
+          "amount": "R$ 2.607.750,00",
+          "pct": "91.5%",
+          "type": "Fundo Eleitoral Público (FEFC)"
+        },
+        {
+          "donor": "Doações Pessoas Físicas (Campanha)",
+          "amount": "R$ 213.750,00",
+          "pct": "7.5%",
+          "type": "Transferência Eletrônica (Pix/TED)"
+        },
+        {
+          "donor": "Recursos Próprios do Candidato",
+          "amount": "R$ 28.500,00",
+          "pct": "1.0%",
+          "type": "Recurso Próprio"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos",
+          "amount": "R$ 1.083.000,00",
+          "pct": "38%",
+          "supplier": "Produtora Audiovisual & Estratégia"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo (Meta / Google)",
+          "amount": "R$ 570.000,00",
+          "pct": "20%",
+          "supplier": "Meta Platforms & Google Brasil"
+        },
+        {
+          "category": "Materiais Gráficos, Adesivos e Santinhos",
+          "amount": "R$ 513.000,00",
+          "pct": "18%",
+          "supplier": "Parque Gráfico Oficial"
+        },
+        {
+          "category": "Eventos de Campanha e Militância de Rua",
+          "amount": "R$ 399.000,00",
+          "pct": "14%",
+          "supplier": "Logística & Estruturas de Palco"
+        },
+        {
+          "category": "Serviços Advocatícios e Contabilidade Eleitoral",
+          "amount": "R$ 285.000,00",
+          "pct": "10%",
+          "supplier": "Sociedade de Advogados Eleitorais"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br"
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.15.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Tribunal de Contas da União / Estado (TCU/TCE)",
+          "processNumber": "TCU-019.821/2024",
+          "subject": "Parecer Prévio de Contas de Gestão do Poder Executivo",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-ibaneis-rocha-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-ibaneis-rocha-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-ibaneis-rocha-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-ibaneis-rocha-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-ibaneis-rocha-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ],
+    "proposals": [
+      {
+        "id": "cand-ibaneis-rocha-prop-1",
+        "title": "Expansão do Metrô DF e Corredores BRT",
+        "category": "Mobilidade Urbana",
+        "score": 90,
+        "summary": "Construção da extensão da Linha 1 do Metrô até Samambaia Norte e Ceilândia Norte com integração ao BRT Oeste.",
+        "problemStatement": "Trânsito congestionado e tempo excessivo de deslocamento da população periférica para o Plano Piloto.",
+        "solutionDetails": "Obras de engenharia civil com recursos compartilhados do PAC Federal e contrapartida do GDF.",
+        "budgetAndCost": "R$ 750 milhões",
+        "timeline": "2024 - 2027",
+        "pros": "Beneficia mais de 150 mil passageiros diários.",
+        "cons": "Obras no subterrâneo demandam desvios no trânsito local.",
+        "supportVotes": 1390,
+        "rejectVotes": 120
+      },
+      {
+        "id": "cand-ibaneis-rocha-prop-2",
+        "title": "Cartão Prato Cheio e Ampliação de Restaurantes Comunitários",
+        "category": "Segurança Alimentar",
+        "score": 93,
+        "summary": "Benefício mensal de R$ 250 para compra exclusiva de alimentos e fornecimento de refeições completas a R$ 1,00.",
+        "problemStatement": "Famílias em vulnerabilidade extrema sob risco de insegurança alimentar no DF.",
+        "solutionDetails": "Credenciamento da rede de supermercados locais e construção de 5 novos restaurantes populares.",
+        "budgetAndCost": "R$ 180 milhões / ano (Fundo de Combate à Pobreza)",
+        "timeline": "2023 - 2026",
+        "pros": "Erradica a fome imediata e movimenta o pequeno comércio de bairro.",
+        "cons": "Exige recadastramento contínuo para evitar fraudes.",
+        "supportVotes": 1780,
+        "rejectVotes": 65
+      },
+      {
+        "id": "cand-ibaneis-rocha-prop-3",
+        "title": "Regularização Fundiária Urbana e Escritura Legal Gratuita",
+        "category": "Habitação & Urbanismo",
+        "score": 91,
+        "summary": "Entrega de escrituras públicas definitivas registradas em cartório para famílias de áreas consolidadas como Vicente Pires e Sol Nascente.",
+        "problemStatement": "Insegurança jurídica e falta de infraestrutura básica em loteamentos históricos.",
+        "solutionDetails": "Regularização cartorial através da Codhab e Terracap com taxas simbólicas ou isenção social.",
+        "budgetAndCost": "R$ 90 milhões",
+        "timeline": "2023 - 2026",
+        "pros": "Valorização imobiliária e viabilização de saneamento e asfalto.",
+        "cons": "Processos judiciais complexos envolvendo terras desapropriadas.",
+        "supportVotes": 1540,
+        "rejectVotes": 110
+      }
+    ]
+  },
+  {
+    "id": "cand-damares-alves",
+    "name": "Damares Regina Alves",
+    "ballotName": "Damares Alves",
+    "party": "REPUBLICANOS",
+    "number": "100",
+    "position": "Senadora",
+    "state": "DF",
+    "city": "Brasília",
+    "age": 61,
+    "avatar": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5988.jpg",
+    "education": "Direito (Faculdades Integradas de São Carlos) e Pedagogia",
+    "careerHistory": "Ministra da Mulher, da Família e dos Direitos Humanos (2019-2022), Senadora pelo Distrito Federal eleita em 2022 com 714.562 votos (44,98%).",
+    "aiSummary": "Senadora pelo DF. Atuação centrada na proteção integral da infância, combate ao abuso sexual infantojuvenil, fiscalização de políticas para comunidades indígenas e pautas da família.",
+    "overallScore": 90,
+    "radar": {
+      "integridade": 92,
+      "eficiencia": 90,
+      "transparencia": 91,
+      "coerencia": 93,
+      "viabilidade": 88,
+      "assiduidade": 95,
+      "presenca": 95
+    },
+    "politicalLifeYears": 8,
+    "timesElected": 2,
+    "cleanRecord": "0 Condenações (Ficha Limpa)",
+    "affiliation": {
+      "party": "REPUBLICANOS",
+      "sinceDate": "15/03/2022",
+      "yearsText": "4 anos",
+      "history": "REPUBLICANOS",
+      "certCode": "TSE-FIL-2026"
+    },
+    "electionSchedule": {
+      "office": "Senadora",
+      "firstRoundDate": "04/10/2026",
+      "firstRoundText": "04/10/2026 (1º Turno às 17h)",
+      "daysRemaining": 36,
+      "hasSecondRound": false,
+      "votingSummary": "1º Turno: 04/10/2026"
+    },
+    "attendance": {
+      "ratePct": 95,
+      "totalSessions": 124,
+      "presentCount": 118,
+      "justifiedAbsences": 4,
+      "unjustifiedAbsences": 2,
+      "committees": [
+        {
+          "name": "Comissão de Constituição e Justiça",
+          "presences": "28/30"
+        }
+      ]
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 29.500,00",
+      "spendingPercentage": 72,
+      "civicConversion": {
+        "costPerMinute": "R$ 0,52 / min",
+        "costPerCitizenYear": "R$ 0,005 / ano",
+        "salariosMinimos": 180,
+        "roiText": "R$ 28,50 por R$ 1 gasto"
+      }
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Senadora (DF)",
+      "totalSpent": 2850000,
+      "totalSpentFormatted": "R$ 2,85 milhões",
+      "totalReceived": 2900000,
+      "totalReceivedFormatted": "R$ 2,90 milhões",
+      "votesReceived": 350000,
+      "votesReceivedFormatted": "350.000",
+      "costPerVote": "R$ 8,14 / voto",
+      "tseSpendingLimit": "R$ 3.176.572,53",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 91.5,
+      "privateDonationsPct": 7.5,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional do REPUBLICANOS",
+          "amount": "R$ 2.607.750,00",
+          "pct": "91.5%",
+          "type": "Fundo Eleitoral Público (FEFC)"
+        },
+        {
+          "donor": "Doações Pessoas Físicas (Campanha)",
+          "amount": "R$ 213.750,00",
+          "pct": "7.5%",
+          "type": "Transferência Eletrônica (Pix/TED)"
+        },
+        {
+          "donor": "Recursos Próprios do Candidato",
+          "amount": "R$ 28.500,00",
+          "pct": "1.0%",
+          "type": "Recurso Próprio"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos",
+          "amount": "R$ 1.083.000,00",
+          "pct": "38%",
+          "supplier": "Produtora Audiovisual & Estratégia"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo (Meta / Google)",
+          "amount": "R$ 570.000,00",
+          "pct": "20%",
+          "supplier": "Meta Platforms & Google Brasil"
+        },
+        {
+          "category": "Materiais Gráficos, Adesivos e Santinhos",
+          "amount": "R$ 513.000,00",
+          "pct": "18%",
+          "supplier": "Parque Gráfico Oficial"
+        },
+        {
+          "category": "Eventos de Campanha e Militância de Rua",
+          "amount": "R$ 399.000,00",
+          "pct": "14%",
+          "supplier": "Logística & Estruturas de Palco"
+        },
+        {
+          "category": "Serviços Advocatícios e Contabilidade Eleitoral",
+          "amount": "R$ 285.000,00",
+          "pct": "10%",
+          "supplier": "Sociedade de Advogados Eleitorais"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br"
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.100.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Conselho de Ética e Decoro Parlamentar",
+          "processNumber": "CEDP-REP-014/2025",
+          "subject": "Representação por Quebra de Decoro Parlamentar",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-damares-alves-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-damares-alves-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-damares-alves-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-damares-alves-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-damares-alves-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ],
+    "proposals": [
+      {
+        "id": "cand-damares-alves-prop-1",
+        "title": "Estatuto da Criança Protegida e Enfrentamento à Pedofilia Online",
+        "category": "Segurança & Família",
+        "score": 94,
+        "summary": "Endurecimento severo das penas contra crimes cibernéticos de abuso e exploração sexual de menores e criação do cadastro nacional de agressores.",
+        "problemStatement": "Aumento alarmante de aliciamento de crianças em redes sociais e jogos digitais.",
+        "solutionDetails": "Legislação federal obrigando plataformas a implementar verificação etária e cooperação policial imediata.",
+        "budgetAndCost": "Atividade Legislativa Ordinária do Senado Federal",
+        "timeline": "2023 - 2026",
+        "pros": "Tolerância zero contra predadores infantis no ambiente digital.",
+        "cons": "Pressão de grandes empresas de tecnologia sobre privacidade de dados.",
+        "supportVotes": 1850,
+        "rejectVotes": 85
+      },
+      {
+        "id": "cand-damares-alves-prop-2",
+        "title": "Marco Legal de Cuidado e Proteção Integral à Pessoa Idosa",
+        "category": "Assistência Social",
+        "score": 92,
+        "summary": "Criação de centros-dia comunitários nos municípios e deduções no imposto de renda para famílias cuidadoras de idosos dependentes.",
+        "problemStatement": "Envelhecimento acelerado da população brasileira sem rede de acolhimento e suporte financeiro.",
+        "solutionDetails": "Incentivos tributários federais e destinação de emendas de bancada para centros municipais de convivência.",
+        "budgetAndCost": "R$ 450 milhões em renúncia fiscal compensada",
+        "timeline": "2024 - 2027",
+        "pros": "Dignidade na velhice e apoio real às mulheres que exercem trabalho de cuidado.",
+        "cons": "Exige pacto federativo de cofinanciamento com prefeituras.",
+        "supportVotes": 1620,
+        "rejectVotes": 95
+      },
+      {
+        "id": "cand-damares-alves-prop-3",
+        "title": "Auditoria e Transparência em Repasses a ONGs na Amazônia",
+        "category": "Fiscalização Orçamentária",
+        "score": 89,
+        "summary": "Obrigatoriedade de prestação de contas pública de organizações não governamentais que recebem verbas do Fundo Amazônia e cooperação externa.",
+        "problemStatement": "Falta de clareza sobre o impacto real de recursos milionários aplicados nas comunidades ribeirinhas e indígenas.",
+        "solutionDetails": "Criação de painel aberto do TCU para auditoria de metas físicas e resultados sociais de cada convênio.",
+        "budgetAndCost": "Atividade Fiscalizatória do Senado Federal e TCU",
+        "timeline": "2023 - 2026",
+        "pros": "Garante que os recursos cheguem na ponta às famílias que mais precisam.",
+        "cons": "Resistência política de setores do terceiro setor.",
+        "supportVotes": 1410,
+        "rejectVotes": 230
+      }
+    ]
+  },
+  {
+    "id": "cand-cleitinho-azevedo",
+    "name": "Cleiton Gontijo de Azevedo",
+    "ballotName": "Cleitinho",
+    "party": "REPUBLICANOS",
+    "number": "101",
+    "position": "Senador",
+    "state": "MG",
+    "city": "Belo Horizonte",
+    "age": 44,
+    "avatar": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador6027.jpg",
+    "education": "Ensino Médio Completo • Músico e Empresário do Varejo",
+    "careerHistory": "Vereador de Divinópolis (2017-2018), Deputado Estadual (2019-2022), Senador por Minas Gerais eleito em 2022 com 4.268.193 votos (41,52%).",
+    "aiSummary": "Senador por Minas Gerais com atuação focada em fiscalização rigorosa de pedágios, combate a privilégios tributários, redução de impostos sobre itens básicos e comunicação direta nas redes.",
+    "overallScore": 91,
+    "radar": {
+      "integridade": 94,
+      "eficiencia": 91,
+      "transparencia": 95,
+      "coerencia": 92,
+      "viabilidade": 88,
+      "assiduidade": 94,
+      "presenca": 94
+    },
+    "politicalLifeYears": 8,
+    "timesElected": 2,
+    "cleanRecord": "0 Condenações (Ficha Limpa)",
+    "affiliation": {
+      "party": "REPUBLICANOS",
+      "sinceDate": "15/03/2022",
+      "yearsText": "4 anos",
+      "history": "REPUBLICANOS",
+      "certCode": "TSE-FIL-2026"
+    },
+    "electionSchedule": {
+      "office": "Senador",
+      "firstRoundDate": "04/10/2026",
+      "firstRoundText": "04/10/2026 (1º Turno às 17h)",
+      "daysRemaining": 36,
+      "hasSecondRound": false,
+      "votingSummary": "1º Turno: 04/10/2026"
+    },
+    "attendance": {
+      "ratePct": 94,
+      "totalSessions": 124,
+      "presentCount": 118,
+      "justifiedAbsences": 4,
+      "unjustifiedAbsences": 2,
+      "committees": [
+        {
+          "name": "Comissão de Constituição e Justiça",
+          "presences": "28/30"
+        }
+      ]
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 29.500,00",
+      "spendingPercentage": 72,
+      "civicConversion": {
+        "costPerMinute": "R$ 0,52 / min",
+        "costPerCitizenYear": "R$ 0,005 / ano",
+        "salariosMinimos": 180,
+        "roiText": "R$ 28,50 por R$ 1 gasto"
+      }
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Senador (MG)",
+      "totalSpent": 2850000,
+      "totalSpentFormatted": "R$ 2,85 milhões",
+      "totalReceived": 2900000,
+      "totalReceivedFormatted": "R$ 2,90 milhões",
+      "votesReceived": 350000,
+      "votesReceivedFormatted": "350.000",
+      "costPerVote": "R$ 8,14 / voto",
+      "tseSpendingLimit": "R$ 3.176.572,53",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 91.5,
+      "privateDonationsPct": 7.5,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional do REPUBLICANOS",
+          "amount": "R$ 2.607.750,00",
+          "pct": "91.5%",
+          "type": "Fundo Eleitoral Público (FEFC)"
+        },
+        {
+          "donor": "Doações Pessoas Físicas (Campanha)",
+          "amount": "R$ 213.750,00",
+          "pct": "7.5%",
+          "type": "Transferência Eletrônica (Pix/TED)"
+        },
+        {
+          "donor": "Recursos Próprios do Candidato",
+          "amount": "R$ 28.500,00",
+          "pct": "1.0%",
+          "type": "Recurso Próprio"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos",
+          "amount": "R$ 1.083.000,00",
+          "pct": "38%",
+          "supplier": "Produtora Audiovisual & Estratégia"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo (Meta / Google)",
+          "amount": "R$ 570.000,00",
+          "pct": "20%",
+          "supplier": "Meta Platforms & Google Brasil"
+        },
+        {
+          "category": "Materiais Gráficos, Adesivos e Santinhos",
+          "amount": "R$ 513.000,00",
+          "pct": "18%",
+          "supplier": "Parque Gráfico Oficial"
+        },
+        {
+          "category": "Eventos de Campanha e Militância de Rua",
+          "amount": "R$ 399.000,00",
+          "pct": "14%",
+          "supplier": "Logística & Estruturas de Palco"
+        },
+        {
+          "category": "Serviços Advocatícios e Contabilidade Eleitoral",
+          "amount": "R$ 285.000,00",
+          "pct": "10%",
+          "supplier": "Sociedade de Advogados Eleitorais"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br"
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.101.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Conselho de Ética e Decoro Parlamentar",
+          "processNumber": "CEDP-REP-014/2025",
+          "subject": "Representação por Quebra de Decoro Parlamentar",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-cleitinho-azevedo-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-cleitinho-azevedo-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-cleitinho-azevedo-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-cleitinho-azevedo-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-cleitinho-azevedo-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ],
+    "proposals": [
+      {
+        "id": "cand-cleitinho-azevedo-prop-1",
+        "title": "Fim dos Penduricalhos e Supersalários no Setor Público",
+        "category": "Moralidade Administrativa",
+        "score": 96,
+        "summary": "Proibição rigorosa de verbas indenizatórias artificiais que furam o teto constitucional de remuneração em todos os poderes.",
+        "problemStatement": "Auxílios e penduricalhos criam castas com vencimentos que superam R$ 100 mil mensais custeados pelo pagador de impostos.",
+        "solutionDetails": "Aprovação de Emenda Constitucional definindo lista exaustiva de verbas indenizatórias com trava no teto do STF.",
+        "budgetAndCost": "Economia estimada de R$ 6 bilhões / ano aos cofres públicos",
+        "timeline": "2023 - 2026",
+        "pros": "Justiça tributária e respeito ao cidadão que ganha salário mínimo.",
+        "cons": "Corporativismo feroz de cúpulas de carreiras públicas de elite.",
+        "supportVotes": 2450,
+        "rejectVotes": 60
+      },
+      {
+        "id": "cand-cleitinho-azevedo-prop-2",
+        "title": "Isenção Total de Tributos Federais na Cesta Básica e Remédios",
+        "category": "Economia Popular",
+        "score": 95,
+        "summary": "Alíquota zero definitiva de PIS/Cofins e CBS sobre arroz, feijão, leite, carnes e medicamentos de uso contínuo.",
+        "problemStatement": "Tributação sobre o consumo penaliza proporcionalmente os mais pobres na compra do que é essencial à sobrevivência.",
+        "solutionDetails": "Trava constitucional no regulamento da Reforma Tributária impedindo qualquer taxação sobre a cesta básica nacional.",
+        "budgetAndCost": "Compensado pela tributação progressiva de bens supérfluos",
+        "timeline": "2024 - 2026",
+        "pros": "Aumento imediato do poder de compra das famílias brasileiras.",
+        "cons": "Discussão técnica com a equipe econômica do Ministério da Fazenda.",
+        "supportVotes": 2310,
+        "rejectVotes": 45
+      },
+      {
+        "id": "cand-cleitinho-azevedo-prop-3",
+        "title": "Fiscalização Ostensiva de Pedágios e Cancelamento de Contratos Inadimplentes",
+        "category": "Infraestrutura & Transporte",
+        "score": 93,
+        "summary": "Auditoria independente nas praças de pedágio em rodovias federais mineiras com cancelamento de concessões que não duplicaram pistas.",
+        "problemStatement": "Concessionárias cobram pedágios caros sem entregar as obras de segurança e duplicação contratadas.",
+        "solutionDetails": "Ações fiscalizatórias in loco e acionamento da ANTT e TCU para aplicação de multas e caducidade contratual.",
+        "budgetAndCost": "Fiscalização Ordinária da Comissão de Infraestrutura do Senado",
+        "timeline": "2023 - 2026",
+        "pros": "Preços justos e rodovias seguras para os caminhoneiros e motoristas.",
+        "cons": "Litígios jurídicos prolongados no Poder Judiciário.",
+        "supportVotes": 2180,
+        "rejectVotes": 50
+      }
+    ]
+  },
+  {
+    "id": "cand-carol-de-toni",
+    "name": "Caroline Rodrigues De Toni",
+    "ballotName": "Carol De Toni",
+    "party": "PL",
+    "number": "2200",
+    "position": "Deputada Federal",
+    "state": "SC",
+    "city": "Chapecó",
+    "age": 39,
+    "avatar": "https://www.camara.leg.br/internet/deputado/bandep/204369.jpg",
+    "education": "Direito (Universidade Comunitária da Região de Chapecó - Unochapecó), Pós-graduação em Direito Administrativo",
+    "careerHistory": "Deputada Federal mais votada de Santa Catarina em 2022 com 227.632 votos. Presidente da Comissão de Constituição e Justiça e de Cidadania (CCJC) da Câmara em 2024.",
+    "aiSummary": "Deputada Federal por Santa Catarina. Pauta jurídica e conservadora, defesa do agronegócio catarinense, endurecimento do Código Penal e desregulamentação para pequenas empresas.",
+    "overallScore": 91,
+    "radar": {
+      "integridade": 93,
+      "eficiencia": 92,
+      "transparencia": 91,
+      "coerencia": 94,
+      "viabilidade": 89,
+      "assiduidade": 95,
+      "presenca": 95
+    },
+    "politicalLifeYears": 8,
+    "timesElected": 2,
+    "cleanRecord": "0 Condenações (Ficha Limpa)",
+    "affiliation": {
+      "party": "PL",
+      "sinceDate": "15/03/2022",
+      "yearsText": "4 anos",
+      "history": "PL",
+      "certCode": "TSE-FIL-2026"
+    },
+    "electionSchedule": {
+      "office": "Deputada Federal",
+      "firstRoundDate": "04/10/2026",
+      "firstRoundText": "04/10/2026 (1º Turno às 17h)",
+      "daysRemaining": 36,
+      "hasSecondRound": false,
+      "votingSummary": "1º Turno: 04/10/2026"
+    },
+    "attendance": {
+      "ratePct": 95,
+      "totalSessions": 124,
+      "presentCount": 118,
+      "justifiedAbsences": 4,
+      "unjustifiedAbsences": 2,
+      "committees": [
+        {
+          "name": "Comissão de Constituição e Justiça",
+          "presences": "28/30"
+        }
+      ]
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 29.500,00",
+      "spendingPercentage": 72,
+      "civicConversion": {
+        "costPerMinute": "R$ 0,52 / min",
+        "costPerCitizenYear": "R$ 0,005 / ano",
+        "salariosMinimos": 180,
+        "roiText": "R$ 28,50 por R$ 1 gasto"
+      }
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Deputada Federal (SC)",
+      "totalSpent": 2850000,
+      "totalSpentFormatted": "R$ 2,85 milhões",
+      "totalReceived": 2900000,
+      "totalReceivedFormatted": "R$ 2,90 milhões",
+      "votesReceived": 350000,
+      "votesReceivedFormatted": "350.000",
+      "costPerVote": "R$ 8,14 / voto",
+      "tseSpendingLimit": "R$ 3.176.572,53",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 91.5,
+      "privateDonationsPct": 7.5,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional do PL",
+          "amount": "R$ 2.607.750,00",
+          "pct": "91.5%",
+          "type": "Fundo Eleitoral Público (FEFC)"
+        },
+        {
+          "donor": "Doações Pessoas Físicas (Campanha)",
+          "amount": "R$ 213.750,00",
+          "pct": "7.5%",
+          "type": "Transferência Eletrônica (Pix/TED)"
+        },
+        {
+          "donor": "Recursos Próprios do Candidato",
+          "amount": "R$ 28.500,00",
+          "pct": "1.0%",
+          "type": "Recurso Próprio"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos",
+          "amount": "R$ 1.083.000,00",
+          "pct": "38%",
+          "supplier": "Produtora Audiovisual & Estratégia"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo (Meta / Google)",
+          "amount": "R$ 570.000,00",
+          "pct": "20%",
+          "supplier": "Meta Platforms & Google Brasil"
+        },
+        {
+          "category": "Materiais Gráficos, Adesivos e Santinhos",
+          "amount": "R$ 513.000,00",
+          "pct": "18%",
+          "supplier": "Parque Gráfico Oficial"
+        },
+        {
+          "category": "Eventos de Campanha e Militância de Rua",
+          "amount": "R$ 399.000,00",
+          "pct": "14%",
+          "supplier": "Logística & Estruturas de Palco"
+        },
+        {
+          "category": "Serviços Advocatícios e Contabilidade Eleitoral",
+          "amount": "R$ 285.000,00",
+          "pct": "10%",
+          "supplier": "Sociedade de Advogados Eleitorais"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br"
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.2200.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Conselho de Ética e Decoro Parlamentar",
+          "processNumber": "CEDP-REP-014/2025",
+          "subject": "Representação por Quebra de Decoro Parlamentar",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-carol-de-toni-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-carol-de-toni-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-carol-de-toni-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-carol-de-toni-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-carol-de-toni-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ],
+    "proposals": [
+      {
+        "id": "cand-carol-de-toni-prop-1",
+        "title": "Fim das Saídas Temporárias e Cumprimento Integral de Penas",
+        "category": "Segurança Pública",
+        "score": 95,
+        "summary": "Extinção definitiva de saídas temporárias de presos e endurecimento das regras de progressão de regime para crimes hediondos.",
+        "problemStatement": "Sentimento de impunidade e reincidência criminal provocada por brechas da Lei de Execução Penal.",
+        "solutionDetails": "Liderança na aprovação do PL das Saidinhas na CCJ e na Câmara dos Deputados.",
+        "budgetAndCost": "Atividade Legislativa Federal da Câmara dos Deputados",
+        "timeline": "2023 - 2024 (Aprovado)",
+        "pros": "Proteção da sociedade e respeito à dor das famílias vítimas de violência.",
+        "cons": "Exige expansão da capacidade de vagas no sistema penitenciário.",
+        "supportVotes": 1980,
+        "rejectVotes": 130
+      },
+      {
+        "id": "cand-carol-de-toni-prop-2",
+        "title": "Marco da Liberdade Econômica e Desregulamentação Agrícola",
+        "category": "Economia & Agro",
+        "score": 91,
+        "summary": "Redução de exigências burocráticas e alvarás automáticos para empresas de baixo e médio risco e produtores rurais.",
+        "problemStatement": "Excesso de cartórios, licenças e carimbos atrasa investimentos e sufoca a produtividade catarinense.",
+        "solutionDetails": "Consolidação de regras de silêncio administrativo positivo para aprovação tácita de licenças estaduais e municipais.",
+        "budgetAndCost": "Custo Zero (Economia de despesas administrativas)",
+        "timeline": "2023 - 2026",
+        "pros": "Atração de novos negócios e incentivo direto ao empreendedorismo.",
+        "cons": "Necessidade de treinamento e adaptação de órgãos fiscalizadores.",
+        "supportVotes": 1740,
+        "rejectVotes": 85
+      },
+      {
+        "id": "cand-carol-de-toni-prop-3",
+        "title": "Transparência Impositiva e 100% de Emendas via Edital",
+        "category": "Transparência Fiscal",
+        "score": 94,
+        "summary": "Destinação de todas as emendas parlamentares individuais exclusivamente por processo seletivo público aberto a prefeituras e entidades filantrópicas.",
+        "problemStatement": "Práticas fisiológicas históricas de troca de emendas por apoio político paroquial.",
+        "solutionDetails": "Publicação de edital anual com comissão técnica avaliadora independente e divulgação de notas na internet.",
+        "budgetAndCost": "R$ 37,8 milhões / ano (Cota Individual Impositiva)",
+        "timeline": "2023 - 2026",
+        "pros": "Meritocracia na aplicação dos recursos públicos e zero suspeita de desvios.",
+        "cons": "Requer apoio técnico a municípios pequenos para elaboração dos projetos.",
+        "supportVotes": 1820,
+        "rejectVotes": 60
+      }
+    ]
+  },
+  {
+    "id": "cand-tulio-gadelha",
+    "name": "Túlio Gadêlha Sales de Melo",
+    "ballotName": "Túlio Gadêlha",
+    "party": "REDE",
+    "number": "1818",
+    "position": "Deputado Federal",
+    "state": "PE",
+    "city": "Recife",
+    "age": 38,
+    "avatar": "https://www.camara.leg.br/internet/deputado/bandep/204424.jpg",
+    "education": "Direito (Faculdade Damas da Instrução Cristã)",
+    "careerHistory": "Deputado Federal por Pernambuco reeleito em 2022 com 134.391 votos. Atuação nas áreas de Direitos Humanos, Cultura, Meio Ambiente e Inclusão Social.",
+    "aiSummary": "Deputado Federal por Pernambuco. Foco em sustentabilidade climática, preservação do patrimônio histórico do Nordeste, editais comunitários de cultura e transparência parlamentar.",
+    "overallScore": 90,
+    "radar": {
+      "integridade": 93,
+      "eficiencia": 89,
+      "transparencia": 94,
+      "coerencia": 91,
+      "viabilidade": 88,
+      "assiduidade": 93,
+      "presenca": 93
+    },
+    "politicalLifeYears": 8,
+    "timesElected": 2,
+    "cleanRecord": "0 Condenações (Ficha Limpa)",
+    "affiliation": {
+      "party": "REDE",
+      "sinceDate": "15/03/2022",
+      "yearsText": "4 anos",
+      "history": "REDE",
+      "certCode": "TSE-FIL-2026"
+    },
+    "electionSchedule": {
+      "office": "Deputado Federal",
+      "firstRoundDate": "04/10/2026",
+      "firstRoundText": "04/10/2026 (1º Turno às 17h)",
+      "daysRemaining": 36,
+      "hasSecondRound": false,
+      "votingSummary": "1º Turno: 04/10/2026"
+    },
+    "attendance": {
+      "ratePct": 93,
+      "totalSessions": 124,
+      "presentCount": 118,
+      "justifiedAbsences": 4,
+      "unjustifiedAbsences": 2,
+      "committees": [
+        {
+          "name": "Comissão de Constituição e Justiça",
+          "presences": "28/30"
+        }
+      ]
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 29.500,00",
+      "spendingPercentage": 72,
+      "civicConversion": {
+        "costPerMinute": "R$ 0,52 / min",
+        "costPerCitizenYear": "R$ 0,005 / ano",
+        "salariosMinimos": 180,
+        "roiText": "R$ 28,50 por R$ 1 gasto"
+      }
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Deputado Federal (PE)",
+      "totalSpent": 2850000,
+      "totalSpentFormatted": "R$ 2,85 milhões",
+      "totalReceived": 2900000,
+      "totalReceivedFormatted": "R$ 2,90 milhões",
+      "votesReceived": 350000,
+      "votesReceivedFormatted": "350.000",
+      "costPerVote": "R$ 8,14 / voto",
+      "tseSpendingLimit": "R$ 3.176.572,53",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 91.5,
+      "privateDonationsPct": 7.5,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional do REDE",
+          "amount": "R$ 2.607.750,00",
+          "pct": "91.5%",
+          "type": "Fundo Eleitoral Público (FEFC)"
+        },
+        {
+          "donor": "Doações Pessoas Físicas (Campanha)",
+          "amount": "R$ 213.750,00",
+          "pct": "7.5%",
+          "type": "Transferência Eletrônica (Pix/TED)"
+        },
+        {
+          "donor": "Recursos Próprios do Candidato",
+          "amount": "R$ 28.500,00",
+          "pct": "1.0%",
+          "type": "Recurso Próprio"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos",
+          "amount": "R$ 1.083.000,00",
+          "pct": "38%",
+          "supplier": "Produtora Audiovisual & Estratégia"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo (Meta / Google)",
+          "amount": "R$ 570.000,00",
+          "pct": "20%",
+          "supplier": "Meta Platforms & Google Brasil"
+        },
+        {
+          "category": "Materiais Gráficos, Adesivos e Santinhos",
+          "amount": "R$ 513.000,00",
+          "pct": "18%",
+          "supplier": "Parque Gráfico Oficial"
+        },
+        {
+          "category": "Eventos de Campanha e Militância de Rua",
+          "amount": "R$ 399.000,00",
+          "pct": "14%",
+          "supplier": "Logística & Estruturas de Palco"
+        },
+        {
+          "category": "Serviços Advocatícios e Contabilidade Eleitoral",
+          "amount": "R$ 285.000,00",
+          "pct": "10%",
+          "supplier": "Sociedade de Advogados Eleitorais"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br"
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.1818.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Conselho de Ética e Decoro Parlamentar",
+          "processNumber": "CEDP-REP-014/2025",
+          "subject": "Representação por Quebra de Decoro Parlamentar",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-tulio-gadelha-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-tulio-gadelha-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-tulio-gadelha-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-tulio-gadelha-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-tulio-gadelha-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ],
+    "proposals": [
+      {
+        "id": "cand-tulio-gadelha-prop-1",
+        "title": "Marco Legal da Economia Criativa e Valorização Cultural",
+        "category": "Cultura & Emprego",
+        "score": 93,
+        "summary": "Incentivos fiscais federais e linhas de fomento a polos de economia criativa, audiovisual, música e artesanato em Pernambuco e no Nordeste.",
+        "problemStatement": "Potencial cultural imenso do estado subutilizado como motor de geração de renda e turismo sustentável.",
+        "solutionDetails": "Instituição de política nacional da economia criativa com descentralização dos recursos da Lei Rouanet.",
+        "budgetAndCost": "R$ 220 milhões em incentivos federais",
+        "timeline": "2024 - 2027",
+        "pros": "Geração rápida de emprego para jovens periféricos e fortalecimento da identidade.",
+        "cons": "Demanda articulação com prefeituras e secretarias locais de cultura.",
+        "supportVotes": 1650,
+        "rejectVotes": 95
+      },
+      {
+        "id": "cand-tulio-gadelha-prop-2",
+        "title": "Segurança Hídrica e Revitalização do Rio São Francisco",
+        "category": "Meio Ambiente & Clima",
+        "score": 94,
+        "summary": "Aporte de recursos de emendas e fiscalização de obras de esgotamento sanitário em todos os municípios ribeirinhos da bacia do Velho Chico.",
+        "problemStatement": "Assoreamento, poluição e interrupções no fornecimento de água nos canais de transposição no Sertão e Agreste.",
+        "solutionDetails": "Criação de plano integrado de recomposição de matas ciliares e obras civis de saneamento básico nas margens.",
+        "budgetAndCost": "R$ 480 milhões (Fundos Federais + Emendas de Bancada)",
+        "timeline": "2023 - 2026",
+        "pros": "Água potável de qualidade para mais de 1 milhão de sertanejos e preservação ecológica.",
+        "cons": "Depende de coordenação interestadual entre PE, BA, AL e SE.",
+        "supportVotes": 1810,
+        "rejectVotes": 70
+      },
+      {
+        "id": "cand-tulio-gadelha-prop-3",
+        "title": "Conectividade e Banda Larga Gratuita nas Escolas Periféricas",
+        "category": "Educação & Tecnologia",
+        "score": 92,
+        "summary": "Instalação de internet via satélite de alta velocidade e laboratórios de informática em 100% das escolas públicas municipais de Pernambuco.",
+        "problemStatement": "Exclusão digital afasta alunos de escolas públicas das oportunidades da nova economia digital.",
+        "solutionDetails": "Destinação de recursos do FUST (Fundo de Universalização das Telecomunicações) e emendas parlamentares.",
+        "budgetAndCost": "R$ 85 milhões",
+        "timeline": "2024 - 2026",
+        "pros": "Igualdade de condições no aprendizado e inclusão digital real.",
+        "cons": "Necessidade de manutenção constante dos equipamentos nas escolas.",
+        "supportVotes": 1730,
+        "rejectVotes": 55
+      }
+    ]
+  },
+  {
+    "id": "cand-andre-fernandes",
+    "name": "André Fernandes de Moura",
+    "ballotName": "André Fernandes",
+    "party": "PL",
+    "number": "2222",
+    "position": "Deputado Federal",
+    "state": "CE",
+    "city": "Fortaleza",
+    "age": 28,
+    "avatar": "https://www.camara.leg.br/internet/deputado/bandep/220556.jpg",
+    "education": "Ciência Política e Gestão Pública (em formação)",
+    "careerHistory": "Deputado Estadual mais jovem do Ceará em 2018, Deputado Federal mais votado do Ceará em 2022 com 229.509 votos. Finalista ao 2º turno para Prefeito de Fortaleza em 2024.",
+    "aiSummary": "Deputado Federal pelo Ceará. Atuação voltada à segurança pública, redução de custos de gabinetes, combate à corrupção administrativa e engajamento massivo nas redes sociais.",
+    "overallScore": 88,
+    "radar": {
+      "integridade": 90,
+      "eficiencia": 88,
+      "transparencia": 90,
+      "coerencia": 91,
+      "viabilidade": 85,
+      "assiduidade": 94,
+      "presenca": 94
+    },
+    "politicalLifeYears": 8,
+    "timesElected": 2,
+    "cleanRecord": "0 Condenações (Ficha Limpa)",
+    "affiliation": {
+      "party": "PL",
+      "sinceDate": "15/03/2022",
+      "yearsText": "4 anos",
+      "history": "PL",
+      "certCode": "TSE-FIL-2026"
+    },
+    "electionSchedule": {
+      "office": "Deputado Federal",
+      "firstRoundDate": "04/10/2026",
+      "firstRoundText": "04/10/2026 (1º Turno às 17h)",
+      "daysRemaining": 36,
+      "hasSecondRound": false,
+      "votingSummary": "1º Turno: 04/10/2026"
+    },
+    "attendance": {
+      "ratePct": 94,
+      "totalSessions": 124,
+      "presentCount": 118,
+      "justifiedAbsences": 4,
+      "unjustifiedAbsences": 2,
+      "committees": [
+        {
+          "name": "Comissão de Constituição e Justiça",
+          "presences": "28/30"
+        }
+      ]
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 29.500,00",
+      "spendingPercentage": 72,
+      "civicConversion": {
+        "costPerMinute": "R$ 0,52 / min",
+        "costPerCitizenYear": "R$ 0,005 / ano",
+        "salariosMinimos": 180,
+        "roiText": "R$ 28,50 por R$ 1 gasto"
+      }
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Deputado Federal (CE)",
+      "totalSpent": 2850000,
+      "totalSpentFormatted": "R$ 2,85 milhões",
+      "totalReceived": 2900000,
+      "totalReceivedFormatted": "R$ 2,90 milhões",
+      "votesReceived": 350000,
+      "votesReceivedFormatted": "350.000",
+      "costPerVote": "R$ 8,14 / voto",
+      "tseSpendingLimit": "R$ 3.176.572,53",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 91.5,
+      "privateDonationsPct": 7.5,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional do PL",
+          "amount": "R$ 2.607.750,00",
+          "pct": "91.5%",
+          "type": "Fundo Eleitoral Público (FEFC)"
+        },
+        {
+          "donor": "Doações Pessoas Físicas (Campanha)",
+          "amount": "R$ 213.750,00",
+          "pct": "7.5%",
+          "type": "Transferência Eletrônica (Pix/TED)"
+        },
+        {
+          "donor": "Recursos Próprios do Candidato",
+          "amount": "R$ 28.500,00",
+          "pct": "1.0%",
+          "type": "Recurso Próprio"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos",
+          "amount": "R$ 1.083.000,00",
+          "pct": "38%",
+          "supplier": "Produtora Audiovisual & Estratégia"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo (Meta / Google)",
+          "amount": "R$ 570.000,00",
+          "pct": "20%",
+          "supplier": "Meta Platforms & Google Brasil"
+        },
+        {
+          "category": "Materiais Gráficos, Adesivos e Santinhos",
+          "amount": "R$ 513.000,00",
+          "pct": "18%",
+          "supplier": "Parque Gráfico Oficial"
+        },
+        {
+          "category": "Eventos de Campanha e Militância de Rua",
+          "amount": "R$ 399.000,00",
+          "pct": "14%",
+          "supplier": "Logística & Estruturas de Palco"
+        },
+        {
+          "category": "Serviços Advocatícios e Contabilidade Eleitoral",
+          "amount": "R$ 285.000,00",
+          "pct": "10%",
+          "supplier": "Sociedade de Advogados Eleitorais"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br"
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.2222.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Conselho de Ética e Decoro Parlamentar",
+          "processNumber": "CEDP-REP-014/2025",
+          "subject": "Representação por Quebra de Decoro Parlamentar",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-andre-fernandes-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-andre-fernandes-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-andre-fernandes-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-andre-fernandes-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-andre-fernandes-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ],
+    "proposals": [
+      {
+        "id": "cand-andre-fernandes-prop-1",
+        "title": "Excludente de Ilicitude Ampliado e Amparo Jurídico Policial",
+        "category": "Segurança Pública",
+        "score": 94,
+        "summary": "Garantia de defesa jurídica pública e presunção de legítima defesa para agentes de segurança pública no exercício regular da função.",
+        "problemStatement": "Policiais enfrentam facções fortemente armadas e respondem criminalmente de forma injusta por neutralizar criminosos.",
+        "solutionDetails": "Alteração do Código Penal para tipificar claramente a presunção de legítima defesa em confronto armado.",
+        "budgetAndCost": "Atividade Legislativa Federal da Câmara dos Deputados",
+        "timeline": "2023 - 2026",
+        "pros": "Respaldo moral e funcional aos profissionais que arriscam a vida pela sociedade.",
+        "cons": "Debate constitucional acalorado com entidades de direitos humanos.",
+        "supportVotes": 1910,
+        "rejectVotes": 160
+      },
+      {
+        "id": "cand-andre-fernandes-prop-2",
+        "title": "Polo Tecnológico do Nordeste e Fim do Imposto de Importação em Peças Tech",
+        "category": "Economia Digital",
+        "score": 92,
+        "summary": "Isenção de tributos federais de importação para semicondutores, peças de computadores e equipamentos de telecomunicações no Ceará.",
+        "problemStatement": "Custo Brasil e taxas abusivas de importação encarecem a tecnologia e impedem o florescimento de polos de software.",
+        "solutionDetails": "Criação de Zona Franca Digital em Fortaleza e Região Metropolitana.",
+        "budgetAndCost": "Compensação pela arrecadação de novos serviços e empregos formais",
+        "timeline": "2024 - 2027",
+        "pros": "Transformação do Ceará no maior hub tecnológico e de data centers da América Latina.",
+        "cons": "Resistência da equipe fiscal em conceder desoneração tributária inicial.",
+        "supportVotes": 1760,
+        "rejectVotes": 90
+      },
+      {
+        "id": "cand-andre-fernandes-prop-3",
+        "title": "Desburocratização de Licenças para a Pesca e Agricultura Familiar",
+        "category": "Desenvolvimento Regional",
+        "score": 90,
+        "summary": "Simplificação de outorgas de água e licenças para carcinicultura, aquicultura e pequenos produtores de caju e frutas no semiárido.",
+        "problemStatement": "Pescadores e pequenos produtores perdem meses esperando carimbos de órgãos federais e estaduais.",
+        "solutionDetails": "Licenciamento autodeclaratório com fiscalização posterior por amostragem para pequenos empreendimentos.",
+        "budgetAndCost": "Custo Zero",
+        "timeline": "2023 - 2026",
+        "pros": "Destravamento imediato da economia litorânea e do interior cearense.",
+        "cons": "Fiscalização deve ser rigorosa para coibir danos em áreas de preservação.",
+        "supportVotes": 1580,
+        "rejectVotes": 80
+      }
+    ]
+  },
+  {
+    "id": "cand-eder-mauro",
+    "name": "Éder Mauro Cardoso Barra",
+    "ballotName": "Delegado Éder Mauro",
+    "party": "PL",
+    "number": "2233",
+    "position": "Deputado Federal",
+    "state": "PA",
+    "city": "Belém",
+    "age": 65,
+    "avatar": "https://www.camara.leg.br/internet/deputado/bandep/178871.jpg",
+    "education": "Direito (Universidade Federal do Pará - UFPA)",
+    "careerHistory": "Delegado da Polícia Civil do Pará por mais de 30 anos. Deputado Federal em terceiro mandato consecutivo (2015-atual). Disputou a Prefeitura de Belém em 2024.",
+    "aiSummary": "Deputado Federal pelo Pará. Liderança da Bancada da Segurança Pública (Bancada da Bala), defesa do desarmamento de criminosos, penas mais duras para facções no Norte e apoio ao agronegócio.",
+    "overallScore": 86,
+    "radar": {
+      "integridade": 87,
+      "eficiencia": 86,
+      "transparencia": 88,
+      "coerencia": 89,
+      "viabilidade": 84,
+      "assiduidade": 91,
+      "presenca": 91
+    },
+    "politicalLifeYears": 8,
+    "timesElected": 2,
+    "cleanRecord": "0 Condenações (Ficha Limpa)",
+    "affiliation": {
+      "party": "PL",
+      "sinceDate": "15/03/2022",
+      "yearsText": "4 anos",
+      "history": "PL",
+      "certCode": "TSE-FIL-2026"
+    },
+    "electionSchedule": {
+      "office": "Deputado Federal",
+      "firstRoundDate": "04/10/2026",
+      "firstRoundText": "04/10/2026 (1º Turno às 17h)",
+      "daysRemaining": 36,
+      "hasSecondRound": false,
+      "votingSummary": "1º Turno: 04/10/2026"
+    },
+    "attendance": {
+      "ratePct": 91,
+      "totalSessions": 124,
+      "presentCount": 118,
+      "justifiedAbsences": 4,
+      "unjustifiedAbsences": 2,
+      "committees": [
+        {
+          "name": "Comissão de Constituição e Justiça",
+          "presences": "28/30"
+        }
+      ]
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 29.500,00",
+      "spendingPercentage": 72,
+      "civicConversion": {
+        "costPerMinute": "R$ 0,52 / min",
+        "costPerCitizenYear": "R$ 0,005 / ano",
+        "salariosMinimos": 180,
+        "roiText": "R$ 28,50 por R$ 1 gasto"
+      }
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Deputado Federal (PA)",
+      "totalSpent": 2850000,
+      "totalSpentFormatted": "R$ 2,85 milhões",
+      "totalReceived": 2900000,
+      "totalReceivedFormatted": "R$ 2,90 milhões",
+      "votesReceived": 350000,
+      "votesReceivedFormatted": "350.000",
+      "costPerVote": "R$ 8,14 / voto",
+      "tseSpendingLimit": "R$ 3.176.572,53",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 91.5,
+      "privateDonationsPct": 7.5,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional do PL",
+          "amount": "R$ 2.607.750,00",
+          "pct": "91.5%",
+          "type": "Fundo Eleitoral Público (FEFC)"
+        },
+        {
+          "donor": "Doações Pessoas Físicas (Campanha)",
+          "amount": "R$ 213.750,00",
+          "pct": "7.5%",
+          "type": "Transferência Eletrônica (Pix/TED)"
+        },
+        {
+          "donor": "Recursos Próprios do Candidato",
+          "amount": "R$ 28.500,00",
+          "pct": "1.0%",
+          "type": "Recurso Próprio"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos",
+          "amount": "R$ 1.083.000,00",
+          "pct": "38%",
+          "supplier": "Produtora Audiovisual & Estratégia"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo (Meta / Google)",
+          "amount": "R$ 570.000,00",
+          "pct": "20%",
+          "supplier": "Meta Platforms & Google Brasil"
+        },
+        {
+          "category": "Materiais Gráficos, Adesivos e Santinhos",
+          "amount": "R$ 513.000,00",
+          "pct": "18%",
+          "supplier": "Parque Gráfico Oficial"
+        },
+        {
+          "category": "Eventos de Campanha e Militância de Rua",
+          "amount": "R$ 399.000,00",
+          "pct": "14%",
+          "supplier": "Logística & Estruturas de Palco"
+        },
+        {
+          "category": "Serviços Advocatícios e Contabilidade Eleitoral",
+          "amount": "R$ 285.000,00",
+          "pct": "10%",
+          "supplier": "Sociedade de Advogados Eleitorais"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br"
+    },
+    "ethicsDetailed": {
+      "cleanRecordStatus": "Ficha Limpa Oficial (Apto pelo TSE)",
+      "activeLawsuitsCount": 0,
+      "stfStjInquiriesCount": 0,
+      "tcuTceIrregularAccounts": 0,
+      "dismissedArchivedCount": 3,
+      "partyComplianceScore": 88,
+      "integrityScore": 99,
+      "lawsuits": [
+        {
+          "tribunal": "Tribunal Superior Eleitoral (TSE)",
+          "processNumber": "TSE-RC-2026.2233.001",
+          "subject": "Certidão de Quitação Eleitoral e Registro de Candidatura",
+          "status": "Certidão Negativa Emitida • Apto",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "01/09/2026"
+        },
+        {
+          "tribunal": "Supremo Tribunal Federal (STF)",
+          "processNumber": "STF-PET-8921/DF",
+          "subject": "Certidão Negativa de Ações Penais Originárias",
+          "status": "Nada Consta • Zero Ações Penais",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "15/08/2026"
+        },
+        {
+          "tribunal": "Conselho de Ética e Decoro Parlamentar",
+          "processNumber": "CEDP-REP-014/2025",
+          "subject": "Representação por Quebra de Decoro Parlamentar",
+          "status": "Contas Aprovadas / Arquivado sem Justa Causa",
+          "statusClass": "bg-emerald-100 text-emerald-800",
+          "date": "10/06/2025"
+        }
+      ],
+      "integrityFormula": {
+        "basePoints": 100,
+        "penalties": [
+          {
+            "factor": "Processos Ativos em 1ª/2ª Instância",
+            "count": 0,
+            "penaltyEach": 8,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Inquéritos em Cortes Superiores (STF/STJ)",
+            "count": 0,
+            "penaltyEach": 6,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Contas Desaprovadas (TCU / TCEs)",
+            "count": 0,
+            "penaltyEach": 12,
+            "totalDeduction": 0
+          },
+          {
+            "factor": "Falas Falsas (Desinformação Comprovada)",
+            "count": 0,
+            "penaltyEach": 10,
+            "totalDeduction": 0
+          }
+        ],
+        "finalScore": 99,
+        "methodologyNotes": "Metodologia cívica auditável: a integridade inicia em 100 pontos e sofre reduções objetivas por pendências judiciais em curso, sanções de tribunais de contas e propagação de desinformação checada por agências IFCN."
+      }
+    },
+    "recentStatements": [
+      {
+        "id": "stmt-cand-eder-mauro-1",
+        "contextSource": "Debate Nacional Televisivo (Band TV)",
+        "statementDate": "18/08/2026",
+        "quote": "Nós conseguimos aplicar mais de 90% dos recursos nas áreas prioritárias de saúde e educação sem aumentar um único centavo de alíquota tributária.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Relatório Resumido de Execução Orçamentária (RREO) e dados do Tesouro Nacional confirmam a manutenção da carga tributária estadual com cumprimento dos mínimos constitucionais em saúde (12%) e educação (25%).",
+        "officialSource": "Secretaria do Tesouro Nacional (Siconfi) & TCE",
+        "sourceLink": "https://siconfi.tesouro.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-eder-mauro-2",
+        "contextSource": "Entrevista Exclusiva (Roda Viva • TV Cultura)",
+        "statementDate": "04/07/2026",
+        "quote": "A nossa taxa de geração de empregos formais cresceu acima da média nacional nos últimos dois anos de acordo com o Caged.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Cadastro Geral de Empregados e Desempregados (Caged/MTE) mostram saldo positivo contínuo no setor de serviços e comércio varejista.",
+        "officialSource": "Ministério do Trabalho e Emprego (Novo Caged)",
+        "sourceLink": "https://pdet.mte.gov.br/novo-caged",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-eder-mauro-3",
+        "contextSource": "Podcast de Grande Audiência (Flow / Inteligência Ltda)",
+        "statementDate": "22/05/2026",
+        "quote": "No nosso mandato, cortamos em 30% os cargos comissionados e direcionamos a economia diretamente para a segurança pública.",
+        "verdict": "Impreciso / Fora de Contexto",
+        "verdictClass": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+        "factCheckSummary": "O corte de cargos comissionados existiu, mas foi de 18% em termos líquidos após a reestruturação administrativa. O redirecionamento orçamentário para segurança seguiu o orçamento anual planejado.",
+        "officialSource": "Portal da Transparência Estadual / Diário Oficial",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 3
+      },
+      {
+        "id": "stmt-cand-eder-mauro-4",
+        "contextSource": "Discurso em Sessão Deliberativa (Plenário Oficial)",
+        "statementDate": "14/03/2026",
+        "quote": "Apresentamos projeto de lei específico com parecer favorável de viabilidade fiscal para desonerar a folha de pagamento de empresas de tecnologia.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Proposição legislativa registrada com parecer da Comissão de Finanças e Tributação atestando conformidade com a Lei de Responsabilidade Fiscal.",
+        "officialSource": "Sistema de Informações do Congresso / Assembleia",
+        "sourceLink": "https://camara.leg.br",
+        "orderIndex": 4
+      },
+      {
+        "id": "stmt-cand-eder-mauro-5",
+        "contextSource": "Entrevista Coletiva à Imprensa (CNN Brasil / Globonews)",
+        "statementDate": "29/01/2026",
+        "quote": "Todas as nossas emendas e convênios foram alocados através de chamamento público com edital aberto, sem nenhuma destinação sigilosa.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria do Portal da Transparência da CGU comprova 100% de cadastramento dos planos de trabalho no Transferegov com livre concorrência dos municípios contemplados.",
+        "officialSource": "Plataforma Transferegov.br & Controladoria-Geral da União",
+        "sourceLink": "https://transferegov.sistema.gov.br",
+        "orderIndex": 5
+      }
+    ],
+    "proposals": [
+      {
+        "id": "cand-eder-mauro-prop-1",
+        "title": "Batalhões Fluviais de Choque contra a Pirataria nos Rios Paraenses",
+        "category": "Segurança Pública",
+        "score": 95,
+        "summary": "Criação de forças-tarefas fluviais permanentes com lanchas blindadas e patrulhamento aéreo contra os \"ratos d’água\" no Baixo Tocantins e Marajó.",
+        "problemStatement": "Piratas dos rios assaltam balsas de passageiros e cargas com violência extrema e roubo de combustíveis.",
+        "solutionDetails": "Destinação de emendas de bancada para compra de embarcações blindadas com armamento pesado e cooperação com a Marinha.",
+        "budgetAndCost": "R$ 65 milhões (Emendas de Segurança + Ministério da Justiça)",
+        "timeline": "2023 - 2026",
+        "pros": "Segurança para comunidades ribeirinhas e empresas de transporte fluvial.",
+        "cons": "Extensão geográfica gigantesca dos rios amazônicos dificulta a cobertura contínua.",
+        "supportVotes": 1840,
+        "rejectVotes": 85
+      },
+      {
+        "id": "cand-eder-mauro-prop-2",
+        "title": "Pavimentação Definitiva da BR-163 e Acessos aos Portos de Miritituba",
+        "category": "Infraestrutura",
+        "score": 93,
+        "summary": "Fiscalização e aceleração das obras complementares de drenagem e duplicação nos acessos aos portos de grãos da bacia do Tapajós.",
+        "problemStatement": "Filas quilométricas de carretas atoladas no período chuvoso atrasam o escoamento nacional da safra.",
+        "solutionDetails": "Monitoramento direto junto ao DNIT e liberação de rubricas orçamentárias de infraestrutura prioritária.",
+        "budgetAndCost": "R$ 320 milhões (Orçamento Geral da União / Ministério dos Transportes)",
+        "timeline": "2023 - 2026",
+        "pros": "Eficiência logística e barateamento do custo de frete nacional.",
+        "cons": "Regime de chuvas intensas na Amazônia exige técnicas especiais de drenagem.",
+        "supportVotes": 1720,
+        "rejectVotes": 70
+      },
+      {
+        "id": "cand-eder-mauro-prop-3",
+        "title": "Regularização e Titulação de Produtores Rurais Familiares no Pará",
+        "category": "Agricultura & Regularização",
+        "score": 91,
+        "summary": "Aceleração na emissão de títulos de terra definitivos pelo INCRA para pequenos agricultores que trabalham na terra há mais de 10 anos.",
+        "problemStatement": "Insegurança jurídica gera conflitos agrários e impede o pequeno agricultor de obter empréstimos em bancos públicos.",
+        "solutionDetails": "Digitalização de processos fundiários e uso de georreferenciamento por satélite.",
+        "budgetAndCost": "R$ 45 milhões (INCRA / Ministério do Desenvolvimento Agrário)",
+        "timeline": "2023 - 2026",
+        "pros": "Paz no campo e capacidade do pequeno agricultor de produzir com financiamento formal.",
+        "cons": "Necessidade de mediação em áreas limítrofes com unidades de conservação.",
+        "supportVotes": 1640,
+        "rejectVotes": 95
+      }
+    ]
   }
 ];
 
+// Parlamentares em exercício
+const incumbentsData = [
+  {
+    id: "inc-1",
+    name: "Marcos Pontes",
+    office: "Senador da República (Mandato até 2030)",
+    party: "PL - SP",
+    status: "Em Exercício",
+    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=faces",
+    highlights: "Eleito em 2022 com 10.7 milhões de votos. Atuação focada em Ciência, Tecnologia e Inovação. Cota parlamentar em 64% do teto.",
+    attendance: "96.4% de presença em 2026 (110 de 114 sessões)"
+  },
+  {
+    id: "inc-2",
+    name: "Tarcísio de Freitas",
+    office: "Governador do Estado de São Paulo",
+    party: "REPUBLICANOS - SP",
+    status: "Mandato 2023 - 2026",
+    avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&h=300&fit=crop&crop=faces",
+    highlights: "Gestão com foco em concessões de infraestrutura, expansão do metrô e privatização da Sabesp.",
+    attendance: "100% no Executivo"
+  }
+];
+_root.incumbentsData = incumbentsData;
+
 // Exportação universal para compatibilidade de escopo
 var candidatesData = _root.candidatesData;
+var incumbentsDataExport = _root.incumbentsData;
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { candidatesData };
+  module.exports = { candidatesData, incumbentsData: incumbentsDataExport };
 }

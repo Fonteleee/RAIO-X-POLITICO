@@ -12,27 +12,9 @@ function seedDatabase(dbPath = DEFAULT_DB_PATH) {
   const appDb = new AppDatabase(dbPath);
   const db = appDb.db;
 
-  // Lê o index.html para obter os dados já validados de candidatesData e incumbentsData
-  const htmlPath = path.join(__dirname, '..', '..', 'index.html');
-  const htmlContent = fs.readFileSync(htmlPath, 'utf8');
-
-  // Extrai o bloco onde candidatesData e incumbentsData estão declarados
-  let cStart = htmlContent.indexOf('let candidatesData = [');
-  if (cStart === -1) cStart = htmlContent.indexOf('const candidatesData = [');
-  const iStart = htmlContent.indexOf('const incumbentsData = [');
-  const sStart = htmlContent.indexOf('// State Variables', iStart);
-
-  if (cStart === -1 || iStart === -1 || sStart === -1) {
-    throw new Error('Não foi possível localizar os blocos de dados no index.html');
-  }
-
-  const cCode = htmlContent.slice(cStart, iStart).trim();
-  const iCode = htmlContent.slice(iStart, sStart).trim();
-
-  const fullCode = `${cCode}\n${iCode}\n({ candidatesData, incumbentsData });`;
-  const sandbox = {};
-  vm.createContext(sandbox);
-  const { candidatesData, incumbentsData } = vm.runInContext(fullCode, sandbox);
+  // Carrega os dados consolidados diretamente de data/candidates.js
+  const candidatesFilePath = path.join(__dirname, '..', '..', 'data', 'candidates.js');
+  const { candidatesData, incumbentsData } = require(candidatesFilePath);
 
   console.log(`[Seed] Encontrados ${candidatesData.length} candidatos e ${incumbentsData.length} em exercício.`);
 

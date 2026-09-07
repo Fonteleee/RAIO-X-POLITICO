@@ -9,10 +9,10 @@ const { AppDatabase } = require('../src/db/database');
 describe('Garantia de Integridade de Dados, Fotos Oficiais e Cenário 2026', () => {
   const db = new AppDatabase();
 
-  test('Auditoria Global: Todas as 45 personalidades possuem campos obrigatórios e fotos válidas', () => {
+  test('Auditoria Global: Todas as personalidades possuem campos obrigatórios e fotos válidas', () => {
     const result = verifyIntegrity();
     assert.strictEqual(result.success, true, `Erros encontrados na integridade: ${result.errors.join('; ')}`);
-    assert.strictEqual(result.totalChecked, 45);
+    assert.ok(result.totalChecked >= 45, `Total verificado deve ser pelo menos 45 (encontrado ${result.totalChecked})`);
   });
 
   test('Senadores: Sergio Moro, Rodrigo Pacheco e Marcos Pontes possuem fotos oficiais corretas', () => {

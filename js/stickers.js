@@ -114,8 +114,12 @@
         const truth2 = cand2.recentDebate ? cand2.recentDebate.truthfulnessPct : 80;
         const name1 = cand1.name.split(' ')[0];
         const name2 = cand2.name.split(' ')[0];
-        const roi1 = cand1.salary.civicConversion && cand1.salary.civicConversion.roiText ? cand1.salary.civicConversion.roiText : 'R$ 30,50 / R$ 1';
-        const roi2 = cand2.salary.civicConversion && cand2.salary.civicConversion.roiText ? cand2.salary.civicConversion.roiText : 'R$ 28,20 / R$ 1';
+        const roi1 = cand1.salary && cand1.salary.civicConversion && cand1.salary.civicConversion.roiText ? cand1.salary.civicConversion.roiText : 'R$ 30,50 / R$ 1';
+        const roi2 = cand2.salary && cand2.salary.civicConversion && cand2.salary.civicConversion.roiText ? cand2.salary.civicConversion.roiText : 'R$ 28,20 / R$ 1';
+        const safeAvatar1 = getCorsSafeAvatar(cand1.avatar, cand1.name);
+        const safeAvatar2 = getCorsSafeAvatar(cand2.avatar, cand2.name);
+        const fallbackImg1 = 'https://ui-avatars.com/api/?name=' + encodeURIComponent(name1) + '&background=0284c7&color=fff&bold=true&size=128';
+        const fallbackImg2 = 'https://ui-avatars.com/api/?name=' + encodeURIComponent(name2) + '&background=7c3aed&color=fff&bold=true&size=128';
 
         // --- TEMA 1: INSTAGRAM (SWISS CLEAN COM RADAR) ---
         if (exportVisualTheme === 'swiss') {
@@ -133,7 +137,7 @@
             <!-- Head to Head Swiss Banner -->
             <div class="grid grid-cols-11 items-center gap-1 bg-stone-100 p-2 rounded-2xl border border-stone-300 my-1">
               <div class="col-span-5 flex items-center gap-2">
-                <img src="${cand1.avatar}" crossorigin="anonymous" referrerpolicy="no-referrer" class="w-10 h-10 rounded-xl object-cover border-2 border-stone-950 shadow-sm flex-shrink-0">
+                <img src="${safeAvatar1}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg1}';" class="w-10 h-10 rounded-xl object-cover border-2 border-stone-950 shadow-sm flex-shrink-0">
                 <div class="min-w-0 text-left">
                   <strong class="font-black text-[11px] text-stone-950 block truncate uppercase leading-tight">${name1}</strong>
                   <span class="text-[8px] font-mono font-bold text-stone-600">${cand1.party}</span>
@@ -147,7 +151,7 @@
                   <strong class="font-black text-[11px] text-stone-950 block truncate uppercase leading-tight">${name2}</strong>
                   <span class="text-[8px] font-mono font-bold text-stone-600">${cand2.party}</span>
                 </div>
-                <img src="${cand2.avatar}" crossorigin="anonymous" referrerpolicy="no-referrer" class="w-10 h-10 rounded-xl object-cover border-2 border-stone-950 shadow-sm flex-shrink-0">
+                <img src="${safeAvatar2}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg2}';" class="w-10 h-10 rounded-xl object-cover border-2 border-stone-950 shadow-sm flex-shrink-0">
               </div>
             </div>
 
@@ -194,9 +198,15 @@
             </div>
 
             <!-- Footer Retorno Cívico -->
-            <div class="p-2 rounded-xl bg-stone-950 text-white flex items-center justify-between text-[7.5px] font-bold">
-              <span class="text-emerald-400 font-mono">RETORNO CÍVICO:</span>
-              <span class="font-mono">${name1}: ${roi1} | ${name2}: ${roi2}</span>
+            <div class="p-2 rounded-xl bg-stone-950 text-white flex flex-col gap-0.5 text-[7.5px]">
+              <div class="flex items-center justify-between">
+                <span class="text-emerald-400 font-mono font-black">🏛️ RETORNO CÍVICO:</span>
+                <span class="text-[7px] text-stone-400 font-mono">Orçamento entregue</span>
+              </div>
+              <div class="flex justify-between font-mono text-stone-200 text-[8px] truncate">
+                <span class="truncate"><strong>${name1}:</strong> ${roi1}</span>
+                <span class="truncate ml-2"><strong>${name2}:</strong> ${roi2}</span>
+              </div>
             </div>
           `;
 
@@ -221,7 +231,7 @@
             <div class="grid grid-cols-11 items-center gap-1 bg-gradient-to-r from-amber-500/20 via-slate-900 to-purple-500/20 p-2 rounded-2xl border border-white/20 my-1">
               <div class="col-span-5 flex items-center gap-2">
                 <div class="relative flex-shrink-0">
-                  <img src="${cand1.avatar}" crossorigin="anonymous" referrerpolicy="no-referrer" class="w-11 h-11 rounded-xl object-cover border-2 border-amber-400 shadow-md">
+                  <img src="${safeAvatar1}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg1}';" class="w-11 h-11 rounded-xl object-cover border-2 border-amber-400 shadow-md">
                   <span class="absolute -top-1.5 -left-1.5 bg-amber-400 text-slate-950 font-black text-[7.5px] px-1 rounded shadow">${score1}</span>
                 </div>
                 <div class="text-left min-w-0">
@@ -240,7 +250,7 @@
                   <span class="text-[8px] font-bold text-slate-300">${cand2.party}</span>
                 </div>
                 <div class="relative flex-shrink-0">
-                  <img src="${cand2.avatar}" crossorigin="anonymous" referrerpolicy="no-referrer" class="w-11 h-11 rounded-xl object-cover border-2 border-purple-400 shadow-md">
+                  <img src="${safeAvatar2}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg2}';" class="w-11 h-11 rounded-xl object-cover border-2 border-purple-400 shadow-md">
                   <span class="absolute -top-1.5 -right-1.5 bg-purple-400 text-slate-950 font-black text-[7.5px] px-1 rounded shadow">${score2}</span>
                 </div>
               </div>
@@ -331,12 +341,12 @@
             <!-- Head to Head Executive -->
             <div class="grid grid-cols-2 gap-2 my-1">
               <div class="p-2 rounded-xl bg-stone-100 border border-stone-300 space-y-1 text-center">
-                <img src="${cand1.avatar}" crossorigin="anonymous" referrerpolicy="no-referrer" class="w-10 h-10 rounded-xl object-cover border-2 border-stone-900 mx-auto shadow-sm">
+                <img src="${safeAvatar1}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg1}';" class="w-10 h-10 rounded-xl object-cover border-2 border-stone-900 mx-auto shadow-sm">
                 <strong class="text-[11px] font-black text-stone-950 block truncate uppercase leading-tight">${name1}</strong>
                 <span class="px-2 py-0.5 rounded bg-stone-900 text-white font-mono text-[9px] font-black">Score: ${score1}</span>
               </div>
               <div class="p-2 rounded-xl bg-stone-100 border border-stone-300 space-y-1 text-center">
-                <img src="${cand2.avatar}" crossorigin="anonymous" referrerpolicy="no-referrer" class="w-10 h-10 rounded-xl object-cover border-2 border-stone-900 mx-auto shadow-sm">
+                <img src="${safeAvatar2}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg2}';" class="w-10 h-10 rounded-xl object-cover border-2 border-stone-900 mx-auto shadow-sm">
                 <strong class="text-[11px] font-black text-stone-950 block truncate uppercase leading-tight">${name2}</strong>
                 <span class="px-2 py-0.5 rounded bg-stone-900 text-white font-mono text-[9px] font-black">Score: ${score2}</span>
               </div>
@@ -391,12 +401,12 @@
             <!-- 2 Bento Profile Cards -->
             <div class="grid grid-cols-2 gap-2 my-1">
               <div class="p-2.5 bg-white rounded-2xl border border-slate-200 space-y-1 text-center shadow-sm">
-                <img src="${cand1.avatar}" crossorigin="anonymous" referrerpolicy="no-referrer" class="w-10 h-10 rounded-xl object-cover border-2 border-sky-400 mx-auto">
+                <img src="${safeAvatar1}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg1}';" class="w-10 h-10 rounded-xl object-cover border-2 border-sky-400 mx-auto">
                 <strong class="text-[11px] font-black text-slate-900 block truncate uppercase leading-tight">${name1}</strong>
                 <span class="px-2 py-0.5 rounded bg-slate-950 text-sky-400 font-mono text-[9px] font-black">Pontuação: ${score1}</span>
               </div>
               <div class="p-2.5 bg-white rounded-2xl border border-slate-200 space-y-1 text-center shadow-sm">
-                <img src="${cand2.avatar}" crossorigin="anonymous" referrerpolicy="no-referrer" class="w-10 h-10 rounded-xl object-cover border-2 border-purple-400 mx-auto">
+                <img src="${safeAvatar2}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg2}';" class="w-10 h-10 rounded-xl object-cover border-2 border-purple-400 mx-auto">
                 <strong class="text-[11px] font-black text-slate-900 block truncate uppercase leading-tight">${name2}</strong>
                 <span class="px-2 py-0.5 rounded bg-slate-950 text-purple-400 font-mono text-[9px] font-black">Pontuação: ${score2}</span>
               </div>
@@ -474,12 +484,12 @@
             <div class="rounded-2xl bg-[#16181c] border border-[#2f3336] p-3 space-y-2 text-left my-1">
               <div class="grid grid-cols-2 gap-2 border-b border-[#2f3336] pb-2 text-center">
                 <div class="space-y-0.5">
-                  <img src="${cand1.avatar}" class="w-9 h-9 rounded-xl object-cover mx-auto border border-amber-400">
+                  <img src="${safeAvatar1}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg1}';" class="w-9 h-9 rounded-xl object-cover mx-auto border border-amber-400">
                   <strong class="text-xs text-white block">${name1}</strong>
                   <span class="text-[9px] text-amber-400 font-mono font-bold">Pontuação: ${score1}</span>
                 </div>
                 <div class="space-y-0.5">
-                  <img src="${cand2.avatar}" class="w-9 h-9 rounded-xl object-cover mx-auto border border-purple-400">
+                  <img src="${safeAvatar2}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg2}';" class="w-9 h-9 rounded-xl object-cover mx-auto border border-purple-400">
                   <strong class="text-xs text-white block">${name2}</strong>
                   <span class="text-[9px] text-purple-400 font-mono font-bold">Pontuação: ${score2}</span>
                 </div>
@@ -535,7 +545,7 @@
             <!-- Profile Duel -->
             <div class="grid grid-cols-11 items-center gap-1 bg-slate-50 p-2 rounded-2xl border border-slate-100 my-1">
               <div class="col-span-5 flex items-center gap-2">
-                <img src="${cand1.avatar}" class="w-10 h-10 rounded-xl object-cover border border-slate-300">
+                <img src="${safeAvatar1}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg1}';" class="w-10 h-10 rounded-xl object-cover border border-slate-300">
                 <div class="min-w-0 text-left">
                   <strong class="font-black text-[11px] text-slate-900 block truncate uppercase leading-tight">${name1}</strong>
                   <span class="text-[8px] font-mono font-bold text-sky-600">Score: ${score1}</span>
@@ -547,7 +557,7 @@
                   <strong class="font-black text-[11px] text-slate-900 block truncate uppercase leading-tight">${name2}</strong>
                   <span class="text-[8px] font-mono font-bold text-purple-600">Score: ${score2}</span>
                 </div>
-                <img src="${cand2.avatar}" class="w-10 h-10 rounded-xl object-cover border border-slate-300">
+                <img src="${safeAvatar2}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg2}';" class="w-10 h-10 rounded-xl object-cover border border-slate-300">
               </div>
             </div>
 
@@ -1212,7 +1222,10 @@
                 color: theme === 'duel' ? '#94a3b8' : (theme === 'swiss' ? '#44403c' : '#475569'),
                 font: { size: 8.5, weight: 'bold', family: 'Inter' }
               },
-              ticks: { display: false, stepSize: 25, min: 0, max: 100 }
+              min: 0,
+              max: 100,
+              beginAtZero: true,
+              ticks: { display: false, stepSize: 25 }
             }
           },
           plugins: { legend: { display: false } }

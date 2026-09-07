@@ -184,4 +184,34 @@ CREATE TABLE IF NOT EXISTS candidate_campaign_finance (
   FOREIGN KEY (candidate_id) REFERENCES candidates(id) ON DELETE CASCADE
 );
 
+CREATE TABLE IF NOT EXISTS candidate_ethics (
+  candidate_id TEXT PRIMARY KEY,
+  clean_record_status TEXT NOT NULL DEFAULT 'Ficha Limpa Oficial',
+  active_lawsuits_count INTEGER DEFAULT 0,
+  stf_stj_inquiries_count INTEGER DEFAULT 0,
+  tcu_tce_irregular_accounts INTEGER DEFAULT 0,
+  dismissed_archived_count INTEGER DEFAULT 0,
+  party_compliance_score REAL DEFAULT 85,
+  integrity_score REAL DEFAULT 95,
+  integrity_formula_json TEXT,
+  lawsuits_json TEXT,
+  FOREIGN KEY (candidate_id) REFERENCES candidates(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS candidate_statements (
+  id TEXT PRIMARY KEY,
+  candidate_id TEXT NOT NULL,
+  context_source TEXT NOT NULL,
+  statement_date TEXT NOT NULL,
+  quote TEXT NOT NULL,
+  verdict TEXT NOT NULL,
+  verdict_class TEXT,
+  fact_check_summary TEXT,
+  official_source TEXT,
+  source_link TEXT,
+  order_index INTEGER DEFAULT 0,
+  FOREIGN KEY (candidate_id) REFERENCES candidates(id) ON DELETE CASCADE
+);
+
+
 
