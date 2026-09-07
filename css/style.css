@@ -1,0 +1,97 @@
+/* Global Transitions & Theme Base */
+    html {
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    /* Light Mode Default Styling */
+    body {
+      background-color: #f8fafc;
+      color: #0f172a;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Dark Mode Styling */
+    html.dark body {
+      background-color: #090d16;
+      color: #f1f5f9;
+    }
+    
+    /* Panels and Cards in Light vs Dark */
+    .glass-panel {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.05);
+    }
+    html.dark .glass-panel {
+      background: rgba(15, 23, 42, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.4);
+    }
+    
+    .glass-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .glass-card:hover {
+      border-color: #0284c7;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 25px -8px rgba(2, 132, 199, 0.15);
+    }
+    html.dark .glass-card {
+      background: rgba(19, 30, 54, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      box-shadow: none;
+    }
+    html.dark .glass-card:hover {
+      border-color: rgba(6, 182, 212, 0.4);
+      box-shadow: 0 12px 30px -10px rgba(6, 182, 212, 0.15);
+    }
+
+    .sub-panel {
+      background-color: #f1f5f9;
+      border: 1px solid #e2e8f0;
+    }
+    html.dark .sub-panel {
+      background-color: #1e293b;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .mini-box {
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+    }
+    html.dark .mini-box {
+      background-color: #131e36;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    html.dark ::-webkit-scrollbar-track {
+      background: #090d16;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+    html.dark ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+    }
+
+    .radar-container {
+      position: relative;
+      width: 100%;
+      max-width: 440px;
+      margin: 0 auto;
+    }

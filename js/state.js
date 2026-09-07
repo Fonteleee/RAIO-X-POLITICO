@@ -1,0 +1,63 @@
+// Raio-X Político - Gerenciamento de Estado Global e Temas (Light / Dark)
+
+// ================= THEME TOGGLE SYSTEM (LIGHT NATIVO / DARK ALTERNATIVO) =================
+    let isDarkMode = false; // Default is Light Mode (branco/cinza)
+
+    function initTheme() {
+      const savedTheme = localStorage.getItem('civic_theme');
+      if (savedTheme === 'dark') {
+        setDarkMode(true);
+      } else {
+        setDarkMode(false);
+      }
+    }
+
+    function toggleTheme() {
+      setDarkMode(!isDarkMode);
+    }
+
+    function setDarkMode(enableDark) {
+      isDarkMode = enableDark;
+      const html = document.documentElement;
+      const themeIcon = document.getElementById('theme-icon');
+      const themeText = document.getElementById('theme-text');
+
+      if (isDarkMode) {
+        html.classList.add('dark');
+        html.classList.remove('light');
+        localStorage.setItem('civic_theme', 'dark');
+        themeIcon.setAttribute('data-lucide', 'sun');
+        themeText.innerText = 'Modo Claro';
+      } else {
+        html.classList.remove('dark');
+        html.classList.add('light');
+        localStorage.setItem('civic_theme', 'light');
+        themeIcon.setAttribute('data-lucide', 'moon');
+        themeText.innerText = 'Modo Escuro';
+      }
+      lucide.createIcons();
+
+      // Refresh Radar Charts and Monthly Spending Chart with new theme colors if active
+      if (activeDossieCandidate && !document.getElementById('dossie-modal').classList.contains('hidden')) {
+        renderSingleRadar(activeDossieCandidate.radar);
+        const gastosSec = document.getElementById('dossie-sec-gastos-salarios');
+        if (gastosSec && !gastosSec.classList.contains('hidden')) {
+          renderDossieMonthlySpendingChart(activeDossieCandidate.salary.monthlyTimeline);
+        }
+      }
+      if (currentTab === 'comparator') {
+        updateComparator();
+      }
+    }
+
+    // ================= DATA STORE (CANDIDATOS COM FILIAÇÃO, DATAS DE ELEIÇÃO & PROPOSTAS DETALHADAS) =================
+
+// State Variables
+    let currentTab = 'feed';
+    const currentBrandName = 'Raio-X Político';
+    const currentBrandTagline = 'Veja o que está por trás do discurso.';
+    let activeFilter = 'todos';
+    let selectedForCompare = ['cand-tabata-amaral', 'cand-kim-kataguiri'];
+    let activeDossieCandidate = candidatesData[0];
+    let singleRadarChartInstance = null;
+    let comparatorRadarChartInstance = null;
