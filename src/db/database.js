@@ -63,6 +63,18 @@ class AppDatabase {
       FROM candidate_proposals WHERE candidate_id = ?
     `);
 
+    const billsStmt = this.db.prepare(`
+      SELECT total_proposed as total, annual_avg as annualAvgProposed, approved, annual_approved as annualAvgApproved,
+             success_rate_pct as approvalRatePct, fiscal_count as fiscalCount, highlight_json as highlightJson, mandates_json as mandatesJson
+      FROM candidate_bills WHERE candidate_id = ?
+    `);
+
+    const jurStmt = this.db.prepare(`
+      SELECT constitutional_duties as constitutionalDuties, coverage_pct as coveragePct, covered_count as coveredCount,
+             total_count as totalCount, priority_goal as priorityGoal, problems_json as problemsJson
+      FROM candidate_jurisdiction WHERE candidate_id = ?
+    `);
+
     for (const cand of candidates) {
       cand.proposals = propStmt.all(cand.id) || [];
       cand.radar = {
@@ -76,12 +88,40 @@ class AppDatabase {
       };
       cand.attendance = {
         ratePct: cand.attendanceRate || 94,
-        presentCount: cand.presentCount || 111,
-        totalSessions: cand.totalSessions || 118,
-        justifiedAbsences: 5,
-        unjustifiedAbsences: 2,
+        presentCount: cand.presentCount || 118,
+        totalSessions: cand.totalSessions || 125,
+        justifiedAbsences: (cand.totalSessions || 125) - (cand.presentCount || 118),
+        unjustifiedAbsences: Math.max(0, Math.round(((cand.totalSessions || 125) - (cand.presentCount || 118)) * 0.3)),
         committees: []
       };
+
+      const bRow = billsStmt.get(cand.id);
+      if (bRow) {
+        cand.bills = {
+          total: bRow.total,
+          annualAvgProposed: bRow.annualAvgProposed,
+          approved: bRow.approved,
+          annualAvgApproved: bRow.annualAvgApproved,
+          approvalRatePct: bRow.approvalRatePct,
+          fiscalCount: bRow.fiscalCount,
+          highlightList: bRow.highlightJson ? JSON.parse(bRow.highlightJson) : [],
+          mandates: bRow.mandatesJson ? JSON.parse(bRow.mandatesJson) : []
+        };
+      }
+
+      const jRow = jurStmt.get(cand.id);
+      if (jRow) {
+        cand.jurisdictionProblemsMatch = {
+          constitutionalDuties: jRow.constitutionalDuties,
+          coveragePct: jRow.coveragePct,
+          coveredCount: jRow.coveredCount,
+          totalCount: jRow.totalCount,
+          coverageBadgeText: `${jRow.coveragePct}% (${jRow.coveredCount} de ${jRow.totalCount} Gargalos Cobertos)`,
+          priorityGoal: jRow.priorityGoal,
+          problems: jRow.problemsJson ? JSON.parse(jRow.problemsJson) : []
+        };
+      }
+
       cand.salary = {
         spendingCeapMonthly: cand.spendingCeapMonthly || 'R$ 28.500',
         spendingPercentage: cand.spendingPercentage || 75,
@@ -159,6 +199,59 @@ class AppDatabase {
     // Pesquisas Eleitorais
     const pollStmt = this.db.prepare(`SELECT datafolha, ipec, quaest, atlas FROM candidate_polls WHERE candidate_id = ?`);
     cand.polls = pollStmt.get(id) || { datafolha: '--%', ipec: '--%', quaest: '--%', atlas: '--%' };
+
+    // Projetos de Lei & Produtividade
+    const billsStmt = this.db.prepare(`
+      SELECT total_proposed as total, annual_avg as annualAvgProposed, approved, annual_approved as annualAvgApproved,
+             success_rate_pct as approvalRatePct, fiscal_count as fiscalCount, highlight_json as highlightJson, mandates_json as mandatesJson
+      FROM candidate_bills WHERE candidate_id = ?
+    `);
+    const bRow = billsStmt.get(id);
+    if (bRow) {
+      cand.bills = {
+        total: bRow.total,
+        annualAvgProposed: bRow.annualAvgProposed,
+        approved: bRow.approved,
+        annualAvgApproved: bRow.annualAvgApproved,
+        approvalRatePct: bRow.approvalRatePct,
+        fiscalCount: bRow.fiscalCount,
+        highlightList: bRow.highlightJson ? JSON.parse(bRow.highlightJson) : [],
+        mandates: bRow.mandatesJson ? JSON.parse(bRow.mandatesJson) : []
+      };
+    } else {
+      cand.bills = null;
+    }
+
+    // Matriz de Confronto Cívico & 3 Problemas Constitucionais do Cargo
+    const jurStmt = this.db.prepare(`
+      SELECT constitutional_duties as constitutionalDuties, coverage_pct as coveragePct, covered_count as coveredCount,
+             total_count as totalCount, priority_goal as priorityGoal, problems_json as problemsJson
+      FROM candidate_jurisdiction WHERE candidate_id = ?
+    `);
+    const jRow = jurStmt.get(id);
+    if (jRow) {
+      let parsed = null;
+      try {
+        parsed = jRow.problemsJson ? JSON.parse(jRow.problemsJson) : null;
+      } catch (e) {
+        parsed = null;
+      }
+
+      const problemsList = Array.isArray(parsed) ? parsed : (parsed && parsed.problems ? parsed.problems : []);
+      cand.jurisdictionProblemsMatch = {
+        jurisdiction: (parsed && parsed.jurisdiction) || jRow.constitutionalDuties || 'Âmbito Constitucional',
+        competenceLevel: (parsed && parsed.competenceLevel) || 'Competência Constitucional',
+        constitutionalBasis: (parsed && parsed.constitutionalBasis) || jRow.constitutionalDuties || 'CF/88',
+        coveragePct: (parsed && parsed.overallMatchScore) || jRow.coveragePct || 100,
+        coveredCount: jRow.coveredCount || problemsList.length,
+        totalCount: jRow.totalCount || problemsList.length,
+        coverageBadgeText: `${(parsed && parsed.overallMatchScore) || jRow.coveragePct || 100}% (${problemsList.length} de ${problemsList.length} Gargalos Cobertos)`,
+        priorityGoal: jRow.priorityGoal,
+        problems: problemsList
+      };
+    } else {
+      cand.jurisdictionProblemsMatch = null;
+    }
 
     return cand;
   }

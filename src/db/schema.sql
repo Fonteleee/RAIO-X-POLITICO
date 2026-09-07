@@ -137,3 +137,28 @@ CREATE TABLE IF NOT EXISTS incumbents (
   avatar TEXT,
   status TEXT
 );
+
+CREATE TABLE IF NOT EXISTS candidate_bills (
+  candidate_id TEXT PRIMARY KEY,
+  total_proposed INTEGER DEFAULT 0,
+  annual_avg REAL DEFAULT 0,
+  approved INTEGER DEFAULT 0,
+  annual_approved REAL DEFAULT 0,
+  success_rate_pct REAL DEFAULT 0,
+  fiscal_count INTEGER DEFAULT 0,
+  highlight_json TEXT,
+  mandates_json TEXT,
+  FOREIGN KEY (candidate_id) REFERENCES candidates(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS candidate_jurisdiction (
+  candidate_id TEXT PRIMARY KEY,
+  constitutional_duties TEXT,
+  coverage_pct REAL DEFAULT 100,
+  covered_count INTEGER DEFAULT 3,
+  total_count INTEGER DEFAULT 3,
+  priority_goal TEXT,
+  problems_json TEXT,
+  FOREIGN KEY (candidate_id) REFERENCES candidates(id) ON DELETE CASCADE
+);
+

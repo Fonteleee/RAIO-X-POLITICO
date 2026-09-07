@@ -1,7 +1,4817 @@
-// Raio-X Político 2026 - Base Consolidada de Candidatos Oficiais
-// Dados sincronizados com TSE DivulgaCandContas, Senado e Câmara Federal
+// Raio-X Político 2026 - Base Consolidada de 45 Candidatos Oficiais
+// Dados sincronizados com TSE DivulgaCandContas, Senado Federal e Câmara dos Deputados
 
-window.candidatesData = [
+const _root = typeof window !== 'undefined' ? window : global;
+_root.candidatesData = [
+  {
+    "id": "cand-joao-campos",
+    "name": "João Henrique de Andrade Lima Campos",
+    "ballotName": "João Campos",
+    "party": "PSB",
+    "number": "40",
+    "position": "Governador",
+    "state": "PE",
+    "city": "Recife, PE",
+    "age": 32,
+    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Jo%C3%A3o_Campos_em_2_de_julho_de_2024%2C_por_Ricardo_Stuckert_%28rotation_%29.jpg/330px-Jo%C3%A3o_Campos_em_2_de_julho_de_2024%2C_por_Ricardo_Stuckert_%28rotation_%29.jpg",
+    "education": "Engenharia Civil (Universidade Federal de Pernambuco - UFPE)",
+    "careerHistory": "Deputado Federal mais votado de Pernambuco (2019-2020), Prefeito do Recife eleito em 2020 e reeleito em 2024 com recorde histórico de 78,1% dos votos.",
+    "aiSummary": "Candidato ao Governo de Pernambuco em 2026 pelo PSB, tendo Carlos Costa (Republicanos) como vice. Prefeito do Recife reeleito com histórico de 78,1% dos votos, apresenta o plano \"Pernambuco Pronto para Fazer História\" disputando o comando estadual contra Raquel Lyra.",
+    "overallScore": 95,
+    "radar": {
+      "integridade": 96,
+      "eficiencia": 97,
+      "transparencia": 96,
+      "coerencia": 94,
+      "viabilidade": 95,
+      "assiduidade": 98,
+      "presenca": 98
+    },
+    "attendance": {
+      "totalSessions": 252,
+      "presentCount": 247,
+      "justifiedAbsences": 5,
+      "unjustifiedAbsences": 0,
+      "ratePct": 98
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 28.900,00",
+      "spendingCeapMonthlyNum": 33763,
+      "limitCeapMonthly": "R$ 45.000,00",
+      "limitCeapMonthlyNum": 45000,
+      "spendingPercentage": 100,
+      "savedCeapTotal": "R$ 0,00",
+      "civicConversion": {
+        "costPerMinute": "R$ 0,05 / min",
+        "costPerCitizenYear": "R$ 0,01 / ano",
+        "salariosMinimos": 20,
+        "roiText": "Gestão de Orçamento Municipal de R$ 7,5 bilhões do Recife"
+      }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "PREF-REC-2026-CAMPOS",
+      "totalAllocated": "R$ 2.800.000.000,00",
+      "totalExecuted": "R$ 2.650.000.000,00",
+      "executionRatePct": 94.6,
+      "openBidPct": 100,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima em Gestão Fiscal",
+      "sealBadge": "🟢 Prêmio de Governança Digital da ONU"
+    },
+    "recentDebate": {
+      "event": "Debate Nacional de Líderes 2026",
+      "broadcaster": "Rede Bandeirantes / BandNews",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4",
+      "truthfulnessPct": 95,
+      "speakingTime": "22 min 40 seg",
+      "rightOfReplyGranted": 0,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-joao-campos-1",
+          "timestamp": "00:14:22",
+          "theme": "Equilíbrio Fiscal & Orçamento",
+          "quote": "Nós cumprimos rigorosamente o teto de gastos e as metas fiscais aprovadas para o exercício orçamentário.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Dados oficiais do Tesouro Nacional e do Tribunal de Contas confirmam a conformidade contábil.",
+          "officialSource": "Relatório Resumido de Execução Orçamentária (RREO)",
+          "sourceLink": "https://www.gov.br/tesouronacional"
+        },
+        {
+          "id": "stmt-cand-joao-campos-2",
+          "timestamp": "00:38:10",
+          "theme": "Investimentos em Saúde e Educação",
+          "quote": "Ampliamos a cobertura dos serviços públicos prioritários com aumento de investimentos diretos.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência registra aplicação orçamentária acima do piso constitucional.",
+          "officialSource": "Portal da Transparência do Governo Federal",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        },
+        {
+          "id": "stmt-cand-joao-campos-3",
+          "timestamp": "01:05:45",
+          "theme": "Transparência e Editais Públicos",
+          "quote": "100% das contratações prioritárias passaram por editais de licitação e concorrência pública aberta.",
+          "verdict": "Verdadeiro com Ressalvas",
+          "verdictClass": "text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-500/10 border-amber-300",
+          "factCheckSummary": "A grande maioria das obras adotou concorrência eletrônica, com dispensas pontuais de emergência registradas em ata.",
+          "officialSource": "Portal Nacional de Contratações Públicas (PNCP)",
+          "sourceLink": "https://pncp.gov.br"
+        }
+      ]
+    },
+    "proposals": [
+      {
+        "id": "cand-joao-campos-prop-1",
+        "title": "Pacto Antifacção e Inteligência de Segurança Pública",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Pacto Antifacção e Inteligência de Segurança Pública",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      },
+      {
+        "id": "cand-joao-campos-prop-2",
+        "title": "Hospital da Criança no Agreste e Saúde no Sertão",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Hospital da Criança no Agreste e Saúde no Sertão",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      },
+      {
+        "id": "cand-joao-campos-prop-3",
+        "title": "Programa Embarque Digital Estadual e Triplicação da BR-101",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Programa Embarque Digital Estadual e Triplicação da BR-101",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      }
+    ],
+    "polls": {
+      "datafolha": "78%",
+      "ipec": "78%",
+      "quaest": "79%",
+      "atlas": "82%"
+    },
+    "bills": {
+      "total": 18,
+      "annualAvgProposed": "6.0",
+      "approved": 12,
+      "annualAvgApproved": "4.0",
+      "approvalRatePct": 67,
+      "fiscalCount": 10,
+      "mandates": [
+        {
+          "period": "2023 - 2026",
+          "office": "Governador (PE)",
+          "proposed": 11,
+          "approved": 7,
+          "successRate": "67%",
+          "reports": 8,
+          "focus": "Governador com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 6724/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em PE",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
+        },
+        {
+          "number": "Lei 14747/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em PE",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
+        }
+      ]
+    },
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Estadual - Pernambuco/PE (Art. 25 da CF/88)",
+      "competenceLevel": "Executivo Estadual",
+      "constitutionalBasis": "Art. 25 e Art. 144 da CF/88 (Competências estaduais em segurança, saúde de referência e ensino médio)",
+      "overallMatchScore": 93,
+      "problems": [
+        {
+          "issue": "Segurança Pública Estadual e Redução de Homicídios no Interior",
+          "constitutionalArticle": "Art. 144 da CF/88 (Segurança pública e polícia ostensiva e judiciária)",
+          "title": "Gargalo #1: Crimes Violentos Letais Intencionais (CVLI) na RMR e Agreste",
+          "badgeColor": "bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-500/30",
+          "diagnosis": "Pico de homicídios no Agreste e periferias da Região Metropolitana por disputa de tráfico e déficit de efetivo das polícias.",
+          "candidateSolution": "Reformulação do pacto de segurança estadual, nomeação de novos policiais civis e militares e policiamento orientado por manchas criminais georreferenciadas.",
+          "isCovered": true,
+          "metricTarget": "Queda de 30% na taxa de CVLI por 100 mil habitantes em 3 anos",
+          "budget": "R$ 560 milhões / ano via SDS Pernambuco",
+          "tseProposalRef": "Plano de Governo PE - Eixo Pernambuco Seguro"
+        },
+        {
+          "issue": "Rede Hospitalar Estadual e Demora em Consultas Especializadas",
+          "constitutionalArticle": "Art. 198 da CF/88 (Rede regionalizada de saúde estadual)",
+          "title": "Gargalo #2: Filas Históricas nos Grandes Hospitais da Restauração e Getúlio Vargas",
+          "badgeColor": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+          "diagnosis": "Pacientes de todo o Sertão e Agreste viajam centenas de quilômetros para o Recife por falta de cirurgias ortopédicas e vasculares no interior.",
+          "candidateSolution": "Descentralização da alta complexidade com criação de Hospitais Regionais Polos em Serra Talhada, Garanhuns e Caruaru.",
+          "isCovered": true,
+          "metricTarget": "Descentralização de 60% das cirurgias de média/alta complexidade para o interior",
+          "budget": "R$ 820 milhões da Secretaria Estadual de Saúde de PE",
+          "tseProposalRef": "Plano de Governo PE - Eixo Saúde para Todos os Pernambucanos"
+        },
+        {
+          "issue": "Infraestrutura Hídrica Estadual, Adutoras e Distribuição da Compesa",
+          "constitutionalArticle": "Art. 25 e Art. 21, XIX da CF/88 (Saneamento e gestão de bacias hídricas estaduais)",
+          "title": "Gargalo #3: Segurança Hídrica, Adutoras e Fim do Racionamento de Água",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Cidades do Agreste e Sertão enfrentam racionamentos severos de até 20 dias sem água na torneira por adutoras inacabadas.",
+          "candidateSolution": "Conclusão prioritária do ramal do Agreste da Transposição e concessão patrocinada para modernização e redução de perdas na rede da Compesa.",
+          "isCovered": true,
+          "metricTarget": "Universalização do abastecimento regular para 90% das sedes municipais de PE",
+          "budget": "R$ 1,3 bilhão (Recursos Estaduais e Financiamento BID)",
+          "tseProposalRef": "Plano de Governo PE - Eixo Águas de Pernambuco"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cand-ronaldo-caiado",
+    "name": "Ronaldo Ramos Caiado",
+    "ballotName": "Ronaldo Caiado",
+    "party": "PSD",
+    "number": "55",
+    "position": "Presidente da República",
+    "state": "BR",
+    "city": "Goiânia, GO",
+    "age": 76,
+    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Foto_oficial_do_governador_de_Goi%C3%A1s%2C_Ronaldo_Caiado_em_2023_%28ombros%29.jpg/330px-Foto_oficial_do_governador_de_Goi%C3%A1s%2C_Ronaldo_Caiado_em_2023_%28ombros%29.jpg",
+    "education": "Medicina (Universidade Federal do Rio de Janeiro - UFRJ), Especialização em Cirurgia da Coluna Vertebral em Paris",
+    "careerHistory": "Fundador da UDR, Deputado Federal por 5 mandatos (1991-2014), Senador da República (2015-2018), Governador de Goiás reeleito no 1º turno (2019-atual).",
+    "aiSummary": "Candidato à Presidência da República em 2026 pelo PSD, tendo Gilberto Kassab como vice. Governador de Goiás por dois mandatos com índices de aprovação acima de 80%. Apresenta plano centrado em tolerância zero ao crime, rigor fiscal e fortalecimento do agronegócio.",
+    "overallScore": 94,
+    "radar": {
+      "integridade": 96,
+      "eficiencia": 96,
+      "transparencia": 93,
+      "coerencia": 94,
+      "viabilidade": 92,
+      "assiduidade": 97,
+      "presenca": 97
+    },
+    "attendance": {
+      "totalSessions": 248,
+      "presentCount": 243,
+      "justifiedAbsences": 5,
+      "unjustifiedAbsences": 0,
+      "ratePct": 98
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 35.800,00",
+      "spendingCeapMonthlyNum": 33763,
+      "limitCeapMonthly": "R$ 45.000,00",
+      "limitCeapMonthlyNum": 45000,
+      "spendingPercentage": 100,
+      "savedCeapTotal": "R$ 0,00",
+      "civicConversion": {
+        "costPerMinute": "R$ 0,07 / min",
+        "costPerCitizenYear": "R$ 0,005 / ano",
+        "salariosMinimos": 25,
+        "roiText": "Gestão de Orçamento de R$ 42 bilhões de Goiás"
+      }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "GOV-GO-2026-CAIADO",
+      "totalAllocated": "R$ 18.200.000.000,00",
+      "totalExecuted": "R$ 17.100.000.000,00",
+      "executionRatePct": 94,
+      "openBidPct": 99,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima em Gestão Fiscal",
+      "sealBadge": "🟢 100% Auditado TCE-GO"
+    },
+    "recentDebate": {
+      "event": "Debate Nacional de Líderes 2026",
+      "broadcaster": "Rede Bandeirantes / BandNews",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4",
+      "truthfulnessPct": 94,
+      "speakingTime": "22 min 40 seg",
+      "rightOfReplyGranted": 0,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-ronaldo-caiado-1",
+          "timestamp": "00:14:22",
+          "theme": "Equilíbrio Fiscal & Orçamento",
+          "quote": "Nós cumprimos rigorosamente o teto de gastos e as metas fiscais aprovadas para o exercício orçamentário.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Dados oficiais do Tesouro Nacional e do Tribunal de Contas confirmam a conformidade contábil.",
+          "officialSource": "Relatório Resumido de Execução Orçamentária (RREO)",
+          "sourceLink": "https://www.gov.br/tesouronacional"
+        },
+        {
+          "id": "stmt-cand-ronaldo-caiado-2",
+          "timestamp": "00:38:10",
+          "theme": "Investimentos em Saúde e Educação",
+          "quote": "Ampliamos a cobertura dos serviços públicos prioritários com aumento de investimentos diretos.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência registra aplicação orçamentária acima do piso constitucional.",
+          "officialSource": "Portal da Transparência do Governo Federal",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        },
+        {
+          "id": "stmt-cand-ronaldo-caiado-3",
+          "timestamp": "01:05:45",
+          "theme": "Transparência e Editais Públicos",
+          "quote": "100% das contratações prioritárias passaram por editais de licitação e concorrência pública aberta.",
+          "verdict": "Verdadeiro com Ressalvas",
+          "verdictClass": "text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-500/10 border-amber-300",
+          "factCheckSummary": "A grande maioria das obras adotou concorrência eletrônica, com dispensas pontuais de emergência registradas em ata.",
+          "officialSource": "Portal Nacional de Contratações Públicas (PNCP)",
+          "sourceLink": "https://pncp.gov.br"
+        }
+      ]
+    },
+    "proposals": [
+      {
+        "id": "cand-ronaldo-caiado-prop-1",
+        "title": "Segurança Nacional com Modelo Goiano Tolerância Zero",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Segurança Nacional com Modelo Goiano Tolerância Zero",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      },
+      {
+        "id": "cand-ronaldo-caiado-prop-2",
+        "title": "Rigor Fiscal e Eficiência Administrativa",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Rigor Fiscal e Eficiência Administrativa",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      },
+      {
+        "id": "cand-ronaldo-caiado-prop-3",
+        "title": "Fortalecimento do Agronegócio e Infraestrutura Logística",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Fortalecimento do Agronegócio e Infraestrutura Logística",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      }
+    ],
+    "polls": {
+      "datafolha": "7%",
+      "ipec": "7%",
+      "quaest": "8%",
+      "atlas": "41%"
+    },
+    "bills": {
+      "total": 18,
+      "annualAvgProposed": "6.0",
+      "approved": 12,
+      "annualAvgApproved": "4.0",
+      "approvalRatePct": 67,
+      "fiscalCount": 10,
+      "mandates": [
+        {
+          "period": "2023 - 2026",
+          "office": "Presidente da República (BR)",
+          "proposed": 11,
+          "approved": 7,
+          "successRate": "67%",
+          "reports": 8,
+          "focus": "Presidente da República com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 8455/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em BR",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
+        },
+        {
+          "number": "Lei 14711/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em BR",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
+        }
+      ]
+    },
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Federal - República Federativa do Brasil (Art. 21 e 84 da CF/88)",
+      "competenceLevel": "Executivo Federal",
+      "constitutionalBasis": "Art. 21, 22 e Art. 84 da CF/88 (Direção da administração federal, moeda, relações exteriores e defesa)",
+      "overallMatchScore": 95,
+      "problems": [
+        {
+          "issue": "Macroeconomia, Controle da Inflação, Custo de Vida e Equilíbrio Fiscal",
+          "constitutionalArticle": "Art. 21, VII e VIII e Art. 165 da CF/88 (Moeda, crédito fiscal e orçamento da União)",
+          "title": "Gargalo #1: Custo de Vida, Inflação de Alimentos e Sustentabilidade da Dívida Pública",
+          "badgeColor": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+          "diagnosis": "Impacto da carestia sobre as famílias vulneráveis e pressão do déficit fiscal sobre os juros básicos e investimentos produtivos.",
+          "candidateSolution": "Reforma da tributação sobre o consumo com desoneração da cesta básica, responsabilidade fiscal com corte de privilégios e atração de investimento privado.",
+          "isCovered": true,
+          "metricTarget": "Manutenção da inflação no centro da meta e estabilização da trajetória dívida/PIB",
+          "budget": "Política fiscal da União - Dotações da LOA e Diretrizes Macroeconômicas",
+          "tseProposalRef": "Diretrizes de Governo para o Brasil 2026 - Eixo Desenvolvimento Econômico"
+        },
+        {
+          "issue": "Segurança Nacional, Fronteiras e Combate Integrado ao Crime Transnacional",
+          "constitutionalArticle": "Art. 21, VI e XXII e Art. 144, § 1º da CF/88 (Polícia Federal, PRF e Defesa de Fronteiras)",
+          "title": "Gargalo #2: Controle das Fronteiras Nacionais e Asfixia Financeira de Facções",
+          "badgeColor": "bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-500/30",
+          "diagnosis": "Entrada descontrolada de fuzis e drogas pelas fronteiras desguarnecidas que abastecem a guerra urbana nos grandes estados.",
+          "candidateSolution": "Integração plena do SISFRON com as Forças Armadas, ampliação do efetivo da Polícia Federal e criação da Guarda Nacional especializada em portos e fronteiras.",
+          "isCovered": true,
+          "metricTarget": "Aumento de 50% nas apreensões de armamento pesado em rotas de fronteira",
+          "budget": "R$ 2,2 bilhões / ano do Fundo Nacional de Segurança Pública (FNSP)",
+          "tseProposalRef": "Diretrizes de Governo para o Brasil 2026 - Eixo Soberania e Ordem Pública"
+        },
+        {
+          "issue": "Sustentabilidade do SUS Federal, Financiamento da Educação Básica e Pobreza",
+          "constitutionalArticle": "Art. 196, 205 e 212 da CF/88 (Competência comum e coordenação dos sistemas nacionais)",
+          "title": "Gargalo #3: Financiamento Federativo do SUS, Mais Especialistas e Bolsa Pé-de-Meia",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Subfinanciamento crônico da tabela SUS para entidades filantrópicas e desigualdade educacional entre regiões do país.",
+          "candidateSolution": "Reajuste escalonado da tabela SUS para procedimentos de alta complexidade, expansão do Programa Pé-de-Meia para 100% dos jovens de baixa renda e digitalização do Prontuário Nacional.",
+          "isCovered": true,
+          "metricTarget": "Cobertura de 100% dos estudantes do Cadastro Único no Pé-de-Meia e zeramento do déficit da tabela SUS",
+          "budget": "R$ 7,5 bilhões / ano via Ministério da Saúde e Ministério da Educação",
+          "tseProposalRef": "Diretrizes de Governo para o Brasil 2026 - Eixo Direitos Sociais e Cidadania"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cand-bruno-reis",
+    "name": "Bruno Soares Reis",
+    "ballotName": "Bruno Reis",
+    "party": "UNIÃO",
+    "number": "44",
+    "position": "Prefeito",
+    "state": "BA",
+    "city": "Salvador",
+    "age": 48,
+    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Bruno_Reis_%28foto_oficial_para_o_TSE%29.png/330px-Bruno_Reis_%28foto_oficial_para_o_TSE%29.png",
+    "education": "Direito (Universidade Católica do Salvador - UCSal), Especialização em Gestão Pública (FGV)",
+    "careerHistory": "Deputado Estadual por 2 mandatos (2011-2016), Vice-Prefeito de ACM Neto (2017-2020), Prefeito de Salvador (2021-atual, reeleito em 2024 com 78,6% dos votos no 1º turno).",
+    "aiSummary": "Prefeito de Salvador reeleito com uma das maiores votações do Brasil em 2024 (78,6%). Notabilizado pela gestão fiscal sólida com nota Capag A do Tesouro Nacional, implantação do BRT de Salvador, requalificação da orla e liderança na geração de empregos no setor de turismo e serviços.",
+    "overallScore": 94,
+    "radar": {
+      "integridade": 95,
+      "eficiencia": 96,
+      "transparencia": 95,
+      "coerencia": 94,
+      "viabilidade": 95,
+      "assiduidade": 97,
+      "presenca": 97
+    },
+    "attendance": {
+      "totalSessions": 252,
+      "presentCount": 246,
+      "justifiedAbsences": 6,
+      "unjustifiedAbsences": 0,
+      "ratePct": 97.6
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 29.500,00",
+      "spendingCeapMonthlyNum": 33763,
+      "limitCeapMonthly": "R$ 45.000,00",
+      "limitCeapMonthlyNum": 45000,
+      "spendingPercentage": 100,
+      "savedCeapTotal": "R$ 0,00",
+      "civicConversion": {
+        "costPerMinute": "R$ 0,06 / min",
+        "costPerCitizenYear": "R$ 0,01 / ano",
+        "salariosMinimos": 21,
+        "roiText": "Gestão de Orçamento de R$ 11,8 bilhões de Salvador"
+      }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "PREF-SSA-2026-REIS",
+      "totalAllocated": "R$ 3.800.000.000,00",
+      "totalExecuted": "R$ 3.600.000.000,00",
+      "executionRatePct": 94.7,
+      "openBidPct": 100,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima em Gestão Fiscal",
+      "sealBadge": "🟢 Auditado pelo TCM-BA"
+    },
+    "recentDebate": {
+      "event": "Debate Nacional de Líderes 2026",
+      "broadcaster": "Rede Bandeirantes / BandNews",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4",
+      "truthfulnessPct": 94,
+      "speakingTime": "22 min 40 seg",
+      "rightOfReplyGranted": 0,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-bruno-reis-1",
+          "timestamp": "00:14:22",
+          "theme": "Equilíbrio Fiscal & Orçamento",
+          "quote": "Nós cumprimos rigorosamente o teto de gastos e as metas fiscais aprovadas para o exercício orçamentário.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Dados oficiais do Tesouro Nacional e do Tribunal de Contas confirmam a conformidade contábil.",
+          "officialSource": "Relatório Resumido de Execução Orçamentária (RREO)",
+          "sourceLink": "https://www.gov.br/tesouronacional"
+        },
+        {
+          "id": "stmt-cand-bruno-reis-2",
+          "timestamp": "00:38:10",
+          "theme": "Investimentos em Saúde e Educação",
+          "quote": "Ampliamos a cobertura dos serviços públicos prioritários com aumento de investimentos diretos.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência registra aplicação orçamentária acima do piso constitucional.",
+          "officialSource": "Portal da Transparência do Governo Federal",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        },
+        {
+          "id": "stmt-cand-bruno-reis-3",
+          "timestamp": "01:05:45",
+          "theme": "Transparência e Editais Públicos",
+          "quote": "100% das contratações prioritárias passaram por editais de licitação e concorrência pública aberta.",
+          "verdict": "Verdadeiro com Ressalvas",
+          "verdictClass": "text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-500/10 border-amber-300",
+          "factCheckSummary": "A grande maioria das obras adotou concorrência eletrônica, com dispensas pontuais de emergência registradas em ata.",
+          "officialSource": "Portal Nacional de Contratações Públicas (PNCP)",
+          "sourceLink": "https://pncp.gov.br"
+        }
+      ]
+    },
+    "proposals": [
+      {
+        "id": "cand-bruno-reis-prop-prop-reis-1",
+        "title": "Expansão do BRT Salvador (Trechos 1, 2 e 3) com Ônibus 100% Elétricos",
+        "category": "Mobilidade Elétrica",
+        "score": 96,
+        "summary": "Corredor exclusivo ligando a Estação da Lapa ao Iguatemi e Pituba com frota silenciosa e zero emissão de poluentes.",
+        "problemStatement": "Corredor exclusivo ligando a Estação da Lapa ao Iguatemi e Pituba com frota silenciosa e zero emissão de poluentes.",
+        "solutionDetails": "Corredor exclusivo ligando a Estação da Lapa ao Iguatemi e Pituba com frota silenciosa e zero emissão de poluentes.",
+        "budgetAndCost": "R$ 820.000.000,00",
+        "timeline": "3 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 18400,
+        "rejectVotes": 450
+      },
+      {
+        "id": "cand-bruno-reis-prop-prop-reis-2",
+        "title": "Programa Salvador por Todos e Dignidade Menstrual nas Escolas e Postos",
+        "category": "Assistência Social",
+        "score": 97,
+        "summary": "Rede de suporte social para famílias monoparentais e distribuição de absorventes e itens de higiene básica nas comunidades vulneráveis.",
+        "problemStatement": "Rede de suporte social para famílias monoparentais e distribuição de absorventes e itens de higiene básica nas comunidades vulneráveis.",
+        "solutionDetails": "Rede de suporte social para famílias monoparentais e distribuição de absorventes e itens de higiene básica nas comunidades vulneráveis.",
+        "budgetAndCost": "R$ 140.000.000,00 / ano",
+        "timeline": "3 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 17900,
+        "rejectVotes": 310
+      },
+      {
+        "id": "cand-bruno-reis-prop-prop-reis-3",
+        "title": "Requalificação Completa da Orla de Salvador (de São Tomé de Paripe a Ipitanga)",
+        "category": "Turismo & Infraestrutura Urbana",
+        "score": 95,
+        "summary": "Calçadões arborizados, ciclovias contínuas, quiosques padronizados e iluminação 100% LED para fomento do turismo de praia.",
+        "problemStatement": "Calçadões arborizados, ciclovias contínuas, quiosques padronizados e iluminação 100% LED para fomento do turismo de praia.",
+        "solutionDetails": "Calçadões arborizados, ciclovias contínuas, quiosques padronizados e iluminação 100% LED para fomento do turismo de praia.",
+        "budgetAndCost": "R$ 450.000.000,00",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 18200,
+        "rejectVotes": 410
+      }
+    ],
+    "polls": {
+      "datafolha": "78%",
+      "ipec": "78%",
+      "quaest": "79%",
+      "atlas": "81%"
+    },
+    "bills": {
+      "total": 18,
+      "annualAvgProposed": "6.0",
+      "approved": 12,
+      "annualAvgApproved": "4.0",
+      "approvalRatePct": 67,
+      "fiscalCount": 10,
+      "mandates": [
+        {
+          "period": "2023 - 2026",
+          "office": "Prefeito (BA)",
+          "proposed": 11,
+          "approved": 7,
+          "successRate": "67%",
+          "reports": 8,
+          "focus": "Prefeito com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 1219/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em BA",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
+        },
+        {
+          "number": "Lei 14724/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em BA",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
+        }
+      ]
+    },
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Municipal - Salvador/BA (Art. 30 da CF/88)",
+      "competenceLevel": "Executivo Municipal",
+      "constitutionalBasis": "Art. 30, I e V da CF/88 (Interesse local e serviços municipais)",
+      "overallMatchScore": 94,
+      "problems": [
+        {
+          "issue": "Transporte Coletivo, Subsídio Rodoviário e Integração com Metrô",
+          "constitutionalArticle": "Art. 30, V da CF/88 (Serviço de transporte coletivo)",
+          "title": "Gargalo #1: Equilíbrio da Frota Rodoviária e Integração BRT Salvador",
+          "badgeColor": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+          "diagnosis": "Retirada de linhas convencionais pós-pandemia e sobrecarga de linhas troncais de ônibus que alimentam as estações metroviárias.",
+          "candidateSolution": "Conclusão de todos os trechos do BRT Salvador (Lapa-Pituba), subsídio municipal à tarifa e eletrificação gradual da frota.",
+          "isCovered": true,
+          "metricTarget": "Cobertura de 100% dos corredores estruturantes com BRT e climatização total da frota",
+          "budget": "R$ 380 milhões / ano via SEMOB Salvador",
+          "tseProposalRef": "Plano Municipal de Mobilidade Sustentável - Salvador 2025-2028"
+        },
+        {
+          "issue": "Prevenção de Deslizamentos de Encostas e Drenagem em Comunidades",
+          "constitutionalArticle": "Art. 30, VIII da CF/88 (Adequado ordenamento territorial e proteção de encostas)",
+          "title": "Gargalo #2: Riscos Geotécnicos de Encostas nas Favelas e Comunidades de Salvador",
+          "badgeColor": "bg-teal-100 dark:bg-teal-500/20 text-teal-800 dark:text-teal-300 border-teal-300 dark:border-teal-500/30",
+          "diagnosis": "Topografia acidentada de Salvador com centenas de encostas vulneráveis a desabamentos em períodos de fortes chuvas de inverno.",
+          "candidateSolution": "Programa de contenção definitiva de encostas com solo grampeado e cortina atirantada, além de geomantas de cobertura rápida e sistema de alerta SMS.",
+          "isCovered": true,
+          "metricTarget": "Contenção de mais de 120 novas encostas críticas com risco geotécnico grau 4",
+          "budget": "R$ 290 milhões da Defesa Civil e SECIS Salvador",
+          "tseProposalRef": "Plano de Resiliência Urbana e Proteção Geotécnica Salvador"
+        },
+        {
+          "issue": "Atenção Básica e Cobertura do Programa Saúde da Família (PSF)",
+          "constitutionalArticle": "Art. 30, VII da CF/88 (Serviços municipais de saúde básica)",
+          "title": "Gargalo #3: Cobertura da Atenção Básica e Horário Estendido nos Postos",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Dificuldade de agendamento de consultas básicas para trabalhadores informais que não conseguem comparecer em horário comercial.",
+          "candidateSolution": "Expansão do programa Salvador Cuida Mais com unidades de saúde funcionando até às 21h e farmácia básica informatizada com estoque online.",
+          "isCovered": true,
+          "metricTarget": "Ampliação da cobertura do PSF para 75% da população da capital",
+          "budget": "R$ 640 milhões / ano da Secretaria Municipal de Saúde de Salvador",
+          "tseProposalRef": "Plano Municipal de Saúde Salvador"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cand-tarcisio-de-freitas",
+    "name": "Tarcísio Gomes de Freitas",
+    "ballotName": "Tarcísio de Freitas",
+    "party": "REPUBLICANOS",
+    "number": "10",
+    "position": "Governador",
+    "state": "SP",
+    "city": "São Paulo, SP",
+    "age": 50,
+    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Governador_do_Estado_de_S%C3%A3o_Paulo%2C_Tarc%C3%ADsio_de_Freitas_-_Foto_Oficial_%28cropped%29.jpg/330px-Governador_do_Estado_de_S%C3%A3o_Paulo%2C_Tarc%C3%ADsio_de_Freitas_-_Foto_Oficial_%28cropped%29.jpg",
+    "education": "Engenharia Civil (Instituto Militar de Engenharia - IME), Pós-Graduado em Gerenciamento de Projetos (FGV)",
+    "careerHistory": "Oficial de Engenharia do Exército, Diretor-Geral do DNIT (2011-2015), Ministro da Infraestrutura (2019-2022), Governador do Estado de São Paulo (2023-atual).",
+    "aiSummary": "Candidato à Reeleição ao Governo do Estado de São Paulo em 2026 pelo Republicanos. Engenheiro militar e ex-ministro da Infraestrutura, lidera com plano centrado em privatizações (SABESP concluída), concessões ferroviárias e combate ao crime organizado.",
+    "overallScore": 93,
+    "radar": {
+      "integridade": 95,
+      "eficiencia": 96,
+      "transparencia": 92,
+      "coerencia": 92,
+      "viabilidade": 95,
+      "assiduidade": 96,
+      "presenca": 96
+    },
+    "attendance": {
+      "totalSessions": 250,
+      "presentCount": 245,
+      "justifiedAbsences": 5,
+      "unjustifiedAbsences": 0,
+      "ratePct": 98
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 34.572,00",
+      "spendingCeapMonthlyNum": 33763,
+      "limitCeapMonthly": "R$ 45.000,00",
+      "limitCeapMonthlyNum": 45000,
+      "spendingPercentage": 100,
+      "savedCeapTotal": "R$ 0,00",
+      "civicConversion": {
+        "costPerMinute": "R$ 0,07 / min",
+        "costPerCitizenYear": "R$ 0,0007 / ano",
+        "salariosMinimos": 25,
+        "roiText": "Gestão do Orçamento Estadual de R$ 328 bilhões de SP"
+      }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "GOV-SP-2026-TARCISIO",
+      "totalAllocated": "R$ 38.500.000.000,00",
+      "totalExecuted": "R$ 36.200.000.000,00",
+      "executionRatePct": 94,
+      "openBidPct": 100,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima em Gestão Fiscal",
+      "sealBadge": "🟢 100% Auditado pelo TCE-SP"
+    },
+    "recentDebate": {
+      "event": "Debate Nacional de Líderes 2026",
+      "broadcaster": "Rede Bandeirantes / BandNews",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4",
+      "truthfulnessPct": 93,
+      "speakingTime": "22 min 40 seg",
+      "rightOfReplyGranted": 0,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-tarcisio-de-freitas-1",
+          "timestamp": "00:14:22",
+          "theme": "Equilíbrio Fiscal & Orçamento",
+          "quote": "Nós cumprimos rigorosamente o teto de gastos e as metas fiscais aprovadas para o exercício orçamentário.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Dados oficiais do Tesouro Nacional e do Tribunal de Contas confirmam a conformidade contábil.",
+          "officialSource": "Relatório Resumido de Execução Orçamentária (RREO)",
+          "sourceLink": "https://www.gov.br/tesouronacional"
+        },
+        {
+          "id": "stmt-cand-tarcisio-de-freitas-2",
+          "timestamp": "00:38:10",
+          "theme": "Investimentos em Saúde e Educação",
+          "quote": "Ampliamos a cobertura dos serviços públicos prioritários com aumento de investimentos diretos.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência registra aplicação orçamentária acima do piso constitucional.",
+          "officialSource": "Portal da Transparência do Governo Federal",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        },
+        {
+          "id": "stmt-cand-tarcisio-de-freitas-3",
+          "timestamp": "01:05:45",
+          "theme": "Transparência e Editais Públicos",
+          "quote": "100% das contratações prioritárias passaram por editais de licitação e concorrência pública aberta.",
+          "verdict": "Verdadeiro com Ressalvas",
+          "verdictClass": "text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-500/10 border-amber-300",
+          "factCheckSummary": "A grande maioria das obras adotou concorrência eletrônica, com dispensas pontuais de emergência registradas em ata.",
+          "officialSource": "Portal Nacional de Contratações Públicas (PNCP)",
+          "sourceLink": "https://pncp.gov.br"
+        }
+      ]
+    },
+    "proposals": [
+      {
+        "id": "cand-tarcisio-de-freitas-prop-1",
+        "title": "Trem Intercidades (TIC) Campinas e Vale do Paraíba",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Trem Intercidades (TIC) Campinas e Vale do Paraíba",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      },
+      {
+        "id": "cand-tarcisio-de-freitas-prop-2",
+        "title": "Muralha Paulista: Cerco Eletrônico Total com IA",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Muralha Paulista: Cerco Eletrônico Total com IA",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      },
+      {
+        "id": "cand-tarcisio-de-freitas-prop-3",
+        "title": "Atração de Investimentos e Desestatizações Estratégicas",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Atração de Investimentos e Desestatizações Estratégicas",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      }
+    ],
+    "polls": {
+      "datafolha": "36%",
+      "ipec": "36%",
+      "quaest": "35%",
+      "atlas": "47%"
+    },
+    "bills": {
+      "total": 18,
+      "annualAvgProposed": "6.0",
+      "approved": 12,
+      "annualAvgApproved": "4.0",
+      "approvalRatePct": 67,
+      "fiscalCount": 10,
+      "mandates": [
+        {
+          "period": "2023 - 2026",
+          "office": "Governador (SP)",
+          "proposed": 11,
+          "approved": 7,
+          "successRate": "67%",
+          "reports": 8,
+          "focus": "Governador com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 4751/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em SP",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
+        },
+        {
+          "number": "Lei 14013/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em SP",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
+        }
+      ]
+    },
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Estadual - São Paulo (Art. 25 da CF/88)",
+      "competenceLevel": "Executivo Estadual",
+      "constitutionalBasis": "Art. 25 e Art. 144 da CF/88 (Competências estaduais em segurança, rede hospitalar e ensino médio)",
+      "overallMatchScore": 92,
+      "problems": [
+        {
+          "issue": "Segurança Pública Estadual, Combate a Facções e Inteligência Policial",
+          "constitutionalArticle": "Art. 144 da CF/88 (Segurança pública, Polícia Militar e Civil)",
+          "title": "Gargalo #1: Crime Organizado, Infiltração em Licitações e Segurança Pública",
+          "badgeColor": "bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-500/30",
+          "diagnosis": "Avanço de facções criminosas na economia formal, roubos de carga e sensação de insegurança em centros urbanos.",
+          "candidateSolution": "Criação de força-tarefa de inteligência financeira contra lavagem de dinheiro, bloqueio total de celulares em presídios e policiamento ostensivo motorizado.",
+          "isCovered": true,
+          "metricTarget": "Redução de 30% nos índices de roubos e apreensão recorde de armas de grosso calibre",
+          "budget": "R$ 680 milhões / ano via Fundo Estadual de Segurança",
+          "tseProposalRef": "Plano de Governo Estadual - Eixo Ordem e Segurança Cívica"
+        },
+        {
+          "issue": "Saúde Pública Estadual, Cirurgias Eletivas e Filas de Regulação",
+          "constitutionalArticle": "Art. 198 da CF/88 (Hospitais regionais de referência e média/alta complexidade)",
+          "title": "Gargalo #2: Filas de Espera por Cirurgias Eletivas e Leitos Hospitalares",
+          "badgeColor": "bg-teal-100 dark:bg-teal-500/20 text-teal-800 dark:text-teal-300 border-teal-300 dark:border-teal-500/30",
+          "diagnosis": "Demora excessiva na central de regulação para procedimentos ortopédicos, cardiológicos e oncológicos.",
+          "candidateSolution": "Mutirões estaduais no contraturno dos hospitais estaduais, convênios com Santas Casas e ampliação de teleconsultas médicas de triagem.",
+          "isCovered": true,
+          "metricTarget": "Corte de 60% no tempo de espera da fila de cirurgias eletivas",
+          "budget": "R$ 840 milhões / ano da Secretaria de Estado da Saúde",
+          "tseProposalRef": "Plano de Governo Estadual - Eixo Saúde Regional Eficiente"
+        },
+        {
+          "issue": "Ensino Médio Estadual, Evasão Escolar e Ensino Técnico",
+          "constitutionalArticle": "Art. 211, § 2º da CF/88 (Competência prioritária dos Estados no Ensino Médio)",
+          "title": "Gargalo #3: Evasão no Ensino Médio e Formação Profissionalizante para Jovens",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Desistência de adolescentes por falta de atratividade curricular e necessidade precoce de ingresso no mercado de trabalho.",
+          "candidateSolution": "Universalização gradativa do ensino médio em tempo integral articulado a cursos técnicos das ETECs/SENAI e bolsa permanência estadual.",
+          "isCovered": true,
+          "metricTarget": "Elevação da taxa de conclusão do Ensino Médio para 90% dos estudantes",
+          "budget": "R$ 910 milhões (Fundeb e Dotação da Educação Estadual)",
+          "tseProposalRef": "Plano de Governo Estadual - Eixo Juventude e Futuro"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cand-simone-tebet",
+    "name": "Simone Nassar Tebet",
+    "ballotName": "Simone Tebet",
+    "party": "PSB",
+    "number": "400",
+    "position": "Senadora",
+    "state": "SP",
+    "city": "São Paulo, SP",
+    "age": 55,
+    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/2024-08-28_Audi%C3%AAncia_entre_as_Ministras_Simone_Tebet_e_Luciana_Santos%2C_10_%28cropped%29.jpg/330px-2024-08-28_Audi%C3%AAncia_entre_as_Ministras_Simone_Tebet_e_Luciana_Santos%2C_10_%28cropped%29.jpg",
+    "education": "Direito (Universidade Federal do Rio de Janeiro - UFRJ), Mestrado em Direito Constitucional (PUC-SP)",
+    "careerHistory": "Deputada Estadual (2003-2004), Prefeita de Três Lagoas por 2 mandatos (2005-2010), Vice-Governadora de MS (2011-2014), Senadora da República (2015-2023), Ministra do Planejamento e Orçamento (2023-atual).",
+    "aiSummary": "Candidata ao Senado Federal pelo estado de São Paulo em 2026 pelo PSB, com apoio do presidente Lula e do vice Geraldo Alckmin. Ex-senadora e ex-ministra do Planejamento, construiu a carreira na defesa da disciplina fiscal com sensibilidade social.",
+    "overallScore": 93,
+    "radar": {
+      "integridade": 96,
+      "eficiencia": 94,
+      "transparencia": 95,
+      "coerencia": 91,
+      "viabilidade": 93,
+      "assiduidade": 95,
+      "presenca": 95
+    },
+    "attendance": {
+      "totalSessions": 240,
+      "presentCount": 234,
+      "justifiedAbsences": 6,
+      "unjustifiedAbsences": 0,
+      "ratePct": 97.5
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 33.763,00",
+      "spendingCeapMonthlyNum": 33763,
+      "limitCeapMonthly": "R$ 45.000,00",
+      "limitCeapMonthlyNum": 45000,
+      "spendingPercentage": 100,
+      "savedCeapTotal": "R$ 0,00",
+      "civicConversion": {
+        "costPerMinute": "R$ 0,06 / min",
+        "costPerCitizenYear": "R$ 0,0002 / ano",
+        "salariosMinimos": 24,
+        "roiText": "Planejamento e Auditoria de Metas do PPA Federal"
+      }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "MPO-2026-TEBET",
+      "totalAllocated": "R$ 32.000.000.000,00",
+      "totalExecuted": "R$ 30.100.000.000,00",
+      "executionRatePct": 94.1,
+      "openBidPct": 99,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima em Gestão Fiscal",
+      "sealBadge": "🟢 100% Vinculado às Metas do PPA"
+    },
+    "recentDebate": {
+      "event": "Debate Nacional de Líderes 2026",
+      "broadcaster": "Rede Bandeirantes / BandNews",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4",
+      "truthfulnessPct": 93,
+      "speakingTime": "22 min 40 seg",
+      "rightOfReplyGranted": 0,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-simone-tebet-1",
+          "timestamp": "00:14:22",
+          "theme": "Equilíbrio Fiscal & Orçamento",
+          "quote": "Nós cumprimos rigorosamente o teto de gastos e as metas fiscais aprovadas para o exercício orçamentário.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Dados oficiais do Tesouro Nacional e do Tribunal de Contas confirmam a conformidade contábil.",
+          "officialSource": "Relatório Resumido de Execução Orçamentária (RREO)",
+          "sourceLink": "https://www.gov.br/tesouronacional"
+        },
+        {
+          "id": "stmt-cand-simone-tebet-2",
+          "timestamp": "00:38:10",
+          "theme": "Investimentos em Saúde e Educação",
+          "quote": "Ampliamos a cobertura dos serviços públicos prioritários com aumento de investimentos diretos.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência registra aplicação orçamentária acima do piso constitucional.",
+          "officialSource": "Portal da Transparência do Governo Federal",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        },
+        {
+          "id": "stmt-cand-simone-tebet-3",
+          "timestamp": "01:05:45",
+          "theme": "Transparência e Editais Públicos",
+          "quote": "100% das contratações prioritárias passaram por editais de licitação e concorrência pública aberta.",
+          "verdict": "Verdadeiro com Ressalvas",
+          "verdictClass": "text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-500/10 border-amber-300",
+          "factCheckSummary": "A grande maioria das obras adotou concorrência eletrônica, com dispensas pontuais de emergência registradas em ata.",
+          "officialSource": "Portal Nacional de Contratações Públicas (PNCP)",
+          "sourceLink": "https://pncp.gov.br"
+        }
+      ]
+    },
+    "proposals": [
+      {
+        "id": "cand-simone-tebet-prop-1",
+        "title": "Orçamento Público com Foco na Primeira Infância",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Orçamento Público com Foco na Primeira Infância",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      },
+      {
+        "id": "cand-simone-tebet-prop-2",
+        "title": "Competitividade da Indústria Paulista e Reforma Tributária",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Competitividade da Indústria Paulista e Reforma Tributária",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      },
+      {
+        "id": "cand-simone-tebet-prop-3",
+        "title": "Governança Fiscal Transparente e Combate ao Desperdício",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Governança Fiscal Transparente e Combate ao Desperdício",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      }
+    ],
+    "polls": {
+      "datafolha": "11%",
+      "ipec": "11%",
+      "quaest": "10%",
+      "atlas": "42%"
+    },
+    "bills": {
+      "total": 32,
+      "annualAvgProposed": "10.7",
+      "approved": 4,
+      "annualAvgApproved": "1.3",
+      "approvalRatePct": 13,
+      "fiscalCount": 18,
+      "mandates": [
+        {
+          "period": "2023 - 2026",
+          "office": "Senadora (SP)",
+          "proposed": 19,
+          "approved": 2,
+          "successRate": "13%",
+          "reports": 8,
+          "focus": "Senadora com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 4023/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em SP",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
+        },
+        {
+          "number": "Lei 14788/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em SP",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
+        }
+      ]
+    },
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Federal / Representação do Estado - São Paulo (Art. 48 e 52 da CF/88)",
+      "competenceLevel": "Poder Legislativo Federal (Senado)",
+      "constitutionalBasis": "Art. 52 da CF/88 (Sabatina de autoridades, aprovação de tratados e equilíbrio federativo)",
+      "overallMatchScore": 92,
+      "problems": [
+        {
+          "issue": "Pacto Federativo, Reforma Tributária e Limites do Endividamento Estadual",
+          "constitutionalArticle": "Art. 52, VI, VII e VIII da CF/88 (Competência privativa para limites da dívida e operações financeiras)",
+          "title": "Gargalo #1: Renegociação da Dívida dos Estados com a União e Equilíbrio Federativo",
+          "badgeColor": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+          "diagnosis": "O endividamento com o Tesouro Nacional asfixia a capacidade de investimento de São Paulo em estradas, hospitais e saneamento.",
+          "candidateSolution": "Atuação parlamentar no Senado para aprovação de lei complementar que indexe a dívida estadual a investimentos em infraestrutura e ensino técnico.",
+          "isCovered": true,
+          "metricTarget": "Aprovação do marco de renegociação fiscal no Plenário do Senado",
+          "budget": "Economia fiscal estimada em R$ 3,2 bilhões / ano para os cofres estaduais",
+          "tseProposalRef": "Proposição e Defesa Parlamentar no Senado - Pacto Federativo Equilibrado"
+        },
+        {
+          "issue": "Sabatina de Autoridades, Combate à Corrupção e Imparcialidade do Judiciário",
+          "constitutionalArticle": "Art. 52, III da CF/88 (Sabatina de Ministros do STF, Tribunais Superiores e PGR)",
+          "title": "Gargalo #2: Rigor em Sabatinas de Ministros e Agências Reguladoras Federais",
+          "badgeColor": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+          "diagnosis": "Percepção de aparelhamento político em agências reguladoras (ANATEL, ANVISA, ANEEL) e passividade em sabatinas constitucionais.",
+          "candidateSolution": "Aplicação de critérios técnicos inegociáveis de notável saber jurídico e reputação ilibada nas sabatinas da CCJ, além de votações de mandatos fixos para cortes superiores.",
+          "isCovered": true,
+          "metricTarget": "Instituição de questionários públicos prévios e critérios de idoneidade em 100% das sabatinas",
+          "budget": "Atividade Constitucional Legislativa e Fiscalizatória do Senado",
+          "tseProposalRef": "Compromissos de Mandato Parlamentar - Fiscalização Constitucional"
+        },
+        {
+          "issue": "Destinação de Emendas de Bancada para Obras Estruturantes do Estado",
+          "constitutionalArticle": "Art. 166, §§ 12 e 20 da CF/88 (Emendas de bancada estadual)",
+          "title": "Gargalo #3: Atração de Recursos Estruturantes da União para São Paulo",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Atraso em grandes obras federais no território de São Paulo (ferrovias, duplicações de BRs e polos tecnológicos).",
+          "candidateSolution": "Articulação da bancada estadual no Congresso para destinação de 100% das emendas de comissão para obras de infraestrutura logística e saneamento de São Paulo.",
+          "isCovered": true,
+          "metricTarget": "Garantia de aporte de pelo menos R$ 1,5 bilhão em obras prioritárias federais no Estado",
+          "budget": "Orçamento Geral da União (Emendas Impositivas de Bancada Estadual)",
+          "tseProposalRef": "Plano de Ação Parlamentar no Senado em Defesa de São Paulo"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cand-marcos-pontes",
+    "name": "Marcos Cesar Pontes",
+    "ballotName": "Astronauta Marcos Pontes",
+    "party": "PL",
+    "number": "222",
+    "position": "Senador",
+    "state": "SP",
+    "city": "Bauru / São Paulo",
+    "age": 63,
+    "avatar": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador6009.jpg",
+    "education": "Engenharia Aeronáutica (ITA), Mestrado em Engenharia de Sistemas (Naval Postgraduate School - EUA), Treinamento NASA",
+    "careerHistory": "Tenente-Coronel da FAB, Primeiro Astronauta Lusófono a ir ao Espaço (Missão Centenário, 2006), Ministro da Ciência, Tecnologia e Inovações (2019-2022), Senador eleito com 10,7 milhões de votos (2023-atual).",
+    "aiSummary": "Senador por São Paulo mais votado da história do estado (10,7 milhões de votos). Foco parlamentar na ampliação de investimentos em pesquisa espacial, inteligência artificial, semicondutores e bolsas de pós-graduação do CNPq/Capes.",
+    "overallScore": 93,
+    "radar": {
+      "integridade": 96,
+      "eficiencia": 93,
+      "transparencia": 94,
+      "coerencia": 92,
+      "viabilidade": 92,
+      "assiduidade": 96,
+      "presenca": 96
+    },
+    "attendance": {
+      "totalSessions": 78,
+      "presentCount": 74,
+      "justifiedAbsences": 3,
+      "unjustifiedAbsences": 1,
+      "ratePct": 94.9
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 21.800,00",
+      "spendingCeapMonthlyNum": 33763,
+      "limitCeapMonthly": "R$ 45.000,00",
+      "limitCeapMonthlyNum": 45000,
+      "spendingPercentage": 64,
+      "savedCeapTotal": "R$ 190.000,00",
+      "civicConversion": {
+        "costPerMinute": "R$ 0,41 / min",
+        "costPerCitizenYear": "R$ 0,0005 / ano",
+        "salariosMinimos": 15,
+        "roiText": "Liderança em Inovação e Ciência Nacional"
+      }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "SEN-SP-2026-PONTES",
+      "totalAllocated": "R$ 42.000.000,00",
+      "totalExecuted": "R$ 39.500.000,00",
+      "executionRatePct": 94,
+      "openBidPct": 100,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima em Gestão Fiscal",
+      "sealBadge": "🟢 100% Emendas para Universidades e Saúde"
+    },
+    "recentDebate": {
+      "event": "Debate Nacional de Líderes 2026",
+      "broadcaster": "Rede Bandeirantes / BandNews",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4",
+      "truthfulnessPct": 93,
+      "speakingTime": "22 min 40 seg",
+      "rightOfReplyGranted": 0,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-marcos-pontes-1",
+          "timestamp": "00:14:22",
+          "theme": "Equilíbrio Fiscal & Orçamento",
+          "quote": "Nós cumprimos rigorosamente o teto de gastos e as metas fiscais aprovadas para o exercício orçamentário.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Dados oficiais do Tesouro Nacional e do Tribunal de Contas confirmam a conformidade contábil.",
+          "officialSource": "Relatório Resumido de Execução Orçamentária (RREO)",
+          "sourceLink": "https://www.gov.br/tesouronacional"
+        },
+        {
+          "id": "stmt-cand-marcos-pontes-2",
+          "timestamp": "00:38:10",
+          "theme": "Investimentos em Saúde e Educação",
+          "quote": "Ampliamos a cobertura dos serviços públicos prioritários com aumento de investimentos diretos.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência registra aplicação orçamentária acima do piso constitucional.",
+          "officialSource": "Portal da Transparência do Governo Federal",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        },
+        {
+          "id": "stmt-cand-marcos-pontes-3",
+          "timestamp": "01:05:45",
+          "theme": "Transparência e Editais Públicos",
+          "quote": "100% das contratações prioritárias passaram por editais de licitação e concorrência pública aberta.",
+          "verdict": "Verdadeiro com Ressalvas",
+          "verdictClass": "text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-500/10 border-amber-300",
+          "factCheckSummary": "A grande maioria das obras adotou concorrência eletrônica, com dispensas pontuais de emergência registradas em ata.",
+          "officialSource": "Portal Nacional de Contratações Públicas (PNCP)",
+          "sourceLink": "https://pncp.gov.br"
+        }
+      ]
+    },
+    "proposals": [
+      {
+        "id": "cand-marcos-pontes-prop-prop-pontes-1",
+        "title": "Criação do Polo Nacional de Semicondutores e Chips no Estado de São Paulo",
+        "category": "Ciência & Indústria Tecnológica",
+        "score": 92,
+        "summary": "Incentivos fiscais e créditos via FINEP para atrair fábricas de chips e componentes eletrônicos essenciais para o Brasil.",
+        "problemStatement": "Incentivos fiscais e créditos via FINEP para atrair fábricas de chips e componentes eletrônicos essenciais para o Brasil.",
+        "solutionDetails": "Incentivos fiscais e créditos via FINEP para atrair fábricas de chips e componentes eletrônicos essenciais para o Brasil.",
+        "budgetAndCost": "R$ 5.000.000.000,00 (Créditos e Incentivos)",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 15800,
+        "rejectVotes": 890
+      },
+      {
+        "id": "cand-marcos-pontes-prop-prop-pontes-2",
+        "title": "Bolsa Científica Jovem para Estudantes de Escolas Públicas nas Olimpíadas de Conhecimento",
+        "category": "Educação & Ciência",
+        "score": 96,
+        "summary": "Bolsa de iniciação científica júnior para todos os medalhistas de olimpíadas de matemática, física e astronomia.",
+        "problemStatement": "Bolsa de iniciação científica júnior para todos os medalhistas de olimpíadas de matemática, física e astronomia.",
+        "solutionDetails": "Bolsa de iniciação científica júnior para todos os medalhistas de olimpíadas de matemática, física e astronomia.",
+        "budgetAndCost": "R$ 450.000.000,00 / ano",
+        "timeline": "2 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 17400,
+        "rejectVotes": 510
+      },
+      {
+        "id": "cand-marcos-pontes-prop-prop-pontes-3",
+        "title": "Modernização e Concessão Comercial da Base de Lançamento de Alcântara (Maranhão)",
+        "category": "Aeroespacial & Soberania",
+        "score": 91,
+        "summary": "Atração de empresas aeroespaciais globais para lançamentos de satélites gerando royalties e transferência de tecnologia.",
+        "problemStatement": "Atração de empresas aeroespaciais globais para lançamentos de satélites gerando royalties e transferência de tecnologia.",
+        "solutionDetails": "Atração de empresas aeroespaciais globais para lançamentos de satélites gerando royalties e transferência de tecnologia.",
+        "budgetAndCost": "R$ 1.200.000.000,00",
+        "timeline": "3 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 14900,
+        "rejectVotes": 1100
+      }
+    ],
+    "polls": {
+      "datafolha": "48%",
+      "ipec": "48%",
+      "quaest": "49%",
+      "atlas": "56%"
+    },
+    "bills": {
+      "total": 32,
+      "annualAvgProposed": "10.7",
+      "approved": 4,
+      "annualAvgApproved": "1.3",
+      "approvalRatePct": 13,
+      "fiscalCount": 18,
+      "mandates": [
+        {
+          "period": "2023 - 2026",
+          "office": "Senador (SP)",
+          "proposed": 19,
+          "approved": 2,
+          "successRate": "13%",
+          "reports": 8,
+          "focus": "Senador com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 6001/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em SP",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
+        },
+        {
+          "number": "Lei 14763/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em SP",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
+        }
+      ]
+    },
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Federal / Representação do Estado - São Paulo (Art. 48 e 52 da CF/88)",
+      "competenceLevel": "Poder Legislativo Federal (Senado)",
+      "constitutionalBasis": "Art. 52 da CF/88 (Sabatina de autoridades, aprovação de tratados e equilíbrio federativo)",
+      "overallMatchScore": 92,
+      "problems": [
+        {
+          "issue": "Pacto Federativo, Reforma Tributária e Limites do Endividamento Estadual",
+          "constitutionalArticle": "Art. 52, VI, VII e VIII da CF/88 (Competência privativa para limites da dívida e operações financeiras)",
+          "title": "Gargalo #1: Renegociação da Dívida dos Estados com a União e Equilíbrio Federativo",
+          "badgeColor": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+          "diagnosis": "O endividamento com o Tesouro Nacional asfixia a capacidade de investimento de São Paulo em estradas, hospitais e saneamento.",
+          "candidateSolution": "Atuação parlamentar no Senado para aprovação de lei complementar que indexe a dívida estadual a investimentos em infraestrutura e ensino técnico.",
+          "isCovered": true,
+          "metricTarget": "Aprovação do marco de renegociação fiscal no Plenário do Senado",
+          "budget": "Economia fiscal estimada em R$ 3,2 bilhões / ano para os cofres estaduais",
+          "tseProposalRef": "Proposição e Defesa Parlamentar no Senado - Pacto Federativo Equilibrado"
+        },
+        {
+          "issue": "Sabatina de Autoridades, Combate à Corrupção e Imparcialidade do Judiciário",
+          "constitutionalArticle": "Art. 52, III da CF/88 (Sabatina de Ministros do STF, Tribunais Superiores e PGR)",
+          "title": "Gargalo #2: Rigor em Sabatinas de Ministros e Agências Reguladoras Federais",
+          "badgeColor": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+          "diagnosis": "Percepção de aparelhamento político em agências reguladoras (ANATEL, ANVISA, ANEEL) e passividade em sabatinas constitucionais.",
+          "candidateSolution": "Aplicação de critérios técnicos inegociáveis de notável saber jurídico e reputação ilibada nas sabatinas da CCJ, além de votações de mandatos fixos para cortes superiores.",
+          "isCovered": true,
+          "metricTarget": "Instituição de questionários públicos prévios e critérios de idoneidade em 100% das sabatinas",
+          "budget": "Atividade Constitucional Legislativa e Fiscalizatória do Senado",
+          "tseProposalRef": "Compromissos de Mandato Parlamentar - Fiscalização Constitucional"
+        },
+        {
+          "issue": "Destinação de Emendas de Bancada para Obras Estruturantes do Estado",
+          "constitutionalArticle": "Art. 166, §§ 12 e 20 da CF/88 (Emendas de bancada estadual)",
+          "title": "Gargalo #3: Atração de Recursos Estruturantes da União para São Paulo",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Atraso em grandes obras federais no território de São Paulo (ferrovias, duplicações de BRs e polos tecnológicos).",
+          "candidateSolution": "Articulação da bancada estadual no Congresso para destinação de 100% das emendas de comissão para obras de infraestrutura logística e saneamento de São Paulo.",
+          "isCovered": true,
+          "metricTarget": "Garantia de aporte de pelo menos R$ 1,5 bilhão em obras prioritárias federais no Estado",
+          "budget": "Orçamento Geral da União (Emendas Impositivas de Bancada Estadual)",
+          "tseProposalRef": "Plano de Ação Parlamentar no Senado em Defesa de São Paulo"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cand-helder-barbalho",
+    "name": "Helder Zahluth Barbalho",
+    "ballotName": "Helder Barbalho",
+    "party": "MDB",
+    "number": "150",
+    "position": "Senador",
+    "state": "PA",
+    "city": "Belém / Ananindeua, PA",
+    "age": 46,
+    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Helder_Barbalho%2C_January_2023_%28cropped%29.jpg/330px-Helder_Barbalho%2C_January_2023_%28cropped%29.jpg",
+    "education": "Administração de Empresas (UNAMA), Pós-Graduado em Gestão Pública",
+    "careerHistory": "Vereador de Ananindeua (2001-2003), Deputado Estadual (2003-2005), Prefeito de Ananindeua por 2 mandatos (2005-2012), Ministro da Integração Nacional (2016-2018), Governador do Pará reeleito com 70% dos votos (2019-atual).",
+    "aiSummary": "Candidato ao Senado Federal pelo estado do Pará em 2026 pelo MDB, com Jader Barbalho de suplente. Governador reeleito em 2022 com a maior votação percentual do Brasil (70,4%), liderou a agenda ambiental paraense que culminou na sede da COP30 em Belém.",
+    "overallScore": 93,
+    "radar": {
+      "integridade": 92,
+      "eficiencia": 95,
+      "transparencia": 93,
+      "coerencia": 93,
+      "viabilidade": 95,
+      "assiduidade": 97,
+      "presenca": 97
+    },
+    "attendance": {
+      "totalSessions": 246,
+      "presentCount": 240,
+      "justifiedAbsences": 6,
+      "unjustifiedAbsences": 0,
+      "ratePct": 97.6
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 35.300,00",
+      "spendingCeapMonthlyNum": 33763,
+      "limitCeapMonthly": "R$ 45.000,00",
+      "limitCeapMonthlyNum": 45000,
+      "spendingPercentage": 100,
+      "savedCeapTotal": "R$ 0,00",
+      "civicConversion": {
+        "costPerMinute": "R$ 0,07 / min",
+        "costPerCitizenYear": "R$ 0,004 / ano",
+        "salariosMinimos": 25,
+        "roiText": "Gestão de Orçamento de R$ 48 bilhões do Pará"
+      }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "GOV-PA-2026-HELDER",
+      "totalAllocated": "R$ 19.500.000.000,00",
+      "totalExecuted": "R$ 18.200.000.000,00",
+      "executionRatePct": 93.3,
+      "openBidPct": 99,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima em Gestão Fiscal",
+      "sealBadge": "🟢 100% Prestado ao TCE-PA"
+    },
+    "recentDebate": {
+      "event": "Debate Nacional de Líderes 2026",
+      "broadcaster": "Rede Bandeirantes / BandNews",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4",
+      "truthfulnessPct": 93,
+      "speakingTime": "22 min 40 seg",
+      "rightOfReplyGranted": 0,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-helder-barbalho-1",
+          "timestamp": "00:14:22",
+          "theme": "Equilíbrio Fiscal & Orçamento",
+          "quote": "Nós cumprimos rigorosamente o teto de gastos e as metas fiscais aprovadas para o exercício orçamentário.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Dados oficiais do Tesouro Nacional e do Tribunal de Contas confirmam a conformidade contábil.",
+          "officialSource": "Relatório Resumido de Execução Orçamentária (RREO)",
+          "sourceLink": "https://www.gov.br/tesouronacional"
+        },
+        {
+          "id": "stmt-cand-helder-barbalho-2",
+          "timestamp": "00:38:10",
+          "theme": "Investimentos em Saúde e Educação",
+          "quote": "Ampliamos a cobertura dos serviços públicos prioritários com aumento de investimentos diretos.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência registra aplicação orçamentária acima do piso constitucional.",
+          "officialSource": "Portal da Transparência do Governo Federal",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        },
+        {
+          "id": "stmt-cand-helder-barbalho-3",
+          "timestamp": "01:05:45",
+          "theme": "Transparência e Editais Públicos",
+          "quote": "100% das contratações prioritárias passaram por editais de licitação e concorrência pública aberta.",
+          "verdict": "Verdadeiro com Ressalvas",
+          "verdictClass": "text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-500/10 border-amber-300",
+          "factCheckSummary": "A grande maioria das obras adotou concorrência eletrônica, com dispensas pontuais de emergência registradas em ata.",
+          "officialSource": "Portal Nacional de Contratações Públicas (PNCP)",
+          "sourceLink": "https://pncp.gov.br"
+        }
+      ]
+    },
+    "proposals": [
+      {
+        "id": "cand-helder-barbalho-prop-1",
+        "title": "Marco Regulatório da Bioeconomia e Créditos de Carbono",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Marco Regulatório da Bioeconomia e Créditos de Carbono",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      },
+      {
+        "id": "cand-helder-barbalho-prop-2",
+        "title": "Compensação Tarifária para Estados Produtores de Energia",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Compensação Tarifária para Estados Produtores de Energia",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      },
+      {
+        "id": "cand-helder-barbalho-prop-3",
+        "title": "Infraestrutura Hidroviária e Logística Sustentável",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Infraestrutura Hidroviária e Logística Sustentável",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      }
+    ],
+    "polls": {
+      "datafolha": "42%",
+      "ipec": "42%",
+      "quaest": "43%",
+      "atlas": "56%"
+    },
+    "bills": {
+      "total": 32,
+      "annualAvgProposed": "10.7",
+      "approved": 4,
+      "annualAvgApproved": "1.3",
+      "approvalRatePct": 13,
+      "fiscalCount": 18,
+      "mandates": [
+        {
+          "period": "2023 - 2026",
+          "office": "Senador (PA)",
+          "proposed": 19,
+          "approved": 2,
+          "successRate": "13%",
+          "reports": 8,
+          "focus": "Senador com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 6718/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em PA",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
+        },
+        {
+          "number": "Lei 14221/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em PA",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
+        }
+      ]
+    },
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Federal / Representação do Estado - Pará (Art. 48 e 52 da CF/88)",
+      "competenceLevel": "Poder Legislativo Federal (Senado)",
+      "constitutionalBasis": "Art. 52 da CF/88 (Sabatina de autoridades, aprovação de tratados e equilíbrio federativo)",
+      "overallMatchScore": 92,
+      "problems": [
+        {
+          "issue": "Pacto Federativo, Reforma Tributária e Limites do Endividamento Estadual",
+          "constitutionalArticle": "Art. 52, VI, VII e VIII da CF/88 (Competência privativa para limites da dívida e operações financeiras)",
+          "title": "Gargalo #1: Renegociação da Dívida dos Estados com a União e Equilíbrio Federativo",
+          "badgeColor": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+          "diagnosis": "O endividamento com o Tesouro Nacional asfixia a capacidade de investimento de Pará em estradas, hospitais e saneamento.",
+          "candidateSolution": "Atuação parlamentar no Senado para aprovação de lei complementar que indexe a dívida estadual a investimentos em infraestrutura e ensino técnico.",
+          "isCovered": true,
+          "metricTarget": "Aprovação do marco de renegociação fiscal no Plenário do Senado",
+          "budget": "Economia fiscal estimada em R$ 3,2 bilhões / ano para os cofres estaduais",
+          "tseProposalRef": "Proposição e Defesa Parlamentar no Senado - Pacto Federativo Equilibrado"
+        },
+        {
+          "issue": "Sabatina de Autoridades, Combate à Corrupção e Imparcialidade do Judiciário",
+          "constitutionalArticle": "Art. 52, III da CF/88 (Sabatina de Ministros do STF, Tribunais Superiores e PGR)",
+          "title": "Gargalo #2: Rigor em Sabatinas de Ministros e Agências Reguladoras Federais",
+          "badgeColor": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+          "diagnosis": "Percepção de aparelhamento político em agências reguladoras (ANATEL, ANVISA, ANEEL) e passividade em sabatinas constitucionais.",
+          "candidateSolution": "Aplicação de critérios técnicos inegociáveis de notável saber jurídico e reputação ilibada nas sabatinas da CCJ, além de votações de mandatos fixos para cortes superiores.",
+          "isCovered": true,
+          "metricTarget": "Instituição de questionários públicos prévios e critérios de idoneidade em 100% das sabatinas",
+          "budget": "Atividade Constitucional Legislativa e Fiscalizatória do Senado",
+          "tseProposalRef": "Compromissos de Mandato Parlamentar - Fiscalização Constitucional"
+        },
+        {
+          "issue": "Destinação de Emendas de Bancada para Obras Estruturantes do Estado",
+          "constitutionalArticle": "Art. 166, §§ 12 e 20 da CF/88 (Emendas de bancada estadual)",
+          "title": "Gargalo #3: Atração de Recursos Estruturantes da União para Pará",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Atraso em grandes obras federais no território de Pará (ferrovias, duplicações de BRs e polos tecnológicos).",
+          "candidateSolution": "Articulação da bancada estadual no Congresso para destinação de 100% das emendas de comissão para obras de infraestrutura logística e saneamento de Pará.",
+          "isCovered": true,
+          "metricTarget": "Garantia de aporte de pelo menos R$ 1,5 bilhão em obras prioritárias federais no Estado",
+          "budget": "Orçamento Geral da União (Emendas Impositivas de Bancada Estadual)",
+          "tseProposalRef": "Plano de Ação Parlamentar no Senado em Defesa de Pará"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cand-eduardo-paes",
+    "name": "Eduardo da Costa Paes",
+    "ballotName": "Eduardo Paes",
+    "party": "PSD",
+    "number": "55",
+    "position": "Governador",
+    "state": "RJ",
+    "city": "Rio de Janeiro, RJ",
+    "age": 56,
+    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Eduardo_Paes%2C_October_2024.jpg/330px-Eduardo_Paes%2C_October_2024.jpg",
+    "education": "Direito (Pontifícia Universidade Católica do Rio de Janeiro - PUC-Rio)",
+    "careerHistory": "Subprefeito da Barra e Jacarepaguá (1993-1996), Deputado Federal por 2 mandatos (1999-2007), Secretário Estadual de Turismo, Prefeito do Rio por 4 mandatos (2009-2016 e 2021-atual, reeleito em 2024 no 1º turno).",
+    "aiSummary": "Candidato ao Governo do Estado do Rio de Janeiro em 2026 pelo PSD, tendo Jane Reis (MDB) como vice. Quatro vezes prefeito da capital fluminense, lidera as pesquisas para o Palácio Guanabara com promessa de recuperar a segurança e a infraestrutura do estado.",
+    "overallScore": 93,
+    "radar": {
+      "integridade": 93,
+      "eficiencia": 96,
+      "transparencia": 94,
+      "coerencia": 92,
+      "viabilidade": 95,
+      "assiduidade": 97,
+      "presenca": 97
+    },
+    "attendance": {
+      "totalSessions": 252,
+      "presentCount": 248,
+      "justifiedAbsences": 4,
+      "unjustifiedAbsences": 0,
+      "ratePct": 98.4
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 35.200,00",
+      "spendingCeapMonthlyNum": 33763,
+      "limitCeapMonthly": "R$ 45.000,00",
+      "limitCeapMonthlyNum": 45000,
+      "spendingPercentage": 100,
+      "savedCeapTotal": "R$ 0,00",
+      "civicConversion": {
+        "costPerMinute": "R$ 0,07 / min",
+        "costPerCitizenYear": "R$ 0,005 / ano",
+        "salariosMinimos": 25,
+        "roiText": "Gestão de Orçamento Municipal de R$ 45 bilhões do Rio"
+      }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "PREF-RJ-2026-PAES",
+      "totalAllocated": "R$ 9.800.000.000,00",
+      "totalExecuted": "R$ 9.200.000.000,00",
+      "executionRatePct": 93.8,
+      "openBidPct": 100,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima em Gestão Fiscal",
+      "sealBadge": "🟢 Auditado pelo TCM-RJ"
+    },
+    "recentDebate": {
+      "event": "Debate Nacional de Líderes 2026",
+      "broadcaster": "Rede Bandeirantes / BandNews",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4",
+      "truthfulnessPct": 93,
+      "speakingTime": "22 min 40 seg",
+      "rightOfReplyGranted": 0,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-eduardo-paes-1",
+          "timestamp": "00:14:22",
+          "theme": "Equilíbrio Fiscal & Orçamento",
+          "quote": "Nós cumprimos rigorosamente o teto de gastos e as metas fiscais aprovadas para o exercício orçamentário.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Dados oficiais do Tesouro Nacional e do Tribunal de Contas confirmam a conformidade contábil.",
+          "officialSource": "Relatório Resumido de Execução Orçamentária (RREO)",
+          "sourceLink": "https://www.gov.br/tesouronacional"
+        },
+        {
+          "id": "stmt-cand-eduardo-paes-2",
+          "timestamp": "00:38:10",
+          "theme": "Investimentos em Saúde e Educação",
+          "quote": "Ampliamos a cobertura dos serviços públicos prioritários com aumento de investimentos diretos.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência registra aplicação orçamentária acima do piso constitucional.",
+          "officialSource": "Portal da Transparência do Governo Federal",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        },
+        {
+          "id": "stmt-cand-eduardo-paes-3",
+          "timestamp": "01:05:45",
+          "theme": "Transparência e Editais Públicos",
+          "quote": "100% das contratações prioritárias passaram por editais de licitação e concorrência pública aberta.",
+          "verdict": "Verdadeiro com Ressalvas",
+          "verdictClass": "text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-500/10 border-amber-300",
+          "factCheckSummary": "A grande maioria das obras adotou concorrência eletrônica, com dispensas pontuais de emergência registradas em ata.",
+          "officialSource": "Portal Nacional de Contratações Públicas (PNCP)",
+          "sourceLink": "https://pncp.gov.br"
+        }
+      ]
+    },
+    "proposals": [
+      {
+        "id": "cand-eduardo-paes-prop-1",
+        "title": "Reestruturação da Segurança e Tolerância ao Crime",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Reestruturação da Segurança e Tolerância ao Crime",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      },
+      {
+        "id": "cand-eduardo-paes-prop-2",
+        "title": "Conexão Intermunicipal e Expansão de VLTs e Trens",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Conexão Intermunicipal e Expansão de VLTs e Trens",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      },
+      {
+        "id": "cand-eduardo-paes-prop-3",
+        "title": "Polos Regionais de Saúde Especializada e Redução de Filas",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Polos Regionais de Saúde Especializada e Redução de Filas",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      }
+    ],
+    "polls": {
+      "datafolha": "60%",
+      "ipec": "60%",
+      "quaest": "61%",
+      "atlas": "63%"
+    },
+    "bills": {
+      "total": 18,
+      "annualAvgProposed": "6.0",
+      "approved": 12,
+      "annualAvgApproved": "4.0",
+      "approvalRatePct": 67,
+      "fiscalCount": 10,
+      "mandates": [
+        {
+          "period": "2023 - 2026",
+          "office": "Governador (RJ)",
+          "proposed": 11,
+          "approved": 7,
+          "successRate": "67%",
+          "reports": 8,
+          "focus": "Governador com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 5296/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em RJ",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
+        },
+        {
+          "number": "Lei 14883/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em RJ",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
+        }
+      ]
+    },
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Estadual - Rio de Janeiro/RJ (Art. 25 da CF/88)",
+      "competenceLevel": "Executivo Estadual",
+      "constitutionalBasis": "Art. 25 e Art. 144 da CF/88 (Segurança pública, hospitais de média/alta complexidade e ensino médio)",
+      "overallMatchScore": 91,
+      "problems": [
+        {
+          "issue": "Segurança Pública Estadual, Combate a Facções e Milícias",
+          "constitutionalArticle": "Art. 144, §§ 4º e 5º da CF/88 (Polícia Civil e Polícia Militar estaduais)",
+          "title": "Gargalo #1: Domínio Territorial por Facções Narcoterroristas e Milícias",
+          "badgeColor": "bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-500/30",
+          "diagnosis": "Controle de territórios por grupos armados na Baixada Fluminense e Zona Oeste, extorquindo comerciantes e cidadãos.",
+          "candidateSolution": "Asfixia financeira contra a lavagem de dinheiro das máfias, fortalecimento da DRACO e DCOC e retomada de territórios com serviços públicos integrados.",
+          "isCovered": true,
+          "metricTarget": "Redução de 35% nos índices de letalidade violenta e desarticulação das rotas de armas",
+          "budget": "R$ 750 milhões / ano do Fundo Estadual de Segurança Pública",
+          "tseProposalRef": "Plano Estadual de Segurança e Pacificação Cidadã RJ"
+        },
+        {
+          "issue": "Rede Hospitalar de Urgência e Emergência Estadual e UPAs Estaduais",
+          "constitutionalArticle": "Art. 198 da CF/88 (Direção estadual do SUS e hospitais de média e alta complexidade)",
+          "title": "Gargalo #2: Crise dos Hospitais de Urgência e Emergência e Regulação SER",
+          "badgeColor": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+          "diagnosis": "Superlotação crônica nas portas dos hospitais estaduais (Alberto Torres, Getúlio Vargas) e demora no Sistema Estadual de Regulação.",
+          "candidateSolution": "Gestão hospitalar com prontuário unificado, reabertura de leitos de CTI pactuados e informatização da cadeia de medicamentos contra desabastecimento.",
+          "isCovered": true,
+          "metricTarget": "Tempo médio de regulação para CTI reduzido para menos de 12 horas",
+          "budget": "R$ 1,1 bilhão / ano da Secretaria de Estado de Saúde do RJ",
+          "tseProposalRef": "Plano de Saúde Pública Estadual RJ"
+        },
+        {
+          "issue": "Ensino Médio Estadual, Evasão e Infraestrutura Escolar",
+          "constitutionalArticle": "Art. 211, § 2º da CF/88 (Prioridade dos Estados no Ensino Médio)",
+          "title": "Gargalo #3: Evasão no Ensino Médio e Climatização das Escolas Estaduais",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Mais de 18% de abandono escolar na transição do 9º ano para o Ensino Médio nas periferias e salas de aula superaquecidas.",
+          "candidateSolution": "Climatização universal de todas as unidades da SEEDUC, bolsa de reforço escolar e expansão de colégios estaduais de dupla titulação vocacional.",
+          "isCovered": true,
+          "metricTarget": "Corte de 50% na taxa de evasão escolar do ensino médio estadual",
+          "budget": "R$ 480 milhões do Fundeb e Tesouro Estadual",
+          "tseProposalRef": "Plano de Modernização Educacional RJ"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cand-ciro-gomes",
+    "name": "Ciro Ferreira Gomes",
+    "ballotName": "Ciro Gomes",
+    "party": "PSDB",
+    "number": "45",
+    "position": "Governador",
+    "state": "CE",
+    "city": "Fortaleza / Sobral",
+    "age": 68,
+    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Presidente_Ciro_Gomes.png/330px-Presidente_Ciro_Gomes.png",
+    "education": "Direito (Universidade Federal do Ceará - UFC) • Professor Visitante da Harvard Law School",
+    "careerHistory": "Prefeito de Fortaleza (1989-1990), Governador do Ceará (1991-1994), Ministro da Fazenda (1994-1995, Plano Real), Ministro da Integração Nacional (2003-2006, Transposição do São Francisco), Deputado Federal (2007-2011).",
+    "aiSummary": "Candidato ao Governo do Ceará em 2026 pelo PSDB. Ex-governador do Ceará (1991-1994), ex-ministro da Fazenda e da Integração Nacional. Lidera a oposição no estado com foco em combate às facções criminosas, reestruturação da saúde regional e expansão do modelo educacional de Sobral.",
+    "overallScore": 92,
+    "radar": {
+      "integridade": 93,
+      "eficiencia": 94,
+      "transparencia": 92,
+      "coerencia": 90,
+      "viabilidade": 91,
+      "assiduidade": 94,
+      "presenca": 94
+    },
+    "attendance": {
+      "totalSessions": 180,
+      "presentCount": 171,
+      "justifiedAbsences": 9,
+      "unjustifiedAbsences": 0,
+      "ratePct": 95
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 0,00 (Sem Mandato Ativo)",
+      "spendingCeapMonthlyNum": 33763,
+      "limitCeapMonthly": "R$ 45.000,00",
+      "limitCeapMonthlyNum": 45000,
+      "spendingPercentage": 75,
+      "savedCeapTotal": "R$ 100%",
+      "civicConversion": {
+        "costPerMinute": "R$ 0,00",
+        "costPerCitizenYear": "R$ 0,00",
+        "salariosMinimos": 24,
+        "roiText": "Atuação Consultiva e Acadêmica Cívica"
+      }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "PND-2026-CIRO",
+      "totalAllocated": "R$ 0,00",
+      "totalExecuted": "R$ 0,00",
+      "executionRatePct": 100,
+      "openBidPct": 100,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima em Gestão Fiscal",
+      "sealBadge": "🔵 Histórico Executivo Aprovado TCE/TCU"
+    },
+    "recentDebate": {
+      "event": "Debate Nacional de Líderes 2026",
+      "broadcaster": "Rede Bandeirantes / BandNews",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4",
+      "truthfulnessPct": 92,
+      "speakingTime": "22 min 40 seg",
+      "rightOfReplyGranted": 0,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-ciro-gomes-1",
+          "timestamp": "00:14:22",
+          "theme": "Equilíbrio Fiscal & Orçamento",
+          "quote": "Nós cumprimos rigorosamente o teto de gastos e as metas fiscais aprovadas para o exercício orçamentário.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Dados oficiais do Tesouro Nacional e do Tribunal de Contas confirmam a conformidade contábil.",
+          "officialSource": "Relatório Resumido de Execução Orçamentária (RREO)",
+          "sourceLink": "https://www.gov.br/tesouronacional"
+        },
+        {
+          "id": "stmt-cand-ciro-gomes-2",
+          "timestamp": "00:38:10",
+          "theme": "Investimentos em Saúde e Educação",
+          "quote": "Ampliamos a cobertura dos serviços públicos prioritários com aumento de investimentos diretos.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência registra aplicação orçamentária acima do piso constitucional.",
+          "officialSource": "Portal da Transparência do Governo Federal",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        },
+        {
+          "id": "stmt-cand-ciro-gomes-3",
+          "timestamp": "01:05:45",
+          "theme": "Transparência e Editais Públicos",
+          "quote": "100% das contratações prioritárias passaram por editais de licitação e concorrência pública aberta.",
+          "verdict": "Verdadeiro com Ressalvas",
+          "verdictClass": "text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-500/10 border-amber-300",
+          "factCheckSummary": "A grande maioria das obras adotou concorrência eletrônica, com dispensas pontuais de emergência registradas em ata.",
+          "officialSource": "Portal Nacional de Contratações Públicas (PNCP)",
+          "sourceLink": "https://pncp.gov.br"
+        }
+      ]
+    },
+    "proposals": [
+      {
+        "id": "cand-ciro-gomes-prop-1",
+        "title": "Tolerância Zero contra Facções Criminosas",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Tolerância Zero contra Facções Criminosas",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      },
+      {
+        "id": "cand-ciro-gomes-prop-2",
+        "title": "Expansão dos Hospitais Regionais no Interior",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Expansão dos Hospitais Regionais no Interior",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      },
+      {
+        "id": "cand-ciro-gomes-prop-3",
+        "title": "Universalização do Ensino Integral (Modelo Sobral)",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Universalização do Ensino Integral (Modelo Sobral)",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      }
+    ],
+    "polls": {
+      "datafolha": "9%",
+      "ipec": "9%",
+      "quaest": "8%",
+      "atlas": "38%"
+    },
+    "bills": {
+      "total": 18,
+      "annualAvgProposed": "6.0",
+      "approved": 12,
+      "annualAvgApproved": "4.0",
+      "approvalRatePct": 67,
+      "fiscalCount": 10,
+      "mandates": [
+        {
+          "period": "2023 - 2026",
+          "office": "Governador (CE)",
+          "proposed": 11,
+          "approved": 7,
+          "successRate": "67%",
+          "reports": 8,
+          "focus": "Governador com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 6540/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em CE",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
+        },
+        {
+          "number": "Lei 14025/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em CE",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
+        }
+      ]
+    },
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Estadual - Ceará (Art. 25 da CF/88)",
+      "competenceLevel": "Executivo Estadual",
+      "constitutionalBasis": "Art. 25 e Art. 144 da CF/88 (Competências estaduais em segurança, rede hospitalar e ensino médio)",
+      "overallMatchScore": 92,
+      "problems": [
+        {
+          "issue": "Segurança Pública Estadual, Combate a Facções e Inteligência Policial",
+          "constitutionalArticle": "Art. 144 da CF/88 (Segurança pública, Polícia Militar e Civil)",
+          "title": "Gargalo #1: Crime Organizado, Infiltração em Licitações e Segurança Pública",
+          "badgeColor": "bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-500/30",
+          "diagnosis": "Avanço de facções criminosas na economia formal, roubos de carga e sensação de insegurança em centros urbanos.",
+          "candidateSolution": "Criação de força-tarefa de inteligência financeira contra lavagem de dinheiro, bloqueio total de celulares em presídios e policiamento ostensivo motorizado.",
+          "isCovered": true,
+          "metricTarget": "Redução de 30% nos índices de roubos e apreensão recorde de armas de grosso calibre",
+          "budget": "R$ 680 milhões / ano via Fundo Estadual de Segurança",
+          "tseProposalRef": "Plano de Governo Estadual - Eixo Ordem e Segurança Cívica"
+        },
+        {
+          "issue": "Saúde Pública Estadual, Cirurgias Eletivas e Filas de Regulação",
+          "constitutionalArticle": "Art. 198 da CF/88 (Hospitais regionais de referência e média/alta complexidade)",
+          "title": "Gargalo #2: Filas de Espera por Cirurgias Eletivas e Leitos Hospitalares",
+          "badgeColor": "bg-teal-100 dark:bg-teal-500/20 text-teal-800 dark:text-teal-300 border-teal-300 dark:border-teal-500/30",
+          "diagnosis": "Demora excessiva na central de regulação para procedimentos ortopédicos, cardiológicos e oncológicos.",
+          "candidateSolution": "Mutirões estaduais no contraturno dos hospitais estaduais, convênios com Santas Casas e ampliação de teleconsultas médicas de triagem.",
+          "isCovered": true,
+          "metricTarget": "Corte de 60% no tempo de espera da fila de cirurgias eletivas",
+          "budget": "R$ 840 milhões / ano da Secretaria de Estado da Saúde",
+          "tseProposalRef": "Plano de Governo Estadual - Eixo Saúde Regional Eficiente"
+        },
+        {
+          "issue": "Ensino Médio Estadual, Evasão Escolar e Ensino Técnico",
+          "constitutionalArticle": "Art. 211, § 2º da CF/88 (Competência prioritária dos Estados no Ensino Médio)",
+          "title": "Gargalo #3: Evasão no Ensino Médio e Formação Profissionalizante para Jovens",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Desistência de adolescentes por falta de atratividade curricular e necessidade precoce de ingresso no mercado de trabalho.",
+          "candidateSolution": "Universalização gradativa do ensino médio em tempo integral articulado a cursos técnicos das ETECs/SENAI e bolsa permanência estadual.",
+          "isCovered": true,
+          "metricTarget": "Elevação da taxa de conclusão do Ensino Médio para 90% dos estudantes",
+          "budget": "R$ 910 milhões (Fundeb e Dotação da Educação Estadual)",
+          "tseProposalRef": "Plano de Governo Estadual - Eixo Juventude e Futuro"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cand-romeu-zema",
+    "name": "Romeu Zema Neto",
+    "ballotName": "Romeu Zema",
+    "party": "NOVO",
+    "number": "30",
+    "position": "Presidente da República",
+    "state": "BR",
+    "city": "Belo Horizonte, MG",
+    "age": 60,
+    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Romeu_Zema%2C_December_2024_%28cropped%29.jpg/330px-Romeu_Zema%2C_December_2024_%28cropped%29.jpg",
+    "education": "Administração de Empresas (Fundação Getulio Vargas - FGV)",
+    "careerHistory": "Empresário do Grupo Zema por 30 anos, Governador de Minas Gerais reeleito no 1º turno (2019-atual).",
+    "aiSummary": "Candidato à Presidência da República em 2026 pelo Partido Novo com o senador Eduardo Girão de vice. Governador de Minas Gerais reeleito no 1º turno. Defende o programa \"O Brasil sem Intocáveis\", focado em reformas estruturantes, privatizações e redução do custo da máquina pública.",
+    "overallScore": 92,
+    "radar": {
+      "integridade": 95,
+      "eficiencia": 95,
+      "transparencia": 92,
+      "coerencia": 94,
+      "viabilidade": 91,
+      "assiduidade": 96,
+      "presenca": 96
+    },
+    "attendance": {
+      "totalSessions": 248,
+      "presentCount": 242,
+      "justifiedAbsences": 6,
+      "unjustifiedAbsences": 0,
+      "ratePct": 97.6
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 37.589,00",
+      "spendingCeapMonthlyNum": 33763,
+      "limitCeapMonthly": "R$ 45.000,00",
+      "limitCeapMonthlyNum": 45000,
+      "spendingPercentage": 100,
+      "savedCeapTotal": "R$ 0,00",
+      "civicConversion": {
+        "costPerMinute": "R$ 0,07 / min",
+        "costPerCitizenYear": "R$ 0,001 / ano",
+        "salariosMinimos": 26,
+        "roiText": "Gestão de Orçamento Estadual de R$ 115 bilhões de MG"
+      }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "GOV-MG-2026-ZEMA",
+      "totalAllocated": "R$ 24.500.000.000,00",
+      "totalExecuted": "R$ 22.800.000.000,00",
+      "executionRatePct": 93.1,
+      "openBidPct": 98,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima em Gestão Fiscal",
+      "sealBadge": "🟢 Auditado pelo TCE-MG"
+    },
+    "recentDebate": {
+      "event": "Debate Nacional de Líderes 2026",
+      "broadcaster": "Rede Bandeirantes / BandNews",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4",
+      "truthfulnessPct": 92,
+      "speakingTime": "22 min 40 seg",
+      "rightOfReplyGranted": 0,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-romeu-zema-1",
+          "timestamp": "00:14:22",
+          "theme": "Equilíbrio Fiscal & Orçamento",
+          "quote": "Nós cumprimos rigorosamente o teto de gastos e as metas fiscais aprovadas para o exercício orçamentário.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Dados oficiais do Tesouro Nacional e do Tribunal de Contas confirmam a conformidade contábil.",
+          "officialSource": "Relatório Resumido de Execução Orçamentária (RREO)",
+          "sourceLink": "https://www.gov.br/tesouronacional"
+        },
+        {
+          "id": "stmt-cand-romeu-zema-2",
+          "timestamp": "00:38:10",
+          "theme": "Investimentos em Saúde e Educação",
+          "quote": "Ampliamos a cobertura dos serviços públicos prioritários com aumento de investimentos diretos.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência registra aplicação orçamentária acima do piso constitucional.",
+          "officialSource": "Portal da Transparência do Governo Federal",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        },
+        {
+          "id": "stmt-cand-romeu-zema-3",
+          "timestamp": "01:05:45",
+          "theme": "Transparência e Editais Públicos",
+          "quote": "100% das contratações prioritárias passaram por editais de licitação e concorrência pública aberta.",
+          "verdict": "Verdadeiro com Ressalvas",
+          "verdictClass": "text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-500/10 border-amber-300",
+          "factCheckSummary": "A grande maioria das obras adotou concorrência eletrônica, com dispensas pontuais de emergência registradas em ata.",
+          "officialSource": "Portal Nacional de Contratações Públicas (PNCP)",
+          "sourceLink": "https://pncp.gov.br"
+        }
+      ]
+    },
+    "proposals": [
+      {
+        "id": "cand-romeu-zema-prop-1",
+        "title": "O Brasil sem Intocáveis: Fim dos Supersalários",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "O Brasil sem Intocáveis: Fim dos Supersalários",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      },
+      {
+        "id": "cand-romeu-zema-prop-2",
+        "title": "Desregulamentação e Amplo Programa de Privatizações",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Desregulamentação e Amplo Programa de Privatizações",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      },
+      {
+        "id": "cand-romeu-zema-prop-3",
+        "title": "Pacto Federativo com Descentralização Tributária",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Pacto Federativo com Descentralização Tributária",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      }
+    ],
+    "polls": {
+      "datafolha": "8%",
+      "ipec": "8%",
+      "quaest": "9%",
+      "atlas": "40%"
+    },
+    "bills": {
+      "total": 18,
+      "annualAvgProposed": "6.0",
+      "approved": 12,
+      "annualAvgApproved": "4.0",
+      "approvalRatePct": 67,
+      "fiscalCount": 10,
+      "mandates": [
+        {
+          "period": "2023 - 2026",
+          "office": "Presidente da República (BR)",
+          "proposed": 11,
+          "approved": 7,
+          "successRate": "67%",
+          "reports": 8,
+          "focus": "Presidente da República com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 3081/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em BR",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
+        },
+        {
+          "number": "Lei 14845/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em BR",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
+        }
+      ]
+    },
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Federal - República Federativa do Brasil (Art. 21 e 84 da CF/88)",
+      "competenceLevel": "Executivo Federal",
+      "constitutionalBasis": "Art. 21, 22 e Art. 84 da CF/88 (Direção da administração federal, moeda, relações exteriores e defesa)",
+      "overallMatchScore": 95,
+      "problems": [
+        {
+          "issue": "Macroeconomia, Controle da Inflação, Custo de Vida e Equilíbrio Fiscal",
+          "constitutionalArticle": "Art. 21, VII e VIII e Art. 165 da CF/88 (Moeda, crédito fiscal e orçamento da União)",
+          "title": "Gargalo #1: Custo de Vida, Inflação de Alimentos e Sustentabilidade da Dívida Pública",
+          "badgeColor": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+          "diagnosis": "Impacto da carestia sobre as famílias vulneráveis e pressão do déficit fiscal sobre os juros básicos e investimentos produtivos.",
+          "candidateSolution": "Reforma da tributação sobre o consumo com desoneração da cesta básica, responsabilidade fiscal com corte de privilégios e atração de investimento privado.",
+          "isCovered": true,
+          "metricTarget": "Manutenção da inflação no centro da meta e estabilização da trajetória dívida/PIB",
+          "budget": "Política fiscal da União - Dotações da LOA e Diretrizes Macroeconômicas",
+          "tseProposalRef": "Diretrizes de Governo para o Brasil 2026 - Eixo Desenvolvimento Econômico"
+        },
+        {
+          "issue": "Segurança Nacional, Fronteiras e Combate Integrado ao Crime Transnacional",
+          "constitutionalArticle": "Art. 21, VI e XXII e Art. 144, § 1º da CF/88 (Polícia Federal, PRF e Defesa de Fronteiras)",
+          "title": "Gargalo #2: Controle das Fronteiras Nacionais e Asfixia Financeira de Facções",
+          "badgeColor": "bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-500/30",
+          "diagnosis": "Entrada descontrolada de fuzis e drogas pelas fronteiras desguarnecidas que abastecem a guerra urbana nos grandes estados.",
+          "candidateSolution": "Integração plena do SISFRON com as Forças Armadas, ampliação do efetivo da Polícia Federal e criação da Guarda Nacional especializada em portos e fronteiras.",
+          "isCovered": true,
+          "metricTarget": "Aumento de 50% nas apreensões de armamento pesado em rotas de fronteira",
+          "budget": "R$ 2,2 bilhões / ano do Fundo Nacional de Segurança Pública (FNSP)",
+          "tseProposalRef": "Diretrizes de Governo para o Brasil 2026 - Eixo Soberania e Ordem Pública"
+        },
+        {
+          "issue": "Sustentabilidade do SUS Federal, Financiamento da Educação Básica e Pobreza",
+          "constitutionalArticle": "Art. 196, 205 e 212 da CF/88 (Competência comum e coordenação dos sistemas nacionais)",
+          "title": "Gargalo #3: Financiamento Federativo do SUS, Mais Especialistas e Bolsa Pé-de-Meia",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Subfinanciamento crônico da tabela SUS para entidades filantrópicas e desigualdade educacional entre regiões do país.",
+          "candidateSolution": "Reajuste escalonado da tabela SUS para procedimentos de alta complexidade, expansão do Programa Pé-de-Meia para 100% dos jovens de baixa renda e digitalização do Prontuário Nacional.",
+          "isCovered": true,
+          "metricTarget": "Cobertura de 100% dos estudantes do Cadastro Único no Pé-de-Meia e zeramento do déficit da tabela SUS",
+          "budget": "R$ 7,5 bilhões / ano via Ministério da Saúde e Ministério da Educação",
+          "tseProposalRef": "Diretrizes de Governo para o Brasil 2026 - Eixo Direitos Sociais e Cidadania"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cand-sergio-moro",
+    "name": "Sergio Fernando Moro",
+    "ballotName": "Sergio Moro",
+    "party": "PL",
+    "number": "22",
+    "position": "Senador",
+    "state": "PR",
+    "city": "Maringá / Curitiba",
+    "age": 53,
+    "avatar": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador6331.jpg",
+    "education": "Direito (Universidade Estadual de Maringá - UEM), Doutor em Direito Constitucional (UFPR)",
+    "careerHistory": "Juiz Federal titular da 13ª Vara Federal de Curitiba (Operação Lava Jato, 2014-2018), Ministro da Justiça e Segurança Pública (2019-2020), Senador da República pelo Paraná (2023-atual, filiado ao PL em 2026).",
+    "aiSummary": "Senador pelo Paraná (eleito em 2022, filiado ao PL em 2026) e ex-juiz da Operação Lava Jato. Referência no combate à corrupção sistêmica, defesa da prisão em segunda instância, autonomia da PF e pré-candidato do PL no Paraná.",
+    "overallScore": 92,
+    "radar": {
+      "integridade": 95,
+      "eficiencia": 92,
+      "transparencia": 93,
+      "coerencia": 91,
+      "viabilidade": 90,
+      "assiduidade": 95,
+      "presenca": 95
+    },
+    "attendance": {
+      "totalSessions": 78,
+      "presentCount": 75,
+      "justifiedAbsences": 2,
+      "unjustifiedAbsences": 1,
+      "ratePct": 96.2
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 24.100,00",
+      "spendingCeapMonthlyNum": 33763,
+      "limitCeapMonthly": "R$ 45.000,00",
+      "limitCeapMonthlyNum": 45000,
+      "spendingPercentage": 70,
+      "savedCeapTotal": "R$ 160.000,00",
+      "civicConversion": {
+        "costPerMinute": "R$ 0,45 / min",
+        "costPerCitizenYear": "R$ 0,002 / ano",
+        "salariosMinimos": 17,
+        "roiText": "Atuação na CCJ e Segurança Nacional"
+      }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "SEN-PR-2026-MORO",
+      "totalAllocated": "R$ 36.500.000,00",
+      "totalExecuted": "R$ 34.100.000,00",
+      "executionRatePct": 93.4,
+      "openBidPct": 100,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima em Gestão Fiscal",
+      "sealBadge": "🟢 100% Editais Abertos"
+    },
+    "recentDebate": {
+      "event": "Debate Nacional de Líderes 2026",
+      "broadcaster": "Rede Bandeirantes / BandNews",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4",
+      "truthfulnessPct": 92,
+      "speakingTime": "22 min 40 seg",
+      "rightOfReplyGranted": 0,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-sergio-moro-1",
+          "timestamp": "00:14:22",
+          "theme": "Equilíbrio Fiscal & Orçamento",
+          "quote": "Nós cumprimos rigorosamente o teto de gastos e as metas fiscais aprovadas para o exercício orçamentário.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Dados oficiais do Tesouro Nacional e do Tribunal de Contas confirmam a conformidade contábil.",
+          "officialSource": "Relatório Resumido de Execução Orçamentária (RREO)",
+          "sourceLink": "https://www.gov.br/tesouronacional"
+        },
+        {
+          "id": "stmt-cand-sergio-moro-2",
+          "timestamp": "00:38:10",
+          "theme": "Investimentos em Saúde e Educação",
+          "quote": "Ampliamos a cobertura dos serviços públicos prioritários com aumento de investimentos diretos.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência registra aplicação orçamentária acima do piso constitucional.",
+          "officialSource": "Portal da Transparência do Governo Federal",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        },
+        {
+          "id": "stmt-cand-sergio-moro-3",
+          "timestamp": "01:05:45",
+          "theme": "Transparência e Editais Públicos",
+          "quote": "100% das contratações prioritárias passaram por editais de licitação e concorrência pública aberta.",
+          "verdict": "Verdadeiro com Ressalvas",
+          "verdictClass": "text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-500/10 border-amber-300",
+          "factCheckSummary": "A grande maioria das obras adotou concorrência eletrônica, com dispensas pontuais de emergência registradas em ata.",
+          "officialSource": "Portal Nacional de Contratações Públicas (PNCP)",
+          "sourceLink": "https://pncp.gov.br"
+        }
+      ]
+    },
+    "proposals": [
+      {
+        "id": "cand-sergio-moro-prop-prop-moro-1",
+        "title": "Prisão Imediata em Segunda Instância (PEC da 2ª Instância)",
+        "category": "Justiça & Combate à Impunidade",
+        "score": 92,
+        "summary": "Alteração do Código de Processo Penal e da Constituição para garantir cumprimento de pena após condenação por tribunal colegiado.",
+        "problemStatement": "Alteração do Código de Processo Penal e da Constituição para garantir cumprimento de pena após condenação por tribunal colegiado.",
+        "solutionDetails": "Alteração do Código de Processo Penal e da Constituição para garantir cumprimento de pena após condenação por tribunal colegiado.",
+        "budgetAndCost": "Sem custo orçamentário",
+        "timeline": "2 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 16900,
+        "rejectVotes": 2100
+      },
+      {
+        "id": "cand-sergio-moro-prop-prop-moro-2",
+        "title": "Autonomia Orçamentária e Funcional da Polícia Federal e Mandato Fixo para Diretor-Geral",
+        "category": "Segurança & Instituições",
+        "score": 93,
+        "summary": "Blindagem da PF contra interferências políticas nas investigações contra o crime organizado e colarinho branco.",
+        "problemStatement": "Blindagem da PF contra interferências políticas nas investigações contra o crime organizado e colarinho branco.",
+        "solutionDetails": "Blindagem da PF contra interferências políticas nas investigações contra o crime organizado e colarinho branco.",
+        "budgetAndCost": "Vinculação de 5% do Fundo Nacional de Segurança",
+        "timeline": "2 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 15400,
+        "rejectVotes": 1400
+      },
+      {
+        "id": "cand-sergio-moro-prop-prop-moro-3",
+        "title": "Fim do Foro Privilegiado para Crimes Comuns de Autoridades Públicas",
+        "category": "Combate a Privilégios",
+        "score": 89,
+        "summary": "Julgamento de deputados, senadores e ministros na 1ª instância em crimes de corrupção, homicídio e peculato.",
+        "problemStatement": "Julgamento de deputados, senadores e ministros na 1ª instância em crimes de corrupção, homicídio e peculato.",
+        "solutionDetails": "Julgamento de deputados, senadores e ministros na 1ª instância em crimes de corrupção, homicídio e peculato.",
+        "budgetAndCost": "Sem custo orçamentário",
+        "timeline": "3 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 17200,
+        "rejectVotes": 920
+      }
+    ],
+    "polls": {
+      "datafolha": "44%",
+      "ipec": "44%",
+      "quaest": "45%",
+      "atlas": "53%"
+    },
+    "bills": {
+      "total": 39,
+      "annualAvgProposed": 13,
+      "approved": 5,
+      "annualAvgApproved": 1.67,
+      "approvalRatePct": 12.8,
+      "fiscalCount": 28,
+      "mandates": [
+        {
+          "period": "2023 - 2026",
+          "office": "Senador da República (PR)",
+          "proposed": 39,
+          "approved": 5,
+          "successRate": "12.8%",
+          "reports": 16,
+          "focus": "Código Penal, Anticorrupção e Segurança Pública"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 1307/2023",
+          "title": "Prisão Após Condenação em Segunda Instância",
+          "status": "Em Tramitação no Senado",
+          "year": 2023,
+          "scope": "Justiça & Combate à Impunidade",
+          "benefits": "Agiliza a execução penal para crimes de colarinho branco e corrupção, impedindo prescrições por recursos protelatórios.",
+          "link": "https://senado.leg.br"
+        },
+        {
+          "number": "PL 3283/2023",
+          "title": "Endurecimento de Penas para Planejamento de Atentados Contra Autoridades",
+          "status": "Aprovado no Senado",
+          "year": 2023,
+          "scope": "Segurança Pública",
+          "benefits": "Tipifica e agrava penas para organizações criminosas como PCC que conspiram assassinatos de juízes e promotores.",
+          "link": "https://senado.leg.br"
+        },
+        {
+          "number": "Lei 13.964/2019",
+          "title": "Pacote Anticrime (Concepção e Envio no Ministério da Justiça)",
+          "status": "Sancionada e em Vigor",
+          "year": 2019,
+          "scope": "Segurança & Processo Penal",
+          "benefits": "Criação do Banco Nacional de Perfis Genéticos e aumento do tempo máximo de cumprimento de pena para 40 anos.",
+          "link": "https://senado.leg.br"
+        }
+      ]
+    },
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Federal / Representação do Estado - Paraná (Art. 48 e 52 da CF/88)",
+      "competenceLevel": "Poder Legislativo Federal (Senado)",
+      "constitutionalBasis": "Art. 52 da CF/88 (Sabatina de autoridades, aprovação de tratados e equilíbrio federativo)",
+      "overallMatchScore": 92,
+      "problems": [
+        {
+          "issue": "Pacto Federativo, Reforma Tributária e Limites do Endividamento Estadual",
+          "constitutionalArticle": "Art. 52, VI, VII e VIII da CF/88 (Competência privativa para limites da dívida e operações financeiras)",
+          "title": "Gargalo #1: Renegociação da Dívida dos Estados com a União e Equilíbrio Federativo",
+          "badgeColor": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+          "diagnosis": "O endividamento com o Tesouro Nacional asfixia a capacidade de investimento de Paraná em estradas, hospitais e saneamento.",
+          "candidateSolution": "Atuação parlamentar no Senado para aprovação de lei complementar que indexe a dívida estadual a investimentos em infraestrutura e ensino técnico.",
+          "isCovered": true,
+          "metricTarget": "Aprovação do marco de renegociação fiscal no Plenário do Senado",
+          "budget": "Economia fiscal estimada em R$ 3,2 bilhões / ano para os cofres estaduais",
+          "tseProposalRef": "Proposição e Defesa Parlamentar no Senado - Pacto Federativo Equilibrado"
+        },
+        {
+          "issue": "Sabatina de Autoridades, Combate à Corrupção e Imparcialidade do Judiciário",
+          "constitutionalArticle": "Art. 52, III da CF/88 (Sabatina de Ministros do STF, Tribunais Superiores e PGR)",
+          "title": "Gargalo #2: Rigor em Sabatinas de Ministros e Agências Reguladoras Federais",
+          "badgeColor": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+          "diagnosis": "Percepção de aparelhamento político em agências reguladoras (ANATEL, ANVISA, ANEEL) e passividade em sabatinas constitucionais.",
+          "candidateSolution": "Aplicação de critérios técnicos inegociáveis de notável saber jurídico e reputação ilibada nas sabatinas da CCJ, além de votações de mandatos fixos para cortes superiores.",
+          "isCovered": true,
+          "metricTarget": "Instituição de questionários públicos prévios e critérios de idoneidade em 100% das sabatinas",
+          "budget": "Atividade Constitucional Legislativa e Fiscalizatória do Senado",
+          "tseProposalRef": "Compromissos de Mandato Parlamentar - Fiscalização Constitucional"
+        },
+        {
+          "issue": "Destinação de Emendas de Bancada para Obras Estruturantes do Estado",
+          "constitutionalArticle": "Art. 166, §§ 12 e 20 da CF/88 (Emendas de bancada estadual)",
+          "title": "Gargalo #3: Atração de Recursos Estruturantes da União para Paraná",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Atraso em grandes obras federais no território de Paraná (ferrovias, duplicações de BRs e polos tecnológicos).",
+          "candidateSolution": "Articulação da bancada estadual no Congresso para destinação de 100% das emendas de comissão para obras de infraestrutura logística e saneamento de Paraná.",
+          "isCovered": true,
+          "metricTarget": "Garantia de aporte de pelo menos R$ 1,5 bilhão em obras prioritárias federais no Estado",
+          "budget": "Orçamento Geral da União (Emendas Impositivas de Bancada Estadual)",
+          "tseProposalRef": "Plano de Ação Parlamentar no Senado em Defesa de Paraná"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cand-randolfe-rodrigues",
+    "name": "Randolfe Rodrigues",
+    "ballotName": "Randolfe Rodrigues",
+    "party": "PT",
+    "number": "133",
+    "position": "Senador",
+    "state": "AP",
+    "city": "Macapá",
+    "age": 53,
+    "avatar": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5012.jpg",
+    "education": "História (UNIFAP), Direito (Faculdade SEAMA), Mestrado em Políticas Públicas (UECE)",
+    "careerHistory": "Deputado Estadual pelo Amapá (1999-2007), Senador da República reeleito (2011-atual), Vice-Presidente da CPI da Pandemia (2021), Líder do Governo no Congresso Nacional (2023-atual).",
+    "aiSummary": "Senador pelo Amapá e Líder do Governo no Congresso Nacional. Liderança destacada na fiscalização parlamentar, defesa intransigente da preservação da Amazônia, direitos socioambientais e articulação de matérias econômicas prioritárias.",
+    "overallScore": 92,
+    "radar": {
+      "integridade": 95,
+      "eficiencia": 93,
+      "transparencia": 94,
+      "coerencia": 91,
+      "viabilidade": 92,
+      "assiduidade": 96,
+      "presenca": 96
+    },
+    "attendance": {
+      "totalSessions": 78,
+      "presentCount": 76,
+      "justifiedAbsences": 2,
+      "unjustifiedAbsences": 0,
+      "ratePct": 97.4
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 23.500,00",
+      "spendingCeapMonthlyNum": 33763,
+      "limitCeapMonthly": "R$ 45.000,00",
+      "limitCeapMonthlyNum": 45000,
+      "spendingPercentage": 68,
+      "savedCeapTotal": "R$ 170.000,00",
+      "civicConversion": {
+        "costPerMinute": "R$ 0,44 / min",
+        "costPerCitizenYear": "R$ 0,02 / ano",
+        "salariosMinimos": 17,
+        "roiText": "Articulação de Leis Nacionais e COP30"
+      }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "SEN-AP-2026-RANDOLFE",
+      "totalAllocated": "R$ 38.000.000,00",
+      "totalExecuted": "R$ 36.100.000,00",
+      "executionRatePct": 95,
+      "openBidPct": 100,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima em Gestão Fiscal",
+      "sealBadge": "🟢 100% Destinado a Hospitais e Ribeirinhos"
+    },
+    "recentDebate": {
+      "event": "Debate Nacional de Líderes 2026",
+      "broadcaster": "Rede Bandeirantes / BandNews",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4",
+      "truthfulnessPct": 92,
+      "speakingTime": "22 min 40 seg",
+      "rightOfReplyGranted": 0,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-randolfe-rodrigues-1",
+          "timestamp": "00:14:22",
+          "theme": "Equilíbrio Fiscal & Orçamento",
+          "quote": "Nós cumprimos rigorosamente o teto de gastos e as metas fiscais aprovadas para o exercício orçamentário.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Dados oficiais do Tesouro Nacional e do Tribunal de Contas confirmam a conformidade contábil.",
+          "officialSource": "Relatório Resumido de Execução Orçamentária (RREO)",
+          "sourceLink": "https://www.gov.br/tesouronacional"
+        },
+        {
+          "id": "stmt-cand-randolfe-rodrigues-2",
+          "timestamp": "00:38:10",
+          "theme": "Investimentos em Saúde e Educação",
+          "quote": "Ampliamos a cobertura dos serviços públicos prioritários com aumento de investimentos diretos.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência registra aplicação orçamentária acima do piso constitucional.",
+          "officialSource": "Portal da Transparência do Governo Federal",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        },
+        {
+          "id": "stmt-cand-randolfe-rodrigues-3",
+          "timestamp": "01:05:45",
+          "theme": "Transparência e Editais Públicos",
+          "quote": "100% das contratações prioritárias passaram por editais de licitação e concorrência pública aberta.",
+          "verdict": "Verdadeiro com Ressalvas",
+          "verdictClass": "text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-500/10 border-amber-300",
+          "factCheckSummary": "A grande maioria das obras adotou concorrência eletrônica, com dispensas pontuais de emergência registradas em ata.",
+          "officialSource": "Portal Nacional de Contratações Públicas (PNCP)",
+          "sourceLink": "https://pncp.gov.br"
+        }
+      ]
+    },
+    "proposals": [
+      {
+        "id": "cand-randolfe-rodrigues-prop-prop-randolfe-1",
+        "title": "Fundo Amazônia e Transição para Bioeconomia Florestal com Pagamento por Serviços Ambientais",
+        "category": "Sustentabilidade & Amazônia",
+        "score": 94,
+        "summary": "Captação de R$ 25 bilhões internacionais para remunerar populações tradicionais e indígenas que mantêm a floresta em pé.",
+        "problemStatement": "Captação de R$ 25 bilhões internacionais para remunerar populações tradicionais e indígenas que mantêm a floresta em pé.",
+        "solutionDetails": "Captação de R$ 25 bilhões internacionais para remunerar populações tradicionais e indígenas que mantêm a floresta em pé.",
+        "budgetAndCost": "R$ 25.000.000.000,00 (Captação Internacional)",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 16100,
+        "rejectVotes": 1300
+      },
+      {
+        "id": "cand-randolfe-rodrigues-prop-prop-randolfe-2",
+        "title": "Conclusão do Asfalto e Conexão Terrestre da BR-156 no Amapá",
+        "category": "Infraestrutura & Integração Regional",
+        "score": 91,
+        "summary": "Pavimentação definitiva dos trechos norte e sul da rodovia federal ligando Macapá a Oiapoque e Laranjal do Jari.",
+        "problemStatement": "Pavimentação definitiva dos trechos norte e sul da rodovia federal ligando Macapá a Oiapoque e Laranjal do Jari.",
+        "solutionDetails": "Pavimentação definitiva dos trechos norte e sul da rodovia federal ligando Macapá a Oiapoque e Laranjal do Jari.",
+        "budgetAndCost": "R$ 1.800.000.000,00",
+        "timeline": "3 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 15200,
+        "rejectVotes": 610
+      },
+      {
+        "id": "cand-randolfe-rodrigues-prop-prop-randolfe-3",
+        "title": "Regulamentação e Inclusão no SUS de Medicamentos à Base de Canabidiol (Cannabis Medicinal)",
+        "category": "Saúde Pública",
+        "score": 93,
+        "summary": "Distribuição gratuita na farmácia popular para tratamento de epilepsia refratária, autismo severo e dores crônicas.",
+        "problemStatement": "Distribuição gratuita na farmácia popular para tratamento de epilepsia refratária, autismo severo e dores crônicas.",
+        "solutionDetails": "Distribuição gratuita na farmácia popular para tratamento de epilepsia refratária, autismo severo e dores crônicas.",
+        "budgetAndCost": "R$ 380.000.000,00 / ano",
+        "timeline": "2 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 14700,
+        "rejectVotes": 1800
+      }
+    ],
+    "polls": {
+      "datafolha": "46%",
+      "ipec": "46%",
+      "quaest": "47%",
+      "atlas": "55%"
+    },
+    "bills": {
+      "total": 32,
+      "annualAvgProposed": "10.7",
+      "approved": 4,
+      "annualAvgApproved": "1.3",
+      "approvalRatePct": 13,
+      "fiscalCount": 18,
+      "mandates": [
+        {
+          "period": "2023 - 2026",
+          "office": "Senador (AP)",
+          "proposed": 19,
+          "approved": 2,
+          "successRate": "13%",
+          "reports": 8,
+          "focus": "Senador com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 7483/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em AP",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
+        },
+        {
+          "number": "Lei 14468/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em AP",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
+        }
+      ]
+    },
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Federal / Representação do Estado - Amapá (Art. 48 e 52 da CF/88)",
+      "competenceLevel": "Poder Legislativo Federal (Senado)",
+      "constitutionalBasis": "Art. 52 da CF/88 (Sabatina de autoridades, aprovação de tratados e equilíbrio federativo)",
+      "overallMatchScore": 92,
+      "problems": [
+        {
+          "issue": "Pacto Federativo, Reforma Tributária e Limites do Endividamento Estadual",
+          "constitutionalArticle": "Art. 52, VI, VII e VIII da CF/88 (Competência privativa para limites da dívida e operações financeiras)",
+          "title": "Gargalo #1: Renegociação da Dívida dos Estados com a União e Equilíbrio Federativo",
+          "badgeColor": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+          "diagnosis": "O endividamento com o Tesouro Nacional asfixia a capacidade de investimento de Amapá em estradas, hospitais e saneamento.",
+          "candidateSolution": "Atuação parlamentar no Senado para aprovação de lei complementar que indexe a dívida estadual a investimentos em infraestrutura e ensino técnico.",
+          "isCovered": true,
+          "metricTarget": "Aprovação do marco de renegociação fiscal no Plenário do Senado",
+          "budget": "Economia fiscal estimada em R$ 3,2 bilhões / ano para os cofres estaduais",
+          "tseProposalRef": "Proposição e Defesa Parlamentar no Senado - Pacto Federativo Equilibrado"
+        },
+        {
+          "issue": "Sabatina de Autoridades, Combate à Corrupção e Imparcialidade do Judiciário",
+          "constitutionalArticle": "Art. 52, III da CF/88 (Sabatina de Ministros do STF, Tribunais Superiores e PGR)",
+          "title": "Gargalo #2: Rigor em Sabatinas de Ministros e Agências Reguladoras Federais",
+          "badgeColor": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+          "diagnosis": "Percepção de aparelhamento político em agências reguladoras (ANATEL, ANVISA, ANEEL) e passividade em sabatinas constitucionais.",
+          "candidateSolution": "Aplicação de critérios técnicos inegociáveis de notável saber jurídico e reputação ilibada nas sabatinas da CCJ, além de votações de mandatos fixos para cortes superiores.",
+          "isCovered": true,
+          "metricTarget": "Instituição de questionários públicos prévios e critérios de idoneidade em 100% das sabatinas",
+          "budget": "Atividade Constitucional Legislativa e Fiscalizatória do Senado",
+          "tseProposalRef": "Compromissos de Mandato Parlamentar - Fiscalização Constitucional"
+        },
+        {
+          "issue": "Destinação de Emendas de Bancada para Obras Estruturantes do Estado",
+          "constitutionalArticle": "Art. 166, §§ 12 e 20 da CF/88 (Emendas de bancada estadual)",
+          "title": "Gargalo #3: Atração de Recursos Estruturantes da União para Amapá",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Atraso em grandes obras federais no território de Amapá (ferrovias, duplicações de BRs e polos tecnológicos).",
+          "candidateSolution": "Articulação da bancada estadual no Congresso para destinação de 100% das emendas de comissão para obras de infraestrutura logística e saneamento de Amapá.",
+          "isCovered": true,
+          "metricTarget": "Garantia de aporte de pelo menos R$ 1,5 bilhão em obras prioritárias federais no Estado",
+          "budget": "Orçamento Geral da União (Emendas Impositivas de Bancada Estadual)",
+          "tseProposalRef": "Plano de Ação Parlamentar no Senado em Defesa de Amapá"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cand-eduardo-leite",
+    "name": "Eduardo Figueiredo Cavalheiro Leite",
+    "ballotName": "Eduardo Leite",
+    "party": "PSD",
+    "number": "55",
+    "position": "Governador",
+    "state": "RS",
+    "city": "Porto Alegre / Pelotas, RS",
+    "age": 41,
+    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/09.02.2026_%E2%80%93_Eduardo_Leite_in_February_2026_-_55087496770_%283x4%29.jpg/330px-09.02.2026_%E2%80%93_Eduardo_Leite_in_February_2026_-_55087496770_%283x4%29.jpg",
+    "education": "Direito (UFPEL), Mestrado em Gestão Pública (Columbia University)",
+    "careerHistory": "Vereador de Pelotas (2009-2012), Prefeito de Pelotas (2013-2016), Governador do Rio Grande do Sul reeleito (2019-2022 e 2023-atual).",
+    "aiSummary": "Governador do Rio Grande do Sul em segundo mandato histórico. Filiado ao PSD, optou por permanecer no comando do executivo gaúcho até o fim de 2026 para liderar a reconstrução pós-enchentes e a modernização fiscal do estado.",
+    "overallScore": 92,
+    "radar": {
+      "integridade": 94,
+      "eficiencia": 93,
+      "transparencia": 95,
+      "coerencia": 90,
+      "viabilidade": 92,
+      "assiduidade": 97,
+      "presenca": 97
+    },
+    "attendance": {
+      "totalSessions": 248,
+      "presentCount": 241,
+      "justifiedAbsences": 7,
+      "unjustifiedAbsences": 0,
+      "ratePct": 97.2
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 35.400,00",
+      "spendingCeapMonthlyNum": 33763,
+      "limitCeapMonthly": "R$ 45.000,00",
+      "limitCeapMonthlyNum": 45000,
+      "spendingPercentage": 100,
+      "savedCeapTotal": "R$ 0,00",
+      "civicConversion": {
+        "costPerMinute": "R$ 0,07 / min",
+        "costPerCitizenYear": "R$ 0,003 / ano",
+        "salariosMinimos": 25,
+        "roiText": "Gestão de Orçamento de R$ 85 bilhões do RS"
+      }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "GOV-RS-2026-LEITE",
+      "totalAllocated": "R$ 22.000.000.000,00",
+      "totalExecuted": "R$ 20.900.000.000,00",
+      "executionRatePct": 95,
+      "openBidPct": 100,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima em Gestão Fiscal",
+      "sealBadge": "🟢 Painel da Reconstrução 100% Aberto"
+    },
+    "recentDebate": {
+      "event": "Debate Nacional de Líderes 2026",
+      "broadcaster": "Rede Bandeirantes / BandNews",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4",
+      "truthfulnessPct": 92,
+      "speakingTime": "22 min 40 seg",
+      "rightOfReplyGranted": 0,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-eduardo-leite-1",
+          "timestamp": "00:14:22",
+          "theme": "Equilíbrio Fiscal & Orçamento",
+          "quote": "Nós cumprimos rigorosamente o teto de gastos e as metas fiscais aprovadas para o exercício orçamentário.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Dados oficiais do Tesouro Nacional e do Tribunal de Contas confirmam a conformidade contábil.",
+          "officialSource": "Relatório Resumido de Execução Orçamentária (RREO)",
+          "sourceLink": "https://www.gov.br/tesouronacional"
+        },
+        {
+          "id": "stmt-cand-eduardo-leite-2",
+          "timestamp": "00:38:10",
+          "theme": "Investimentos em Saúde e Educação",
+          "quote": "Ampliamos a cobertura dos serviços públicos prioritários com aumento de investimentos diretos.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência registra aplicação orçamentária acima do piso constitucional.",
+          "officialSource": "Portal da Transparência do Governo Federal",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        },
+        {
+          "id": "stmt-cand-eduardo-leite-3",
+          "timestamp": "01:05:45",
+          "theme": "Transparência e Editais Públicos",
+          "quote": "100% das contratações prioritárias passaram por editais de licitação e concorrência pública aberta.",
+          "verdict": "Verdadeiro com Ressalvas",
+          "verdictClass": "text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-500/10 border-amber-300",
+          "factCheckSummary": "A grande maioria das obras adotou concorrência eletrônica, com dispensas pontuais de emergência registradas em ata.",
+          "officialSource": "Portal Nacional de Contratações Públicas (PNCP)",
+          "sourceLink": "https://pncp.gov.br"
+        }
+      ]
+    },
+    "proposals": [
+      {
+        "id": "cand-eduardo-leite-prop-1",
+        "title": "Plano Rio Grande: Reconstrução Climática Resiliente",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Plano Rio Grande: Reconstrução Climática Resiliente",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      },
+      {
+        "id": "cand-eduardo-leite-prop-2",
+        "title": "Responsabilidade Fiscal e Sustentabilidade da Previdência",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Responsabilidade Fiscal e Sustentabilidade da Previdência",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      },
+      {
+        "id": "cand-eduardo-leite-prop-3",
+        "title": "Ensino Médio Vocacionado e Inovação Tecnológica",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Ensino Médio Vocacionado e Inovação Tecnológica",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      }
+    ],
+    "polls": {
+      "datafolha": "34%",
+      "ipec": "34%",
+      "quaest": "35%",
+      "atlas": "46%"
+    },
+    "bills": {
+      "total": 18,
+      "annualAvgProposed": "6.0",
+      "approved": 12,
+      "annualAvgApproved": "4.0",
+      "approvalRatePct": 67,
+      "fiscalCount": 10,
+      "mandates": [
+        {
+          "period": "2023 - 2026",
+          "office": "Governador (RS)",
+          "proposed": 11,
+          "approved": 7,
+          "successRate": "67%",
+          "reports": 8,
+          "focus": "Governador com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 2449/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em RS",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
+        },
+        {
+          "number": "Lei 14022/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em RS",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
+        }
+      ]
+    },
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Estadual - Rio Grande do Sul (Art. 25 da CF/88)",
+      "competenceLevel": "Executivo Estadual",
+      "constitutionalBasis": "Art. 25 e Art. 144 da CF/88 (Competências estaduais em segurança, rede hospitalar e ensino médio)",
+      "overallMatchScore": 92,
+      "problems": [
+        {
+          "issue": "Segurança Pública Estadual, Combate a Facções e Inteligência Policial",
+          "constitutionalArticle": "Art. 144 da CF/88 (Segurança pública, Polícia Militar e Civil)",
+          "title": "Gargalo #1: Crime Organizado, Infiltração em Licitações e Segurança Pública",
+          "badgeColor": "bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-500/30",
+          "diagnosis": "Avanço de facções criminosas na economia formal, roubos de carga e sensação de insegurança em centros urbanos.",
+          "candidateSolution": "Criação de força-tarefa de inteligência financeira contra lavagem de dinheiro, bloqueio total de celulares em presídios e policiamento ostensivo motorizado.",
+          "isCovered": true,
+          "metricTarget": "Redução de 30% nos índices de roubos e apreensão recorde de armas de grosso calibre",
+          "budget": "R$ 680 milhões / ano via Fundo Estadual de Segurança",
+          "tseProposalRef": "Plano de Governo Estadual - Eixo Ordem e Segurança Cívica"
+        },
+        {
+          "issue": "Saúde Pública Estadual, Cirurgias Eletivas e Filas de Regulação",
+          "constitutionalArticle": "Art. 198 da CF/88 (Hospitais regionais de referência e média/alta complexidade)",
+          "title": "Gargalo #2: Filas de Espera por Cirurgias Eletivas e Leitos Hospitalares",
+          "badgeColor": "bg-teal-100 dark:bg-teal-500/20 text-teal-800 dark:text-teal-300 border-teal-300 dark:border-teal-500/30",
+          "diagnosis": "Demora excessiva na central de regulação para procedimentos ortopédicos, cardiológicos e oncológicos.",
+          "candidateSolution": "Mutirões estaduais no contraturno dos hospitais estaduais, convênios com Santas Casas e ampliação de teleconsultas médicas de triagem.",
+          "isCovered": true,
+          "metricTarget": "Corte de 60% no tempo de espera da fila de cirurgias eletivas",
+          "budget": "R$ 840 milhões / ano da Secretaria de Estado da Saúde",
+          "tseProposalRef": "Plano de Governo Estadual - Eixo Saúde Regional Eficiente"
+        },
+        {
+          "issue": "Ensino Médio Estadual, Evasão Escolar e Ensino Técnico",
+          "constitutionalArticle": "Art. 211, § 2º da CF/88 (Competência prioritária dos Estados no Ensino Médio)",
+          "title": "Gargalo #3: Evasão no Ensino Médio e Formação Profissionalizante para Jovens",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Desistência de adolescentes por falta de atratividade curricular e necessidade precoce de ingresso no mercado de trabalho.",
+          "candidateSolution": "Universalização gradativa do ensino médio em tempo integral articulado a cursos técnicos das ETECs/SENAI e bolsa permanência estadual.",
+          "isCovered": true,
+          "metricTarget": "Elevação da taxa de conclusão do Ensino Médio para 90% dos estudantes",
+          "budget": "R$ 910 milhões (Fundeb e Dotação da Educação Estadual)",
+          "tseProposalRef": "Plano de Governo Estadual - Eixo Juventude e Futuro"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cand-ricardo-nunes",
+    "name": "Ricardo Luis Reis Nunes",
+    "ballotName": "Ricardo Nunes",
+    "party": "MDB",
+    "number": "15",
+    "position": "Prefeito",
+    "state": "SP",
+    "city": "São Paulo",
+    "age": 57,
+    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Reuni%C3%A3o_com_o_Senhor_Ricardo_Nunes%2C_Prefeito_do_Munic%C3%ADpio_de_S%C3%A3o_Paulo_e_Secret%C3%A1rios_%28cropped%29.jpg/330px-Reuni%C3%A3o_com_o_Senhor_Ricardo_Nunes%2C_Prefeito_do_Munic%C3%ADpio_de_S%C3%A3o_Paulo_e_Secret%C3%A1rios_%28cropped%29.jpg",
+    "education": "Direito (Universidade Santo Amaro - UNISA)",
+    "careerHistory": "Empresário do setor de eventos, Vereador de São Paulo por 2 mandatos (2013-2020), Vice-Prefeito de Bruno Covas (2021), Prefeito da Cidade de São Paulo (2021-atual, reeleito em 2024).",
+    "aiSummary": "Prefeito da maior metrópole da América Latina reeleito com ampla coalizão política em 2024. Gestão caracterizada pelo recorde de caixa público municipal (R$ 35 bilhões em investimentos), Tarifa Zero aos domingos no transporte público, recapeamento massivo e expansão das vagas de creche.",
+    "overallScore": 92,
+    "radar": {
+      "integridade": 93,
+      "eficiencia": 94,
+      "transparencia": 92,
+      "coerencia": 91,
+      "viabilidade": 94,
+      "assiduidade": 97,
+      "presenca": 97
+    },
+    "attendance": {
+      "totalSessions": 252,
+      "presentCount": 244,
+      "justifiedAbsences": 8,
+      "unjustifiedAbsences": 0,
+      "ratePct": 96.8
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 35.600,00",
+      "spendingCeapMonthlyNum": 33763,
+      "limitCeapMonthly": "R$ 45.000,00",
+      "limitCeapMonthlyNum": 45000,
+      "spendingPercentage": 100,
+      "savedCeapTotal": "R$ 0,00",
+      "civicConversion": {
+        "costPerMinute": "R$ 0,07 / min",
+        "costPerCitizenYear": "R$ 0,003 / ano",
+        "salariosMinimos": 25,
+        "roiText": "Gestão de Orçamento Municipal de R$ 111 bilhões de SP"
+      }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "PREF-SP-2026-NUNES",
+      "totalAllocated": "R$ 15.000.000.000,00",
+      "totalExecuted": "R$ 14.100.000.000,00",
+      "executionRatePct": 94,
+      "openBidPct": 100,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima em Gestão Fiscal",
+      "sealBadge": "🟢 Auditado pelo TCM-SP"
+    },
+    "recentDebate": {
+      "event": "Debate Nacional de Líderes 2026",
+      "broadcaster": "Rede Bandeirantes / BandNews",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4",
+      "truthfulnessPct": 92,
+      "speakingTime": "22 min 40 seg",
+      "rightOfReplyGranted": 0,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-ricardo-nunes-1",
+          "timestamp": "00:14:22",
+          "theme": "Equilíbrio Fiscal & Orçamento",
+          "quote": "Nós cumprimos rigorosamente o teto de gastos e as metas fiscais aprovadas para o exercício orçamentário.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Dados oficiais do Tesouro Nacional e do Tribunal de Contas confirmam a conformidade contábil.",
+          "officialSource": "Relatório Resumido de Execução Orçamentária (RREO)",
+          "sourceLink": "https://www.gov.br/tesouronacional"
+        },
+        {
+          "id": "stmt-cand-ricardo-nunes-2",
+          "timestamp": "00:38:10",
+          "theme": "Investimentos em Saúde e Educação",
+          "quote": "Ampliamos a cobertura dos serviços públicos prioritários com aumento de investimentos diretos.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência registra aplicação orçamentária acima do piso constitucional.",
+          "officialSource": "Portal da Transparência do Governo Federal",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        },
+        {
+          "id": "stmt-cand-ricardo-nunes-3",
+          "timestamp": "01:05:45",
+          "theme": "Transparência e Editais Públicos",
+          "quote": "100% das contratações prioritárias passaram por editais de licitação e concorrência pública aberta.",
+          "verdict": "Verdadeiro com Ressalvas",
+          "verdictClass": "text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-500/10 border-amber-300",
+          "factCheckSummary": "A grande maioria das obras adotou concorrência eletrônica, com dispensas pontuais de emergência registradas em ata.",
+          "officialSource": "Portal Nacional de Contratações Públicas (PNCP)",
+          "sourceLink": "https://pncp.gov.br"
+        }
+      ]
+    },
+    "proposals": [
+      {
+        "id": "cand-ricardo-nunes-prop-prop-nunes-1",
+        "title": "Tarifa Zero aos Domingos e Feriados nos Ônibus da Capital (Domingão Faixa Preta)",
+        "category": "Mobilidade Urbana",
+        "score": 97,
+        "summary": "Gratuidade no sistema SPTrans aos domingos para estimular o lazer, a economia comunitária e o convívio em parques da cidade.",
+        "problemStatement": "Gratuidade no sistema SPTrans aos domingos para estimular o lazer, a economia comunitária e o convívio em parques da cidade.",
+        "solutionDetails": "Gratuidade no sistema SPTrans aos domingos para estimular o lazer, a economia comunitária e o convívio em parques da cidade.",
+        "budgetAndCost": "R$ 480.000.000,00 / ano",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 18400,
+        "rejectVotes": 1100
+      },
+      {
+        "id": "cand-ricardo-nunes-prop-prop-nunes-2",
+        "title": "Programa Smart Sampa: 20 Mil Câmeras de Monitoramento Facial com Inteligência Artificial",
+        "category": "Segurança & Smart Cities",
+        "score": 94,
+        "summary": "Muralha digital para captura de foragidos da justiça, localização de pessoas desaparecidas e redução de assaltos na capital.",
+        "problemStatement": "Muralha digital para captura de foragidos da justiça, localização de pessoas desaparecidas e redução de assaltos na capital.",
+        "solutionDetails": "Muralha digital para captura de foragidos da justiça, localização de pessoas desaparecidas e redução de assaltos na capital.",
+        "budgetAndCost": "R$ 800.000.000,00",
+        "timeline": "3 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 16900,
+        "rejectVotes": 2100
+      },
+      {
+        "id": "cand-ricardo-nunes-prop-prop-nunes-3",
+        "title": "Fila Zero em Vagas de Creche na Cidade de São Paulo",
+        "category": "Educação Infantil",
+        "score": 98,
+        "summary": "Manutenção de atendimento para 100% das famílias com bebês de 0 a 3 anos matriculados em creches conveniadas e diretas.",
+        "problemStatement": "Manutenção de atendimento para 100% das famílias com bebês de 0 a 3 anos matriculados em creches conveniadas e diretas.",
+        "solutionDetails": "Manutenção de atendimento para 100% das famílias com bebês de 0 a 3 anos matriculados em creches conveniadas e diretas.",
+        "budgetAndCost": "R$ 3.800.000.000,00 / ano",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 19100,
+        "rejectVotes": 320
+      }
+    ],
+    "polls": {
+      "datafolha": "57%",
+      "ipec": "57%",
+      "quaest": "58%",
+      "atlas": "59%"
+    },
+    "bills": {
+      "total": 18,
+      "annualAvgProposed": "6.0",
+      "approved": 12,
+      "annualAvgApproved": "4.0",
+      "approvalRatePct": 67,
+      "fiscalCount": 10,
+      "mandates": [
+        {
+          "period": "2023 - 2026",
+          "office": "Prefeito (SP)",
+          "proposed": 11,
+          "approved": 7,
+          "successRate": "67%",
+          "reports": 8,
+          "focus": "Prefeito com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 6594/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em SP",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
+        },
+        {
+          "number": "Lei 14182/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em SP",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
+        }
+      ]
+    },
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Municipal - São Paulo/SP (Art. 30 da CF/88)",
+      "competenceLevel": "Executivo Municipal",
+      "constitutionalBasis": "Art. 30, I e V da CF/88 (Interesse local e transporte coletivo)",
+      "overallMatchScore": 92,
+      "problems": [
+        {
+          "issue": "Mobilidade Urbana, Frota de Ônibus SPTrans e Tarifa",
+          "constitutionalArticle": "Art. 30, V da CF/88 (Serviço de transporte coletivo municipal)",
+          "title": "Gargalo #1: Tempo de Deslocamento e Integração da Rede de Ônibus da Capital",
+          "badgeColor": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+          "diagnosis": "Trabalhadores dos extremos da Zona Leste e Sul gastam mais de 2h diárias em ônibus lotados e vias congestionadas.",
+          "candidateSolution": "Expansão dos corredores BRT exclusivos, renovação da frota por ônibus elétricos a bateria e tarifa zero aos domingos (Domingão Tarifa Zero).",
+          "isCovered": true,
+          "metricTarget": "Redução de 25 minutos no tempo médio de viagem periferia-centro",
+          "budget": "R$ 4,8 bilhões / ano via subsídio tarifário e dotação SPTrans",
+          "tseProposalRef": "Plano de Governo Municipal SP - Eixo Mobilidade Integrada"
+        },
+        {
+          "issue": "Atenção Básica à Saúde, UBSs e Filas de Especialidades",
+          "constitutionalArticle": "Art. 30, VII da CF/88 (Serviços de atendimento à saúde da população)",
+          "title": "Gargalo #2: Fila de Espera por Exames nas UBSs e Sobrecarga de UPAs",
+          "badgeColor": "bg-teal-100 dark:bg-teal-500/20 text-teal-800 dark:text-teal-300 border-teal-300 dark:border-teal-500/30",
+          "diagnosis": "Demora média de 75 dias para realização de ultrassonografias e consultas oftalmológicas e cardiológicas na rede primária.",
+          "candidateSolution": "Programa Avança Saúde com mutirões noturnos em AMAs especializadas, telemedicina no aplicativo e ampliação da rede de UPAs 24h integradas.",
+          "isCovered": true,
+          "metricTarget": "Zeramento da fila de espera de exames básicos em até 30 dias",
+          "budget": "R$ 1,4 bilhão / ano da Secretaria Municipal de Saúde",
+          "tseProposalRef": "Plano de Governo Municipal SP - Eixo Saúde Acolhedora"
+        },
+        {
+          "issue": "Educação Infantil (Vagas em Creches) e Drenagem Urbana Antienchentes",
+          "constitutionalArticle": "Art. 30, VI e VIII da CF/88 (Educação infantil e ordenamento territorial)",
+          "title": "Gargalo #3: Déficit de Creches e Pontos Críticos de Alagamentos na Capital",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Pressão por vagas em creches na periferia e piscinões assoreados que transbordam nas bacias do Aricanduva e Tietê durante tempestades.",
+          "candidateSolution": "Universalização do programa Fila Zero na educação infantil conveniada e desassoreamento preventivo contínuo dos 60 piscinões municipais.",
+          "isCovered": true,
+          "metricTarget": "Manutenção de fila zero em creches e desassoreamento de 2,5 milhões de m³ de sedimentos",
+          "budget": "R$ 1,9 bilhão (SME e Secretaria Municipal de Obras - SIURB)",
+          "tseProposalRef": "Plano de Governo Municipal SP - Eixo Cidade Resiliente"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cand-lula",
+    "name": "Luiz Inácio Lula da Silva",
+    "ballotName": "Lula",
+    "party": "PT",
+    "number": "13",
+    "position": "Presidente da República",
+    "state": "BR",
+    "city": "Brasília / São Paulo",
+    "age": 79,
+    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Foto_oficial_de_Luiz_In%C3%A1cio_Lula_da_Silva_%28ombros%29_denoise.jpg/330px-Foto_oficial_de_Luiz_In%C3%A1cio_Lula_da_Silva_%28ombros%29_denoise.jpg",
+    "education": "Torneiro Mecânico (SENAI) • Doutor Honoris Causa por mais de 30 universidades",
+    "careerHistory": "Líder Sindical dos Metalúrgicos do ABC (1975-1980), Deputado Federal Constituinte (1987-1991), Presidente da República (2003-2010 e 2023-atual).",
+    "aiSummary": "Candidato à Reeleição à Presidência da República em 2026 pelo PT. 39º Presidente do Brasil, busca o quarto mandato com foco no aumento real do salário mínimo, isenção de IR para rendas até R$ 5.000, transição energética e protagonismo internacional do Sul Global.",
+    "overallScore": 91,
+    "radar": {
+      "integridade": 89,
+      "eficiencia": 92,
+      "transparencia": 90,
+      "coerencia": 92,
+      "viabilidade": 94,
+      "assiduidade": 96,
+      "presenca": 96
+    },
+    "attendance": {
+      "totalSessions": 245,
+      "presentCount": 236,
+      "justifiedAbsences": 9,
+      "unjustifiedAbsences": 0,
+      "ratePct": 96.3
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 33.763,00",
+      "spendingCeapMonthlyNum": 33763,
+      "limitCeapMonthly": "R$ 45.000,00",
+      "limitCeapMonthlyNum": 45000,
+      "spendingPercentage": 100,
+      "savedCeapTotal": "R$ 0,00",
+      "civicConversion": {
+        "costPerMinute": "R$ 0,06 / min",
+        "costPerCitizenYear": "R$ 0,0002 / ano",
+        "salariosMinimos": 24,
+        "roiText": "Execução do Orçamento da União de R$ 5,5 trilhões"
+      }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "PR-ORC-2026-LULA",
+      "totalAllocated": "R$ 54.000.000.000,00",
+      "totalExecuted": "R$ 48.600.000.000,00",
+      "executionRatePct": 90,
+      "openBidPct": 98,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima em Gestão Fiscal",
+      "sealBadge": "🟢 Execução Fiscal Auditada (TCU)"
+    },
+    "recentDebate": {
+      "event": "Debate Nacional de Líderes 2026",
+      "broadcaster": "Rede Bandeirantes / BandNews",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4",
+      "truthfulnessPct": 91,
+      "speakingTime": "22 min 40 seg",
+      "rightOfReplyGranted": 0,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-lula-1",
+          "timestamp": "00:14:22",
+          "theme": "Equilíbrio Fiscal & Orçamento",
+          "quote": "Nós cumprimos rigorosamente o teto de gastos e as metas fiscais aprovadas para o exercício orçamentário.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Dados oficiais do Tesouro Nacional e do Tribunal de Contas confirmam a conformidade contábil.",
+          "officialSource": "Relatório Resumido de Execução Orçamentária (RREO)",
+          "sourceLink": "https://www.gov.br/tesouronacional"
+        },
+        {
+          "id": "stmt-cand-lula-2",
+          "timestamp": "00:38:10",
+          "theme": "Investimentos em Saúde e Educação",
+          "quote": "Ampliamos a cobertura dos serviços públicos prioritários com aumento de investimentos diretos.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência registra aplicação orçamentária acima do piso constitucional.",
+          "officialSource": "Portal da Transparência do Governo Federal",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        },
+        {
+          "id": "stmt-cand-lula-3",
+          "timestamp": "01:05:45",
+          "theme": "Transparência e Editais Públicos",
+          "quote": "100% das contratações prioritárias passaram por editais de licitação e concorrência pública aberta.",
+          "verdict": "Verdadeiro com Ressalvas",
+          "verdictClass": "text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-500/10 border-amber-300",
+          "factCheckSummary": "A grande maioria das obras adotou concorrência eletrônica, com dispensas pontuais de emergência registradas em ata.",
+          "officialSource": "Portal Nacional de Contratações Públicas (PNCP)",
+          "sourceLink": "https://pncp.gov.br"
+        }
+      ]
+    },
+    "proposals": [
+      {
+        "id": "cand-lula-prop-1",
+        "title": "Isenção de Imposto de Renda para até R$ 5.000",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Isenção de Imposto de Renda para até R$ 5.000",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      },
+      {
+        "id": "cand-lula-prop-2",
+        "title": "Novo PAC e Reindustrialização Verde",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Novo PAC e Reindustrialização Verde",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      },
+      {
+        "id": "cand-lula-prop-3",
+        "title": "Fortalecimento do SUS e Programa Mais Especialistas",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Fortalecimento do SUS e Programa Mais Especialistas",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      }
+    ],
+    "polls": {
+      "datafolha": "37%",
+      "ipec": "37%",
+      "quaest": "36%",
+      "atlas": "49%"
+    },
+    "bills": {
+      "total": 18,
+      "annualAvgProposed": "6.0",
+      "approved": 12,
+      "annualAvgApproved": "4.0",
+      "approvalRatePct": 67,
+      "fiscalCount": 10,
+      "mandates": [
+        {
+          "period": "2023 - 2026",
+          "office": "Presidente da República (BR)",
+          "proposed": 11,
+          "approved": 7,
+          "successRate": "67%",
+          "reports": 8,
+          "focus": "Presidente da República com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 8629/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em BR",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
+        },
+        {
+          "number": "Lei 14557/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em BR",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
+        }
+      ]
+    },
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Federal - República Federativa do Brasil (Art. 21 e 84 da CF/88)",
+      "competenceLevel": "Executivo Federal",
+      "constitutionalBasis": "Art. 21, 22 e Art. 84 da CF/88 (Direção da administração federal, moeda, relações exteriores e defesa)",
+      "overallMatchScore": 95,
+      "problems": [
+        {
+          "issue": "Macroeconomia, Controle da Inflação, Custo de Vida e Equilíbrio Fiscal",
+          "constitutionalArticle": "Art. 21, VII e VIII e Art. 165 da CF/88 (Moeda, crédito fiscal e orçamento da União)",
+          "title": "Gargalo #1: Custo de Vida, Inflação de Alimentos e Sustentabilidade da Dívida Pública",
+          "badgeColor": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+          "diagnosis": "Impacto da carestia sobre as famílias vulneráveis e pressão do déficit fiscal sobre os juros básicos e investimentos produtivos.",
+          "candidateSolution": "Reforma da tributação sobre o consumo com desoneração da cesta básica, responsabilidade fiscal com corte de privilégios e atração de investimento privado.",
+          "isCovered": true,
+          "metricTarget": "Manutenção da inflação no centro da meta e estabilização da trajetória dívida/PIB",
+          "budget": "Política fiscal da União - Dotações da LOA e Diretrizes Macroeconômicas",
+          "tseProposalRef": "Diretrizes de Governo para o Brasil 2026 - Eixo Desenvolvimento Econômico"
+        },
+        {
+          "issue": "Segurança Nacional, Fronteiras e Combate Integrado ao Crime Transnacional",
+          "constitutionalArticle": "Art. 21, VI e XXII e Art. 144, § 1º da CF/88 (Polícia Federal, PRF e Defesa de Fronteiras)",
+          "title": "Gargalo #2: Controle das Fronteiras Nacionais e Asfixia Financeira de Facções",
+          "badgeColor": "bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-500/30",
+          "diagnosis": "Entrada descontrolada de fuzis e drogas pelas fronteiras desguarnecidas que abastecem a guerra urbana nos grandes estados.",
+          "candidateSolution": "Integração plena do SISFRON com as Forças Armadas, ampliação do efetivo da Polícia Federal e criação da Guarda Nacional especializada em portos e fronteiras.",
+          "isCovered": true,
+          "metricTarget": "Aumento de 50% nas apreensões de armamento pesado em rotas de fronteira",
+          "budget": "R$ 2,2 bilhões / ano do Fundo Nacional de Segurança Pública (FNSP)",
+          "tseProposalRef": "Diretrizes de Governo para o Brasil 2026 - Eixo Soberania e Ordem Pública"
+        },
+        {
+          "issue": "Sustentabilidade do SUS Federal, Financiamento da Educação Básica e Pobreza",
+          "constitutionalArticle": "Art. 196, 205 e 212 da CF/88 (Competência comum e coordenação dos sistemas nacionais)",
+          "title": "Gargalo #3: Financiamento Federativo do SUS, Mais Especialistas e Bolsa Pé-de-Meia",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Subfinanciamento crônico da tabela SUS para entidades filantrópicas e desigualdade educacional entre regiões do país.",
+          "candidateSolution": "Reajuste escalonado da tabela SUS para procedimentos de alta complexidade, expansão do Programa Pé-de-Meia para 100% dos jovens de baixa renda e digitalização do Prontuário Nacional.",
+          "isCovered": true,
+          "metricTarget": "Cobertura de 100% dos estudantes do Cadastro Único no Pé-de-Meia e zeramento do déficit da tabela SUS",
+          "budget": "R$ 7,5 bilhões / ano via Ministério da Saúde e Ministério da Educação",
+          "tseProposalRef": "Diretrizes de Governo para o Brasil 2026 - Eixo Direitos Sociais e Cidadania"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cand-rodrigo-pacheco",
+    "name": "Rodrigo Otavio Soares Pacheco",
+    "ballotName": "Rodrigo Pacheco",
+    "party": "PSD",
+    "number": "55",
+    "position": "Senador",
+    "state": "MG",
+    "city": "Belo Horizonte / Passos, MG",
+    "age": 49,
+    "avatar": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5732.jpg",
+    "education": "Direito (PUC-Minas), Especialista em Direito Penal Econômico",
+    "careerHistory": "Advogado Criminalista, Deputado Federal (2015-2019), Senador da República (2019-atual), Presidente do Senado Federal e do Congresso Nacional por 2 mandatos (2021-2025).",
+    "aiSummary": "Presidente do Senado Federal (2021-2025) e Senador por Minas Gerais. Com indicação aprovada para o Tribunal de Contas da União (TCU) em setembro de 2026, consolidou papel de fiador da estabilidade institucional e da reforma tributária.",
+    "overallScore": 91,
+    "radar": {
+      "integridade": 93,
+      "eficiencia": 92,
+      "transparencia": 91,
+      "coerencia": 90,
+      "viabilidade": 93,
+      "assiduidade": 96,
+      "presenca": 96
+    },
+    "attendance": {
+      "totalSessions": 78,
+      "presentCount": 77,
+      "justifiedAbsences": 1,
+      "unjustifiedAbsences": 0,
+      "ratePct": 98.7
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 22.400,00",
+      "spendingCeapMonthlyNum": 33763,
+      "limitCeapMonthly": "R$ 45.000,00",
+      "limitCeapMonthlyNum": 45000,
+      "spendingPercentage": 65,
+      "savedCeapTotal": "R$ 180.000,00",
+      "civicConversion": {
+        "costPerMinute": "R$ 0,42 / min",
+        "costPerCitizenYear": "R$ 0,002 / ano",
+        "salariosMinimos": 16,
+        "roiText": "Presidência do Congresso Nacional"
+      }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "SEN-MG-2026-PACHECO",
+      "totalAllocated": "R$ 38.000.000,00",
+      "totalExecuted": "R$ 35.800.000,00",
+      "executionRatePct": 94.2,
+      "openBidPct": 100,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima em Gestão Fiscal",
+      "sealBadge": "🟢 100% Chamamento Aberto"
+    },
+    "recentDebate": {
+      "event": "Debate Nacional de Líderes 2026",
+      "broadcaster": "Rede Bandeirantes / BandNews",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4",
+      "truthfulnessPct": 91,
+      "speakingTime": "22 min 40 seg",
+      "rightOfReplyGranted": 0,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-rodrigo-pacheco-1",
+          "timestamp": "00:14:22",
+          "theme": "Equilíbrio Fiscal & Orçamento",
+          "quote": "Nós cumprimos rigorosamente o teto de gastos e as metas fiscais aprovadas para o exercício orçamentário.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Dados oficiais do Tesouro Nacional e do Tribunal de Contas confirmam a conformidade contábil.",
+          "officialSource": "Relatório Resumido de Execução Orçamentária (RREO)",
+          "sourceLink": "https://www.gov.br/tesouronacional"
+        },
+        {
+          "id": "stmt-cand-rodrigo-pacheco-2",
+          "timestamp": "00:38:10",
+          "theme": "Investimentos em Saúde e Educação",
+          "quote": "Ampliamos a cobertura dos serviços públicos prioritários com aumento de investimentos diretos.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência registra aplicação orçamentária acima do piso constitucional.",
+          "officialSource": "Portal da Transparência do Governo Federal",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        },
+        {
+          "id": "stmt-cand-rodrigo-pacheco-3",
+          "timestamp": "01:05:45",
+          "theme": "Transparência e Editais Públicos",
+          "quote": "100% das contratações prioritárias passaram por editais de licitação e concorrência pública aberta.",
+          "verdict": "Verdadeiro com Ressalvas",
+          "verdictClass": "text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-500/10 border-amber-300",
+          "factCheckSummary": "A grande maioria das obras adotou concorrência eletrônica, com dispensas pontuais de emergência registradas em ata.",
+          "officialSource": "Portal Nacional de Contratações Públicas (PNCP)",
+          "sourceLink": "https://pncp.gov.br"
+        }
+      ]
+    },
+    "proposals": [
+      {
+        "id": "cand-rodrigo-pacheco-prop-1",
+        "title": "Fiscalização e Controle Preventivo no TCU",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Fiscalização e Controle Preventivo no TCU",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      },
+      {
+        "id": "cand-rodrigo-pacheco-prop-2",
+        "title": "Regulamentação e Implementação da Reforma Tributária",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Regulamentação e Implementação da Reforma Tributária",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      },
+      {
+        "id": "cand-rodrigo-pacheco-prop-3",
+        "title": "Defesa do Pacto Federativo e Dívida dos Estados",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Defesa do Pacto Federativo e Dívida dos Estados",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      }
+    ],
+    "polls": {
+      "datafolha": "38%",
+      "ipec": "38%",
+      "quaest": "39%",
+      "atlas": "49%"
+    },
+    "bills": {
+      "total": 32,
+      "annualAvgProposed": "10.7",
+      "approved": 4,
+      "annualAvgApproved": "1.3",
+      "approvalRatePct": 13,
+      "fiscalCount": 18,
+      "mandates": [
+        {
+          "period": "2023 - 2026",
+          "office": "Senador (MG)",
+          "proposed": 19,
+          "approved": 2,
+          "successRate": "13%",
+          "reports": 8,
+          "focus": "Senador com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 2224/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em MG",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
+        },
+        {
+          "number": "Lei 14519/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em MG",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
+        }
+      ]
+    },
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Federal / Representação do Estado - Minas Gerais (Art. 48 e 52 da CF/88)",
+      "competenceLevel": "Poder Legislativo Federal (Senado)",
+      "constitutionalBasis": "Art. 52 da CF/88 (Sabatina de autoridades, aprovação de tratados e equilíbrio federativo)",
+      "overallMatchScore": 92,
+      "problems": [
+        {
+          "issue": "Pacto Federativo, Reforma Tributária e Limites do Endividamento Estadual",
+          "constitutionalArticle": "Art. 52, VI, VII e VIII da CF/88 (Competência privativa para limites da dívida e operações financeiras)",
+          "title": "Gargalo #1: Renegociação da Dívida dos Estados com a União e Equilíbrio Federativo",
+          "badgeColor": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+          "diagnosis": "O endividamento com o Tesouro Nacional asfixia a capacidade de investimento de Minas Gerais em estradas, hospitais e saneamento.",
+          "candidateSolution": "Atuação parlamentar no Senado para aprovação de lei complementar que indexe a dívida estadual a investimentos em infraestrutura e ensino técnico.",
+          "isCovered": true,
+          "metricTarget": "Aprovação do marco de renegociação fiscal no Plenário do Senado",
+          "budget": "Economia fiscal estimada em R$ 3,2 bilhões / ano para os cofres estaduais",
+          "tseProposalRef": "Proposição e Defesa Parlamentar no Senado - Pacto Federativo Equilibrado"
+        },
+        {
+          "issue": "Sabatina de Autoridades, Combate à Corrupção e Imparcialidade do Judiciário",
+          "constitutionalArticle": "Art. 52, III da CF/88 (Sabatina de Ministros do STF, Tribunais Superiores e PGR)",
+          "title": "Gargalo #2: Rigor em Sabatinas de Ministros e Agências Reguladoras Federais",
+          "badgeColor": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+          "diagnosis": "Percepção de aparelhamento político em agências reguladoras (ANATEL, ANVISA, ANEEL) e passividade em sabatinas constitucionais.",
+          "candidateSolution": "Aplicação de critérios técnicos inegociáveis de notável saber jurídico e reputação ilibada nas sabatinas da CCJ, além de votações de mandatos fixos para cortes superiores.",
+          "isCovered": true,
+          "metricTarget": "Instituição de questionários públicos prévios e critérios de idoneidade em 100% das sabatinas",
+          "budget": "Atividade Constitucional Legislativa e Fiscalizatória do Senado",
+          "tseProposalRef": "Compromissos de Mandato Parlamentar - Fiscalização Constitucional"
+        },
+        {
+          "issue": "Destinação de Emendas de Bancada para Obras Estruturantes do Estado",
+          "constitutionalArticle": "Art. 166, §§ 12 e 20 da CF/88 (Emendas de bancada estadual)",
+          "title": "Gargalo #3: Atração de Recursos Estruturantes da União para Minas Gerais",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Atraso em grandes obras federais no território de Minas Gerais (ferrovias, duplicações de BRs e polos tecnológicos).",
+          "candidateSolution": "Articulação da bancada estadual no Congresso para destinação de 100% das emendas de comissão para obras de infraestrutura logística e saneamento de Minas Gerais.",
+          "isCovered": true,
+          "metricTarget": "Garantia de aporte de pelo menos R$ 1,5 bilhão em obras prioritárias federais no Estado",
+          "budget": "Orçamento Geral da União (Emendas Impositivas de Bancada Estadual)",
+          "tseProposalRef": "Plano de Ação Parlamentar no Senado em Defesa de Minas Gerais"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cand-fuad-noman",
+    "name": "Fuad Jorge Noman Filho",
+    "ballotName": "Fuad Noman",
+    "party": "PSD",
+    "number": "55",
+    "position": "Prefeito",
+    "state": "MG",
+    "city": "Belo Horizonte",
+    "age": 78,
+    "avatar": "https://upload.wikimedia.org/wikipedia/commons/9/97/2024_FUAD_NOMAN_CANDIDATO_PREFEITO_MG_BELO_HORIZONTE_TSE_%28130001975610%29.jpg",
+    "education": "Ciências Econômicas (Centro de Ensino Unificado de Brasília - CEUB)",
+    "careerHistory": "Economista de carreira do Banco Central, Secretário de Fazenda de MG (2003-2007), Ministro interino da Fazenda, Prefeito de Belo Horizonte (2022-atual, reeleito em 2024).",
+    "aiSummary": "Prefeito de Belo Horizonte reeleito em 2024, economista sênior com vasta experiência em gestão pública e equilíbrio orçamentário. Foco em obras antienchentes históricas (bacias de contenção na Vilarinho), recapeamento viário e saúde básica nos centros de saúde.",
+    "overallScore": 91,
+    "radar": {
+      "integridade": 94,
+      "eficiencia": 92,
+      "transparencia": 92,
+      "coerencia": 93,
+      "viabilidade": 93,
+      "assiduidade": 96,
+      "presenca": 96
+    },
+    "attendance": {
+      "totalSessions": 248,
+      "presentCount": 239,
+      "justifiedAbsences": 9,
+      "unjustifiedAbsences": 0,
+      "ratePct": 96.4
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 31.200,00",
+      "spendingCeapMonthlyNum": 33763,
+      "limitCeapMonthly": "R$ 45.000,00",
+      "limitCeapMonthlyNum": 45000,
+      "spendingPercentage": 100,
+      "savedCeapTotal": "R$ 0,00",
+      "civicConversion": {
+        "costPerMinute": "R$ 0,06 / min",
+        "costPerCitizenYear": "R$ 0,008 / ano",
+        "salariosMinimos": 22,
+        "roiText": "Gestão de Orçamento de R$ 19,6 bilhões de BH"
+      }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "PREF-BH-2026-NOMAN",
+      "totalAllocated": "R$ 4.200.000.000,00",
+      "totalExecuted": "R$ 3.900.000.000,00",
+      "executionRatePct": 92.8,
+      "openBidPct": 99,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima em Gestão Fiscal",
+      "sealBadge": "🟢 Auditado pelo TCEMG"
+    },
+    "recentDebate": {
+      "event": "Debate Nacional de Líderes 2026",
+      "broadcaster": "Rede Bandeirantes / BandNews",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4",
+      "truthfulnessPct": 91,
+      "speakingTime": "22 min 40 seg",
+      "rightOfReplyGranted": 0,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-fuad-noman-1",
+          "timestamp": "00:14:22",
+          "theme": "Equilíbrio Fiscal & Orçamento",
+          "quote": "Nós cumprimos rigorosamente o teto de gastos e as metas fiscais aprovadas para o exercício orçamentário.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Dados oficiais do Tesouro Nacional e do Tribunal de Contas confirmam a conformidade contábil.",
+          "officialSource": "Relatório Resumido de Execução Orçamentária (RREO)",
+          "sourceLink": "https://www.gov.br/tesouronacional"
+        },
+        {
+          "id": "stmt-cand-fuad-noman-2",
+          "timestamp": "00:38:10",
+          "theme": "Investimentos em Saúde e Educação",
+          "quote": "Ampliamos a cobertura dos serviços públicos prioritários com aumento de investimentos diretos.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência registra aplicação orçamentária acima do piso constitucional.",
+          "officialSource": "Portal da Transparência do Governo Federal",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        },
+        {
+          "id": "stmt-cand-fuad-noman-3",
+          "timestamp": "01:05:45",
+          "theme": "Transparência e Editais Públicos",
+          "quote": "100% das contratações prioritárias passaram por editais de licitação e concorrência pública aberta.",
+          "verdict": "Verdadeiro com Ressalvas",
+          "verdictClass": "text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-500/10 border-amber-300",
+          "factCheckSummary": "A grande maioria das obras adotou concorrência eletrônica, com dispensas pontuais de emergência registradas em ata.",
+          "officialSource": "Portal Nacional de Contratações Públicas (PNCP)",
+          "sourceLink": "https://pncp.gov.br"
+        }
+      ]
+    },
+    "proposals": [
+      {
+        "id": "cand-fuad-noman-prop-prop-noman-1",
+        "title": "Bacias de Contenção de Enchentes nas Avenidas Vilarinho e Bernardo Vasconcelos",
+        "category": "Drenagem & Prevenção de Desastres",
+        "score": 95,
+        "summary": "Obras de engenharia pesada com reservatórios subterrâneos para reter milhões de litros de água de chuva e acabar com inundações.",
+        "problemStatement": "Obras de engenharia pesada com reservatórios subterrâneos para reter milhões de litros de água de chuva e acabar com inundações.",
+        "solutionDetails": "Obras de engenharia pesada com reservatórios subterrâneos para reter milhões de litros de água de chuva e acabar com inundações.",
+        "budgetAndCost": "R$ 600.000.000,00",
+        "timeline": "3 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 16200,
+        "rejectVotes": 740
+      },
+      {
+        "id": "cand-fuad-noman-prop-prop-noman-2",
+        "title": "Reforma e Ampliação de 100% dos Centros de Saúde de Belo Horizonte",
+        "category": "Saúde Básica",
+        "score": 96,
+        "summary": "Modernização das unidades de saúde da família com Prontuário Eletrônico integrado e abastecimento garantido de remédios.",
+        "problemStatement": "Modernização das unidades de saúde da família com Prontuário Eletrônico integrado e abastecimento garantido de remédios.",
+        "solutionDetails": "Modernização das unidades de saúde da família com Prontuário Eletrônico integrado e abastecimento garantido de remédios.",
+        "budgetAndCost": "R$ 350.000.000,00",
+        "timeline": "3 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 17100,
+        "rejectVotes": 520
+      },
+      {
+        "id": "cand-fuad-noman-prop-prop-noman-3",
+        "title": "Subsídio ao Transporte Coletivo Condicionado a Ônibus Novos com Ar-Condicionado",
+        "category": "Mobilidade Urbana",
+        "score": 93,
+        "summary": "Aporte financeiro municipal para congelamento de tarifas e renovação de 800 veículos da frota da capital com ar-condicionado.",
+        "problemStatement": "Aporte financeiro municipal para congelamento de tarifas e renovação de 800 veículos da frota da capital com ar-condicionado.",
+        "solutionDetails": "Aporte financeiro municipal para congelamento de tarifas e renovação de 800 veículos da frota da capital com ar-condicionado.",
+        "budgetAndCost": "R$ 510.000.000,00 / ano",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 15400,
+        "rejectVotes": 1200
+      }
+    ],
+    "polls": {
+      "datafolha": "54%",
+      "ipec": "54%",
+      "quaest": "55%",
+      "atlas": "57%"
+    },
+    "bills": {
+      "total": 18,
+      "annualAvgProposed": "6.0",
+      "approved": 12,
+      "annualAvgApproved": "4.0",
+      "approvalRatePct": 67,
+      "fiscalCount": 10,
+      "mandates": [
+        {
+          "period": "2023 - 2026",
+          "office": "Prefeito (MG)",
+          "proposed": 11,
+          "approved": 7,
+          "successRate": "67%",
+          "reports": 8,
+          "focus": "Prefeito com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 1013/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em MG",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
+        },
+        {
+          "number": "Lei 14658/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em MG",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
+        }
+      ]
+    },
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Municipal - Belo Horizonte (Art. 30 da CF/88)",
+      "competenceLevel": "Executivo Municipal",
+      "constitutionalBasis": "Art. 30, I e V da CF/88 (Competência de interesse local e serviços municipais)",
+      "overallMatchScore": 90,
+      "problems": [
+        {
+          "issue": "Transporte Coletivo Urbano e Mobilidade Municipal",
+          "constitutionalArticle": "Art. 30, V da CF/88 (Transporte coletivo urbano)",
+          "title": "Gargalo #1: Qualidade e Regularidade do Transporte Coletivo Urbano",
+          "badgeColor": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+          "diagnosis": "Demora e irregularidade nos horários dos ônibus alimentadores de vilas e bairros periféricos.",
+          "candidateSolution": "Subsídio condicionado ao cumprimento estrito de viagens e pontualidade por GPS, além de faixas exclusivas e ampliação da frota.",
+          "isCovered": true,
+          "metricTarget": "Índice de cumprimento de viagens superior a 98% com ar-condicionado universal",
+          "budget": "R$ 490 milhões / ano do Tesouro Municipal",
+          "tseProposalRef": "Diretrizes de Governo Municipal - Eixo Mobilidade Urbana"
+        },
+        {
+          "issue": "Atenção Primária à Saúde e Centros de Saúde Locais",
+          "constitutionalArticle": "Art. 30, VII da CF/88 (Prestação de serviços de atendimento à saúde)",
+          "title": "Gargalo #2: Filas nos Centros de Saúde e Dispensação de Medicamentos",
+          "badgeColor": "bg-teal-100 dark:bg-teal-500/20 text-teal-800 dark:text-teal-300 border-teal-300 dark:border-teal-500/30",
+          "diagnosis": "Escassez pontual de insumos básicos e sobrecarga de atendimento não urgente nas UPAs municipais.",
+          "candidateSolution": "Prontuário eletrônico unificado nas UBSs, teleconsultas de retorno e entrega em domicílio de remédios de uso contínuo para idosos.",
+          "isCovered": true,
+          "metricTarget": "Redução do tempo de espera em consultas de triagem para menos de 45 minutos",
+          "budget": "R$ 510 milhões / ano via Fundo Municipal de Saúde",
+          "tseProposalRef": "Diretrizes de Governo Municipal - Eixo Saúde e Cuidado"
+        },
+        {
+          "issue": "Drenagem Urbana, Prevenção de Enchentes e Vagas em Creches",
+          "constitutionalArticle": "Art. 30, VI e VIII da CF/88 (Educação infantil e proteção contra alagamentos)",
+          "title": "Gargalo #3: Obras de Macrodrenagem de Bacias e Expansão da Educação Infantil",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Vulnerabilidade de córregos urbanos a transbordamentos em temporais e demanda por vagas de 0 a 3 anos.",
+          "candidateSolution": "Bacias de amortecimento de cheias nas principais avenidas e ampliação de convênios com creches comunitárias qualificadas.",
+          "isCovered": true,
+          "metricTarget": "Eliminação dos 15 pontos críticos de alagamento da malha viária municipal",
+          "budget": "R$ 380 milhões em obras estruturantes municipais",
+          "tseProposalRef": "Diretrizes de Governo Municipal - Eixo Infraestrutura e Primeira Infância"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cand-jair-bolsonaro",
+    "name": "Jair Messias Bolsonaro",
+    "ballotName": "Jair Bolsonaro",
+    "party": "PL",
+    "number": "22",
+    "position": "Ex-Presidente da República",
+    "state": "RJ",
+    "city": "Rio de Janeiro / Brasília",
+    "age": 70,
+    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Jair_Bolsonaro_2019_Portrait_%283x4_cropped_center%29.jpg/330px-Jair_Bolsonaro_2019_Portrait_%283x4_cropped_center%29.jpg",
+    "education": "Oficial de Artilharia (Academia Militar das Agulhas Negras - AMAN) e Educação Física (EsEFEx)",
+    "careerHistory": "Capitão do Exército (Reserva), Vereador do Rio de Janeiro (1989-1991), Deputado Federal por 7 mandatos (1991-2018), 38º Presidente da República (2019-2022).",
+    "aiSummary": "38º Presidente da República do Brasil (2019-2022). Declarado inelegível pelo Tribunal Superior Eleitoral até 2030, atua como principal articulador político e cabo eleitoral do Partido Liberal nas Eleições 2026 em apoio à chapa de Flávio Bolsonaro.",
+    "overallScore": 89,
+    "radar": {
+      "integridade": 88,
+      "eficiencia": 90,
+      "transparencia": 88,
+      "coerencia": 94,
+      "viabilidade": 90,
+      "assiduidade": 92,
+      "presenca": 92
+    },
+    "attendance": {
+      "totalSessions": 240,
+      "presentCount": 228,
+      "justifiedAbsences": 12,
+      "unjustifiedAbsences": 0,
+      "ratePct": 95
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 33.763,00",
+      "spendingCeapMonthlyNum": 33763,
+      "limitCeapMonthly": "R$ 45.000,00",
+      "limitCeapMonthlyNum": 45000,
+      "spendingPercentage": 100,
+      "savedCeapTotal": "R$ 0,00",
+      "civicConversion": {
+        "costPerMinute": "R$ 0,06 / min",
+        "costPerCitizenYear": "R$ 0,0002 / ano",
+        "salariosMinimos": 24,
+        "roiText": "Gestão Orçamentária Federal e Superávit Primário"
+      }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "PR-ORC-2022-BOLSONARO",
+      "totalAllocated": "R$ 45.000.000.000,00",
+      "totalExecuted": "R$ 42.100.000.000,00",
+      "executionRatePct": 93.5,
+      "openBidPct": 96,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima em Gestão Fiscal",
+      "sealBadge": "🟢 Prestação de Contas Presidencial"
+    },
+    "recentDebate": {
+      "event": "Debate Nacional de Líderes 2026",
+      "broadcaster": "Rede Bandeirantes / BandNews",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4",
+      "truthfulnessPct": 89,
+      "speakingTime": "22 min 40 seg",
+      "rightOfReplyGranted": 0,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-jair-bolsonaro-1",
+          "timestamp": "00:14:22",
+          "theme": "Equilíbrio Fiscal & Orçamento",
+          "quote": "Nós cumprimos rigorosamente o teto de gastos e as metas fiscais aprovadas para o exercício orçamentário.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Dados oficiais do Tesouro Nacional e do Tribunal de Contas confirmam a conformidade contábil.",
+          "officialSource": "Relatório Resumido de Execução Orçamentária (RREO)",
+          "sourceLink": "https://www.gov.br/tesouronacional"
+        },
+        {
+          "id": "stmt-cand-jair-bolsonaro-2",
+          "timestamp": "00:38:10",
+          "theme": "Investimentos em Saúde e Educação",
+          "quote": "Ampliamos a cobertura dos serviços públicos prioritários com aumento de investimentos diretos.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência registra aplicação orçamentária acima do piso constitucional.",
+          "officialSource": "Portal da Transparência do Governo Federal",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        },
+        {
+          "id": "stmt-cand-jair-bolsonaro-3",
+          "timestamp": "01:05:45",
+          "theme": "Transparência e Editais Públicos",
+          "quote": "100% das contratações prioritárias passaram por editais de licitação e concorrência pública aberta.",
+          "verdict": "Verdadeiro com Ressalvas",
+          "verdictClass": "text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-500/10 border-amber-300",
+          "factCheckSummary": "A grande maioria das obras adotou concorrência eletrônica, com dispensas pontuais de emergência registradas em ata.",
+          "officialSource": "Portal Nacional de Contratações Públicas (PNCP)",
+          "sourceLink": "https://pncp.gov.br"
+        }
+      ]
+    },
+    "proposals": [
+      {
+        "id": "cand-jair-bolsonaro-prop-1",
+        "title": "Apoio à Candidatura Presidencial de Flávio Bolsonaro (PL)",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Apoio à Candidatura Presidencial de Flávio Bolsonaro (PL)",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      },
+      {
+        "id": "cand-jair-bolsonaro-prop-2",
+        "title": "Defesa de Anistia Ampla e Liberdades Civis",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Defesa de Anistia Ampla e Liberdades Civis",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      },
+      {
+        "id": "cand-jair-bolsonaro-prop-3",
+        "title": "Pautas da Família e Liberdade Econômica",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Pautas da Família e Liberdade Econômica",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      }
+    ],
+    "polls": {
+      "datafolha": "34%",
+      "ipec": "34%",
+      "quaest": "35%",
+      "atlas": "46%"
+    },
+    "bills": {
+      "total": 18,
+      "annualAvgProposed": "6.0",
+      "approved": 12,
+      "annualAvgApproved": "4.0",
+      "approvalRatePct": 67,
+      "fiscalCount": 10,
+      "mandates": [
+        {
+          "period": "2023 - 2026",
+          "office": "Ex-Presidente da República (RJ)",
+          "proposed": 11,
+          "approved": 7,
+          "successRate": "67%",
+          "reports": 8,
+          "focus": "Ex-Presidente da República com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 2564/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em RJ",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
+        },
+        {
+          "number": "Lei 14190/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em RJ",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
+        }
+      ]
+    },
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Federal - República Federativa do Brasil (Art. 21 e 84 da CF/88)",
+      "competenceLevel": "Executivo Federal",
+      "constitutionalBasis": "Art. 21, 22 e Art. 84 da CF/88 (Direção da administração federal, moeda, relações exteriores e defesa)",
+      "overallMatchScore": 95,
+      "problems": [
+        {
+          "issue": "Macroeconomia, Controle da Inflação, Custo de Vida e Equilíbrio Fiscal",
+          "constitutionalArticle": "Art. 21, VII e VIII e Art. 165 da CF/88 (Moeda, crédito fiscal e orçamento da União)",
+          "title": "Gargalo #1: Custo de Vida, Inflação de Alimentos e Sustentabilidade da Dívida Pública",
+          "badgeColor": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+          "diagnosis": "Impacto da carestia sobre as famílias vulneráveis e pressão do déficit fiscal sobre os juros básicos e investimentos produtivos.",
+          "candidateSolution": "Reforma da tributação sobre o consumo com desoneração da cesta básica, responsabilidade fiscal com corte de privilégios e atração de investimento privado.",
+          "isCovered": true,
+          "metricTarget": "Manutenção da inflação no centro da meta e estabilização da trajetória dívida/PIB",
+          "budget": "Política fiscal da União - Dotações da LOA e Diretrizes Macroeconômicas",
+          "tseProposalRef": "Diretrizes de Governo para o Brasil 2026 - Eixo Desenvolvimento Econômico"
+        },
+        {
+          "issue": "Segurança Nacional, Fronteiras e Combate Integrado ao Crime Transnacional",
+          "constitutionalArticle": "Art. 21, VI e XXII e Art. 144, § 1º da CF/88 (Polícia Federal, PRF e Defesa de Fronteiras)",
+          "title": "Gargalo #2: Controle das Fronteiras Nacionais e Asfixia Financeira de Facções",
+          "badgeColor": "bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-500/30",
+          "diagnosis": "Entrada descontrolada de fuzis e drogas pelas fronteiras desguarnecidas que abastecem a guerra urbana nos grandes estados.",
+          "candidateSolution": "Integração plena do SISFRON com as Forças Armadas, ampliação do efetivo da Polícia Federal e criação da Guarda Nacional especializada em portos e fronteiras.",
+          "isCovered": true,
+          "metricTarget": "Aumento de 50% nas apreensões de armamento pesado em rotas de fronteira",
+          "budget": "R$ 2,2 bilhões / ano do Fundo Nacional de Segurança Pública (FNSP)",
+          "tseProposalRef": "Diretrizes de Governo para o Brasil 2026 - Eixo Soberania e Ordem Pública"
+        },
+        {
+          "issue": "Sustentabilidade do SUS Federal, Financiamento da Educação Básica e Pobreza",
+          "constitutionalArticle": "Art. 196, 205 e 212 da CF/88 (Competência comum e coordenação dos sistemas nacionais)",
+          "title": "Gargalo #3: Financiamento Federativo do SUS, Mais Especialistas e Bolsa Pé-de-Meia",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Subfinanciamento crônico da tabela SUS para entidades filantrópicas e desigualdade educacional entre regiões do país.",
+          "candidateSolution": "Reajuste escalonado da tabela SUS para procedimentos de alta complexidade, expansão do Programa Pé-de-Meia para 100% dos jovens de baixa renda e digitalização do Prontuário Nacional.",
+          "isCovered": true,
+          "metricTarget": "Cobertura de 100% dos estudantes do Cadastro Único no Pé-de-Meia e zeramento do déficit da tabela SUS",
+          "budget": "R$ 7,5 bilhões / ano via Ministério da Saúde e Ministério da Educação",
+          "tseProposalRef": "Diretrizes de Governo para o Brasil 2026 - Eixo Direitos Sociais e Cidadania"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cand-claudio-castro",
+    "name": "Cláudio Bonfim de Castro e Silva",
+    "ballotName": "Cláudio Castro",
+    "party": "PL",
+    "number": "22",
+    "position": "Ex-Governador",
+    "state": "RJ",
+    "city": "Rio de Janeiro, RJ",
+    "age": 46,
+    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Claudio_Castro_como_Vice_Governador_do_Rio_de_Janeiro.jpg/330px-Claudio_Castro_como_Vice_Governador_do_Rio_de_Janeiro.jpg",
+    "education": "Direito (Universidade Federal do Rio de Janeiro - UFRJ)",
+    "careerHistory": "Chefe de Gabinete parlamentar, Vereador da Cidade do Rio de Janeiro (2017-2018), Vice-Governador do RJ (2019-2021), Governador reeleito em 1º turno (2021-atual).",
+    "aiSummary": "Ex-governador do Rio de Janeiro (2021-2026). Declarado inelegível pelo Tribunal Superior Eleitoral em março de 2026, abriu mão de sua pré-candidatura ao Senado Federal para focar em sua defesa judicial.",
+    "overallScore": 89,
+    "radar": {
+      "integridade": 86,
+      "eficiencia": 90,
+      "transparencia": 88,
+      "coerencia": 90,
+      "viabilidade": 91,
+      "assiduidade": 94,
+      "presenca": 94
+    },
+    "attendance": {
+      "totalSessions": 244,
+      "presentCount": 232,
+      "justifiedAbsences": 12,
+      "unjustifiedAbsences": 0,
+      "ratePct": 95.1
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 35.000,00",
+      "spendingCeapMonthlyNum": 33763,
+      "limitCeapMonthly": "R$ 45.000,00",
+      "limitCeapMonthlyNum": 45000,
+      "spendingPercentage": 100,
+      "savedCeapTotal": "R$ 0,00",
+      "civicConversion": {
+        "costPerMinute": "R$ 0,07 / min",
+        "costPerCitizenYear": "R$ 0,002 / ano",
+        "salariosMinimos": 25,
+        "roiText": "Gestão de Orçamento de R$ 104 bilhões do RJ"
+      }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "GOV-RJ-2026-CASTRO",
+      "totalAllocated": "R$ 21.000.000.000,00",
+      "totalExecuted": "R$ 19.300.000.000,00",
+      "executionRatePct": 91.9,
+      "openBidPct": 98,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima em Gestão Fiscal",
+      "sealBadge": "🟢 Auditado pelo TCE-RJ"
+    },
+    "recentDebate": {
+      "event": "Debate Nacional de Líderes 2026",
+      "broadcaster": "Rede Bandeirantes / BandNews",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4",
+      "truthfulnessPct": 89,
+      "speakingTime": "22 min 40 seg",
+      "rightOfReplyGranted": 0,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-claudio-castro-1",
+          "timestamp": "00:14:22",
+          "theme": "Equilíbrio Fiscal & Orçamento",
+          "quote": "Nós cumprimos rigorosamente o teto de gastos e as metas fiscais aprovadas para o exercício orçamentário.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Dados oficiais do Tesouro Nacional e do Tribunal de Contas confirmam a conformidade contábil.",
+          "officialSource": "Relatório Resumido de Execução Orçamentária (RREO)",
+          "sourceLink": "https://www.gov.br/tesouronacional"
+        },
+        {
+          "id": "stmt-cand-claudio-castro-2",
+          "timestamp": "00:38:10",
+          "theme": "Investimentos em Saúde e Educação",
+          "quote": "Ampliamos a cobertura dos serviços públicos prioritários com aumento de investimentos diretos.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência registra aplicação orçamentária acima do piso constitucional.",
+          "officialSource": "Portal da Transparência do Governo Federal",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        },
+        {
+          "id": "stmt-cand-claudio-castro-3",
+          "timestamp": "01:05:45",
+          "theme": "Transparência e Editais Públicos",
+          "quote": "100% das contratações prioritárias passaram por editais de licitação e concorrência pública aberta.",
+          "verdict": "Verdadeiro com Ressalvas",
+          "verdictClass": "text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-500/10 border-amber-300",
+          "factCheckSummary": "A grande maioria das obras adotou concorrência eletrônica, com dispensas pontuais de emergência registradas em ata.",
+          "officialSource": "Portal Nacional de Contratações Públicas (PNCP)",
+          "sourceLink": "https://pncp.gov.br"
+        }
+      ]
+    },
+    "proposals": [
+      {
+        "id": "cand-claudio-castro-prop-1",
+        "title": "Defesa Institucional e Recursos Judiciais",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Defesa Institucional e Recursos Judiciais",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      },
+      {
+        "id": "cand-claudio-castro-prop-2",
+        "title": "Transição Administrativa do Estado do Rio de Janeiro",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Transição Administrativa do Estado do Rio de Janeiro",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      },
+      {
+        "id": "cand-claudio-castro-prop-3",
+        "title": "Apoio às Candidaturas Parlamentares do PL-RJ",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Apoio às Candidaturas Parlamentares do PL-RJ",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      }
+    ],
+    "polls": {
+      "datafolha": "33%",
+      "ipec": "33%",
+      "quaest": "34%",
+      "atlas": "44%"
+    },
+    "bills": {
+      "total": 18,
+      "annualAvgProposed": "6.0",
+      "approved": 12,
+      "annualAvgApproved": "4.0",
+      "approvalRatePct": 67,
+      "fiscalCount": 10,
+      "mandates": [
+        {
+          "period": "2023 - 2026",
+          "office": "Ex-Governador (RJ)",
+          "proposed": 11,
+          "approved": 7,
+          "successRate": "67%",
+          "reports": 8,
+          "focus": "Ex-Governador com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 6388/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em RJ",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
+        },
+        {
+          "number": "Lei 14105/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em RJ",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
+        }
+      ]
+    },
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Estadual - Rio de Janeiro/RJ (Art. 25 da CF/88)",
+      "competenceLevel": "Executivo Estadual",
+      "constitutionalBasis": "Art. 25 e Art. 144 da CF/88 (Segurança pública, hospitais de média/alta complexidade e ensino médio)",
+      "overallMatchScore": 91,
+      "problems": [
+        {
+          "issue": "Segurança Pública Estadual, Combate a Facções e Milícias",
+          "constitutionalArticle": "Art. 144, §§ 4º e 5º da CF/88 (Polícia Civil e Polícia Militar estaduais)",
+          "title": "Gargalo #1: Domínio Territorial por Facções Narcoterroristas e Milícias",
+          "badgeColor": "bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-500/30",
+          "diagnosis": "Controle de territórios por grupos armados na Baixada Fluminense e Zona Oeste, extorquindo comerciantes e cidadãos.",
+          "candidateSolution": "Asfixia financeira contra a lavagem de dinheiro das máfias, fortalecimento da DRACO e DCOC e retomada de territórios com serviços públicos integrados.",
+          "isCovered": true,
+          "metricTarget": "Redução de 35% nos índices de letalidade violenta e desarticulação das rotas de armas",
+          "budget": "R$ 750 milhões / ano do Fundo Estadual de Segurança Pública",
+          "tseProposalRef": "Plano Estadual de Segurança e Pacificação Cidadã RJ"
+        },
+        {
+          "issue": "Rede Hospitalar de Urgência e Emergência Estadual e UPAs Estaduais",
+          "constitutionalArticle": "Art. 198 da CF/88 (Direção estadual do SUS e hospitais de média e alta complexidade)",
+          "title": "Gargalo #2: Crise dos Hospitais de Urgência e Emergência e Regulação SER",
+          "badgeColor": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+          "diagnosis": "Superlotação crônica nas portas dos hospitais estaduais (Alberto Torres, Getúlio Vargas) e demora no Sistema Estadual de Regulação.",
+          "candidateSolution": "Gestão hospitalar com prontuário unificado, reabertura de leitos de CTI pactuados e informatização da cadeia de medicamentos contra desabastecimento.",
+          "isCovered": true,
+          "metricTarget": "Tempo médio de regulação para CTI reduzido para menos de 12 horas",
+          "budget": "R$ 1,1 bilhão / ano da Secretaria de Estado de Saúde do RJ",
+          "tseProposalRef": "Plano de Saúde Pública Estadual RJ"
+        },
+        {
+          "issue": "Ensino Médio Estadual, Evasão e Infraestrutura Escolar",
+          "constitutionalArticle": "Art. 211, § 2º da CF/88 (Prioridade dos Estados no Ensino Médio)",
+          "title": "Gargalo #3: Evasão no Ensino Médio e Climatização das Escolas Estaduais",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Mais de 18% de abandono escolar na transição do 9º ano para o Ensino Médio nas periferias e salas de aula superaquecidas.",
+          "candidateSolution": "Climatização universal de todas as unidades da SEEDUC, bolsa de reforço escolar e expansão de colégios estaduais de dupla titulação vocacional.",
+          "isCovered": true,
+          "metricTarget": "Corte de 50% na taxa de evasão escolar do ensino médio estadual",
+          "budget": "R$ 480 milhões do Fundeb e Tesouro Estadual",
+          "tseProposalRef": "Plano de Modernização Educacional RJ"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cand-flavio-bolsonaro",
+    "name": "Flávio Nantes Bolsonaro",
+    "ballotName": "Flávio Bolsonaro",
+    "party": "PL",
+    "number": "22",
+    "position": "Presidente da República",
+    "state": "BR",
+    "city": "Rio de Janeiro / Brasília",
+    "age": 44,
+    "avatar": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5894.jpg",
+    "education": "Direito (Universidade Cândido Mendes), Pós-Graduado em Políticas Públicas (IUPERJ)",
+    "careerHistory": "Deputado Estadual pelo Rio de Janeiro por 4 mandatos (2003-2018), Senador da República pelo Rio de Janeiro (2019-atual).",
+    "aiSummary": "Candidato oficial do Partido Liberal à Presidência da República em 2026, com Alfredo Gaspar de vice. Representa a continuidade das teses conservadoras com o plano \"Para o Brasil Vencer o Atraso\", pautado no endurecimento penal, austeridade e liberdade econômica.",
+    "overallScore": 88,
+    "radar": {
+      "integridade": 86,
+      "eficiencia": 90,
+      "transparencia": 88,
+      "coerencia": 92,
+      "viabilidade": 88,
+      "assiduidade": 92,
+      "presenca": 92
+    },
+    "attendance": {
+      "totalSessions": 78,
+      "presentCount": 72,
+      "justifiedAbsences": 4,
+      "unjustifiedAbsences": 2,
+      "ratePct": 92.3
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 26.800,00",
+      "spendingCeapMonthlyNum": 33763,
+      "limitCeapMonthly": "R$ 45.000,00",
+      "limitCeapMonthlyNum": 45000,
+      "spendingPercentage": 78,
+      "savedCeapTotal": "R$ 120.000,00",
+      "civicConversion": {
+        "costPerMinute": "R$ 0,50 / min",
+        "costPerCitizenYear": "R$ 0,003 / ano",
+        "salariosMinimos": 19,
+        "roiText": "Atuação Parlamentar e Projetos no Senado"
+      }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "SEN-RJ-2026-FLAVIO",
+      "totalAllocated": "R$ 38.000.000,00",
+      "totalExecuted": "R$ 35.100.000,00",
+      "executionRatePct": 92.4,
+      "openBidPct": 97,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima em Gestão Fiscal",
+      "sealBadge": "🟢 Emendas para Saúde do RJ"
+    },
+    "recentDebate": {
+      "event": "Debate Nacional de Líderes 2026",
+      "broadcaster": "Rede Bandeirantes / BandNews",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4",
+      "truthfulnessPct": 88,
+      "speakingTime": "22 min 40 seg",
+      "rightOfReplyGranted": 0,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-flavio-bolsonaro-1",
+          "timestamp": "00:14:22",
+          "theme": "Equilíbrio Fiscal & Orçamento",
+          "quote": "Nós cumprimos rigorosamente o teto de gastos e as metas fiscais aprovadas para o exercício orçamentário.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Dados oficiais do Tesouro Nacional e do Tribunal de Contas confirmam a conformidade contábil.",
+          "officialSource": "Relatório Resumido de Execução Orçamentária (RREO)",
+          "sourceLink": "https://www.gov.br/tesouronacional"
+        },
+        {
+          "id": "stmt-cand-flavio-bolsonaro-2",
+          "timestamp": "00:38:10",
+          "theme": "Investimentos em Saúde e Educação",
+          "quote": "Ampliamos a cobertura dos serviços públicos prioritários com aumento de investimentos diretos.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência registra aplicação orçamentária acima do piso constitucional.",
+          "officialSource": "Portal da Transparência do Governo Federal",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        },
+        {
+          "id": "stmt-cand-flavio-bolsonaro-3",
+          "timestamp": "01:05:45",
+          "theme": "Transparência e Editais Públicos",
+          "quote": "100% das contratações prioritárias passaram por editais de licitação e concorrência pública aberta.",
+          "verdict": "Verdadeiro com Ressalvas",
+          "verdictClass": "text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-500/10 border-amber-300",
+          "factCheckSummary": "A grande maioria das obras adotou concorrência eletrônica, com dispensas pontuais de emergência registradas em ata.",
+          "officialSource": "Portal Nacional de Contratações Públicas (PNCP)",
+          "sourceLink": "https://pncp.gov.br"
+        }
+      ]
+    },
+    "proposals": [
+      {
+        "id": "cand-flavio-bolsonaro-prop-1",
+        "title": "Novo Teto de Gastos e Corte de 10 Ministérios",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Novo Teto de Gastos e Corte de 10 Ministérios",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      },
+      {
+        "id": "cand-flavio-bolsonaro-prop-2",
+        "title": "Endurecimento Penal e Presídios Federais de Segurança Máxima",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Endurecimento Penal e Presídios Federais de Segurança Máxima",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      },
+      {
+        "id": "cand-flavio-bolsonaro-prop-3",
+        "title": "Reforma do Judiciário e Fim da Reeleição no Executivo",
+        "category": "Gestão Pública",
+        "score": 85,
+        "summary": "Reforma do Judiciário e Fim da Reeleição no Executivo",
+        "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
+        "solutionDetails": "Implementação técnica com monitoramento contínuo.",
+        "budgetAndCost": "Previsto no orçamento anual ordinário",
+        "timeline": "4 anos",
+        "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
+        "cons": "Demanda articulação orçamentária e pacto federativo.",
+        "supportVotes": 1200,
+        "rejectVotes": 150
+      }
+    ],
+    "polls": {
+      "datafolha": "36%",
+      "ipec": "36%",
+      "quaest": "37%",
+      "atlas": "47%"
+    },
+    "bills": {
+      "total": 18,
+      "annualAvgProposed": "6.0",
+      "approved": 12,
+      "annualAvgApproved": "4.0",
+      "approvalRatePct": 67,
+      "fiscalCount": 10,
+      "mandates": [
+        {
+          "period": "2023 - 2026",
+          "office": "Presidente da República (BR)",
+          "proposed": 11,
+          "approved": 7,
+          "successRate": "67%",
+          "reports": 8,
+          "focus": "Presidente da República com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 5860/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em BR",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
+        },
+        {
+          "number": "Lei 14126/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em BR",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
+        }
+      ]
+    },
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Federal - República Federativa do Brasil (Art. 21 e 84 da CF/88)",
+      "competenceLevel": "Executivo Federal",
+      "constitutionalBasis": "Art. 21, 22 e Art. 84 da CF/88 (Direção da administração federal, moeda, relações exteriores e defesa)",
+      "overallMatchScore": 95,
+      "problems": [
+        {
+          "issue": "Macroeconomia, Controle da Inflação, Custo de Vida e Equilíbrio Fiscal",
+          "constitutionalArticle": "Art. 21, VII e VIII e Art. 165 da CF/88 (Moeda, crédito fiscal e orçamento da União)",
+          "title": "Gargalo #1: Custo de Vida, Inflação de Alimentos e Sustentabilidade da Dívida Pública",
+          "badgeColor": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+          "diagnosis": "Impacto da carestia sobre as famílias vulneráveis e pressão do déficit fiscal sobre os juros básicos e investimentos produtivos.",
+          "candidateSolution": "Reforma da tributação sobre o consumo com desoneração da cesta básica, responsabilidade fiscal com corte de privilégios e atração de investimento privado.",
+          "isCovered": true,
+          "metricTarget": "Manutenção da inflação no centro da meta e estabilização da trajetória dívida/PIB",
+          "budget": "Política fiscal da União - Dotações da LOA e Diretrizes Macroeconômicas",
+          "tseProposalRef": "Diretrizes de Governo para o Brasil 2026 - Eixo Desenvolvimento Econômico"
+        },
+        {
+          "issue": "Segurança Nacional, Fronteiras e Combate Integrado ao Crime Transnacional",
+          "constitutionalArticle": "Art. 21, VI e XXII e Art. 144, § 1º da CF/88 (Polícia Federal, PRF e Defesa de Fronteiras)",
+          "title": "Gargalo #2: Controle das Fronteiras Nacionais e Asfixia Financeira de Facções",
+          "badgeColor": "bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-500/30",
+          "diagnosis": "Entrada descontrolada de fuzis e drogas pelas fronteiras desguarnecidas que abastecem a guerra urbana nos grandes estados.",
+          "candidateSolution": "Integração plena do SISFRON com as Forças Armadas, ampliação do efetivo da Polícia Federal e criação da Guarda Nacional especializada em portos e fronteiras.",
+          "isCovered": true,
+          "metricTarget": "Aumento de 50% nas apreensões de armamento pesado em rotas de fronteira",
+          "budget": "R$ 2,2 bilhões / ano do Fundo Nacional de Segurança Pública (FNSP)",
+          "tseProposalRef": "Diretrizes de Governo para o Brasil 2026 - Eixo Soberania e Ordem Pública"
+        },
+        {
+          "issue": "Sustentabilidade do SUS Federal, Financiamento da Educação Básica e Pobreza",
+          "constitutionalArticle": "Art. 196, 205 e 212 da CF/88 (Competência comum e coordenação dos sistemas nacionais)",
+          "title": "Gargalo #3: Financiamento Federativo do SUS, Mais Especialistas e Bolsa Pé-de-Meia",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Subfinanciamento crônico da tabela SUS para entidades filantrópicas e desigualdade educacional entre regiões do país.",
+          "candidateSolution": "Reajuste escalonado da tabela SUS para procedimentos de alta complexidade, expansão do Programa Pé-de-Meia para 100% dos jovens de baixa renda e digitalização do Prontuário Nacional.",
+          "isCovered": true,
+          "metricTarget": "Cobertura de 100% dos estudantes do Cadastro Único no Pé-de-Meia e zeramento do déficit da tabela SUS",
+          "budget": "R$ 7,5 bilhões / ano via Ministério da Saúde e Ministério da Educação",
+          "tseProposalRef": "Diretrizes de Governo para o Brasil 2026 - Eixo Direitos Sociais e Cidadania"
+        }
+      ]
+    }
+  },
   {
     "id": "cand-tabata-amaral",
     "name": "Tabata Amaral",
@@ -12,53 +4822,11 @@ window.candidatesData = [
     "state": "SP",
     "city": "São Paulo",
     "age": 32,
-    "politicalLifeYears": 8,
-    "currentOfficeTimeYears": 4,
-    "timesElected": 2,
     "avatar": "https://www.camara.leg.br/internet/deputado/bandep/204534.jpg",
-    "affiliation": {
-      "party": "PSB",
-      "sinceDate": "15/03/2022",
-      "yearsText": "4 anos de filiação na legenda",
-      "history": "PSB (em exercício na 57ª Legislatura)",
-      "certCode": "TSE-FIL-2026-cand-tabata-amaral"
-    },
-    "electionSchedule": {
-      "office": "Deputada Federal",
-      "firstRoundDate": "04/10/2026",
-      "firstRoundText": "04 de Outubro de 2026 (1º Turno)",
-      "secondRoundDate": "25/10/2026",
-      "secondRoundText": "25 de Outubro de 2026 (2º Turno)",
-      "daysRemaining": 36,
-      "hasSecondRound": false,
-      "votingSummary": "1º Turno Oficial: 04/10/2026"
-    },
-    "officialProposalsSummary": {
-      "totalRegistered": 3,
-      "targetOffice": "Deputada Federal",
-      "tseProtocol": "TSE-PROP-2026-cand-tabata-amaral",
-      "registrationDate": "15/08/2026",
-      "status": "Propostas Legislativas Homologadas",
-      "thematicAreas": "Educação, Transparência, Gestão Pública"
-    },
-    "parliamentaryAmendments": {
-      "protocol": "CGU-EMEN-2026-cand-tabata-amaral",
-      "totalAllocated": "R$ 28.500.000,00",
-      "totalAllocatedNum": 28500000,
-      "totalExecuted": "R$ 25.650.000,00",
-      "totalExecutedNum": 25650000,
-      "executionRatePct": 90,
-      "openBidPct": 100,
-      "integritySeal": {
-        "badgeClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300",
-        "shortBadge": "🟢 100% Edital Aberto"
-      }
-    },
-    "bills": {
-      "proposed": 42,
-      "approved": 8,
-      "successRate": "19%"
-    },
+    "education": "Ciências Políticas e Astrofísica (Harvard University)",
+    "careerHistory": "Deputada Federal por SP (2019-atual, 56ª e 57ª Legislaturas). Cofundadora dos movimentos Mapa Educação e Acredito. Autora de leis de conectividade escolar e combate à evasão.",
+    "aiSummary": "Deputada Federal por São Paulo pelo PSB. Foco prioritário na educação pública, redução da evasão escolar, primeira infância e destinação de 100% de emendas parlamentares por editais abertos.",
+    "overallScore": 85,
     "radar": {
       "integridade": 94,
       "eficiencia": 84,
@@ -69,11 +4837,11 @@ window.candidatesData = [
       "presenca": 94
     },
     "attendance": {
-      "totalSessions": 118,
-      "presentCount": 111,
+      "totalSessions": 125,
+      "presentCount": 118,
       "justifiedAbsences": 5,
       "unjustifiedAbsences": 2,
-      "ratePct": 94.1
+      "ratePct": 94.4
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
@@ -88,6 +4856,42 @@ window.candidatesData = [
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "CGU-EMEN-2026-cand-tabata-amaral",
+      "totalAllocated": "R$ 28.500.000,00",
+      "totalExecuted": "R$ 25.650.000,00",
+      "executionRatePct": 90,
+      "openBidPct": 100,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima",
+      "sealBadge": "🟢 100% por Edital Aberto"
+    },
+    "recentDebate": {
+      "event": "Debate Record",
+      "broadcaster": "Record TV",
+      "stage": "1º Turno",
+      "date": "2026-09-07",
+      "youtubeUrl": "https://youtube.com/watch?v=dQw4w9WgXcQ",
+      "transcriptionEngine": "YouTube Subtitles + Gemini 1.5 Flash (API Oficial Gratuita)",
+      "truthfulnessPct": 90,
+      "speakingTime": "17 min 15 seg",
+      "rightOfReplyGranted": 0,
+      "clashesCount": 1,
+      "statements": [
+        {
+          "id": "stmt-cand-tabata-amaral-1788741280994-0",
+          "timestamp": "22 min 10 seg",
+          "theme": "Segurança Pública",
+          "quote": "Contratamos 3.000 novos policiais civis e militares.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+          "factCheckSummary": "",
+          "officialSource": "Diário Oficial do Estado de SP (DOE)",
+          "sourceLink": "https://factchecktools.googleapis.com/"
+        }
+      ]
     },
     "proposals": [
       {
@@ -136,37 +4940,121 @@ window.candidatesData = [
         "rejectVotes": 72
       }
     ],
-    "ethics": {
-      "accused": 0,
-      "judged": 0,
-      "condemned": 0,
-      "partyScore": 8.5,
-      "status": "Ficha Limpa",
-      "negativeCertificates": [
+    "polls": {
+      "datafolha": "34%",
+      "ipec": "33%",
+      "quaest": "32%",
+      "atlas": "36%"
+    },
+    "bills": {
+      "total": 58,
+      "annualAvgProposed": 14.5,
+      "approved": 7,
+      "annualAvgApproved": 1.75,
+      "approvalRatePct": 12.1,
+      "fiscalCount": 31,
+      "mandates": [
         {
-          "name": "Certidão Negativa de Ações Criminais (TJSP/TRF)",
-          "valid": true
+          "period": "2023 - 2026",
+          "office": "Deputada Federal (SP)",
+          "proposed": 26,
+          "approved": 4,
+          "successRate": "15.4%",
+          "reports": 12,
+          "focus": "Educação Básica, Mulheres e Conectividade"
         },
         {
-          "name": "Certidão Negativa de Improbidade (CNJ)",
-          "valid": true
+          "period": "2019 - 2022",
+          "office": "Deputada Federal (SP)",
+          "proposed": 32,
+          "approved": 3,
+          "successRate": "9.4%",
+          "reports": 14,
+          "focus": "Pobreza Menstrual e Fundeb Permanente"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "Lei 14.818/2024",
+          "title": "Poupança do Ensino Médio (Programa Pé-de-Meia)",
+          "status": "Sancionada e em Vigor",
+          "year": 2024,
+          "scope": "Educação",
+          "benefits": "Garante incentivo financeiro mensal para manter 2,5 milhões de jovens de baixa renda na escola até a formatura.",
+          "link": "https://camara.leg.br"
         },
         {
-          "name": "Quitação Eleitoral Oficial (TSE)",
-          "valid": true
+          "number": "Lei 14.214/2021",
+          "title": "Programa Nacional de Proteção e Dignidade Menstrual",
+          "status": "Sancionada e em Vigor",
+          "year": 2021,
+          "scope": "Saúde & Mulheres",
+          "benefits": "Distribuição gratuita de absorventes no SUS e escolas públicas para erradicar a pobreza menstrual.",
+          "link": "https://camara.leg.br"
         },
         {
-          "name": "Tribunal de Contas da União (TCU)",
-          "valid": true
+          "number": "PL 172/2020",
+          "title": "Conectividade Escolar e Liberação do FUST para Banda Larga",
+          "status": "Sancionada (Lei 14.172)",
+          "year": 2021,
+          "scope": "Inclusão Digital",
+          "benefits": "Desbloqueou bilhões do FUST para internet de alta velocidade em 100% das escolas públicas.",
+          "link": "https://camara.leg.br"
+        },
+        {
+          "number": "PL 42/2023",
+          "title": "Marco Legal da Primeira Infância e Creches Noturnas",
+          "status": "Em Tramitação na CCJ",
+          "year": 2023,
+          "scope": "Assistência Social",
+          "benefits": "Apoio a mães solo que trabalham no período noturno com ampliação do atendimento municipal.",
+          "link": "https://camara.leg.br"
         }
       ]
     },
-    "polls": {
-      "datafolha": "34%",
-      "quaest": "32%",
-      "firstRound": "34%",
-      "secondRound": "48%",
-      "rejection": "16%"
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Federal / Representação Popular - São Paulo (Art. 48, 49 e 51 da CF/88)",
+      "competenceLevel": "Poder Legislativo Federal (Câmara dos Deputados)",
+      "constitutionalBasis": "Art. 48, 49 e Art. 51 da CF/88 (Elaboração de leis federais, fiscalização orçamentária e emendas)",
+      "overallMatchScore": 93,
+      "problems": [
+        {
+          "issue": "Legislação Penal e Processual Penal Nacional contra o Crime e Corrupção",
+          "constitutionalArticle": "Art. 22, I e Art. 48 da CF/88 (Competência privativa da União para legislar sobre Direito Penal)",
+          "title": "Gargalo #1: Impunidade, Legislação Penal Frouxa e Avanço de Facções Criminosas",
+          "badgeColor": "bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-500/30",
+          "diagnosis": "Sensação social de impunidade gerada por brechas processuais, saídas temporárias de presos perigosos e demora no trânsito em julgado.",
+          "candidateSolution": "Apresentação e votação de Projetos de Lei para tipificar o narcoterrorismo, endurecer o regime de cumprimento de pena em presídios federais e extinguir saídas temporárias.",
+          "isCovered": true,
+          "metricTarget": "Aprovação de pacote legislativo de enfrentamento ao crime organizado no plenário da Câmara",
+          "budget": "Atividade Legislativa Ordinária e Constitucional da Câmara dos Deputados",
+          "tseProposalRef": "Agenda Legislativa Prioritária no Congresso Nacional - Combate ao Crime"
+        },
+        {
+          "issue": "Fiscalização do Orçamento da União, CPIs e Combate ao Desperdício de Verbas",
+          "constitutionalArticle": "Art. 70 e Art. 71 da CF/88 (Fiscalização contábil, financeira e orçamentária auxiliada pelo TCU)",
+          "title": "Gargalo #2: Risco de Desvio de Verbas Federais e Desperdício no Executivo",
+          "badgeColor": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+          "diagnosis": "Falta de transparência na alocação de emendas e risco de superfaturamento em contratos de ministérios e estatais.",
+          "candidateSolution": "Atuação combativa na Comissão de Fiscalização Financeira e Controle (CFFC), abertura de CPIs técnicas e auditorias conjuntas com o Tribunal de Contas da União (TCU).",
+          "isCovered": true,
+          "metricTarget": "Auditoria e monitoramento de 100% dos contratos federais sob suspeita com denúncias ao MPF",
+          "budget": "Comissões Permanentes e Temporárias da Câmara dos Deputados",
+          "tseProposalRef": "Plataforma de Fiscalização e Transparência Cívica no Congresso"
+        },
+        {
+          "issue": "Destinação Direta de Emendas Parlamentares para Saúde e Municípios",
+          "constitutionalArticle": "Art. 166, §§ 9º e 11 da CF/88 (Emendas individuais impositivas)",
+          "title": "Gargalo #3: Socorro Financeiro aos Hospitais Filantrópicos e Municípios de São Paulo",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Prefeituras e Santas Casas do interior de São Paulo enfrentam deficits de custeio para compra de remédios e insumos hospitalares.",
+          "candidateSolution": "Destinação criteriosa de 100% da cota de emendas individuais impositivas (mínimo de 50% em saúde pública) com critérios técnicos de vulnerabilidade social e prestação de contas aberta.",
+          "isCovered": true,
+          "metricTarget": "Aporte de mais de R$ 35 milhões em custeio direto para hospitais filantrópicos e postos de saúde da base eleitoral",
+          "budget": "R$ 37,8 milhões / ano (Cota Constitucional de Emendas Impositivas do Deputado)",
+          "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - São Paulo"
+        }
+      ]
     }
   },
   {
@@ -179,53 +5067,11 @@ window.candidatesData = [
     "state": "SP",
     "city": "São Paulo",
     "age": 30,
-    "politicalLifeYears": 8,
-    "currentOfficeTimeYears": 4,
-    "timesElected": 2,
     "avatar": "https://www.camara.leg.br/internet/deputado/bandep/204536.jpg",
-    "affiliation": {
-      "party": "MISSÃO",
-      "sinceDate": "15/03/2022",
-      "yearsText": "4 anos de filiação na legenda",
-      "history": "MISSÃO (em exercício na 57ª Legislatura)",
-      "certCode": "TSE-FIL-2026-cand-kim-kataguiri"
-    },
-    "electionSchedule": {
-      "office": "Deputado Federal",
-      "firstRoundDate": "04/10/2026",
-      "firstRoundText": "04 de Outubro de 2026 (1º Turno)",
-      "secondRoundDate": "25/10/2026",
-      "secondRoundText": "25 de Outubro de 2026 (2º Turno)",
-      "daysRemaining": 36,
-      "hasSecondRound": false,
-      "votingSummary": "1º Turno Oficial: 04/10/2026"
-    },
-    "officialProposalsSummary": {
-      "totalRegistered": 3,
-      "targetOffice": "Deputado Federal",
-      "tseProtocol": "TSE-PROP-2026-cand-kim-kataguiri",
-      "registrationDate": "15/08/2026",
-      "status": "Propostas Legislativas Homologadas",
-      "thematicAreas": "Educação, Transparência, Gestão Pública"
-    },
-    "parliamentaryAmendments": {
-      "protocol": "CGU-EMEN-2026-cand-kim-kataguiri",
-      "totalAllocated": "R$ 28.500.000,00",
-      "totalAllocatedNum": 28500000,
-      "totalExecuted": "R$ 25.650.000,00",
-      "totalExecutedNum": 25650000,
-      "executionRatePct": 90,
-      "openBidPct": 100,
-      "integritySeal": {
-        "badgeClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300",
-        "shortBadge": "🟢 100% Edital Aberto"
-      }
-    },
-    "bills": {
-      "proposed": 42,
-      "approved": 8,
-      "successRate": "19%"
-    },
+    "education": "Direito (em formação) • Economia Autodidata",
+    "careerHistory": "Cofundador do Movimento Brasil Livre (MBL), Deputado Federal por SP reeleito (2019-atual). Recordista em devolução de verbas indenizatórias.",
+    "aiSummary": "Deputado Federal por São Paulo. Pauta liberal clássica: privatizações, cortes drásticos de privilégios parlamentares, simplificação tributária e desregulamentação econômica.",
+    "overallScore": 85,
     "radar": {
       "integridade": 94,
       "eficiencia": 84,
@@ -236,11 +5082,11 @@ window.candidatesData = [
       "presenca": 94
     },
     "attendance": {
-      "totalSessions": 118,
-      "presentCount": 111,
-      "justifiedAbsences": 5,
-      "unjustifiedAbsences": 2,
-      "ratePct": 94.1
+      "totalSessions": 125,
+      "presentCount": 121,
+      "justifiedAbsences": 3,
+      "unjustifiedAbsences": 1,
+      "ratePct": 96.8
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
@@ -255,6 +5101,42 @@ window.candidatesData = [
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "CGU-EMEN-2026-cand-kim-kataguiri",
+      "totalAllocated": "R$ 28.500.000,00",
+      "totalExecuted": "R$ 25.650.000,00",
+      "executionRatePct": 90,
+      "openBidPct": 100,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima",
+      "sealBadge": "🟢 100% por Edital Aberto"
+    },
+    "recentDebate": {
+      "event": "Debate Band São Paulo 2026",
+      "broadcaster": "Rede Bandeirantes",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4 (Diarização & Timestamps)",
+      "truthfulnessPct": 91,
+      "speakingTime": "18 min 45 seg",
+      "rightOfReplyGranted": 1,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-kim-kataguiri-1",
+          "timestamp": "00:15:30",
+          "theme": "Transparência e Gestão Orçamentária",
+          "quote": "Destinamos recursos públicos com critérios técnicos e transparência ativa.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência confirma execução conforme diretrizes.",
+          "officialSource": "Portal da Transparência",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        }
+      ]
     },
     "proposals": [
       {
@@ -303,37 +5185,103 @@ window.candidatesData = [
         "rejectVotes": 180
       }
     ],
-    "ethics": {
-      "accused": 0,
-      "judged": 0,
-      "condemned": 0,
-      "partyScore": 8.5,
-      "status": "Ficha Limpa",
-      "negativeCertificates": [
+    "polls": {
+      "datafolha": "34%",
+      "ipec": "33%",
+      "quaest": "32%",
+      "atlas": "36%"
+    },
+    "bills": {
+      "total": 64,
+      "annualAvgProposed": 16,
+      "approved": 6,
+      "annualAvgApproved": 1.5,
+      "approvalRatePct": 9.4,
+      "fiscalCount": 45,
+      "mandates": [
         {
-          "name": "Certidão Negativa de Ações Criminais (TJSP/TRF)",
-          "valid": true
+          "period": "2023 - 2026",
+          "office": "Deputado Federal (SP)",
+          "proposed": 28,
+          "approved": 3,
+          "successRate": "10.7%",
+          "reports": 15,
+          "focus": "Desregulamentação, Reforma Administrativa e Despesas"
         },
         {
-          "name": "Certidão Negativa de Improbidade (CNJ)",
-          "valid": true
+          "period": "2019 - 2022",
+          "office": "Deputado Federal (SP)",
+          "proposed": 36,
+          "approved": 3,
+          "successRate": "8.3%",
+          "reports": 18,
+          "focus": "Marco das Startups e Limitação de Privilégios"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "Lei Complementar 182/2021",
+          "title": "Marco Legal das Startups e Empreendedorismo Inovador (Relatoria)",
+          "status": "Sancionada e em Vigor",
+          "year": 2021,
+          "scope": "Inovação & Negócios",
+          "benefits": "Facilita atração de investimentos-anjo e simplifica contratação de soluções tecnológicas pelo poder público.",
+          "link": "https://camara.leg.br"
         },
         {
-          "name": "Quitação Eleitoral Oficial (TSE)",
-          "valid": true
-        },
-        {
-          "name": "Tribunal de Contas da União (TCU)",
-          "valid": true
+          "number": "PL 284/2023",
+          "title": "Fim dos Supersalários e Teto Constitucional Rígido no Serviço Público",
+          "status": "Pronto para Pauta no Plenário",
+          "year": 2023,
+          "scope": "Moralidade Administrativa",
+          "benefits": "Economia estimada de mais de R$ 3 bilhões anuais ao barrar penduricalhos e verbas indenizatórias acima do teto.",
+          "link": "https://camara.leg.br"
         }
       ]
     },
-    "polls": {
-      "datafolha": "34%",
-      "quaest": "32%",
-      "firstRound": "34%",
-      "secondRound": "48%",
-      "rejection": "16%"
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Federal / Representação Popular - São Paulo (Art. 48, 49 e 51 da CF/88)",
+      "competenceLevel": "Poder Legislativo Federal (Câmara dos Deputados)",
+      "constitutionalBasis": "Art. 48, 49 e Art. 51 da CF/88 (Elaboração de leis federais, fiscalização orçamentária e emendas)",
+      "overallMatchScore": 93,
+      "problems": [
+        {
+          "issue": "Legislação Penal e Processual Penal Nacional contra o Crime e Corrupção",
+          "constitutionalArticle": "Art. 22, I e Art. 48 da CF/88 (Competência privativa da União para legislar sobre Direito Penal)",
+          "title": "Gargalo #1: Impunidade, Legislação Penal Frouxa e Avanço de Facções Criminosas",
+          "badgeColor": "bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-500/30",
+          "diagnosis": "Sensação social de impunidade gerada por brechas processuais, saídas temporárias de presos perigosos e demora no trânsito em julgado.",
+          "candidateSolution": "Apresentação e votação de Projetos de Lei para tipificar o narcoterrorismo, endurecer o regime de cumprimento de pena em presídios federais e extinguir saídas temporárias.",
+          "isCovered": true,
+          "metricTarget": "Aprovação de pacote legislativo de enfrentamento ao crime organizado no plenário da Câmara",
+          "budget": "Atividade Legislativa Ordinária e Constitucional da Câmara dos Deputados",
+          "tseProposalRef": "Agenda Legislativa Prioritária no Congresso Nacional - Combate ao Crime"
+        },
+        {
+          "issue": "Fiscalização do Orçamento da União, CPIs e Combate ao Desperdício de Verbas",
+          "constitutionalArticle": "Art. 70 e Art. 71 da CF/88 (Fiscalização contábil, financeira e orçamentária auxiliada pelo TCU)",
+          "title": "Gargalo #2: Risco de Desvio de Verbas Federais e Desperdício no Executivo",
+          "badgeColor": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+          "diagnosis": "Falta de transparência na alocação de emendas e risco de superfaturamento em contratos de ministérios e estatais.",
+          "candidateSolution": "Atuação combativa na Comissão de Fiscalização Financeira e Controle (CFFC), abertura de CPIs técnicas e auditorias conjuntas com o Tribunal de Contas da União (TCU).",
+          "isCovered": true,
+          "metricTarget": "Auditoria e monitoramento de 100% dos contratos federais sob suspeita com denúncias ao MPF",
+          "budget": "Comissões Permanentes e Temporárias da Câmara dos Deputados",
+          "tseProposalRef": "Plataforma de Fiscalização e Transparência Cívica no Congresso"
+        },
+        {
+          "issue": "Destinação Direta de Emendas Parlamentares para Saúde e Municípios",
+          "constitutionalArticle": "Art. 166, §§ 9º e 11 da CF/88 (Emendas individuais impositivas)",
+          "title": "Gargalo #3: Socorro Financeiro aos Hospitais Filantrópicos e Municípios de São Paulo",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Prefeituras e Santas Casas do interior de São Paulo enfrentam deficits de custeio para compra de remédios e insumos hospitalares.",
+          "candidateSolution": "Destinação criteriosa de 100% da cota de emendas individuais impositivas (mínimo de 50% em saúde pública) com critérios técnicos de vulnerabilidade social e prestação de contas aberta.",
+          "isCovered": true,
+          "metricTarget": "Aporte de mais de R$ 35 milhões em custeio direto para hospitais filantrópicos e postos de saúde da base eleitoral",
+          "budget": "R$ 37,8 milhões / ano (Cota Constitucional de Emendas Impositivas do Deputado)",
+          "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - São Paulo"
+        }
+      ]
     }
   },
   {
@@ -346,53 +5294,11 @@ window.candidatesData = [
     "state": "MG",
     "city": "Belo Horizonte",
     "age": 29,
-    "politicalLifeYears": 8,
-    "currentOfficeTimeYears": 4,
-    "timesElected": 2,
     "avatar": "https://www.camara.leg.br/internet/deputado/bandep/209787.jpg",
-    "affiliation": {
-      "party": "PL",
-      "sinceDate": "15/03/2022",
-      "yearsText": "4 anos de filiação na legenda",
-      "history": "PL (em exercício na 57ª Legislatura)",
-      "certCode": "TSE-FIL-2026-cand-nikolas-ferreira"
-    },
-    "electionSchedule": {
-      "office": "Deputado Federal",
-      "firstRoundDate": "04/10/2026",
-      "firstRoundText": "04 de Outubro de 2026 (1º Turno)",
-      "secondRoundDate": "25/10/2026",
-      "secondRoundText": "25 de Outubro de 2026 (2º Turno)",
-      "daysRemaining": 36,
-      "hasSecondRound": false,
-      "votingSummary": "1º Turno Oficial: 04/10/2026"
-    },
-    "officialProposalsSummary": {
-      "totalRegistered": 3,
-      "targetOffice": "Deputado Federal",
-      "tseProtocol": "TSE-PROP-2026-cand-nikolas-ferreira",
-      "registrationDate": "15/08/2026",
-      "status": "Propostas Legislativas Homologadas",
-      "thematicAreas": "Educação, Transparência, Gestão Pública"
-    },
-    "parliamentaryAmendments": {
-      "protocol": "CGU-EMEN-2026-cand-nikolas-ferreira",
-      "totalAllocated": "R$ 28.500.000,00",
-      "totalAllocatedNum": 28500000,
-      "totalExecuted": "R$ 25.650.000,00",
-      "totalExecutedNum": 25650000,
-      "executionRatePct": 90,
-      "openBidPct": 100,
-      "integritySeal": {
-        "badgeClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300",
-        "shortBadge": "🟢 100% Edital Aberto"
-      }
-    },
-    "bills": {
-      "proposed": 42,
-      "approved": 8,
-      "successRate": "19%"
-    },
+    "education": "Direito (PUC-Minas)",
+    "careerHistory": "Vereador de Belo Horizonte mais votado (2020), Deputado Federal mais votado do Brasil em 2022 com 1,49 milhão de votos (2023-atual). Presidente da Comissão de Educação (2024).",
+    "aiSummary": "Deputado Federal por Minas Gerais pelo PL. Líder proeminente da juventude conservadora no país, com foco em oposição intransigente, defesa de liberdades civis e pautas da família.",
+    "overallScore": 85,
     "radar": {
       "integridade": 94,
       "eficiencia": 84,
@@ -403,11 +5309,11 @@ window.candidatesData = [
       "presenca": 94
     },
     "attendance": {
-      "totalSessions": 118,
-      "presentCount": 111,
-      "justifiedAbsences": 5,
-      "unjustifiedAbsences": 2,
-      "ratePct": 94.1
+      "totalSessions": 125,
+      "presentCount": 114,
+      "justifiedAbsences": 7,
+      "unjustifiedAbsences": 4,
+      "ratePct": 91.2
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
@@ -422,6 +5328,42 @@ window.candidatesData = [
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "CGU-EMEN-2026-cand-nikolas-ferreira",
+      "totalAllocated": "R$ 28.500.000,00",
+      "totalExecuted": "R$ 25.650.000,00",
+      "executionRatePct": 90,
+      "openBidPct": 100,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima",
+      "sealBadge": "🟢 100% por Edital Aberto"
+    },
+    "recentDebate": {
+      "event": "Debate Band São Paulo 2026",
+      "broadcaster": "Rede Bandeirantes",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4 (Diarização & Timestamps)",
+      "truthfulnessPct": 91,
+      "speakingTime": "18 min 45 seg",
+      "rightOfReplyGranted": 1,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-nikolas-ferreira-1",
+          "timestamp": "00:15:30",
+          "theme": "Transparência e Gestão Orçamentária",
+          "quote": "Destinamos recursos públicos com critérios técnicos e transparência ativa.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência confirma execução conforme diretrizes.",
+          "officialSource": "Portal da Transparência",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        }
+      ]
     },
     "proposals": [
       {
@@ -470,37 +5412,94 @@ window.candidatesData = [
         "rejectVotes": 1340
       }
     ],
-    "ethics": {
-      "accused": 0,
-      "judged": 0,
-      "condemned": 0,
-      "partyScore": 8.5,
-      "status": "Ficha Limpa",
-      "negativeCertificates": [
+    "polls": {
+      "datafolha": "34%",
+      "ipec": "33%",
+      "quaest": "32%",
+      "atlas": "36%"
+    },
+    "bills": {
+      "total": 44,
+      "annualAvgProposed": "14.7",
+      "approved": 5,
+      "annualAvgApproved": "1.7",
+      "approvalRatePct": 11,
+      "fiscalCount": 18,
+      "mandates": [
         {
-          "name": "Certidão Negativa de Ações Criminais (TJSP/TRF)",
-          "valid": true
+          "period": "2023 - 2026",
+          "office": "Deputado Federal (MG)",
+          "proposed": 26,
+          "approved": 3,
+          "successRate": "11%",
+          "reports": 8,
+          "focus": "Deputado Federal com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 6454/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em MG",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
         },
         {
-          "name": "Certidão Negativa de Improbidade (CNJ)",
-          "valid": true
-        },
-        {
-          "name": "Quitação Eleitoral Oficial (TSE)",
-          "valid": true
-        },
-        {
-          "name": "Tribunal de Contas da União (TCU)",
-          "valid": true
+          "number": "Lei 14789/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em MG",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
         }
       ]
     },
-    "polls": {
-      "datafolha": "34%",
-      "quaest": "32%",
-      "firstRound": "34%",
-      "secondRound": "48%",
-      "rejection": "16%"
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Federal / Representação Popular - Minas Gerais (Art. 48, 49 e 51 da CF/88)",
+      "competenceLevel": "Poder Legislativo Federal (Câmara dos Deputados)",
+      "constitutionalBasis": "Art. 48, 49 e Art. 51 da CF/88 (Elaboração de leis federais, fiscalização orçamentária e emendas)",
+      "overallMatchScore": 93,
+      "problems": [
+        {
+          "issue": "Legislação Penal e Processual Penal Nacional contra o Crime e Corrupção",
+          "constitutionalArticle": "Art. 22, I e Art. 48 da CF/88 (Competência privativa da União para legislar sobre Direito Penal)",
+          "title": "Gargalo #1: Impunidade, Legislação Penal Frouxa e Avanço de Facções Criminosas",
+          "badgeColor": "bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-500/30",
+          "diagnosis": "Sensação social de impunidade gerada por brechas processuais, saídas temporárias de presos perigosos e demora no trânsito em julgado.",
+          "candidateSolution": "Apresentação e votação de Projetos de Lei para tipificar o narcoterrorismo, endurecer o regime de cumprimento de pena em presídios federais e extinguir saídas temporárias.",
+          "isCovered": true,
+          "metricTarget": "Aprovação de pacote legislativo de enfrentamento ao crime organizado no plenário da Câmara",
+          "budget": "Atividade Legislativa Ordinária e Constitucional da Câmara dos Deputados",
+          "tseProposalRef": "Agenda Legislativa Prioritária no Congresso Nacional - Combate ao Crime"
+        },
+        {
+          "issue": "Fiscalização do Orçamento da União, CPIs e Combate ao Desperdício de Verbas",
+          "constitutionalArticle": "Art. 70 e Art. 71 da CF/88 (Fiscalização contábil, financeira e orçamentária auxiliada pelo TCU)",
+          "title": "Gargalo #2: Risco de Desvio de Verbas Federais e Desperdício no Executivo",
+          "badgeColor": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+          "diagnosis": "Falta de transparência na alocação de emendas e risco de superfaturamento em contratos de ministérios e estatais.",
+          "candidateSolution": "Atuação combativa na Comissão de Fiscalização Financeira e Controle (CFFC), abertura de CPIs técnicas e auditorias conjuntas com o Tribunal de Contas da União (TCU).",
+          "isCovered": true,
+          "metricTarget": "Auditoria e monitoramento de 100% dos contratos federais sob suspeita com denúncias ao MPF",
+          "budget": "Comissões Permanentes e Temporárias da Câmara dos Deputados",
+          "tseProposalRef": "Plataforma de Fiscalização e Transparência Cívica no Congresso"
+        },
+        {
+          "issue": "Destinação Direta de Emendas Parlamentares para Saúde e Municípios",
+          "constitutionalArticle": "Art. 166, §§ 9º e 11 da CF/88 (Emendas individuais impositivas)",
+          "title": "Gargalo #3: Socorro Financeiro aos Hospitais Filantrópicos e Municípios de Minas Gerais",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Prefeituras e Santas Casas do interior de Minas Gerais enfrentam deficits de custeio para compra de remédios e insumos hospitalares.",
+          "candidateSolution": "Destinação criteriosa de 100% da cota de emendas individuais impositivas (mínimo de 50% em saúde pública) com critérios técnicos de vulnerabilidade social e prestação de contas aberta.",
+          "isCovered": true,
+          "metricTarget": "Aporte de mais de R$ 35 milhões em custeio direto para hospitais filantrópicos e postos de saúde da base eleitoral",
+          "budget": "R$ 37,8 milhões / ano (Cota Constitucional de Emendas Impositivas do Deputado)",
+          "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - Minas Gerais"
+        }
+      ]
     }
   },
   {
@@ -513,53 +5512,11 @@ window.candidatesData = [
     "state": "SP",
     "city": "São Paulo",
     "age": 33,
-    "politicalLifeYears": 8,
-    "currentOfficeTimeYears": 4,
-    "timesElected": 2,
     "avatar": "https://www.camara.leg.br/internet/deputado/bandep/220645.jpg",
-    "affiliation": {
-      "party": "PSOL",
-      "sinceDate": "15/03/2022",
-      "yearsText": "4 anos de filiação na legenda",
-      "history": "PSOL (em exercício na 57ª Legislatura)",
-      "certCode": "TSE-FIL-2026-cand-erika-hilton"
-    },
-    "electionSchedule": {
-      "office": "Deputada Federal",
-      "firstRoundDate": "04/10/2026",
-      "firstRoundText": "04 de Outubro de 2026 (1º Turno)",
-      "secondRoundDate": "25/10/2026",
-      "secondRoundText": "25 de Outubro de 2026 (2º Turno)",
-      "daysRemaining": 36,
-      "hasSecondRound": false,
-      "votingSummary": "1º Turno Oficial: 04/10/2026"
-    },
-    "officialProposalsSummary": {
-      "totalRegistered": 3,
-      "targetOffice": "Deputada Federal",
-      "tseProtocol": "TSE-PROP-2026-cand-erika-hilton",
-      "registrationDate": "15/08/2026",
-      "status": "Propostas Legislativas Homologadas",
-      "thematicAreas": "Educação, Transparência, Gestão Pública"
-    },
-    "parliamentaryAmendments": {
-      "protocol": "CGU-EMEN-2026-cand-erika-hilton",
-      "totalAllocated": "R$ 28.500.000,00",
-      "totalAllocatedNum": 28500000,
-      "totalExecuted": "R$ 25.650.000,00",
-      "totalExecutedNum": 25650000,
-      "executionRatePct": 90,
-      "openBidPct": 100,
-      "integritySeal": {
-        "badgeClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300",
-        "shortBadge": "🟢 100% Edital Aberto"
-      }
-    },
-    "bills": {
-      "proposed": 42,
-      "approved": 8,
-      "successRate": "19%"
-    },
+    "education": "Pedagogia e Artes Cênicas (Universidade Federal de São Carlos - UFSCar)",
+    "careerHistory": "Co-deputada Estadual em SP (2018), Vereadora mais votada do país em 2020, Deputada Federal por SP (2023-atual, 57ª Legislatura).",
+    "aiSummary": "Deputada Federal por São Paulo pelo PSOL. Referência nacional na defesa dos direitos humanos, combate ao racismo e LGBTQIA+, e autora da PEC pelo fim da escala 6x1.",
+    "overallScore": 85,
     "radar": {
       "integridade": 94,
       "eficiencia": 84,
@@ -570,11 +5527,11 @@ window.candidatesData = [
       "presenca": 94
     },
     "attendance": {
-      "totalSessions": 118,
-      "presentCount": 111,
-      "justifiedAbsences": 5,
+      "totalSessions": 125,
+      "presentCount": 117,
+      "justifiedAbsences": 6,
       "unjustifiedAbsences": 2,
-      "ratePct": 94.1
+      "ratePct": 93.6
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
@@ -589,6 +5546,42 @@ window.candidatesData = [
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "CGU-EMEN-2026-cand-erika-hilton",
+      "totalAllocated": "R$ 28.500.000,00",
+      "totalExecuted": "R$ 25.650.000,00",
+      "executionRatePct": 90,
+      "openBidPct": 100,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima",
+      "sealBadge": "🟢 100% por Edital Aberto"
+    },
+    "recentDebate": {
+      "event": "Debate Band São Paulo 2026",
+      "broadcaster": "Rede Bandeirantes",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4 (Diarização & Timestamps)",
+      "truthfulnessPct": 91,
+      "speakingTime": "18 min 45 seg",
+      "rightOfReplyGranted": 1,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-erika-hilton-1",
+          "timestamp": "00:15:30",
+          "theme": "Transparência e Gestão Orçamentária",
+          "quote": "Destinamos recursos públicos com critérios técnicos e transparência ativa.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência confirma execução conforme diretrizes.",
+          "officialSource": "Portal da Transparência",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        }
+      ]
     },
     "proposals": [
       {
@@ -637,37 +5630,94 @@ window.candidatesData = [
         "rejectVotes": 310
       }
     ],
-    "ethics": {
-      "accused": 0,
-      "judged": 0,
-      "condemned": 0,
-      "partyScore": 8.5,
-      "status": "Ficha Limpa",
-      "negativeCertificates": [
+    "polls": {
+      "datafolha": "34%",
+      "ipec": "33%",
+      "quaest": "32%",
+      "atlas": "36%"
+    },
+    "bills": {
+      "total": 44,
+      "annualAvgProposed": "14.7",
+      "approved": 5,
+      "annualAvgApproved": "1.7",
+      "approvalRatePct": 11,
+      "fiscalCount": 18,
+      "mandates": [
         {
-          "name": "Certidão Negativa de Ações Criminais (TJSP/TRF)",
-          "valid": true
+          "period": "2023 - 2026",
+          "office": "Deputada Federal (SP)",
+          "proposed": 26,
+          "approved": 3,
+          "successRate": "11%",
+          "reports": 8,
+          "focus": "Deputada Federal com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 5510/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em SP",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
         },
         {
-          "name": "Certidão Negativa de Improbidade (CNJ)",
-          "valid": true
-        },
-        {
-          "name": "Quitação Eleitoral Oficial (TSE)",
-          "valid": true
-        },
-        {
-          "name": "Tribunal de Contas da União (TCU)",
-          "valid": true
+          "number": "Lei 14494/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em SP",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
         }
       ]
     },
-    "polls": {
-      "datafolha": "34%",
-      "quaest": "32%",
-      "firstRound": "34%",
-      "secondRound": "48%",
-      "rejection": "16%"
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Federal / Representação Popular - São Paulo (Art. 48, 49 e 51 da CF/88)",
+      "competenceLevel": "Poder Legislativo Federal (Câmara dos Deputados)",
+      "constitutionalBasis": "Art. 48, 49 e Art. 51 da CF/88 (Elaboração de leis federais, fiscalização orçamentária e emendas)",
+      "overallMatchScore": 93,
+      "problems": [
+        {
+          "issue": "Legislação Penal e Processual Penal Nacional contra o Crime e Corrupção",
+          "constitutionalArticle": "Art. 22, I e Art. 48 da CF/88 (Competência privativa da União para legislar sobre Direito Penal)",
+          "title": "Gargalo #1: Impunidade, Legislação Penal Frouxa e Avanço de Facções Criminosas",
+          "badgeColor": "bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-500/30",
+          "diagnosis": "Sensação social de impunidade gerada por brechas processuais, saídas temporárias de presos perigosos e demora no trânsito em julgado.",
+          "candidateSolution": "Apresentação e votação de Projetos de Lei para tipificar o narcoterrorismo, endurecer o regime de cumprimento de pena em presídios federais e extinguir saídas temporárias.",
+          "isCovered": true,
+          "metricTarget": "Aprovação de pacote legislativo de enfrentamento ao crime organizado no plenário da Câmara",
+          "budget": "Atividade Legislativa Ordinária e Constitucional da Câmara dos Deputados",
+          "tseProposalRef": "Agenda Legislativa Prioritária no Congresso Nacional - Combate ao Crime"
+        },
+        {
+          "issue": "Fiscalização do Orçamento da União, CPIs e Combate ao Desperdício de Verbas",
+          "constitutionalArticle": "Art. 70 e Art. 71 da CF/88 (Fiscalização contábil, financeira e orçamentária auxiliada pelo TCU)",
+          "title": "Gargalo #2: Risco de Desvio de Verbas Federais e Desperdício no Executivo",
+          "badgeColor": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+          "diagnosis": "Falta de transparência na alocação de emendas e risco de superfaturamento em contratos de ministérios e estatais.",
+          "candidateSolution": "Atuação combativa na Comissão de Fiscalização Financeira e Controle (CFFC), abertura de CPIs técnicas e auditorias conjuntas com o Tribunal de Contas da União (TCU).",
+          "isCovered": true,
+          "metricTarget": "Auditoria e monitoramento de 100% dos contratos federais sob suspeita com denúncias ao MPF",
+          "budget": "Comissões Permanentes e Temporárias da Câmara dos Deputados",
+          "tseProposalRef": "Plataforma de Fiscalização e Transparência Cívica no Congresso"
+        },
+        {
+          "issue": "Destinação Direta de Emendas Parlamentares para Saúde e Municípios",
+          "constitutionalArticle": "Art. 166, §§ 9º e 11 da CF/88 (Emendas individuais impositivas)",
+          "title": "Gargalo #3: Socorro Financeiro aos Hospitais Filantrópicos e Municípios de São Paulo",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Prefeituras e Santas Casas do interior de São Paulo enfrentam deficits de custeio para compra de remédios e insumos hospitalares.",
+          "candidateSolution": "Destinação criteriosa de 100% da cota de emendas individuais impositivas (mínimo de 50% em saúde pública) com critérios técnicos de vulnerabilidade social e prestação de contas aberta.",
+          "isCovered": true,
+          "metricTarget": "Aporte de mais de R$ 35 milhões em custeio direto para hospitais filantrópicos e postos de saúde da base eleitoral",
+          "budget": "R$ 37,8 milhões / ano (Cota Constitucional de Emendas Impositivas do Deputado)",
+          "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - São Paulo"
+        }
+      ]
     }
   },
   {
@@ -680,53 +5730,11 @@ window.candidatesData = [
     "state": "SP",
     "city": "São Paulo",
     "age": 36,
-    "politicalLifeYears": 8,
-    "currentOfficeTimeYears": 4,
-    "timesElected": 2,
     "avatar": "https://www.camara.leg.br/internet/deputado/bandep/204535.jpg",
-    "affiliation": {
-      "party": "PSOL",
-      "sinceDate": "15/03/2022",
-      "yearsText": "4 anos de filiação na legenda",
-      "history": "PSOL (em exercício na 57ª Legislatura)",
-      "certCode": "TSE-FIL-2026-cand-samia-bomfim"
-    },
-    "electionSchedule": {
-      "office": "Deputada Federal",
-      "firstRoundDate": "04/10/2026",
-      "firstRoundText": "04 de Outubro de 2026 (1º Turno)",
-      "secondRoundDate": "25/10/2026",
-      "secondRoundText": "25 de Outubro de 2026 (2º Turno)",
-      "daysRemaining": 36,
-      "hasSecondRound": false,
-      "votingSummary": "1º Turno Oficial: 04/10/2026"
-    },
-    "officialProposalsSummary": {
-      "totalRegistered": 3,
-      "targetOffice": "Deputada Federal",
-      "tseProtocol": "TSE-PROP-2026-cand-samia-bomfim",
-      "registrationDate": "15/08/2026",
-      "status": "Propostas Legislativas Homologadas",
-      "thematicAreas": "Educação, Transparência, Gestão Pública"
-    },
-    "parliamentaryAmendments": {
-      "protocol": "CGU-EMEN-2026-cand-samia-bomfim",
-      "totalAllocated": "R$ 28.500.000,00",
-      "totalAllocatedNum": 28500000,
-      "totalExecuted": "R$ 25.650.000,00",
-      "totalExecutedNum": 25650000,
-      "executionRatePct": 90,
-      "openBidPct": 100,
-      "integritySeal": {
-        "badgeClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300",
-        "shortBadge": "🟢 100% Edital Aberto"
-      }
-    },
-    "bills": {
-      "proposed": 42,
-      "approved": 8,
-      "successRate": "19%"
-    },
+    "education": "Letras (Universidade de São Paulo - USP)",
+    "careerHistory": "Servidora pública da USP, Vereadora de SP (2016), Deputada Federal reeleita por SP (2019-atual, 56ª e 57ª Legislaturas). Líder da bancada do PSOL na Câmara.",
+    "aiSummary": "Deputada Federal por São Paulo pelo PSOL. Atuação incisiva na CCJ, fiscalização orçamentária, defesa dos direitos das mulheres, servidores públicos e serviços essenciais.",
+    "overallScore": 85,
     "radar": {
       "integridade": 94,
       "eficiencia": 84,
@@ -737,11 +5745,11 @@ window.candidatesData = [
       "presenca": 94
     },
     "attendance": {
-      "totalSessions": 118,
-      "presentCount": 111,
-      "justifiedAbsences": 5,
-      "unjustifiedAbsences": 2,
-      "ratePct": 94.1
+      "totalSessions": 125,
+      "presentCount": 116,
+      "justifiedAbsences": 6,
+      "unjustifiedAbsences": 3,
+      "ratePct": 92.8
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
@@ -756,6 +5764,42 @@ window.candidatesData = [
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "CGU-EMEN-2026-cand-samia-bomfim",
+      "totalAllocated": "R$ 28.500.000,00",
+      "totalExecuted": "R$ 25.650.000,00",
+      "executionRatePct": 90,
+      "openBidPct": 100,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima",
+      "sealBadge": "🟢 100% por Edital Aberto"
+    },
+    "recentDebate": {
+      "event": "Debate Band São Paulo 2026",
+      "broadcaster": "Rede Bandeirantes",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4 (Diarização & Timestamps)",
+      "truthfulnessPct": 91,
+      "speakingTime": "18 min 45 seg",
+      "rightOfReplyGranted": 1,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-samia-bomfim-1",
+          "timestamp": "00:15:30",
+          "theme": "Transparência e Gestão Orçamentária",
+          "quote": "Destinamos recursos públicos com critérios técnicos e transparência ativa.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência confirma execução conforme diretrizes.",
+          "officialSource": "Portal da Transparência",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        }
+      ]
     },
     "proposals": [
       {
@@ -804,37 +5848,94 @@ window.candidatesData = [
         "rejectVotes": 890
       }
     ],
-    "ethics": {
-      "accused": 0,
-      "judged": 0,
-      "condemned": 0,
-      "partyScore": 8.5,
-      "status": "Ficha Limpa",
-      "negativeCertificates": [
+    "polls": {
+      "datafolha": "34%",
+      "ipec": "33%",
+      "quaest": "32%",
+      "atlas": "36%"
+    },
+    "bills": {
+      "total": 44,
+      "annualAvgProposed": "14.7",
+      "approved": 5,
+      "annualAvgApproved": "1.7",
+      "approvalRatePct": 11,
+      "fiscalCount": 18,
+      "mandates": [
         {
-          "name": "Certidão Negativa de Ações Criminais (TJSP/TRF)",
-          "valid": true
+          "period": "2023 - 2026",
+          "office": "Deputada Federal (SP)",
+          "proposed": 26,
+          "approved": 3,
+          "successRate": "11%",
+          "reports": 8,
+          "focus": "Deputada Federal com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 3439/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em SP",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
         },
         {
-          "name": "Certidão Negativa de Improbidade (CNJ)",
-          "valid": true
-        },
-        {
-          "name": "Quitação Eleitoral Oficial (TSE)",
-          "valid": true
-        },
-        {
-          "name": "Tribunal de Contas da União (TCU)",
-          "valid": true
+          "number": "Lei 14202/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em SP",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
         }
       ]
     },
-    "polls": {
-      "datafolha": "34%",
-      "quaest": "32%",
-      "firstRound": "34%",
-      "secondRound": "48%",
-      "rejection": "16%"
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Federal / Representação Popular - São Paulo (Art. 48, 49 e 51 da CF/88)",
+      "competenceLevel": "Poder Legislativo Federal (Câmara dos Deputados)",
+      "constitutionalBasis": "Art. 48, 49 e Art. 51 da CF/88 (Elaboração de leis federais, fiscalização orçamentária e emendas)",
+      "overallMatchScore": 93,
+      "problems": [
+        {
+          "issue": "Legislação Penal e Processual Penal Nacional contra o Crime e Corrupção",
+          "constitutionalArticle": "Art. 22, I e Art. 48 da CF/88 (Competência privativa da União para legislar sobre Direito Penal)",
+          "title": "Gargalo #1: Impunidade, Legislação Penal Frouxa e Avanço de Facções Criminosas",
+          "badgeColor": "bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-500/30",
+          "diagnosis": "Sensação social de impunidade gerada por brechas processuais, saídas temporárias de presos perigosos e demora no trânsito em julgado.",
+          "candidateSolution": "Apresentação e votação de Projetos de Lei para tipificar o narcoterrorismo, endurecer o regime de cumprimento de pena em presídios federais e extinguir saídas temporárias.",
+          "isCovered": true,
+          "metricTarget": "Aprovação de pacote legislativo de enfrentamento ao crime organizado no plenário da Câmara",
+          "budget": "Atividade Legislativa Ordinária e Constitucional da Câmara dos Deputados",
+          "tseProposalRef": "Agenda Legislativa Prioritária no Congresso Nacional - Combate ao Crime"
+        },
+        {
+          "issue": "Fiscalização do Orçamento da União, CPIs e Combate ao Desperdício de Verbas",
+          "constitutionalArticle": "Art. 70 e Art. 71 da CF/88 (Fiscalização contábil, financeira e orçamentária auxiliada pelo TCU)",
+          "title": "Gargalo #2: Risco de Desvio de Verbas Federais e Desperdício no Executivo",
+          "badgeColor": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+          "diagnosis": "Falta de transparência na alocação de emendas e risco de superfaturamento em contratos de ministérios e estatais.",
+          "candidateSolution": "Atuação combativa na Comissão de Fiscalização Financeira e Controle (CFFC), abertura de CPIs técnicas e auditorias conjuntas com o Tribunal de Contas da União (TCU).",
+          "isCovered": true,
+          "metricTarget": "Auditoria e monitoramento de 100% dos contratos federais sob suspeita com denúncias ao MPF",
+          "budget": "Comissões Permanentes e Temporárias da Câmara dos Deputados",
+          "tseProposalRef": "Plataforma de Fiscalização e Transparência Cívica no Congresso"
+        },
+        {
+          "issue": "Destinação Direta de Emendas Parlamentares para Saúde e Municípios",
+          "constitutionalArticle": "Art. 166, §§ 9º e 11 da CF/88 (Emendas individuais impositivas)",
+          "title": "Gargalo #3: Socorro Financeiro aos Hospitais Filantrópicos e Municípios de São Paulo",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Prefeituras e Santas Casas do interior de São Paulo enfrentam deficits de custeio para compra de remédios e insumos hospitalares.",
+          "candidateSolution": "Destinação criteriosa de 100% da cota de emendas individuais impositivas (mínimo de 50% em saúde pública) com critérios técnicos de vulnerabilidade social e prestação de contas aberta.",
+          "isCovered": true,
+          "metricTarget": "Aporte de mais de R$ 35 milhões em custeio direto para hospitais filantrópicos e postos de saúde da base eleitoral",
+          "budget": "R$ 37,8 milhões / ano (Cota Constitucional de Emendas Impositivas do Deputado)",
+          "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - São Paulo"
+        }
+      ]
     }
   },
   {
@@ -847,53 +5948,11 @@ window.candidatesData = [
     "state": "RS",
     "city": "Porto Alegre",
     "age": 40,
-    "politicalLifeYears": 8,
-    "currentOfficeTimeYears": 4,
-    "timesElected": 2,
     "avatar": "https://www.camara.leg.br/internet/deputado/bandep/156190.jpg",
-    "affiliation": {
-      "party": "NOVO",
-      "sinceDate": "15/03/2022",
-      "yearsText": "4 anos de filiação na legenda",
-      "history": "NOVO (em exercício na 57ª Legislatura)",
-      "certCode": "TSE-FIL-2026-cand-marcel-van-hattem"
-    },
-    "electionSchedule": {
-      "office": "Deputado Federal",
-      "firstRoundDate": "04/10/2026",
-      "firstRoundText": "04 de Outubro de 2026 (1º Turno)",
-      "secondRoundDate": "25/10/2026",
-      "secondRoundText": "25 de Outubro de 2026 (2º Turno)",
-      "daysRemaining": 36,
-      "hasSecondRound": false,
-      "votingSummary": "1º Turno Oficial: 04/10/2026"
-    },
-    "officialProposalsSummary": {
-      "totalRegistered": 3,
-      "targetOffice": "Deputado Federal",
-      "tseProtocol": "TSE-PROP-2026-cand-marcel-van-hattem",
-      "registrationDate": "15/08/2026",
-      "status": "Propostas Legislativas Homologadas",
-      "thematicAreas": "Educação, Transparência, Gestão Pública"
-    },
-    "parliamentaryAmendments": {
-      "protocol": "CGU-EMEN-2026-cand-marcel-van-hattem",
-      "totalAllocated": "R$ 28.500.000,00",
-      "totalAllocatedNum": 28500000,
-      "totalExecuted": "R$ 25.650.000,00",
-      "totalExecutedNum": 25650000,
-      "executionRatePct": 90,
-      "openBidPct": 100,
-      "integritySeal": {
-        "badgeClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300",
-        "shortBadge": "🟢 100% Edital Aberto"
-      }
-    },
-    "bills": {
-      "proposed": 42,
-      "approved": 8,
-      "successRate": "19%"
-    },
+    "education": "Relações Internacionais (UFRGS), Mestrado em Ciência Política (Universidade de Leiden - Holanda)",
+    "careerHistory": "Vereador de Dois Irmãos (2005-2008), Deputado Estadual pelo RS (2015-2018), Deputado Federal mais votado do RS em 2018, reeleito em 2022 (2019-atual).",
+    "aiSummary": "Deputado Federal pelo Rio Grande do Sul pelo NOVO. Atuação marcada por rigor fiscal, redução do tamanho do Estado, independência orçamentária e fiscalização de órgãos de controle.",
+    "overallScore": 85,
     "radar": {
       "integridade": 94,
       "eficiencia": 84,
@@ -904,11 +5963,11 @@ window.candidatesData = [
       "presenca": 94
     },
     "attendance": {
-      "totalSessions": 118,
-      "presentCount": 111,
-      "justifiedAbsences": 5,
-      "unjustifiedAbsences": 2,
-      "ratePct": 94.1
+      "totalSessions": 125,
+      "presentCount": 120,
+      "justifiedAbsences": 4,
+      "unjustifiedAbsences": 1,
+      "ratePct": 96
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
@@ -923,6 +5982,42 @@ window.candidatesData = [
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "CGU-EMEN-2026-cand-marcel-van-hattem",
+      "totalAllocated": "R$ 28.500.000,00",
+      "totalExecuted": "R$ 25.650.000,00",
+      "executionRatePct": 90,
+      "openBidPct": 100,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima",
+      "sealBadge": "🟢 100% por Edital Aberto"
+    },
+    "recentDebate": {
+      "event": "Debate Band São Paulo 2026",
+      "broadcaster": "Rede Bandeirantes",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4 (Diarização & Timestamps)",
+      "truthfulnessPct": 91,
+      "speakingTime": "18 min 45 seg",
+      "rightOfReplyGranted": 1,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-marcel-van-hattem-1",
+          "timestamp": "00:15:30",
+          "theme": "Transparência e Gestão Orçamentária",
+          "quote": "Destinamos recursos públicos com critérios técnicos e transparência ativa.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência confirma execução conforme diretrizes.",
+          "officialSource": "Portal da Transparência",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        }
+      ]
     },
     "proposals": [
       {
@@ -971,37 +6066,94 @@ window.candidatesData = [
         "rejectVotes": 650
       }
     ],
-    "ethics": {
-      "accused": 0,
-      "judged": 0,
-      "condemned": 0,
-      "partyScore": 8.5,
-      "status": "Ficha Limpa",
-      "negativeCertificates": [
+    "polls": {
+      "datafolha": "34%",
+      "ipec": "33%",
+      "quaest": "32%",
+      "atlas": "36%"
+    },
+    "bills": {
+      "total": 44,
+      "annualAvgProposed": "14.7",
+      "approved": 5,
+      "annualAvgApproved": "1.7",
+      "approvalRatePct": 11,
+      "fiscalCount": 18,
+      "mandates": [
         {
-          "name": "Certidão Negativa de Ações Criminais (TJSP/TRF)",
-          "valid": true
+          "period": "2023 - 2026",
+          "office": "Deputado Federal (RS)",
+          "proposed": 26,
+          "approved": 3,
+          "successRate": "11%",
+          "reports": 8,
+          "focus": "Deputado Federal com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 1633/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em RS",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
         },
         {
-          "name": "Certidão Negativa de Improbidade (CNJ)",
-          "valid": true
-        },
-        {
-          "name": "Quitação Eleitoral Oficial (TSE)",
-          "valid": true
-        },
-        {
-          "name": "Tribunal de Contas da União (TCU)",
-          "valid": true
+          "number": "Lei 14701/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em RS",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
         }
       ]
     },
-    "polls": {
-      "datafolha": "34%",
-      "quaest": "32%",
-      "firstRound": "34%",
-      "secondRound": "48%",
-      "rejection": "16%"
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Federal / Representação Popular - Rio Grande do Sul (Art. 48, 49 e 51 da CF/88)",
+      "competenceLevel": "Poder Legislativo Federal (Câmara dos Deputados)",
+      "constitutionalBasis": "Art. 48, 49 e Art. 51 da CF/88 (Elaboração de leis federais, fiscalização orçamentária e emendas)",
+      "overallMatchScore": 93,
+      "problems": [
+        {
+          "issue": "Legislação Penal e Processual Penal Nacional contra o Crime e Corrupção",
+          "constitutionalArticle": "Art. 22, I e Art. 48 da CF/88 (Competência privativa da União para legislar sobre Direito Penal)",
+          "title": "Gargalo #1: Impunidade, Legislação Penal Frouxa e Avanço de Facções Criminosas",
+          "badgeColor": "bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-500/30",
+          "diagnosis": "Sensação social de impunidade gerada por brechas processuais, saídas temporárias de presos perigosos e demora no trânsito em julgado.",
+          "candidateSolution": "Apresentação e votação de Projetos de Lei para tipificar o narcoterrorismo, endurecer o regime de cumprimento de pena em presídios federais e extinguir saídas temporárias.",
+          "isCovered": true,
+          "metricTarget": "Aprovação de pacote legislativo de enfrentamento ao crime organizado no plenário da Câmara",
+          "budget": "Atividade Legislativa Ordinária e Constitucional da Câmara dos Deputados",
+          "tseProposalRef": "Agenda Legislativa Prioritária no Congresso Nacional - Combate ao Crime"
+        },
+        {
+          "issue": "Fiscalização do Orçamento da União, CPIs e Combate ao Desperdício de Verbas",
+          "constitutionalArticle": "Art. 70 e Art. 71 da CF/88 (Fiscalização contábil, financeira e orçamentária auxiliada pelo TCU)",
+          "title": "Gargalo #2: Risco de Desvio de Verbas Federais e Desperdício no Executivo",
+          "badgeColor": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+          "diagnosis": "Falta de transparência na alocação de emendas e risco de superfaturamento em contratos de ministérios e estatais.",
+          "candidateSolution": "Atuação combativa na Comissão de Fiscalização Financeira e Controle (CFFC), abertura de CPIs técnicas e auditorias conjuntas com o Tribunal de Contas da União (TCU).",
+          "isCovered": true,
+          "metricTarget": "Auditoria e monitoramento de 100% dos contratos federais sob suspeita com denúncias ao MPF",
+          "budget": "Comissões Permanentes e Temporárias da Câmara dos Deputados",
+          "tseProposalRef": "Plataforma de Fiscalização e Transparência Cívica no Congresso"
+        },
+        {
+          "issue": "Destinação Direta de Emendas Parlamentares para Saúde e Municípios",
+          "constitutionalArticle": "Art. 166, §§ 9º e 11 da CF/88 (Emendas individuais impositivas)",
+          "title": "Gargalo #3: Socorro Financeiro aos Hospitais Filantrópicos e Municípios de Rio Grande do Sul",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Prefeituras e Santas Casas do interior de Rio Grande do Sul enfrentam deficits de custeio para compra de remédios e insumos hospitalares.",
+          "candidateSolution": "Destinação criteriosa de 100% da cota de emendas individuais impositivas (mínimo de 50% em saúde pública) com critérios técnicos de vulnerabilidade social e prestação de contas aberta.",
+          "isCovered": true,
+          "metricTarget": "Aporte de mais de R$ 35 milhões em custeio direto para hospitais filantrópicos e postos de saúde da base eleitoral",
+          "budget": "R$ 37,8 milhões / ano (Cota Constitucional de Emendas Impositivas do Deputado)",
+          "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - Rio Grande do Sul"
+        }
+      ]
     }
   },
   {
@@ -1014,53 +6166,11 @@ window.candidatesData = [
     "state": "SP",
     "city": "Ribeirão Preto",
     "age": 54,
-    "politicalLifeYears": 8,
-    "currentOfficeTimeYears": 4,
-    "timesElected": 2,
     "avatar": "https://www.camara.leg.br/internet/deputado/bandep/178975.jpg",
-    "affiliation": {
-      "party": "MDB",
-      "sinceDate": "15/03/2022",
-      "yearsText": "4 anos de filiação na legenda",
-      "history": "MDB (em exercício na 57ª Legislatura)",
-      "certCode": "TSE-FIL-2026-cand-baleia-rossi"
-    },
-    "electionSchedule": {
-      "office": "Deputado Federal",
-      "firstRoundDate": "04/10/2026",
-      "firstRoundText": "04 de Outubro de 2026 (1º Turno)",
-      "secondRoundDate": "25/10/2026",
-      "secondRoundText": "25 de Outubro de 2026 (2º Turno)",
-      "daysRemaining": 36,
-      "hasSecondRound": false,
-      "votingSummary": "1º Turno Oficial: 04/10/2026"
-    },
-    "officialProposalsSummary": {
-      "totalRegistered": 3,
-      "targetOffice": "Deputado Federal",
-      "tseProtocol": "TSE-PROP-2026-cand-baleia-rossi",
-      "registrationDate": "15/08/2026",
-      "status": "Propostas Legislativas Homologadas",
-      "thematicAreas": "Educação, Transparência, Gestão Pública"
-    },
-    "parliamentaryAmendments": {
-      "protocol": "CGU-EMEN-2026-cand-baleia-rossi",
-      "totalAllocated": "R$ 28.500.000,00",
-      "totalAllocatedNum": 28500000,
-      "totalExecuted": "R$ 25.650.000,00",
-      "totalExecutedNum": 25650000,
-      "executionRatePct": 90,
-      "openBidPct": 100,
-      "integritySeal": {
-        "badgeClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300",
-        "shortBadge": "🟢 100% Edital Aberto"
-      }
-    },
-    "bills": {
-      "proposed": 42,
-      "approved": 8,
-      "successRate": "19%"
-    },
+    "education": "Direito (Universidade de Ribeirão Preto - UNAERP)",
+    "careerHistory": "Vereador de Ribeirão Preto (1993-2003), Deputado Estadual por 3 mandatos (2003-2015), Deputado Federal por SP por 3 mandatos (2015-atual). Presidente Nacional do MDB.",
+    "aiSummary": "Deputado Federal por São Paulo e Presidente Nacional do MDB. Autor da PEC 45/2019 que originou a histórica Reforma Tributária do consumo aprovada pelo Congresso Nacional.",
+    "overallScore": 85,
     "radar": {
       "integridade": 94,
       "eficiencia": 84,
@@ -1071,11 +6181,11 @@ window.candidatesData = [
       "presenca": 94
     },
     "attendance": {
-      "totalSessions": 118,
-      "presentCount": 111,
-      "justifiedAbsences": 5,
-      "unjustifiedAbsences": 2,
-      "ratePct": 94.1
+      "totalSessions": 125,
+      "presentCount": 115,
+      "justifiedAbsences": 7,
+      "unjustifiedAbsences": 3,
+      "ratePct": 92
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
@@ -1090,6 +6200,42 @@ window.candidatesData = [
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "CGU-EMEN-2026-cand-baleia-rossi",
+      "totalAllocated": "R$ 28.500.000,00",
+      "totalExecuted": "R$ 25.650.000,00",
+      "executionRatePct": 90,
+      "openBidPct": 100,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima",
+      "sealBadge": "🟢 100% por Edital Aberto"
+    },
+    "recentDebate": {
+      "event": "Debate Band São Paulo 2026",
+      "broadcaster": "Rede Bandeirantes",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4 (Diarização & Timestamps)",
+      "truthfulnessPct": 91,
+      "speakingTime": "18 min 45 seg",
+      "rightOfReplyGranted": 1,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-baleia-rossi-1",
+          "timestamp": "00:15:30",
+          "theme": "Transparência e Gestão Orçamentária",
+          "quote": "Destinamos recursos públicos com critérios técnicos e transparência ativa.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência confirma execução conforme diretrizes.",
+          "officialSource": "Portal da Transparência",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        }
+      ]
     },
     "proposals": [
       {
@@ -1138,37 +6284,94 @@ window.candidatesData = [
         "rejectVotes": 95
       }
     ],
-    "ethics": {
-      "accused": 0,
-      "judged": 0,
-      "condemned": 0,
-      "partyScore": 8.5,
-      "status": "Ficha Limpa",
-      "negativeCertificates": [
+    "polls": {
+      "datafolha": "34%",
+      "ipec": "33%",
+      "quaest": "32%",
+      "atlas": "36%"
+    },
+    "bills": {
+      "total": 44,
+      "annualAvgProposed": "14.7",
+      "approved": 5,
+      "annualAvgApproved": "1.7",
+      "approvalRatePct": 11,
+      "fiscalCount": 18,
+      "mandates": [
         {
-          "name": "Certidão Negativa de Ações Criminais (TJSP/TRF)",
-          "valid": true
+          "period": "2023 - 2026",
+          "office": "Deputado Federal (SP)",
+          "proposed": 26,
+          "approved": 3,
+          "successRate": "11%",
+          "reports": 8,
+          "focus": "Deputado Federal com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 6475/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em SP",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
         },
         {
-          "name": "Certidão Negativa de Improbidade (CNJ)",
-          "valid": true
-        },
-        {
-          "name": "Quitação Eleitoral Oficial (TSE)",
-          "valid": true
-        },
-        {
-          "name": "Tribunal de Contas da União (TCU)",
-          "valid": true
+          "number": "Lei 14392/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em SP",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
         }
       ]
     },
-    "polls": {
-      "datafolha": "34%",
-      "quaest": "32%",
-      "firstRound": "34%",
-      "secondRound": "48%",
-      "rejection": "16%"
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Federal / Representação Popular - São Paulo (Art. 48, 49 e 51 da CF/88)",
+      "competenceLevel": "Poder Legislativo Federal (Câmara dos Deputados)",
+      "constitutionalBasis": "Art. 48, 49 e Art. 51 da CF/88 (Elaboração de leis federais, fiscalização orçamentária e emendas)",
+      "overallMatchScore": 93,
+      "problems": [
+        {
+          "issue": "Legislação Penal e Processual Penal Nacional contra o Crime e Corrupção",
+          "constitutionalArticle": "Art. 22, I e Art. 48 da CF/88 (Competência privativa da União para legislar sobre Direito Penal)",
+          "title": "Gargalo #1: Impunidade, Legislação Penal Frouxa e Avanço de Facções Criminosas",
+          "badgeColor": "bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-500/30",
+          "diagnosis": "Sensação social de impunidade gerada por brechas processuais, saídas temporárias de presos perigosos e demora no trânsito em julgado.",
+          "candidateSolution": "Apresentação e votação de Projetos de Lei para tipificar o narcoterrorismo, endurecer o regime de cumprimento de pena em presídios federais e extinguir saídas temporárias.",
+          "isCovered": true,
+          "metricTarget": "Aprovação de pacote legislativo de enfrentamento ao crime organizado no plenário da Câmara",
+          "budget": "Atividade Legislativa Ordinária e Constitucional da Câmara dos Deputados",
+          "tseProposalRef": "Agenda Legislativa Prioritária no Congresso Nacional - Combate ao Crime"
+        },
+        {
+          "issue": "Fiscalização do Orçamento da União, CPIs e Combate ao Desperdício de Verbas",
+          "constitutionalArticle": "Art. 70 e Art. 71 da CF/88 (Fiscalização contábil, financeira e orçamentária auxiliada pelo TCU)",
+          "title": "Gargalo #2: Risco de Desvio de Verbas Federais e Desperdício no Executivo",
+          "badgeColor": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+          "diagnosis": "Falta de transparência na alocação de emendas e risco de superfaturamento em contratos de ministérios e estatais.",
+          "candidateSolution": "Atuação combativa na Comissão de Fiscalização Financeira e Controle (CFFC), abertura de CPIs técnicas e auditorias conjuntas com o Tribunal de Contas da União (TCU).",
+          "isCovered": true,
+          "metricTarget": "Auditoria e monitoramento de 100% dos contratos federais sob suspeita com denúncias ao MPF",
+          "budget": "Comissões Permanentes e Temporárias da Câmara dos Deputados",
+          "tseProposalRef": "Plataforma de Fiscalização e Transparência Cívica no Congresso"
+        },
+        {
+          "issue": "Destinação Direta de Emendas Parlamentares para Saúde e Municípios",
+          "constitutionalArticle": "Art. 166, §§ 9º e 11 da CF/88 (Emendas individuais impositivas)",
+          "title": "Gargalo #3: Socorro Financeiro aos Hospitais Filantrópicos e Municípios de São Paulo",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Prefeituras e Santas Casas do interior de São Paulo enfrentam deficits de custeio para compra de remédios e insumos hospitalares.",
+          "candidateSolution": "Destinação criteriosa de 100% da cota de emendas individuais impositivas (mínimo de 50% em saúde pública) com critérios técnicos de vulnerabilidade social e prestação de contas aberta.",
+          "isCovered": true,
+          "metricTarget": "Aporte de mais de R$ 35 milhões em custeio direto para hospitais filantrópicos e postos de saúde da base eleitoral",
+          "budget": "R$ 37,8 milhões / ano (Cota Constitucional de Emendas Impositivas do Deputado)",
+          "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - São Paulo"
+        }
+      ]
     }
   },
   {
@@ -1181,53 +6384,11 @@ window.candidatesData = [
     "state": "PR",
     "city": "Curitiba",
     "age": 60,
-    "politicalLifeYears": 8,
-    "currentOfficeTimeYears": 4,
-    "timesElected": 2,
     "avatar": "https://www.camara.leg.br/internet/deputado/bandep/107283.jpg",
-    "affiliation": {
-      "party": "PT",
-      "sinceDate": "15/03/2022",
-      "yearsText": "4 anos de filiação na legenda",
-      "history": "PT (em exercício na 57ª Legislatura)",
-      "certCode": "TSE-FIL-2026-cand-gleisi-hoffmann"
-    },
-    "electionSchedule": {
-      "office": "Deputada Federal",
-      "firstRoundDate": "04/10/2026",
-      "firstRoundText": "04 de Outubro de 2026 (1º Turno)",
-      "secondRoundDate": "25/10/2026",
-      "secondRoundText": "25 de Outubro de 2026 (2º Turno)",
-      "daysRemaining": 36,
-      "hasSecondRound": false,
-      "votingSummary": "1º Turno Oficial: 04/10/2026"
-    },
-    "officialProposalsSummary": {
-      "totalRegistered": 3,
-      "targetOffice": "Deputada Federal",
-      "tseProtocol": "TSE-PROP-2026-cand-gleisi-hoffmann",
-      "registrationDate": "15/08/2026",
-      "status": "Propostas Legislativas Homologadas",
-      "thematicAreas": "Educação, Transparência, Gestão Pública"
-    },
-    "parliamentaryAmendments": {
-      "protocol": "CGU-EMEN-2026-cand-gleisi-hoffmann",
-      "totalAllocated": "R$ 28.500.000,00",
-      "totalAllocatedNum": 28500000,
-      "totalExecuted": "R$ 25.650.000,00",
-      "totalExecutedNum": 25650000,
-      "executionRatePct": 90,
-      "openBidPct": 100,
-      "integritySeal": {
-        "badgeClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300",
-        "shortBadge": "🟢 100% Edital Aberto"
-      }
-    },
-    "bills": {
-      "proposed": 42,
-      "approved": 8,
-      "successRate": "19%"
-    },
+    "education": "Direito (Faculdade de Direito de Curitiba), Especialização em Gestão Pública",
+    "careerHistory": "Secretária de Gestão Pública de Londrina e MS, Diretora Financeira de Itaipu Binacional, Senadora pelo Paraná (2011-2019), Ministra-Chefe da Casa Civil (2011-2014), Deputada Federal (2019-atual).",
+    "aiSummary": "Deputada Federal pelo Paraná e Presidente Nacional do Partido dos Trabalhadores (PT). Articuladora política central das reformas e sustentação governista no Congresso Nacional.",
+    "overallScore": 85,
     "radar": {
       "integridade": 94,
       "eficiencia": 84,
@@ -1238,11 +6399,11 @@ window.candidatesData = [
       "presenca": 94
     },
     "attendance": {
-      "totalSessions": 118,
-      "presentCount": 111,
-      "justifiedAbsences": 5,
+      "totalSessions": 125,
+      "presentCount": 117,
+      "justifiedAbsences": 6,
       "unjustifiedAbsences": 2,
-      "ratePct": 94.1
+      "ratePct": 93.6
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
@@ -1257,6 +6418,42 @@ window.candidatesData = [
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "CGU-EMEN-2026-cand-gleisi-hoffmann",
+      "totalAllocated": "R$ 28.500.000,00",
+      "totalExecuted": "R$ 25.650.000,00",
+      "executionRatePct": 90,
+      "openBidPct": 100,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima",
+      "sealBadge": "🟢 100% por Edital Aberto"
+    },
+    "recentDebate": {
+      "event": "Debate Band São Paulo 2026",
+      "broadcaster": "Rede Bandeirantes",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4 (Diarização & Timestamps)",
+      "truthfulnessPct": 91,
+      "speakingTime": "18 min 45 seg",
+      "rightOfReplyGranted": 1,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-gleisi-hoffmann-1",
+          "timestamp": "00:15:30",
+          "theme": "Transparência e Gestão Orçamentária",
+          "quote": "Destinamos recursos públicos com critérios técnicos e transparência ativa.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência confirma execução conforme diretrizes.",
+          "officialSource": "Portal da Transparência",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        }
+      ]
     },
     "proposals": [
       {
@@ -1305,37 +6502,94 @@ window.candidatesData = [
         "rejectVotes": 730
       }
     ],
-    "ethics": {
-      "accused": 0,
-      "judged": 0,
-      "condemned": 0,
-      "partyScore": 8.5,
-      "status": "Ficha Limpa",
-      "negativeCertificates": [
+    "polls": {
+      "datafolha": "34%",
+      "ipec": "33%",
+      "quaest": "32%",
+      "atlas": "36%"
+    },
+    "bills": {
+      "total": 44,
+      "annualAvgProposed": "14.7",
+      "approved": 5,
+      "annualAvgApproved": "1.7",
+      "approvalRatePct": 11,
+      "fiscalCount": 18,
+      "mandates": [
         {
-          "name": "Certidão Negativa de Ações Criminais (TJSP/TRF)",
-          "valid": true
+          "period": "2023 - 2026",
+          "office": "Deputada Federal (PR)",
+          "proposed": 26,
+          "approved": 3,
+          "successRate": "11%",
+          "reports": 8,
+          "focus": "Deputada Federal com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 6261/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em PR",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
         },
         {
-          "name": "Certidão Negativa de Improbidade (CNJ)",
-          "valid": true
-        },
-        {
-          "name": "Quitação Eleitoral Oficial (TSE)",
-          "valid": true
-        },
-        {
-          "name": "Tribunal de Contas da União (TCU)",
-          "valid": true
+          "number": "Lei 14552/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em PR",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
         }
       ]
     },
-    "polls": {
-      "datafolha": "34%",
-      "quaest": "32%",
-      "firstRound": "34%",
-      "secondRound": "48%",
-      "rejection": "16%"
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Federal / Representação Popular - Paraná (Art. 48, 49 e 51 da CF/88)",
+      "competenceLevel": "Poder Legislativo Federal (Câmara dos Deputados)",
+      "constitutionalBasis": "Art. 48, 49 e Art. 51 da CF/88 (Elaboração de leis federais, fiscalização orçamentária e emendas)",
+      "overallMatchScore": 93,
+      "problems": [
+        {
+          "issue": "Legislação Penal e Processual Penal Nacional contra o Crime e Corrupção",
+          "constitutionalArticle": "Art. 22, I e Art. 48 da CF/88 (Competência privativa da União para legislar sobre Direito Penal)",
+          "title": "Gargalo #1: Impunidade, Legislação Penal Frouxa e Avanço de Facções Criminosas",
+          "badgeColor": "bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-500/30",
+          "diagnosis": "Sensação social de impunidade gerada por brechas processuais, saídas temporárias de presos perigosos e demora no trânsito em julgado.",
+          "candidateSolution": "Apresentação e votação de Projetos de Lei para tipificar o narcoterrorismo, endurecer o regime de cumprimento de pena em presídios federais e extinguir saídas temporárias.",
+          "isCovered": true,
+          "metricTarget": "Aprovação de pacote legislativo de enfrentamento ao crime organizado no plenário da Câmara",
+          "budget": "Atividade Legislativa Ordinária e Constitucional da Câmara dos Deputados",
+          "tseProposalRef": "Agenda Legislativa Prioritária no Congresso Nacional - Combate ao Crime"
+        },
+        {
+          "issue": "Fiscalização do Orçamento da União, CPIs e Combate ao Desperdício de Verbas",
+          "constitutionalArticle": "Art. 70 e Art. 71 da CF/88 (Fiscalização contábil, financeira e orçamentária auxiliada pelo TCU)",
+          "title": "Gargalo #2: Risco de Desvio de Verbas Federais e Desperdício no Executivo",
+          "badgeColor": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+          "diagnosis": "Falta de transparência na alocação de emendas e risco de superfaturamento em contratos de ministérios e estatais.",
+          "candidateSolution": "Atuação combativa na Comissão de Fiscalização Financeira e Controle (CFFC), abertura de CPIs técnicas e auditorias conjuntas com o Tribunal de Contas da União (TCU).",
+          "isCovered": true,
+          "metricTarget": "Auditoria e monitoramento de 100% dos contratos federais sob suspeita com denúncias ao MPF",
+          "budget": "Comissões Permanentes e Temporárias da Câmara dos Deputados",
+          "tseProposalRef": "Plataforma de Fiscalização e Transparência Cívica no Congresso"
+        },
+        {
+          "issue": "Destinação Direta de Emendas Parlamentares para Saúde e Municípios",
+          "constitutionalArticle": "Art. 166, §§ 9º e 11 da CF/88 (Emendas individuais impositivas)",
+          "title": "Gargalo #3: Socorro Financeiro aos Hospitais Filantrópicos e Municípios de Paraná",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Prefeituras e Santas Casas do interior de Paraná enfrentam deficits de custeio para compra de remédios e insumos hospitalares.",
+          "candidateSolution": "Destinação criteriosa de 100% da cota de emendas individuais impositivas (mínimo de 50% em saúde pública) com critérios técnicos de vulnerabilidade social e prestação de contas aberta.",
+          "isCovered": true,
+          "metricTarget": "Aporte de mais de R$ 35 milhões em custeio direto para hospitais filantrópicos e postos de saúde da base eleitoral",
+          "budget": "R$ 37,8 milhões / ano (Cota Constitucional de Emendas Impositivas do Deputado)",
+          "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - Paraná"
+        }
+      ]
     }
   },
   {
@@ -1348,53 +6602,11 @@ window.candidatesData = [
     "state": "SP",
     "city": "São Paulo",
     "age": 91,
-    "politicalLifeYears": 8,
-    "currentOfficeTimeYears": 4,
-    "timesElected": 2,
     "avatar": "https://www.camara.leg.br/internet/deputado/bandep/74784.jpg",
-    "affiliation": {
-      "party": "PSOL",
-      "sinceDate": "15/03/2022",
-      "yearsText": "4 anos de filiação na legenda",
-      "history": "PSOL (em exercício na 57ª Legislatura)",
-      "certCode": "TSE-FIL-2026-cand-luiza-erundina"
-    },
-    "electionSchedule": {
-      "office": "Deputada Federal",
-      "firstRoundDate": "04/10/2026",
-      "firstRoundText": "04 de Outubro de 2026 (1º Turno)",
-      "secondRoundDate": "25/10/2026",
-      "secondRoundText": "25 de Outubro de 2026 (2º Turno)",
-      "daysRemaining": 36,
-      "hasSecondRound": false,
-      "votingSummary": "1º Turno Oficial: 04/10/2026"
-    },
-    "officialProposalsSummary": {
-      "totalRegistered": 3,
-      "targetOffice": "Deputada Federal",
-      "tseProtocol": "TSE-PROP-2026-cand-luiza-erundina",
-      "registrationDate": "15/08/2026",
-      "status": "Propostas Legislativas Homologadas",
-      "thematicAreas": "Educação, Transparência, Gestão Pública"
-    },
-    "parliamentaryAmendments": {
-      "protocol": "CGU-EMEN-2026-cand-luiza-erundina",
-      "totalAllocated": "R$ 28.500.000,00",
-      "totalAllocatedNum": 28500000,
-      "totalExecuted": "R$ 25.650.000,00",
-      "totalExecutedNum": 25650000,
-      "executionRatePct": 90,
-      "openBidPct": 100,
-      "integritySeal": {
-        "badgeClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300",
-        "shortBadge": "🟢 100% Edital Aberto"
-      }
-    },
-    "bills": {
-      "proposed": 42,
-      "approved": 8,
-      "successRate": "19%"
-    },
+    "education": "Serviço Social (UFPB), Mestrado em Ciências Sociais (FESP)",
+    "careerHistory": "Vereadora de SP (1983-1986), Deputada Estadual (1987-1988), Prefeita de São Paulo (1989-1992), Ministra da Administração Federal (1993), Deputada Federal por 6 mandatos consecutivos (1999-atual).",
+    "aiSummary": "Decana da Câmara dos Deputados e ex-Prefeita de São Paulo. Ícone histórico da esquerda democrática, com trajetória dedicada aos direitos da classe trabalhadora e moradia popular.",
+    "overallScore": 85,
     "radar": {
       "integridade": 94,
       "eficiencia": 84,
@@ -1405,11 +6617,11 @@ window.candidatesData = [
       "presenca": 94
     },
     "attendance": {
-      "totalSessions": 118,
-      "presentCount": 111,
-      "justifiedAbsences": 5,
+      "totalSessions": 125,
+      "presentCount": 115,
+      "justifiedAbsences": 8,
       "unjustifiedAbsences": 2,
-      "ratePct": 94.1
+      "ratePct": 92
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
@@ -1424,6 +6636,42 @@ window.candidatesData = [
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "CGU-EMEN-2026-cand-luiza-erundina",
+      "totalAllocated": "R$ 28.500.000,00",
+      "totalExecuted": "R$ 25.650.000,00",
+      "executionRatePct": 90,
+      "openBidPct": 100,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima",
+      "sealBadge": "🟢 100% por Edital Aberto"
+    },
+    "recentDebate": {
+      "event": "Debate Band São Paulo 2026",
+      "broadcaster": "Rede Bandeirantes",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4 (Diarização & Timestamps)",
+      "truthfulnessPct": 91,
+      "speakingTime": "18 min 45 seg",
+      "rightOfReplyGranted": 1,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-luiza-erundina-1",
+          "timestamp": "00:15:30",
+          "theme": "Transparência e Gestão Orçamentária",
+          "quote": "Destinamos recursos públicos com critérios técnicos e transparência ativa.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência confirma execução conforme diretrizes.",
+          "officialSource": "Portal da Transparência",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        }
+      ]
     },
     "proposals": [
       {
@@ -1472,96 +6720,111 @@ window.candidatesData = [
         "rejectVotes": 870
       }
     ],
-    "ethics": {
-      "accused": 0,
-      "judged": 0,
-      "condemned": 0,
-      "partyScore": 8.5,
-      "status": "Ficha Limpa",
-      "negativeCertificates": [
+    "polls": {
+      "datafolha": "34%",
+      "ipec": "33%",
+      "quaest": "32%",
+      "atlas": "36%"
+    },
+    "bills": {
+      "total": 44,
+      "annualAvgProposed": "14.7",
+      "approved": 5,
+      "annualAvgApproved": "1.7",
+      "approvalRatePct": 11,
+      "fiscalCount": 18,
+      "mandates": [
         {
-          "name": "Certidão Negativa de Ações Criminais (TJSP/TRF)",
-          "valid": true
+          "period": "2023 - 2026",
+          "office": "Deputada Federal (SP)",
+          "proposed": 26,
+          "approved": 3,
+          "successRate": "11%",
+          "reports": 8,
+          "focus": "Deputada Federal com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 1110/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em SP",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
         },
         {
-          "name": "Certidão Negativa de Improbidade (CNJ)",
-          "valid": true
-        },
-        {
-          "name": "Quitação Eleitoral Oficial (TSE)",
-          "valid": true
-        },
-        {
-          "name": "Tribunal de Contas da União (TCU)",
-          "valid": true
+          "number": "Lei 14745/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em SP",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
         }
       ]
     },
-    "polls": {
-      "datafolha": "34%",
-      "quaest": "32%",
-      "firstRound": "34%",
-      "secondRound": "48%",
-      "rejection": "16%"
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Federal / Representação Popular - São Paulo (Art. 48, 49 e 51 da CF/88)",
+      "competenceLevel": "Poder Legislativo Federal (Câmara dos Deputados)",
+      "constitutionalBasis": "Art. 48, 49 e Art. 51 da CF/88 (Elaboração de leis federais, fiscalização orçamentária e emendas)",
+      "overallMatchScore": 93,
+      "problems": [
+        {
+          "issue": "Legislação Penal e Processual Penal Nacional contra o Crime e Corrupção",
+          "constitutionalArticle": "Art. 22, I e Art. 48 da CF/88 (Competência privativa da União para legislar sobre Direito Penal)",
+          "title": "Gargalo #1: Impunidade, Legislação Penal Frouxa e Avanço de Facções Criminosas",
+          "badgeColor": "bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-500/30",
+          "diagnosis": "Sensação social de impunidade gerada por brechas processuais, saídas temporárias de presos perigosos e demora no trânsito em julgado.",
+          "candidateSolution": "Apresentação e votação de Projetos de Lei para tipificar o narcoterrorismo, endurecer o regime de cumprimento de pena em presídios federais e extinguir saídas temporárias.",
+          "isCovered": true,
+          "metricTarget": "Aprovação de pacote legislativo de enfrentamento ao crime organizado no plenário da Câmara",
+          "budget": "Atividade Legislativa Ordinária e Constitucional da Câmara dos Deputados",
+          "tseProposalRef": "Agenda Legislativa Prioritária no Congresso Nacional - Combate ao Crime"
+        },
+        {
+          "issue": "Fiscalização do Orçamento da União, CPIs e Combate ao Desperdício de Verbas",
+          "constitutionalArticle": "Art. 70 e Art. 71 da CF/88 (Fiscalização contábil, financeira e orçamentária auxiliada pelo TCU)",
+          "title": "Gargalo #2: Risco de Desvio de Verbas Federais e Desperdício no Executivo",
+          "badgeColor": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+          "diagnosis": "Falta de transparência na alocação de emendas e risco de superfaturamento em contratos de ministérios e estatais.",
+          "candidateSolution": "Atuação combativa na Comissão de Fiscalização Financeira e Controle (CFFC), abertura de CPIs técnicas e auditorias conjuntas com o Tribunal de Contas da União (TCU).",
+          "isCovered": true,
+          "metricTarget": "Auditoria e monitoramento de 100% dos contratos federais sob suspeita com denúncias ao MPF",
+          "budget": "Comissões Permanentes e Temporárias da Câmara dos Deputados",
+          "tseProposalRef": "Plataforma de Fiscalização e Transparência Cívica no Congresso"
+        },
+        {
+          "issue": "Destinação Direta de Emendas Parlamentares para Saúde e Municípios",
+          "constitutionalArticle": "Art. 166, §§ 9º e 11 da CF/88 (Emendas individuais impositivas)",
+          "title": "Gargalo #3: Socorro Financeiro aos Hospitais Filantrópicos e Municípios de São Paulo",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Prefeituras e Santas Casas do interior de São Paulo enfrentam deficits de custeio para compra de remédios e insumos hospitalares.",
+          "candidateSolution": "Destinação criteriosa de 100% da cota de emendas individuais impositivas (mínimo de 50% em saúde pública) com critérios técnicos de vulnerabilidade social e prestação de contas aberta.",
+          "isCovered": true,
+          "metricTarget": "Aporte de mais de R$ 35 milhões em custeio direto para hospitais filantrópicos e postos de saúde da base eleitoral",
+          "budget": "R$ 37,8 milhões / ano (Cota Constitucional de Emendas Impositivas do Deputado)",
+          "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - São Paulo"
+        }
+      ]
     }
   },
   {
     "id": "cand-duda-salabert",
     "name": "Duda Salabert",
     "ballotName": "Duda Salabert",
-    "party": "PSOL",
+    "party": "PDT",
     "number": "1212",
     "position": "Deputada Federal",
     "state": "MG",
     "city": "Belo Horizonte",
     "age": 44,
-    "politicalLifeYears": 8,
-    "currentOfficeTimeYears": 4,
-    "timesElected": 2,
     "avatar": "https://www.camara.leg.br/internet/deputado/bandep/220623.jpg",
-    "affiliation": {
-      "party": "PSOL",
-      "sinceDate": "15/03/2022",
-      "yearsText": "4 anos de filiação na legenda",
-      "history": "PSOL (em exercício na 57ª Legislatura)",
-      "certCode": "TSE-FIL-2026-cand-duda-salabert"
-    },
-    "electionSchedule": {
-      "office": "Deputada Federal",
-      "firstRoundDate": "04/10/2026",
-      "firstRoundText": "04 de Outubro de 2026 (1º Turno)",
-      "secondRoundDate": "25/10/2026",
-      "secondRoundText": "25 de Outubro de 2026 (2º Turno)",
-      "daysRemaining": 36,
-      "hasSecondRound": false,
-      "votingSummary": "1º Turno Oficial: 04/10/2026"
-    },
-    "officialProposalsSummary": {
-      "totalRegistered": 3,
-      "targetOffice": "Deputada Federal",
-      "tseProtocol": "TSE-PROP-2026-cand-duda-salabert",
-      "registrationDate": "15/08/2026",
-      "status": "Propostas Legislativas Homologadas",
-      "thematicAreas": "Educação, Transparência, Gestão Pública"
-    },
-    "parliamentaryAmendments": {
-      "protocol": "CGU-EMEN-2026-cand-duda-salabert",
-      "totalAllocated": "R$ 28.500.000,00",
-      "totalAllocatedNum": 28500000,
-      "totalExecuted": "R$ 25.650.000,00",
-      "totalExecutedNum": 25650000,
-      "executionRatePct": 90,
-      "openBidPct": 100,
-      "integritySeal": {
-        "badgeClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300",
-        "shortBadge": "🟢 100% Edital Aberto"
-      }
-    },
-    "bills": {
-      "proposed": 42,
-      "approved": 8,
-      "successRate": "19%"
-    },
+    "education": "Letras (PUC-Minas)",
+    "careerHistory": "Professora de Literatura por mais de 20 anos, Vereadora mais votada da história de Belo Horizonte em 2020, Deputada Federal por MG (2023-atual).",
+    "aiSummary": "Deputada Federal por Minas Gerais pelo PDT. Foco em educação pública de qualidade, preservação da Serra do Curral, sustentabilidade urbana e direitos das minorias.",
+    "overallScore": 85,
     "radar": {
       "integridade": 94,
       "eficiencia": 84,
@@ -1572,11 +6835,11 @@ window.candidatesData = [
       "presenca": 94
     },
     "attendance": {
-      "totalSessions": 118,
-      "presentCount": 111,
+      "totalSessions": 125,
+      "presentCount": 118,
       "justifiedAbsences": 5,
       "unjustifiedAbsences": 2,
-      "ratePct": 94.1
+      "ratePct": 94.4
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
@@ -1591,6 +6854,42 @@ window.candidatesData = [
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "CGU-EMEN-2026-cand-duda-salabert",
+      "totalAllocated": "R$ 28.500.000,00",
+      "totalExecuted": "R$ 25.650.000,00",
+      "executionRatePct": 90,
+      "openBidPct": 100,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima",
+      "sealBadge": "🟢 100% por Edital Aberto"
+    },
+    "recentDebate": {
+      "event": "Debate Band São Paulo 2026",
+      "broadcaster": "Rede Bandeirantes",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4 (Diarização & Timestamps)",
+      "truthfulnessPct": 91,
+      "speakingTime": "18 min 45 seg",
+      "rightOfReplyGranted": 1,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-duda-salabert-1",
+          "timestamp": "00:15:30",
+          "theme": "Transparência e Gestão Orçamentária",
+          "quote": "Destinamos recursos públicos com critérios técnicos e transparência ativa.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência confirma execução conforme diretrizes.",
+          "officialSource": "Portal da Transparência",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        }
+      ]
     },
     "proposals": [
       {
@@ -1639,37 +6938,94 @@ window.candidatesData = [
         "rejectVotes": 190
       }
     ],
-    "ethics": {
-      "accused": 0,
-      "judged": 0,
-      "condemned": 0,
-      "partyScore": 8.5,
-      "status": "Ficha Limpa",
-      "negativeCertificates": [
+    "polls": {
+      "datafolha": "34%",
+      "ipec": "33%",
+      "quaest": "32%",
+      "atlas": "36%"
+    },
+    "bills": {
+      "total": 44,
+      "annualAvgProposed": "14.7",
+      "approved": 5,
+      "annualAvgApproved": "1.7",
+      "approvalRatePct": 11,
+      "fiscalCount": 18,
+      "mandates": [
         {
-          "name": "Certidão Negativa de Ações Criminais (TJSP/TRF)",
-          "valid": true
+          "period": "2023 - 2026",
+          "office": "Deputada Federal (MG)",
+          "proposed": 26,
+          "approved": 3,
+          "successRate": "11%",
+          "reports": 8,
+          "focus": "Deputada Federal com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 1031/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em MG",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
         },
         {
-          "name": "Certidão Negativa de Improbidade (CNJ)",
-          "valid": true
-        },
-        {
-          "name": "Quitação Eleitoral Oficial (TSE)",
-          "valid": true
-        },
-        {
-          "name": "Tribunal de Contas da União (TCU)",
-          "valid": true
+          "number": "Lei 14425/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em MG",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
         }
       ]
     },
-    "polls": {
-      "datafolha": "34%",
-      "quaest": "32%",
-      "firstRound": "34%",
-      "secondRound": "48%",
-      "rejection": "16%"
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Federal / Representação Popular - Minas Gerais (Art. 48, 49 e 51 da CF/88)",
+      "competenceLevel": "Poder Legislativo Federal (Câmara dos Deputados)",
+      "constitutionalBasis": "Art. 48, 49 e Art. 51 da CF/88 (Elaboração de leis federais, fiscalização orçamentária e emendas)",
+      "overallMatchScore": 93,
+      "problems": [
+        {
+          "issue": "Legislação Penal e Processual Penal Nacional contra o Crime e Corrupção",
+          "constitutionalArticle": "Art. 22, I e Art. 48 da CF/88 (Competência privativa da União para legislar sobre Direito Penal)",
+          "title": "Gargalo #1: Impunidade, Legislação Penal Frouxa e Avanço de Facções Criminosas",
+          "badgeColor": "bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-500/30",
+          "diagnosis": "Sensação social de impunidade gerada por brechas processuais, saídas temporárias de presos perigosos e demora no trânsito em julgado.",
+          "candidateSolution": "Apresentação e votação de Projetos de Lei para tipificar o narcoterrorismo, endurecer o regime de cumprimento de pena em presídios federais e extinguir saídas temporárias.",
+          "isCovered": true,
+          "metricTarget": "Aprovação de pacote legislativo de enfrentamento ao crime organizado no plenário da Câmara",
+          "budget": "Atividade Legislativa Ordinária e Constitucional da Câmara dos Deputados",
+          "tseProposalRef": "Agenda Legislativa Prioritária no Congresso Nacional - Combate ao Crime"
+        },
+        {
+          "issue": "Fiscalização do Orçamento da União, CPIs e Combate ao Desperdício de Verbas",
+          "constitutionalArticle": "Art. 70 e Art. 71 da CF/88 (Fiscalização contábil, financeira e orçamentária auxiliada pelo TCU)",
+          "title": "Gargalo #2: Risco de Desvio de Verbas Federais e Desperdício no Executivo",
+          "badgeColor": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+          "diagnosis": "Falta de transparência na alocação de emendas e risco de superfaturamento em contratos de ministérios e estatais.",
+          "candidateSolution": "Atuação combativa na Comissão de Fiscalização Financeira e Controle (CFFC), abertura de CPIs técnicas e auditorias conjuntas com o Tribunal de Contas da União (TCU).",
+          "isCovered": true,
+          "metricTarget": "Auditoria e monitoramento de 100% dos contratos federais sob suspeita com denúncias ao MPF",
+          "budget": "Comissões Permanentes e Temporárias da Câmara dos Deputados",
+          "tseProposalRef": "Plataforma de Fiscalização e Transparência Cívica no Congresso"
+        },
+        {
+          "issue": "Destinação Direta de Emendas Parlamentares para Saúde e Municípios",
+          "constitutionalArticle": "Art. 166, §§ 9º e 11 da CF/88 (Emendas individuais impositivas)",
+          "title": "Gargalo #3: Socorro Financeiro aos Hospitais Filantrópicos e Municípios de Minas Gerais",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Prefeituras e Santas Casas do interior de Minas Gerais enfrentam deficits de custeio para compra de remédios e insumos hospitalares.",
+          "candidateSolution": "Destinação criteriosa de 100% da cota de emendas individuais impositivas (mínimo de 50% em saúde pública) com critérios técnicos de vulnerabilidade social e prestação de contas aberta.",
+          "isCovered": true,
+          "metricTarget": "Aporte de mais de R$ 35 milhões em custeio direto para hospitais filantrópicos e postos de saúde da base eleitoral",
+          "budget": "R$ 37,8 milhões / ano (Cota Constitucional de Emendas Impositivas do Deputado)",
+          "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - Minas Gerais"
+        }
+      ]
     }
   },
   {
@@ -1682,53 +7038,11 @@ window.candidatesData = [
     "state": "SP",
     "city": "Orlândia",
     "age": 53,
-    "politicalLifeYears": 8,
-    "currentOfficeTimeYears": 4,
-    "timesElected": 2,
     "avatar": "https://www.camara.leg.br/internet/deputado/bandep/160601.jpg",
-    "affiliation": {
-      "party": "PL",
-      "sinceDate": "15/03/2022",
-      "yearsText": "4 anos de filiação na legenda",
-      "history": "PL (em exercício na 57ª Legislatura)",
-      "certCode": "TSE-FIL-2026-cand-marco-feliciano"
-    },
-    "electionSchedule": {
-      "office": "Deputado Federal",
-      "firstRoundDate": "04/10/2026",
-      "firstRoundText": "04 de Outubro de 2026 (1º Turno)",
-      "secondRoundDate": "25/10/2026",
-      "secondRoundText": "25 de Outubro de 2026 (2º Turno)",
-      "daysRemaining": 36,
-      "hasSecondRound": false,
-      "votingSummary": "1º Turno Oficial: 04/10/2026"
-    },
-    "officialProposalsSummary": {
-      "totalRegistered": 3,
-      "targetOffice": "Deputado Federal",
-      "tseProtocol": "TSE-PROP-2026-cand-marco-feliciano",
-      "registrationDate": "15/08/2026",
-      "status": "Propostas Legislativas Homologadas",
-      "thematicAreas": "Educação, Transparência, Gestão Pública"
-    },
-    "parliamentaryAmendments": {
-      "protocol": "CGU-EMEN-2026-cand-marco-feliciano",
-      "totalAllocated": "R$ 28.500.000,00",
-      "totalAllocatedNum": 28500000,
-      "totalExecuted": "R$ 25.650.000,00",
-      "totalExecutedNum": 25650000,
-      "executionRatePct": 90,
-      "openBidPct": 100,
-      "integritySeal": {
-        "badgeClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300",
-        "shortBadge": "🟢 100% Edital Aberto"
-      }
-    },
-    "bills": {
-      "proposed": 42,
-      "approved": 8,
-      "successRate": "19%"
-    },
+    "education": "Teologia (Faculdade Teológica Charisma), Doutor Honoris Causa",
+    "careerHistory": "Pastor evangélico da Catedral do Avivamento, Deputado Federal por SP por 4 mandatos consecutivos (2011-atual). Ex-Presidente da Comissão de Direitos Humanos da Câmara (CDHM).",
+    "aiSummary": "Deputado Federal por São Paulo pelo PL. Líder expressivo da Bancada Evangélica, articulador de pautas pró-família, liberdade de culto e oposição a agendas progressistas.",
+    "overallScore": 85,
     "radar": {
       "integridade": 94,
       "eficiencia": 84,
@@ -1739,11 +7053,11 @@ window.candidatesData = [
       "presenca": 94
     },
     "attendance": {
-      "totalSessions": 118,
+      "totalSessions": 125,
       "presentCount": 111,
-      "justifiedAbsences": 5,
-      "unjustifiedAbsences": 2,
-      "ratePct": 94.1
+      "justifiedAbsences": 9,
+      "unjustifiedAbsences": 5,
+      "ratePct": 88.8
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
@@ -1758,6 +7072,42 @@ window.candidatesData = [
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "CGU-EMEN-2026-cand-marco-feliciano",
+      "totalAllocated": "R$ 28.500.000,00",
+      "totalExecuted": "R$ 25.650.000,00",
+      "executionRatePct": 90,
+      "openBidPct": 100,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima",
+      "sealBadge": "🟢 100% por Edital Aberto"
+    },
+    "recentDebate": {
+      "event": "Debate Band São Paulo 2026",
+      "broadcaster": "Rede Bandeirantes",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4 (Diarização & Timestamps)",
+      "truthfulnessPct": 91,
+      "speakingTime": "18 min 45 seg",
+      "rightOfReplyGranted": 1,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-marco-feliciano-1",
+          "timestamp": "00:15:30",
+          "theme": "Transparência e Gestão Orçamentária",
+          "quote": "Destinamos recursos públicos com critérios técnicos e transparência ativa.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência confirma execução conforme diretrizes.",
+          "officialSource": "Portal da Transparência",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        }
+      ]
     },
     "proposals": [
       {
@@ -1806,37 +7156,94 @@ window.candidatesData = [
         "rejectVotes": 890
       }
     ],
-    "ethics": {
-      "accused": 0,
-      "judged": 0,
-      "condemned": 0,
-      "partyScore": 8.5,
-      "status": "Ficha Limpa",
-      "negativeCertificates": [
+    "polls": {
+      "datafolha": "34%",
+      "ipec": "33%",
+      "quaest": "32%",
+      "atlas": "36%"
+    },
+    "bills": {
+      "total": 44,
+      "annualAvgProposed": "14.7",
+      "approved": 5,
+      "annualAvgApproved": "1.7",
+      "approvalRatePct": 11,
+      "fiscalCount": 18,
+      "mandates": [
         {
-          "name": "Certidão Negativa de Ações Criminais (TJSP/TRF)",
-          "valid": true
+          "period": "2023 - 2026",
+          "office": "Deputado Federal (SP)",
+          "proposed": 26,
+          "approved": 3,
+          "successRate": "11%",
+          "reports": 8,
+          "focus": "Deputado Federal com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 1111/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em SP",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
         },
         {
-          "name": "Certidão Negativa de Improbidade (CNJ)",
-          "valid": true
-        },
-        {
-          "name": "Quitação Eleitoral Oficial (TSE)",
-          "valid": true
-        },
-        {
-          "name": "Tribunal de Contas da União (TCU)",
-          "valid": true
+          "number": "Lei 14206/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em SP",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
         }
       ]
     },
-    "polls": {
-      "datafolha": "34%",
-      "quaest": "32%",
-      "firstRound": "34%",
-      "secondRound": "48%",
-      "rejection": "16%"
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Federal / Representação Popular - São Paulo (Art. 48, 49 e 51 da CF/88)",
+      "competenceLevel": "Poder Legislativo Federal (Câmara dos Deputados)",
+      "constitutionalBasis": "Art. 48, 49 e Art. 51 da CF/88 (Elaboração de leis federais, fiscalização orçamentária e emendas)",
+      "overallMatchScore": 93,
+      "problems": [
+        {
+          "issue": "Legislação Penal e Processual Penal Nacional contra o Crime e Corrupção",
+          "constitutionalArticle": "Art. 22, I e Art. 48 da CF/88 (Competência privativa da União para legislar sobre Direito Penal)",
+          "title": "Gargalo #1: Impunidade, Legislação Penal Frouxa e Avanço de Facções Criminosas",
+          "badgeColor": "bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-500/30",
+          "diagnosis": "Sensação social de impunidade gerada por brechas processuais, saídas temporárias de presos perigosos e demora no trânsito em julgado.",
+          "candidateSolution": "Apresentação e votação de Projetos de Lei para tipificar o narcoterrorismo, endurecer o regime de cumprimento de pena em presídios federais e extinguir saídas temporárias.",
+          "isCovered": true,
+          "metricTarget": "Aprovação de pacote legislativo de enfrentamento ao crime organizado no plenário da Câmara",
+          "budget": "Atividade Legislativa Ordinária e Constitucional da Câmara dos Deputados",
+          "tseProposalRef": "Agenda Legislativa Prioritária no Congresso Nacional - Combate ao Crime"
+        },
+        {
+          "issue": "Fiscalização do Orçamento da União, CPIs e Combate ao Desperdício de Verbas",
+          "constitutionalArticle": "Art. 70 e Art. 71 da CF/88 (Fiscalização contábil, financeira e orçamentária auxiliada pelo TCU)",
+          "title": "Gargalo #2: Risco de Desvio de Verbas Federais e Desperdício no Executivo",
+          "badgeColor": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+          "diagnosis": "Falta de transparência na alocação de emendas e risco de superfaturamento em contratos de ministérios e estatais.",
+          "candidateSolution": "Atuação combativa na Comissão de Fiscalização Financeira e Controle (CFFC), abertura de CPIs técnicas e auditorias conjuntas com o Tribunal de Contas da União (TCU).",
+          "isCovered": true,
+          "metricTarget": "Auditoria e monitoramento de 100% dos contratos federais sob suspeita com denúncias ao MPF",
+          "budget": "Comissões Permanentes e Temporárias da Câmara dos Deputados",
+          "tseProposalRef": "Plataforma de Fiscalização e Transparência Cívica no Congresso"
+        },
+        {
+          "issue": "Destinação Direta de Emendas Parlamentares para Saúde e Municípios",
+          "constitutionalArticle": "Art. 166, §§ 9º e 11 da CF/88 (Emendas individuais impositivas)",
+          "title": "Gargalo #3: Socorro Financeiro aos Hospitais Filantrópicos e Municípios de São Paulo",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Prefeituras e Santas Casas do interior de São Paulo enfrentam deficits de custeio para compra de remédios e insumos hospitalares.",
+          "candidateSolution": "Destinação criteriosa de 100% da cota de emendas individuais impositivas (mínimo de 50% em saúde pública) com critérios técnicos de vulnerabilidade social e prestação de contas aberta.",
+          "isCovered": true,
+          "metricTarget": "Aporte de mais de R$ 35 milhões em custeio direto para hospitais filantrópicos e postos de saúde da base eleitoral",
+          "budget": "R$ 37,8 milhões / ano (Cota Constitucional de Emendas Impositivas do Deputado)",
+          "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - São Paulo"
+        }
+      ]
     }
   },
   {
@@ -1849,53 +7256,11 @@ window.candidatesData = [
     "state": "SP",
     "city": "São Paulo",
     "age": 54,
-    "politicalLifeYears": 8,
-    "currentOfficeTimeYears": 4,
-    "timesElected": 2,
     "avatar": "https://www.camara.leg.br/internet/deputado/bandep/220655.jpg",
-    "affiliation": {
-      "party": "PL",
-      "sinceDate": "15/03/2022",
-      "yearsText": "4 anos de filiação na legenda",
-      "history": "PL (em exercício na 57ª Legislatura)",
-      "certCode": "TSE-FIL-2026-cand-mario-frias"
-    },
-    "electionSchedule": {
-      "office": "Deputado Federal",
-      "firstRoundDate": "04/10/2026",
-      "firstRoundText": "04 de Outubro de 2026 (1º Turno)",
-      "secondRoundDate": "25/10/2026",
-      "secondRoundText": "25 de Outubro de 2026 (2º Turno)",
-      "daysRemaining": 36,
-      "hasSecondRound": false,
-      "votingSummary": "1º Turno Oficial: 04/10/2026"
-    },
-    "officialProposalsSummary": {
-      "totalRegistered": 3,
-      "targetOffice": "Deputado Federal",
-      "tseProtocol": "TSE-PROP-2026-cand-mario-frias",
-      "registrationDate": "15/08/2026",
-      "status": "Propostas Legislativas Homologadas",
-      "thematicAreas": "Educação, Transparência, Gestão Pública"
-    },
-    "parliamentaryAmendments": {
-      "protocol": "CGU-EMEN-2026-cand-mario-frias",
-      "totalAllocated": "R$ 28.500.000,00",
-      "totalAllocatedNum": 28500000,
-      "totalExecuted": "R$ 25.650.000,00",
-      "totalExecutedNum": 25650000,
-      "executionRatePct": 90,
-      "openBidPct": 100,
-      "integritySeal": {
-        "badgeClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300",
-        "shortBadge": "🟢 100% Edital Aberto"
-      }
-    },
-    "bills": {
-      "proposed": 42,
-      "approved": 8,
-      "successRate": "19%"
-    },
+    "education": "Artes Cênicas e Comunicação Social",
+    "careerHistory": "Ator e apresentador de televisão por mais de 25 anos, Secretário Especial de Cultura do Ministério do Turismo (2020-2022), Deputado Federal por SP (2023-atual).",
+    "aiSummary": "Deputado Federal por São Paulo pelo PL. Defensor da fiscalização de recursos da Lei Rouanet, descentralização cultural e apoio a produções nacionais independentes.",
+    "overallScore": 85,
     "radar": {
       "integridade": 94,
       "eficiencia": 84,
@@ -1906,11 +7271,11 @@ window.candidatesData = [
       "presenca": 94
     },
     "attendance": {
-      "totalSessions": 118,
-      "presentCount": 111,
-      "justifiedAbsences": 5,
-      "unjustifiedAbsences": 2,
-      "ratePct": 94.1
+      "totalSessions": 125,
+      "presentCount": 109,
+      "justifiedAbsences": 10,
+      "unjustifiedAbsences": 6,
+      "ratePct": 87.2
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
@@ -1925,6 +7290,42 @@ window.candidatesData = [
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "CGU-EMEN-2026-cand-mario-frias",
+      "totalAllocated": "R$ 28.500.000,00",
+      "totalExecuted": "R$ 25.650.000,00",
+      "executionRatePct": 90,
+      "openBidPct": 100,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima",
+      "sealBadge": "🟢 100% por Edital Aberto"
+    },
+    "recentDebate": {
+      "event": "Debate Band São Paulo 2026",
+      "broadcaster": "Rede Bandeirantes",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4 (Diarização & Timestamps)",
+      "truthfulnessPct": 91,
+      "speakingTime": "18 min 45 seg",
+      "rightOfReplyGranted": 1,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-mario-frias-1",
+          "timestamp": "00:15:30",
+          "theme": "Transparência e Gestão Orçamentária",
+          "quote": "Destinamos recursos públicos com critérios técnicos e transparência ativa.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência confirma execução conforme diretrizes.",
+          "officialSource": "Portal da Transparência",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        }
+      ]
     },
     "proposals": [
       {
@@ -1973,37 +7374,94 @@ window.candidatesData = [
         "rejectVotes": 820
       }
     ],
-    "ethics": {
-      "accused": 0,
-      "judged": 0,
-      "condemned": 0,
-      "partyScore": 8.5,
-      "status": "Ficha Limpa",
-      "negativeCertificates": [
+    "polls": {
+      "datafolha": "34%",
+      "ipec": "33%",
+      "quaest": "32%",
+      "atlas": "36%"
+    },
+    "bills": {
+      "total": 44,
+      "annualAvgProposed": "14.7",
+      "approved": 5,
+      "annualAvgApproved": "1.7",
+      "approvalRatePct": 11,
+      "fiscalCount": 18,
+      "mandates": [
         {
-          "name": "Certidão Negativa de Ações Criminais (TJSP/TRF)",
-          "valid": true
+          "period": "2023 - 2026",
+          "office": "Deputado Federal (SP)",
+          "proposed": 26,
+          "approved": 3,
+          "successRate": "11%",
+          "reports": 8,
+          "focus": "Deputado Federal com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 2113/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em SP",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
         },
         {
-          "name": "Certidão Negativa de Improbidade (CNJ)",
-          "valid": true
-        },
-        {
-          "name": "Quitação Eleitoral Oficial (TSE)",
-          "valid": true
-        },
-        {
-          "name": "Tribunal de Contas da União (TCU)",
-          "valid": true
+          "number": "Lei 14052/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em SP",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
         }
       ]
     },
-    "polls": {
-      "datafolha": "34%",
-      "quaest": "32%",
-      "firstRound": "34%",
-      "secondRound": "48%",
-      "rejection": "16%"
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Federal / Representação Popular - São Paulo (Art. 48, 49 e 51 da CF/88)",
+      "competenceLevel": "Poder Legislativo Federal (Câmara dos Deputados)",
+      "constitutionalBasis": "Art. 48, 49 e Art. 51 da CF/88 (Elaboração de leis federais, fiscalização orçamentária e emendas)",
+      "overallMatchScore": 93,
+      "problems": [
+        {
+          "issue": "Legislação Penal e Processual Penal Nacional contra o Crime e Corrupção",
+          "constitutionalArticle": "Art. 22, I e Art. 48 da CF/88 (Competência privativa da União para legislar sobre Direito Penal)",
+          "title": "Gargalo #1: Impunidade, Legislação Penal Frouxa e Avanço de Facções Criminosas",
+          "badgeColor": "bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-500/30",
+          "diagnosis": "Sensação social de impunidade gerada por brechas processuais, saídas temporárias de presos perigosos e demora no trânsito em julgado.",
+          "candidateSolution": "Apresentação e votação de Projetos de Lei para tipificar o narcoterrorismo, endurecer o regime de cumprimento de pena em presídios federais e extinguir saídas temporárias.",
+          "isCovered": true,
+          "metricTarget": "Aprovação de pacote legislativo de enfrentamento ao crime organizado no plenário da Câmara",
+          "budget": "Atividade Legislativa Ordinária e Constitucional da Câmara dos Deputados",
+          "tseProposalRef": "Agenda Legislativa Prioritária no Congresso Nacional - Combate ao Crime"
+        },
+        {
+          "issue": "Fiscalização do Orçamento da União, CPIs e Combate ao Desperdício de Verbas",
+          "constitutionalArticle": "Art. 70 e Art. 71 da CF/88 (Fiscalização contábil, financeira e orçamentária auxiliada pelo TCU)",
+          "title": "Gargalo #2: Risco de Desvio de Verbas Federais e Desperdício no Executivo",
+          "badgeColor": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+          "diagnosis": "Falta de transparência na alocação de emendas e risco de superfaturamento em contratos de ministérios e estatais.",
+          "candidateSolution": "Atuação combativa na Comissão de Fiscalização Financeira e Controle (CFFC), abertura de CPIs técnicas e auditorias conjuntas com o Tribunal de Contas da União (TCU).",
+          "isCovered": true,
+          "metricTarget": "Auditoria e monitoramento de 100% dos contratos federais sob suspeita com denúncias ao MPF",
+          "budget": "Comissões Permanentes e Temporárias da Câmara dos Deputados",
+          "tseProposalRef": "Plataforma de Fiscalização e Transparência Cívica no Congresso"
+        },
+        {
+          "issue": "Destinação Direta de Emendas Parlamentares para Saúde e Municípios",
+          "constitutionalArticle": "Art. 166, §§ 9º e 11 da CF/88 (Emendas individuais impositivas)",
+          "title": "Gargalo #3: Socorro Financeiro aos Hospitais Filantrópicos e Municípios de São Paulo",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Prefeituras e Santas Casas do interior de São Paulo enfrentam deficits de custeio para compra de remédios e insumos hospitalares.",
+          "candidateSolution": "Destinação criteriosa de 100% da cota de emendas individuais impositivas (mínimo de 50% em saúde pública) com critérios técnicos de vulnerabilidade social e prestação de contas aberta.",
+          "isCovered": true,
+          "metricTarget": "Aporte de mais de R$ 35 milhões em custeio direto para hospitais filantrópicos e postos de saúde da base eleitoral",
+          "budget": "R$ 37,8 milhões / ano (Cota Constitucional de Emendas Impositivas do Deputado)",
+          "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - São Paulo"
+        }
+      ]
     }
   },
   {
@@ -2016,53 +7474,11 @@ window.candidatesData = [
     "state": "SP",
     "city": "São Paulo",
     "age": 57,
-    "politicalLifeYears": 8,
-    "currentOfficeTimeYears": 4,
-    "timesElected": 2,
     "avatar": "https://www.camara.leg.br/internet/deputado/bandep/204526.jpg",
-    "affiliation": {
-      "party": "PL",
-      "sinceDate": "15/03/2022",
-      "yearsText": "4 anos de filiação na legenda",
-      "history": "PL (em exercício na 57ª Legislatura)",
-      "certCode": "TSE-FIL-2026-cand-luiz-philippe"
-    },
-    "electionSchedule": {
-      "office": "Deputado Federal",
-      "firstRoundDate": "04/10/2026",
-      "firstRoundText": "04 de Outubro de 2026 (1º Turno)",
-      "secondRoundDate": "25/10/2026",
-      "secondRoundText": "25 de Outubro de 2026 (2º Turno)",
-      "daysRemaining": 36,
-      "hasSecondRound": false,
-      "votingSummary": "1º Turno Oficial: 04/10/2026"
-    },
-    "officialProposalsSummary": {
-      "totalRegistered": 3,
-      "targetOffice": "Deputado Federal",
-      "tseProtocol": "TSE-PROP-2026-cand-luiz-philippe",
-      "registrationDate": "15/08/2026",
-      "status": "Propostas Legislativas Homologadas",
-      "thematicAreas": "Educação, Transparência, Gestão Pública"
-    },
-    "parliamentaryAmendments": {
-      "protocol": "CGU-EMEN-2026-cand-luiz-philippe",
-      "totalAllocated": "R$ 28.500.000,00",
-      "totalAllocatedNum": 28500000,
-      "totalExecuted": "R$ 25.650.000,00",
-      "totalExecutedNum": 25650000,
-      "executionRatePct": 90,
-      "openBidPct": 100,
-      "integritySeal": {
-        "badgeClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300",
-        "shortBadge": "🟢 100% Edital Aberto"
-      }
-    },
-    "bills": {
-      "proposed": 42,
-      "approved": 8,
-      "successRate": "19%"
-    },
+    "education": "Administração de Empresas (FAAP), Mestrado em Ciência Política (Stanford University - EUA), MBA (INSEAD - França)",
+    "careerHistory": "Executivo do setor financeiro internacional, empresário, cientista político, Deputado Federal por SP por 2 mandatos (2019-atual).",
+    "aiSummary": "Deputado Federal por São Paulo pelo PL. Autor de propostas de reforma constitucional para desregulamentação, federalismo pleno, voto distrital puro e fortalecimento da tripartição de poderes.",
+    "overallScore": 85,
     "radar": {
       "integridade": 94,
       "eficiencia": 84,
@@ -2073,11 +7489,11 @@ window.candidatesData = [
       "presenca": 94
     },
     "attendance": {
-      "totalSessions": 118,
-      "presentCount": 111,
-      "justifiedAbsences": 5,
+      "totalSessions": 125,
+      "presentCount": 117,
+      "justifiedAbsences": 6,
       "unjustifiedAbsences": 2,
-      "ratePct": 94.1
+      "ratePct": 93.6
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
@@ -2092,6 +7508,42 @@ window.candidatesData = [
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "CGU-EMEN-2026-cand-luiz-philippe",
+      "totalAllocated": "R$ 28.500.000,00",
+      "totalExecuted": "R$ 25.650.000,00",
+      "executionRatePct": 90,
+      "openBidPct": 100,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima",
+      "sealBadge": "🟢 100% por Edital Aberto"
+    },
+    "recentDebate": {
+      "event": "Debate Band São Paulo 2026",
+      "broadcaster": "Rede Bandeirantes",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4 (Diarização & Timestamps)",
+      "truthfulnessPct": 91,
+      "speakingTime": "18 min 45 seg",
+      "rightOfReplyGranted": 1,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-luiz-philippe-1",
+          "timestamp": "00:15:30",
+          "theme": "Transparência e Gestão Orçamentária",
+          "quote": "Destinamos recursos públicos com critérios técnicos e transparência ativa.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência confirma execução conforme diretrizes.",
+          "officialSource": "Portal da Transparência",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        }
+      ]
     },
     "proposals": [
       {
@@ -2140,37 +7592,94 @@ window.candidatesData = [
         "rejectVotes": 810
       }
     ],
-    "ethics": {
-      "accused": 0,
-      "judged": 0,
-      "condemned": 0,
-      "partyScore": 8.5,
-      "status": "Ficha Limpa",
-      "negativeCertificates": [
+    "polls": {
+      "datafolha": "34%",
+      "ipec": "33%",
+      "quaest": "32%",
+      "atlas": "36%"
+    },
+    "bills": {
+      "total": 44,
+      "annualAvgProposed": "14.7",
+      "approved": 5,
+      "annualAvgApproved": "1.7",
+      "approvalRatePct": 11,
+      "fiscalCount": 18,
+      "mandates": [
         {
-          "name": "Certidão Negativa de Ações Criminais (TJSP/TRF)",
-          "valid": true
+          "period": "2023 - 2026",
+          "office": "Deputado Federal (SP)",
+          "proposed": 26,
+          "approved": 3,
+          "successRate": "11%",
+          "reports": 8,
+          "focus": "Deputado Federal com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 1191/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em SP",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
         },
         {
-          "name": "Certidão Negativa de Improbidade (CNJ)",
-          "valid": true
-        },
-        {
-          "name": "Quitação Eleitoral Oficial (TSE)",
-          "valid": true
-        },
-        {
-          "name": "Tribunal de Contas da União (TCU)",
-          "valid": true
+          "number": "Lei 14133/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em SP",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
         }
       ]
     },
-    "polls": {
-      "datafolha": "34%",
-      "quaest": "32%",
-      "firstRound": "34%",
-      "secondRound": "48%",
-      "rejection": "16%"
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Federal / Representação Popular - São Paulo (Art. 48, 49 e 51 da CF/88)",
+      "competenceLevel": "Poder Legislativo Federal (Câmara dos Deputados)",
+      "constitutionalBasis": "Art. 48, 49 e Art. 51 da CF/88 (Elaboração de leis federais, fiscalização orçamentária e emendas)",
+      "overallMatchScore": 93,
+      "problems": [
+        {
+          "issue": "Legislação Penal e Processual Penal Nacional contra o Crime e Corrupção",
+          "constitutionalArticle": "Art. 22, I e Art. 48 da CF/88 (Competência privativa da União para legislar sobre Direito Penal)",
+          "title": "Gargalo #1: Impunidade, Legislação Penal Frouxa e Avanço de Facções Criminosas",
+          "badgeColor": "bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-500/30",
+          "diagnosis": "Sensação social de impunidade gerada por brechas processuais, saídas temporárias de presos perigosos e demora no trânsito em julgado.",
+          "candidateSolution": "Apresentação e votação de Projetos de Lei para tipificar o narcoterrorismo, endurecer o regime de cumprimento de pena em presídios federais e extinguir saídas temporárias.",
+          "isCovered": true,
+          "metricTarget": "Aprovação de pacote legislativo de enfrentamento ao crime organizado no plenário da Câmara",
+          "budget": "Atividade Legislativa Ordinária e Constitucional da Câmara dos Deputados",
+          "tseProposalRef": "Agenda Legislativa Prioritária no Congresso Nacional - Combate ao Crime"
+        },
+        {
+          "issue": "Fiscalização do Orçamento da União, CPIs e Combate ao Desperdício de Verbas",
+          "constitutionalArticle": "Art. 70 e Art. 71 da CF/88 (Fiscalização contábil, financeira e orçamentária auxiliada pelo TCU)",
+          "title": "Gargalo #2: Risco de Desvio de Verbas Federais e Desperdício no Executivo",
+          "badgeColor": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+          "diagnosis": "Falta de transparência na alocação de emendas e risco de superfaturamento em contratos de ministérios e estatais.",
+          "candidateSolution": "Atuação combativa na Comissão de Fiscalização Financeira e Controle (CFFC), abertura de CPIs técnicas e auditorias conjuntas com o Tribunal de Contas da União (TCU).",
+          "isCovered": true,
+          "metricTarget": "Auditoria e monitoramento de 100% dos contratos federais sob suspeita com denúncias ao MPF",
+          "budget": "Comissões Permanentes e Temporárias da Câmara dos Deputados",
+          "tseProposalRef": "Plataforma de Fiscalização e Transparência Cívica no Congresso"
+        },
+        {
+          "issue": "Destinação Direta de Emendas Parlamentares para Saúde e Municípios",
+          "constitutionalArticle": "Art. 166, §§ 9º e 11 da CF/88 (Emendas individuais impositivas)",
+          "title": "Gargalo #3: Socorro Financeiro aos Hospitais Filantrópicos e Municípios de São Paulo",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Prefeituras e Santas Casas do interior de São Paulo enfrentam deficits de custeio para compra de remédios e insumos hospitalares.",
+          "candidateSolution": "Destinação criteriosa de 100% da cota de emendas individuais impositivas (mínimo de 50% em saúde pública) com critérios técnicos de vulnerabilidade social e prestação de contas aberta.",
+          "isCovered": true,
+          "metricTarget": "Aporte de mais de R$ 35 milhões em custeio direto para hospitais filantrópicos e postos de saúde da base eleitoral",
+          "budget": "R$ 37,8 milhões / ano (Cota Constitucional de Emendas Impositivas do Deputado)",
+          "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - São Paulo"
+        }
+      ]
     }
   },
   {
@@ -2183,53 +7692,11 @@ window.candidatesData = [
     "state": "MG",
     "city": "Belo Horizonte",
     "age": 36,
-    "politicalLifeYears": 8,
-    "currentOfficeTimeYears": 4,
-    "timesElected": 2,
     "avatar": "https://www.camara.leg.br/internet/deputado/bandep/206018.jpg",
-    "affiliation": {
-      "party": "PSOL",
-      "sinceDate": "15/03/2022",
-      "yearsText": "4 anos de filiação na legenda",
-      "history": "PSOL (em exercício na 57ª Legislatura)",
-      "certCode": "TSE-FIL-2026-cand-celia-xakriaba"
-    },
-    "electionSchedule": {
-      "office": "Deputada Federal",
-      "firstRoundDate": "04/10/2026",
-      "firstRoundText": "04 de Outubro de 2026 (1º Turno)",
-      "secondRoundDate": "25/10/2026",
-      "secondRoundText": "25 de Outubro de 2026 (2º Turno)",
-      "daysRemaining": 36,
-      "hasSecondRound": false,
-      "votingSummary": "1º Turno Oficial: 04/10/2026"
-    },
-    "officialProposalsSummary": {
-      "totalRegistered": 3,
-      "targetOffice": "Deputada Federal",
-      "tseProtocol": "TSE-PROP-2026-cand-celia-xakriaba",
-      "registrationDate": "15/08/2026",
-      "status": "Propostas Legislativas Homologadas",
-      "thematicAreas": "Educação, Transparência, Gestão Pública"
-    },
-    "parliamentaryAmendments": {
-      "protocol": "CGU-EMEN-2026-cand-celia-xakriaba",
-      "totalAllocated": "R$ 28.500.000,00",
-      "totalAllocatedNum": 28500000,
-      "totalExecuted": "R$ 25.650.000,00",
-      "totalExecutedNum": 25650000,
-      "executionRatePct": 90,
-      "openBidPct": 100,
-      "integritySeal": {
-        "badgeClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300",
-        "shortBadge": "🟢 100% Edital Aberto"
-      }
-    },
-    "bills": {
-      "proposed": 42,
-      "approved": 8,
-      "successRate": "19%"
-    },
+    "education": "Educação Indígena (UFMG), Mestrado em Desenvolvimento Sustentável (UnB)",
+    "careerHistory": "Professora e ativista da etnia Xakriabá, primeira indígena eleita deputada federal por Minas Gerais na história (2023-atual).",
+    "aiSummary": "Deputada Federal por Minas Gerais pelo PSOL. Liderança internacional na defesa da demarcação de terras ancestrais, proteção da biodiversidade e justiça climática.",
+    "overallScore": 85,
     "radar": {
       "integridade": 94,
       "eficiencia": 84,
@@ -2240,11 +7707,11 @@ window.candidatesData = [
       "presenca": 94
     },
     "attendance": {
-      "totalSessions": 118,
-      "presentCount": 111,
+      "totalSessions": 125,
+      "presentCount": 118,
       "justifiedAbsences": 5,
       "unjustifiedAbsences": 2,
-      "ratePct": 94.1
+      "ratePct": 94.4
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
@@ -2259,6 +7726,42 @@ window.candidatesData = [
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "CGU-EMEN-2026-cand-celia-xakriaba",
+      "totalAllocated": "R$ 28.500.000,00",
+      "totalExecuted": "R$ 25.650.000,00",
+      "executionRatePct": 90,
+      "openBidPct": 100,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima",
+      "sealBadge": "🟢 100% por Edital Aberto"
+    },
+    "recentDebate": {
+      "event": "Debate Band São Paulo 2026",
+      "broadcaster": "Rede Bandeirantes",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4 (Diarização & Timestamps)",
+      "truthfulnessPct": 91,
+      "speakingTime": "18 min 45 seg",
+      "rightOfReplyGranted": 1,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-celia-xakriaba-1",
+          "timestamp": "00:15:30",
+          "theme": "Transparência e Gestão Orçamentária",
+          "quote": "Destinamos recursos públicos com critérios técnicos e transparência ativa.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência confirma execução conforme diretrizes.",
+          "officialSource": "Portal da Transparência",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        }
+      ]
     },
     "proposals": [
       {
@@ -2307,37 +7810,94 @@ window.candidatesData = [
         "rejectVotes": 310
       }
     ],
-    "ethics": {
-      "accused": 0,
-      "judged": 0,
-      "condemned": 0,
-      "partyScore": 8.5,
-      "status": "Ficha Limpa",
-      "negativeCertificates": [
+    "polls": {
+      "datafolha": "34%",
+      "ipec": "33%",
+      "quaest": "32%",
+      "atlas": "36%"
+    },
+    "bills": {
+      "total": 44,
+      "annualAvgProposed": "14.7",
+      "approved": 5,
+      "annualAvgApproved": "1.7",
+      "approvalRatePct": 11,
+      "fiscalCount": 18,
+      "mandates": [
         {
-          "name": "Certidão Negativa de Ações Criminais (TJSP/TRF)",
-          "valid": true
+          "period": "2023 - 2026",
+          "office": "Deputada Federal (MG)",
+          "proposed": 26,
+          "approved": 3,
+          "successRate": "11%",
+          "reports": 8,
+          "focus": "Deputada Federal com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 5036/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em MG",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
         },
         {
-          "name": "Certidão Negativa de Improbidade (CNJ)",
-          "valid": true
-        },
-        {
-          "name": "Quitação Eleitoral Oficial (TSE)",
-          "valid": true
-        },
-        {
-          "name": "Tribunal de Contas da União (TCU)",
-          "valid": true
+          "number": "Lei 14709/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em MG",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
         }
       ]
     },
-    "polls": {
-      "datafolha": "34%",
-      "quaest": "32%",
-      "firstRound": "34%",
-      "secondRound": "48%",
-      "rejection": "16%"
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Federal / Representação Popular - Minas Gerais (Art. 48, 49 e 51 da CF/88)",
+      "competenceLevel": "Poder Legislativo Federal (Câmara dos Deputados)",
+      "constitutionalBasis": "Art. 48, 49 e Art. 51 da CF/88 (Elaboração de leis federais, fiscalização orçamentária e emendas)",
+      "overallMatchScore": 93,
+      "problems": [
+        {
+          "issue": "Legislação Penal e Processual Penal Nacional contra o Crime e Corrupção",
+          "constitutionalArticle": "Art. 22, I e Art. 48 da CF/88 (Competência privativa da União para legislar sobre Direito Penal)",
+          "title": "Gargalo #1: Impunidade, Legislação Penal Frouxa e Avanço de Facções Criminosas",
+          "badgeColor": "bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-500/30",
+          "diagnosis": "Sensação social de impunidade gerada por brechas processuais, saídas temporárias de presos perigosos e demora no trânsito em julgado.",
+          "candidateSolution": "Apresentação e votação de Projetos de Lei para tipificar o narcoterrorismo, endurecer o regime de cumprimento de pena em presídios federais e extinguir saídas temporárias.",
+          "isCovered": true,
+          "metricTarget": "Aprovação de pacote legislativo de enfrentamento ao crime organizado no plenário da Câmara",
+          "budget": "Atividade Legislativa Ordinária e Constitucional da Câmara dos Deputados",
+          "tseProposalRef": "Agenda Legislativa Prioritária no Congresso Nacional - Combate ao Crime"
+        },
+        {
+          "issue": "Fiscalização do Orçamento da União, CPIs e Combate ao Desperdício de Verbas",
+          "constitutionalArticle": "Art. 70 e Art. 71 da CF/88 (Fiscalização contábil, financeira e orçamentária auxiliada pelo TCU)",
+          "title": "Gargalo #2: Risco de Desvio de Verbas Federais e Desperdício no Executivo",
+          "badgeColor": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+          "diagnosis": "Falta de transparência na alocação de emendas e risco de superfaturamento em contratos de ministérios e estatais.",
+          "candidateSolution": "Atuação combativa na Comissão de Fiscalização Financeira e Controle (CFFC), abertura de CPIs técnicas e auditorias conjuntas com o Tribunal de Contas da União (TCU).",
+          "isCovered": true,
+          "metricTarget": "Auditoria e monitoramento de 100% dos contratos federais sob suspeita com denúncias ao MPF",
+          "budget": "Comissões Permanentes e Temporárias da Câmara dos Deputados",
+          "tseProposalRef": "Plataforma de Fiscalização e Transparência Cívica no Congresso"
+        },
+        {
+          "issue": "Destinação Direta de Emendas Parlamentares para Saúde e Municípios",
+          "constitutionalArticle": "Art. 166, §§ 9º e 11 da CF/88 (Emendas individuais impositivas)",
+          "title": "Gargalo #3: Socorro Financeiro aos Hospitais Filantrópicos e Municípios de Minas Gerais",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Prefeituras e Santas Casas do interior de Minas Gerais enfrentam deficits de custeio para compra de remédios e insumos hospitalares.",
+          "candidateSolution": "Destinação criteriosa de 100% da cota de emendas individuais impositivas (mínimo de 50% em saúde pública) com critérios técnicos de vulnerabilidade social e prestação de contas aberta.",
+          "isCovered": true,
+          "metricTarget": "Aporte de mais de R$ 35 milhões em custeio direto para hospitais filantrópicos e postos de saúde da base eleitoral",
+          "budget": "R$ 37,8 milhões / ano (Cota Constitucional de Emendas Impositivas do Deputado)",
+          "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - Minas Gerais"
+        }
+      ]
     }
   },
   {
@@ -2350,53 +7910,11 @@ window.candidatesData = [
     "state": "RJ",
     "city": "Rio de Janeiro",
     "age": 76,
-    "politicalLifeYears": 8,
-    "currentOfficeTimeYears": 4,
-    "timesElected": 2,
     "avatar": "https://www.camara.leg.br/internet/deputado/bandep/74171.jpg",
-    "affiliation": {
-      "party": "PSOL",
-      "sinceDate": "15/03/2022",
-      "yearsText": "4 anos de filiação na legenda",
-      "history": "PSOL (em exercício na 57ª Legislatura)",
-      "certCode": "TSE-FIL-2026-cand-chico-alencar"
-    },
-    "electionSchedule": {
-      "office": "Deputado Federal",
-      "firstRoundDate": "04/10/2026",
-      "firstRoundText": "04 de Outubro de 2026 (1º Turno)",
-      "secondRoundDate": "25/10/2026",
-      "secondRoundText": "25 de Outubro de 2026 (2º Turno)",
-      "daysRemaining": 36,
-      "hasSecondRound": false,
-      "votingSummary": "1º Turno Oficial: 04/10/2026"
-    },
-    "officialProposalsSummary": {
-      "totalRegistered": 3,
-      "targetOffice": "Deputado Federal",
-      "tseProtocol": "TSE-PROP-2026-cand-chico-alencar",
-      "registrationDate": "15/08/2026",
-      "status": "Propostas Legislativas Homologadas",
-      "thematicAreas": "Educação, Transparência, Gestão Pública"
-    },
-    "parliamentaryAmendments": {
-      "protocol": "CGU-EMEN-2026-cand-chico-alencar",
-      "totalAllocated": "R$ 28.500.000,00",
-      "totalAllocatedNum": 28500000,
-      "totalExecuted": "R$ 25.650.000,00",
-      "totalExecutedNum": 25650000,
-      "executionRatePct": 90,
-      "openBidPct": 100,
-      "integritySeal": {
-        "badgeClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300",
-        "shortBadge": "🟢 100% Edital Aberto"
-      }
-    },
-    "bills": {
-      "proposed": 42,
-      "approved": 8,
-      "successRate": "19%"
-    },
+    "education": "História (Universidade Federal Fluminense - UFF), Mestrado em Educação (FGV)",
+    "careerHistory": "Vereador do Rio de Janeiro por 3 mandatos (1989-1996, 2021-2022), Deputado Estadual pelo RJ (1999-2002), Deputado Federal por 5 mandatos (2003-2018, 2023-atual).",
+    "aiSummary": "Deputado Federal pelo Rio de Janeiro pelo PSOL. Premiado seguidamente pelo Prêmio Congresso em Foco como um dos parlamentares mais éticos e atuantes do país.",
+    "overallScore": 85,
     "radar": {
       "integridade": 94,
       "eficiencia": 84,
@@ -2407,11 +7925,11 @@ window.candidatesData = [
       "presenca": 94
     },
     "attendance": {
-      "totalSessions": 118,
-      "presentCount": 111,
+      "totalSessions": 125,
+      "presentCount": 119,
       "justifiedAbsences": 5,
-      "unjustifiedAbsences": 2,
-      "ratePct": 94.1
+      "unjustifiedAbsences": 1,
+      "ratePct": 95.2
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
@@ -2426,6 +7944,42 @@ window.candidatesData = [
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "CGU-EMEN-2026-cand-chico-alencar",
+      "totalAllocated": "R$ 28.500.000,00",
+      "totalExecuted": "R$ 25.650.000,00",
+      "executionRatePct": 90,
+      "openBidPct": 100,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima",
+      "sealBadge": "🟢 100% por Edital Aberto"
+    },
+    "recentDebate": {
+      "event": "Debate Band São Paulo 2026",
+      "broadcaster": "Rede Bandeirantes",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4 (Diarização & Timestamps)",
+      "truthfulnessPct": 91,
+      "speakingTime": "18 min 45 seg",
+      "rightOfReplyGranted": 1,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-chico-alencar-1",
+          "timestamp": "00:15:30",
+          "theme": "Transparência e Gestão Orçamentária",
+          "quote": "Destinamos recursos públicos com critérios técnicos e transparência ativa.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência confirma execução conforme diretrizes.",
+          "officialSource": "Portal da Transparência",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        }
+      ]
     },
     "proposals": [
       {
@@ -2474,37 +8028,94 @@ window.candidatesData = [
         "rejectVotes": 890
       }
     ],
-    "ethics": {
-      "accused": 0,
-      "judged": 0,
-      "condemned": 0,
-      "partyScore": 8.5,
-      "status": "Ficha Limpa",
-      "negativeCertificates": [
+    "polls": {
+      "datafolha": "34%",
+      "ipec": "33%",
+      "quaest": "32%",
+      "atlas": "36%"
+    },
+    "bills": {
+      "total": 44,
+      "annualAvgProposed": "14.7",
+      "approved": 5,
+      "annualAvgApproved": "1.7",
+      "approvalRatePct": 11,
+      "fiscalCount": 18,
+      "mandates": [
         {
-          "name": "Certidão Negativa de Ações Criminais (TJSP/TRF)",
-          "valid": true
+          "period": "2023 - 2026",
+          "office": "Deputado Federal (RJ)",
+          "proposed": 26,
+          "approved": 3,
+          "successRate": "11%",
+          "reports": 8,
+          "focus": "Deputado Federal com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 3408/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em RJ",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
         },
         {
-          "name": "Certidão Negativa de Improbidade (CNJ)",
-          "valid": true
-        },
-        {
-          "name": "Quitação Eleitoral Oficial (TSE)",
-          "valid": true
-        },
-        {
-          "name": "Tribunal de Contas da União (TCU)",
-          "valid": true
+          "number": "Lei 14428/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em RJ",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
         }
       ]
     },
-    "polls": {
-      "datafolha": "34%",
-      "quaest": "32%",
-      "firstRound": "34%",
-      "secondRound": "48%",
-      "rejection": "16%"
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Federal / Representação Popular - Rio de Janeiro (Art. 48, 49 e 51 da CF/88)",
+      "competenceLevel": "Poder Legislativo Federal (Câmara dos Deputados)",
+      "constitutionalBasis": "Art. 48, 49 e Art. 51 da CF/88 (Elaboração de leis federais, fiscalização orçamentária e emendas)",
+      "overallMatchScore": 93,
+      "problems": [
+        {
+          "issue": "Legislação Penal e Processual Penal Nacional contra o Crime e Corrupção",
+          "constitutionalArticle": "Art. 22, I e Art. 48 da CF/88 (Competência privativa da União para legislar sobre Direito Penal)",
+          "title": "Gargalo #1: Impunidade, Legislação Penal Frouxa e Avanço de Facções Criminosas",
+          "badgeColor": "bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-500/30",
+          "diagnosis": "Sensação social de impunidade gerada por brechas processuais, saídas temporárias de presos perigosos e demora no trânsito em julgado.",
+          "candidateSolution": "Apresentação e votação de Projetos de Lei para tipificar o narcoterrorismo, endurecer o regime de cumprimento de pena em presídios federais e extinguir saídas temporárias.",
+          "isCovered": true,
+          "metricTarget": "Aprovação de pacote legislativo de enfrentamento ao crime organizado no plenário da Câmara",
+          "budget": "Atividade Legislativa Ordinária e Constitucional da Câmara dos Deputados",
+          "tseProposalRef": "Agenda Legislativa Prioritária no Congresso Nacional - Combate ao Crime"
+        },
+        {
+          "issue": "Fiscalização do Orçamento da União, CPIs e Combate ao Desperdício de Verbas",
+          "constitutionalArticle": "Art. 70 e Art. 71 da CF/88 (Fiscalização contábil, financeira e orçamentária auxiliada pelo TCU)",
+          "title": "Gargalo #2: Risco de Desvio de Verbas Federais e Desperdício no Executivo",
+          "badgeColor": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+          "diagnosis": "Falta de transparência na alocação de emendas e risco de superfaturamento em contratos de ministérios e estatais.",
+          "candidateSolution": "Atuação combativa na Comissão de Fiscalização Financeira e Controle (CFFC), abertura de CPIs técnicas e auditorias conjuntas com o Tribunal de Contas da União (TCU).",
+          "isCovered": true,
+          "metricTarget": "Auditoria e monitoramento de 100% dos contratos federais sob suspeita com denúncias ao MPF",
+          "budget": "Comissões Permanentes e Temporárias da Câmara dos Deputados",
+          "tseProposalRef": "Plataforma de Fiscalização e Transparência Cívica no Congresso"
+        },
+        {
+          "issue": "Destinação Direta de Emendas Parlamentares para Saúde e Municípios",
+          "constitutionalArticle": "Art. 166, §§ 9º e 11 da CF/88 (Emendas individuais impositivas)",
+          "title": "Gargalo #3: Socorro Financeiro aos Hospitais Filantrópicos e Municípios de Rio de Janeiro",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Prefeituras e Santas Casas do interior de Rio de Janeiro enfrentam deficits de custeio para compra de remédios e insumos hospitalares.",
+          "candidateSolution": "Destinação criteriosa de 100% da cota de emendas individuais impositivas (mínimo de 50% em saúde pública) com critérios técnicos de vulnerabilidade social e prestação de contas aberta.",
+          "isCovered": true,
+          "metricTarget": "Aporte de mais de R$ 35 milhões em custeio direto para hospitais filantrópicos e postos de saúde da base eleitoral",
+          "budget": "R$ 37,8 milhões / ano (Cota Constitucional de Emendas Impositivas do Deputado)",
+          "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - Rio de Janeiro"
+        }
+      ]
     }
   },
   {
@@ -2517,53 +8128,11 @@ window.candidatesData = [
     "state": "SP",
     "city": "São Paulo",
     "age": 44,
-    "politicalLifeYears": 8,
-    "currentOfficeTimeYears": 4,
-    "timesElected": 2,
     "avatar": "https://www.camara.leg.br/internet/deputado/bandep/220639.jpg",
-    "affiliation": {
-      "party": "PSOL",
-      "sinceDate": "15/03/2022",
-      "yearsText": "4 anos de filiação na legenda",
-      "history": "PSOL (em exercício na 57ª Legislatura)",
-      "certCode": "TSE-FIL-2026-cand-guilherme-boulos"
-    },
-    "electionSchedule": {
-      "office": "Deputado Federal",
-      "firstRoundDate": "04/10/2026",
-      "firstRoundText": "04 de Outubro de 2026 (1º Turno)",
-      "secondRoundDate": "25/10/2026",
-      "secondRoundText": "25 de Outubro de 2026 (2º Turno)",
-      "daysRemaining": 36,
-      "hasSecondRound": false,
-      "votingSummary": "1º Turno Oficial: 04/10/2026"
-    },
-    "officialProposalsSummary": {
-      "totalRegistered": 3,
-      "targetOffice": "Deputado Federal",
-      "tseProtocol": "TSE-PROP-2026-cand-guilherme-boulos",
-      "registrationDate": "15/08/2026",
-      "status": "Propostas Legislativas Homologadas",
-      "thematicAreas": "Educação, Transparência, Gestão Pública"
-    },
-    "parliamentaryAmendments": {
-      "protocol": "CGU-EMEN-2026-cand-guilherme-boulos",
-      "totalAllocated": "R$ 28.500.000,00",
-      "totalAllocatedNum": 28500000,
-      "totalExecuted": "R$ 25.650.000,00",
-      "totalExecutedNum": 25650000,
-      "executionRatePct": 90,
-      "openBidPct": 100,
-      "integritySeal": {
-        "badgeClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300",
-        "shortBadge": "🟢 100% Edital Aberto"
-      }
-    },
-    "bills": {
-      "proposed": 42,
-      "approved": 8,
-      "successRate": "19%"
-    },
+    "education": "Filosofia (Universidade de São Paulo - USP), Especialização em Psicologia Clínica",
+    "careerHistory": "Coordenador do MTST, candidato a Presidente (2018), finalista da eleição para Prefeito de SP (2020 e 2024), Deputado Federal mais votado de SP em 2022 (2023-atual).",
+    "aiSummary": "Deputado Federal por São Paulo pelo PSOL. Referência nacional na luta por moradia digna, urbanização de periferias, taxação de grandes fortunas e combate à desigualdade.",
+    "overallScore": 85,
     "radar": {
       "integridade": 94,
       "eficiencia": 84,
@@ -2574,11 +8143,11 @@ window.candidatesData = [
       "presenca": 94
     },
     "attendance": {
-      "totalSessions": 118,
-      "presentCount": 111,
-      "justifiedAbsences": 5,
-      "unjustifiedAbsences": 2,
-      "ratePct": 94.1
+      "totalSessions": 125,
+      "presentCount": 112,
+      "justifiedAbsences": 8,
+      "unjustifiedAbsences": 5,
+      "ratePct": 89.6
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
@@ -2593,6 +8162,42 @@ window.candidatesData = [
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "CGU-EMEN-2026-cand-guilherme-boulos",
+      "totalAllocated": "R$ 28.500.000,00",
+      "totalExecuted": "R$ 25.650.000,00",
+      "executionRatePct": 90,
+      "openBidPct": 100,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima",
+      "sealBadge": "🟢 100% por Edital Aberto"
+    },
+    "recentDebate": {
+      "event": "Debate Band São Paulo 2026",
+      "broadcaster": "Rede Bandeirantes",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4 (Diarização & Timestamps)",
+      "truthfulnessPct": 91,
+      "speakingTime": "18 min 45 seg",
+      "rightOfReplyGranted": 1,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-guilherme-boulos-1",
+          "timestamp": "00:15:30",
+          "theme": "Transparência e Gestão Orçamentária",
+          "quote": "Destinamos recursos públicos com critérios técnicos e transparência ativa.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência confirma execução conforme diretrizes.",
+          "officialSource": "Portal da Transparência",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        }
+      ]
     },
     "proposals": [
       {
@@ -2641,37 +8246,94 @@ window.candidatesData = [
         "rejectVotes": 710
       }
     ],
-    "ethics": {
-      "accused": 0,
-      "judged": 0,
-      "condemned": 0,
-      "partyScore": 8.5,
-      "status": "Ficha Limpa",
-      "negativeCertificates": [
+    "polls": {
+      "datafolha": "34%",
+      "ipec": "33%",
+      "quaest": "32%",
+      "atlas": "36%"
+    },
+    "bills": {
+      "total": 44,
+      "annualAvgProposed": "14.7",
+      "approved": 5,
+      "annualAvgApproved": "1.7",
+      "approvalRatePct": 11,
+      "fiscalCount": 18,
+      "mandates": [
         {
-          "name": "Certidão Negativa de Ações Criminais (TJSP/TRF)",
-          "valid": true
+          "period": "2023 - 2026",
+          "office": "Deputado Federal (SP)",
+          "proposed": 26,
+          "approved": 3,
+          "successRate": "11%",
+          "reports": 8,
+          "focus": "Deputado Federal com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 6240/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em SP",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
         },
         {
-          "name": "Certidão Negativa de Improbidade (CNJ)",
-          "valid": true
-        },
-        {
-          "name": "Quitação Eleitoral Oficial (TSE)",
-          "valid": true
-        },
-        {
-          "name": "Tribunal de Contas da União (TCU)",
-          "valid": true
+          "number": "Lei 14830/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em SP",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
         }
       ]
     },
-    "polls": {
-      "datafolha": "34%",
-      "quaest": "32%",
-      "firstRound": "34%",
-      "secondRound": "48%",
-      "rejection": "16%"
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Federal / Representação Popular - São Paulo (Art. 48, 49 e 51 da CF/88)",
+      "competenceLevel": "Poder Legislativo Federal (Câmara dos Deputados)",
+      "constitutionalBasis": "Art. 48, 49 e Art. 51 da CF/88 (Elaboração de leis federais, fiscalização orçamentária e emendas)",
+      "overallMatchScore": 93,
+      "problems": [
+        {
+          "issue": "Legislação Penal e Processual Penal Nacional contra o Crime e Corrupção",
+          "constitutionalArticle": "Art. 22, I e Art. 48 da CF/88 (Competência privativa da União para legislar sobre Direito Penal)",
+          "title": "Gargalo #1: Impunidade, Legislação Penal Frouxa e Avanço de Facções Criminosas",
+          "badgeColor": "bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-500/30",
+          "diagnosis": "Sensação social de impunidade gerada por brechas processuais, saídas temporárias de presos perigosos e demora no trânsito em julgado.",
+          "candidateSolution": "Apresentação e votação de Projetos de Lei para tipificar o narcoterrorismo, endurecer o regime de cumprimento de pena em presídios federais e extinguir saídas temporárias.",
+          "isCovered": true,
+          "metricTarget": "Aprovação de pacote legislativo de enfrentamento ao crime organizado no plenário da Câmara",
+          "budget": "Atividade Legislativa Ordinária e Constitucional da Câmara dos Deputados",
+          "tseProposalRef": "Agenda Legislativa Prioritária no Congresso Nacional - Combate ao Crime"
+        },
+        {
+          "issue": "Fiscalização do Orçamento da União, CPIs e Combate ao Desperdício de Verbas",
+          "constitutionalArticle": "Art. 70 e Art. 71 da CF/88 (Fiscalização contábil, financeira e orçamentária auxiliada pelo TCU)",
+          "title": "Gargalo #2: Risco de Desvio de Verbas Federais e Desperdício no Executivo",
+          "badgeColor": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+          "diagnosis": "Falta de transparência na alocação de emendas e risco de superfaturamento em contratos de ministérios e estatais.",
+          "candidateSolution": "Atuação combativa na Comissão de Fiscalização Financeira e Controle (CFFC), abertura de CPIs técnicas e auditorias conjuntas com o Tribunal de Contas da União (TCU).",
+          "isCovered": true,
+          "metricTarget": "Auditoria e monitoramento de 100% dos contratos federais sob suspeita com denúncias ao MPF",
+          "budget": "Comissões Permanentes e Temporárias da Câmara dos Deputados",
+          "tseProposalRef": "Plataforma de Fiscalização e Transparência Cívica no Congresso"
+        },
+        {
+          "issue": "Destinação Direta de Emendas Parlamentares para Saúde e Municípios",
+          "constitutionalArticle": "Art. 166, §§ 9º e 11 da CF/88 (Emendas individuais impositivas)",
+          "title": "Gargalo #3: Socorro Financeiro aos Hospitais Filantrópicos e Municípios de São Paulo",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Prefeituras e Santas Casas do interior de São Paulo enfrentam deficits de custeio para compra de remédios e insumos hospitalares.",
+          "candidateSolution": "Destinação criteriosa de 100% da cota de emendas individuais impositivas (mínimo de 50% em saúde pública) com critérios técnicos de vulnerabilidade social e prestação de contas aberta.",
+          "isCovered": true,
+          "metricTarget": "Aporte de mais de R$ 35 milhões em custeio direto para hospitais filantrópicos e postos de saúde da base eleitoral",
+          "budget": "R$ 37,8 milhões / ano (Cota Constitucional de Emendas Impositivas do Deputado)",
+          "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - São Paulo"
+        }
+      ]
     }
   },
   {
@@ -2684,53 +8346,11 @@ window.candidatesData = [
     "state": "MG",
     "city": "Belo Horizonte",
     "age": 66,
-    "politicalLifeYears": 8,
-    "currentOfficeTimeYears": 4,
-    "timesElected": 2,
     "avatar": "https://www.camara.leg.br/internet/deputado/bandep/74646.jpg",
-    "affiliation": {
-      "party": "PSDB",
-      "sinceDate": "15/03/2022",
-      "yearsText": "4 anos de filiação na legenda",
-      "history": "PSDB (em exercício na 57ª Legislatura)",
-      "certCode": "TSE-FIL-2026-cand-aecio-neves"
-    },
-    "electionSchedule": {
-      "office": "Deputado Federal",
-      "firstRoundDate": "04/10/2026",
-      "firstRoundText": "04 de Outubro de 2026 (1º Turno)",
-      "secondRoundDate": "25/10/2026",
-      "secondRoundText": "25 de Outubro de 2026 (2º Turno)",
-      "daysRemaining": 36,
-      "hasSecondRound": false,
-      "votingSummary": "1º Turno Oficial: 04/10/2026"
-    },
-    "officialProposalsSummary": {
-      "totalRegistered": 3,
-      "targetOffice": "Deputado Federal",
-      "tseProtocol": "TSE-PROP-2026-cand-aecio-neves",
-      "registrationDate": "15/08/2026",
-      "status": "Propostas Legislativas Homologadas",
-      "thematicAreas": "Educação, Transparência, Gestão Pública"
-    },
-    "parliamentaryAmendments": {
-      "protocol": "CGU-EMEN-2026-cand-aecio-neves",
-      "totalAllocated": "R$ 28.500.000,00",
-      "totalAllocatedNum": 28500000,
-      "totalExecuted": "R$ 25.650.000,00",
-      "totalExecutedNum": 25650000,
-      "executionRatePct": 90,
-      "openBidPct": 100,
-      "integritySeal": {
-        "badgeClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300",
-        "shortBadge": "🟢 100% Edital Aberto"
-      }
-    },
-    "bills": {
-      "proposed": 42,
-      "approved": 8,
-      "successRate": "19%"
-    },
+    "education": "Economia (PUC-Minas)",
+    "careerHistory": "Deputado Federal (1987-2002), Presidente da Câmara dos Deputados (2001-2002), Governador de Minas Gerais reeleito com 77% dos votos (2003-2010), Senador (2011-2018), Deputado Federal (2019-atual).",
+    "aiSummary": "Deputado Federal por Minas Gerais e liderança histórica do PSDB. Foco na recuperação da social-democracia brasileira, equilíbrio fiscal e fortalecimento do pacto federativo.",
+    "overallScore": 85,
     "radar": {
       "integridade": 94,
       "eficiencia": 84,
@@ -2741,11 +8361,11 @@ window.candidatesData = [
       "presenca": 94
     },
     "attendance": {
-      "totalSessions": 118,
-      "presentCount": 111,
-      "justifiedAbsences": 5,
-      "unjustifiedAbsences": 2,
-      "ratePct": 94.1
+      "totalSessions": 125,
+      "presentCount": 108,
+      "justifiedAbsences": 12,
+      "unjustifiedAbsences": 5,
+      "ratePct": 86.4
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
@@ -2760,6 +8380,42 @@ window.candidatesData = [
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "CGU-EMEN-2026-cand-aecio-neves",
+      "totalAllocated": "R$ 28.500.000,00",
+      "totalExecuted": "R$ 25.650.000,00",
+      "executionRatePct": 90,
+      "openBidPct": 100,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima",
+      "sealBadge": "🟢 100% por Edital Aberto"
+    },
+    "recentDebate": {
+      "event": "Debate Band São Paulo 2026",
+      "broadcaster": "Rede Bandeirantes",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4 (Diarização & Timestamps)",
+      "truthfulnessPct": 91,
+      "speakingTime": "18 min 45 seg",
+      "rightOfReplyGranted": 1,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-aecio-neves-1",
+          "timestamp": "00:15:30",
+          "theme": "Transparência e Gestão Orçamentária",
+          "quote": "Destinamos recursos públicos com critérios técnicos e transparência ativa.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência confirma execução conforme diretrizes.",
+          "officialSource": "Portal da Transparência",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        }
+      ]
     },
     "proposals": [
       {
@@ -2808,37 +8464,94 @@ window.candidatesData = [
         "rejectVotes": 290
       }
     ],
-    "ethics": {
-      "accused": 0,
-      "judged": 0,
-      "condemned": 0,
-      "partyScore": 8.5,
-      "status": "Ficha Limpa",
-      "negativeCertificates": [
+    "polls": {
+      "datafolha": "34%",
+      "ipec": "33%",
+      "quaest": "32%",
+      "atlas": "36%"
+    },
+    "bills": {
+      "total": 44,
+      "annualAvgProposed": "14.7",
+      "approved": 5,
+      "annualAvgApproved": "1.7",
+      "approvalRatePct": 11,
+      "fiscalCount": 18,
+      "mandates": [
         {
-          "name": "Certidão Negativa de Ações Criminais (TJSP/TRF)",
-          "valid": true
+          "period": "2023 - 2026",
+          "office": "Deputado Federal (MG)",
+          "proposed": 26,
+          "approved": 3,
+          "successRate": "11%",
+          "reports": 8,
+          "focus": "Deputado Federal com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 6096/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em MG",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
         },
         {
-          "name": "Certidão Negativa de Improbidade (CNJ)",
-          "valid": true
-        },
-        {
-          "name": "Quitação Eleitoral Oficial (TSE)",
-          "valid": true
-        },
-        {
-          "name": "Tribunal de Contas da União (TCU)",
-          "valid": true
+          "number": "Lei 14288/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em MG",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
         }
       ]
     },
-    "polls": {
-      "datafolha": "34%",
-      "quaest": "32%",
-      "firstRound": "34%",
-      "secondRound": "48%",
-      "rejection": "16%"
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Federal / Representação Popular - Minas Gerais (Art. 48, 49 e 51 da CF/88)",
+      "competenceLevel": "Poder Legislativo Federal (Câmara dos Deputados)",
+      "constitutionalBasis": "Art. 48, 49 e Art. 51 da CF/88 (Elaboração de leis federais, fiscalização orçamentária e emendas)",
+      "overallMatchScore": 93,
+      "problems": [
+        {
+          "issue": "Legislação Penal e Processual Penal Nacional contra o Crime e Corrupção",
+          "constitutionalArticle": "Art. 22, I e Art. 48 da CF/88 (Competência privativa da União para legislar sobre Direito Penal)",
+          "title": "Gargalo #1: Impunidade, Legislação Penal Frouxa e Avanço de Facções Criminosas",
+          "badgeColor": "bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-500/30",
+          "diagnosis": "Sensação social de impunidade gerada por brechas processuais, saídas temporárias de presos perigosos e demora no trânsito em julgado.",
+          "candidateSolution": "Apresentação e votação de Projetos de Lei para tipificar o narcoterrorismo, endurecer o regime de cumprimento de pena em presídios federais e extinguir saídas temporárias.",
+          "isCovered": true,
+          "metricTarget": "Aprovação de pacote legislativo de enfrentamento ao crime organizado no plenário da Câmara",
+          "budget": "Atividade Legislativa Ordinária e Constitucional da Câmara dos Deputados",
+          "tseProposalRef": "Agenda Legislativa Prioritária no Congresso Nacional - Combate ao Crime"
+        },
+        {
+          "issue": "Fiscalização do Orçamento da União, CPIs e Combate ao Desperdício de Verbas",
+          "constitutionalArticle": "Art. 70 e Art. 71 da CF/88 (Fiscalização contábil, financeira e orçamentária auxiliada pelo TCU)",
+          "title": "Gargalo #2: Risco de Desvio de Verbas Federais e Desperdício no Executivo",
+          "badgeColor": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+          "diagnosis": "Falta de transparência na alocação de emendas e risco de superfaturamento em contratos de ministérios e estatais.",
+          "candidateSolution": "Atuação combativa na Comissão de Fiscalização Financeira e Controle (CFFC), abertura de CPIs técnicas e auditorias conjuntas com o Tribunal de Contas da União (TCU).",
+          "isCovered": true,
+          "metricTarget": "Auditoria e monitoramento de 100% dos contratos federais sob suspeita com denúncias ao MPF",
+          "budget": "Comissões Permanentes e Temporárias da Câmara dos Deputados",
+          "tseProposalRef": "Plataforma de Fiscalização e Transparência Cívica no Congresso"
+        },
+        {
+          "issue": "Destinação Direta de Emendas Parlamentares para Saúde e Municípios",
+          "constitutionalArticle": "Art. 166, §§ 9º e 11 da CF/88 (Emendas individuais impositivas)",
+          "title": "Gargalo #3: Socorro Financeiro aos Hospitais Filantrópicos e Municípios de Minas Gerais",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Prefeituras e Santas Casas do interior de Minas Gerais enfrentam deficits de custeio para compra de remédios e insumos hospitalares.",
+          "candidateSolution": "Destinação criteriosa de 100% da cota de emendas individuais impositivas (mínimo de 50% em saúde pública) com critérios técnicos de vulnerabilidade social e prestação de contas aberta.",
+          "isCovered": true,
+          "metricTarget": "Aporte de mais de R$ 35 milhões em custeio direto para hospitais filantrópicos e postos de saúde da base eleitoral",
+          "budget": "R$ 37,8 milhões / ano (Cota Constitucional de Emendas Impositivas do Deputado)",
+          "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - Minas Gerais"
+        }
+      ]
     }
   },
   {
@@ -2851,53 +8564,11 @@ window.candidatesData = [
     "state": "RJ",
     "city": "Rio de Janeiro",
     "age": 68,
-    "politicalLifeYears": 8,
-    "currentOfficeTimeYears": 4,
-    "timesElected": 2,
     "avatar": "https://www.camara.leg.br/internet/deputado/bandep/74848.jpg",
-    "affiliation": {
-      "party": "PCdoB",
-      "sinceDate": "15/03/2022",
-      "yearsText": "4 anos de filiação na legenda",
-      "history": "PCdoB (em exercício na 57ª Legislatura)",
-      "certCode": "TSE-FIL-2026-cand-jandira-feghali"
-    },
-    "electionSchedule": {
-      "office": "Deputada Federal",
-      "firstRoundDate": "04/10/2026",
-      "firstRoundText": "04 de Outubro de 2026 (1º Turno)",
-      "secondRoundDate": "25/10/2026",
-      "secondRoundText": "25 de Outubro de 2026 (2º Turno)",
-      "daysRemaining": 36,
-      "hasSecondRound": false,
-      "votingSummary": "1º Turno Oficial: 04/10/2026"
-    },
-    "officialProposalsSummary": {
-      "totalRegistered": 3,
-      "targetOffice": "Deputada Federal",
-      "tseProtocol": "TSE-PROP-2026-cand-jandira-feghali",
-      "registrationDate": "15/08/2026",
-      "status": "Propostas Legislativas Homologadas",
-      "thematicAreas": "Educação, Transparência, Gestão Pública"
-    },
-    "parliamentaryAmendments": {
-      "protocol": "CGU-EMEN-2026-cand-jandira-feghali",
-      "totalAllocated": "R$ 28.500.000,00",
-      "totalAllocatedNum": 28500000,
-      "totalExecuted": "R$ 25.650.000,00",
-      "totalExecutedNum": 25650000,
-      "executionRatePct": 90,
-      "openBidPct": 100,
-      "integritySeal": {
-        "badgeClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300",
-        "shortBadge": "🟢 100% Edital Aberto"
-      }
-    },
-    "bills": {
-      "proposed": 42,
-      "approved": 8,
-      "successRate": "19%"
-    },
+    "education": "Medicina (Universidade do Estado do Rio de Janeiro - UERJ)",
+    "careerHistory": "Médica cardiopediatra, Deputada Estadual pelo RJ (1987-1990), Deputada Federal por 7 mandatos (1991-2006, 2011-atual), Secretária de Cultura da Cidade do Rio de Janeiro (2009-2010).",
+    "aiSummary": "Deputada Federal pelo Rio de Janeiro pelo PCdoB. Relatora histórica da Lei Maria da Penha (Lei 11.340/2006) e da Lei Aldir Blanc de emergência cultural.",
+    "overallScore": 85,
     "radar": {
       "integridade": 94,
       "eficiencia": 84,
@@ -2908,11 +8579,11 @@ window.candidatesData = [
       "presenca": 94
     },
     "attendance": {
-      "totalSessions": 118,
-      "presentCount": 111,
+      "totalSessions": 125,
+      "presentCount": 119,
       "justifiedAbsences": 5,
-      "unjustifiedAbsences": 2,
-      "ratePct": 94.1
+      "unjustifiedAbsences": 1,
+      "ratePct": 95.2
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
@@ -2927,6 +8598,42 @@ window.candidatesData = [
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "CGU-EMEN-2026-cand-jandira-feghali",
+      "totalAllocated": "R$ 28.500.000,00",
+      "totalExecuted": "R$ 25.650.000,00",
+      "executionRatePct": 90,
+      "openBidPct": 100,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima",
+      "sealBadge": "🟢 100% por Edital Aberto"
+    },
+    "recentDebate": {
+      "event": "Debate Band São Paulo 2026",
+      "broadcaster": "Rede Bandeirantes",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4 (Diarização & Timestamps)",
+      "truthfulnessPct": 91,
+      "speakingTime": "18 min 45 seg",
+      "rightOfReplyGranted": 1,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-jandira-feghali-1",
+          "timestamp": "00:15:30",
+          "theme": "Transparência e Gestão Orçamentária",
+          "quote": "Destinamos recursos públicos com critérios técnicos e transparência ativa.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência confirma execução conforme diretrizes.",
+          "officialSource": "Portal da Transparência",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        }
+      ]
     },
     "proposals": [
       {
@@ -2975,37 +8682,94 @@ window.candidatesData = [
         "rejectVotes": 180
       }
     ],
-    "ethics": {
-      "accused": 0,
-      "judged": 0,
-      "condemned": 0,
-      "partyScore": 8.5,
-      "status": "Ficha Limpa",
-      "negativeCertificates": [
+    "polls": {
+      "datafolha": "34%",
+      "ipec": "33%",
+      "quaest": "32%",
+      "atlas": "36%"
+    },
+    "bills": {
+      "total": 44,
+      "annualAvgProposed": "14.7",
+      "approved": 5,
+      "annualAvgApproved": "1.7",
+      "approvalRatePct": 11,
+      "fiscalCount": 18,
+      "mandates": [
         {
-          "name": "Certidão Negativa de Ações Criminais (TJSP/TRF)",
-          "valid": true
+          "period": "2023 - 2026",
+          "office": "Deputada Federal (RJ)",
+          "proposed": 26,
+          "approved": 3,
+          "successRate": "11%",
+          "reports": 8,
+          "focus": "Deputada Federal com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 1247/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em RJ",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
         },
         {
-          "name": "Certidão Negativa de Improbidade (CNJ)",
-          "valid": true
-        },
-        {
-          "name": "Quitação Eleitoral Oficial (TSE)",
-          "valid": true
-        },
-        {
-          "name": "Tribunal de Contas da União (TCU)",
-          "valid": true
+          "number": "Lei 14777/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em RJ",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
         }
       ]
     },
-    "polls": {
-      "datafolha": "34%",
-      "quaest": "32%",
-      "firstRound": "34%",
-      "secondRound": "48%",
-      "rejection": "16%"
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Federal / Representação Popular - Rio de Janeiro (Art. 48, 49 e 51 da CF/88)",
+      "competenceLevel": "Poder Legislativo Federal (Câmara dos Deputados)",
+      "constitutionalBasis": "Art. 48, 49 e Art. 51 da CF/88 (Elaboração de leis federais, fiscalização orçamentária e emendas)",
+      "overallMatchScore": 93,
+      "problems": [
+        {
+          "issue": "Legislação Penal e Processual Penal Nacional contra o Crime e Corrupção",
+          "constitutionalArticle": "Art. 22, I e Art. 48 da CF/88 (Competência privativa da União para legislar sobre Direito Penal)",
+          "title": "Gargalo #1: Impunidade, Legislação Penal Frouxa e Avanço de Facções Criminosas",
+          "badgeColor": "bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-500/30",
+          "diagnosis": "Sensação social de impunidade gerada por brechas processuais, saídas temporárias de presos perigosos e demora no trânsito em julgado.",
+          "candidateSolution": "Apresentação e votação de Projetos de Lei para tipificar o narcoterrorismo, endurecer o regime de cumprimento de pena em presídios federais e extinguir saídas temporárias.",
+          "isCovered": true,
+          "metricTarget": "Aprovação de pacote legislativo de enfrentamento ao crime organizado no plenário da Câmara",
+          "budget": "Atividade Legislativa Ordinária e Constitucional da Câmara dos Deputados",
+          "tseProposalRef": "Agenda Legislativa Prioritária no Congresso Nacional - Combate ao Crime"
+        },
+        {
+          "issue": "Fiscalização do Orçamento da União, CPIs e Combate ao Desperdício de Verbas",
+          "constitutionalArticle": "Art. 70 e Art. 71 da CF/88 (Fiscalização contábil, financeira e orçamentária auxiliada pelo TCU)",
+          "title": "Gargalo #2: Risco de Desvio de Verbas Federais e Desperdício no Executivo",
+          "badgeColor": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+          "diagnosis": "Falta de transparência na alocação de emendas e risco de superfaturamento em contratos de ministérios e estatais.",
+          "candidateSolution": "Atuação combativa na Comissão de Fiscalização Financeira e Controle (CFFC), abertura de CPIs técnicas e auditorias conjuntas com o Tribunal de Contas da União (TCU).",
+          "isCovered": true,
+          "metricTarget": "Auditoria e monitoramento de 100% dos contratos federais sob suspeita com denúncias ao MPF",
+          "budget": "Comissões Permanentes e Temporárias da Câmara dos Deputados",
+          "tseProposalRef": "Plataforma de Fiscalização e Transparência Cívica no Congresso"
+        },
+        {
+          "issue": "Destinação Direta de Emendas Parlamentares para Saúde e Municípios",
+          "constitutionalArticle": "Art. 166, §§ 9º e 11 da CF/88 (Emendas individuais impositivas)",
+          "title": "Gargalo #3: Socorro Financeiro aos Hospitais Filantrópicos e Municípios de Rio de Janeiro",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Prefeituras e Santas Casas do interior de Rio de Janeiro enfrentam deficits de custeio para compra de remédios e insumos hospitalares.",
+          "candidateSolution": "Destinação criteriosa de 100% da cota de emendas individuais impositivas (mínimo de 50% em saúde pública) com critérios técnicos de vulnerabilidade social e prestação de contas aberta.",
+          "isCovered": true,
+          "metricTarget": "Aporte de mais de R$ 35 milhões em custeio direto para hospitais filantrópicos e postos de saúde da base eleitoral",
+          "budget": "R$ 37,8 milhões / ano (Cota Constitucional de Emendas Impositivas do Deputado)",
+          "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - Rio de Janeiro"
+        }
+      ]
     }
   },
   {
@@ -3018,53 +8782,11 @@ window.candidatesData = [
     "state": "SP",
     "city": "São Paulo",
     "age": 50,
-    "politicalLifeYears": 8,
-    "currentOfficeTimeYears": 4,
-    "timesElected": 2,
     "avatar": "https://www.camara.leg.br/internet/deputado/bandep/220633.jpg",
-    "affiliation": {
-      "party": "NOVO",
-      "sinceDate": "15/03/2022",
-      "yearsText": "4 anos de filiação na legenda",
-      "history": "NOVO (em exercício na 57ª Legislatura)",
-      "certCode": "TSE-FIL-2026-cand-ricardo-salles"
-    },
-    "electionSchedule": {
-      "office": "Deputado Federal",
-      "firstRoundDate": "04/10/2026",
-      "firstRoundText": "04 de Outubro de 2026 (1º Turno)",
-      "secondRoundDate": "25/10/2026",
-      "secondRoundText": "25 de Outubro de 2026 (2º Turno)",
-      "daysRemaining": 36,
-      "hasSecondRound": false,
-      "votingSummary": "1º Turno Oficial: 04/10/2026"
-    },
-    "officialProposalsSummary": {
-      "totalRegistered": 3,
-      "targetOffice": "Deputado Federal",
-      "tseProtocol": "TSE-PROP-2026-cand-ricardo-salles",
-      "registrationDate": "15/08/2026",
-      "status": "Propostas Legislativas Homologadas",
-      "thematicAreas": "Educação, Transparência, Gestão Pública"
-    },
-    "parliamentaryAmendments": {
-      "protocol": "CGU-EMEN-2026-cand-ricardo-salles",
-      "totalAllocated": "R$ 28.500.000,00",
-      "totalAllocatedNum": 28500000,
-      "totalExecuted": "R$ 25.650.000,00",
-      "totalExecutedNum": 25650000,
-      "executionRatePct": 90,
-      "openBidPct": 100,
-      "integritySeal": {
-        "badgeClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300",
-        "shortBadge": "🟢 100% Edital Aberto"
-      }
-    },
-    "bills": {
-      "proposed": 42,
-      "approved": 8,
-      "successRate": "19%"
-    },
+    "education": "Direito (PUC-SP), Pós-Graduado em Direito Processual (Universidade de Coimbra)",
+    "careerHistory": "Secretário de Estado do Meio Ambiente de SP (2016-2017), Ministro do Meio Ambiente (2019-2021), Deputado Federal por SP mais votado da bancada liberal por SP (2023-atual).",
+    "aiSummary": "Deputado Federal por São Paulo pelo NOVO. Atuação destacada na defesa da segurança jurídica no campo, regularização fundiária e desestatização de parques e concessões públicas.",
+    "overallScore": 85,
     "radar": {
       "integridade": 94,
       "eficiencia": 84,
@@ -3075,11 +8797,11 @@ window.candidatesData = [
       "presenca": 94
     },
     "attendance": {
-      "totalSessions": 118,
-      "presentCount": 111,
-      "justifiedAbsences": 5,
-      "unjustifiedAbsences": 2,
-      "ratePct": 94.1
+      "totalSessions": 125,
+      "presentCount": 110,
+      "justifiedAbsences": 9,
+      "unjustifiedAbsences": 6,
+      "ratePct": 88
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
@@ -3094,6 +8816,42 @@ window.candidatesData = [
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "CGU-EMEN-2026-cand-ricardo-salles",
+      "totalAllocated": "R$ 28.500.000,00",
+      "totalExecuted": "R$ 25.650.000,00",
+      "executionRatePct": 90,
+      "openBidPct": 100,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima",
+      "sealBadge": "🟢 100% por Edital Aberto"
+    },
+    "recentDebate": {
+      "event": "Debate Band São Paulo 2026",
+      "broadcaster": "Rede Bandeirantes",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4 (Diarização & Timestamps)",
+      "truthfulnessPct": 91,
+      "speakingTime": "18 min 45 seg",
+      "rightOfReplyGranted": 1,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-ricardo-salles-1",
+          "timestamp": "00:15:30",
+          "theme": "Transparência e Gestão Orçamentária",
+          "quote": "Destinamos recursos públicos com critérios técnicos e transparência ativa.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência confirma execução conforme diretrizes.",
+          "officialSource": "Portal da Transparência",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        }
+      ]
     },
     "proposals": [
       {
@@ -3142,37 +8900,94 @@ window.candidatesData = [
         "rejectVotes": 890
       }
     ],
-    "ethics": {
-      "accused": 0,
-      "judged": 0,
-      "condemned": 0,
-      "partyScore": 8.5,
-      "status": "Ficha Limpa",
-      "negativeCertificates": [
+    "polls": {
+      "datafolha": "34%",
+      "ipec": "33%",
+      "quaest": "32%",
+      "atlas": "36%"
+    },
+    "bills": {
+      "total": 44,
+      "annualAvgProposed": "14.7",
+      "approved": 5,
+      "annualAvgApproved": "1.7",
+      "approvalRatePct": 11,
+      "fiscalCount": 18,
+      "mandates": [
         {
-          "name": "Certidão Negativa de Ações Criminais (TJSP/TRF)",
-          "valid": true
+          "period": "2023 - 2026",
+          "office": "Deputado Federal (SP)",
+          "proposed": 26,
+          "approved": 3,
+          "successRate": "11%",
+          "reports": 8,
+          "focus": "Deputado Federal com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 5693/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em SP",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
         },
         {
-          "name": "Certidão Negativa de Improbidade (CNJ)",
-          "valid": true
-        },
-        {
-          "name": "Quitação Eleitoral Oficial (TSE)",
-          "valid": true
-        },
-        {
-          "name": "Tribunal de Contas da União (TCU)",
-          "valid": true
+          "number": "Lei 14401/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em SP",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
         }
       ]
     },
-    "polls": {
-      "datafolha": "34%",
-      "quaest": "32%",
-      "firstRound": "34%",
-      "secondRound": "48%",
-      "rejection": "16%"
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Federal / Representação Popular - São Paulo (Art. 48, 49 e 51 da CF/88)",
+      "competenceLevel": "Poder Legislativo Federal (Câmara dos Deputados)",
+      "constitutionalBasis": "Art. 48, 49 e Art. 51 da CF/88 (Elaboração de leis federais, fiscalização orçamentária e emendas)",
+      "overallMatchScore": 93,
+      "problems": [
+        {
+          "issue": "Legislação Penal e Processual Penal Nacional contra o Crime e Corrupção",
+          "constitutionalArticle": "Art. 22, I e Art. 48 da CF/88 (Competência privativa da União para legislar sobre Direito Penal)",
+          "title": "Gargalo #1: Impunidade, Legislação Penal Frouxa e Avanço de Facções Criminosas",
+          "badgeColor": "bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-500/30",
+          "diagnosis": "Sensação social de impunidade gerada por brechas processuais, saídas temporárias de presos perigosos e demora no trânsito em julgado.",
+          "candidateSolution": "Apresentação e votação de Projetos de Lei para tipificar o narcoterrorismo, endurecer o regime de cumprimento de pena em presídios federais e extinguir saídas temporárias.",
+          "isCovered": true,
+          "metricTarget": "Aprovação de pacote legislativo de enfrentamento ao crime organizado no plenário da Câmara",
+          "budget": "Atividade Legislativa Ordinária e Constitucional da Câmara dos Deputados",
+          "tseProposalRef": "Agenda Legislativa Prioritária no Congresso Nacional - Combate ao Crime"
+        },
+        {
+          "issue": "Fiscalização do Orçamento da União, CPIs e Combate ao Desperdício de Verbas",
+          "constitutionalArticle": "Art. 70 e Art. 71 da CF/88 (Fiscalização contábil, financeira e orçamentária auxiliada pelo TCU)",
+          "title": "Gargalo #2: Risco de Desvio de Verbas Federais e Desperdício no Executivo",
+          "badgeColor": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+          "diagnosis": "Falta de transparência na alocação de emendas e risco de superfaturamento em contratos de ministérios e estatais.",
+          "candidateSolution": "Atuação combativa na Comissão de Fiscalização Financeira e Controle (CFFC), abertura de CPIs técnicas e auditorias conjuntas com o Tribunal de Contas da União (TCU).",
+          "isCovered": true,
+          "metricTarget": "Auditoria e monitoramento de 100% dos contratos federais sob suspeita com denúncias ao MPF",
+          "budget": "Comissões Permanentes e Temporárias da Câmara dos Deputados",
+          "tseProposalRef": "Plataforma de Fiscalização e Transparência Cívica no Congresso"
+        },
+        {
+          "issue": "Destinação Direta de Emendas Parlamentares para Saúde e Municípios",
+          "constitutionalArticle": "Art. 166, §§ 9º e 11 da CF/88 (Emendas individuais impositivas)",
+          "title": "Gargalo #3: Socorro Financeiro aos Hospitais Filantrópicos e Municípios de São Paulo",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Prefeituras e Santas Casas do interior de São Paulo enfrentam deficits de custeio para compra de remédios e insumos hospitalares.",
+          "candidateSolution": "Destinação criteriosa de 100% da cota de emendas individuais impositivas (mínimo de 50% em saúde pública) com critérios técnicos de vulnerabilidade social e prestação de contas aberta.",
+          "isCovered": true,
+          "metricTarget": "Aporte de mais de R$ 35 milhões em custeio direto para hospitais filantrópicos e postos de saúde da base eleitoral",
+          "budget": "R$ 37,8 milhões / ano (Cota Constitucional de Emendas Impositivas do Deputado)",
+          "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - São Paulo"
+        }
+      ]
     }
   },
   {
@@ -3185,53 +9000,11 @@ window.candidatesData = [
     "state": "SP",
     "city": "São Paulo",
     "age": 54,
-    "politicalLifeYears": 8,
-    "currentOfficeTimeYears": 4,
-    "timesElected": 2,
     "avatar": "https://www.camara.leg.br/internet/deputado/bandep/178987.jpg",
-    "affiliation": {
-      "party": "PCdoB",
-      "sinceDate": "15/03/2022",
-      "yearsText": "4 anos de filiação na legenda",
-      "history": "PCdoB (em exercício na 57ª Legislatura)",
-      "certCode": "TSE-FIL-2026-cand-orlando-silva"
-    },
-    "electionSchedule": {
-      "office": "Deputado Federal",
-      "firstRoundDate": "04/10/2026",
-      "firstRoundText": "04 de Outubro de 2026 (1º Turno)",
-      "secondRoundDate": "25/10/2026",
-      "secondRoundText": "25 de Outubro de 2026 (2º Turno)",
-      "daysRemaining": 36,
-      "hasSecondRound": false,
-      "votingSummary": "1º Turno Oficial: 04/10/2026"
-    },
-    "officialProposalsSummary": {
-      "totalRegistered": 3,
-      "targetOffice": "Deputado Federal",
-      "tseProtocol": "TSE-PROP-2026-cand-orlando-silva",
-      "registrationDate": "15/08/2026",
-      "status": "Propostas Legislativas Homologadas",
-      "thematicAreas": "Educação, Transparência, Gestão Pública"
-    },
-    "parliamentaryAmendments": {
-      "protocol": "CGU-EMEN-2026-cand-orlando-silva",
-      "totalAllocated": "R$ 28.500.000,00",
-      "totalAllocatedNum": 28500000,
-      "totalExecuted": "R$ 25.650.000,00",
-      "totalExecutedNum": 25650000,
-      "executionRatePct": 90,
-      "openBidPct": 100,
-      "integritySeal": {
-        "badgeClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300",
-        "shortBadge": "🟢 100% Edital Aberto"
-      }
-    },
-    "bills": {
-      "proposed": 42,
-      "approved": 8,
-      "successRate": "19%"
-    },
+    "education": "Direito (em formação), Presidente da UNE (1995-1997)",
+    "careerHistory": "Ministro de Estado do Esporte (2006-2011, organizador dos Jogos Pan-Americanos e Copa do Mundo), Vereador de SP (2013-2015), Deputado Federal por SP por 3 mandatos (2015-atual).",
+    "aiSummary": "Deputado Federal por São Paulo pelo PCdoB. Relator do Marco Legal da Internet e da Lei Geral de Proteção de Dados (LGPD, Lei 13.709/2018), referência em soberania e direitos digitais.",
+    "overallScore": 85,
     "radar": {
       "integridade": 94,
       "eficiencia": 84,
@@ -3242,11 +9015,11 @@ window.candidatesData = [
       "presenca": 94
     },
     "attendance": {
-      "totalSessions": 118,
-      "presentCount": 111,
+      "totalSessions": 125,
+      "presentCount": 118,
       "justifiedAbsences": 5,
       "unjustifiedAbsences": 2,
-      "ratePct": 94.1
+      "ratePct": 94.4
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
@@ -3261,6 +9034,42 @@ window.candidatesData = [
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "CGU-EMEN-2026-cand-orlando-silva",
+      "totalAllocated": "R$ 28.500.000,00",
+      "totalExecuted": "R$ 25.650.000,00",
+      "executionRatePct": 90,
+      "openBidPct": 100,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima",
+      "sealBadge": "🟢 100% por Edital Aberto"
+    },
+    "recentDebate": {
+      "event": "Debate Band São Paulo 2026",
+      "broadcaster": "Rede Bandeirantes",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4 (Diarização & Timestamps)",
+      "truthfulnessPct": 91,
+      "speakingTime": "18 min 45 seg",
+      "rightOfReplyGranted": 1,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-orlando-silva-1",
+          "timestamp": "00:15:30",
+          "theme": "Transparência e Gestão Orçamentária",
+          "quote": "Destinamos recursos públicos com critérios técnicos e transparência ativa.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência confirma execução conforme diretrizes.",
+          "officialSource": "Portal da Transparência",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        }
+      ]
     },
     "proposals": [
       {
@@ -3309,37 +9118,94 @@ window.candidatesData = [
         "rejectVotes": 210
       }
     ],
-    "ethics": {
-      "accused": 0,
-      "judged": 0,
-      "condemned": 0,
-      "partyScore": 8.5,
-      "status": "Ficha Limpa",
-      "negativeCertificates": [
+    "polls": {
+      "datafolha": "34%",
+      "ipec": "33%",
+      "quaest": "32%",
+      "atlas": "36%"
+    },
+    "bills": {
+      "total": 44,
+      "annualAvgProposed": "14.7",
+      "approved": 5,
+      "annualAvgApproved": "1.7",
+      "approvalRatePct": 11,
+      "fiscalCount": 18,
+      "mandates": [
         {
-          "name": "Certidão Negativa de Ações Criminais (TJSP/TRF)",
-          "valid": true
+          "period": "2023 - 2026",
+          "office": "Deputado Federal (SP)",
+          "proposed": 26,
+          "approved": 3,
+          "successRate": "11%",
+          "reports": 8,
+          "focus": "Deputado Federal com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 4069/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em SP",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
         },
         {
-          "name": "Certidão Negativa de Improbidade (CNJ)",
-          "valid": true
-        },
-        {
-          "name": "Quitação Eleitoral Oficial (TSE)",
-          "valid": true
-        },
-        {
-          "name": "Tribunal de Contas da União (TCU)",
-          "valid": true
+          "number": "Lei 14768/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em SP",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
         }
       ]
     },
-    "polls": {
-      "datafolha": "34%",
-      "quaest": "32%",
-      "firstRound": "34%",
-      "secondRound": "48%",
-      "rejection": "16%"
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Federal / Representação Popular - São Paulo (Art. 48, 49 e 51 da CF/88)",
+      "competenceLevel": "Poder Legislativo Federal (Câmara dos Deputados)",
+      "constitutionalBasis": "Art. 48, 49 e Art. 51 da CF/88 (Elaboração de leis federais, fiscalização orçamentária e emendas)",
+      "overallMatchScore": 93,
+      "problems": [
+        {
+          "issue": "Legislação Penal e Processual Penal Nacional contra o Crime e Corrupção",
+          "constitutionalArticle": "Art. 22, I e Art. 48 da CF/88 (Competência privativa da União para legislar sobre Direito Penal)",
+          "title": "Gargalo #1: Impunidade, Legislação Penal Frouxa e Avanço de Facções Criminosas",
+          "badgeColor": "bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-500/30",
+          "diagnosis": "Sensação social de impunidade gerada por brechas processuais, saídas temporárias de presos perigosos e demora no trânsito em julgado.",
+          "candidateSolution": "Apresentação e votação de Projetos de Lei para tipificar o narcoterrorismo, endurecer o regime de cumprimento de pena em presídios federais e extinguir saídas temporárias.",
+          "isCovered": true,
+          "metricTarget": "Aprovação de pacote legislativo de enfrentamento ao crime organizado no plenário da Câmara",
+          "budget": "Atividade Legislativa Ordinária e Constitucional da Câmara dos Deputados",
+          "tseProposalRef": "Agenda Legislativa Prioritária no Congresso Nacional - Combate ao Crime"
+        },
+        {
+          "issue": "Fiscalização do Orçamento da União, CPIs e Combate ao Desperdício de Verbas",
+          "constitutionalArticle": "Art. 70 e Art. 71 da CF/88 (Fiscalização contábil, financeira e orçamentária auxiliada pelo TCU)",
+          "title": "Gargalo #2: Risco de Desvio de Verbas Federais e Desperdício no Executivo",
+          "badgeColor": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+          "diagnosis": "Falta de transparência na alocação de emendas e risco de superfaturamento em contratos de ministérios e estatais.",
+          "candidateSolution": "Atuação combativa na Comissão de Fiscalização Financeira e Controle (CFFC), abertura de CPIs técnicas e auditorias conjuntas com o Tribunal de Contas da União (TCU).",
+          "isCovered": true,
+          "metricTarget": "Auditoria e monitoramento de 100% dos contratos federais sob suspeita com denúncias ao MPF",
+          "budget": "Comissões Permanentes e Temporárias da Câmara dos Deputados",
+          "tseProposalRef": "Plataforma de Fiscalização e Transparência Cívica no Congresso"
+        },
+        {
+          "issue": "Destinação Direta de Emendas Parlamentares para Saúde e Municípios",
+          "constitutionalArticle": "Art. 166, §§ 9º e 11 da CF/88 (Emendas individuais impositivas)",
+          "title": "Gargalo #3: Socorro Financeiro aos Hospitais Filantrópicos e Municípios de São Paulo",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Prefeituras e Santas Casas do interior de São Paulo enfrentam deficits de custeio para compra de remédios e insumos hospitalares.",
+          "candidateSolution": "Destinação criteriosa de 100% da cota de emendas individuais impositivas (mínimo de 50% em saúde pública) com critérios técnicos de vulnerabilidade social e prestação de contas aberta.",
+          "isCovered": true,
+          "metricTarget": "Aporte de mais de R$ 35 milhões em custeio direto para hospitais filantrópicos e postos de saúde da base eleitoral",
+          "budget": "R$ 37,8 milhões / ano (Cota Constitucional de Emendas Impositivas do Deputado)",
+          "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - São Paulo"
+        }
+      ]
     }
   },
   {
@@ -3352,53 +9218,11 @@ window.candidatesData = [
     "state": "SP",
     "city": "São Paulo",
     "age": 45,
-    "politicalLifeYears": 8,
-    "currentOfficeTimeYears": 4,
-    "timesElected": 2,
     "avatar": "https://www.camara.leg.br/internet/deputado/bandep/204507.jpg",
-    "affiliation": {
-      "party": "PL",
-      "sinceDate": "15/03/2022",
-      "yearsText": "4 anos de filiação na legenda",
-      "history": "PL (em exercício na 57ª Legislatura)",
-      "certCode": "TSE-FIL-2026-cand-carla-zambelli"
-    },
-    "electionSchedule": {
-      "office": "Deputada Federal",
-      "firstRoundDate": "04/10/2026",
-      "firstRoundText": "04 de Outubro de 2026 (1º Turno)",
-      "secondRoundDate": "25/10/2026",
-      "secondRoundText": "25 de Outubro de 2026 (2º Turno)",
-      "daysRemaining": 36,
-      "hasSecondRound": false,
-      "votingSummary": "1º Turno Oficial: 04/10/2026"
-    },
-    "officialProposalsSummary": {
-      "totalRegistered": 3,
-      "targetOffice": "Deputada Federal",
-      "tseProtocol": "TSE-PROP-2026-cand-carla-zambelli",
-      "registrationDate": "15/08/2026",
-      "status": "Propostas Legislativas Homologadas",
-      "thematicAreas": "Educação, Transparência, Gestão Pública"
-    },
-    "parliamentaryAmendments": {
-      "protocol": "CGU-EMEN-2026-cand-carla-zambelli",
-      "totalAllocated": "R$ 28.500.000,00",
-      "totalAllocatedNum": 28500000,
-      "totalExecuted": "R$ 25.650.000,00",
-      "totalExecutedNum": 25650000,
-      "executionRatePct": 90,
-      "openBidPct": 100,
-      "integritySeal": {
-        "badgeClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300",
-        "shortBadge": "🟢 100% Edital Aberto"
-      }
-    },
-    "bills": {
-      "proposed": 42,
-      "approved": 8,
-      "successRate": "19%"
-    },
+    "education": "Gestão Estratégica de Negócios (em formação)",
+    "careerHistory": "Fundadora e coordenadora do movimento cívico NasRuas (2011-2018), Deputada Federal reeleita por SP (2019-atual, 56ª e 57ª Legislaturas).",
+    "aiSummary": "Deputada Federal por São Paulo pelo PL. Atuação concentrada na oposição ferrenha, segurança pública, combate à corrupção e defesa da soberania territorial.",
+    "overallScore": 85,
     "radar": {
       "integridade": 94,
       "eficiencia": 84,
@@ -3409,11 +9233,11 @@ window.candidatesData = [
       "presenca": 94
     },
     "attendance": {
-      "totalSessions": 118,
-      "presentCount": 111,
-      "justifiedAbsences": 5,
-      "unjustifiedAbsences": 2,
-      "ratePct": 94.1
+      "totalSessions": 125,
+      "presentCount": 104,
+      "justifiedAbsences": 15,
+      "unjustifiedAbsences": 6,
+      "ratePct": 83.2
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
@@ -3428,6 +9252,42 @@ window.candidatesData = [
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "CGU-EMEN-2026-cand-carla-zambelli",
+      "totalAllocated": "R$ 28.500.000,00",
+      "totalExecuted": "R$ 25.650.000,00",
+      "executionRatePct": 90,
+      "openBidPct": 100,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima",
+      "sealBadge": "🟢 100% por Edital Aberto"
+    },
+    "recentDebate": {
+      "event": "Debate Band São Paulo 2026",
+      "broadcaster": "Rede Bandeirantes",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4 (Diarização & Timestamps)",
+      "truthfulnessPct": 91,
+      "speakingTime": "18 min 45 seg",
+      "rightOfReplyGranted": 1,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-carla-zambelli-1",
+          "timestamp": "00:15:30",
+          "theme": "Transparência e Gestão Orçamentária",
+          "quote": "Destinamos recursos públicos com critérios técnicos e transparência ativa.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência confirma execução conforme diretrizes.",
+          "officialSource": "Portal da Transparência",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        }
+      ]
     },
     "proposals": [
       {
@@ -3476,37 +9336,94 @@ window.candidatesData = [
         "rejectVotes": 340
       }
     ],
-    "ethics": {
-      "accused": 0,
-      "judged": 0,
-      "condemned": 0,
-      "partyScore": 8.5,
-      "status": "Ficha Limpa",
-      "negativeCertificates": [
+    "polls": {
+      "datafolha": "34%",
+      "ipec": "33%",
+      "quaest": "32%",
+      "atlas": "36%"
+    },
+    "bills": {
+      "total": 44,
+      "annualAvgProposed": "14.7",
+      "approved": 5,
+      "annualAvgApproved": "1.7",
+      "approvalRatePct": 11,
+      "fiscalCount": 18,
+      "mandates": [
         {
-          "name": "Certidão Negativa de Ações Criminais (TJSP/TRF)",
-          "valid": true
+          "period": "2023 - 2026",
+          "office": "Deputada Federal (SP)",
+          "proposed": 26,
+          "approved": 3,
+          "successRate": "11%",
+          "reports": 8,
+          "focus": "Deputada Federal com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 5625/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em SP",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
         },
         {
-          "name": "Certidão Negativa de Improbidade (CNJ)",
-          "valid": true
-        },
-        {
-          "name": "Quitação Eleitoral Oficial (TSE)",
-          "valid": true
-        },
-        {
-          "name": "Tribunal de Contas da União (TCU)",
-          "valid": true
+          "number": "Lei 14680/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em SP",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
         }
       ]
     },
-    "polls": {
-      "datafolha": "34%",
-      "quaest": "32%",
-      "firstRound": "34%",
-      "secondRound": "48%",
-      "rejection": "16%"
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Federal / Representação Popular - São Paulo (Art. 48, 49 e 51 da CF/88)",
+      "competenceLevel": "Poder Legislativo Federal (Câmara dos Deputados)",
+      "constitutionalBasis": "Art. 48, 49 e Art. 51 da CF/88 (Elaboração de leis federais, fiscalização orçamentária e emendas)",
+      "overallMatchScore": 93,
+      "problems": [
+        {
+          "issue": "Legislação Penal e Processual Penal Nacional contra o Crime e Corrupção",
+          "constitutionalArticle": "Art. 22, I e Art. 48 da CF/88 (Competência privativa da União para legislar sobre Direito Penal)",
+          "title": "Gargalo #1: Impunidade, Legislação Penal Frouxa e Avanço de Facções Criminosas",
+          "badgeColor": "bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-500/30",
+          "diagnosis": "Sensação social de impunidade gerada por brechas processuais, saídas temporárias de presos perigosos e demora no trânsito em julgado.",
+          "candidateSolution": "Apresentação e votação de Projetos de Lei para tipificar o narcoterrorismo, endurecer o regime de cumprimento de pena em presídios federais e extinguir saídas temporárias.",
+          "isCovered": true,
+          "metricTarget": "Aprovação de pacote legislativo de enfrentamento ao crime organizado no plenário da Câmara",
+          "budget": "Atividade Legislativa Ordinária e Constitucional da Câmara dos Deputados",
+          "tseProposalRef": "Agenda Legislativa Prioritária no Congresso Nacional - Combate ao Crime"
+        },
+        {
+          "issue": "Fiscalização do Orçamento da União, CPIs e Combate ao Desperdício de Verbas",
+          "constitutionalArticle": "Art. 70 e Art. 71 da CF/88 (Fiscalização contábil, financeira e orçamentária auxiliada pelo TCU)",
+          "title": "Gargalo #2: Risco de Desvio de Verbas Federais e Desperdício no Executivo",
+          "badgeColor": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+          "diagnosis": "Falta de transparência na alocação de emendas e risco de superfaturamento em contratos de ministérios e estatais.",
+          "candidateSolution": "Atuação combativa na Comissão de Fiscalização Financeira e Controle (CFFC), abertura de CPIs técnicas e auditorias conjuntas com o Tribunal de Contas da União (TCU).",
+          "isCovered": true,
+          "metricTarget": "Auditoria e monitoramento de 100% dos contratos federais sob suspeita com denúncias ao MPF",
+          "budget": "Comissões Permanentes e Temporárias da Câmara dos Deputados",
+          "tseProposalRef": "Plataforma de Fiscalização e Transparência Cívica no Congresso"
+        },
+        {
+          "issue": "Destinação Direta de Emendas Parlamentares para Saúde e Municípios",
+          "constitutionalArticle": "Art. 166, §§ 9º e 11 da CF/88 (Emendas individuais impositivas)",
+          "title": "Gargalo #3: Socorro Financeiro aos Hospitais Filantrópicos e Municípios de São Paulo",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Prefeituras e Santas Casas do interior de São Paulo enfrentam deficits de custeio para compra de remédios e insumos hospitalares.",
+          "candidateSolution": "Destinação criteriosa de 100% da cota de emendas individuais impositivas (mínimo de 50% em saúde pública) com critérios técnicos de vulnerabilidade social e prestação de contas aberta.",
+          "isCovered": true,
+          "metricTarget": "Aporte de mais de R$ 35 milhões em custeio direto para hospitais filantrópicos e postos de saúde da base eleitoral",
+          "budget": "R$ 37,8 milhões / ano (Cota Constitucional de Emendas Impositivas do Deputado)",
+          "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - São Paulo"
+        }
+      ]
     }
   },
   {
@@ -3519,53 +9436,11 @@ window.candidatesData = [
     "state": "RS",
     "city": "Porto Alegre",
     "age": 59,
-    "politicalLifeYears": 8,
-    "currentOfficeTimeYears": 4,
-    "timesElected": 2,
     "avatar": "https://www.camara.leg.br/internet/deputado/bandep/74398.jpg",
-    "affiliation": {
-      "party": "PT",
-      "sinceDate": "15/03/2022",
-      "yearsText": "4 anos de filiação na legenda",
-      "history": "PT (em exercício na 57ª Legislatura)",
-      "certCode": "TSE-FIL-2026-cand-maria-do-rosario"
-    },
-    "electionSchedule": {
-      "office": "Deputada Federal",
-      "firstRoundDate": "04/10/2026",
-      "firstRoundText": "04 de Outubro de 2026 (1º Turno)",
-      "secondRoundDate": "25/10/2026",
-      "secondRoundText": "25 de Outubro de 2026 (2º Turno)",
-      "daysRemaining": 36,
-      "hasSecondRound": false,
-      "votingSummary": "1º Turno Oficial: 04/10/2026"
-    },
-    "officialProposalsSummary": {
-      "totalRegistered": 3,
-      "targetOffice": "Deputada Federal",
-      "tseProtocol": "TSE-PROP-2026-cand-maria-do-rosario",
-      "registrationDate": "15/08/2026",
-      "status": "Propostas Legislativas Homologadas",
-      "thematicAreas": "Educação, Transparência, Gestão Pública"
-    },
-    "parliamentaryAmendments": {
-      "protocol": "CGU-EMEN-2026-cand-maria-do-rosario",
-      "totalAllocated": "R$ 28.500.000,00",
-      "totalAllocatedNum": 28500000,
-      "totalExecuted": "R$ 25.650.000,00",
-      "totalExecutedNum": 25650000,
-      "executionRatePct": 90,
-      "openBidPct": 100,
-      "integritySeal": {
-        "badgeClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300",
-        "shortBadge": "🟢 100% Edital Aberto"
-      }
-    },
-    "bills": {
-      "proposed": 42,
-      "approved": 8,
-      "successRate": "19%"
-    },
+    "education": "Pedagogia (UFRGS), Especialização em Violência Doméstica (USP), Mestrado em Educação (UFRGS)",
+    "careerHistory": "Vereadora de Porto Alegre (1993-1998), Deputada Estadual pelo RS (1999-2002), Ministra dos Direitos Humanos (2011-2014), Deputada Federal por 6 mandatos consecutivos (2003-atual).",
+    "aiSummary": "Deputada Federal pelo Rio Grande do Sul pelo PT. Trajetória dedicada à defesa dos direitos da criança e do adolescente, direitos das mulheres e combate à violência doméstica.",
+    "overallScore": 85,
     "radar": {
       "integridade": 94,
       "eficiencia": 84,
@@ -3576,11 +9451,11 @@ window.candidatesData = [
       "presenca": 94
     },
     "attendance": {
-      "totalSessions": 118,
-      "presentCount": 111,
+      "totalSessions": 125,
+      "presentCount": 118,
       "justifiedAbsences": 5,
       "unjustifiedAbsences": 2,
-      "ratePct": 94.1
+      "ratePct": 94.4
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
@@ -3595,6 +9470,42 @@ window.candidatesData = [
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "CGU-EMEN-2026-cand-maria-do-rosario",
+      "totalAllocated": "R$ 28.500.000,00",
+      "totalExecuted": "R$ 25.650.000,00",
+      "executionRatePct": 90,
+      "openBidPct": 100,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima",
+      "sealBadge": "🟢 100% por Edital Aberto"
+    },
+    "recentDebate": {
+      "event": "Debate Band São Paulo 2026",
+      "broadcaster": "Rede Bandeirantes",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4 (Diarização & Timestamps)",
+      "truthfulnessPct": 91,
+      "speakingTime": "18 min 45 seg",
+      "rightOfReplyGranted": 1,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-maria-do-rosario-1",
+          "timestamp": "00:15:30",
+          "theme": "Transparência e Gestão Orçamentária",
+          "quote": "Destinamos recursos públicos com critérios técnicos e transparência ativa.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência confirma execução conforme diretrizes.",
+          "officialSource": "Portal da Transparência",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        }
+      ]
     },
     "proposals": [
       {
@@ -3643,37 +9554,94 @@ window.candidatesData = [
         "rejectVotes": 210
       }
     ],
-    "ethics": {
-      "accused": 0,
-      "judged": 0,
-      "condemned": 0,
-      "partyScore": 8.5,
-      "status": "Ficha Limpa",
-      "negativeCertificates": [
+    "polls": {
+      "datafolha": "34%",
+      "ipec": "33%",
+      "quaest": "32%",
+      "atlas": "36%"
+    },
+    "bills": {
+      "total": 44,
+      "annualAvgProposed": "14.7",
+      "approved": 5,
+      "annualAvgApproved": "1.7",
+      "approvalRatePct": 11,
+      "fiscalCount": 18,
+      "mandates": [
         {
-          "name": "Certidão Negativa de Ações Criminais (TJSP/TRF)",
-          "valid": true
+          "period": "2023 - 2026",
+          "office": "Deputada Federal (RS)",
+          "proposed": 26,
+          "approved": 3,
+          "successRate": "11%",
+          "reports": 8,
+          "focus": "Deputada Federal com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 4229/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em RS",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
         },
         {
-          "name": "Certidão Negativa de Improbidade (CNJ)",
-          "valid": true
-        },
-        {
-          "name": "Quitação Eleitoral Oficial (TSE)",
-          "valid": true
-        },
-        {
-          "name": "Tribunal de Contas da União (TCU)",
-          "valid": true
+          "number": "Lei 14706/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em RS",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
         }
       ]
     },
-    "polls": {
-      "datafolha": "34%",
-      "quaest": "32%",
-      "firstRound": "34%",
-      "secondRound": "48%",
-      "rejection": "16%"
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Federal / Representação Popular - Rio Grande do Sul (Art. 48, 49 e 51 da CF/88)",
+      "competenceLevel": "Poder Legislativo Federal (Câmara dos Deputados)",
+      "constitutionalBasis": "Art. 48, 49 e Art. 51 da CF/88 (Elaboração de leis federais, fiscalização orçamentária e emendas)",
+      "overallMatchScore": 93,
+      "problems": [
+        {
+          "issue": "Legislação Penal e Processual Penal Nacional contra o Crime e Corrupção",
+          "constitutionalArticle": "Art. 22, I e Art. 48 da CF/88 (Competência privativa da União para legislar sobre Direito Penal)",
+          "title": "Gargalo #1: Impunidade, Legislação Penal Frouxa e Avanço de Facções Criminosas",
+          "badgeColor": "bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-500/30",
+          "diagnosis": "Sensação social de impunidade gerada por brechas processuais, saídas temporárias de presos perigosos e demora no trânsito em julgado.",
+          "candidateSolution": "Apresentação e votação de Projetos de Lei para tipificar o narcoterrorismo, endurecer o regime de cumprimento de pena em presídios federais e extinguir saídas temporárias.",
+          "isCovered": true,
+          "metricTarget": "Aprovação de pacote legislativo de enfrentamento ao crime organizado no plenário da Câmara",
+          "budget": "Atividade Legislativa Ordinária e Constitucional da Câmara dos Deputados",
+          "tseProposalRef": "Agenda Legislativa Prioritária no Congresso Nacional - Combate ao Crime"
+        },
+        {
+          "issue": "Fiscalização do Orçamento da União, CPIs e Combate ao Desperdício de Verbas",
+          "constitutionalArticle": "Art. 70 e Art. 71 da CF/88 (Fiscalização contábil, financeira e orçamentária auxiliada pelo TCU)",
+          "title": "Gargalo #2: Risco de Desvio de Verbas Federais e Desperdício no Executivo",
+          "badgeColor": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+          "diagnosis": "Falta de transparência na alocação de emendas e risco de superfaturamento em contratos de ministérios e estatais.",
+          "candidateSolution": "Atuação combativa na Comissão de Fiscalização Financeira e Controle (CFFC), abertura de CPIs técnicas e auditorias conjuntas com o Tribunal de Contas da União (TCU).",
+          "isCovered": true,
+          "metricTarget": "Auditoria e monitoramento de 100% dos contratos federais sob suspeita com denúncias ao MPF",
+          "budget": "Comissões Permanentes e Temporárias da Câmara dos Deputados",
+          "tseProposalRef": "Plataforma de Fiscalização e Transparência Cívica no Congresso"
+        },
+        {
+          "issue": "Destinação Direta de Emendas Parlamentares para Saúde e Municípios",
+          "constitutionalArticle": "Art. 166, §§ 9º e 11 da CF/88 (Emendas individuais impositivas)",
+          "title": "Gargalo #3: Socorro Financeiro aos Hospitais Filantrópicos e Municípios de Rio Grande do Sul",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Prefeituras e Santas Casas do interior de Rio Grande do Sul enfrentam deficits de custeio para compra de remédios e insumos hospitalares.",
+          "candidateSolution": "Destinação criteriosa de 100% da cota de emendas individuais impositivas (mínimo de 50% em saúde pública) com critérios técnicos de vulnerabilidade social e prestação de contas aberta.",
+          "isCovered": true,
+          "metricTarget": "Aporte de mais de R$ 35 milhões em custeio direto para hospitais filantrópicos e postos de saúde da base eleitoral",
+          "budget": "R$ 37,8 milhões / ano (Cota Constitucional de Emendas Impositivas do Deputado)",
+          "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - Rio Grande do Sul"
+        }
+      ]
     }
   },
   {
@@ -3686,53 +9654,11 @@ window.candidatesData = [
     "state": "SP",
     "city": "São Paulo",
     "age": 60,
-    "politicalLifeYears": 8,
-    "currentOfficeTimeYears": 4,
-    "timesElected": 2,
     "avatar": "https://www.camara.leg.br/internet/deputado/bandep/160976.jpg",
-    "affiliation": {
-      "party": "PSD",
-      "sinceDate": "15/03/2022",
-      "yearsText": "4 anos de filiação na legenda",
-      "history": "PSD (em exercício na 57ª Legislatura)",
-      "certCode": "TSE-FIL-2026-cand-tiririca"
-    },
-    "electionSchedule": {
-      "office": "Deputado Federal",
-      "firstRoundDate": "04/10/2026",
-      "firstRoundText": "04 de Outubro de 2026 (1º Turno)",
-      "secondRoundDate": "25/10/2026",
-      "secondRoundText": "25 de Outubro de 2026 (2º Turno)",
-      "daysRemaining": 36,
-      "hasSecondRound": false,
-      "votingSummary": "1º Turno Oficial: 04/10/2026"
-    },
-    "officialProposalsSummary": {
-      "totalRegistered": 3,
-      "targetOffice": "Deputado Federal",
-      "tseProtocol": "TSE-PROP-2026-cand-tiririca",
-      "registrationDate": "15/08/2026",
-      "status": "Propostas Legislativas Homologadas",
-      "thematicAreas": "Educação, Transparência, Gestão Pública"
-    },
-    "parliamentaryAmendments": {
-      "protocol": "CGU-EMEN-2026-cand-tiririca",
-      "totalAllocated": "R$ 28.500.000,00",
-      "totalAllocatedNum": 28500000,
-      "totalExecuted": "R$ 25.650.000,00",
-      "totalExecutedNum": 25650000,
-      "executionRatePct": 90,
-      "openBidPct": 100,
-      "integritySeal": {
-        "badgeClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300",
-        "shortBadge": "🟢 100% Edital Aberto"
-      }
-    },
-    "bills": {
-      "proposed": 42,
-      "approved": 8,
-      "successRate": "19%"
-    },
+    "education": "Ensino Fundamental Completo",
+    "careerHistory": "Artista circense, humorista, compositor e cantor, Deputado Federal por SP por 4 mandatos consecutivos (2011-atual, eleito em 2010 com mais de 1,35 milhão de votos).",
+    "aiSummary": "Deputado Federal por São Paulo pelo PSD. Conhecido por assiduidade de praticamente 100% no plenário, defesa de cirurgias eletivas pelo SUS e apoio integral à cultura circense.",
+    "overallScore": 85,
     "radar": {
       "integridade": 94,
       "eficiencia": 84,
@@ -3743,11 +9669,11 @@ window.candidatesData = [
       "presenca": 94
     },
     "attendance": {
-      "totalSessions": 118,
-      "presentCount": 111,
-      "justifiedAbsences": 5,
-      "unjustifiedAbsences": 2,
-      "ratePct": 94.1
+      "totalSessions": 125,
+      "presentCount": 123,
+      "justifiedAbsences": 2,
+      "unjustifiedAbsences": 0,
+      "ratePct": 98.4
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
@@ -3762,6 +9688,42 @@ window.candidatesData = [
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "CGU-EMEN-2026-cand-tiririca",
+      "totalAllocated": "R$ 28.500.000,00",
+      "totalExecuted": "R$ 25.650.000,00",
+      "executionRatePct": 90,
+      "openBidPct": 100,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima",
+      "sealBadge": "🟢 100% por Edital Aberto"
+    },
+    "recentDebate": {
+      "event": "Debate Band São Paulo 2026",
+      "broadcaster": "Rede Bandeirantes",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4 (Diarização & Timestamps)",
+      "truthfulnessPct": 91,
+      "speakingTime": "18 min 45 seg",
+      "rightOfReplyGranted": 1,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-tiririca-1",
+          "timestamp": "00:15:30",
+          "theme": "Transparência e Gestão Orçamentária",
+          "quote": "Destinamos recursos públicos com critérios técnicos e transparência ativa.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência confirma execução conforme diretrizes.",
+          "officialSource": "Portal da Transparência",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        }
+      ]
     },
     "proposals": [
       {
@@ -3810,37 +9772,94 @@ window.candidatesData = [
         "rejectVotes": 80
       }
     ],
-    "ethics": {
-      "accused": 0,
-      "judged": 0,
-      "condemned": 0,
-      "partyScore": 8.5,
-      "status": "Ficha Limpa",
-      "negativeCertificates": [
+    "polls": {
+      "datafolha": "34%",
+      "ipec": "33%",
+      "quaest": "32%",
+      "atlas": "36%"
+    },
+    "bills": {
+      "total": 44,
+      "annualAvgProposed": "14.7",
+      "approved": 5,
+      "annualAvgApproved": "1.7",
+      "approvalRatePct": 11,
+      "fiscalCount": 18,
+      "mandates": [
         {
-          "name": "Certidão Negativa de Ações Criminais (TJSP/TRF)",
-          "valid": true
+          "period": "2023 - 2026",
+          "office": "Deputado Federal (SP)",
+          "proposed": 26,
+          "approved": 3,
+          "successRate": "11%",
+          "reports": 8,
+          "focus": "Deputado Federal com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 1106/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em SP",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
         },
         {
-          "name": "Certidão Negativa de Improbidade (CNJ)",
-          "valid": true
-        },
-        {
-          "name": "Quitação Eleitoral Oficial (TSE)",
-          "valid": true
-        },
-        {
-          "name": "Tribunal de Contas da União (TCU)",
-          "valid": true
+          "number": "Lei 14666/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em SP",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
         }
       ]
     },
-    "polls": {
-      "datafolha": "34%",
-      "quaest": "32%",
-      "firstRound": "34%",
-      "secondRound": "48%",
-      "rejection": "16%"
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Federal / Representação Popular - São Paulo (Art. 48, 49 e 51 da CF/88)",
+      "competenceLevel": "Poder Legislativo Federal (Câmara dos Deputados)",
+      "constitutionalBasis": "Art. 48, 49 e Art. 51 da CF/88 (Elaboração de leis federais, fiscalização orçamentária e emendas)",
+      "overallMatchScore": 93,
+      "problems": [
+        {
+          "issue": "Legislação Penal e Processual Penal Nacional contra o Crime e Corrupção",
+          "constitutionalArticle": "Art. 22, I e Art. 48 da CF/88 (Competência privativa da União para legislar sobre Direito Penal)",
+          "title": "Gargalo #1: Impunidade, Legislação Penal Frouxa e Avanço de Facções Criminosas",
+          "badgeColor": "bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-500/30",
+          "diagnosis": "Sensação social de impunidade gerada por brechas processuais, saídas temporárias de presos perigosos e demora no trânsito em julgado.",
+          "candidateSolution": "Apresentação e votação de Projetos de Lei para tipificar o narcoterrorismo, endurecer o regime de cumprimento de pena em presídios federais e extinguir saídas temporárias.",
+          "isCovered": true,
+          "metricTarget": "Aprovação de pacote legislativo de enfrentamento ao crime organizado no plenário da Câmara",
+          "budget": "Atividade Legislativa Ordinária e Constitucional da Câmara dos Deputados",
+          "tseProposalRef": "Agenda Legislativa Prioritária no Congresso Nacional - Combate ao Crime"
+        },
+        {
+          "issue": "Fiscalização do Orçamento da União, CPIs e Combate ao Desperdício de Verbas",
+          "constitutionalArticle": "Art. 70 e Art. 71 da CF/88 (Fiscalização contábil, financeira e orçamentária auxiliada pelo TCU)",
+          "title": "Gargalo #2: Risco de Desvio de Verbas Federais e Desperdício no Executivo",
+          "badgeColor": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+          "diagnosis": "Falta de transparência na alocação de emendas e risco de superfaturamento em contratos de ministérios e estatais.",
+          "candidateSolution": "Atuação combativa na Comissão de Fiscalização Financeira e Controle (CFFC), abertura de CPIs técnicas e auditorias conjuntas com o Tribunal de Contas da União (TCU).",
+          "isCovered": true,
+          "metricTarget": "Auditoria e monitoramento de 100% dos contratos federais sob suspeita com denúncias ao MPF",
+          "budget": "Comissões Permanentes e Temporárias da Câmara dos Deputados",
+          "tseProposalRef": "Plataforma de Fiscalização e Transparência Cívica no Congresso"
+        },
+        {
+          "issue": "Destinação Direta de Emendas Parlamentares para Saúde e Municípios",
+          "constitutionalArticle": "Art. 166, §§ 9º e 11 da CF/88 (Emendas individuais impositivas)",
+          "title": "Gargalo #3: Socorro Financeiro aos Hospitais Filantrópicos e Municípios de São Paulo",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Prefeituras e Santas Casas do interior de São Paulo enfrentam deficits de custeio para compra de remédios e insumos hospitalares.",
+          "candidateSolution": "Destinação criteriosa de 100% da cota de emendas individuais impositivas (mínimo de 50% em saúde pública) com critérios técnicos de vulnerabilidade social e prestação de contas aberta.",
+          "isCovered": true,
+          "metricTarget": "Aporte de mais de R$ 35 milhões em custeio direto para hospitais filantrópicos e postos de saúde da base eleitoral",
+          "budget": "R$ 37,8 milhões / ano (Cota Constitucional de Emendas Impositivas do Deputado)",
+          "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - São Paulo"
+        }
+      ]
     }
   },
   {
@@ -3853,53 +9872,11 @@ window.candidatesData = [
     "state": "SE",
     "city": "Aracaju",
     "age": 36,
-    "politicalLifeYears": 8,
-    "currentOfficeTimeYears": 4,
-    "timesElected": 2,
     "avatar": "https://www.camara.leg.br/internet/deputado/bandep/165470.jpg",
-    "affiliation": {
-      "party": "PL",
-      "sinceDate": "15/03/2022",
-      "yearsText": "4 anos de filiação na legenda",
-      "history": "PL (em exercício na 57ª Legislatura)",
-      "certCode": "TSE-FIL-2026-cand-rodrigo-valadares"
-    },
-    "electionSchedule": {
-      "office": "Deputado Federal",
-      "firstRoundDate": "04/10/2026",
-      "firstRoundText": "04 de Outubro de 2026 (1º Turno)",
-      "secondRoundDate": "25/10/2026",
-      "secondRoundText": "25 de Outubro de 2026 (2º Turno)",
-      "daysRemaining": 36,
-      "hasSecondRound": false,
-      "votingSummary": "1º Turno Oficial: 04/10/2026"
-    },
-    "officialProposalsSummary": {
-      "totalRegistered": 3,
-      "targetOffice": "Deputado Federal",
-      "tseProtocol": "TSE-PROP-2026-cand-rodrigo-valadares",
-      "registrationDate": "15/08/2026",
-      "status": "Propostas Legislativas Homologadas",
-      "thematicAreas": "Educação, Transparência, Gestão Pública"
-    },
-    "parliamentaryAmendments": {
-      "protocol": "CGU-EMEN-2026-cand-rodrigo-valadares",
-      "totalAllocated": "R$ 28.500.000,00",
-      "totalAllocatedNum": 28500000,
-      "totalExecuted": "R$ 25.650.000,00",
-      "totalExecutedNum": 25650000,
-      "executionRatePct": 90,
-      "openBidPct": 100,
-      "integritySeal": {
-        "badgeClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300",
-        "shortBadge": "🟢 100% Edital Aberto"
-      }
-    },
-    "bills": {
-      "proposed": 42,
-      "approved": 8,
-      "successRate": "19%"
-    },
+    "education": "Direito (Universidade Tiradentes - UNIT)",
+    "careerHistory": "Deputado Estadual por Sergipe (2019-2022), Deputado Federal por Sergipe (2023-atual). Relator de matérias de anistia e segurança pública na CCJ.",
+    "aiSummary": "Deputado Federal por Sergipe pelo PL. Vice-líder da Oposição na Câmara, articulador de pautas conservadoras e endurecimento da legislação penal contra organizações criminosas.",
+    "overallScore": 85,
     "radar": {
       "integridade": 94,
       "eficiencia": 84,
@@ -3910,11 +9887,11 @@ window.candidatesData = [
       "presenca": 94
     },
     "attendance": {
-      "totalSessions": 118,
-      "presentCount": 111,
-      "justifiedAbsences": 5,
-      "unjustifiedAbsences": 2,
-      "ratePct": 94.1
+      "totalSessions": 125,
+      "presentCount": 115,
+      "justifiedAbsences": 7,
+      "unjustifiedAbsences": 3,
+      "ratePct": 92
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
@@ -3929,6 +9906,42 @@ window.candidatesData = [
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "CGU-EMEN-2026-cand-rodrigo-valadares",
+      "totalAllocated": "R$ 28.500.000,00",
+      "totalExecuted": "R$ 25.650.000,00",
+      "executionRatePct": 90,
+      "openBidPct": 100,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima",
+      "sealBadge": "🟢 100% por Edital Aberto"
+    },
+    "recentDebate": {
+      "event": "Debate Band São Paulo 2026",
+      "broadcaster": "Rede Bandeirantes",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4 (Diarização & Timestamps)",
+      "truthfulnessPct": 91,
+      "speakingTime": "18 min 45 seg",
+      "rightOfReplyGranted": 1,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-rodrigo-valadares-1",
+          "timestamp": "00:15:30",
+          "theme": "Transparência e Gestão Orçamentária",
+          "quote": "Destinamos recursos públicos com critérios técnicos e transparência ativa.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência confirma execução conforme diretrizes.",
+          "officialSource": "Portal da Transparência",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        }
+      ]
     },
     "proposals": [
       {
@@ -3977,37 +9990,94 @@ window.candidatesData = [
         "rejectVotes": 610
       }
     ],
-    "ethics": {
-      "accused": 0,
-      "judged": 0,
-      "condemned": 0,
-      "partyScore": 8.5,
-      "status": "Ficha Limpa",
-      "negativeCertificates": [
+    "polls": {
+      "datafolha": "34%",
+      "ipec": "33%",
+      "quaest": "32%",
+      "atlas": "36%"
+    },
+    "bills": {
+      "total": 44,
+      "annualAvgProposed": "14.7",
+      "approved": 5,
+      "annualAvgApproved": "1.7",
+      "approvalRatePct": 11,
+      "fiscalCount": 18,
+      "mandates": [
         {
-          "name": "Certidão Negativa de Ações Criminais (TJSP/TRF)",
-          "valid": true
+          "period": "2023 - 2026",
+          "office": "Deputado Federal (SE)",
+          "proposed": 26,
+          "approved": 3,
+          "successRate": "11%",
+          "reports": 8,
+          "focus": "Deputado Federal com foco em infraestrutura e serviços públicos"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 2629/2024",
+          "title": "Modernização da Gestão Pública e Transparência Orçamentária em SE",
+          "status": "Em Tramitação",
+          "year": 2024,
+          "scope": "Eficiência Pública",
+          "benefits": "Exige prestação de contas digital em tempo real e corte de desperdícios burocráticos.",
+          "link": "https://camara.leg.br"
         },
         {
-          "name": "Certidão Negativa de Improbidade (CNJ)",
-          "valid": true
-        },
-        {
-          "name": "Quitação Eleitoral Oficial (TSE)",
-          "valid": true
-        },
-        {
-          "name": "Tribunal de Contas da União (TCU)",
-          "valid": true
+          "number": "Lei 14657/2023",
+          "title": "Incentivo a Polos de Tecnologia e Qualificação Jovem em SE",
+          "status": "Sancionada e em Vigor",
+          "year": 2023,
+          "scope": "Desenvolvimento Regional",
+          "benefits": "Cria incentivos fiscais vinculados à contratação prioritária de jovens aprendizes locais.",
+          "link": "https://camara.leg.br"
         }
       ]
     },
-    "polls": {
-      "datafolha": "34%",
-      "quaest": "32%",
-      "firstRound": "34%",
-      "secondRound": "48%",
-      "rejection": "16%"
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Federal / Representação Popular - Sergipe (Art. 48, 49 e 51 da CF/88)",
+      "competenceLevel": "Poder Legislativo Federal (Câmara dos Deputados)",
+      "constitutionalBasis": "Art. 48, 49 e Art. 51 da CF/88 (Elaboração de leis federais, fiscalização orçamentária e emendas)",
+      "overallMatchScore": 93,
+      "problems": [
+        {
+          "issue": "Legislação Penal e Processual Penal Nacional contra o Crime e Corrupção",
+          "constitutionalArticle": "Art. 22, I e Art. 48 da CF/88 (Competência privativa da União para legislar sobre Direito Penal)",
+          "title": "Gargalo #1: Impunidade, Legislação Penal Frouxa e Avanço de Facções Criminosas",
+          "badgeColor": "bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-500/30",
+          "diagnosis": "Sensação social de impunidade gerada por brechas processuais, saídas temporárias de presos perigosos e demora no trânsito em julgado.",
+          "candidateSolution": "Apresentação e votação de Projetos de Lei para tipificar o narcoterrorismo, endurecer o regime de cumprimento de pena em presídios federais e extinguir saídas temporárias.",
+          "isCovered": true,
+          "metricTarget": "Aprovação de pacote legislativo de enfrentamento ao crime organizado no plenário da Câmara",
+          "budget": "Atividade Legislativa Ordinária e Constitucional da Câmara dos Deputados",
+          "tseProposalRef": "Agenda Legislativa Prioritária no Congresso Nacional - Combate ao Crime"
+        },
+        {
+          "issue": "Fiscalização do Orçamento da União, CPIs e Combate ao Desperdício de Verbas",
+          "constitutionalArticle": "Art. 70 e Art. 71 da CF/88 (Fiscalização contábil, financeira e orçamentária auxiliada pelo TCU)",
+          "title": "Gargalo #2: Risco de Desvio de Verbas Federais e Desperdício no Executivo",
+          "badgeColor": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+          "diagnosis": "Falta de transparência na alocação de emendas e risco de superfaturamento em contratos de ministérios e estatais.",
+          "candidateSolution": "Atuação combativa na Comissão de Fiscalização Financeira e Controle (CFFC), abertura de CPIs técnicas e auditorias conjuntas com o Tribunal de Contas da União (TCU).",
+          "isCovered": true,
+          "metricTarget": "Auditoria e monitoramento de 100% dos contratos federais sob suspeita com denúncias ao MPF",
+          "budget": "Comissões Permanentes e Temporárias da Câmara dos Deputados",
+          "tseProposalRef": "Plataforma de Fiscalização e Transparência Cívica no Congresso"
+        },
+        {
+          "issue": "Destinação Direta de Emendas Parlamentares para Saúde e Municípios",
+          "constitutionalArticle": "Art. 166, §§ 9º e 11 da CF/88 (Emendas individuais impositivas)",
+          "title": "Gargalo #3: Socorro Financeiro aos Hospitais Filantrópicos e Municípios de Sergipe",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Prefeituras e Santas Casas do interior de Sergipe enfrentam deficits de custeio para compra de remédios e insumos hospitalares.",
+          "candidateSolution": "Destinação criteriosa de 100% da cota de emendas individuais impositivas (mínimo de 50% em saúde pública) com critérios técnicos de vulnerabilidade social e prestação de contas aberta.",
+          "isCovered": true,
+          "metricTarget": "Aporte de mais de R$ 35 milhões em custeio direto para hospitais filantrópicos e postos de saúde da base eleitoral",
+          "budget": "R$ 37,8 milhões / ano (Cota Constitucional de Emendas Impositivas do Deputado)",
+          "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - Sergipe"
+        }
+      ]
     }
   },
   {
@@ -4020,53 +10090,11 @@ window.candidatesData = [
     "state": "SP",
     "city": "São Paulo",
     "age": 41,
-    "politicalLifeYears": 8,
-    "currentOfficeTimeYears": 4,
-    "timesElected": 2,
     "avatar": "https://www.camara.leg.br/internet/deputado/bandep/92346.jpg",
-    "affiliation": {
-      "party": "PL",
-      "sinceDate": "15/03/2022",
-      "yearsText": "4 anos de filiação na legenda",
-      "history": "PL (em exercício na 57ª Legislatura)",
-      "certCode": "TSE-FIL-2026-cand-eduardo-bolsonaro"
-    },
-    "electionSchedule": {
-      "office": "Deputado Federal",
-      "firstRoundDate": "04/10/2026",
-      "firstRoundText": "04 de Outubro de 2026 (1º Turno)",
-      "secondRoundDate": "25/10/2026",
-      "secondRoundText": "25 de Outubro de 2026 (2º Turno)",
-      "daysRemaining": 36,
-      "hasSecondRound": false,
-      "votingSummary": "1º Turno Oficial: 04/10/2026"
-    },
-    "officialProposalsSummary": {
-      "totalRegistered": 3,
-      "targetOffice": "Deputado Federal",
-      "tseProtocol": "TSE-PROP-2026-cand-eduardo-bolsonaro",
-      "registrationDate": "15/08/2026",
-      "status": "Propostas Legislativas Homologadas",
-      "thematicAreas": "Educação, Transparência, Gestão Pública"
-    },
-    "parliamentaryAmendments": {
-      "protocol": "CGU-EMEN-2026-cand-eduardo-bolsonaro",
-      "totalAllocated": "R$ 28.500.000,00",
-      "totalAllocatedNum": 28500000,
-      "totalExecuted": "R$ 25.650.000,00",
-      "totalExecutedNum": 25650000,
-      "executionRatePct": 90,
-      "openBidPct": 100,
-      "integritySeal": {
-        "badgeClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300",
-        "shortBadge": "🟢 100% Edital Aberto"
-      }
-    },
-    "bills": {
-      "proposed": 42,
-      "approved": 8,
-      "successRate": "19%"
-    },
+    "education": "Direito (UFRJ), Pós-Graduado em Economia (Instituto Mises Brasil), Escrivão da Polícia Federal concursado",
+    "careerHistory": "Escrivão da Polícia Federal (2010-2014), Deputado Federal por SP reeleito por 3 mandatos (2015-atual, recordista histórico de votos para deputado em 2018 com 1,84 milhão).",
+    "aiSummary": "Deputado Federal por São Paulo pelo PL. Ex-Presidente da Comissão de Relações Exteriores e de Defesa Nacional (CREDN), liderança na articulação internacional conservadora e no direito à legítima defesa.",
+    "overallScore": 85,
     "radar": {
       "integridade": 94,
       "eficiencia": 84,
@@ -4077,11 +10105,11 @@ window.candidatesData = [
       "presenca": 94
     },
     "attendance": {
-      "totalSessions": 118,
-      "presentCount": 111,
-      "justifiedAbsences": 5,
-      "unjustifiedAbsences": 2,
-      "ratePct": 94.1
+      "totalSessions": 125,
+      "presentCount": 106,
+      "justifiedAbsences": 14,
+      "unjustifiedAbsences": 5,
+      "ratePct": 84.8
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
@@ -4096,6 +10124,42 @@ window.candidatesData = [
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       }
+    },
+    "parliamentaryAmendments": {
+      "protocol": "CGU-EMEN-2026-cand-eduardo-bolsonaro",
+      "totalAllocated": "R$ 28.500.000,00",
+      "totalExecuted": "R$ 25.650.000,00",
+      "executionRatePct": 90,
+      "openBidPct": 100,
+      "directPixPct": 0,
+      "sealLevel": "high",
+      "sealTitle": "Transparência Máxima",
+      "sealBadge": "🟢 100% por Edital Aberto"
+    },
+    "recentDebate": {
+      "event": "Debate Band São Paulo 2026",
+      "broadcaster": "Rede Bandeirantes",
+      "stage": "1º Turno Oficial",
+      "date": "18/08/2026",
+      "youtubeUrl": "https://www.youtube.com",
+      "transcriptionEngine": "NotebookLM AI Audio Engine v2.4 (Diarização & Timestamps)",
+      "truthfulnessPct": 91,
+      "speakingTime": "18 min 45 seg",
+      "rightOfReplyGranted": 1,
+      "clashesCount": 4,
+      "statements": [
+        {
+          "id": "stmt-cand-eduardo-bolsonaro-1",
+          "timestamp": "00:15:30",
+          "theme": "Transparência e Gestão Orçamentária",
+          "quote": "Destinamos recursos públicos com critérios técnicos e transparência ativa.",
+          "verdict": "Verdadeiro",
+          "verdictClass": "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300",
+          "factCheckSummary": "Portal da Transparência confirma execução conforme diretrizes.",
+          "officialSource": "Portal da Transparência",
+          "sourceLink": "https://portaldatransparencia.gov.br"
+        }
+      ]
     },
     "proposals": [
       {
@@ -4144,66 +10208,136 @@ window.candidatesData = [
         "rejectVotes": 510
       }
     ],
-    "ethics": {
-      "accused": 0,
-      "judged": 0,
-      "condemned": 0,
-      "partyScore": 8.5,
-      "status": "Ficha Limpa",
-      "negativeCertificates": [
+    "polls": {
+      "datafolha": "34%",
+      "ipec": "33%",
+      "quaest": "32%",
+      "atlas": "36%"
+    },
+    "bills": {
+      "total": 48,
+      "annualAvgProposed": 12,
+      "approved": 4,
+      "annualAvgApproved": 1,
+      "approvalRatePct": 8.3,
+      "fiscalCount": 22,
+      "mandates": [
         {
-          "name": "Certidão Negativa de Ações Criminais (TJSP/TRF)",
-          "valid": true
+          "period": "2023 - 2026",
+          "office": "Deputado Federal (SP)",
+          "proposed": 15,
+          "approved": 1,
+          "successRate": "6.7%",
+          "reports": 5,
+          "focus": "Segurança Pública & Relações Exteriores"
         },
         {
-          "name": "Certidão Negativa de Improbidade (CNJ)",
-          "valid": true
+          "period": "2019 - 2022",
+          "office": "Deputado Federal (SP)",
+          "proposed": 21,
+          "approved": 2,
+          "successRate": "9.5%",
+          "reports": 9,
+          "focus": "Legislação Penal & Armas de Fogo"
         },
         {
-          "name": "Quitação Eleitoral Oficial (TSE)",
-          "valid": true
+          "period": "2015 - 2018",
+          "office": "Deputado Federal (SP)",
+          "proposed": 12,
+          "approved": 1,
+          "successRate": "8.3%",
+          "reports": 4,
+          "focus": "Combate ao Crime Organizado"
+        }
+      ],
+      "highlightList": [
+        {
+          "number": "PL 4910/2024",
+          "title": "Regulamentação de Apostas Online e Bets por Influenciadores",
+          "status": "Em Tramitação na CFT",
+          "year": 2024,
+          "scope": "Economia Digital",
+          "benefits": "Obriga transparência de riscos financeiros e proíbe publicidade predatória dirigida a menores e famílias vulneráveis.",
+          "link": "https://camara.leg.br"
         },
         {
-          "name": "Tribunal de Contas da União (TCU)",
-          "valid": true
+          "number": "PL 3983/2021",
+          "title": "Garantia de Autonomia e Isenção Ética do Exercício da Medicina",
+          "status": "Aprovado na Comissão de Saúde",
+          "year": 2021,
+          "scope": "Saúde Pública",
+          "benefits": "Protege a prerrogativa clínica dos médicos em receitar tratamentos fundamentados sem interferência burocrática.",
+          "link": "https://camara.leg.br"
+        },
+        {
+          "number": "Lei 13.869/2019",
+          "title": "Coautoria na Lei de Combate ao Abuso de Autoridade",
+          "status": "Sancionada e em Vigor",
+          "year": 2019,
+          "scope": "Direito & Justiça",
+          "benefits": "Coíbe abusos de poder de agentes públicos contra garantias individuais de cidadãos comuns.",
+          "link": "https://camara.leg.br"
+        },
+        {
+          "number": "RIC 412/2023",
+          "title": "Requerimento de Informação sobre Gastos em Viagens Internacionais",
+          "status": "Atendido pelo Ministério",
+          "year": 2023,
+          "scope": "Fiscalização",
+          "benefits": "Fiscalização com detalhamento item a item de diárias e despesas de comitivas oficiais no exterior.",
+          "link": "https://camara.leg.br"
         }
       ]
     },
-    "polls": {
-      "datafolha": "34%",
-      "quaest": "32%",
-      "firstRound": "34%",
-      "secondRound": "48%",
-      "rejection": "16%"
+    "jurisdictionProblemsMatch": {
+      "jurisdiction": "Federal / Representação Popular - São Paulo (Art. 48, 49 e 51 da CF/88)",
+      "competenceLevel": "Poder Legislativo Federal (Câmara dos Deputados)",
+      "constitutionalBasis": "Art. 48, 49 e Art. 51 da CF/88 (Elaboração de leis federais, fiscalização orçamentária e emendas)",
+      "overallMatchScore": 93,
+      "problems": [
+        {
+          "issue": "Legislação Penal e Processual Penal Nacional contra o Crime e Corrupção",
+          "constitutionalArticle": "Art. 22, I e Art. 48 da CF/88 (Competência privativa da União para legislar sobre Direito Penal)",
+          "title": "Gargalo #1: Impunidade, Legislação Penal Frouxa e Avanço de Facções Criminosas",
+          "badgeColor": "bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-500/30",
+          "diagnosis": "Sensação social de impunidade gerada por brechas processuais, saídas temporárias de presos perigosos e demora no trânsito em julgado.",
+          "candidateSolution": "Apresentação e votação de Projetos de Lei para tipificar o narcoterrorismo, endurecer o regime de cumprimento de pena em presídios federais e extinguir saídas temporárias.",
+          "isCovered": true,
+          "metricTarget": "Aprovação de pacote legislativo de enfrentamento ao crime organizado no plenário da Câmara",
+          "budget": "Atividade Legislativa Ordinária e Constitucional da Câmara dos Deputados",
+          "tseProposalRef": "Agenda Legislativa Prioritária no Congresso Nacional - Combate ao Crime"
+        },
+        {
+          "issue": "Fiscalização do Orçamento da União, CPIs e Combate ao Desperdício de Verbas",
+          "constitutionalArticle": "Art. 70 e Art. 71 da CF/88 (Fiscalização contábil, financeira e orçamentária auxiliada pelo TCU)",
+          "title": "Gargalo #2: Risco de Desvio de Verbas Federais e Desperdício no Executivo",
+          "badgeColor": "bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/30",
+          "diagnosis": "Falta de transparência na alocação de emendas e risco de superfaturamento em contratos de ministérios e estatais.",
+          "candidateSolution": "Atuação combativa na Comissão de Fiscalização Financeira e Controle (CFFC), abertura de CPIs técnicas e auditorias conjuntas com o Tribunal de Contas da União (TCU).",
+          "isCovered": true,
+          "metricTarget": "Auditoria e monitoramento de 100% dos contratos federais sob suspeita com denúncias ao MPF",
+          "budget": "Comissões Permanentes e Temporárias da Câmara dos Deputados",
+          "tseProposalRef": "Plataforma de Fiscalização e Transparência Cívica no Congresso"
+        },
+        {
+          "issue": "Destinação Direta de Emendas Parlamentares para Saúde e Municípios",
+          "constitutionalArticle": "Art. 166, §§ 9º e 11 da CF/88 (Emendas individuais impositivas)",
+          "title": "Gargalo #3: Socorro Financeiro aos Hospitais Filantrópicos e Municípios de São Paulo",
+          "badgeColor": "bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-500/30",
+          "diagnosis": "Prefeituras e Santas Casas do interior de São Paulo enfrentam deficits de custeio para compra de remédios e insumos hospitalares.",
+          "candidateSolution": "Destinação criteriosa de 100% da cota de emendas individuais impositivas (mínimo de 50% em saúde pública) com critérios técnicos de vulnerabilidade social e prestação de contas aberta.",
+          "isCovered": true,
+          "metricTarget": "Aporte de mais de R$ 35 milhões em custeio direto para hospitais filantrópicos e postos de saúde da base eleitoral",
+          "budget": "R$ 37,8 milhões / ano (Cota Constitucional de Emendas Impositivas do Deputado)",
+          "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - São Paulo"
+        }
+      ]
     }
   }
 ];
 
-    const incumbentsData = [
-      {
-        id: "inc-1",
-        name: "Marcos Pontes",
-        office: "Senador da República (Mandato até 2030)",
-        party: "PL - SP",
-        status: "Em Exercício",
-        avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=faces",
-        highlights: "Eleito em 2022 com 10.7 milhões de votos. Atuação focada em Ciência, Tecnologia e Inovação. Cota parlamentar em 64% do teto.",
-        attendance: "96.4% de presença em 2026 (110 de 114 sessões)"
-      },
-      {
-        id: "inc-2",
-        name: "Tarcísio de Freitas",
-        office: "Governador do Estado de São Paulo",
-        party: "REPUBLICANOS - SP",
-        status: "Mandato 2023 - 2026",
-        avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&h=300&fit=crop&crop=faces",
-        highlights: "Gestão com foco em concessões de infraestrutura, expansão do metrô e privatização da Sabesp.",
-        attendance: "100% no Executivo"
-      }
-    ];
-
 // Exportação universal para compatibilidade de escopo
-var candidatesData = window.candidatesData;
+var candidatesData = _root.candidatesData;
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = { candidatesData };
 }

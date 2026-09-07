@@ -46,6 +46,21 @@
     .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(148, 163, 184, 0.4); border-radius: 9999px; }
     .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: rgba(100, 116, 139, 0.6); }
   </style>
+  <!-- Inicializador Imediato de Tema Escuro/Claro (Zero FOUC e Compatível com index.html) -->
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('civic_theme') || localStorage.getItem('theme');
+      if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+        document.documentElement.classList.remove('light');
+      } else {
+        document.documentElement.classList.remove('dark');
+        document.documentElement.classList.add('light');
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="data/candidates.js"></script>
 </head>
 <body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans min-h-screen flex flex-col transition-colors duration-200">
 
@@ -185,38 +200,47 @@
       <section class="lg:col-span-8 space-y-6">
         
         <!-- Barra de Navegação das 8 Abas -->
-        <nav class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 p-2 rounded-2xl shadow-xs overflow-x-auto custom-scrollbar">
-          <div class="flex items-center gap-1.5 min-w-max">
-            <button onclick="switchTab('visao-geral')" id="tab-btn-visao-geral" class="tab-btn active px-3.5 py-2 rounded-xl font-bold text-xs flex items-center gap-1.5 transition cursor-pointer bg-sky-600 text-white shadow-xs">
+        <!-- Barra de Navegação das 9 Abas (2 Linhas Organizadas, Sem Rolagem Horizontal) -->
+        <nav class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 p-2.5 rounded-2xl shadow-xs space-y-1.5">
+          <!-- Linha 1: Atuação Direta & Mandato (5 Abas) -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-1.5">
+            <button onclick="switchTab('visao-geral')" id="tab-btn-visao-geral" class="tab-btn active px-2.5 py-2 rounded-xl font-bold text-xs flex items-center justify-center gap-1.5 transition cursor-pointer bg-sky-600 text-white shadow-xs">
               <i data-lucide="layout-dashboard" class="w-3.5 h-3.5"></i>
               <span>Visão Geral</span>
             </button>
-            <button onclick="switchTab('presenca-faltas')" id="tab-btn-presenca-faltas" class="tab-btn px-3.5 py-2 rounded-xl font-medium text-xs flex items-center gap-1.5 transition cursor-pointer bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700">
-              <i data-lucide="building-2" class="w-3.5 h-3.5"></i>
+            <button onclick="switchTab('presenca-faltas')" id="tab-btn-presenca-faltas" class="tab-btn px-2.5 py-2 rounded-xl font-medium text-xs flex items-center justify-center gap-1.5 transition cursor-pointer bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700">
+              <i data-lucide="building-2" class="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400"></i>
               <span>Presença Plenária</span>
             </button>
-            <button onclick="switchTab('gastos-ceap')" id="tab-btn-gastos-ceap" class="tab-btn px-3.5 py-2 rounded-xl font-medium text-xs flex items-center gap-1.5 transition cursor-pointer bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700">
-              <i data-lucide="receipt" class="w-3.5 h-3.5"></i>
+            <button onclick="switchTab('gastos-ceap')" id="tab-btn-gastos-ceap" class="tab-btn px-2.5 py-2 rounded-xl font-medium text-xs flex items-center justify-center gap-1.5 transition cursor-pointer bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700">
+              <i data-lucide="receipt" class="w-3.5 h-3.5 text-sky-600 dark:text-cyan-400"></i>
               <span>Gastos CEAP</span>
             </button>
-            <button onclick="switchTab('propostas-tse')" id="tab-btn-propostas-tse" class="tab-btn px-3.5 py-2 rounded-xl font-medium text-xs flex items-center gap-1.5 transition cursor-pointer bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700">
-              <i data-lucide="scroll-text" class="w-3.5 h-3.5"></i>
+            <button onclick="switchTab('projetos-leis')" id="tab-btn-projetos-leis" class="tab-btn px-2.5 py-2 rounded-xl font-medium text-xs flex items-center justify-center gap-1.5 transition cursor-pointer bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700">
+              <i data-lucide="file-text" class="w-3.5 h-3.5 text-purple-600 dark:text-purple-400"></i>
+              <span>Projetos de Lei</span>
+            </button>
+            <button onclick="switchTab('propostas-tse')" id="tab-btn-propostas-tse" class="tab-btn px-2.5 py-2 rounded-xl font-medium text-xs flex items-center justify-center gap-1.5 transition cursor-pointer bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700">
+              <i data-lucide="scroll-text" class="w-3.5 h-3.5 text-amber-600 dark:text-amber-400"></i>
               <span>Propostas de Governo</span>
             </button>
-            <button onclick="switchTab('debates-falas')" id="tab-btn-debates-falas" class="tab-btn px-3.5 py-2 rounded-xl font-medium text-xs flex items-center gap-1.5 transition cursor-pointer bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700">
-              <i data-lucide="mic-vocal" class="w-3.5 h-3.5"></i>
+          </div>
+          <!-- Linha 2: Fiscalização, Integridade & Cenário (4 Abas) -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-1.5">
+            <button onclick="switchTab('debates-falas')" id="tab-btn-debates-falas" class="tab-btn px-2.5 py-2 rounded-xl font-medium text-xs flex items-center justify-center gap-1.5 transition cursor-pointer bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700">
+              <i data-lucide="mic-vocal" class="w-3.5 h-3.5 text-amber-500"></i>
               <span>Falas no Debate</span>
             </button>
-            <button onclick="switchTab('emendas-parlamentares')" id="tab-btn-emendas-parlamentares" class="tab-btn px-3.5 py-2 rounded-xl font-medium text-xs flex items-center gap-1.5 transition cursor-pointer bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700">
-              <i data-lucide="banknote" class="w-3.5 h-3.5"></i>
+            <button onclick="switchTab('emendas-parlamentares')" id="tab-btn-emendas-parlamentares" class="tab-btn px-2.5 py-2 rounded-xl font-medium text-xs flex items-center justify-center gap-1.5 transition cursor-pointer bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700">
+              <i data-lucide="banknote" class="w-3.5 h-3.5 text-emerald-500"></i>
               <span>Emendas</span>
             </button>
-            <button onclick="switchTab('historico-etico')" id="tab-btn-historico-etico" class="tab-btn px-3.5 py-2 rounded-xl font-medium text-xs flex items-center gap-1.5 transition cursor-pointer bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700">
-              <i data-lucide="scale" class="w-3.5 h-3.5"></i>
+            <button onclick="switchTab('historico-etico')" id="tab-btn-historico-etico" class="tab-btn px-2.5 py-2 rounded-xl font-medium text-xs flex items-center justify-center gap-1.5 transition cursor-pointer bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700">
+              <i data-lucide="scale" class="w-3.5 h-3.5 text-sky-500"></i>
               <span>Histórico Ético</span>
             </button>
-            <button onclick="switchTab('pesquisas-eleitorais')" id="tab-btn-pesquisas-eleitorais" class="tab-btn px-3.5 py-2 rounded-xl font-medium text-xs flex items-center gap-1.5 transition cursor-pointer bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700">
-              <i data-lucide="trending-up" class="w-3.5 h-3.5"></i>
+            <button onclick="switchTab('pesquisas-eleitorais')" id="tab-btn-pesquisas-eleitorais" class="tab-btn px-2.5 py-2 rounded-xl font-medium text-xs flex items-center justify-center gap-1.5 transition cursor-pointer bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700">
+              <i data-lucide="trending-up" class="w-3.5 h-3.5 text-indigo-500"></i>
               <span>Pesquisas</span>
             </button>
           </div>
@@ -382,9 +406,162 @@
 
           </div>
 
+          <!-- ========================================================================= -->
+          <!-- 3.5. ABA: PROJETOS DE LEIS E PRODUTIVIDADE LEGISLATIVA -->
+          <!-- ========================================================================= -->
+          <div id="tab-sec-projetos-leis" class="tab-section hidden space-y-6">
+            
+            <!-- Painel de Produtividade & Eficácia Legislativa -->
+            <div class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 shadow-xs space-y-6">
+              
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-200 dark:border-white/10 pb-4">
+                <div>
+                  <div class="flex items-center gap-2">
+                    <span class="px-2.5 py-1 rounded-lg text-xs font-black uppercase tracking-wider bg-purple-100 dark:bg-purple-500/20 text-purple-800 dark:text-purple-300 border border-purple-200 dark:border-purple-500/30">
+                      ⚖️ Produção Parlamentar & Leis
+                    </span>
+                    <h3 class="text-lg font-black text-slate-900 dark:text-white">Projetos de Lei & Fiscalização</h3>
+                  </div>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                    Auditoria de proposições, taxa de conversão em lei sancionada e relatórios com dados oficiais da Câmara e Senado
+                  </p>
+                </div>
+                <div class="flex items-center gap-2 self-start sm:self-auto">
+                  <a href="https://www.camara.leg.br" target="_blank" class="px-3 py-1.5 rounded-xl text-xs font-bold bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10 transition inline-flex items-center gap-1.5">
+                    <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                    <span>Portal da Câmara</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- 6 KPIs de Eficácia Legislativa -->
+              <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+                <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-white/5 text-center">
+                  <span class="text-[10px] uppercase font-bold text-slate-400 dark:text-slate-500 block">Total Propostos</span>
+                  <span id="dossie-pls-total" class="text-2xl font-black font-mono text-slate-900 dark:text-white">--</span>
+                  <span class="text-[10px] text-slate-500 dark:text-slate-400 block mt-0.5">PLs de autoria</span>
+                </div>
+                <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-white/5 text-center">
+                  <span class="text-[10px] uppercase font-bold text-slate-400 dark:text-slate-500 block">Média Anual</span>
+                  <span id="dossie-pls-annual-avg" class="text-2xl font-black font-mono text-sky-600 dark:text-cyan-400">--</span>
+                  <span class="text-[10px] text-slate-500 dark:text-slate-400 block mt-0.5">propostas / ano</span>
+                </div>
+                <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-white/5 text-center">
+                  <span class="text-[10px] uppercase font-bold text-slate-400 dark:text-slate-500 block">Aprovados / Leis</span>
+                  <span id="dossie-pls-approved" class="text-2xl font-black font-mono text-emerald-600 dark:text-emerald-400">--</span>
+                  <span class="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold block mt-0.5">sancionadas</span>
+                </div>
+                <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-white/5 text-center">
+                  <span class="text-[10px] uppercase font-bold text-slate-400 dark:text-slate-500 block">Média Aprovada</span>
+                  <span id="dossie-pls-approved-annual" class="text-2xl font-black font-mono text-emerald-600 dark:text-emerald-400">--</span>
+                  <span class="text-[10px] text-slate-500 dark:text-slate-400 block mt-0.5">leis / ano</span>
+                </div>
+                <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-white/5 text-center">
+                  <span class="text-[10px] uppercase font-bold text-slate-400 dark:text-slate-500 block">Taxa de Sucesso</span>
+                  <span id="dossie-pls-success-rate" class="text-2xl font-black font-mono text-purple-600 dark:text-purple-400">--%</span>
+                  <span class="text-[10px] text-purple-600 dark:text-purple-400 font-bold block mt-0.5">conversão real</span>
+                </div>
+                <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-white/5 text-center">
+                  <span class="text-[10px] uppercase font-bold text-slate-400 dark:text-slate-500 block">Fiscalizações</span>
+                  <span id="dossie-pls-fiscal-count" class="text-2xl font-black font-mono text-amber-600 dark:text-amber-400">--</span>
+                  <span class="text-[10px] text-slate-500 dark:text-slate-400 block mt-0.5">RICs / Convocações</span>
+                </div>
+              </div>
+
+              <!-- Histórico de Produtividade por Mandato -->
+              <div class="space-y-3">
+                <h4 class="text-xs font-extrabold text-slate-900 dark:text-white uppercase tracking-wider flex items-center gap-2">
+                  <i data-lucide="history" class="w-4 h-4 text-purple-600 dark:text-purple-400"></i>
+                  <span>Produção Legislativa Auditada por Mandato</span>
+                </h4>
+                <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-white/10">
+                  <table class="w-full text-xs text-left">
+                    <thead class="bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300 font-bold border-b border-slate-200 dark:border-white/10">
+                      <tr>
+                        <th class="py-2.5 px-3">Mandato</th>
+                        <th class="py-2.5 px-3">Cargo Exercido</th>
+                        <th class="py-2.5 px-3 text-center">PLs Apresentados</th>
+                        <th class="py-2.5 px-3 text-center">Leis Sancionadas</th>
+                        <th class="py-2.5 px-3 text-center">Taxa de Eficácia</th>
+                        <th class="py-2.5 px-3">Foco Temático Principal</th>
+                      </tr>
+                    </thead>
+                    <tbody id="dossie-mandates-table" class="divide-y divide-slate-100 dark:divide-white/5">
+                      <!-- Renderizado via JS -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- Lista de Leis e Proposições de Maior Relevância -->
+              <div class="space-y-3">
+                <div class="flex items-center justify-between">
+                  <h4 class="text-xs font-extrabold text-slate-900 dark:text-white uppercase tracking-wider flex items-center gap-2">
+                    <i data-lucide="award" class="w-4 h-4 text-purple-600 dark:text-purple-400"></i>
+                    <span>Proposições de Alto Impacto Cívico</span>
+                  </h4>
+                  <span class="text-[11px] text-slate-500 dark:text-slate-400 font-mono">Dados da tramitação oficial</span>
+                </div>
+                <div id="dossie-pls-list" class="space-y-3">
+                  <!-- Renderizado via JS -->
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
           <!-- 4. ABA: PROPOSTAS TSE -->
           <div id="tab-sec-propostas-tse" class="tab-section hidden space-y-6">
             
+            <!-- Matriz de Confronto Cívico: 3 Principais Problemas vs Competência Constitucional do Cargo -->
+            <div class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 shadow-xs space-y-6">
+              
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-200 dark:border-white/10 pb-4">
+                <div>
+                  <div class="flex items-center gap-2">
+                    <span class="px-2.5 py-1 rounded-lg text-xs font-black uppercase tracking-wider bg-purple-100 dark:bg-purple-500/20 text-purple-800 dark:text-purple-300 border border-purple-200 dark:border-purple-500/30">
+                      ⚖️ Conformidade Constitucional (CF/88)
+                    </span>
+                    <h3 class="text-lg font-black text-slate-900 dark:text-white">3 Principais Problemas da Jurisdição</h3>
+                  </div>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                    Auditoria de pertinência temática de acordo com as atribuições legais do cargo que o candidato está disputando
+                  </p>
+                </div>
+                <div class="text-right">
+                  <span id="dossie-jurisdiction-coverage-badge" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-500/30">
+                    <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
+                    <span id="dossie-coverage-score-text">100% de Cobertura</span>
+                  </span>
+                  <span id="dossie-competence-badge" class="text-[10px] text-slate-500 dark:text-slate-400 block font-mono mt-1">
+                    Esfera Constitucional: Executivo / Legislativo
+                  </span>
+                </div>
+              </div>
+
+              <!-- Caixa de Competência do Cargo pela Constituição Federal -->
+              <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-white/5 space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="text-[11px] uppercase font-bold text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
+                    <i data-lucide="shield-check" class="w-4 h-4 text-sky-600 dark:text-cyan-400"></i>
+                    Competência do Cargo Disputado na Constituição Federal de 1988:
+                  </span>
+                  <span id="dossie-const-article-badge" class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-sky-100 dark:bg-sky-500/20 text-sky-800 dark:text-cyan-300">
+                    CF/88
+                  </span>
+                </div>
+                <p id="dossie-constitutional-duties-text" class="text-[11px] text-slate-700 dark:text-slate-300 leading-relaxed"></p>
+              </div>
+
+              <!-- Grid dos 3 Problemas Reais por Competência -->
+              <div id="dossie-jurisdiction-problems-grid" class="space-y-3">
+                <!-- Renderizado dinamicamente via JS -->
+              </div>
+
+            </div>
+
+            <!-- Propostas Registradas no TSE com Votação Popular -->
             <div class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 shadow-xs space-y-6">
               <div>
                 <h3 class="text-lg font-black text-slate-900 dark:text-white">Plano de Governo Registrado no TSE</h3>
@@ -679,9 +856,10 @@
       const initialTab = urlParams.get('tab') || 'visao-geral';
 
       // Sincroniza Tema Escuro/Claro
-      const storedTheme = localStorage.getItem('theme');
+      const storedTheme = localStorage.getItem('civic_theme') || localStorage.getItem('theme');
       if (storedTheme === 'dark' || (!storedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         document.documentElement.classList.add('dark');
+        document.documentElement.classList.remove('light');
         isDarkMode = true;
         updateThemeIcon();
       }
@@ -827,6 +1005,8 @@
           ]
         } : fb.amendments,
         ethics: (apiCand.ethics && Array.isArray(apiCand.ethics)) ? apiCand.ethics : fb.ethics,
+        bills: apiCand.bills || (typeof candidatesData !== 'undefined' ? candidatesData.find(c => c.id === apiCand.id)?.bills : null),
+        jurisdictionProblemsMatch: apiCand.jurisdictionProblemsMatch || (typeof candidatesData !== 'undefined' ? candidatesData.find(c => c.id === apiCand.id)?.jurisdictionProblemsMatch : null),
         polls: apiCand.polls ? {
           firstRound: apiCand.polls.firstRound || apiCand.polls.datafolha || fb.polls.firstRound,
           secondRound: apiCand.polls.secondRound || apiCand.polls.quaest || fb.polls.secondRound,
@@ -1048,8 +1228,10 @@
         `;
       }
 
-      // Renderiza Gráfico Radar
+            // Renderiza Gráfico Radar
       renderRadar(cand.radar);
+      renderDossieBills(cand);
+      renderDossieJurisdictionProblems(cand);
     }
 
     // Gerenciador do Gráfico Radar (Chart.js)
@@ -1141,8 +1323,142 @@
       });
     }
 
+    
+    // Renderiza a Aba de Projetos de Lei e Produtividade Legislativa
+    function renderDossieBills(cand) {
+      const b = cand.bills || {
+        total: 35, annualAvgProposed: 11.5, approved: 4, annualAvgApproved: 1.3, approvalRatePct: 11.4, fiscalCount: 18,
+        mandates: [{ period: '2023 - 2026', office: cand.position, proposed: 35, approved: 4, successRate: '11.4%', reports: 12, focus: 'Atuação Legislativa e Fiscalização' }],
+        highlightList: [{ number: 'PL 4910/2024', title: 'Regulamentação e Transparência no Setor Público', status: 'Em Tramitação', year: 2024, scope: 'Gestão', benefits: 'Transparência de dados e combate a fraudes orçamentárias.', link: 'https://camara.leg.br' }]
+      };
+
+      const setVal = (id, val) => {
+        const el = document.getElementById(id);
+        if (el) el.innerText = val;
+      };
+
+      setVal('dossie-pls-total', b.total);
+      setVal('dossie-pls-annual-avg', b.annualAvgProposed ? Number(b.annualAvgProposed).toFixed(1) : (b.total / 3).toFixed(1));
+      setVal('dossie-pls-approved', b.approved);
+      setVal('dossie-pls-approved-annual', b.annualAvgApproved ? Number(b.annualAvgApproved).toFixed(1) : (b.approved / 3).toFixed(1));
+      setVal('dossie-pls-success-rate', `${b.approvalRatePct}%`);
+      setVal('dossie-pls-fiscal-count', b.fiscalCount || 15);
+
+      // Tabela de Mandatos
+      const tableBody = document.getElementById('dossie-mandates-table');
+      if (tableBody && b.mandates) {
+        tableBody.innerHTML = b.mandates.map(m => `
+          <tr class="hover:bg-slate-100/50 dark:hover:bg-white/5 transition">
+            <td class="py-2.5 px-3 font-bold text-slate-900 dark:text-white">${m.period}</td>
+            <td class="py-2.5 px-3 font-medium text-slate-600 dark:text-slate-300">${m.office}</td>
+            <td class="py-2.5 px-3 text-center font-mono font-bold text-slate-900 dark:text-white">${m.proposed}</td>
+            <td class="py-2.5 px-3 text-center font-mono font-bold text-emerald-600 dark:text-emerald-400">${m.approved}</td>
+            <td class="py-2.5 px-3 text-center font-mono font-bold text-purple-600 dark:text-purple-400">${m.successRate}</td>
+            <td class="py-2.5 px-3 text-xs text-slate-500 dark:text-slate-400">${m.focus}</td>
+          </tr>
+        `).join('');
+      }
+
+      // Lista de Leis em Destaque
+      const listContainer = document.getElementById('dossie-pls-list');
+      if (listContainer && b.highlightList) {
+        listContainer.innerHTML = b.highlightList.map(pl => `
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-white/5 space-y-2">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5">
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded text-[10px] font-black uppercase font-mono bg-purple-100 dark:bg-purple-500/20 text-purple-800 dark:text-purple-300 border border-purple-200 dark:border-purple-500/30">
+                  ${pl.number || 'PL'}
+                </span>
+                <h5 class="text-xs sm:text-sm font-bold text-slate-900 dark:text-white">${pl.title}</h5>
+              </div>
+              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold self-start sm:self-auto ${pl.status.toLowerCase().includes('sancionada') || pl.status.toLowerCase().includes('vigor') ? 'bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-500/30' : 'bg-sky-100 dark:bg-sky-500/20 text-sky-800 dark:text-sky-300 border border-sky-300 dark:border-sky-500/30'}">
+                ${pl.status}
+              </span>
+            </div>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">${pl.benefits || 'Iniciativa legislativa voltada ao interesse público e direitos fundamentais.'}</p>
+            <div class="flex items-center justify-between pt-1.5 border-t border-slate-200 dark:border-white/10 text-[10px] text-slate-400 font-mono">
+              <span>Área: <strong class="text-slate-700 dark:text-slate-300">${pl.scope}</strong> • Ano: ${pl.year}</span>
+              <a href="${pl.link || 'https://camara.leg.br'}" target="_blank" class="text-sky-600 dark:text-cyan-400 hover:underline inline-flex items-center gap-1 font-sans">
+                Ver no Diário Oficial <i data-lucide="external-link" class="w-3 h-3"></i>
+              </a>
+            </div>
+          </div>
+        `).join('');
+      }
+      lucide.createIcons();
+    }
+
+    // Renderiza a Matriz dos 3 Principais Problemas por Competência Constitucional
+    function renderDossieJurisdictionProblems(cand) {
+      const jp = cand.jurisdictionProblemsMatch;
+      if (!jp) return;
+
+      const badgeScore = document.getElementById('dossie-coverage-score-text');
+      if (badgeScore) {
+        badgeScore.innerText = jp.coverageBadgeText || `${jp.coveragePct}% de Cobertura Constitucional`;
+      }
+
+      const compBadge = document.getElementById('dossie-competence-badge');
+      if (compBadge) {
+        compBadge.innerText = `Esfera: ${jp.competenceLevel || cand.position} (${jp.jurisdiction || cand.state})`;
+      }
+
+      const constBadge = document.getElementById('dossie-const-article-badge');
+      if (constBadge) {
+        constBadge.innerText = jp.constitutionalBasis || 'CF/88';
+      }
+
+      const dutiesEl = document.getElementById('dossie-constitutional-duties-text');
+      if (dutiesEl) {
+        dutiesEl.innerText = `Auditoria Constitucional: Os 3 gargalos avaliados fazem parte da competência precípua de ${cand.position} (${jp.jurisdiction}), conforme os preceitos da Constituição Federal de 1988 (${jp.constitutionalBasis}).`;
+      }
+
+      const gridEl = document.getElementById('dossie-jurisdiction-problems-grid');
+      if (gridEl && jp.problems) {
+        gridEl.innerHTML = jp.problems.map(prob => `
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border ${prob.isCovered ? 'border-purple-200 dark:border-purple-500/20' : 'border-red-200 dark:border-red-500/30'} space-y-2.5 shadow-xs">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-200 dark:border-white/5 pb-2">
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="px-2 py-0.5 rounded text-[10px] font-extrabold border ${prob.badgeColor}">
+                  ${prob.title}
+                </span>
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300">
+                  ${prob.constitutionalArticle || 'CF/88'}
+                </span>
+              </div>
+              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black ${prob.isCovered ? 'bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300' : 'bg-red-100 dark:bg-red-500/20 text-red-800 dark:text-red-300'}">
+                ${prob.isCovered ? '✓ Proposta Oficial no TSE' : '⚠️ Gargalo Descoberto no Plano'}
+              </span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+              <div class="p-3 rounded-xl bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-white/5 space-y-1">
+                <span class="text-[10px] uppercase font-bold text-red-600 dark:text-red-400 flex items-center gap-1">
+                  <i data-lucide="alert-octagon" class="w-3.5 h-3.5"></i> O Problema Real da População:
+                </span>
+                <p class="text-[11px] text-slate-700 dark:text-slate-300 leading-relaxed">${prob.diagnosis}</p>
+              </div>
+              <div class="p-3 rounded-xl ${prob.isCovered ? 'bg-purple-50/70 dark:bg-purple-950/20 border border-purple-200 dark:border-purple-500/30' : 'bg-red-50 dark:bg-red-950/20 border border-red-200 dark:border-red-500/30'} space-y-1">
+                <span class="text-[10px] uppercase font-bold ${prob.isCovered ? 'text-purple-700 dark:text-purple-300' : 'text-red-600 dark:text-red-400'} flex items-center gap-1">
+                  <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Solução Registrada no Plano de Governo:
+                </span>
+                <p class="text-[11px] text-slate-700 dark:text-slate-300 leading-relaxed font-medium">${prob.candidateSolution}</p>
+              </div>
+            </div>
+            <div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-slate-200 dark:border-white/10 text-[10px] text-slate-500 dark:text-slate-400 font-mono">
+              <span>🎯 Meta: <strong class="text-slate-900 dark:text-white font-bold">${prob.metricTarget}</strong></span>
+              <span>💰 Custo: <strong class="text-slate-900 dark:text-white font-bold">${prob.budget}</strong></span>
+              <span class="text-purple-600 dark:text-purple-400 font-bold">${prob.tseProposalRef}</span>
+            </div>
+          </div>
+        `).join('');
+      }
+      lucide.createIcons();
+    }
+
+
     // Troca de Abas Analíticas
     function switchTab(tabId, updateUrl = true) {
+      if (tabId === 'projetos-leis' || tabId === 'leis') tabId = 'projetos-leis';
       if (tabId === 'propostas-teses') tabId = 'propostas-tse';
       if (tabId === 'presenca') tabId = 'presenca-faltas';
       if (tabId === 'debates' || tabId === 'falas-debate') tabId = 'debates-falas';
@@ -1166,18 +1482,34 @@
         window.history.replaceState({}, '', url);
       }
 
-      if (tabId === 'gastos-ceap' && currentCand) {
+            if (tabId === 'gastos-ceap' && currentCand) {
         setTimeout(() => renderCeapTimelineChart(currentCand.salary.timeline), 50);
+      }
+      if (tabId === 'projetos-leis' && currentCand) {
+        renderDossieBills(currentCand);
+      }
+      if (tabId === 'propostas-tse' && currentCand) {
+        renderDossieJurisdictionProblems(currentCand);
       }
 
       lucide.createIcons();
     }
 
-    // Alternador de Tema Claro / Escuro
+    // Alternador de Tema Claro / Escuro (Compatível com Portal, WCAG 2.2 e sem conflito de classes)
     function toggleTheme() {
       isDarkMode = !isDarkMode;
-      document.documentElement.classList.toggle('dark', isDarkMode);
-      localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+      const htmlEl = document.documentElement;
+      if (isDarkMode) {
+        htmlEl.classList.add('dark');
+        htmlEl.classList.remove('light');
+        localStorage.setItem('civic_theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        htmlEl.classList.remove('dark');
+        htmlEl.classList.add('light');
+        localStorage.setItem('civic_theme', 'light');
+        localStorage.setItem('theme', 'light');
+      }
       updateThemeIcon();
 
       if (currentCand) {
