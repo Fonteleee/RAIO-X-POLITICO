@@ -1229,8 +1229,9 @@
     }
 
     function exportCard() {
-      showToast('Gerando figurinha oficial do candidato...');
-      window.location.href = `index.html#ranking`;
+      if (!currentCand) return;
+      showToast('Abrindo figurinha oficial de ' + (currentCand.ballotName || currentCand.name) + '...');
+      window.location.href = `index.html?figurinha=${encodeURIComponent(currentCand.id)}`;
     }
 
     function openOfficialSourcesModal() {

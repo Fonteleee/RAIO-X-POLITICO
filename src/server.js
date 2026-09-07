@@ -90,6 +90,34 @@ const server = http.createServer(async (req, res) => {
         });
       }
 
+      // 1.1 Proxy de Imagens Oficial para Figurinhas & html2canvas (CORS Habilitado)
+      if (pathname === '/api/proxy-image' && req.method === 'GET') {
+        const targetUrl = parsedUrl.searchParams.get('url');
+        if (!targetUrl || (!targetUrl.startsWith('http://') && !targetUrl.startsWith('https://'))) {
+          return sendJson(res, 400, { error: 'Parâmetro url é obrigatório e deve ser http/https' });
+        }
+        try {
+          const upstream = await fetch(targetUrl, {
+            headers: {
+              'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) RaioXPolitico/1.0'
+            }
+          });
+          if (!upstream.ok) {
+            return sendJson(res, upstream.status, { error: 'Falha ao recuperar imagem remota' });
+          }
+          const contentType = upstream.headers.get('content-type') || 'image/jpeg';
+          const buffer = Buffer.from(await upstream.arrayBuffer());
+          res.writeHead(200, {
+            'Content-Type': contentType,
+            'Access-Control-Allow-Origin': '*',
+            'Cache-Control': 'public, max-age=86400'
+          });
+          return res.end(buffer);
+        } catch (proxyErr) {
+          return sendJson(res, 500, { error: proxyErr.message });
+        }
+      }
+
       // 2. Listar todos os candidatos
       if (pathname === '/api/candidates' && req.method === 'GET') {
         const candidates = appDb.getAllCandidates();

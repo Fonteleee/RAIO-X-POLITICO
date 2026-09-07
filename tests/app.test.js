@@ -142,6 +142,11 @@ test('API REST: Endpoints HTTP essenciais respondem com 200 OK', async () => {
     assert.ok(llmsText.includes('# Raio-X Político 2026'));
     assert.ok(llmsText.includes('Luiz Inácio Lula da Silva'));
     assert.ok(llmsText.includes('Tarcísio Gomes de Freitas'));
+
+    // 6. Proxy de Imagens com CORS para Figurinhas & Canvas
+    const proxyRes = await fetch(`${baseUrl}/api/proxy-image?url=${encodeURIComponent('https://www.camara.leg.br/internet/deputado/bandep/160976.jpg')}`);
+    assert.equal(proxyRes.status, 200);
+    assert.equal(proxyRes.headers.get('access-control-allow-origin'), '*');
   } finally {
     await new Promise(resolve => server.close(resolve));
   }
