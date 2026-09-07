@@ -75,6 +75,17 @@ class AppDatabase {
       FROM candidate_jurisdiction WHERE candidate_id = ?
     `);
 
+    const campStmt = this.db.prepare(`
+      SELECT election_year as electionYear, office_elected as officeElected, total_spent as totalSpent,
+             total_spent_formatted as totalSpentFormatted, total_received as totalReceived,
+             total_received_formatted as totalReceivedFormatted, votes_received as votesReceived,
+             cost_per_vote as costPerVote, tse_spending_limit as tseSpendingLimit, status_tse as statusTse,
+             public_fund_pct as publicFundPct, private_donations_pct as privateDonationsPct,
+             own_resources_pct as ownResourcesPct, crowdfunding_pct as crowdfundingPct,
+             top_donors_json as topDonorsJson, top_expenses_json as topExpensesJson, tse_url as tseUrl
+      FROM candidate_campaign_finance WHERE candidate_id = ?
+    `);
+
     for (const cand of candidates) {
       cand.proposals = propStmt.all(cand.id) || [];
       cand.radar = {
@@ -119,6 +130,30 @@ class AppDatabase {
           coverageBadgeText: `${jRow.coveragePct}% (${jRow.coveredCount} de ${jRow.totalCount} Gargalos Cobertos)`,
           priorityGoal: jRow.priorityGoal,
           problems: jRow.problemsJson ? JSON.parse(jRow.problemsJson) : []
+        };
+      }
+
+      const cRow = campStmt.get(cand.id);
+      if (cRow) {
+        cand.campaignFinance = {
+          electionYear: cRow.electionYear,
+          officeElected: cRow.officeElected,
+          totalSpent: cRow.totalSpent,
+          totalSpentFormatted: cRow.totalSpentFormatted,
+          totalReceived: cRow.totalReceived,
+          totalReceivedFormatted: cRow.totalReceivedFormatted,
+          votesReceived: cRow.votesReceived,
+          votesReceivedFormatted: Number(cRow.votesReceived).toLocaleString('pt-BR'),
+          costPerVote: cRow.costPerVote,
+          tseSpendingLimit: cRow.tseSpendingLimit,
+          statusTse: cRow.statusTse,
+          publicFundPct: cRow.publicFundPct,
+          privateDonationsPct: cRow.privateDonationsPct,
+          ownResourcesPct: cRow.ownResourcesPct,
+          crowdfundingPct: cRow.crowdfundingPct,
+          topDonors: cRow.topDonorsJson ? JSON.parse(cRow.topDonorsJson) : [],
+          topExpenses: cRow.topExpensesJson ? JSON.parse(cRow.topExpensesJson) : [],
+          tseUrl: cRow.tseUrl
         };
       }
 
@@ -251,6 +286,43 @@ class AppDatabase {
       };
     } else {
       cand.jurisdictionProblemsMatch = null;
+    }
+
+    // Financiamento e Prestação Oficial de Contas de Campanha (TSE)
+    const campStmt = this.db.prepare(`
+      SELECT election_year as electionYear, office_elected as officeElected, total_spent as totalSpent,
+             total_spent_formatted as totalSpentFormatted, total_received as totalReceived,
+             total_received_formatted as totalReceivedFormatted, votes_received as votesReceived,
+             cost_per_vote as costPerVote, tse_spending_limit as tseSpendingLimit, status_tse as statusTse,
+             public_fund_pct as publicFundPct, private_donations_pct as privateDonationsPct,
+             own_resources_pct as ownResourcesPct, crowdfunding_pct as crowdfundingPct,
+             top_donors_json as topDonorsJson, top_expenses_json as topExpensesJson, tse_url as tseUrl
+      FROM candidate_campaign_finance WHERE candidate_id = ?
+    `);
+    const cRow = campStmt.get(id);
+    if (cRow) {
+      cand.campaignFinance = {
+        electionYear: cRow.electionYear,
+        officeElected: cRow.officeElected,
+        totalSpent: cRow.totalSpent,
+        totalSpentFormatted: cRow.totalSpentFormatted,
+        totalReceived: cRow.totalReceived,
+        totalReceivedFormatted: cRow.totalReceivedFormatted,
+        votesReceived: cRow.votesReceived,
+        votesReceivedFormatted: cRow.votesReceived ? cRow.votesReceived.toLocaleString('pt-BR') : '0',
+        costPerVote: cRow.costPerVote,
+        tseSpendingLimit: cRow.tseSpendingLimit,
+        statusTse: cRow.statusTse,
+        publicFundPct: cRow.publicFundPct,
+        privateDonationsPct: cRow.privateDonationsPct,
+        ownResourcesPct: cRow.ownResourcesPct,
+        crowdfundingPct: cRow.crowdfundingPct,
+        topDonors: cRow.topDonorsJson ? JSON.parse(cRow.topDonorsJson) : [],
+        topExpenses: cRow.topExpensesJson ? JSON.parse(cRow.topExpensesJson) : [],
+        tseUrl: cRow.tseUrl || 'https://divulgacandcontas.tse.jus.br/'
+      };
+    } else {
+      cand.campaignFinance = null;
     }
 
     return cand;

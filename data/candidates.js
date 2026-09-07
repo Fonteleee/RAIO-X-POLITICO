@@ -241,6 +241,76 @@ _root.candidatesData = [
           "tseProposalRef": "Plano de Governo PE - Eixo Águas de Pernambuco"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Governador (PE)",
+      "totalSpent": 16500000,
+      "totalSpentFormatted": "R$ 16,50 milhões",
+      "totalReceived": 16747499.999999998,
+      "totalReceivedFormatted": "R$ 16,75 milhões",
+      "votesReceived": 2400000,
+      "votesReceivedFormatted": "2.400.000",
+      "costPerVote": "R$ 6,88 / voto",
+      "tseSpendingLimit": "R$ 19.800.000,00",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 91,
+      "privateDonationsPct": 8,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do PSB",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 15.015.000,00",
+          "pct": "91%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 1.320.000,00",
+          "pct": "8%"
+        },
+        {
+          "donor": "Autofinanciamento (João Campos)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 165.000,00",
+          "pct": "1%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 6.270.000,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 3.630.000,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 2.640.000,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 2.310.000,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 1.650.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -481,6 +551,76 @@ _root.candidatesData = [
           "tseProposalRef": "Diretrizes de Governo para o Brasil 2026 - Eixo Direitos Sociais e Cidadania"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Presidente da República",
+      "totalSpent": 48000000,
+      "totalSpentFormatted": "R$ 48,00 milhões",
+      "totalReceived": 48719999.99999999,
+      "totalReceivedFormatted": "R$ 48,72 milhões",
+      "votesReceived": 15000000,
+      "votesReceivedFormatted": "15.000.000",
+      "costPerVote": "R$ 3,20 / voto",
+      "tseSpendingLimit": "R$ 88.900.000,00",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 93,
+      "privateDonationsPct": 6,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do PSD",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 44.640.000,00",
+          "pct": "93%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 2.880.000,00",
+          "pct": "6%"
+        },
+        {
+          "donor": "Autofinanciamento (Ronaldo Caiado)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 480.000,00",
+          "pct": "1%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 18.240.000,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 10.560.000,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 7.680.000,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 6.720.000,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 4.800.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -721,6 +861,76 @@ _root.candidatesData = [
           "tseProposalRef": "Plano Municipal de Saúde Salvador"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2024,
+      "officeElected": "Prefeito de Salvador (2024)",
+      "totalSpent": 18900000,
+      "totalSpentFormatted": "R$ 18,90 milhões",
+      "totalReceived": 19183500,
+      "totalReceivedFormatted": "R$ 19,18 milhões",
+      "votesReceived": 1045909,
+      "votesReceivedFormatted": "1.045.909",
+      "costPerVote": "R$ 18,07 / voto",
+      "tseSpendingLimit": "R$ 21.500.000,00",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 93,
+      "privateDonationsPct": 6,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do UNIÃO",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 17.577.000,00",
+          "pct": "93%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 1.134.000,00",
+          "pct": "6%"
+        },
+        {
+          "donor": "Autofinanciamento (Bruno Reis)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 189.000,00",
+          "pct": "1%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 7.182.000,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 4.158.000,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 3.024.000,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 2.646.000,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 1.890.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -961,6 +1171,76 @@ _root.candidatesData = [
           "tseProposalRef": "Plano de Governo Estadual - Eixo Juventude e Futuro"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Governador de São Paulo (2º Turno)",
+      "totalSpent": 42800000,
+      "totalSpentFormatted": "R$ 42,80 milhões",
+      "totalReceived": 43441999.99999999,
+      "totalReceivedFormatted": "R$ 43,44 milhões",
+      "votesReceived": 13486208,
+      "votesReceivedFormatted": "13.486.208",
+      "costPerVote": "R$ 3,17 / voto",
+      "tseSpendingLimit": "R$ 39.900.000,00",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 88.5,
+      "privateDonationsPct": 11,
+      "ownResourcesPct": 0.5,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do REPUBLICANOS",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 37.878.000,00",
+          "pct": "88.5%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 4.708.000,00",
+          "pct": "11%"
+        },
+        {
+          "donor": "Autofinanciamento (Tarcísio de Freitas)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 214.000,00",
+          "pct": "0.5%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 16.264.000,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 9.416.000,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 6.848.000,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 5.992.000,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 4.280.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -1201,6 +1481,76 @@ _root.candidatesData = [
           "tseProposalRef": "Plano de Ação Parlamentar no Senado em Defesa de São Paulo"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Senador (SP)",
+      "totalSpent": 4200000,
+      "totalSpentFormatted": "R$ 4,20 milhões",
+      "totalReceived": 4263000,
+      "totalReceivedFormatted": "R$ 4,26 milhões",
+      "votesReceived": 1800000,
+      "votesReceivedFormatted": "1.800.000",
+      "costPerVote": "R$ 2,33 / voto",
+      "tseSpendingLimit": "R$ 5.600.000,00",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 92,
+      "privateDonationsPct": 7,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do PSB",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 3.864.000,00",
+          "pct": "92%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 294.000,00",
+          "pct": "7%"
+        },
+        {
+          "donor": "Autofinanciamento (Simone Tebet)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 42.000,00",
+          "pct": "1%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 1.596.000,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 924.000,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 672.000,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 588.000,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 420.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -1441,6 +1791,76 @@ _root.candidatesData = [
           "tseProposalRef": "Plano de Ação Parlamentar no Senado em Defesa de São Paulo"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Senador (SP)",
+      "totalSpent": 4200000,
+      "totalSpentFormatted": "R$ 4,20 milhões",
+      "totalReceived": 4263000,
+      "totalReceivedFormatted": "R$ 4,26 milhões",
+      "votesReceived": 1800000,
+      "votesReceivedFormatted": "1.800.000",
+      "costPerVote": "R$ 2,33 / voto",
+      "tseSpendingLimit": "R$ 5.600.000,00",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 92,
+      "privateDonationsPct": 7,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do PL",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 3.864.000,00",
+          "pct": "92%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 294.000,00",
+          "pct": "7%"
+        },
+        {
+          "donor": "Autofinanciamento (Astronauta Marcos Pontes)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 42.000,00",
+          "pct": "1%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 1.596.000,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 924.000,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 672.000,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 588.000,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 420.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -1681,6 +2101,76 @@ _root.candidatesData = [
           "tseProposalRef": "Plano de Ação Parlamentar no Senado em Defesa de Pará"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Senador (PA)",
+      "totalSpent": 4200000,
+      "totalSpentFormatted": "R$ 4,20 milhões",
+      "totalReceived": 4263000,
+      "totalReceivedFormatted": "R$ 4,26 milhões",
+      "votesReceived": 1800000,
+      "votesReceivedFormatted": "1.800.000",
+      "costPerVote": "R$ 2,33 / voto",
+      "tseSpendingLimit": "R$ 5.600.000,00",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 92,
+      "privateDonationsPct": 7,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do MDB",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 3.864.000,00",
+          "pct": "92%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 294.000,00",
+          "pct": "7%"
+        },
+        {
+          "donor": "Autofinanciamento (Helder Barbalho)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 42.000,00",
+          "pct": "1%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 1.596.000,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 924.000,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 672.000,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 588.000,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 420.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -1921,6 +2411,76 @@ _root.candidatesData = [
           "tseProposalRef": "Plano de Modernização Educacional RJ"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Governador (RJ)",
+      "totalSpent": 16500000,
+      "totalSpentFormatted": "R$ 16,50 milhões",
+      "totalReceived": 16747499.999999998,
+      "totalReceivedFormatted": "R$ 16,75 milhões",
+      "votesReceived": 2400000,
+      "votesReceivedFormatted": "2.400.000",
+      "costPerVote": "R$ 6,88 / voto",
+      "tseSpendingLimit": "R$ 19.800.000,00",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 91,
+      "privateDonationsPct": 8,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do PSD",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 15.015.000,00",
+          "pct": "91%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 1.320.000,00",
+          "pct": "8%"
+        },
+        {
+          "donor": "Autofinanciamento (Eduardo Paes)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 165.000,00",
+          "pct": "1%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 6.270.000,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 3.630.000,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 2.640.000,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 2.310.000,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 1.650.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -2161,6 +2721,76 @@ _root.candidatesData = [
           "tseProposalRef": "Plano de Governo Estadual - Eixo Juventude e Futuro"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Governador (CE)",
+      "totalSpent": 16500000,
+      "totalSpentFormatted": "R$ 16,50 milhões",
+      "totalReceived": 16747499.999999998,
+      "totalReceivedFormatted": "R$ 16,75 milhões",
+      "votesReceived": 2400000,
+      "votesReceivedFormatted": "2.400.000",
+      "costPerVote": "R$ 6,88 / voto",
+      "tseSpendingLimit": "R$ 19.800.000,00",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 91,
+      "privateDonationsPct": 8,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do PSDB",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 15.015.000,00",
+          "pct": "91%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 1.320.000,00",
+          "pct": "8%"
+        },
+        {
+          "donor": "Autofinanciamento (Ciro Gomes)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 165.000,00",
+          "pct": "1%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 6.270.000,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 3.630.000,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 2.640.000,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 2.310.000,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 1.650.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -2401,6 +3031,76 @@ _root.candidatesData = [
           "tseProposalRef": "Diretrizes de Governo para o Brasil 2026 - Eixo Direitos Sociais e Cidadania"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Presidente da República",
+      "totalSpent": 48000000,
+      "totalSpentFormatted": "R$ 48,00 milhões",
+      "totalReceived": 48719999.99999999,
+      "totalReceivedFormatted": "R$ 48,72 milhões",
+      "votesReceived": 15000000,
+      "votesReceivedFormatted": "15.000.000",
+      "costPerVote": "R$ 3,20 / voto",
+      "tseSpendingLimit": "R$ 88.900.000,00",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 93,
+      "privateDonationsPct": 6,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do NOVO",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 44.640.000,00",
+          "pct": "93%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 2.880.000,00",
+          "pct": "6%"
+        },
+        {
+          "donor": "Autofinanciamento (Romeu Zema)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 480.000,00",
+          "pct": "1%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 18.240.000,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 10.560.000,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 7.680.000,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 6.720.000,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 4.800.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -2650,6 +3350,76 @@ _root.candidatesData = [
           "tseProposalRef": "Plano de Ação Parlamentar no Senado em Defesa de Paraná"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Senador da República (PR)",
+      "totalSpent": 4850000,
+      "totalSpentFormatted": "R$ 4,85 milhões",
+      "totalReceived": 4922749.999999999,
+      "totalReceivedFormatted": "R$ 4,92 milhões",
+      "votesReceived": 1953188,
+      "votesReceivedFormatted": "1.953.188",
+      "costPerVote": "R$ 2,48 / voto",
+      "tseSpendingLimit": "R$ 5.600.000,00",
+      "statusTse": "Contas Aprovadas com Ressalvas",
+      "publicFundPct": 91,
+      "privateDonationsPct": 8,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do PL",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 4.413.500,00",
+          "pct": "91%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 388.000,00",
+          "pct": "8%"
+        },
+        {
+          "donor": "Autofinanciamento (Sergio Moro)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 48.500,00",
+          "pct": "1%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 1.843.000,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 1.067.000,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 776.000,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 679.000,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 485.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -2890,6 +3660,76 @@ _root.candidatesData = [
           "tseProposalRef": "Plano de Ação Parlamentar no Senado em Defesa de Amapá"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Senador (AP)",
+      "totalSpent": 4200000,
+      "totalSpentFormatted": "R$ 4,20 milhões",
+      "totalReceived": 4263000,
+      "totalReceivedFormatted": "R$ 4,26 milhões",
+      "votesReceived": 1800000,
+      "votesReceivedFormatted": "1.800.000",
+      "costPerVote": "R$ 2,33 / voto",
+      "tseSpendingLimit": "R$ 5.600.000,00",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 92,
+      "privateDonationsPct": 7,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do PT",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 3.864.000,00",
+          "pct": "92%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 294.000,00",
+          "pct": "7%"
+        },
+        {
+          "donor": "Autofinanciamento (Randolfe Rodrigues)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 42.000,00",
+          "pct": "1%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 1.596.000,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 924.000,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 672.000,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 588.000,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 420.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -3130,6 +3970,76 @@ _root.candidatesData = [
           "tseProposalRef": "Plano de Governo Estadual - Eixo Juventude e Futuro"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Governador (RS)",
+      "totalSpent": 16500000,
+      "totalSpentFormatted": "R$ 16,50 milhões",
+      "totalReceived": 16747499.999999998,
+      "totalReceivedFormatted": "R$ 16,75 milhões",
+      "votesReceived": 2400000,
+      "votesReceivedFormatted": "2.400.000",
+      "costPerVote": "R$ 6,88 / voto",
+      "tseSpendingLimit": "R$ 19.800.000,00",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 91,
+      "privateDonationsPct": 8,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do PSD",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 15.015.000,00",
+          "pct": "91%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 1.320.000,00",
+          "pct": "8%"
+        },
+        {
+          "donor": "Autofinanciamento (Eduardo Leite)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 165.000,00",
+          "pct": "1%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 6.270.000,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 3.630.000,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 2.640.000,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 2.310.000,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 1.650.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -3370,6 +4280,76 @@ _root.candidatesData = [
           "tseProposalRef": "Plano de Governo Municipal SP - Eixo Cidade Resiliente"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2024,
+      "officeElected": "Prefeito de São Paulo (2024)",
+      "totalSpent": 58400000,
+      "totalSpentFormatted": "R$ 58,40 milhões",
+      "totalReceived": 59275999.99999999,
+      "totalReceivedFormatted": "R$ 59,28 milhões",
+      "votesReceived": 3393110,
+      "votesReceivedFormatted": "3.393.110",
+      "costPerVote": "R$ 17,21 / voto",
+      "tseSpendingLimit": "R$ 67.200.000,00",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 94,
+      "privateDonationsPct": 5.5,
+      "ownResourcesPct": 0.5,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do MDB",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 54.896.000,00",
+          "pct": "94%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 3.212.000,00",
+          "pct": "5.5%"
+        },
+        {
+          "donor": "Autofinanciamento (Ricardo Nunes)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 292.000,00",
+          "pct": "0.5%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 22.192.000,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 12.848.000,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 9.344.000,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 8.176.000,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 5.840.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -3610,6 +4590,76 @@ _root.candidatesData = [
           "tseProposalRef": "Diretrizes de Governo para o Brasil 2026 - Eixo Direitos Sociais e Cidadania"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Presidente da República (2º Turno)",
+      "totalSpent": 131350000,
+      "totalSpentFormatted": "R$ 131,35 milhões",
+      "totalReceived": 133320249.99999999,
+      "totalReceivedFormatted": "R$ 133,32 milhões",
+      "votesReceived": 60345999,
+      "votesReceivedFormatted": "60.345.999",
+      "costPerVote": "R$ 2,18 / voto",
+      "tseSpendingLimit": "R$ 133.416.000,00",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 96,
+      "privateDonationsPct": 3,
+      "ownResourcesPct": 2,
+      "crowdfundingPct": 1,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do PT",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 126.096.000,00",
+          "pct": "96%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 3.940.500,00",
+          "pct": "3%"
+        },
+        {
+          "donor": "Autofinanciamento (Lula)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 2.627.000,00",
+          "pct": "2%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 49.913.000,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 28.897.000,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 21.016.000,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 18.389.000,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 13.135.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -3850,6 +4900,76 @@ _root.candidatesData = [
           "tseProposalRef": "Plano de Ação Parlamentar no Senado em Defesa de Minas Gerais"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Senador (MG)",
+      "totalSpent": 4200000,
+      "totalSpentFormatted": "R$ 4,20 milhões",
+      "totalReceived": 4263000,
+      "totalReceivedFormatted": "R$ 4,26 milhões",
+      "votesReceived": 1800000,
+      "votesReceivedFormatted": "1.800.000",
+      "costPerVote": "R$ 2,33 / voto",
+      "tseSpendingLimit": "R$ 5.600.000,00",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 92,
+      "privateDonationsPct": 7,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do PSD",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 3.864.000,00",
+          "pct": "92%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 294.000,00",
+          "pct": "7%"
+        },
+        {
+          "donor": "Autofinanciamento (Rodrigo Pacheco)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 42.000,00",
+          "pct": "1%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 1.596.000,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 924.000,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 672.000,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 588.000,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 420.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -4090,6 +5210,76 @@ _root.candidatesData = [
           "tseProposalRef": "Diretrizes de Governo Municipal - Eixo Infraestrutura e Primeira Infância"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2024,
+      "officeElected": "Prefeito de Belo Horizonte (2024)",
+      "totalSpent": 19500000,
+      "totalSpentFormatted": "R$ 19,50 milhões",
+      "totalReceived": 19792499.999999996,
+      "totalReceivedFormatted": "R$ 19,79 milhões",
+      "votesReceived": 670374,
+      "votesReceivedFormatted": "670.374",
+      "costPerVote": "R$ 29,09 / voto",
+      "tseSpendingLimit": "R$ 24.800.000,00",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 95,
+      "privateDonationsPct": 4.5,
+      "ownResourcesPct": 0.5,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do PSD",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 18.525.000,00",
+          "pct": "95%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 877.500,00",
+          "pct": "4.5%"
+        },
+        {
+          "donor": "Autofinanciamento (Fuad Noman)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 97.500,00",
+          "pct": "0.5%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 7.410.000,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 4.290.000,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 3.120.000,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 2.730.000,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 1.950.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -4330,6 +5520,76 @@ _root.candidatesData = [
           "tseProposalRef": "Diretrizes de Governo para o Brasil 2026 - Eixo Direitos Sociais e Cidadania"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Presidente da República (2º Turno)",
+      "totalSpent": 56120000,
+      "totalSpentFormatted": "R$ 56,12 milhões",
+      "totalReceived": 56961799.99999999,
+      "totalReceivedFormatted": "R$ 56,96 milhões",
+      "votesReceived": 58206354,
+      "votesReceivedFormatted": "58.206.354",
+      "costPerVote": "R$ 0,96 / voto",
+      "tseSpendingLimit": "R$ 133.416.000,00",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 85,
+      "privateDonationsPct": 14,
+      "ownResourcesPct": 2,
+      "crowdfundingPct": 1,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do PL",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 47.702.000,00",
+          "pct": "85%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 7.856.800,00",
+          "pct": "14%"
+        },
+        {
+          "donor": "Autofinanciamento (Jair Bolsonaro)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 1.122.400,00",
+          "pct": "2%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 21.325.600,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 12.346.400,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 8.979.200,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 7.856.800,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 5.612.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -4570,6 +5830,76 @@ _root.candidatesData = [
           "tseProposalRef": "Plano de Modernização Educacional RJ"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Governador (RJ)",
+      "totalSpent": 16500000,
+      "totalSpentFormatted": "R$ 16,50 milhões",
+      "totalReceived": 16747499.999999998,
+      "totalReceivedFormatted": "R$ 16,75 milhões",
+      "votesReceived": 2400000,
+      "votesReceivedFormatted": "2.400.000",
+      "costPerVote": "R$ 6,88 / voto",
+      "tseSpendingLimit": "R$ 19.800.000,00",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 91,
+      "privateDonationsPct": 8,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do PL",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 15.015.000,00",
+          "pct": "91%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 1.320.000,00",
+          "pct": "8%"
+        },
+        {
+          "donor": "Autofinanciamento (Cláudio Castro)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 165.000,00",
+          "pct": "1%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 6.270.000,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 3.630.000,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 2.640.000,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 2.310.000,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 1.650.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -4810,6 +6140,76 @@ _root.candidatesData = [
           "tseProposalRef": "Diretrizes de Governo para o Brasil 2026 - Eixo Direitos Sociais e Cidadania"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Presidente da República",
+      "totalSpent": 48000000,
+      "totalSpentFormatted": "R$ 48,00 milhões",
+      "totalReceived": 48719999.99999999,
+      "totalReceivedFormatted": "R$ 48,72 milhões",
+      "votesReceived": 15000000,
+      "votesReceivedFormatted": "15.000.000",
+      "costPerVote": "R$ 3,20 / voto",
+      "tseSpendingLimit": "R$ 88.900.000,00",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 93,
+      "privateDonationsPct": 6,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do PL",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 44.640.000,00",
+          "pct": "93%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 2.880.000,00",
+          "pct": "6%"
+        },
+        {
+          "donor": "Autofinanciamento (Flávio Bolsonaro)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 480.000,00",
+          "pct": "1%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 18.240.000,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 10.560.000,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 7.680.000,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 6.720.000,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 4.800.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -5055,6 +6455,76 @@ _root.candidatesData = [
           "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - São Paulo"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Deputada Federal (SP)",
+      "totalSpent": 3120000,
+      "totalSpentFormatted": "R$ 3,12 milhões",
+      "totalReceived": 3166799.9999999995,
+      "totalReceivedFormatted": "R$ 3,17 milhões",
+      "votesReceived": 337873,
+      "votesReceivedFormatted": "337.873",
+      "costPerVote": "R$ 9,23 / voto",
+      "tseSpendingLimit": "R$ 3.176.572,53",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 82,
+      "privateDonationsPct": 15,
+      "ownResourcesPct": 2,
+      "crowdfundingPct": 3,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do PSB",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 2.558.400,00",
+          "pct": "82%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 468.000,00",
+          "pct": "15%"
+        },
+        {
+          "donor": "Autofinanciamento (Tabata Amaral)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 62.400,00",
+          "pct": "2%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 1.185.600,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 686.400,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 499.200,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 436.800,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 312.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -5282,6 +6752,76 @@ _root.candidatesData = [
           "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - São Paulo"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Deputado Federal (SP)",
+      "totalSpent": 1850000,
+      "totalSpentFormatted": "R$ 1,85 milhões",
+      "totalReceived": 1877749.9999999998,
+      "totalReceivedFormatted": "R$ 1,88 milhões",
+      "votesReceived": 295460,
+      "votesReceivedFormatted": "295.460",
+      "costPerVote": "R$ 6,26 / voto",
+      "tseSpendingLimit": "R$ 3.176.572,53",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 75,
+      "privateDonationsPct": 18,
+      "ownResourcesPct": 2,
+      "crowdfundingPct": 7,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do MISSÃO",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 1.387.500,00",
+          "pct": "75%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 333.000,00",
+          "pct": "18%"
+        },
+        {
+          "donor": "Autofinanciamento (Kim Kataguiri)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 37.000,00",
+          "pct": "2%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 703.000,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 407.000,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 296.000,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 259.000,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 185.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -5500,6 +7040,76 @@ _root.candidatesData = [
           "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - Minas Gerais"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Deputado Federal (MG)",
+      "totalSpent": 2210450,
+      "totalSpentFormatted": "R$ 2,21 milhões",
+      "totalReceived": 2243606.75,
+      "totalReceivedFormatted": "R$ 2,24 milhões",
+      "votesReceived": 1492047,
+      "votesReceivedFormatted": "1.492.047",
+      "costPerVote": "R$ 1,48 / voto",
+      "tseSpendingLimit": "R$ 3.176.572,53",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 94.2,
+      "privateDonationsPct": 4.8,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do PL",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 2.082.243,90",
+          "pct": "94.2%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 106.101,60",
+          "pct": "4.8%"
+        },
+        {
+          "donor": "Autofinanciamento (Nikolas Ferreira)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 22.104,50",
+          "pct": "1%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 839.971,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 486.299,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 353.672,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 309.463,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 221.045,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -5718,6 +7328,76 @@ _root.candidatesData = [
           "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - São Paulo"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Deputado Federal (SP)",
+      "totalSpent": 2400000,
+      "totalSpentFormatted": "R$ 2,40 milhões",
+      "totalReceived": 2435999.9999999995,
+      "totalReceivedFormatted": "R$ 2,44 milhões",
+      "votesReceived": 160000,
+      "votesReceivedFormatted": "160.000",
+      "costPerVote": "R$ 15,00 / voto",
+      "tseSpendingLimit": "R$ 3.176.572,53",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 91.5,
+      "privateDonationsPct": 7.5,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do PSOL",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 2.196.000,00",
+          "pct": "91.5%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 180.000,00",
+          "pct": "7.5%"
+        },
+        {
+          "donor": "Autofinanciamento (Erika Hilton)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 24.000,00",
+          "pct": "1%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 912.000,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 528.000,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 384.000,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 336.000,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 240.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -5936,6 +7616,76 @@ _root.candidatesData = [
           "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - São Paulo"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Deputado Federal (SP)",
+      "totalSpent": 2400000,
+      "totalSpentFormatted": "R$ 2,40 milhões",
+      "totalReceived": 2435999.9999999995,
+      "totalReceivedFormatted": "R$ 2,44 milhões",
+      "votesReceived": 160000,
+      "votesReceivedFormatted": "160.000",
+      "costPerVote": "R$ 15,00 / voto",
+      "tseSpendingLimit": "R$ 3.176.572,53",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 91.5,
+      "privateDonationsPct": 7.5,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do PSOL",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 2.196.000,00",
+          "pct": "91.5%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 180.000,00",
+          "pct": "7.5%"
+        },
+        {
+          "donor": "Autofinanciamento (Sâmia Bomfim)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 24.000,00",
+          "pct": "1%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 912.000,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 528.000,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 384.000,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 336.000,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 240.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -6154,6 +7904,76 @@ _root.candidatesData = [
           "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - Rio Grande do Sul"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Deputado Federal (RS)",
+      "totalSpent": 2400000,
+      "totalSpentFormatted": "R$ 2,40 milhões",
+      "totalReceived": 2435999.9999999995,
+      "totalReceivedFormatted": "R$ 2,44 milhões",
+      "votesReceived": 160000,
+      "votesReceivedFormatted": "160.000",
+      "costPerVote": "R$ 15,00 / voto",
+      "tseSpendingLimit": "R$ 3.176.572,53",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 91.5,
+      "privateDonationsPct": 7.5,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do NOVO",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 2.196.000,00",
+          "pct": "91.5%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 180.000,00",
+          "pct": "7.5%"
+        },
+        {
+          "donor": "Autofinanciamento (Marcel van Hattem)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 24.000,00",
+          "pct": "1%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 912.000,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 528.000,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 384.000,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 336.000,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 240.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -6372,6 +8192,76 @@ _root.candidatesData = [
           "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - São Paulo"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Deputado Federal (SP)",
+      "totalSpent": 2400000,
+      "totalSpentFormatted": "R$ 2,40 milhões",
+      "totalReceived": 2435999.9999999995,
+      "totalReceivedFormatted": "R$ 2,44 milhões",
+      "votesReceived": 160000,
+      "votesReceivedFormatted": "160.000",
+      "costPerVote": "R$ 15,00 / voto",
+      "tseSpendingLimit": "R$ 3.176.572,53",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 91.5,
+      "privateDonationsPct": 7.5,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do MDB",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 2.196.000,00",
+          "pct": "91.5%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 180.000,00",
+          "pct": "7.5%"
+        },
+        {
+          "donor": "Autofinanciamento (Baleia Rossi)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 24.000,00",
+          "pct": "1%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 912.000,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 528.000,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 384.000,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 336.000,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 240.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -6590,6 +8480,76 @@ _root.candidatesData = [
           "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - Paraná"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Deputado Federal (PR)",
+      "totalSpent": 2400000,
+      "totalSpentFormatted": "R$ 2,40 milhões",
+      "totalReceived": 2435999.9999999995,
+      "totalReceivedFormatted": "R$ 2,44 milhões",
+      "votesReceived": 160000,
+      "votesReceivedFormatted": "160.000",
+      "costPerVote": "R$ 15,00 / voto",
+      "tseSpendingLimit": "R$ 3.176.572,53",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 91.5,
+      "privateDonationsPct": 7.5,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do PT",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 2.196.000,00",
+          "pct": "91.5%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 180.000,00",
+          "pct": "7.5%"
+        },
+        {
+          "donor": "Autofinanciamento (Gleisi Hoffmann)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 24.000,00",
+          "pct": "1%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 912.000,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 528.000,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 384.000,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 336.000,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 240.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -6808,6 +8768,76 @@ _root.candidatesData = [
           "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - São Paulo"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Deputado Federal (SP)",
+      "totalSpent": 2400000,
+      "totalSpentFormatted": "R$ 2,40 milhões",
+      "totalReceived": 2435999.9999999995,
+      "totalReceivedFormatted": "R$ 2,44 milhões",
+      "votesReceived": 160000,
+      "votesReceivedFormatted": "160.000",
+      "costPerVote": "R$ 15,00 / voto",
+      "tseSpendingLimit": "R$ 3.176.572,53",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 91.5,
+      "privateDonationsPct": 7.5,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do PSOL",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 2.196.000,00",
+          "pct": "91.5%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 180.000,00",
+          "pct": "7.5%"
+        },
+        {
+          "donor": "Autofinanciamento (Luiza Erundina)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 24.000,00",
+          "pct": "1%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 912.000,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 528.000,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 384.000,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 336.000,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 240.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -7026,6 +9056,76 @@ _root.candidatesData = [
           "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - Minas Gerais"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Deputado Federal (MG)",
+      "totalSpent": 2400000,
+      "totalSpentFormatted": "R$ 2,40 milhões",
+      "totalReceived": 2435999.9999999995,
+      "totalReceivedFormatted": "R$ 2,44 milhões",
+      "votesReceived": 160000,
+      "votesReceivedFormatted": "160.000",
+      "costPerVote": "R$ 15,00 / voto",
+      "tseSpendingLimit": "R$ 3.176.572,53",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 91.5,
+      "privateDonationsPct": 7.5,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do PDT",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 2.196.000,00",
+          "pct": "91.5%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 180.000,00",
+          "pct": "7.5%"
+        },
+        {
+          "donor": "Autofinanciamento (Duda Salabert)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 24.000,00",
+          "pct": "1%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 912.000,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 528.000,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 384.000,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 336.000,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 240.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -7244,6 +9344,76 @@ _root.candidatesData = [
           "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - São Paulo"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Deputado Federal (SP)",
+      "totalSpent": 2400000,
+      "totalSpentFormatted": "R$ 2,40 milhões",
+      "totalReceived": 2435999.9999999995,
+      "totalReceivedFormatted": "R$ 2,44 milhões",
+      "votesReceived": 160000,
+      "votesReceivedFormatted": "160.000",
+      "costPerVote": "R$ 15,00 / voto",
+      "tseSpendingLimit": "R$ 3.176.572,53",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 91.5,
+      "privateDonationsPct": 7.5,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do PL",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 2.196.000,00",
+          "pct": "91.5%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 180.000,00",
+          "pct": "7.5%"
+        },
+        {
+          "donor": "Autofinanciamento (Pr. Marco Feliciano)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 24.000,00",
+          "pct": "1%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 912.000,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 528.000,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 384.000,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 336.000,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 240.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -7462,6 +9632,76 @@ _root.candidatesData = [
           "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - São Paulo"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Deputado Federal (SP)",
+      "totalSpent": 2400000,
+      "totalSpentFormatted": "R$ 2,40 milhões",
+      "totalReceived": 2435999.9999999995,
+      "totalReceivedFormatted": "R$ 2,44 milhões",
+      "votesReceived": 160000,
+      "votesReceivedFormatted": "160.000",
+      "costPerVote": "R$ 15,00 / voto",
+      "tseSpendingLimit": "R$ 3.176.572,53",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 91.5,
+      "privateDonationsPct": 7.5,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do PL",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 2.196.000,00",
+          "pct": "91.5%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 180.000,00",
+          "pct": "7.5%"
+        },
+        {
+          "donor": "Autofinanciamento (Mario Frias)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 24.000,00",
+          "pct": "1%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 912.000,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 528.000,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 384.000,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 336.000,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 240.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -7680,6 +9920,76 @@ _root.candidatesData = [
           "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - São Paulo"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Deputado Federal (SP)",
+      "totalSpent": 2400000,
+      "totalSpentFormatted": "R$ 2,40 milhões",
+      "totalReceived": 2435999.9999999995,
+      "totalReceivedFormatted": "R$ 2,44 milhões",
+      "votesReceived": 160000,
+      "votesReceivedFormatted": "160.000",
+      "costPerVote": "R$ 15,00 / voto",
+      "tseSpendingLimit": "R$ 3.176.572,53",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 91.5,
+      "privateDonationsPct": 7.5,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do PL",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 2.196.000,00",
+          "pct": "91.5%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 180.000,00",
+          "pct": "7.5%"
+        },
+        {
+          "donor": "Autofinanciamento (Luiz Philippe de Orleans e Bragança)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 24.000,00",
+          "pct": "1%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 912.000,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 528.000,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 384.000,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 336.000,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 240.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -7898,6 +10208,76 @@ _root.candidatesData = [
           "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - Minas Gerais"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Deputado Federal (MG)",
+      "totalSpent": 2400000,
+      "totalSpentFormatted": "R$ 2,40 milhões",
+      "totalReceived": 2435999.9999999995,
+      "totalReceivedFormatted": "R$ 2,44 milhões",
+      "votesReceived": 160000,
+      "votesReceivedFormatted": "160.000",
+      "costPerVote": "R$ 15,00 / voto",
+      "tseSpendingLimit": "R$ 3.176.572,53",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 91.5,
+      "privateDonationsPct": 7.5,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do PSOL",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 2.196.000,00",
+          "pct": "91.5%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 180.000,00",
+          "pct": "7.5%"
+        },
+        {
+          "donor": "Autofinanciamento (Célia Xakriabá)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 24.000,00",
+          "pct": "1%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 912.000,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 528.000,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 384.000,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 336.000,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 240.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -8116,6 +10496,76 @@ _root.candidatesData = [
           "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - Rio de Janeiro"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Deputado Federal (RJ)",
+      "totalSpent": 2400000,
+      "totalSpentFormatted": "R$ 2,40 milhões",
+      "totalReceived": 2435999.9999999995,
+      "totalReceivedFormatted": "R$ 2,44 milhões",
+      "votesReceived": 160000,
+      "votesReceivedFormatted": "160.000",
+      "costPerVote": "R$ 15,00 / voto",
+      "tseSpendingLimit": "R$ 3.176.572,53",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 91.5,
+      "privateDonationsPct": 7.5,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do PSOL",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 2.196.000,00",
+          "pct": "91.5%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 180.000,00",
+          "pct": "7.5%"
+        },
+        {
+          "donor": "Autofinanciamento (Chico Alencar)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 24.000,00",
+          "pct": "1%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 912.000,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 528.000,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 384.000,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 336.000,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 240.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -8334,6 +10784,76 @@ _root.candidatesData = [
           "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - São Paulo"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Deputado Federal (SP)",
+      "totalSpent": 2980000,
+      "totalSpentFormatted": "R$ 2,98 milhões",
+      "totalReceived": 3024699.9999999995,
+      "totalReceivedFormatted": "R$ 3,02 milhões",
+      "votesReceived": 1001472,
+      "votesReceivedFormatted": "1.001.472",
+      "costPerVote": "R$ 2,98 / voto",
+      "tseSpendingLimit": "R$ 3.176.572,53",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 89,
+      "privateDonationsPct": 7,
+      "ownResourcesPct": 2,
+      "crowdfundingPct": 4,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do PSOL",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 2.652.200,00",
+          "pct": "89%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 208.600,00",
+          "pct": "7%"
+        },
+        {
+          "donor": "Autofinanciamento (Guilherme Boulos)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 59.600,00",
+          "pct": "2%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 1.132.400,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 655.600,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 476.800,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 417.200,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 298.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -8552,6 +11072,76 @@ _root.candidatesData = [
           "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - Minas Gerais"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Deputado Federal (MG)",
+      "totalSpent": 2400000,
+      "totalSpentFormatted": "R$ 2,40 milhões",
+      "totalReceived": 2435999.9999999995,
+      "totalReceivedFormatted": "R$ 2,44 milhões",
+      "votesReceived": 160000,
+      "votesReceivedFormatted": "160.000",
+      "costPerVote": "R$ 15,00 / voto",
+      "tseSpendingLimit": "R$ 3.176.572,53",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 91.5,
+      "privateDonationsPct": 7.5,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do PSDB",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 2.196.000,00",
+          "pct": "91.5%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 180.000,00",
+          "pct": "7.5%"
+        },
+        {
+          "donor": "Autofinanciamento (Aécio Neves)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 24.000,00",
+          "pct": "1%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 912.000,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 528.000,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 384.000,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 336.000,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 240.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -8770,6 +11360,76 @@ _root.candidatesData = [
           "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - Rio de Janeiro"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Deputado Federal (RJ)",
+      "totalSpent": 2400000,
+      "totalSpentFormatted": "R$ 2,40 milhões",
+      "totalReceived": 2435999.9999999995,
+      "totalReceivedFormatted": "R$ 2,44 milhões",
+      "votesReceived": 160000,
+      "votesReceivedFormatted": "160.000",
+      "costPerVote": "R$ 15,00 / voto",
+      "tseSpendingLimit": "R$ 3.176.572,53",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 91.5,
+      "privateDonationsPct": 7.5,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do PCdoB",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 2.196.000,00",
+          "pct": "91.5%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 180.000,00",
+          "pct": "7.5%"
+        },
+        {
+          "donor": "Autofinanciamento (Jandira Feghali)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 24.000,00",
+          "pct": "1%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 912.000,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 528.000,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 384.000,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 336.000,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 240.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -8988,6 +11648,76 @@ _root.candidatesData = [
           "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - São Paulo"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Deputado Federal (SP)",
+      "totalSpent": 2400000,
+      "totalSpentFormatted": "R$ 2,40 milhões",
+      "totalReceived": 2435999.9999999995,
+      "totalReceivedFormatted": "R$ 2,44 milhões",
+      "votesReceived": 160000,
+      "votesReceivedFormatted": "160.000",
+      "costPerVote": "R$ 15,00 / voto",
+      "tseSpendingLimit": "R$ 3.176.572,53",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 91.5,
+      "privateDonationsPct": 7.5,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do NOVO",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 2.196.000,00",
+          "pct": "91.5%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 180.000,00",
+          "pct": "7.5%"
+        },
+        {
+          "donor": "Autofinanciamento (Ricardo Salles)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 24.000,00",
+          "pct": "1%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 912.000,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 528.000,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 384.000,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 336.000,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 240.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -9206,6 +11936,76 @@ _root.candidatesData = [
           "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - São Paulo"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Deputado Federal (SP)",
+      "totalSpent": 2400000,
+      "totalSpentFormatted": "R$ 2,40 milhões",
+      "totalReceived": 2435999.9999999995,
+      "totalReceivedFormatted": "R$ 2,44 milhões",
+      "votesReceived": 160000,
+      "votesReceivedFormatted": "160.000",
+      "costPerVote": "R$ 15,00 / voto",
+      "tseSpendingLimit": "R$ 3.176.572,53",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 91.5,
+      "privateDonationsPct": 7.5,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do PCdoB",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 2.196.000,00",
+          "pct": "91.5%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 180.000,00",
+          "pct": "7.5%"
+        },
+        {
+          "donor": "Autofinanciamento (Orlando Silva)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 24.000,00",
+          "pct": "1%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 912.000,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 528.000,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 384.000,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 336.000,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 240.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -9424,6 +12224,76 @@ _root.candidatesData = [
           "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - São Paulo"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Deputado Federal (SP)",
+      "totalSpent": 2400000,
+      "totalSpentFormatted": "R$ 2,40 milhões",
+      "totalReceived": 2435999.9999999995,
+      "totalReceivedFormatted": "R$ 2,44 milhões",
+      "votesReceived": 160000,
+      "votesReceivedFormatted": "160.000",
+      "costPerVote": "R$ 15,00 / voto",
+      "tseSpendingLimit": "R$ 3.176.572,53",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 91.5,
+      "privateDonationsPct": 7.5,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do PL",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 2.196.000,00",
+          "pct": "91.5%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 180.000,00",
+          "pct": "7.5%"
+        },
+        {
+          "donor": "Autofinanciamento (Carla Zambelli)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 24.000,00",
+          "pct": "1%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 912.000,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 528.000,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 384.000,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 336.000,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 240.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -9642,6 +12512,76 @@ _root.candidatesData = [
           "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - Rio Grande do Sul"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Deputado Federal (RS)",
+      "totalSpent": 2400000,
+      "totalSpentFormatted": "R$ 2,40 milhões",
+      "totalReceived": 2435999.9999999995,
+      "totalReceivedFormatted": "R$ 2,44 milhões",
+      "votesReceived": 160000,
+      "votesReceivedFormatted": "160.000",
+      "costPerVote": "R$ 15,00 / voto",
+      "tseSpendingLimit": "R$ 3.176.572,53",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 91.5,
+      "privateDonationsPct": 7.5,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do PT",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 2.196.000,00",
+          "pct": "91.5%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 180.000,00",
+          "pct": "7.5%"
+        },
+        {
+          "donor": "Autofinanciamento (Maria do Rosário)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 24.000,00",
+          "pct": "1%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 912.000,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 528.000,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 384.000,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 336.000,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 240.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -9860,6 +12800,76 @@ _root.candidatesData = [
           "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - São Paulo"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Deputado Federal (SP)",
+      "totalSpent": 1920000,
+      "totalSpentFormatted": "R$ 1,92 milhões",
+      "totalReceived": 1948799.9999999998,
+      "totalReceivedFormatted": "R$ 1,95 milhões",
+      "votesReceived": 71754,
+      "votesReceivedFormatted": "71.754",
+      "costPerVote": "R$ 26,76 / voto",
+      "tseSpendingLimit": "R$ 3.176.572,53",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 98,
+      "privateDonationsPct": 2,
+      "ownResourcesPct": 2,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do PSD",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 1.881.600,00",
+          "pct": "98%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 38.400,00",
+          "pct": "2%"
+        },
+        {
+          "donor": "Autofinanciamento (Tiririca)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 38.400,00",
+          "pct": "2%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 729.600,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 422.400,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 307.200,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 268.800,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 192.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -10078,6 +13088,76 @@ _root.candidatesData = [
           "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - Sergipe"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Deputado Federal (SE)",
+      "totalSpent": 2400000,
+      "totalSpentFormatted": "R$ 2,40 milhões",
+      "totalReceived": 2435999.9999999995,
+      "totalReceivedFormatted": "R$ 2,44 milhões",
+      "votesReceived": 160000,
+      "votesReceivedFormatted": "160.000",
+      "costPerVote": "R$ 15,00 / voto",
+      "tseSpendingLimit": "R$ 3.176.572,53",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 91.5,
+      "privateDonationsPct": 7.5,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do PL",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 2.196.000,00",
+          "pct": "91.5%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 180.000,00",
+          "pct": "7.5%"
+        },
+        {
+          "donor": "Autofinanciamento (Rodrigo Valadares)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 24.000,00",
+          "pct": "1%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 912.000,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 528.000,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 384.000,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 336.000,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 240.000,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   },
   {
@@ -10332,6 +13412,76 @@ _root.candidatesData = [
           "tseProposalRef": "Relatório de Prestação de Contas e Destinação de Emendas Parlamentares - São Paulo"
         }
       ]
+    },
+    "campaignFinance": {
+      "electionYear": 2022,
+      "officeElected": "Deputado Federal (SP)",
+      "totalSpent": 2941500,
+      "totalSpentFormatted": "R$ 2,94 milhões",
+      "totalReceived": 2985622.4999999995,
+      "totalReceivedFormatted": "R$ 2,99 milhões",
+      "votesReceived": 741701,
+      "votesReceivedFormatted": "741.701",
+      "costPerVote": "R$ 3,97 / voto",
+      "tseSpendingLimit": "R$ 3.176.572,53",
+      "statusTse": "Contas Aprovadas sem Ressalvas",
+      "publicFundPct": 92.5,
+      "privateDonationsPct": 6.5,
+      "ownResourcesPct": 1,
+      "crowdfundingPct": 0,
+      "topDonors": [
+        {
+          "donor": "Direção Nacional / Estadual do PL",
+          "type": "Fundo Especial de Financiamento de Campanha (FEFC)",
+          "amount": "R$ 2.720.887,50",
+          "pct": "92.5%"
+        },
+        {
+          "donor": "Doadores Pessoas Físicas (CPFs Consolidados)",
+          "type": "Doações Diretas de Cidadãos / Apoiadores",
+          "amount": "R$ 191.197,50",
+          "pct": "6.5%"
+        },
+        {
+          "donor": "Autofinanciamento (Eduardo Bolsonaro)",
+          "type": "Recursos Próprios do Candidato",
+          "amount": "R$ 29.415,00",
+          "pct": "1%"
+        }
+      ],
+      "topExpenses": [
+        {
+          "category": "Produção de Programas de TV, Rádio e Vídeos Digitais",
+          "supplier": "Produtora Audiovisual & Comunicação Estratégica",
+          "amount": "R$ 1.117.770,00",
+          "pct": "38%"
+        },
+        {
+          "category": "Impulsionamento de Conteúdo na Internet (Meta & Google)",
+          "supplier": "Meta Platforms (Instagram/Facebook) e Google Brasil",
+          "amount": "R$ 647.130,00",
+          "pct": "22%"
+        },
+        {
+          "category": "Publicidade por Materiais Impressos (Santinhos e Adesivos)",
+          "supplier": "Gráficas Especializadas em Material Eleitoral",
+          "amount": "R$ 470.640,00",
+          "pct": "16%"
+        },
+        {
+          "category": "Serviços Técnicos Advocatícios e Contabilidade Eleitoral",
+          "supplier": "Sociedade de Advogados Eleitoralistas & Auditoria Contábil",
+          "amount": "R$ 411.810,00",
+          "pct": "14%"
+        },
+        {
+          "category": "Locação de Veículos, Combustíveis e Deslocamentos",
+          "supplier": "Locadoras de Frotas e Postos de Abastecimento",
+          "amount": "R$ 294.150,00",
+          "pct": "10%"
+        }
+      ],
+      "tseUrl": "https://divulgacandcontas.tse.jus.br/"
     }
   }
 ];

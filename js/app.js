@@ -413,6 +413,8 @@
                 } : (existing ? existing.parliamentaryAmendments : null),
                 ethics: { condemned: 0, investigations: 0, processes: 0, status: 'Ficha Limpa' },
                 recentDebate: apiCand.recentDebate || (existing ? existing.recentDebate : { event: 'Debate Nacional 2026', broadcaster: 'Band', date: '18/08/2026', truthfulnessPct: 91, statements: [] }),
+                campaignFinance: apiCand.campaignFinance || (existing ? existing.campaignFinance : null),
+                jurisdictionProblemsMatch: apiCand.jurisdictionProblemsMatch || (existing ? existing.jurisdictionProblemsMatch : null),
                 proposals: (apiCand.proposals && apiCand.proposals.length > 0) ? apiCand.proposals : (existing ? existing.proposals : [])
               };
             });

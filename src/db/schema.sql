@@ -162,3 +162,26 @@ CREATE TABLE IF NOT EXISTS candidate_jurisdiction (
   FOREIGN KEY (candidate_id) REFERENCES candidates(id) ON DELETE CASCADE
 );
 
+CREATE TABLE IF NOT EXISTS candidate_campaign_finance (
+  candidate_id TEXT PRIMARY KEY,
+  election_year INTEGER,
+  office_elected TEXT,
+  total_spent REAL,
+  total_spent_formatted TEXT,
+  total_received REAL,
+  total_received_formatted TEXT,
+  votes_received INTEGER,
+  cost_per_vote TEXT,
+  tse_spending_limit TEXT,
+  status_tse TEXT,
+  public_fund_pct REAL,
+  private_donations_pct REAL,
+  own_resources_pct REAL,
+  crowdfunding_pct REAL,
+  top_donors_json TEXT,
+  top_expenses_json TEXT,
+  tse_url TEXT,
+  FOREIGN KEY (candidate_id) REFERENCES candidates(id) ON DELETE CASCADE
+);
+
+

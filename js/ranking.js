@@ -339,6 +339,23 @@
           </div>
         `).join('');
 
+        // Campaign Finance snippet (TSE)
+        const cf = cand.campaignFinance;
+        const campaignSnippet = cf ? `
+          <div class="p-2 rounded-xl bg-purple-500/10 dark:bg-purple-950/25 border border-purple-500/25 dark:border-purple-500/35 flex items-center justify-between text-[11px] my-2">
+            <div class="flex items-center gap-1.5 font-extrabold text-purple-900 dark:text-purple-300">
+              <i data-lucide="vote" class="w-3.5 h-3.5 text-purple-600 dark:text-purple-400"></i>
+              <span>Campanha TSE:</span>
+              <strong class="font-mono text-slate-900 dark:text-white font-black">${cf.totalSpentFormatted}</strong>
+            </div>
+            <div class="flex items-center gap-1 text-[10px] text-purple-700 dark:text-purple-300">
+              <span class="font-bold">${cf.costPerVote.includes('voto') ? cf.costPerVote : cf.costPerVote + '/voto'}</span>
+              <span class="text-slate-400">•</span>
+              <span class="text-emerald-700 dark:text-emerald-400 font-bold">${cf.publicFundPct}% FEFC</span>
+            </div>
+          </div>
+        ` : '';
+
         card.innerHTML = `
           <div>
             <!-- Header: Photo + Core Info -->
@@ -405,6 +422,9 @@
               </div>
               ${roiBudgetSnippet}
             </div>
+
+            <!-- TSE Campaign Finance Highlight -->
+            ${campaignSnippet}
 
             <!-- 3 Main Proposals Card -->
             <div class="p-3 bg-slate-100/90 dark:bg-slate-800/80 rounded-xl border border-slate-200/80 dark:border-white/10 space-y-2 shadow-xs">

@@ -214,7 +214,7 @@
             </button>
             <button onclick="switchTab('gastos-ceap')" id="tab-btn-gastos-ceap" class="tab-btn px-2.5 py-2 rounded-xl font-medium text-xs flex items-center justify-center gap-1.5 transition cursor-pointer bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700">
               <i data-lucide="receipt" class="w-3.5 h-3.5 text-sky-600 dark:text-cyan-400"></i>
-              <span>Gastos CEAP</span>
+              <span>Gastos & Campanha</span>
             </button>
             <button onclick="switchTab('projetos-leis')" id="tab-btn-projetos-leis" class="tab-btn px-2.5 py-2 rounded-xl font-medium text-xs flex items-center justify-center gap-1.5 transition cursor-pointer bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700">
               <i data-lucide="file-text" class="w-3.5 h-3.5 text-purple-600 dark:text-purple-400"></i>
@@ -362,6 +362,126 @@
           <!-- 3. ABA: GASTOS CEAP -->
           <div id="tab-sec-gastos-ceap" class="tab-section hidden space-y-6">
             
+            <!-- ================= FINANCIAMENTO & PRESTAÇÃO OFICIAL DE CAMPANHA (TSE) ================= -->
+            <div class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 shadow-xs space-y-6">
+              
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-200 dark:border-white/10 pb-4">
+                <div>
+                  <div class="flex items-center gap-2">
+                    <span class="px-2.5 py-1 rounded-lg text-xs font-black uppercase tracking-wider bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-500/30">
+                      💰 Prestação de Contas TSE Oficial
+                    </span>
+                    <h3 class="text-lg font-black text-slate-900 dark:text-white">Gastos da Última Campanha Eleitoral</h3>
+                  </div>
+                  <p id="dossie-camp-election-title" class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                    Valores oficiais registrados e declarados pelo candidato no SPCE/TSE
+                  </p>
+                </div>
+                <div class="flex items-center gap-2 self-start sm:self-auto">
+                  <span id="dossie-camp-status-badge" class="px-3 py-1 rounded-full text-xs font-extrabold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-500/30 inline-flex items-center gap-1.5">
+                    <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
+                    <span id="dossie-camp-status-text">Contas Aprovadas</span>
+                  </span>
+                  <a id="dossie-camp-tse-link" href="https://divulgacandcontas.tse.jus.br" target="_blank" class="px-3 py-1 rounded-xl text-xs font-bold bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10 transition inline-flex items-center gap-1">
+                    <span>Ver no TSE</span>
+                    <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- 4 KPIs Principais da Campanha -->
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-white/5 text-center">
+                  <span class="text-[10px] uppercase font-bold text-slate-500 dark:text-slate-400 block">Total Gasto na Campanha</span>
+                  <span id="dossie-camp-total-spent" class="text-xl sm:text-2xl font-black font-mono text-slate-900 dark:text-white">--</span>
+                  <span id="dossie-camp-limit-text" class="text-[10px] text-slate-500 dark:text-slate-400 block mt-0.5">Teto legal do TSE</span>
+                </div>
+                <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-white/5 text-center">
+                  <span class="text-[10px] uppercase font-bold text-slate-500 dark:text-slate-400 block">Votos Recebidos na Urna</span>
+                  <span id="dossie-camp-votes-count" class="text-xl sm:text-2xl font-black font-mono text-sky-600 dark:text-cyan-400">--</span>
+                  <span class="text-[10px] text-slate-500 dark:text-slate-400 block mt-0.5">Votos válidos</span>
+                </div>
+                <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-white/5 text-center">
+                  <span class="text-[10px] uppercase font-bold text-slate-500 dark:text-slate-400 block">Custo Real por Voto</span>
+                  <span id="dossie-camp-cost-per-vote" class="text-xl sm:text-2xl font-black font-mono text-purple-600 dark:text-purple-400">--</span>
+                  <span class="text-[10px] text-purple-600 dark:text-purple-400 font-bold block mt-0.5">Investimento / eleitor</span>
+                </div>
+                <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-white/5 text-center">
+                  <span class="text-[10px] uppercase font-bold text-slate-500 dark:text-slate-400 block">Dependência do Fundão</span>
+                  <span id="dossie-camp-public-fund-pct" class="text-xl sm:text-2xl font-black font-mono text-amber-600 dark:text-amber-400">--%</span>
+                  <span class="text-[10px] text-slate-500 dark:text-slate-400 block mt-0.5">Dinheiro público (FEFC)</span>
+                </div>
+              </div>
+
+              <!-- Painel Duplo: De Onde Saiu o Dinheiro vs Como Foi Gasto -->
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                
+                <!-- Coluna 1: De Onde Saiu o Dinheiro (Origem das Receitas) -->
+                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200 dark:border-white/5 space-y-3">
+                  <div class="flex items-center justify-between border-b border-slate-200 dark:border-white/10 pb-2">
+                    <h4 class="text-xs font-black text-slate-900 dark:text-white uppercase tracking-wider flex items-center gap-1.5">
+                      <i data-lucide="wallet-cards" class="w-4 h-4 text-emerald-600 dark:text-emerald-400"></i>
+                      <span>De Onde Saiu o Dinheiro? (Receitas)</span>
+                    </h4>
+                    <span class="text-[10px] text-slate-500 dark:text-slate-400 font-mono">SPCE / TSE</span>
+                  </div>
+
+                  <!-- Barra Proporcional de Origem -->
+                  <div class="space-y-1.5">
+                    <div class="flex justify-between text-[11px] font-bold">
+                      <span class="text-emerald-700 dark:text-emerald-400">🏛️ Fundo Eleitoral Público</span>
+                      <span id="dossie-camp-bar-fund-text" class="font-mono text-slate-900 dark:text-white">92%</span>
+                    </div>
+                    <div class="w-full h-3 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden flex">
+                      <div id="dossie-camp-bar-fund" class="h-full bg-emerald-500 rounded-full" style="width: 92%"></div>
+                      <div id="dossie-camp-bar-private" class="h-full bg-sky-500" style="width: 8%"></div>
+                    </div>
+                    <div class="flex justify-between text-[10px] text-slate-500 dark:text-slate-400 pt-0.5">
+                      <span>👤 Doações Privadas: <strong id="dossie-camp-bar-private-text" class="text-slate-800 dark:text-slate-200">8%</strong></span>
+                      <span>💼 Recursos Próprios: <strong id="dossie-camp-bar-own-text" class="text-slate-800 dark:text-slate-200">0%</strong></span>
+                    </div>
+                  </div>
+
+                  <!-- Lista dos Maiores Doadores -->
+                  <div class="space-y-2 pt-1">
+                    <span class="text-[10px] uppercase font-bold text-slate-500 dark:text-slate-400 block">Maiores Aportes Declarados:</span>
+                    <div id="dossie-camp-top-donors" class="space-y-1.5">
+                      <!-- Renderizado via JS -->
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Coluna 2: Como Foi Gasto o Dinheiro (Destinação das Despesas) -->
+                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200 dark:border-white/5 space-y-3">
+                  <div class="flex items-center justify-between border-b border-slate-200 dark:border-white/10 pb-2">
+                    <h4 class="text-xs font-black text-slate-900 dark:text-white uppercase tracking-wider flex items-center gap-1.5">
+                      <i data-lucide="pie-chart" class="w-4 h-4 text-purple-600 dark:text-purple-400"></i>
+                      <span>Como Gastou o Dinheiro? (Despesas)</span>
+                    </h4>
+                    <span class="text-[10px] text-slate-500 dark:text-slate-400 font-mono">Prestação Final</span>
+                  </div>
+
+                  <!-- Tabela de Maiores Despesas -->
+                  <div class="overflow-x-auto">
+                    <table class="w-full text-xs text-left">
+                      <thead>
+                        <tr class="border-b border-slate-200 dark:border-white/10 text-[10px] uppercase text-slate-500 dark:text-slate-400">
+                          <th class="py-1.5 px-2">Categoria de Gasto</th>
+                          <th class="py-1.5 px-2 text-right">Valor Gasto</th>
+                          <th class="py-1.5 px-2 text-center">% Total</th>
+                        </tr>
+                      </thead>
+                      <tbody id="dossie-camp-top-expenses" class="divide-y divide-slate-100 dark:divide-white/5">
+                        <!-- Renderizado via JS -->
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
             <div class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 shadow-xs space-y-6">
               <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-200 dark:border-white/10 pb-4">
                 <div>
@@ -1005,6 +1125,7 @@
           ]
         } : fb.amendments,
         ethics: (apiCand.ethics && Array.isArray(apiCand.ethics)) ? apiCand.ethics : fb.ethics,
+        campaignFinance: apiCand.campaignFinance || (typeof candidatesData !== 'undefined' ? candidatesData.find(c => c.id === apiCand.id)?.campaignFinance : null),
         bills: apiCand.bills || (typeof candidatesData !== 'undefined' ? candidatesData.find(c => c.id === apiCand.id)?.bills : null),
         jurisdictionProblemsMatch: apiCand.jurisdictionProblemsMatch || (typeof candidatesData !== 'undefined' ? candidatesData.find(c => c.id === apiCand.id)?.jurisdictionProblemsMatch : null),
         polls: apiCand.polls ? {
@@ -1232,6 +1353,7 @@
       renderRadar(cand.radar);
       renderDossieBills(cand);
       renderDossieJurisdictionProblems(cand);
+      renderDossieCampaignFinance(cand);
     }
 
     // Gerenciador do Gráfico Radar (Chart.js)
@@ -1325,6 +1447,144 @@
 
     
     // Renderiza a Aba de Projetos de Lei e Produtividade Legislativa
+    
+    // Renderiza a Prestação de Contas de Campanha Eleitoral do TSE
+    function renderDossieCampaignFinance(cand) {
+      const cf = cand.campaignFinance;
+      if (!cf) return;
+
+      const setVal = (id, val) => {
+        const el = document.getElementById(id);
+        if (el) el.innerText = val;
+      };
+
+      setVal('dossie-camp-election-title', `Prestação oficial das Eleições ${cf.electionYear} para ${cf.officeElected}`);
+      setVal('dossie-camp-total-spent', cf.totalSpentFormatted);
+      setVal('dossie-camp-limit-text', `Teto legal: ${cf.tseSpendingLimit}`);
+      setVal('dossie-camp-votes-count', cf.votesReceivedFormatted);
+      setVal('dossie-camp-cost-per-vote', cf.costPerVote);
+      setVal('dossie-camp-public-fund-pct', `${cf.publicFundPct}%`);
+      setVal('dossie-camp-status-text', cf.statusTse);
+
+      // Barras de porcentagem
+      const barFund = document.getElementById('dossie-camp-bar-fund');
+      if (barFund) barFund.style.width = `${cf.publicFundPct}%`;
+      setVal('dossie-camp-bar-fund-text', `${cf.publicFundPct}%`);
+
+      const barPrivate = document.getElementById('dossie-camp-bar-private');
+      if (barPrivate) barPrivate.style.width = `${cf.privateDonationsPct}%`;
+      setVal('dossie-camp-bar-private-text', `${cf.privateDonationsPct}%`);
+      setVal('dossie-camp-bar-own-text', `${cf.ownResourcesPct || cf.crowdfundingPct}%`);
+
+      // Maiores Doadores
+      const donorsList = document.getElementById('dossie-camp-top-donors');
+      if (donorsList && cf.topDonors) {
+        donorsList.innerHTML = cf.topDonors.map(d => `
+          <div class="p-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-white/5 flex items-center justify-between text-xs">
+            <div>
+              <span class="font-bold text-slate-900 dark:text-white block text-[11px]">${d.donor}</span>
+              <span class="text-[10px] text-slate-500 dark:text-slate-400">${d.type}</span>
+            </div>
+            <div class="text-right">
+              <span class="font-bold font-mono text-emerald-600 dark:text-emerald-400 block">${d.amount}</span>
+              <span class="text-[9px] text-slate-400 font-mono">${d.pct} do total</span>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // Maiores Despesas
+      const expensesList = document.getElementById('dossie-camp-top-expenses');
+      if (expensesList && cf.topExpenses) {
+        expensesList.innerHTML = cf.topExpenses.map(e => `
+          <tr class="hover:bg-slate-100/50 dark:hover:bg-white/5 transition">
+            <td class="py-2 px-2">
+              <span class="font-bold text-slate-900 dark:text-white block text-[11px]">${e.category}</span>
+              <span class="text-[10px] text-slate-500 dark:text-slate-400">${e.supplier}</span>
+            </td>
+            <td class="py-2 px-2 text-right font-mono font-bold text-slate-900 dark:text-white">${e.amount}</td>
+            <td class="py-2 px-2 text-center font-mono font-bold text-purple-600 dark:text-purple-400">${e.pct}</td>
+          </tr>
+        `).join('');
+      }
+
+      // Link TSE
+      const linkEl = document.getElementById('dossie-camp-tse-link');
+      if (linkEl && cf.tseUrl) linkEl.href = cf.tseUrl;
+
+      lucide.createIcons();
+    }
+
+
+    
+    // Renderiza a Prestação de Contas de Campanha Eleitoral do TSE
+    function renderDossieCampaignFinance(cand) {
+      const cf = cand.campaignFinance;
+      if (!cf) return;
+
+      const setVal = (id, val) => {
+        const el = document.getElementById(id);
+        if (el) el.innerText = val;
+      };
+
+      setVal('dossie-camp-election-title', `Prestação oficial das Eleições ${cf.electionYear} para ${cf.officeElected}`);
+      setVal('dossie-camp-total-spent', cf.totalSpentFormatted);
+      setVal('dossie-camp-limit-text', `Teto legal: ${cf.tseSpendingLimit}`);
+      setVal('dossie-camp-votes-count', cf.votesReceivedFormatted);
+      setVal('dossie-camp-cost-per-vote', cf.costPerVote);
+      setVal('dossie-camp-public-fund-pct', `${cf.publicFundPct}%`);
+      setVal('dossie-camp-status-text', cf.statusTse);
+
+      // Barras de porcentagem
+      const barFund = document.getElementById('dossie-camp-bar-fund');
+      if (barFund) barFund.style.width = `${cf.publicFundPct}%`;
+      setVal('dossie-camp-bar-fund-text', `${cf.publicFundPct}%`);
+
+      const barPrivate = document.getElementById('dossie-camp-bar-private');
+      if (barPrivate) barPrivate.style.width = `${cf.privateDonationsPct}%`;
+      setVal('dossie-camp-bar-private-text', `${cf.privateDonationsPct}%`);
+      setVal('dossie-camp-bar-own-text', `${cf.ownResourcesPct || cf.crowdfundingPct}%`);
+
+      // Maiores Doadores
+      const donorsList = document.getElementById('dossie-camp-top-donors');
+      if (donorsList && cf.topDonors) {
+        donorsList.innerHTML = cf.topDonors.map(d => `
+          <div class="p-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-white/5 flex items-center justify-between text-xs">
+            <div>
+              <span class="font-bold text-slate-900 dark:text-white block text-[11px]">${d.donor}</span>
+              <span class="text-[10px] text-slate-500 dark:text-slate-400">${d.type}</span>
+            </div>
+            <div class="text-right">
+              <span class="font-bold font-mono text-emerald-600 dark:text-emerald-400 block">${d.amount}</span>
+              <span class="text-[9px] text-slate-400 font-mono">${d.pct} do total</span>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // Maiores Despesas
+      const expensesList = document.getElementById('dossie-camp-top-expenses');
+      if (expensesList && cf.topExpenses) {
+        expensesList.innerHTML = cf.topExpenses.map(e => `
+          <tr class="hover:bg-slate-100/50 dark:hover:bg-white/5 transition">
+            <td class="py-2 px-2">
+              <span class="font-bold text-slate-900 dark:text-white block text-[11px]">${e.category}</span>
+              <span class="text-[10px] text-slate-500 dark:text-slate-400">${e.supplier}</span>
+            </td>
+            <td class="py-2 px-2 text-right font-mono font-bold text-slate-900 dark:text-white">${e.amount}</td>
+            <td class="py-2 px-2 text-center font-mono font-bold text-purple-600 dark:text-purple-400">${e.pct}</td>
+          </tr>
+        `).join('');
+      }
+
+      // Link TSE
+      const linkEl = document.getElementById('dossie-camp-tse-link');
+      if (linkEl && cf.tseUrl) linkEl.href = cf.tseUrl;
+
+      lucide.createIcons();
+    }
+
+
     function renderDossieBills(cand) {
       const b = cand.bills || {
         total: 35, annualAvgProposed: 11.5, approved: 4, annualAvgApproved: 1.3, approvalRatePct: 11.4, fiscalCount: 18,
@@ -1483,6 +1743,7 @@
       }
 
             if (tabId === 'gastos-ceap' && currentCand) {
+        renderDossieCampaignFinance(currentCand);
         setTimeout(() => renderCeapTimelineChart(currentCand.salary.timeline), 50);
       }
       if (tabId === 'projetos-leis' && currentCand) {
