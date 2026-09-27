@@ -1,4 +1,4 @@
-// Raio-X Político - Gerenciamento de Estado Global e Temas (Light / Dark)
+// Figuras Políticas - Gerenciamento de Estado Global e Temas (Light / Dark)
 
 // ================= THEME TOGGLE SYSTEM (LIGHT NATIVO / DARK ALTERNATIVO) =================
     let isDarkMode = false; // Default is Light Mode (branco/cinza)
@@ -54,7 +54,7 @@
 
 // State Variables
     let currentTab = 'feed';
-    const currentBrandName = 'Raio-X Político';
+    const currentBrandName = 'Figuras Políticas';
     const currentBrandTagline = 'Veja o que está por trás do discurso.';
     let activeFilter = 'todos';
     let selectedForCompare = ['cand-tabata-amaral', 'cand-kim-kataguiri'];

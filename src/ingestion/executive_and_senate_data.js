@@ -1,4 +1,5 @@
-// Raio-X Político - Base Oficial Curada Multi-Cargos (Eleições 2026 Atualizado)
+// Ingestão Estruturada de Lideranças do Executivo e Senado 2026
+
 const EXECUTIVE_AND_SENATE_POLITICIANS = [
   {
     "id": "cand-lula",
@@ -12,19 +13,19 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "age": 79,
     "publicLifeYears": 46,
     "timesElected": 4,
-    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Foto_oficial_de_Luiz_In%C3%A1cio_Lula_da_Silva_%28ombros%29_denoise.jpg/330px-Foto_oficial_de_Luiz_In%C3%A1cio_Lula_da_Silva_%28ombros%29_denoise.jpg",
+    "avatar": "img/candidates/cand-lula.jpg",
     "education": "Torneiro Mecânico (SENAI) • Doutor Honoris Causa por mais de 30 universidades",
     "careerHistory": "Líder Sindical dos Metalúrgicos do ABC (1975-1980), Deputado Federal Constituinte (1987-1991), Presidente da República (2003-2010 e 2023-atual).",
     "aiSummary": "Candidato à Reeleição à Presidência da República em 2026 pelo PT. 39º Presidente do Brasil, busca o quarto mandato com foco no aumento real do salário mínimo, isenção de IR para rendas até R$ 5.000, transição energética e protagonismo internacional do Sul Global.",
-    "overallScore": 91,
+    "overallScore": 68,
     "radar": {
-      "integridade": 89,
-      "eficiencia": 92,
-      "transparencia": 90,
-      "coerencia": 92,
-      "viabilidade": 94,
-      "assiduidade": 96,
-      "presenca": 96
+      "integridade": 71,
+      "eficiencia": 59,
+      "transparencia": 70,
+      "coerencia": 69,
+      "viabilidade": 69,
+      "presenca": 87,
+      "assiduidade": 87
     },
     "attendance": {
       "ratePct": 98,
@@ -127,19 +128,19 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "age": 70,
     "publicLifeYears": 36,
     "timesElected": 8,
-    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Jair_Bolsonaro_2019_Portrait_%283x4_cropped_center%29.jpg/330px-Jair_Bolsonaro_2019_Portrait_%283x4_cropped_center%29.jpg",
+    "avatar": "img/candidates/cand-jair-bolsonaro.jpg",
     "education": "Oficial de Artilharia (Academia Militar das Agulhas Negras - AMAN) e Educação Física (EsEFEx)",
     "careerHistory": "Capitão do Exército (Reserva), Vereador do Rio de Janeiro (1989-1991), Deputado Federal por 7 mandatos (1991-2018), 38º Presidente da República (2019-2022).",
     "aiSummary": "38º Presidente da República do Brasil (2019-2022). Declarado inelegível pelo Tribunal Superior Eleitoral até 2030, atua como principal articulador político e cabo eleitoral do Partido Liberal nas Eleições 2026 em apoio à chapa de Flávio Bolsonaro.",
-    "overallScore": 89,
+    "overallScore": 57,
     "radar": {
-      "integridade": 88,
-      "eficiencia": 90,
-      "transparencia": 88,
-      "coerencia": 94,
-      "viabilidade": 90,
-      "assiduidade": 92,
-      "presenca": 92
+      "integridade": 30,
+      "eficiencia": 61,
+      "transparencia": 70,
+      "coerencia": 69,
+      "viabilidade": 69,
+      "presenca": 86,
+      "assiduidade": 86
     },
     "attendance": {
       "ratePct": 96,
@@ -238,19 +239,19 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "age": 50,
     "publicLifeYears": 16,
     "timesElected": 1,
-    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Governador_do_Estado_de_S%C3%A3o_Paulo%2C_Tarc%C3%ADsio_de_Freitas_-_Foto_Oficial_%28cropped%29.jpg/330px-Governador_do_Estado_de_S%C3%A3o_Paulo%2C_Tarc%C3%ADsio_de_Freitas_-_Foto_Oficial_%28cropped%29.jpg",
+    "avatar": "img/candidates/cand-tarcisio-de-freitas.jpg",
     "education": "Engenharia Civil (Instituto Militar de Engenharia - IME), Pós-Graduado em Gerenciamento de Projetos (FGV)",
     "careerHistory": "Oficial de Engenharia do Exército, Diretor-Geral do DNIT (2011-2015), Ministro da Infraestrutura (2019-2022), Governador do Estado de São Paulo (2023-atual).",
     "aiSummary": "Candidato à Reeleição ao Governo do Estado de São Paulo em 2026 pelo Republicanos. Engenheiro militar e ex-ministro da Infraestrutura, lidera com plano centrado em privatizações (SABESP concluída), concessões ferroviárias e combate ao crime organizado.",
-    "overallScore": 93,
+    "overallScore": 79,
     "radar": {
-      "integridade": 95,
-      "eficiencia": 96,
-      "transparencia": 92,
-      "coerencia": 92,
-      "viabilidade": 95,
-      "assiduidade": 96,
-      "presenca": 96
+      "integridade": 81,
+      "eficiencia": 79,
+      "transparencia": 77,
+      "coerencia": 75,
+      "viabilidade": 76,
+      "presenca": 84,
+      "assiduidade": 84
     },
     "attendance": {
       "ratePct": 99,
@@ -353,19 +354,19 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "age": 68,
     "publicLifeYears": 42,
     "timesElected": 6,
-    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Presidente_Ciro_Gomes.png/330px-Presidente_Ciro_Gomes.png",
+    "avatar": "img/candidates/cand-ciro-gomes.jpg",
     "education": "Direito (Universidade Federal do Ceará - UFC) • Professor Visitante da Harvard Law School",
     "careerHistory": "Prefeito de Fortaleza (1989-1990), Governador do Ceará (1991-1994), Ministro da Fazenda (1994-1995, Plano Real), Ministro da Integração Nacional (2003-2006, Transposição do São Francisco), Deputado Federal (2007-2011).",
     "aiSummary": "Candidato ao Governo do Ceará em 2026 pelo PSDB. Ex-governador do Ceará (1991-1994), ex-ministro da Fazenda e da Integração Nacional. Lidera a oposição no estado com foco em combate às facções criminosas, reestruturação da saúde regional e expansão do modelo educacional de Sobral.",
-    "overallScore": 92,
+    "overallScore": 75,
     "radar": {
-      "integridade": 93,
-      "eficiencia": 94,
-      "transparencia": 92,
-      "coerencia": 90,
-      "viabilidade": 91,
-      "assiduidade": 94,
-      "presenca": 94
+      "integridade": 77,
+      "eficiencia": 68,
+      "transparencia": 78,
+      "coerencia": 69,
+      "viabilidade": 73,
+      "presenca": 86,
+      "assiduidade": 86
     },
     "attendance": {
       "ratePct": 95,
@@ -464,19 +465,19 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "age": 55,
     "publicLifeYears": 24,
     "timesElected": 4,
-    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/2024-08-28_Audi%C3%AAncia_entre_as_Ministras_Simone_Tebet_e_Luciana_Santos%2C_10_%28cropped%29.jpg/330px-2024-08-28_Audi%C3%AAncia_entre_as_Ministras_Simone_Tebet_e_Luciana_Santos%2C_10_%28cropped%29.jpg",
+    "avatar": "img/candidates/cand-simone-tebet.jpg",
     "education": "Direito (Universidade Federal do Rio de Janeiro - UFRJ), Mestrado em Direito Constitucional (PUC-SP)",
     "careerHistory": "Deputada Estadual (2003-2004), Prefeita de Três Lagoas por 2 mandatos (2005-2010), Vice-Governadora de MS (2011-2014), Senadora da República (2015-2023), Ministra do Planejamento e Orçamento (2023-atual).",
     "aiSummary": "Candidata ao Senado Federal pelo estado de São Paulo em 2026 pelo PSB, com apoio do presidente Lula e do vice Geraldo Alckmin. Ex-senadora e ex-ministra do Planejamento, construiu a carreira na defesa da disciplina fiscal com sensibilidade social.",
-    "overallScore": 93,
+    "overallScore": 74,
     "radar": {
-      "integridade": 96,
-      "eficiencia": 94,
-      "transparencia": 95,
-      "coerencia": 91,
-      "viabilidade": 93,
-      "assiduidade": 95,
-      "presenca": 95
+      "integridade": 80,
+      "eficiencia": 61,
+      "transparencia": 78,
+      "coerencia": 69,
+      "viabilidade": 73,
+      "presenca": 88,
+      "assiduidade": 88
     },
     "attendance": {
       "ratePct": 98,
@@ -575,19 +576,19 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "age": 60,
     "publicLifeYears": 8,
     "timesElected": 2,
-    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Romeu_Zema%2C_December_2024_%28cropped%29.jpg/330px-Romeu_Zema%2C_December_2024_%28cropped%29.jpg",
+    "avatar": "img/candidates/cand-romeu-zema.jpg",
     "education": "Administração de Empresas (Fundação Getulio Vargas - FGV)",
     "careerHistory": "Empresário do Grupo Zema por 30 anos, Governador de Minas Gerais reeleito no 1º turno (2019-atual).",
     "aiSummary": "Candidato à Presidência da República em 2026 pelo Partido Novo com o senador Eduardo Girão de vice. Governador de Minas Gerais reeleito no 1º turno. Defende o programa \"O Brasil sem Intocáveis\", focado em reformas estruturantes, privatizações e redução do custo da máquina pública.",
-    "overallScore": 92,
+    "overallScore": 73,
     "radar": {
-      "integridade": 95,
-      "eficiencia": 95,
-      "transparencia": 92,
-      "coerencia": 94,
-      "viabilidade": 91,
-      "assiduidade": 96,
-      "presenca": 96
+      "integridade": 77,
+      "eficiencia": 63,
+      "transparencia": 78,
+      "coerencia": 69,
+      "viabilidade": 73,
+      "presenca": 88,
+      "assiduidade": 88
     },
     "attendance": {
       "ratePct": 98,
@@ -686,19 +687,19 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "age": 76,
     "publicLifeYears": 40,
     "timesElected": 7,
-    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Foto_oficial_do_governador_de_Goi%C3%A1s%2C_Ronaldo_Caiado_em_2023_%28ombros%29.jpg/330px-Foto_oficial_do_governador_de_Goi%C3%A1s%2C_Ronaldo_Caiado_em_2023_%28ombros%29.jpg",
+    "avatar": "img/candidates/cand-ronaldo-caiado.jpg",
     "education": "Medicina (Universidade Federal do Rio de Janeiro - UFRJ), Especialização em Cirurgia da Coluna Vertebral em Paris",
     "careerHistory": "Fundador da UDR, Deputado Federal por 5 mandatos (1991-2014), Senador da República (2015-2018), Governador de Goiás reeleito no 1º turno (2019-atual).",
     "aiSummary": "Candidato à Presidência da República em 2026 pelo PSD, tendo Gilberto Kassab como vice. Governador de Goiás por dois mandatos com índices de aprovação acima de 80%. Apresenta plano centrado em tolerância zero ao crime, rigor fiscal e fortalecimento do agronegócio.",
-    "overallScore": 94,
+    "overallScore": 72,
     "radar": {
-      "integridade": 96,
-      "eficiencia": 96,
-      "transparencia": 93,
-      "coerencia": 94,
-      "viabilidade": 92,
-      "assiduidade": 97,
-      "presenca": 97
+      "integridade": 77,
+      "eficiencia": 60,
+      "transparencia": 78,
+      "coerencia": 69,
+      "viabilidade": 69,
+      "presenca": 88,
+      "assiduidade": 88
     },
     "attendance": {
       "ratePct": 99,
@@ -801,15 +802,15 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "education": "Direito (PUC-Minas), Especialista em Direito Penal Econômico",
     "careerHistory": "Advogado Criminalista, Deputado Federal (2015-2019), Senador da República (2019-atual), Presidente do Senado Federal e do Congresso Nacional por 2 mandatos (2021-2025).",
     "aiSummary": "Presidente do Senado Federal (2021-2025) e Senador por Minas Gerais. Com indicação aprovada para o Tribunal de Contas da União (TCU) em setembro de 2026, consolidou papel de fiador da estabilidade institucional e da reforma tributária.",
-    "overallScore": 91,
+    "overallScore": 75,
     "radar": {
-      "integridade": 93,
-      "eficiencia": 92,
-      "transparencia": 91,
-      "coerencia": 90,
-      "viabilidade": 93,
-      "assiduidade": 96,
-      "presenca": 96
+      "integridade": 80,
+      "eficiencia": 67,
+      "transparencia": 78,
+      "coerencia": 69,
+      "viabilidade": 73,
+      "presenca": 88,
+      "assiduidade": 88
     },
     "attendance": {
       "ratePct": 98,
@@ -913,15 +914,15 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "education": "Direito (Universidade Estadual de Maringá - UEM), Doutor em Direito Constitucional (UFPR)",
     "careerHistory": "Juiz Federal titular da 13ª Vara Federal de Curitiba (Operação Lava Jato, 2014-2018), Ministro da Justiça e Segurança Pública (2019-2020), Senador da República pelo Paraná (2023-atual, filiado ao PL em 2026).",
     "aiSummary": "Senador pelo Paraná (eleito em 2022, filiado ao PL em 2026) e ex-juiz da Operação Lava Jato. Referência no combate à corrupção sistêmica, defesa da prisão em segunda instância, autonomia da PF e pré-candidato do PL no Paraná.",
-    "overallScore": 92,
+    "overallScore": 71,
     "radar": {
-      "integridade": 95,
-      "eficiencia": 92,
-      "transparencia": 93,
-      "coerencia": 91,
-      "viabilidade": 90,
-      "assiduidade": 95,
-      "presenca": 95
+      "integridade": 74,
+      "eficiencia": 66,
+      "transparencia": 70,
+      "coerencia": 69,
+      "viabilidade": 69,
+      "presenca": 87,
+      "assiduidade": 87
     },
     "attendance": {
       "ratePct": 97,
@@ -1045,15 +1046,15 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "education": "Engenharia Aeronáutica (ITA), Mestrado em Engenharia de Sistemas (Naval Postgraduate School - EUA), Treinamento NASA",
     "careerHistory": "Tenente-Coronel da FAB, Primeiro Astronauta Lusófono a ir ao Espaço (Missão Centenário, 2006), Ministro da Ciência, Tecnologia e Inovações (2019-2022), Senador eleito com 10,7 milhões de votos (2023-atual).",
     "aiSummary": "Senador por São Paulo mais votado da história do estado (10,7 milhões de votos). Foco parlamentar na ampliação de investimentos em pesquisa espacial, inteligência artificial, semicondutores e bolsas de pós-graduação do CNPq/Capes.",
-    "overallScore": 93,
+    "overallScore": 75,
     "radar": {
-      "integridade": 96,
-      "eficiencia": 93,
-      "transparencia": 94,
-      "coerencia": 92,
-      "viabilidade": 92,
-      "assiduidade": 96,
-      "presenca": 96
+      "integridade": 77,
+      "eficiencia": 68,
+      "transparencia": 78,
+      "coerencia": 69,
+      "viabilidade": 73,
+      "presenca": 86,
+      "assiduidade": 86
     },
     "attendance": {
       "ratePct": 98,
@@ -1176,15 +1177,15 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "education": "Direito (Universidade Cândido Mendes), Pós-Graduado em Políticas Públicas (IUPERJ)",
     "careerHistory": "Deputado Estadual pelo Rio de Janeiro por 4 mandatos (2003-2018), Senador da República pelo Rio de Janeiro (2019-atual).",
     "aiSummary": "Candidato oficial do Partido Liberal à Presidência da República em 2026, com Alfredo Gaspar de vice. Representa a continuidade das teses conservadoras com o plano \"Para o Brasil Vencer o Atraso\", pautado no endurecimento penal, austeridade e liberdade econômica.",
-    "overallScore": 88,
+    "overallScore": 59,
     "radar": {
-      "integridade": 86,
-      "eficiencia": 90,
-      "transparencia": 88,
-      "coerencia": 92,
-      "viabilidade": 88,
-      "assiduidade": 92,
-      "presenca": 92
+      "integridade": 54,
+      "eficiencia": 56,
+      "transparencia": 60,
+      "coerencia": 68,
+      "viabilidade": 62,
+      "presenca": 80,
+      "assiduidade": 80
     },
     "attendance": {
       "ratePct": 94,
@@ -1287,15 +1288,15 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "education": "História (UNIFAP), Direito (Faculdade SEAMA), Mestrado em Políticas Públicas (UECE)",
     "careerHistory": "Deputado Estadual pelo Amapá (1999-2007), Senador da República reeleito (2011-atual), Vice-Presidente da CPI da Pandemia (2021), Líder do Governo no Congresso Nacional (2023-atual).",
     "aiSummary": "Senador pelo Amapá e Líder do Governo no Congresso Nacional. Liderança destacada na fiscalização parlamentar, defesa intransigente da preservação da Amazônia, direitos socioambientais e articulação de matérias econômicas prioritárias.",
-    "overallScore": 92,
+    "overallScore": 77,
     "radar": {
-      "integridade": 95,
-      "eficiencia": 93,
-      "transparencia": 94,
-      "coerencia": 91,
-      "viabilidade": 92,
-      "assiduidade": 96,
-      "presenca": 96
+      "integridade": 82,
+      "eficiencia": 72,
+      "transparencia": 78,
+      "coerencia": 69,
+      "viabilidade": 71,
+      "presenca": 86,
+      "assiduidade": 86
     },
     "attendance": {
       "ratePct": 98,
@@ -1415,19 +1416,19 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "age": 41,
     "publicLifeYears": 20,
     "timesElected": 3,
-    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/09.02.2026_%E2%80%93_Eduardo_Leite_in_February_2026_-_55087496770_%283x4%29.jpg/330px-09.02.2026_%E2%80%93_Eduardo_Leite_in_February_2026_-_55087496770_%283x4%29.jpg",
+    "avatar": "img/candidates/cand-eduardo-leite.jpg",
     "education": "Direito (UFPEL), Mestrado em Gestão Pública (Columbia University)",
     "careerHistory": "Vereador de Pelotas (2009-2012), Prefeito de Pelotas (2013-2016), Governador do Rio Grande do Sul reeleito (2019-2022 e 2023-atual).",
     "aiSummary": "Governador do Rio Grande do Sul em segundo mandato histórico. Filiado ao PSD, optou por permanecer no comando do executivo gaúcho até o fim de 2026 para liderar a reconstrução pós-enchentes e a modernização fiscal do estado.",
-    "overallScore": 92,
+    "overallScore": 74,
     "radar": {
-      "integridade": 94,
-      "eficiencia": 93,
-      "transparencia": 95,
-      "coerencia": 90,
-      "viabilidade": 92,
-      "assiduidade": 97,
-      "presenca": 97
+      "integridade": 80,
+      "eficiencia": 62,
+      "transparencia": 78,
+      "coerencia": 69,
+      "viabilidade": 73,
+      "presenca": 88,
+      "assiduidade": 88
     },
     "attendance": {
       "ratePct": 98,
@@ -1526,19 +1527,19 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "age": 46,
     "publicLifeYears": 24,
     "timesElected": 5,
-    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Helder_Barbalho%2C_January_2023_%28cropped%29.jpg/330px-Helder_Barbalho%2C_January_2023_%28cropped%29.jpg",
+    "avatar": "img/candidates/cand-helder-barbalho.jpg",
     "education": "Administração de Empresas (UNAMA), Pós-Graduado em Gestão Pública",
     "careerHistory": "Vereador de Ananindeua (2001-2003), Deputado Estadual (2003-2005), Prefeito de Ananindeua por 2 mandatos (2005-2012), Ministro da Integração Nacional (2016-2018), Governador do Pará reeleito com 70% dos votos (2019-atual).",
     "aiSummary": "Candidato ao Senado Federal pelo estado do Pará em 2026 pelo MDB, com Jader Barbalho de suplente. Governador reeleito em 2022 com a maior votação percentual do Brasil (70,4%), liderou a agenda ambiental paraense que culminou na sede da COP30 em Belém.",
-    "overallScore": 93,
+    "overallScore": 71,
     "radar": {
-      "integridade": 92,
-      "eficiencia": 95,
-      "transparencia": 93,
-      "coerencia": 93,
-      "viabilidade": 95,
-      "assiduidade": 97,
-      "presenca": 97
+      "integridade": 77,
+      "eficiencia": 58,
+      "transparencia": 78,
+      "coerencia": 69,
+      "viabilidade": 69,
+      "presenca": 88,
+      "assiduidade": 88
     },
     "attendance": {
       "ratePct": 98,
@@ -1637,19 +1638,19 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "age": 46,
     "publicLifeYears": 14,
     "timesElected": 2,
-    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Claudio_Castro_como_Vice_Governador_do_Rio_de_Janeiro.jpg/330px-Claudio_Castro_como_Vice_Governador_do_Rio_de_Janeiro.jpg",
+    "avatar": "img/candidates/cand-claudio-castro.jpg",
     "education": "Direito (Universidade Federal do Rio de Janeiro - UFRJ)",
     "careerHistory": "Chefe de Gabinete parlamentar, Vereador da Cidade do Rio de Janeiro (2017-2018), Vice-Governador do RJ (2019-2021), Governador reeleito em 1º turno (2021-atual).",
     "aiSummary": "Ex-governador do Rio de Janeiro (2021-2026). Declarado inelegível pelo Tribunal Superior Eleitoral em março de 2026, abriu mão de sua pré-candidatura ao Senado Federal para focar em sua defesa judicial.",
-    "overallScore": 89,
+    "overallScore": 62,
     "radar": {
-      "integridade": 86,
-      "eficiencia": 90,
-      "transparencia": 88,
-      "coerencia": 90,
-      "viabilidade": 91,
-      "assiduidade": 94,
-      "presenca": 94
+      "integridade": 49,
+      "eficiencia": 61,
+      "transparencia": 70,
+      "coerencia": 69,
+      "viabilidade": 69,
+      "presenca": 86,
+      "assiduidade": 86
     },
     "attendance": {
       "ratePct": 96,
@@ -1748,19 +1749,19 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "age": 57,
     "publicLifeYears": 14,
     "timesElected": 3,
-    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Reuni%C3%A3o_com_o_Senhor_Ricardo_Nunes%2C_Prefeito_do_Munic%C3%ADpio_de_S%C3%A3o_Paulo_e_Secret%C3%A1rios_%28cropped%29.jpg/330px-Reuni%C3%A3o_com_o_Senhor_Ricardo_Nunes%2C_Prefeito_do_Munic%C3%ADpio_de_S%C3%A3o_Paulo_e_Secret%C3%A1rios_%28cropped%29.jpg",
+    "avatar": "img/candidates/cand-ricardo-nunes.jpg",
     "education": "Direito (Universidade Santo Amaro - UNISA)",
     "careerHistory": "Empresário do setor de eventos, Vereador de São Paulo por 2 mandatos (2013-2020), Vice-Prefeito de Bruno Covas (2021), Prefeito da Cidade de São Paulo (2021-atual, reeleito em 2024).",
     "aiSummary": "Prefeito da maior metrópole da América Latina reeleito com ampla coalizão política em 2024. Gestão caracterizada pelo recorde de caixa público municipal (R$ 35 bilhões em investimentos), Tarifa Zero aos domingos no transporte público, recapeamento massivo e expansão das vagas de creche.",
-    "overallScore": 92,
+    "overallScore": 73,
     "radar": {
-      "integridade": 93,
-      "eficiencia": 94,
-      "transparencia": 92,
-      "coerencia": 91,
-      "viabilidade": 94,
-      "assiduidade": 97,
-      "presenca": 97
+      "integridade": 77,
+      "eficiencia": 62,
+      "transparencia": 78,
+      "coerencia": 69,
+      "viabilidade": 73,
+      "presenca": 87,
+      "assiduidade": 87
     },
     "attendance": {
       "ratePct": 98,
@@ -1879,19 +1880,19 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "age": 56,
     "publicLifeYears": 32,
     "timesElected": 4,
-    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Eduardo_Paes%2C_October_2024.jpg/330px-Eduardo_Paes%2C_October_2024.jpg",
+    "avatar": "img/candidates/cand-eduardo-paes.jpg",
     "education": "Direito (Pontifícia Universidade Católica do Rio de Janeiro - PUC-Rio)",
     "careerHistory": "Subprefeito da Barra e Jacarepaguá (1993-1996), Deputado Federal por 2 mandatos (1999-2007), Secretário Estadual de Turismo, Prefeito do Rio por 4 mandatos (2009-2016 e 2021-atual, reeleito em 2024 no 1º turno).",
     "aiSummary": "Candidato ao Governo do Estado do Rio de Janeiro em 2026 pelo PSD, tendo Jane Reis (MDB) como vice. Quatro vezes prefeito da capital fluminense, lidera as pesquisas para o Palácio Guanabara com promessa de recuperar a segurança e a infraestrutura do estado.",
-    "overallScore": 93,
+    "overallScore": 73,
     "radar": {
-      "integridade": 93,
-      "eficiencia": 96,
-      "transparencia": 94,
-      "coerencia": 92,
-      "viabilidade": 95,
-      "assiduidade": 97,
-      "presenca": 97
+      "integridade": 77,
+      "eficiencia": 61,
+      "transparencia": 78,
+      "coerencia": 69,
+      "viabilidade": 73,
+      "presenca": 88,
+      "assiduidade": 88
     },
     "attendance": {
       "ratePct": 98,
@@ -1990,19 +1991,19 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "age": 32,
     "publicLifeYears": 8,
     "timesElected": 3,
-    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Jo%C3%A3o_Campos_em_2_de_julho_de_2024%2C_por_Ricardo_Stuckert_%28rotation_%29.jpg/330px-Jo%C3%A3o_Campos_em_2_de_julho_de_2024%2C_por_Ricardo_Stuckert_%28rotation_%29.jpg",
+    "avatar": "img/candidates/cand-joao-campos.jpg",
     "education": "Engenharia Civil (Universidade Federal de Pernambuco - UFPE)",
     "careerHistory": "Deputado Federal mais votado de Pernambuco (2019-2020), Prefeito do Recife eleito em 2020 e reeleito em 2024 com recorde histórico de 78,1% dos votos.",
     "aiSummary": "Candidato ao Governo de Pernambuco em 2026 pelo PSB, tendo Carlos Costa (Republicanos) como vice. Prefeito do Recife reeleito com histórico de 78,1% dos votos, apresenta o plano \"Pernambuco Pronto para Fazer História\" disputando o comando estadual contra Raquel Lyra.",
-    "overallScore": 95,
+    "overallScore": 74,
     "radar": {
-      "integridade": 96,
-      "eficiencia": 97,
-      "transparencia": 96,
-      "coerencia": 94,
-      "viabilidade": 95,
-      "assiduidade": 98,
-      "presenca": 98
+      "integridade": 80,
+      "eficiencia": 62,
+      "transparencia": 78,
+      "coerencia": 69,
+      "viabilidade": 73,
+      "presenca": 88,
+      "assiduidade": 88
     },
     "attendance": {
       "ratePct": 99,
@@ -2101,19 +2102,19 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "age": 78,
     "publicLifeYears": 48,
     "timesElected": 2,
-    "avatar": "https://upload.wikimedia.org/wikipedia/commons/9/97/2024_FUAD_NOMAN_CANDIDATO_PREFEITO_MG_BELO_HORIZONTE_TSE_%28130001975610%29.jpg",
+    "avatar": "img/candidates/cand-fuad-noman.jpg",
     "education": "Ciências Econômicas (Centro de Ensino Unificado de Brasília - CEUB)",
     "careerHistory": "Economista de carreira do Banco Central, Secretário de Fazenda de MG (2003-2007), Ministro interino da Fazenda, Prefeito de Belo Horizonte (2022-atual, reeleito em 2024).",
     "aiSummary": "Prefeito de Belo Horizonte reeleito em 2024, economista sênior com vasta experiência em gestão pública e equilíbrio orçamentário. Foco em obras antienchentes históricas (bacias de contenção na Vilarinho), recapeamento viário e saúde básica nos centros de saúde.",
-    "overallScore": 91,
+    "overallScore": 73,
     "radar": {
-      "integridade": 94,
-      "eficiencia": 92,
-      "transparencia": 92,
-      "coerencia": 93,
-      "viabilidade": 93,
-      "assiduidade": 96,
-      "presenca": 96
+      "integridade": 77,
+      "eficiencia": 63,
+      "transparencia": 78,
+      "coerencia": 69,
+      "viabilidade": 73,
+      "presenca": 87,
+      "assiduidade": 87
     },
     "attendance": {
       "ratePct": 97,
@@ -2232,19 +2233,19 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
     "age": 48,
     "publicLifeYears": 24,
     "timesElected": 4,
-    "avatar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Bruno_Reis_%28foto_oficial_para_o_TSE%29.png/330px-Bruno_Reis_%28foto_oficial_para_o_TSE%29.png",
+    "avatar": "img/candidates/cand-bruno-reis.jpg",
     "education": "Direito (Universidade Católica do Salvador - UCSal), Especialização em Gestão Pública (FGV)",
     "careerHistory": "Deputado Estadual por 2 mandatos (2011-2016), Vice-Prefeito de ACM Neto (2017-2020), Prefeito de Salvador (2021-atual, reeleito em 2024 com 78,6% dos votos no 1º turno).",
     "aiSummary": "Prefeito de Salvador reeleito com uma das maiores votações do Brasil em 2024 (78,6%). Notabilizado pela gestão fiscal sólida com nota Capag A do Tesouro Nacional, implantação do BRT de Salvador, requalificação da orla e liderança na geração de empregos no setor de turismo e serviços.",
-    "overallScore": 94,
+    "overallScore": 74,
     "radar": {
-      "integridade": 95,
-      "eficiencia": 96,
-      "transparencia": 95,
-      "coerencia": 94,
-      "viabilidade": 95,
-      "assiduidade": 97,
-      "presenca": 97
+      "integridade": 80,
+      "eficiencia": 62,
+      "transparencia": 78,
+      "coerencia": 69,
+      "viabilidade": 73,
+      "presenca": 88,
+      "assiduidade": 88
     },
     "attendance": {
       "ratePct": 98,
@@ -2353,4 +2354,6 @@ const EXECUTIVE_AND_SENATE_POLITICIANS = [
   }
 ];
 
-module.exports = { EXECUTIVE_AND_SENATE_POLITICIANS };
+module.exports = {
+  EXECUTIVE_AND_SENATE_POLITICIANS
+};

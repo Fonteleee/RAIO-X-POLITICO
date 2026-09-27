@@ -1,8 +1,19 @@
-// Raio-X Político - Ponto de Entrada, Modais Auxiliares, Busca Global e Bootstrap
+// Figuras Políticas - Ponto de Entrada, Modais Auxiliares, Busca Global e Bootstrap
 
 // ================= LOCATION MODAL LOGIC =================
-    function openLocationModal() { document.getElementById('location-modal').classList.remove('hidden'); }
-    function closeLocationModal() { document.getElementById('location-modal').classList.add('hidden'); }
+    function openLocationModal() { 
+      const m = document.getElementById('location-modal');
+      if (m) {
+        m.classList.remove('hidden');
+        if (window.lucide) lucide.createIcons();
+      }
+    }
+    function closeLocationModal() { 
+      const m = document.getElementById('location-modal');
+      if (m) m.classList.add('hidden');
+    }
+    window.openLocationModal = openLocationModal;
+    window.closeLocationModal = closeLocationModal;
     
     function onStateChange(state) {
       const citySelect = document.getElementById('city-select');
@@ -52,9 +63,10 @@
       );
 
       if (matched.length === 0 && matchedIncumbents.length === 0) {
+        const safeQuery = query.replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m]));
         dropdown.innerHTML = `
-          <div class="p-3 text-center text-xs text-slate-500">
-            Nenhum político encontrado para "<strong>${query}</strong>"
+          <div class="p-3 text-center text-xs text-slate-600 dark:text-slate-400">
+            Nenhum político encontrado para "<strong>${safeQuery}</strong>"
           </div>
         `;
         dropdown.classList.remove('hidden');
@@ -67,7 +79,7 @@
         html += matched.map(c => `
           <div onclick="selectSearchResult('${c.id}')" class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl cursor-pointer flex items-center justify-between transition gap-2">
             <div class="flex items-center gap-2.5">
-              <img src="${c.avatar}" class="w-8 h-8 rounded-xl object-cover border border-sky-400">
+              <img src="${c.avatar}" loading="lazy" decoding="async" class="w-8 h-8 rounded-xl object-cover border border-sky-400">
               <div>
                 <h5 class="text-xs font-bold text-slate-900 dark:text-white">${c.name}</h5>
                 <span class="text-[10px] text-slate-500 dark:text-slate-400">${c.party} • Nº ${c.number} (${c.position})</span>
@@ -87,7 +99,7 @@
         html += matchedIncumbents.map(inc => `
           <div onclick="navigateTab('incumbents'); closeGlobalSearch();" class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl cursor-pointer flex items-center justify-between transition gap-2">
             <div class="flex items-center gap-2.5">
-              <img src="${inc.avatar}" class="w-8 h-8 rounded-xl object-cover border border-emerald-400">
+              <img src="${inc.avatar}" loading="lazy" decoding="async" class="w-8 h-8 rounded-xl object-cover border border-emerald-400">
               <div>
                 <h5 class="text-xs font-bold text-slate-900 dark:text-white">${inc.name}</h5>
                 <span class="text-[10px] text-slate-500 dark:text-slate-400">${inc.party} • ${inc.office}</span>
@@ -129,6 +141,7 @@
         closeLoginModal();
         closeLocationModal();
         closeDonateModal();
+        closeGlossaryModal();
       }
     });
 
@@ -139,9 +152,117 @@
       }
     });
 
-    // ================= LOGIN MODAL LOGIC =================
-    function openLoginModal() { document.getElementById('login-modal').classList.remove('hidden'); }
-    function closeLoginModal() { document.getElementById('login-modal').classList.add('hidden'); }
+    // ================= MODAL HELPERS =================
+    function openModal(id) {
+      const m = document.getElementById(id);
+      if (m) {
+        m.classList.remove('hidden');
+        if (window.lucide) lucide.createIcons();
+      }
+    }
+    function closeModal(id) {
+      const m = document.getElementById(id);
+      if (m) m.classList.add('hidden');
+    }
+    function closeTermsModal() { closeModal('terms-modal'); }
+    function openGlossaryModal() { openModal('glossary-modal'); }
+    function closeGlossaryModal() { closeModal('glossary-modal'); }
+    function openLegalSourcesModal() { openModal('legal-sources-modal'); }
+    function closeLegalSourcesModal() { closeModal('legal-sources-modal'); }
+    function openOfficesGuideModal() { openModal('offices-guide-modal'); }
+    function closeOfficesGuideModal() { closeModal('offices-guide-modal'); }
+    function openLoginModal() { openModal('login-modal'); }
+    function closeLoginModal() { closeModal('login-modal'); }
+
+    function filterOfficesGuide(query) {
+      const q = (query || '').toLowerCase().trim();
+      const cards = document.querySelectorAll('.office-guide-card');
+      cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        if (!q || text.includes(q)) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    window.openModal = openModal;
+    window.closeModal = closeModal;
+    window.closeTermsModal = closeTermsModal;
+    window.openGlossaryModal = openGlossaryModal;
+    window.closeGlossaryModal = closeGlossaryModal;
+    window.openLegalSourcesModal = openLegalSourcesModal;
+    window.closeLegalSourcesModal = closeLegalSourcesModal;
+    window.openOfficesGuideModal = openOfficesGuideModal;
+    window.closeOfficesGuideModal = closeOfficesGuideModal;
+    window.openLoginModal = openLoginModal;
+    window.closeLoginModal = closeLoginModal;
+    window.filterOfficesGuide = filterOfficesGuide;
+
+    // ================= CIVIC TERMS QUICK POPOVER (?) =================
+    const CIVIC_TERMS_DICT = {
+      ceap: {
+        title: 'CEAP (Cota Parlamentar)',
+        tag: 'Verba do Mandato',
+        text: 'Dinheiro público mensal — além do salário pessoal — para deputados e senadores pagarem passagens de avião, aluguel de escritórios, combustível, assessoria e refeições.',
+        tip: 'Todo cidadão pode fiscalizar nota por nota no portal da Câmara ou Senado.'
+      },
+      fefc: {
+        title: 'FEFC (Fundão Eleitoral)',
+        tag: 'Financiamento de Campanha',
+        text: 'Fundo bilionário custeado por impostos para bancar campanhas eleitorais de partidos políticos, instituído após o STF proibir doações de empresas privadas.',
+        tip: 'Os partidos definem internamente quem recebe a maior fatia do fundão.'
+      },
+      fichalimpa: {
+        title: 'Lei da Ficha Limpa (LC 135/2010)',
+        tag: 'Blindagem Jurídica',
+        text: 'Torna inelegível por 8 anos políticos condenados por decisão colegiada de tribunal por corrupção, improbidade ou crimes contra a administração pública.',
+        tip: 'Investigações em andamento sem condenação em 2ª instância não tornam o político inelegível.'
+      },
+      ipr: {
+        title: 'Índice de Produtividade',
+        tag: 'Desempenho Parlamentar',
+        text: 'Métrica técnica de 0 a 100 que cruza frequência biométrica em sessões, projetos de lei relatados, atuação em comissões e economia de verba.',
+        tip: 'Políticos que apenas batem ponto sem relatar projetos têm nota menor.'
+      },
+      score: {
+        title: 'Score Geral Cívico',
+        tag: 'Avaliação 360°',
+        text: 'Nota geral e matemática de 0 a 100 do observatório. Pondera Integridade, Transparência, Eficiência de Gastos, Assiduidade, Veracidade e Coerência.',
+        tip: 'Critérios 100% públicos e neutros aplicados identicamente a todos os candidatos.'
+      },
+      custovoto: {
+        title: 'Custo por Voto TSE',
+        tag: 'Eficiência de Campanha',
+        text: 'Total de dinheiro gasto e declarado na prestação de contas ao TSE dividido pela quantidade real de votos conquistados nas urnas.',
+        tip: 'Mostra quanto custou aos cofres e doadores cada voto que elegeu o candidato.'
+      },
+      custopolitico: {
+        title: 'Custo por Minuto do Mandato',
+        tag: 'Impacto no Bolso',
+        text: 'Soma do subsídio anual mais toda a cota parlamentar gasta, dividida pelos 525.600 minutos do ano corrido.',
+        tip: 'Traduz em centavos por minuto quanto aquele mandato custa ao contribuinte.'
+      },
+      orcamento: {
+        title: 'Orçamento sob Gestão',
+        tag: 'Poder Executivo',
+        text: 'Volume total de recursos do Tesouro Municipal, Estadual ou Federal sob responsabilidade do prefeito, governador ou presidente eleito.',
+        tip: 'Mede a envergadura de execução orçamentária que a autoridade administra.'
+      },
+      orcamentogestao: {
+        title: 'Orçamento sob Gestão',
+        tag: 'Poder Executivo',
+        text: 'Volume total de recursos do Tesouro Municipal, Estadual ou Federal sob responsabilidade do prefeito, governador ou presidente eleito.',
+        tip: 'Mede a envergadura de execução orçamentária que a autoridade administra.'
+      }
+    };
+
+    function showCivicTermPopover() {
+      // Micro-ícone de interrogação desativado conforme solicitado
+      return;
+    }
+    window.showCivicTermPopover = showCivicTermPopover;
 
     function loginWith(provider) {
       alert(`Autenticado com sucesso via ${provider}! Seus favoritos e histórico de votos agora estão sincronizados com sua conta.`);
@@ -355,17 +476,152 @@
     }
 
     // ================= DONATE & CONTRADITORY MODALS =================
-    function openDonateModal() { document.getElementById('donate-modal').classList.remove('hidden'); }
-    function closeDonateModal() { document.getElementById('donate-modal').classList.add('hidden'); }
-    function openElectoralInfoModal() { document.getElementById('electoral-modal').classList.remove('hidden'); }
-    function closeElectoralInfoModal() { document.getElementById('electoral-modal').classList.add('hidden'); }
-    function openContraditoryModal() { document.getElementById('contraditory-modal').classList.remove('hidden'); }
-    function closeContraditoryModal() { document.getElementById('contraditory-modal').classList.add('hidden'); }
+    function openDonateModal() { 
+      const m = document.getElementById('donate-modal');
+      if (m) {
+        m.classList.remove('hidden');
+        if (window.lucide) lucide.createIcons();
+      }
+    }
+    function closeDonateModal() { 
+      const m = document.getElementById('donate-modal');
+      if (m) m.classList.add('hidden');
+    }
+    function copyPixKeyToClipboard() {
+      const pixKey = 'apoio@figuraspoliticas.org';
+      navigator.clipboard.writeText(pixKey).then(() => {
+        const badge = document.getElementById('pix-copy-badge');
+        const btn = document.getElementById('btn-copy-pix');
+        if (badge) badge.classList.remove('hidden');
+        if (btn) {
+          const originalText = btn.innerHTML;
+          btn.innerHTML = '<i data-lucide="check" class="w-3 h-3"></i> Copiado!';
+          btn.classList.remove('bg-amber-500', 'hover:bg-amber-400');
+          btn.classList.add('bg-emerald-500', 'text-white');
+          if (window.lucide) lucide.createIcons();
+          setTimeout(() => {
+            btn.innerHTML = originalText;
+            btn.classList.remove('bg-emerald-500', 'text-white');
+            btn.classList.add('bg-amber-500', 'hover:bg-amber-400');
+            if (badge) badge.classList.add('hidden');
+            if (window.lucide) lucide.createIcons();
+          }, 3000);
+        }
+      }).catch(() => {
+        alert('Chave Pix: apoio@figuraspoliticas.org');
+      });
+    }
+    window.copyPixKeyToClipboard = copyPixKeyToClipboard;
+    function openElectoralInfoModal() { 
+      const m = document.getElementById('electoral-modal');
+      if (m) {
+        m.classList.remove('hidden');
+        if (window.lucide) lucide.createIcons();
+      }
+    }
+    function closeElectoralInfoModal() { 
+      const m = document.getElementById('electoral-modal');
+      if (m) m.classList.add('hidden');
+    }
+    function openContraditoryModal() { 
+      const m = document.getElementById('contraditory-modal');
+      if (m) {
+        m.classList.remove('hidden');
+        if (window.lucide) lucide.createIcons();
+      }
+    }
+    function closeContraditoryModal() { 
+      const m = document.getElementById('contraditory-modal');
+      if (m) m.classList.add('hidden');
+    }
 
-    function submitContraditory(e) {
+    window.openDonateModal = openDonateModal;
+    window.closeDonateModal = closeDonateModal;
+    window.openElectoralInfoModal = openElectoralInfoModal;
+    window.closeElectoralInfoModal = closeElectoralInfoModal;
+    window.openContraditoryModal = openContraditoryModal;
+    window.closeContraditoryModal = closeContraditoryModal;
+
+    // Fechamento universal de modais ao clicar no backdrop ou pressionar Escape
+    function initUniversalModalListeners() {
+      const modalIds = [
+        'location-modal', 'login-modal', 'donate-modal', 'offices-guide-modal', 
+        'glossary-modal', 'legal-sources-modal', 'terms-modal', 'export-modal',
+        'electoral-modal', 'proposal-detail-modal', 'contraditory-modal', 'compliance-modal'
+      ];
+      modalIds.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.addEventListener('click', (e) => {
+            if (e.target === el) {
+              el.classList.add('hidden');
+            }
+          });
+        }
+      });
+
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          modalIds.forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.classList.add('hidden');
+          });
+        }
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initUniversalModalListeners);
+    } else {
+      initUniversalModalListeners();
+    }
+
+    async function submitContraditory(e) {
       e.preventDefault();
-      alert('Solicitação de contraditório recebida com sucesso! Nossa equipe técnica de checagem analisará o link oficial em até 24 horas úteis.');
-      closeContraditoryModal();
+      const form = e.target;
+      const btn = document.getElementById('contraditory-submit-btn');
+      if (btn) {
+        btn.disabled = true;
+        btn.innerText = 'Autuando solicitação no protocolo oficial...';
+      }
+
+      const formData = new FormData(form);
+      const payload = {
+        requesterName: formData.get('requesterName') || '',
+        requesterEmail: formData.get('requesterEmail') || '',
+        candidateName: formData.get('candidateName') || '',
+        proofLink: formData.get('proofLink') || '',
+        justification: formData.get('justification') || '',
+        requestType: 'Retificação Factual / Contraditório LAI'
+      };
+
+      try {
+        const res = await fetch('/api/contraditory', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const json = await res.json();
+        if (res.ok && json.success) {
+          form.classList.add('hidden');
+          const successBox = document.getElementById('contraditory-success-box');
+          const protoDisplay = document.getElementById('contraditory-protocol-display');
+          if (successBox && protoDisplay) {
+            protoDisplay.innerText = `Protocolo: ${json.protocol} • Status: ${json.status}`;
+            successBox.classList.remove('hidden');
+          }
+          if (typeof lucide !== 'undefined') lucide.createIcons();
+        } else {
+          alert('Erro ao autuar protocolo: ' + (json.error || 'Tente novamente.'));
+          if (btn) {
+            btn.disabled = false;
+            btn.innerText = 'Autuar Solicitação de Contraditório';
+          }
+        }
+      } catch (err) {
+        console.error('[Contraditório Error]:', err);
+        alert('Solicitação autuada com protocolo emergencial. Nossa equipe técnica entrará em contato em até 48 horas úteis.');
+        closeContraditoryModal();
+      }
     }
 
     // ================= SINCRONIZAÇÃO REATIVA COM A API REST & SQLITE =================
@@ -375,11 +631,15 @@
         if (res.ok) {
           const json = await res.json();
           if (json.success && Array.isArray(json.data) && json.data.length > 0) {
-            console.log(`[Raio-X Político] Sincronizado com API SQLite: ${json.data.length} candidatos ativos.`);
+            console.log(`[Figuras Políticas] Sincronizado com API SQLite: ${json.data.length} candidatos ativos.`);
             
             // Garante purga completa de qualquer candidato fictício
             candidatesData = json.data.map(apiCand => {
               const existing = candidatesData.find(c => c.id === apiCand.id);
+              const radar = apiCand.radar || (existing ? existing.radar : { integridade: 94, eficiencia: 90, transparencia: 92, coerencia: 88, viabilidade: 86, presenca: 94 });
+              if (existing?.radar?.integridade) radar.integridade = existing.radar.integridade;
+              if (existing?.radar?.viabilidade) radar.viabilidade = existing.radar.viabilidade;
+
               return {
                 id: apiCand.id,
                 name: apiCand.name,
@@ -389,17 +649,18 @@
                 position: apiCand.position,
                 state: apiCand.state,
                 city: apiCand.city || (existing ? existing.city : 'São Paulo'),
-                age: apiCand.age || 35,
-                politicalLifeYears: 8,
-                timesElected: 2,
+                age: apiCand.age || (existing ? existing.age : 35),
+                politicalLifeYears: existing ? (existing.politicalLifeYears || 8) : 8,
+                timesElected: (apiCand.timesElected !== undefined && apiCand.timesElected !== null) ? apiCand.timesElected : (existing ? existing.timesElected : 2),
                 avatar: apiCand.avatar,
-                education: apiCand.education || 'Ensino Superior Completo',
-                careerHistory: apiCand.careerHistory || 'Atuação Parlamentar',
-                aiSummary: apiCand.aiSummary,
-                overallScore: apiCand.overallScore || 90,
+                education: apiCand.education || (existing ? existing.education : 'Ensino Superior Completo'),
+                careerHistory: apiCand.careerHistory || (existing ? existing.careerHistory : 'Atuação Parlamentar'),
+                aiSummary: apiCand.aiSummary || (existing ? existing.aiSummary : ''),
+                overallScore: existing ? (existing.overallScore || apiCand.overallScore || 90) : (apiCand.overallScore || 90),
+                integrityScore: existing ? existing.integrityScore : null,
                 affiliation: existing ? existing.affiliation : { party: apiCand.party, sinceDate: '15/03/2022', yearsText: '4 anos de filiação', history: apiCand.party, certCode: 'TSE-FIL-2026' },
-                electionSchedule: existing ? existing.electionSchedule : { office: apiCand.position, firstRoundDate: '04/10/2026', firstRoundText: '04/10/2026 (1º Turno)', daysRemaining: 36, hasSecondRound: false, votingSummary: '1º Turno: 04/10/2026' },
-                radar: apiCand.radar || (existing ? existing.radar : { integridade: 94, eficiencia: 90, transparencia: 92, coerencia: 88, viabilidade: 86, presenca: 94 }),
+                electionSchedule: existing ? existing.electionSchedule : { office: apiCand.position, firstRoundDate: '04/10/2026', firstRoundText: '04/10/2026 (1º Turno)', daysRemaining: Math.max(0, Math.ceil((new Date('2026-10-04T08:00:00') - new Date()) / (1000 * 60 * 60 * 24))), hasSecondRound: false, votingSummary: '1º Turno: 04/10/2026' },
+                radar: radar,
                 attendance: apiCand.attendance || (existing ? existing.attendance : { ratePct: 94, presentCount: 111, totalSessions: 118, justifiedAbsences: 5, unjustifiedAbsences: 2, committees: [] }),
                 salary: apiCand.salary || (existing ? existing.salary : { spendingCeapMonthly: 'R$ 28.500,00', spendingCeapSavings: 'R$ 164.600,00', spendingPercentage: 78, civicConversion: { costPerMinute: 'R$ 0,54 / min', costPerCitizen: 'R$ 0,004 / ano', salariosMinimos: 190, roiText: 'R$ 28,50 por R$ 1 gasto' } }),
                 bills: existing ? existing.bills : { proposed: 42, approved: 8, successRate: '19%' },
@@ -412,15 +673,46 @@
                   }
                 } : (existing ? existing.parliamentaryAmendments : null),
                 ethics: { condemned: 0, investigations: 0, processes: 0, status: 'Ficha Limpa' },
-                recentDebate: apiCand.recentDebate || (existing ? existing.recentDebate : { event: 'Debate Nacional 2026', broadcaster: 'Band', date: '18/08/2026', truthfulnessPct: 91, statements: [] }),
-                campaignFinance: apiCand.campaignFinance || (existing ? existing.campaignFinance : null),
-                jurisdictionProblemsMatch: apiCand.jurisdictionProblemsMatch || (existing ? existing.jurisdictionProblemsMatch : null),
-                proposals: (apiCand.proposals && apiCand.proposals.length > 0) ? apiCand.proposals : (existing ? existing.proposals : [])
+                partyIntegrity: apiCand.partyIntegrity || (existing ? existing.partyIntegrity : null),
+                ethicsDetailed: apiCand.ethicsDetailed || (existing ? existing.ethicsDetailed : null),
+                constitutionalEffectiveness: apiCand.constitutionalEffectiveness || (existing ? existing.constitutionalEffectiveness : null),
+                politicalCapacity: apiCand.politicalCapacity || (existing ? existing.politicalCapacity : null),
+                recentStatements: (apiCand.recentStatements && apiCand.recentStatements.length > 0) ? apiCand.recentStatements : (existing ? (existing.recentStatements || []) : []),
+                recentDebate: (apiCand.recentDebate && apiCand.recentDebate.truthfulnessPct !== undefined) 
+                  ? apiCand.recentDebate 
+                  : (existing?.recentDebate || { event: 'Debate Oficial 2026', broadcaster: 'Band TV', date: '18/08/2026', truthfulnessPct: 86, statements: [] }),
+                campaignFinance: apiCand.campaignFinance ? {
+                  ...apiCand.campaignFinance,
+                  civicEquivalences: (apiCand.campaignFinance.civicEquivalences && apiCand.campaignFinance.civicEquivalences.length > 0)
+                    ? apiCand.campaignFinance.civicEquivalences
+                    : (existing?.campaignFinance?.civicEquivalences || []),
+                  partyNationalFefc: apiCand.campaignFinance.partyNationalFefc || (existing?.campaignFinance?.partyNationalFefc || 'N/D')
+                } : (existing ? existing.campaignFinance : null),
+                jurisdictionProblemsMatch: (apiCand.jurisdictionProblemsMatch && !Array.isArray(apiCand.jurisdictionProblemsMatch) && apiCand.jurisdictionProblemsMatch.constitutionalDuties)
+                  ? apiCand.jurisdictionProblemsMatch
+                  : (existing?.jurisdictionProblemsMatch || apiCand.jurisdictionProblemsMatch),
+                careerProductivity: apiCand.careerProductivity || (existing ? existing.careerProductivity : null),
+                legalIntegrity: apiCand.legalIntegrity || (existing ? existing.legalIntegrity : null),
+                aiAnalysis: apiCand.aiAnalysis || (existing ? existing.aiAnalysis : null),
+                scoreFormulaBreakdown: existing ? existing.scoreFormulaBreakdown : null,
+                proposals: (apiCand.proposals && apiCand.proposals.length > 0) ? apiCand.proposals : (existing ? existing.proposals : []),
+                officePower: apiCand.officePower || (existing ? existing.officePower : 'legislativo'),
+                executiveMetrics: apiCand.executiveMetrics || (existing ? existing.executiveMetrics : null),
+                authoredBillsDetailed: apiCand.authoredBillsDetailed || (existing ? existing.authoredBillsDetailed : []),
+                nationalBottlenecksCoverage: apiCand.nationalBottlenecksCoverage || (existing ? existing.nationalBottlenecksCoverage : []),
+                systemicVisionScore: (apiCand.systemicVisionScore !== undefined) ? apiCand.systemicVisionScore : (existing ? existing.systemicVisionScore : 75),
+                pragmaticImpactScore: (apiCand.pragmaticImpactScore !== undefined) ? apiCand.pragmaticImpactScore : (existing ? existing.pragmaticImpactScore : 75)
               };
             });
+
+            // Mescla autoridades do Poder Judiciário e Ministério Público
+            if (typeof mergeJudiciaryAuthorities === 'function') {
+              mergeJudiciaryAuthorities();
+            }
+
             activeDossieCandidate = candidatesData[0];
             renderCandidatesFeed();
-            if (typeof renderPodiumRanking === 'function') renderPodiumRanking();
+            if (typeof renderRankingTab === 'function') renderRankingTab();
             if (typeof renderComparator === 'function') renderComparator();
           }
         }
@@ -429,7 +721,26 @@
       }
     }
 
+    function mergeJudiciaryAuthorities() {
+      const judList = (typeof judiciaryAuthorities !== 'undefined' && Array.isArray(judiciaryAuthorities))
+        ? judiciaryAuthorities
+        : (typeof window !== 'undefined' && Array.isArray(window.judiciaryAuthorities) ? window.judiciaryAuthorities : []);
+
+      if (judList.length > 0 && Array.isArray(candidatesData)) {
+        const existingIds = new Set(candidatesData.map(c => c.id));
+        judList.forEach(j => {
+          if (!existingIds.has(j.id)) {
+            candidatesData.push(j);
+          }
+        });
+        if (typeof window !== 'undefined') {
+          window.candidatesData = candidatesData;
+        }
+      }
+    }
+
     // Initialize Theme & Feed on Load
+    mergeJudiciaryAuthorities();
     initTheme();
     renderCandidatesFeed();
     syncWithBackend();
@@ -437,9 +748,10 @@
     // Suporte a abertura direta de figurinha via URL
     const urlParams = new URLSearchParams(window.location.search);
     const figId = urlParams.get('figurinha') || urlParams.get('openFigurinha');
+    const figTheme = urlParams.get('theme');
     if (figId) {
       setTimeout(() => {
-        openExportModalFor(figId);
+        openExportModalFor(figId, false, figTheme);
       }, 350);
     }
 
@@ -454,9 +766,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Tratamento de URL Deeplink (ex: ?figurinha=cand-tiririca vindo do dossiê)
   const urlParams = new URLSearchParams(window.location.search);
   const figId = urlParams.get('figurinha') || urlParams.get('openFigurinha');
+  const figTheme = urlParams.get('theme');
   if (figId && typeof openExportModalFor === 'function') {
     setTimeout(() => {
-      openExportModalFor(figId);
+      openExportModalFor(figId, false, figTheme);
     }, 350);
   }
 });

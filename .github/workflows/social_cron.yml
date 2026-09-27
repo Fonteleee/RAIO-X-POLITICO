@@ -1,0 +1,55 @@
+name: Social Marketing Autopilot (Daily 09:00 BRT)
+
+on:
+  schedule:
+    # 12:00 UTC = 09:00 Horário de Brasília (BRT), todos os dias
+    - cron: '0 12 * * *'
+  workflow_dispatch: # Permite disparar manualmente pelo painel do GitHub com 1 clique
+
+permissions:
+  contents: read
+
+jobs:
+  run-autopilot:
+    name: Gerar & Distribuir Post Cívico Diário
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do Repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js LTS
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Instalar Dependências
+        run: npm ci --prefer-offline || npm install
+
+      - name: Semear Banco de Dados Cívico (SQLite)
+        run: npm run seed
+
+      - name: Executar Motor Autônomo de Marketing
+        env:
+          # Segredos opcionais configurados em Settings > Secrets and variables > Actions
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
+          META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
+        run: node scripts/social_autopilot.js
+
+      - name: Salvar Artefato do Post Diário
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: daily-civic-post-${{ github.run_id }}
+          path: output/social_queue/
+          retention-days: 14

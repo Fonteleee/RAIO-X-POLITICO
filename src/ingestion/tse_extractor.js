@@ -2,11 +2,20 @@
 // Consome a API pública do Tribunal Superior Eleitoral (100% Gratuita e Oficial)
 // https://divulgacandcontas.tse.jus.br/divulga/rest/v1
 
+const { CircuitBreaker } = require('../utils/circuit_breaker');
+
 const TSE_BASE_URL = 'https://divulgacandcontas.tse.jus.br/divulga/rest/v1';
 
+const defaultTseBreaker = new CircuitBreaker({
+  maxFailures: 3,
+  windowMs: 60 * 1000,
+  resetTimeoutMs: 30 * 60 * 1000
+});
+
 class TseExtractor {
-  constructor(fetchImpl = null) {
+  constructor(fetchImpl = null, circuitBreaker = null) {
     this.fetch = fetchImpl || globalThis.fetch;
+    this.circuitBreaker = circuitBreaker || defaultTseBreaker;
   }
 
   /**
@@ -20,7 +29,7 @@ class TseExtractor {
   async listarCandidatos(ano = 2026, siglaUf = 'SP', idEleicao = '20260000', codigoCargo = '3') {
     const url = `${TSE_BASE_URL}/candidatura/listar/${ano}/${idEleicao}/${siglaUf}/${codigoCargo}/candidatos`;
     
-    try {
+    return this.circuitBreaker.execute(`tse:listar:${ano}:${siglaUf}:${codigoCargo}`, async () => {
       const response = await this.fetch(url, {
         headers: {
           'Accept': 'application/json',
@@ -29,7 +38,9 @@ class TseExtractor {
       });
 
       if (!response.ok) {
-        throw new Error(`Erro ao listar candidatos no TSE: HTTP ${response.status}`);
+        const err = new Error(`Erro ao listar candidatos no TSE: HTTP ${response.status}`);
+        err.status = response.status;
+        throw err;
       }
 
       const json = await response.json();
@@ -44,10 +55,7 @@ class TseExtractor {
         situacao: c.descricaoSituacao,
         fotoUrl: `https://divulgacandcontas.tse.jus.br/divulga/rest/v1/candidatura/buscar/foto/${ano}/${c.id}`
       }));
-    } catch (err) {
-      console.warn(`[TSE Extractor] Falha na consulta remota ao TSE (${url}):`, err.message);
-      return [];
-    }
+    }, []);
   }
 
   /**
@@ -61,19 +69,24 @@ class TseExtractor {
   async getCandidatoDetalhes(ano = 2026, siglaUf = 'SP', idEleicao = '20260000', idCandidato) {
     const url = `${TSE_BASE_URL}/candidatura/buscar/${ano}/${idEleicao}/${siglaUf}/candidato/${idCandidato}`;
 
-    const response = await this.fetch(url, {
-      headers: {
-        'Accept': 'application/json',
-        'User-Agent': 'RaioXPolitico-CivicBot/1.0 (+https://raioxpolitico.org)'
+    const rawJson = await this.circuitBreaker.execute(`tse:detalhes:${ano}:${siglaUf}:${idCandidato}`, async () => {
+      const response = await this.fetch(url, {
+        headers: {
+          'Accept': 'application/json',
+          'User-Agent': 'RaioXPolitico-CivicBot/1.0 (+https://raioxpolitico.org)'
+        }
+      });
+
+      if (!response.ok) {
+        const err = new Error(`Erro ao obter detalhes do candidato no TSE: HTTP ${response.status}`);
+        err.status = response.status;
+        throw err;
       }
-    });
 
-    if (!response.ok) {
-      throw new Error(`Erro ao obter detalhes do candidato no TSE: HTTP ${response.status}`);
-    }
+      return await response.json();
+    }, {});
 
-    const json = await response.json();
-    return this.processarCandidatoTse(json, ano);
+    return this.processarCandidatoTse(rawJson, ano);
   }
 
   /**

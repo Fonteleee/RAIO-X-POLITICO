@@ -1,0 +1,1970 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Figuras Políticas 8K • Protótipo Premium Réplica 1:1</title>
+  
+  <!-- Metadados de SEO & Indexação -->
+  <meta name="description" content="Auditoria cívica, checagem de gastos da cota parlamentar (CEAP), assiduidade e dossiê completo dos candidatos às Eleições 2026 com base em 4 fontes oficiais (TSE, LAI, STF e IFCN).">
+  <meta name="keywords" content="eleições 2026, raio-x político, ficha limpa, gastos de deputados, cota parlamentar, candidatos governador sp, match eleitoral, compare candidatos, transparência pública">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Figuras Políticas - Observatório Cívico Independente">
+  <link rel="canonical" href="https://figuraspoliticas.org/">
+  <meta name="referrer" content="no-referrer">
+
+  <!-- Open Graph (WhatsApp, Facebook, Telegram, LinkedIn) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://figuraspoliticas.org/">
+  <meta property="og:title" content="Figuras Políticas | Inteligência Cívica & Dossiê Eleitoral 2026">
+  <meta property="og:description" content="Descubra quanto seu candidato custa por minuto, se ele bate ponto no plenário e o histórico ético em 4 fontes oficiais cruzadas.">
+  <meta property="og:image" content="https://figuraspoliticas.org/assets/og-preview-eleicoes2026.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Figuras Políticas">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@figuraspoliticas">
+  <meta name="twitter:title" content="Figuras Políticas | Auditoria Cívica das Eleições 2026">
+  <meta name="twitter:description" content="Compare candidatos, analise gastos da cota e exporte figurinhas para WhatsApp e Stories.">
+  <meta name="twitter:image" content="https://figuraspoliticas.org/assets/og-preview-eleicoes2026.jpg">
+
+  <!-- Schema.org JSON-LD (Dados Estruturados para Google e Modelos de IA) -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Figuras Políticas",
+      "url": "https://figuraspoliticas.org/",
+      "description": "Plataforma independente de transparência cívica e auditoria de dados eleitorais oficiais das Eleições Brasileiras.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://figuraspoliticas.org/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "GovernmentOrganization",
+      "name": "Figuras Políticas - Observatório de Integridade Cívica",
+      "url": "https://figuraspoliticas.org",
+      "knowsAbout": ["Eleições 2026", "Lei da Ficha Limpa", "Cota Parlamentar CEAP", "Tribunal Superior Eleitoral", "Transparência Pública"]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Qual é a data do primeiro turno das Eleições 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O primeiro turno das Eleições Gerais de 2026 será realizado no domingo, dia 04 de outubro de 2026."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que é a Cota Parlamentar (CEAP) analisada no Figuras Políticas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A CEAP é a verba pública mensal destinada a cobrir despesas do mandato parlamentar. O Raio-X audita as notas fiscais e compara o gasto com o teto legal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como é calculada a Pontuação Geral do candidato?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A pontuação varia de 0 a 100 e é uma média ponderada composta por Integridade (40%), Eficiência (25%), Transparência (15%), Coerência (10%) e Presença em Plenário (10%)."
+          }
+        }
+      ]
+    }
+  ]
+  </script>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            slate: {
+              850: '#131e32',
+              900: '#0b1120',
+              950: '#060a12'
+            },
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              400: '#4ade80',
+              500: '#16a34a',
+              600: '#15803d',
+              900: '#14532d',
+            },
+            accent: {
+              cyan: '#0284c7',
+              purple: '#9333ea',
+              amber: '#d97706',
+              crimson: '#dc2626',
+              emerald: '#059669',
+            },
+            theme: {
+              bgLight: '#f8fafc',
+              surfaceLight: '#ffffff',
+              cardLight: '#f1f5f9',
+              borderLight: '#e2e8f0',
+              textPrimaryLight: '#0f172a',
+              textSecondaryLight: '#475569',
+              
+              bgDark: '#090d16',
+              surfaceDark: '#0f172a',
+              cardDark: '#131e36',
+              borderDark: 'rgba(255, 255, 255, 0.08)',
+              textPrimaryDark: '#f8fafc',
+              textSecondaryDark: '#94a3b8',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Chart.js for Radar and Analytics -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- html2canvas for Exporting Social Media Cards -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Estilos Premium Swiss 8K (Zero Dark Mode Involuntário / High Fidelity) -->
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0f172a; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+    .glass-panel, .glass-card, .swiss-card {
+      background: #ffffff !important;
+      border: 1px solid #e2e8f0 !important;
+      box-shadow: 0 1px 3px rgba(0,0,0,.03), 0 10px 30px -4px rgba(0,0,0,.05) !important;
+      transition: all 0.25s cubic-bezier(0.16,1,0.3,1);
+    }
+    .glass-panel:hover, .glass-card:hover, .swiss-card:hover {
+      border-color: #cbd5e1 !important;
+      box-shadow: 0 4px 6px rgba(0,0,0,.02), 0 18px 40px -4px rgba(0,0,0,.08) !important;
+    }
+    .swiss-tag {
+      font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 800;
+      letter-spacing: .08em; text-transform: uppercase; padding: 3px 8px; border-radius: 6px;
+    }
+    @keyframes audio-wave { 0%,100%{height:8px} 50%{height:28px} }
+    @keyframes audio-wave-burst { 0%{height:8px} 20%{height:40px} 50%{height:24px} 100%{height:8px} }
+    .voice-bar { width:5px; border-radius:3px; display:inline-block; animation:audio-wave 1s ease-in-out infinite; transition:background-color 0.3s; }
+    .voice-bar.burst { animation:audio-wave-burst 0.6s ease-out forwards; }
+    .v1{background:#38bdf8;animation-delay:0s} .v2{background:#818cf8;animation-delay:.15s}
+    .v3{background:#c084fc;animation-delay:.30s} .v4{background:#fb7185;animation-delay:.45s}
+    .v5{background:#34d399;animation-delay:.60s}
+  </style>
+
+</head>
+<body class="min-h-screen flex flex-col selection:bg-sky-500 selection:text-white">
+
+
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="sticky top-0 z-40 glass-panel">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3">
+      
+      <!-- Brand Logo -->
+      <div class="flex items-center gap-3 cursor-pointer flex-shrink-0" onclick="navigateTab('feed')">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 via-blue-600 to-indigo-600 dark:from-cyan-500 dark:via-blue-600 dark:to-purple-600 flex items-center justify-center shadow-md shadow-sky-600/20 text-white">
+          <i data-lucide="scan-eye" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <h1 id="brand-title" class="font-extrabold text-lg tracking-tight text-slate-900 dark:bg-gradient-to-r dark:from-white dark:via-slate-100 dark:to-cyan-400 dark:bg-clip-text dark:text-transparent">
+            Figuras Políticas
+          </h1>
+          <p id="brand-tagline" class="text-[10px] text-slate-500 dark:text-slate-400 leading-none">
+            Veja o que está por trás do discurso.
+          </p>
+        </div>
+      </div>
+
+      <!-- Center Nav Links -->
+      <nav class="hidden lg:flex items-center gap-1 bg-slate-200/80 dark:bg-slate-900/90 p-1.5 rounded-xl border border-slate-300/80 dark:border-white/10 shadow-xs backdrop-blur-md">
+        <button onclick="navigateTab('feed')" id="nav-feed" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-white bg-sky-600 dark:bg-cyan-600/30 dark:border dark:border-cyan-500/30 transition flex items-center gap-1.5 shadow-sm">
+          <i data-lucide="layout-grid" class="w-3.5 h-3.5 text-current"></i> Feed
+        </button>
+        <button onclick="navigateTab('ranking')" id="nav-ranking" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-slate-950 dark:hover:text-white hover:bg-slate-300/40 dark:hover:bg-slate-800/60 transition flex items-center gap-1.5">
+          <i data-lucide="trophy" class="w-3.5 h-3.5 text-amber-500"></i> Ranking
+        </button>
+        <button onclick="navigateTab('comparator')" id="nav-comparator" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-slate-950 dark:hover:text-white hover:bg-slate-300/40 dark:hover:bg-slate-800/60 transition flex items-center gap-1.5">
+          <i data-lucide="scale" class="w-3.5 h-3.5 text-current"></i> Comparador
+          <span id="compare-badge" class="hidden px-1.5 py-0.2 text-[10px] bg-purple-600 text-white rounded-full font-bold">2</span>
+        </button>
+        <button onclick="navigateTab('match')" id="nav-match" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-slate-950 dark:hover:text-white hover:bg-slate-300/40 dark:hover:bg-slate-800/60 transition flex items-center gap-1.5">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-500"></i> Match
+        </button>
+        <button onclick="navigateTab('incumbents')" id="nav-incumbents" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-slate-950 dark:hover:text-white hover:bg-slate-300/40 dark:hover:bg-slate-800/60 transition flex items-center gap-1.5">
+          <i data-lucide="landmark" class="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400"></i> Em Exercício
+        </button>
+      </nav>
+
+      <!-- Global Search Bar with Live Instant Autocomplete Dropdown (Enhanced & Evident) -->
+      <div class="relative flex-1 max-w-sm lg:max-w-md hidden md:block">
+        <div class="relative flex items-center shadow-xs">
+          <i data-lucide="search" class="w-4 h-4 text-sky-600 dark:text-cyan-400 absolute left-3.5 pointer-events-none"></i>
+          <input 
+            type="text" 
+            id="global-search-input"
+            oninput="handleGlobalSearch(this.value)"
+            onfocus="handleGlobalSearch(this.value)"
+            placeholder="Buscar político, partido, estado ou nº..." 
+            class="w-full pl-10 pr-16 py-2 bg-white dark:bg-slate-900 border-2 border-slate-300 dark:border-cyan-500/35 rounded-xl text-xs font-medium text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-sky-500 dark:focus:border-cyan-400 focus:ring-2 focus:ring-sky-500/20 dark:focus:ring-cyan-500/20 transition"
+          >
+          <span class="absolute right-2 px-2 py-0.5 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-white/10 text-[10px] font-mono font-bold text-slate-600 dark:text-slate-300 pointer-events-none">
+            Ctrl+K
+          </span>
+        </div>
+        
+        <!-- Live Instant Search Dropdown -->
+        <div id="global-search-dropdown" class="hidden absolute top-full left-0 right-0 mt-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/15 rounded-2xl shadow-2xl p-2 z-50 max-h-96 overflow-y-auto space-y-1">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+
+      <!-- Right Actions: Login, Theme Toggle, Location & Support -->
+      <div class="flex items-center gap-2 flex-shrink-0">
+        
+        <!-- LOGIN / ACESSO DO ELEITOR BUTTON -->
+        <button onclick="openLoginModal()" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-white/10 text-xs font-semibold text-slate-800 dark:text-slate-100 transition shadow-sm">
+          <i data-lucide="user" class="w-3.5 h-3.5 text-sky-600 dark:text-cyan-400"></i>
+          <span id="user-btn-label">Entrar</span>
+        </button>
+
+        <!-- THEME SWITCHER (LIGHT NATIVO / DARK ALTERNATIVO) -->
+        <button onclick="toggleTheme()" id="theme-toggle-btn" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 text-xs font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700 transition shadow-sm" title="Alternar entre Modo Claro (Nativo) e Modo Escuro">
+          <i id="theme-icon" data-lucide="moon" class="w-3.5 h-3.5 text-slate-600 dark:text-amber-400"></i>
+          <span id="theme-label" class="hidden sm:inline">Modo Escuro</span>
+        </button>
+
+        <!-- Geo Location Selector -->
+        <button onclick="openLocationModal()" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-cyan-500/30 hover:border-sky-500 text-xs text-slate-800 dark:text-slate-200 transition group shadow-sm">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-sky-600 dark:text-cyan-400 group-hover:animate-bounce"></i>
+          <span id="current-location-display" class="font-medium hidden sm:inline">São Paulo, SP</span>
+          <i data-lucide="chevron-down" class="w-3 h-3 text-slate-400"></i>
+        </button>
+
+        <!-- Crowdfunding CTA -->
+        <button onclick="openDonateModal()" class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-amber-50 dark:bg-amber-500/20 border border-amber-300 dark:border-amber-500/30 text-amber-800 dark:text-amber-300 hover:bg-amber-100 dark:hover:bg-amber-500/30 text-xs font-semibold transition">
+          <i data-lucide="heart" class="w-3.5 h-3.5 text-amber-600 dark:text-amber-400 fill-amber-500/30"></i> Apoiar
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ================= SUB-HEADER: ELECTION TIMELINE, APURAÇÃO & 10 FONTES OFICIAIS ================= -->
+  <section class="bg-slate-100 dark:bg-slate-900 border-b border-slate-200 dark:border-white/10 py-3 px-4">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-3 text-xs">
+      
+      <!-- Election Countdown & Vote Tallying Highlights (Destaque Apuração Eleições 2026) -->
+      <div class="flex flex-wrap items-center gap-2.5 w-full lg:w-auto justify-between lg:justify-start">
+        <div class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-sky-50 dark:bg-cyan-500/10 border border-sky-300 dark:border-cyan-500/30 text-sky-950 dark:text-cyan-200 font-semibold shadow-xs">
+          <i data-lucide="vote" class="w-4 h-4 text-sky-600 dark:text-cyan-400 animate-pulse"></i>
+          <span>
+            <strong>Apuração TSE 2026:</strong> 
+            <span class="text-sky-700 dark:text-cyan-300">1º Turno em <strong>04/10/2026 (17h)</strong></span> • 
+            <span class="text-purple-700 dark:text-purple-300">2º Turno em <strong>25/10/2026 (17h)</strong></span>
+          </span>
+        </div>
+        <div class="hidden sm:flex items-center gap-1.5 text-slate-600 dark:text-slate-400">
+          <i data-lucide="clock" class="w-3.5 h-3.5 text-amber-500"></i>
+          <span>Definição de Presidente, Governadores, Senadores e Deputados</span>
+        </div>
+      </div>
+
+      <!-- 10-Source Consensus Pill & Layman Terms Guide -->
+      <div class="flex items-center gap-2 self-end lg:self-auto flex-wrap">
+        <button onclick="openGlossaryModal()" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-amber-50 dark:bg-amber-500/20 hover:bg-amber-100 dark:hover:bg-amber-500/30 border border-amber-300 dark:border-amber-500/30 text-amber-800 dark:text-amber-300 font-mono text-[11px] shadow-xs transition cursor-pointer" title="Entenda todos os termos da política em linguagem simples">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5 text-amber-600 dark:text-amber-400"></i>
+          <span class="font-bold">Termos para Leigos</span>
+        </button>
+        <button onclick="openLegalSourcesModal()" class="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 hover:bg-emerald-100 dark:hover:bg-emerald-950/60 border border-emerald-300 dark:border-emerald-500/30 text-emerald-800 dark:text-emerald-300 font-mono text-[11px] shadow-sm transition cursor-pointer" title="Clique para ver o marco legal, as 10 fontes oficiais e a blindagem jurídica">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span class="font-bold">10 Fontes Oficiais Auditadas (TSE / TCU / CGU / STF / Congresso)</span>
+          <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600 dark:text-emerald-400"></i>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= MAIN CONTENT AREA (MOBILE BOTTOM BAR PADDED) ================= -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 pb-24 lg:pb-12">
+
+    <!-- ================= TAB 1: FEED DE CANDIDATOS ================= -->
+    <div id="tab-feed" class="space-y-6">
+      
+      <!-- Prominent Search Bar (Alto Contraste & Botão Evidente) -->
+      <div class="glass-panel p-4 sm:p-5 rounded-3xl border-2 border-sky-500/40 bg-gradient-to-r from-sky-950/40 via-slate-900/60 to-indigo-950/40 shadow-xl space-y-4">
+        <div class="flex flex-col sm:flex-row items-stretch gap-3">
+          <div class="relative flex-1">
+            <i data-lucide="search" class="w-5 h-5 text-sky-400 absolute left-4 top-1/2 -translate-y-1/2"></i>
+            <input 
+              type="text" 
+              id="candidate-search-input"
+              oninput="searchCandidates(this.value)"
+              onkeydown="if(event.key==='Enter') applyFeedFilters()"
+              placeholder="🔍 Digite o nome do político, partido, cargo ou estado..." 
+              class="w-full bg-white/90 dark:bg-slate-950/90 border-2 border-sky-500/40 dark:border-sky-500/30 rounded-2xl pl-12 pr-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition shadow-inner font-medium"
+            >
+          </div>
+          <button 
+            onclick="applyFeedFilters()" 
+            class="px-6 py-3 rounded-2xl bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-500 hover:to-cyan-500 text-white font-extrabold text-sm shadow-md shadow-sky-600/30 transition cursor-pointer flex items-center justify-center gap-2 flex-shrink-0"
+          >
+            <i data-lucide="search" class="w-4 h-4"></i>
+            <span>Buscar Candidato</span>
+          </button>
+        </div>
+
+        <!-- Integrity Filter Buttons (Factual & Blindado Anti-Processos) -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-1 custom-scrollbar pt-1 border-t border-slate-200/60 dark:border-white/10 text-xs">
+          <span class="font-extrabold text-slate-900 dark:text-slate-100 uppercase tracking-wider text-xs whitespace-nowrap flex items-center gap-1.5 bg-slate-100 dark:bg-slate-800/90 px-2.5 py-1 rounded-lg border border-slate-300/80 dark:border-white/10 shadow-xs">
+            <i data-lucide="shield-check" class="w-4 h-4 text-sky-600 dark:text-cyan-400"></i> Integridade:
+          </span>
+          <button onclick="filterIntegrity('todos')" class="integrity-filter-btn active px-3 py-1.5 rounded-xl bg-sky-600 text-white font-bold text-xs whitespace-nowrap cursor-pointer shadow-sm">
+            Todos (164)
+          </button>
+          <button onclick="filterIntegrity('clean')" class="integrity-filter-btn px-3 py-1.5 rounded-xl bg-emerald-100 dark:bg-emerald-500/10 text-emerald-800 dark:text-emerald-300 font-bold text-xs border border-emerald-300 dark:border-emerald-500/30 whitespace-nowrap cursor-pointer hover:bg-emerald-200">
+            🟢 Ficha Limpa Plena
+          </button>
+          <button onclick="filterIntegrity('investigated')" class="integrity-filter-btn px-3 py-1.5 rounded-xl bg-amber-100 dark:bg-amber-500/10 text-amber-800 dark:text-amber-300 font-bold text-xs border border-amber-300 dark:border-amber-500/30 whitespace-nowrap cursor-pointer hover:bg-amber-200">
+            🟡 Alerta Judicial / Em Investigação
+          </button>
+          <button onclick="filterIntegrity('caricatura')" class="integrity-filter-btn px-3 py-1.5 rounded-xl bg-purple-100 dark:bg-purple-500/10 text-purple-800 dark:text-purple-300 font-bold text-xs border border-purple-300 dark:border-purple-500/30 whitespace-nowrap cursor-pointer hover:bg-purple-200">
+            🎭 Candidaturas Folclóricas / Meme
+          </button>
+          <button onclick="filterIntegrity('ineligible')" class="integrity-filter-btn px-3 py-1.5 rounded-xl bg-rose-100 dark:bg-rose-500/10 text-rose-800 dark:text-rose-300 font-bold text-xs border border-rose-300 dark:border-rose-500/30 whitespace-nowrap cursor-pointer hover:bg-rose-200">
+            🔴 Inelegíveis / Condenações
+          </button>
+        </div>
+      </div>
+      
+      <!-- Filters & Position Selector -->
+      <div class="glass-panel p-4 rounded-2xl space-y-3">
+        
+        <!-- Position Filter Buttons -->
+        <div class="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0 custom-scrollbar">
+          <button onclick="filterPosition('todos')" class="pos-filter-btn active px-3 py-1.5 rounded-xl bg-sky-600 text-white font-bold text-xs shadow-md shadow-sky-600/20 whitespace-nowrap">
+            Todos os Cargos
+          </button>
+          <button onclick="filterPosition('Presidente')" class="pos-filter-btn px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white font-medium text-xs border border-slate-200 dark:border-white/5 whitespace-nowrap">
+            Presidente
+          </button>
+          <button onclick="filterPosition('Governador')" class="pos-filter-btn px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white font-medium text-xs border border-slate-200 dark:border-white/5 whitespace-nowrap">
+            Governador
+          </button>
+          <button onclick="filterPosition('Senador')" class="pos-filter-btn px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white font-medium text-xs border border-slate-200 dark:border-white/5 whitespace-nowrap">
+            Senador
+          </button>
+          <button onclick="filterPosition('Deputado Federal')" class="pos-filter-btn px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white font-medium text-xs border border-slate-200 dark:border-white/5 whitespace-nowrap">
+            Dep. Federal
+          </button>
+          <button onclick="filterPosition('Prefeito')" class="pos-filter-btn px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white font-medium text-xs border border-slate-200 dark:border-white/5 whitespace-nowrap">
+            Prefeito
+          </button>
+        </div>
+
+        <!-- Controls: UF & Sort -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 pt-2 border-t border-slate-200/60 dark:border-white/5">
+          <div class="flex items-center gap-2 flex-wrap">
+            <!-- UF Filter Dropdown -->
+            <div class="relative">
+              <select id="feed-state-select" onchange="filterState(this.value)" class="bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-white/10 rounded-xl px-3 py-1.5 text-xs font-bold focus:outline-none focus:border-sky-500 cursor-pointer">
+                <option value="todos">📍 Todos os Estados (UF)</option>
+                <option value="SP">São Paulo (SP)</option>
+                <option value="RJ">Rio de Janeiro (RJ)</option>
+                <option value="MG">Minas Gerais (MG)</option>
+                <option value="RS">Rio Grande do Sul (RS)</option>
+                <option value="PR">Paraná (PR)</option>
+                <option value="BA">Bahia (BA)</option>
+                <option value="PE">Pernambuco (PE)</option>
+                <option value="CE">Ceará (CE)</option>
+                <option value="SC">Santa Catarina (SC)</option>
+                <option value="GO">Goiás (GO)</option>
+                <option value="DF">Distrito Federal (DF)</option>
+                <option value="PA">Pará (PA)</option>
+                <option value="SE">Sergipe (SE)</option>
+                <option value="AP">Amapá (AP)</option>
+                <option value="MS">Mato Grosso do Sul (MS)</option>
+              </select>
+            </div>
+
+            <!-- Sort Filter Dropdown -->
+            <div class="relative">
+              <select id="feed-sort-select" onchange="sortFeed(this.value)" class="bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-white/10 rounded-xl px-3 py-1.5 text-xs font-bold focus:outline-none focus:border-sky-500 cursor-pointer">
+                <option value="default">🌟 Destaque: 10 do Seu Estado + 10 Mais Populares</option>
+                <option value="score_desc">⚡ Maior Score Geral</option>
+                <option value="cost_asc">💰 Menor Custo por Minuto</option>
+                <option value="attendance_desc">📅 Maior Presença em Plenário</option>
+                <option value="proposals_desc">📋 Mais Propostas</option>
+                <option value="name_asc">🔤 Ordem Alfabética (A-Z)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Quick stats info -->
+          <div id="feed-stats-count" class="text-xs text-slate-500 dark:text-slate-400 font-medium">
+            Mostrando página 1 (20 políticos por página)
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Candidate Grid -->
+      <div id="candidates-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Rendered dynamically via JavaScript -->
+      </div>
+
+      <!-- Feed Pagination Controls (20 por página) -->
+      <div id="feed-pagination" class="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 glass-panel rounded-2xl border border-slate-200 dark:border-white/10">
+        <span id="pagination-info" class="text-xs font-medium text-slate-600 dark:text-slate-300">
+          Página 1 de 9 • Total: 164 políticos
+        </span>
+        <div id="pagination-buttons" class="flex items-center gap-1.5">
+          <!-- Buttons dynamically injected -->
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ================= TAB 2: COMPARADOR LADO A LADO ================= -->
+    <div id="tab-comparator" class="hidden space-y-6">
+      
+      <div class="glass-panel p-6 rounded-2xl">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200 dark:border-white/10 pb-4">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400">Duelo Cívico</span>
+            <h2 class="text-xl font-extrabold text-slate-900 dark:text-white">Comparador de Candidatos</h2>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Analise lado a lado os atributos no Radar, gastos públicos, presença no mandato, propostas e histórico ético.</p>
+          </div>
+          
+          <div class="flex items-center gap-2 flex-wrap">
+            <button onclick="exportComparisonWithTheme('ai_audit')" class="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-purple-100 dark:bg-purple-950/50 hover:bg-purple-200 dark:hover:bg-purple-900/60 text-purple-700 dark:text-purple-300 font-bold text-xs border border-purple-300 dark:border-purple-500/30 transition shadow-xs cursor-pointer" title="Figurinha de Duelo baseada na Auditoria de IA">
+              <i data-lucide="sparkles" class="w-4 h-4 text-purple-600 dark:text-purple-400"></i> Duelo IA Sem Filtro
+            </button>
+            <button onclick="exportComparisonCard()" class="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-xs transition shadow-md shadow-purple-600/20 cursor-pointer">
+              <i data-lucide="share-2" class="w-4 h-4"></i> Figurinha do Duelo (9:16)
+            </button>
+          </div>
+        </div>
+
+        <!-- Predefined Popular Duels Bar (Duelos Mais Populares por Cargo) -->
+        <div class="my-5 p-3.5 bg-gradient-to-r from-amber-500/10 via-purple-500/10 to-sky-500/10 rounded-2xl border border-amber-400/30 space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-extrabold text-slate-900 dark:text-white uppercase tracking-wider flex items-center gap-1.5">
+              <i data-lucide="flame" class="w-4 h-4 text-amber-500"></i> Duelos Eleitorais Mais Disputados (Eleições 2026)
+            </span>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-400/20 text-amber-800 dark:text-amber-300 font-bold">1-Clique</span>
+          </div>
+          <div class="flex items-center gap-2 overflow-x-auto pb-1 text-xs scrollbar-none" id="popular-duels-bar">
+            <button id="pduel-1" onclick="selectPopularDuel('cand-tabata-amaral', 'cand-kim-kataguiri')" class="popular-duel-btn active px-3 py-1.5 rounded-xl bg-purple-600 text-white font-bold flex items-center gap-1.5 transition shadow-sm flex-shrink-0">
+              <span>🗳️</span> <span>Centro vs Liberal: Tabata (PSB) ⚔️ Kim Kataguiri (MISSÃO)</span>
+            </button>
+            <button id="pduel-2" onclick="selectPopularDuel('cand-nikolas-ferreira', 'cand-erika-hilton')" class="popular-duel-btn px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-200 dark:border-white/10 font-bold flex items-center gap-1.5 transition shadow-sm flex-shrink-0">
+              <span>🗳️</span> <span>Polarização Nacional: Nikolas Ferreira (PL) ⚔️ Erika Hilton (PSOL)</span>
+            </button>
+            <button id="pduel-3" onclick="selectPopularDuel('cand-marcel-van-hattem', 'cand-guilherme-boulos')" class="popular-duel-btn px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-200 dark:border-white/10 font-bold flex items-center gap-1.5 transition shadow-sm flex-shrink-0">
+              <span>🗳️</span> <span>Duelo Ideológico: Marcel (NOVO) ⚔️ Boulos (PSOL)</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Candidate Selectors for Comparison -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+          <div class="p-3 bg-slate-50 dark:bg-slate-800/90 rounded-xl border border-amber-500/40 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <span class="w-3.5 h-3.5 rounded-full bg-amber-500 ring-4 ring-amber-500/20"></span>
+              <div>
+                <span class="text-[10px] text-amber-700 dark:text-amber-400 font-bold uppercase">Candidato A (Laranja)</span>
+                <select id="compare-select-1" onchange="updateComparator()" class="block bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 rounded-lg px-2 py-1 text-xs text-slate-900 dark:text-white mt-1">
+                  <!-- Options populated dynamically -->
+                </select>
+              </div>
+            </div>
+            <div id="compare-mini-1" class="text-right"></div>
+          </div>
+
+          <div class="p-3 bg-slate-50 dark:bg-slate-800/90 rounded-xl border border-purple-500/40 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <span class="w-3.5 h-3.5 rounded-full bg-purple-600 ring-4 ring-purple-600/20"></span>
+              <div>
+                <span class="text-[10px] text-purple-700 dark:text-purple-400 font-bold uppercase">Candidato B (Roxo)</span>
+                <select id="compare-select-2" onchange="updateComparator()" class="block bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 rounded-lg px-2 py-1 text-xs text-slate-900 dark:text-white mt-1">
+                  <!-- Options populated dynamically -->
+                </select>
+              </div>
+            </div>
+            <div id="compare-mini-2" class="text-right"></div>
+          </div>
+        </div>
+
+        <!-- Comparator Visual: Radar Chart Overlap + Stats Comparison -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+          
+          <!-- Overlaid Radar Chart (Exact replica of user's reference image styling) -->
+          <div class="lg:col-span-6 bg-slate-50 dark:bg-slate-950 p-6 rounded-2xl border border-slate-200 dark:border-white/10 flex flex-col items-center">
+            <h3 class="text-sm font-bold text-slate-900 dark:text-white mb-1">Radar de Intensidade & Qualidade Política</h3>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mb-4 text-center">Sobreposição direta das 6 métricas de desempenho cívico (0 a 100)</p>
+            
+            <div class="radar-container">
+              <canvas id="comparatorRadarCanvas" width="400" height="400"></canvas>
+            </div>
+
+            <!-- Legend and Metric Definitions (Same format as uploaded image) -->
+            <div class="w-full mt-6 space-y-3 text-xs border-t border-slate-200 dark:border-white/10 pt-4 text-slate-700 dark:text-slate-300">
+              <div>
+                <strong class="text-sky-700 dark:text-cyan-400 font-semibold">Integridade & Ficha Limpa:</strong> 
+                <span class="text-slate-600 dark:text-slate-400">Pontuação baseada na ausência de condenações colegiadas, processos por improbidade e inquéritos em tribunais superiores.</span>
+              </div>
+              <div>
+                <strong class="text-sky-700 dark:text-cyan-400 font-semibold">Eficiência Legislativa:</strong> 
+                <span class="text-slate-600 dark:text-slate-400">Capacidade de aprovação de projetos de lei de autoria própria e relatorias concluídas.</span>
+              </div>
+              <div>
+                <strong class="text-sky-700 dark:text-cyan-400 font-semibold">Transparência de Gastos:</strong> 
+                <span class="text-slate-600 dark:text-slate-400">Economia da cota parlamentar (CEAP) comparada ao teto permitido e à média do estado.</span>
+              </div>
+              <div>
+                <strong class="text-sky-700 dark:text-cyan-400 font-semibold">Coerência Discursiva:</strong> 
+                <span class="text-slate-600 dark:text-slate-400">Taxa de veracidade aferida em agências de fact-checking nas últimas 5 declarações.</span>
+              </div>
+              <div>
+                <strong class="text-sky-700 dark:text-cyan-400 font-semibold">Viabilidade de Propostas:</strong> 
+                <span class="text-slate-600 dark:text-slate-400">Adequação orçamentária e constitucional do plano de governo registrado no TSE.</span>
+              </div>
+              <div>
+                <strong class="text-sky-700 dark:text-cyan-400 font-semibold">Presença no Mandato:</strong> 
+                <span class="text-slate-600 dark:text-slate-400">Comparecimento e registro biométrico em votações nominais e sessões deliberativas da casa legislativa no ano atual.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Side-by-Side Detailed Breakdown Table -->
+          <div class="lg:col-span-6 space-y-4">
+            <div id="comparison-breakdown" class="space-y-4">
+              <!-- Rendered dynamically via JavaScript -->
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ================= TAB 3: MATCH ELEITORAL (AFINIDADE CÍVICA) ================= -->
+    <div id="tab-match" class="hidden space-y-6">
+      <div class="glass-panel p-6 sm:p-8 rounded-3xl max-w-4xl mx-auto border-2 border-amber-500/30 shadow-2xl">
+        
+        <!-- Header do Match -->
+        <div class="text-center max-w-xl mx-auto mb-6 space-y-2">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center mx-auto shadow-md text-black">
+            <i data-lucide="sparkles" class="w-6 h-6"></i>
+          </div>
+          <h2 class="text-2xl font-black text-slate-900 dark:text-white">Match Eleitoral 2026</h2>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            Descubra quais candidatos ativos pensam como você no seu estado. 7 dilemas populares sem jargões difíceis.
+          </p>
+        </div>
+
+        <!-- Etapa 1: Personalização de Localização & Cargos -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-900/80 border border-slate-200 dark:border-white/10 space-y-4 mb-8">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+            <div>
+              <h3 class="font-bold text-sm text-slate-900 dark:text-white flex items-center gap-2">
+                <i data-lucide="map-pin" class="w-4 h-4 text-amber-500"></i>
+                1. Onde você vota?
+              </h3>
+              <p class="text-[11px] text-slate-500 dark:text-slate-400">Personalize para ver apenas os candidatos da sua região ou teste outro estado.</p>
+            </div>
+            <div class="flex items-center gap-2 w-full sm:w-auto">
+              <select id="match-state-select" onchange="onMatchStateChange(this.value)" class="bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-300 dark:border-white/15 rounded-xl px-3 py-2 text-xs font-bold focus:outline-none focus:border-amber-500 cursor-pointer w-full sm:w-48 shadow-xs">
+                <option value="SP">São Paulo (SP)</option>
+                <option value="RJ">Rio de Janeiro (RJ)</option>
+                <option value="MG">Minas Gerais (MG)</option>
+                <option value="RS">Rio Grande do Sul (RS)</option>
+                <option value="PR">Paraná (PR)</option>
+                <option value="BA">Bahia (BA)</option>
+                <option value="PE">Pernambuco (PE)</option>
+                <option value="CE">Ceará (CE)</option>
+                <option value="SC">Santa Catarina (SC)</option>
+                <option value="GO">Goiás (GO)</option>
+                <option value="DF">Distrito Federal (DF)</option>
+                <option value="PA">Pará (PA)</option>
+                <option value="BR">Nacional / Todas as Regiões</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Seleção de Cargos para Simular -->
+          <div class="pt-3 border-t border-slate-200 dark:border-white/5">
+            <h4 class="font-bold text-xs text-slate-700 dark:text-slate-300 mb-2 flex items-center gap-1.5">
+              <i data-lucide="check-square" class="w-3.5 h-3.5 text-amber-500"></i>
+              2. Quais cargos deseja comparar no resultado?
+            </h4>
+            <div class="flex flex-wrap items-center gap-2">
+              <label class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 text-xs font-bold text-slate-800 dark:text-slate-200 cursor-pointer hover:border-amber-500 transition">
+                <input type="checkbox" id="match-role-pres" checked class="text-amber-500 rounded focus:ring-0">
+                <span>Presidente</span>
+              </label>
+              <label class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 text-xs font-bold text-slate-800 dark:text-slate-200 cursor-pointer hover:border-amber-500 transition">
+                <input type="checkbox" id="match-role-gov" checked class="text-amber-500 rounded focus:ring-0">
+                <span>Governador</span>
+              </label>
+              <label class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 text-xs font-bold text-slate-800 dark:text-slate-200 cursor-pointer hover:border-amber-500 transition">
+                <input type="checkbox" id="match-role-sen" checked class="text-amber-500 rounded focus:ring-0">
+                <span>Senador</span>
+              </label>
+              <label class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 text-xs font-bold text-slate-800 dark:text-slate-200 cursor-pointer hover:border-amber-500 transition">
+                <input type="checkbox" id="match-role-dep" checked class="text-amber-500 rounded focus:ring-0">
+                <span>Deputado Federal</span>
+              </label>
+            </div>
+            <p class="text-[10.5px] text-slate-500 dark:text-slate-400 mt-2 flex items-center gap-1">
+              <i data-lucide="info" class="w-3 h-3 text-sky-500"></i>
+              Filtro ativo: apenas candidatos confirmados para 2026. Políticos inelegíveis ou fora da disputa não aparecem no cálculo.
+            </p>
+          </div>
+        </div>
+
+        <!-- Etapa 2: Perguntas Dinâmicas em Linguagem Simples -->
+        <div id="quiz-container" class="space-y-6">
+          <!-- Quiz Questions generated dynamically -->
+        </div>
+
+        <!-- Etapa 3: Pódio de Resultados Visual -->
+        <div id="quiz-results" class="hidden space-y-6 pt-8 mt-8 border-t-2 border-amber-500/20">
+          <div class="text-center space-y-1">
+            <span class="px-3 py-1 rounded-full bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 font-extrabold text-xs border border-amber-300 dark:border-amber-500/30 uppercase tracking-wider">
+              🏆 Resultado do Seu Alinhamento
+            </span>
+            <h3 class="text-xl font-black text-slate-900 dark:text-white">Seus Candidatos com Maior Afinidade Ideológica</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Classificação matemática direta baseada em suas respostas e no histórico de votos e planos oficiais.</p>
+          </div>
+
+          <div id="match-cards-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Results populated dynamically -->
+          </div>
+
+          <div class="p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/30 border border-amber-300 dark:border-amber-500/30 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div class="flex items-center gap-2.5 text-xs text-amber-900 dark:text-amber-200">
+              <i data-lucide="share-2" class="w-5 h-5 text-amber-600 dark:text-amber-400 flex-shrink-0"></i>
+              <span>Compartilhe o seu resultado de Afinidade Cívica no WhatsApp ou Stories.</span>
+            </div>
+            <button onclick="shareMatchResults()" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-black font-extrabold text-xs shadow-md transition flex items-center justify-center gap-1.5 cursor-pointer">
+              <i data-lucide="send" class="w-3.5 h-3.5"></i>
+              <span>Compartilhar Meu Match</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ================= TAB 4: EM EXERCÍCIO (MANDATOS VIGENTES / NÃO VOTADOS) ================= -->
+    <div id="tab-incumbents" class="hidden space-y-6">
+      <div class="glass-panel p-6 rounded-2xl">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-200 dark:border-white/10 pb-4">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Fiscalização Contínua</span>
+            <h2 class="text-xl font-extrabold text-slate-900 dark:text-white">Políticos em Exercício (Mandatos Não Disputados)</h2>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Acompanhe senadores no meio do mandato de 8 anos, governantes atuais e ministros para contextualizar o cenário político.</p>
+          </div>
+          <span class="px-3 py-1 rounded-lg bg-emerald-100 dark:bg-emerald-500/10 border border-emerald-300 dark:border-emerald-500/20 text-emerald-800 dark:text-emerald-300 text-xs font-mono">
+            Atualização: Base do Senado e TCU 2026
+          </span>
+        </div>
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 mt-4 pt-3 border-t border-slate-200/60 dark:border-white/5">
+          <!-- Cargo Filter Buttons -->
+          <div class="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0 custom-scrollbar text-xs">
+            <button onclick="filterIncumbentCargo('todos')" class="inc-cargo-btn active px-3 py-1.5 rounded-xl bg-emerald-600 text-white font-bold whitespace-nowrap cursor-pointer shadow-sm">
+              Todos (158)
+            </button>
+            <button onclick="filterIncumbentCargo('governador')" class="inc-cargo-btn px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold border border-slate-200 dark:border-white/5 whitespace-nowrap cursor-pointer hover:bg-slate-100">
+              Governadores
+            </button>
+            <button onclick="filterIncumbentCargo('prefeito')" class="inc-cargo-btn px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold border border-slate-200 dark:border-white/5 whitespace-nowrap cursor-pointer hover:bg-slate-100">
+              Prefeitos
+            </button>
+            <button onclick="filterIncumbentCargo('senador')" class="inc-cargo-btn px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold border border-slate-200 dark:border-white/5 whitespace-nowrap cursor-pointer hover:bg-slate-100">
+              Senadores
+            </button>
+            <button onclick="filterIncumbentCargo('deputado')" class="inc-cargo-btn px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold border border-slate-200 dark:border-white/5 whitespace-nowrap cursor-pointer hover:bg-slate-100">
+              Deputados Federais
+            </button>
+          </div>
+
+          <!-- UF & Search Controls -->
+          <div class="flex items-center gap-2">
+            <select id="incumbent-state-select" onchange="filterIncumbentState(this.value)" class="bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-white/10 rounded-xl px-3 py-1.5 text-xs font-bold focus:outline-none focus:border-emerald-500 cursor-pointer">
+              <option value="todos">📍 Todos os Estados</option>
+              <option value="SP">SP</option>
+              <option value="RJ">RJ</option>
+              <option value="MG">MG</option>
+              <option value="RS">RS</option>
+              <option value="PR">PR</option>
+              <option value="BA">BA</option>
+              <option value="PE">PE</option>
+              <option value="CE">CE</option>
+              <option value="SC">SC</option>
+              <option value="GO">GO</option>
+              <option value="DF">DF</option>
+              <option value="PA">PA</option>
+            </select>
+
+            <input 
+              type="text" 
+              id="incumbent-search-input" 
+              oninput="filterIncumbentSearch(this.value)"
+              placeholder="Buscar mandatário..." 
+              class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 rounded-xl px-3 py-1.5 text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-emerald-500 transition w-36 sm:w-44"
+            >
+          </div>
+        </div>
+
+        <div id="incumbents-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= TAB 5: RANKING GERAL DE CANDIDATOS POR CARGO ================= -->
+    <div id="tab-ranking" class="hidden space-y-6">
+      
+      <!-- Ranking Header & Multi-Criteria Filter Bar -->
+      <div class="glass-panel p-5 sm:p-6 rounded-2xl space-y-4">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200 dark:border-white/10 pb-4">
+          <div class="space-y-1">
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-500/30 flex items-center gap-1">
+                <i data-lucide="trophy" class="w-3.5 h-3.5 text-amber-500"></i> Auditoria Comparativa Oficial
+              </span>
+              <span class="text-xs font-mono text-slate-400">Eleições 2026</span>
+            </div>
+            <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">
+              Ranking Geral de Candidatos por Cargo
+            </h2>
+            <p class="text-xs text-slate-600 dark:text-slate-400 max-w-3xl leading-relaxed">
+              Classificação multidimensional ponderada combinando <strong>Pontuação</strong>, <strong>Presença em Plenário</strong>, <strong>Disciplina Fiscal</strong>, <strong>Cobertura dos 3 Gargalos Reais (%)</strong>, <strong>Transparência de Emendas</strong> e <strong>Ficha Limpa</strong>.
+            </p>
+          </div>
+
+          <!-- Primary Role-Based Ranking Tabs -->
+          <div class="flex items-center gap-1.5 bg-slate-100 dark:bg-slate-800/80 p-1.5 rounded-xl border border-slate-200 dark:border-white/5 text-xs flex-wrap">
+            <span class="text-[10px] font-extrabold uppercase text-slate-500 dark:text-slate-400 px-2">Filtrar Ranking:</span>
+            <button onclick="filterRankingByOffice('todos')" id="rank-btn-todos" class="rank-office-btn px-3 py-1.5 rounded-lg bg-sky-600 text-white font-bold transition shadow-sm cursor-pointer">
+              🌐 Ranking Geral (164)
+            </button>
+            <button onclick="filterRankingByOffice('Governador')" id="rank-btn-gov" class="rank-office-btn px-3 py-1.5 rounded-lg bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white font-medium transition cursor-pointer">
+              🏛️ Governadores (24)
+            </button>
+            <button onclick="filterRankingByOffice('Prefeito')" id="rank-btn-pref" class="rank-office-btn px-3 py-1.5 rounded-lg bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white font-medium transition cursor-pointer">
+              🏙️ Prefeitos (10)
+            </button>
+            <button onclick="filterRankingByOffice('Senador')" id="rank-btn-sen" class="rank-office-btn px-3 py-1.5 rounded-lg bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white font-medium transition cursor-pointer">
+              📜 Senadores (33)
+            </button>
+            <button onclick="filterRankingByOffice('Deputado Federal')" id="rank-btn-dep" class="rank-office-btn px-3 py-1.5 rounded-lg bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white font-medium transition cursor-pointer">
+              💼 Deputados Federais (92)
+            </button>
+            <button onclick="filterRankingByOffice('Presidente')" id="rank-btn-pres" class="rank-office-btn px-3 py-1.5 rounded-lg bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white font-medium transition cursor-pointer">
+              👑 Presidente (5)
+            </button>
+          </div>
+        </div>
+
+        <!-- Sorting Criteria Selector & Search -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+                    <div class="flex items-center gap-2 flex-wrap">
+            <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Ordenar por:</span>
+            <button onclick="sortRankingBy('pontuacao')" id="sort-btn-pontuacao" class="px-2.5 py-1 rounded-lg bg-sky-100 dark:bg-cyan-500/20 text-sky-800 dark:text-cyan-300 border border-sky-300 dark:border-cyan-500/30 font-bold flex items-center gap-1 transition">
+              🏆 Pontuação Geral
+            </button>
+            <button onclick="sortRankingBy('factcheck')" id="sort-btn-factcheck" class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 font-medium flex items-center gap-1 transition">
+              🔍 Falas Checadas & Debate
+            </button>
+            <button onclick="sortRankingBy('attendance')" id="sort-btn-attendance" class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 font-medium flex items-center gap-1 transition">
+              🏛️ Maior Presença
+            </button>
+            <button onclick="sortRankingBy('campaign')" id="sort-btn-campaign" class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 font-medium flex items-center gap-1 transition">
+              💰 Gasto Campanha TSE
+            </button>
+            <button onclick="sortRankingBy('spending')" id="sort-btn-spending" class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 font-medium flex items-center gap-1 transition">
+              💰 Menor Custo / Min
+            </button>
+            <button onclick="sortRankingBy('amendments')" id="sort-btn-amendments" class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 font-medium flex items-center gap-1 transition">
+              📦 Transparência Emendas
+            </button>
+          </div>
+
+          <span id="ranking-count-summary" class="text-[11px] font-mono text-slate-500 dark:text-slate-400">
+            Exibindo 3 candidatos auditados
+          </span>
+        </div>
+      </div>
+
+      <!-- VISUAL PODIUM: TOP 3 LEADING CANDIDATES -->
+      <div id="ranking-podium-container" class="grid grid-cols-1 md:grid-cols-3 gap-4 items-end pt-4">
+        <!-- Rendered dynamically via JavaScript -->
+      </div>
+
+      <!-- ALERTA CÍVICO: POLÍTICOS DE MENOR PRODUTIVIDADE POR CARGO -->
+      <div id="ranking-lowest-productivity-container" class="space-y-3">
+        <!-- Rendered dynamically via JavaScript -->
+      </div>
+
+      <!-- DETAILED RANKING DATA TABLE -->
+      <div class="glass-panel p-5 sm:p-6 rounded-2xl space-y-4">
+        <div class="flex items-center justify-between">
+          <h3 class="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2">
+            <i data-lucide="list-ordered" class="w-4 h-4 text-sky-600 dark:text-cyan-400"></i>
+            Tabela Detalhada de Classificação por Competência do Cargo
+          </h3>
+          <span class="text-[11px] text-slate-400">Clique nas colunas para reordenar</span>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs border-collapse">
+                        <thead>
+              <tr class="border-b border-slate-200 dark:border-white/10 text-[11px] text-slate-400 font-semibold uppercase tracking-wider">
+                <th class="py-3 px-3 text-center">Posição</th>
+                <th class="py-3 px-3">Candidato & Partido</th>
+                <th class="py-3 px-3">Cargo Disputado</th>
+                <th class="py-3 px-3 text-center cursor-pointer hover:text-sky-400" onclick="sortRankingBy('pontuacao')">Pontuação ↕</th>
+                <th class="py-3 px-3 text-center cursor-pointer hover:text-amber-400" onclick="sortRankingBy('ipr')">IPR Severo ↕</th>
+                <th class="py-3 px-3 text-center cursor-pointer hover:text-emerald-400" onclick="sortRankingBy('factcheck')">Falas Checadas ↕</th>
+                <th class="py-3 px-3 text-center cursor-pointer hover:text-purple-400" onclick="sortRankingBy('attendance')">Presença ↕</th>
+                <th class="py-3 px-3 text-center cursor-pointer hover:text-amber-400" onclick="sortRankingBy('spending')">Custo / Min ↕</th>
+                <th class="py-3 px-3 text-center cursor-pointer hover:text-sky-400" onclick="sortRankingBy('campaign')">Gasto Campanha TSE ↕</th>
+                <th class="py-3 px-3 text-center cursor-pointer hover:text-emerald-400" onclick="sortRankingBy('amendments')">Emendas Auditadas ↕</th>
+                <th class="py-3 px-3 text-center">Ficha Limpa</th>
+                <th class="py-3 px-3 text-right">Ações</th>
+              </tr>
+            </thead>
+            <tbody id="ranking-table-body" class="divide-y divide-slate-100 dark:divide-white/5">
+              <!-- Rendered dynamically via JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- ================= DOSSIÊ ELEITORAL OFICIAL ================= -->
+  <!-- Dossiê completo executado com alta performance na página dedicada dossie.html -->
+  <div id="dossie-modal" class="hidden"></div>
+
+  <!-- ================= MODAL: EXPORTADOR DE CARDS PARA INSTAGRAM / STORIES ================= -->
+  <!-- ================= MODAL: TERMOS DE USO & POLÍTICA DE PRIVACIDADE (LGPD & COMPLIANCE ELEITORAL) ================= -->
+  <div id="terms-modal" class="fixed inset-0 z-50 bg-slate-900/70 dark:bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/15 w-full max-w-3xl rounded-3xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh] my-auto text-slate-900 dark:text-slate-100">
+      <div class="p-4 sm:p-6 bg-slate-50 dark:bg-slate-950 border-b border-slate-200 dark:border-white/10 flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <div class="w-10 h-10 rounded-2xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-600 dark:text-cyan-400">
+            <i data-lucide="scale" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="text-base sm:text-lg font-black text-slate-900 dark:text-white">Termos de Uso & Política de Privacidade</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 font-mono">Conformidade com LGPD (Lei 13.709/18) e Resolução TSE nº 23.732/24</p>
+          </div>
+        </div>
+        <button onclick="closeTermsModal()" class="w-8 h-8 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-slate-900 dark:hover:text-white flex items-center justify-center transition">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <div class="p-4 sm:p-6 space-y-4 overflow-y-auto text-xs text-slate-700 dark:text-slate-300 leading-relaxed font-sans">
+        
+        <!-- Bloco 1: Isenção Partidária -->
+        <div class="p-3.5 rounded-2xl bg-sky-50 dark:bg-cyan-500/10 border border-sky-200 dark:border-cyan-500/20 space-y-1">
+          <strong class="text-sky-900 dark:text-cyan-300 font-bold text-xs uppercase flex items-center gap-1.5">
+            <i data-lucide="shield" class="w-4 h-4 text-sky-600 dark:text-cyan-400"></i> 1. Declaração de Isenção Partidária & Imparcialidade
+          </strong>
+          <p>O <strong>Figuras Políticas</strong> é uma plataforma cívica estritamente apartidária e independente. Não possuímos qualquer vínculo com legendas políticas, coligações ou órgãos de governo, e não recebemos recursos do Fundo Partidário ou do Fundo Especial de Financiamento de Campanha (FEFC). Todas as pontuações e métricas são geradas por algoritmos públicos e uniformes, aplicados identicamente a todos os candidatos a partir de repositórios governamentais abertos.</p>
+        </div>
+
+        <!-- Bloco 2: LGPD e Dados Públicos -->
+        <div class="space-y-1.5">
+          <h4 class="font-bold text-slate-900 dark:text-white uppercase text-xs">2. Tratamento de Dados de Homens e Mulheres Públicos (LAI & LGPD)</h4>
+          <p>O tratamento de dados biográficos, patrimoniais, legislativos e processuais de candidatos é amparado pelo Art. 5º, XXXIII da CF/88, pela Lei de Acesso à Informação (Lei nº 12.527/11) e pelo <strong>Art. 7º, § 4º da LGPD (Lei nº 13.709/18)</strong>, que dispensa o consentimento para dados tornados manifestamente públicos pelo titular no exercício de múnus público.</p>
+        </div>
+
+        <!-- Bloco 3: Resolução TSE IA -->
+        <div class="space-y-1.5">
+          <h4 class="font-bold text-slate-900 dark:text-white uppercase text-xs">3. Transparência no Uso de IA (Resolução TSE nº 23.732/2024)</h4>
+          <p>Em estrito cumprimento aos artigos 9º-B e 9º-C da Resolução TSE nº 23.610/2019 (com redação dada pela Resolução TSE nº 23.732/2024), informamos que esta plataforma utiliza inteligência artificial exclusivamente para síntese textual, transcrição de debates públicos oficiais, análise de conformidade orçamentária e detecção de padrões estatísticos. É terminantemente vedada a criação, disseminação ou hospedagem de conteúdos sintéticos em áudio ou vídeo destinados a descontextualizar, ridicularizar ou falsear a manifestação de agentes políticos (deepfakes).</p>
+        </div>
+
+        <!-- Bloco 4: Não-Pesquisa Eleitoral -->
+        <div class="space-y-1.5">
+          <h4 class="font-bold text-slate-900 dark:text-white uppercase text-xs">4. Votações Cívicas e Ferramenta de Match Eleitoral (Art. 33 da Lei 9.504/97)</h4>
+          <p>As ferramentas de votação de propostas e o Quiz de Afinidade Cívica (Match Eleitoral) constituem mecanismos interativos de engajamento do cidadão e <strong>NÃO representam pesquisa eleitoral, sondagem de intenção de voto ou amostragem científica com validade estatística</strong> nos termos do Art. 33 da Lei nº 9.504/97.</p>
+        </div>
+
+        <!-- Bloco 5: Direitos do Titular -->
+        <div class="space-y-1.5">
+          <h4 class="font-bold text-slate-900 dark:text-white uppercase text-xs">5. Privacidade do Visitante & Direitos do Titular (Art. 18 LGPD)</h4>
+          <p>Nenhum dado cadastral ou preferência do eleitor é vendido, cedido a partidos políticos ou utilizado para perfilamento eleitoral direcionado. O titular pode exercer seus direitos (Art. 18 da LGPD) contatando nosso Encarregado de Dados (DPO) através do canal: <code>privacidade@figuraspoliticas.org</code>.</p>
+        </div>
+
+        <!-- Bloco 6: Uso das Figurinhas -->
+        <div class="space-y-1.5">
+          <h4 class="font-bold text-slate-900 dark:text-white uppercase text-xs">6. Uso Responsável das Figurinhas & Proibição de Adulteração</h4>
+          <p>As figurinhas cívicas geradas na plataforma são livres para compartilhamento informativo. É expressamente vedada a manipulação gráfica ou a edição fraudulenta de dados com a finalidade de cometer calúnia ou desinformação eleitoral (Art. 323 do Código Eleitoral).</p>
+        </div>
+
+      </div>
+
+      <div class="p-4 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-white/10 flex justify-end">
+        <button onclick="closeTermsModal()" class="px-5 py-2 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs shadow-md transition cursor-pointer">
+          Entendido & Fechar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="export-modal" class="fixed inset-0 z-50 bg-slate-900/75 dark:bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-2 sm:p-4 overflow-y-auto">
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/20 w-full max-w-4xl max-h-[95vh] rounded-3xl overflow-hidden shadow-2xl flex flex-col my-auto text-slate-900 dark:text-white">
+      
+      <!-- Modal Header -->
+      <div class="px-5 py-3.5 bg-slate-50 dark:bg-slate-800/90 border-b border-slate-200 dark:border-white/10 flex items-center justify-between flex-shrink-0">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-purple-600 to-indigo-600 text-white flex items-center justify-center shadow-md shadow-purple-600/20">
+            <i data-lucide="sparkles" class="w-4 h-4 text-amber-300"></i>
+          </div>
+          <div>
+            <h3 class="font-extrabold text-slate-900 dark:text-white text-sm">Figurinha Cívica Oficial • Eleições 2026</h3>
+            <p class="text-[10px] text-slate-500 dark:text-slate-400">Card colecionável pronto para viralizar nos Stories e WhatsApp</p>
+          </div>
+        </div>
+        <button onclick="closeExportModal()" class="w-8 h-8 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-400 hover:text-black dark:hover:text-white flex items-center justify-center transition">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body (2-Column Grid on Desktop) -->
+      <div class="p-4 sm:p-5 overflow-y-auto flex-1">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-5 items-center">
+          
+          <!-- LEFT COLUMN: Card Preview (Centered & Compact) -->
+          <div class="md:col-span-7 flex justify-center items-center py-1">
+            <div id="export-card-target" class="w-[320px] sm:w-[330px] bg-[#070b16] p-4 rounded-[1.75rem] border-2 border-amber-400/60 shadow-[0_0_35px_rgba(245,158,11,0.25)] text-white relative flex flex-col justify-between" style="min-height: 520px;">
+              
+              <!-- Trading Card Holographic Top Banner -->
+              <div class="px-2.5 py-1 rounded-full bg-gradient-to-r from-amber-500/20 via-amber-400/30 to-amber-500/20 border border-amber-400/50 text-center flex items-center justify-between text-[8px] font-black tracking-widest text-amber-300 uppercase shadow-sm">
+                <span class="flex items-center gap-1"><i data-lucide="award" class="w-3 h-3 text-amber-400"></i> FIGURINHA CÍVICA ELEIÇÕES 2026</span>
+                <span class="bg-amber-400 text-slate-950 px-1.5 py-0.2 rounded font-black text-[8px]">OFICIAL</span>
+              </div>
+
+              <!-- Candidate Profile Info & Overall Score (Rendered Dynamically) -->
+              <div id="export-card-profile-header" class="space-y-1 my-1">
+                <!-- Injected dynamically via JS -->
+              </div>
+
+              <!-- Radar de Intensidade & Qualidade Política Canvas Section (HUD Dark Neon) -->
+              <div class="my-1 bg-[#0c1222]/95 p-2.5 rounded-2xl border border-sky-500/30 flex flex-col items-center shadow-inner relative overflow-hidden">
+                <div class="flex items-center justify-between w-full mb-0.5">
+                  <span class="text-[9.5px] font-black text-sky-300 uppercase tracking-wider flex items-center gap-1.5 font-mono">
+                    <i data-lucide="activity" class="w-3 h-3 text-sky-400"></i> RADAR DE QUALIDADE
+                  </span>
+                  <span class="text-[8.5px] px-1.5 py-0.2 rounded bg-sky-500/20 text-sky-300 font-mono font-bold">Escala 0-100</span>
+                </div>
+                
+                <div class="relative w-full flex justify-center py-0.5" style="height: 185px; width: 100%; max-width: 275px;">
+                  <canvas id="exportCardRadarCanvas" width="275" height="185"></canvas>
+                </div>
+              </div>
+
+              <!-- Power Stats & Impact Grid (Rendered Dynamically) -->
+              <div id="export-card-stats" class="grid grid-cols-2 gap-1.5 text-[10px] my-1">
+                <!-- Injected dynamically via JS -->
+              </div>
+
+              <!-- Trading Card Footer & Authenticity Stamp -->
+              <div class="mt-1 pt-1.5 border-t border-white/10 flex items-center justify-between text-[8.5px] text-slate-400">
+                <div class="space-y-0.2">
+                  <span class="font-extrabold text-white flex items-center gap-1">
+                    <i data-lucide="shield-check" class="w-3 h-3 text-emerald-400"></i> Figuras Políticas Oficial
+                  </span>
+                  <span class="text-sky-400 font-mono text-[7.5px]">figuraspoliticas.org • Auditoria Cívica</span>
+                </div>
+                <div class="w-7 h-7 rounded-lg bg-white p-0.5 flex items-center justify-center shadow-md">
+                  <i data-lucide="qr-code" class="w-6 h-6 text-black"></i>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: Options & Controls Panel -->
+          <div class="md:col-span-5 space-y-3.5 bg-slate-50 dark:bg-slate-800/90 p-4 rounded-2xl border border-slate-200 dark:border-white/10">
+            
+            <!-- Seletor de Figurinhas Organizado por Potencial de Viralização -->
+            <div class="space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="text-[11px] font-bold text-slate-700 dark:text-slate-300">Modelo da Figurinha:</span>
+                <span class="text-[10px] font-mono font-bold text-purple-600 dark:text-purple-400">🔥 Viral Cívico</span>
+              </div>
+
+              <!-- Filtros de Canal de Viralização -->
+              <div class="flex items-center gap-1 bg-slate-200/70 dark:bg-slate-700/60 p-1 rounded-xl text-[10px] font-bold">
+                <button type="button" onclick="filterStickersCategory('all')" id="stk-filter-all" class="flex-1 py-1 rounded-lg bg-white dark:bg-slate-800 text-slate-900 dark:text-white shadow-xs transition">Todas</button>
+                <button type="button" onclick="filterStickersCategory('whatsapp')" id="stk-filter-whatsapp" class="flex-1 py-1 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition">WhatsApp</button>
+                <button type="button" onclick="filterStickersCategory('instagram')" id="stk-filter-instagram" class="flex-1 py-1 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition">Instagram</button>
+                <button type="button" onclick="filterStickersCategory('twitter')" id="stk-filter-twitter" class="flex-1 py-1 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition">X / News</button>
+              </div>
+
+              <!-- Catálogo de Figurinhas com Nomes em Português -->
+              <div id="stickers-theme-grid" class="grid grid-cols-3 gap-1.5 max-h-[175px] overflow-y-auto pr-1 custom-scrollbar">
+                <!-- WhatsApp: Duelos & Fiscalização -->
+                <button onclick="setExportVisualTheme('duel_5050')" id="btn-theme-duel_5050" data-stk-cat="whatsapp" data-duel-only="true" class="sticker-opt-btn py-2 px-1 rounded-xl bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold text-[10px] border border-slate-200 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-slate-100">
+                  <span>⚔️ Duelo 50/50</span>
+                  <span class="text-[7.5px] opacity-75 font-mono">Street Battle</span>
+                </button>
+                <button onclick="setExportVisualTheme('duel_economy')" id="btn-theme-duel_economy" data-stk-cat="whatsapp" data-duel-only="true" class="sticker-opt-btn py-2 px-1 rounded-xl bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold text-[10px] border border-slate-200 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-slate-100">
+                  <span>💸 Duelo Gastos</span>
+                  <span class="text-[7.5px] opacity-75 font-mono">Economia Cota</span>
+                </button>
+                <button onclick="setExportVisualTheme('citizen_receipt')" id="btn-theme-citizen_receipt" data-stk-cat="whatsapp" class="sticker-opt-btn py-2 px-1 rounded-xl bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold text-[10px] border border-slate-200 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-slate-100">
+                  <span>🧾 Recibo Fiscal</span>
+                  <span class="text-[7.5px] opacity-75 font-mono">Cupom Eleitor</span>
+                </button>
+                <button onclick="setExportVisualTheme('mandate_clock')" id="btn-theme-mandate_clock" data-stk-cat="whatsapp" class="sticker-opt-btn py-2 px-1 rounded-xl bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold text-[10px] border border-slate-200 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-slate-100">
+                  <span>⏱️ Custo/Minuto</span>
+                  <span class="text-[7.5px] opacity-75 font-mono">Impostômetro</span>
+                </button>
+                <button onclick="setExportVisualTheme('ai_audit')" id="btn-theme-ai_audit" data-stk-cat="whatsapp" class="sticker-opt-btn py-2 px-1 rounded-xl bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold text-[10px] border border-purple-300 dark:border-purple-500/30 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-purple-50 dark:hover:bg-purple-950/20">
+                  <span class="text-purple-700 dark:text-purple-300">🤖 Dossiê IA</span>
+                  <span class="text-[7.5px] font-bold text-amber-600 dark:text-amber-400 font-mono">Sem Filtro</span>
+                </button>
+                <button onclick="setExportVisualTheme('judicial_clearance')" id="btn-theme-judicial_clearance" data-stk-cat="whatsapp" class="sticker-opt-btn py-2 px-1 rounded-xl bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold text-[10px] border border-slate-200 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-slate-100">
+                  <span>⚖️ Ficha Limpa</span>
+                  <span class="text-[7.5px] opacity-75 font-mono">Boletim TSE</span>
+                </button>
+
+                <!-- Instagram & TikTok: Visual & Gamificação -->
+                <button onclick="setExportVisualTheme('swiss')" id="btn-theme-swiss" data-stk-cat="instagram" class="sticker-opt-btn py-2 px-1 rounded-xl bg-purple-600 text-white font-bold text-[10px] shadow-sm flex flex-col items-center justify-center gap-0.5 transition cursor-pointer">
+                  <span>📊 Radar Oficial</span>
+                  <span class="text-[7.5px] opacity-90 font-mono">6 Dimensões</span>
+                </button>
+                <button onclick="setExportVisualTheme('fifa')" id="btn-theme-fifa" data-stk-cat="instagram" class="sticker-opt-btn py-2 px-1 rounded-xl bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold text-[10px] border border-slate-200 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-slate-100">
+                  <span>🎮 Gamificação</span>
+                  <span class="text-[7.5px] opacity-75 font-mono">Card FIFA OVR</span>
+                </button>
+                <button onclick="setExportVisualTheme('civic_affinity')" id="btn-theme-civic_affinity" data-stk-cat="instagram" class="sticker-opt-btn py-2 px-1 rounded-xl bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold text-[10px] border border-slate-200 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-slate-100">
+                  <span>🎯 Match Eleitor</span>
+                  <span class="text-[7.5px] opacity-75 font-mono">Afinidade %</span>
+                </button>
+                <button onclick="setExportVisualTheme('bento')" id="btn-theme-bento" data-stk-cat="instagram" class="sticker-opt-btn py-2 px-1 rounded-xl bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold text-[10px] border border-slate-200 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-slate-100">
+                  <span>👤 Perfil Modular</span>
+                  <span class="text-[7.5px] opacity-75 font-mono">Bento Grid</span>
+                </button>
+                <button onclick="setExportVisualTheme('story_viral_9_16')" id="btn-theme-story_viral_9_16" data-stk-cat="instagram" class="sticker-opt-btn py-2 px-1 rounded-xl bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold text-[10px] border border-slate-200 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-slate-100">
+                  <span>⚡ Story Choque</span>
+                  <span class="text-[7.5px] opacity-75 font-mono">9:16 Vertical</span>
+                </button>
+
+                <!-- X / Twitter & Notícias: Fatos & Dinheiro -->
+                <button onclick="setExportVisualTheme('twitter')" id="btn-theme-twitter" data-stk-cat="twitter" class="sticker-opt-btn py-2 px-1 rounded-xl bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold text-[10px] border border-slate-200 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-slate-100">
+                  <span>🔍 Fato-Check</span>
+                  <span class="text-[7.5px] opacity-75 font-mono">X / Threads</span>
+                </button>
+                <button onclick="setExportVisualTheme('campaign_finance')" id="btn-theme-campaign_finance" data-stk-cat="twitter" class="sticker-opt-btn py-2 px-1 rounded-xl bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold text-[10px] border border-slate-200 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-slate-100">
+                  <span>💰 Campanha TSE</span>
+                  <span class="text-[7.5px] opacity-75 font-mono">Gasto & Voto</span>
+                </button>
+                <button onclick="setExportVisualTheme('quote_truth')" id="btn-theme-quote_truth" data-stk-cat="twitter" class="sticker-opt-btn py-2 px-1 rounded-xl bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold text-[10px] border border-slate-200 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-slate-100">
+                  <span>🎙️ Falas Debate</span>
+                  <span class="text-[7.5px] opacity-75 font-mono">Veredito Real</span>
+                </button>
+                <button onclick="setExportVisualTheme('law_productivity')" id="btn-theme-law_productivity" data-stk-cat="twitter" class="sticker-opt-btn py-2 px-1 rounded-xl bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold text-[10px] border border-slate-200 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-slate-100">
+                  <span>📜 Leis Reais</span>
+                  <span class="text-[7.5px] opacity-75 font-mono">Produtividade</span>
+                </button>
+                <button onclick="setExportVisualTheme('executive')" id="btn-theme-executive" data-stk-cat="twitter" class="sticker-opt-btn py-2 px-1 rounded-xl bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold text-[10px] border border-slate-200 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-slate-100">
+                  <span>🏛️ Dossiê Executivo</span>
+                  <span class="text-[7.5px] opacity-75 font-mono">Editorial Creme</span>
+                </button>
+                <button onclick="setExportVisualTheme('apple')" id="btn-theme-apple" data-stk-cat="twitter" class="sticker-opt-btn py-2 px-1 rounded-xl bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold text-[10px] border border-slate-200 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-slate-100">
+                  <span>🍏 Minimalista</span>
+                  <span class="text-[7.5px] opacity-75 font-mono">Apple Clean</span>
+                </button>
+                <button onclick="setExportVisualTheme('alerta_decisao_2026')" id="btn-theme-alerta_decisao_2026" data-stk-cat="twitter" class="sticker-opt-btn py-2 px-1 rounded-xl bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold text-[10px] border border-slate-200 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-slate-100">
+                  <span>🚨 Alerta TSE</span>
+                  <span class="text-[7.5px] opacity-75 font-mono">04/10/2026</span>
+                </button>
+              </div>
+            </div>
+
+            <div>
+              <span class="text-[11px] font-bold text-slate-500 dark:text-slate-400 block mb-1.5">Escolha o Formato do Card:</span>
+              <div class="grid grid-cols-2 gap-2">
+                <button onclick="setExportFormat('stories')" id="btn-format-stories" class="py-2 px-3 rounded-xl bg-purple-600 text-white font-bold text-xs shadow-sm flex items-center justify-center gap-1.5 transition">
+                  <i data-lucide="smartphone" class="w-3.5 h-3.5"></i> Stories (9:16)
+                </button>
+                <button onclick="setExportFormat('feed')" id="btn-format-feed" class="py-2 px-3 rounded-xl bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold text-xs border border-slate-200 dark:border-white/10 flex items-center justify-center gap-1.5 transition">
+                  <i data-lucide="square" class="w-3.5 h-3.5"></i> Feed (1:1)
+                </button>
+              </div>
+            </div>
+
+            <!-- Instagram Direct Share Button -->
+            <button onclick="shareToInstagram()" id="btn-share-insta" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 hover:opacity-90 text-white font-black text-xs flex items-center justify-center gap-2 shadow-md shadow-pink-600/30 transition cursor-pointer">
+              <i data-lucide="camera" class="w-4 h-4 text-white"></i> 📸 Postar no Instagram (Stories / Feed)
+            </button>
+
+            <!-- Download Buttons -->
+            <div class="space-y-2 pt-1">
+              <button onclick="downloadExportedImage('fhd')" id="btn-dl-fhd" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-sky-600 to-indigo-600 hover:from-sky-500 hover:to-indigo-500 text-white font-extrabold text-xs flex items-center justify-center gap-2 shadow-md shadow-indigo-600/20 transition cursor-pointer">
+                <i data-lucide="download" class="w-4 h-4"></i> Baixar Full HD (1080p)
+              </button>
+
+              <button onclick="downloadExportedImage('4k')" id="btn-dl-4k" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-emerald-600 hover:from-amber-400 hover:to-emerald-500 text-slate-950 font-black text-xs flex items-center justify-center gap-2 shadow-md shadow-emerald-600/20 transition cursor-pointer">
+                <i data-lucide="sparkles" class="w-4 h-4 text-slate-950"></i> Baixar Ultra HD 4K
+              </button>
+            </div>
+
+            <!-- Copy Actions -->
+            <div class="grid grid-cols-2 gap-2 pt-1">
+              <button onclick="copyCardImageToClipboard()" id="btn-copy-img" class="py-2 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-300 dark:border-white/10 text-slate-800 dark:text-slate-100 font-bold text-xs flex items-center justify-center gap-1.5 transition shadow-xs cursor-pointer">
+                <i data-lucide="image" class="w-3.5 h-3.5 text-sky-600 dark:text-cyan-400"></i> Copiar Imagem
+              </button>
+              <button onclick="copyToClipboardShare()" class="py-2 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-300 dark:border-white/10 text-slate-800 dark:text-slate-100 font-bold text-xs flex items-center justify-center gap-1.5 transition shadow-xs cursor-pointer">
+                <i data-lucide="link" class="w-3.5 h-3.5 text-purple-600 dark:text-purple-400"></i> Copiar Link
+              </button>
+            </div>
+
+            <p class="text-[10px] text-slate-500 dark:text-slate-400 text-center leading-tight pt-1">
+              💡 <b>Dica:</b> Compartilhe o card nas redes sociais ou WhatsApp para combater desinformação com dados oficiais.
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= MODAL: LOGIN / CADASTRO DO ELEITOR ================= -->
+  <div id="login-modal" class="fixed inset-0 z-50 bg-slate-900/60 dark:bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/15 w-full max-w-md rounded-3xl p-6 shadow-2xl space-y-4 text-slate-900 dark:text-white">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <div class="w-9 h-9 rounded-xl bg-sky-600 text-white flex items-center justify-center shadow-md shadow-sky-600/20">
+            <i data-lucide="user-check" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="text-base font-bold">Acesso do Eleitor</h3>
+            <p class="text-[10px] text-slate-500 dark:text-slate-400">Salve seus candidatos favoritos e histórico de votos</p>
+          </div>
+        </div>
+        <button onclick="closeLoginModal()" class="text-slate-400 hover:text-black dark:hover:text-white">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="space-y-2.5 pt-2">
+        <button onclick="loginWith('Gov.br')" class="w-full py-2.5 rounded-xl bg-blue-700 hover:bg-blue-600 text-white text-xs font-bold flex items-center justify-center gap-2 transition shadow-md shadow-blue-700/20">
+          <i data-lucide="shield-check" class="w-4 h-4 text-emerald-300"></i> Entrar com Gov.br (Identidade Cívica)
+        </button>
+
+        <button onclick="loginWith('Google')" class="w-full py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800/90 hover:bg-slate-200 dark:hover:bg-slate-800 border border-slate-200 dark:border-white/10 text-xs font-bold flex items-center justify-center gap-2 transition">
+          <svg class="w-4 h-4" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+          Entrar com Google
+        </button>
+
+        <div class="relative my-3 text-center">
+          <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-slate-200 dark:border-white/10"></div></div>
+          <span class="relative bg-white dark:bg-slate-900 px-2 text-[10px] text-slate-400 font-mono">OU COM SEU E-MAIL</span>
+        </div>
+
+        <form onsubmit="handleEmailLogin(event)" class="space-y-2">
+          <label for="login-email-input" class="text-xs font-semibold text-slate-700 dark:text-slate-300 block mb-0.5">E-mail para Acesso Cívico</label>
+          <input type="email" id="login-email-input" required placeholder="seuemail@exemplo.com" class="w-full bg-slate-50 dark:bg-slate-800/90 border border-slate-200 dark:border-white/10 rounded-xl px-3 py-2 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-sky-500">
+          <button type="submit" class="w-full py-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs transition shadow-md shadow-sky-600/20 cursor-pointer">
+            Acessar Plataforma
+          </button>
+        </form>
+
+        <p class="text-[10px] text-slate-500 text-center pt-2">
+          Seus dados são 100% confidenciais e protegidos pela LGPD (Art. 7º).
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL: SELETOR DE LOCALIZAÇÃO (UF & CIDADE) ================= -->
+  <div id="location-modal" class="fixed inset-0 z-50 bg-slate-900/60 dark:bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/15 w-full max-w-md rounded-2xl p-6 shadow-2xl space-y-4 text-slate-900 dark:text-white">
+      <div class="flex items-center justify-between">
+        <h3 class="text-base font-bold flex items-center gap-2">
+          <i data-lucide="map-pin" class="w-4 h-4 text-sky-600 dark:text-cyan-400"></i> Selecione seu Estado e Município
+        </h3>
+        <button onclick="closeLocationModal()" class="text-slate-400 hover:text-black dark:hover:text-white">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="space-y-3">
+        <div>
+          <label class="text-xs text-slate-600 dark:text-slate-300 block mb-1 font-medium">Estado (UF):</label>
+          <select id="state-select" onchange="onStateChange(this.value)" class="w-full bg-slate-50 dark:bg-slate-800/90 border border-slate-200 dark:border-white/10 rounded-xl px-3 py-2 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-sky-500">
+            <option value="SP">São Paulo (SP)</option>
+            <option value="RJ">Rio de Janeiro (RJ)</option>
+            <option value="MG">Minas Gerais (MG)</option>
+            <option value="DF">Distrito Federal (DF)</option>
+            <option value="RS">Rio Grande do Sul (RS)</option>
+            <option value="BA">Bahia (BA)</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="text-xs text-slate-600 dark:text-slate-300 block mb-1 font-medium">Município:</label>
+          <select id="city-select" class="w-full bg-slate-50 dark:bg-slate-800/90 border border-slate-200 dark:border-white/10 rounded-xl px-3 py-2 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-sky-500">
+            <option value="São Paulo">São Paulo (Capital)</option>
+            <option value="Campinas">Campinas</option>
+            <option value="Santos">Santos</option>
+            <option value="São Bernardo do Campo">São Bernardo do Campo</option>
+          </select>
+        </div>
+
+        <button onclick="applyLocation()" class="w-full py-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs transition mt-2 shadow-md shadow-sky-600/20">
+          Confirmar e Atualizar Feed
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL: APOIO CÍVICO / DOAÇÃO / CLUBE PRO ================= -->
+  <div id="donate-modal" class="fixed inset-0 z-50 bg-slate-900/60 dark:bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-slate-900 border border-amber-300 dark:border-amber-500/30 w-full max-w-md rounded-2xl p-6 shadow-2xl space-y-4 text-slate-900 dark:text-white">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <i data-lucide="heart" class="w-5 h-5 text-amber-600 dark:text-amber-400 fill-amber-500/20"></i>
+          <h3 class="text-base font-bold">Apoie a Transparência Independente</h3>
+        </div>
+        <button onclick="closeDonateModal()" class="text-slate-400 hover:text-black dark:hover:text-white">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+        Não recebemos verba partidária nem fundo eleitoral. Nossa plataforma de dados cívicos se mantém ativa através de micro-doações de cidadãos que acreditam no voto consciente.
+      </p>
+
+      <div class="bg-slate-50 dark:bg-slate-800/90 p-3.5 rounded-xl border border-slate-200 dark:border-white/10 space-y-2">
+        <span class="text-[11px] text-amber-800 dark:text-amber-400 font-bold block">Chave Pix Oficial de Apoio Cívico:</span>
+        <div class="flex items-center justify-between bg-white dark:bg-slate-900 p-2 rounded-lg border border-slate-200 dark:border-white/5">
+          <span class="font-mono text-xs text-slate-800 dark:text-slate-200 truncate">apoio@figuraspoliticas.org</span>
+          <button onclick="navigator.clipboard.writeText('apoio@figuraspoliticas.org'); alert('Chave Pix copiada com sucesso!')" class="px-2 py-1 bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 rounded text-[10px] font-bold">
+            Copiar
+          </button>
+        </div>
+      </div>
+
+      <div class="pt-2">
+        <span class="text-[11px] text-slate-500 dark:text-slate-400 block mb-2 font-semibold">Ou conheça o Plano Dossiê Pro (Para Jornalistas & Pesquisadores):</span>
+        <a href="#" onclick="alert('Em breve: Relatórios e Dossiês completos em PDF com 20+ páginas.'); return false;" class="block text-center py-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-white/10 text-xs font-semibold text-slate-800 dark:text-white transition">
+          Ver Recursos do Dossiê Pro
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL: INFORMAÇÕES ELEITORAIS ================= -->
+  <div id="electoral-modal" class="fixed inset-0 z-50 bg-slate-900/60 dark:bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/15 w-full max-w-lg rounded-2xl p-6 shadow-2xl space-y-4 text-slate-900 dark:text-white">
+      <div class="flex items-center justify-between">
+        <h3 class="text-base font-bold flex items-center gap-2">
+          <i data-lucide="landmark" class="w-5 h-5 text-sky-600 dark:text-cyan-400"></i> Guia Rápido: Candidatura, Eleição e Posse
+        </h3>
+        <button onclick="closeElectoralInfoModal()" class="text-slate-400 hover:text-black dark:hover:text-white">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      
+      <div class="space-y-3 text-xs text-slate-600 dark:text-slate-300 leading-relaxed max-h-[60vh] overflow-y-auto pr-1">
+        <div class="p-3 bg-slate-50 dark:bg-slate-800/90 rounded-xl border border-slate-200 dark:border-white/5">
+          <strong class="text-slate-900 dark:text-white block mb-1">1. Registro de Candidatura:</strong>
+          <span>Partidos realizam convenções entre 20 de julho e 5 de agosto. O registro oficial é homologado no TSE até 15 de agosto com declaração pública de bens e plano de metas.</span>
+        </div>
+        <div class="p-3 bg-slate-50 dark:bg-slate-800/90 rounded-xl border border-slate-200 dark:border-white/5">
+          <strong class="text-slate-900 dark:text-white block mb-1">2. Sistema Eleitoral (Majoritário vs Proporcional):</strong>
+          <span>Presidente, Governadores, Senadores e Prefeitos (em cidades >200 mil eleitores) são eleitos por maioria de votos. Deputados e Vereadores utilizam o quociente eleitoral partidário.</span>
+        </div>
+        <div class="p-3 bg-slate-50 dark:bg-slate-800/90 rounded-xl border border-slate-200 dark:border-white/5">
+          <strong class="text-slate-900 dark:text-white block mb-1">3. Diplomação e Posse:</strong>
+          <span>Os eleitos são diplomados pela Justiça Eleitoral até meados de dezembro. A posse dos Chefes do Executivo ocorre em 1º e 5 de janeiro, e dos Parlamentares em 1º de fevereiro.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL: DETALHAMENTO COMPLETO DA PROPOSTA (PLANO DE GOVERNO & LEIS) ================= -->
+  <div id="proposal-detail-modal" class="fixed inset-0 z-50 bg-slate-900/70 dark:bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-2 sm:p-4 overflow-y-auto">
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/15 w-full max-w-3xl rounded-3xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh] my-auto text-slate-900 dark:text-slate-100">
+      
+      <!-- Header -->
+      <div class="p-4 sm:p-6 bg-slate-50 dark:bg-slate-800/90 border-b border-slate-200 dark:border-white/10 flex items-start justify-between gap-3">
+        <div>
+          <div class="flex flex-wrap items-center gap-2 mb-1.5">
+            <span id="prop-detail-category" class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-sky-100 dark:bg-cyan-500/20 text-sky-800 dark:text-cyan-300 border border-sky-300 dark:border-cyan-500/30"></span>
+            <span id="prop-detail-status-badge" class="px-2.5 py-0.5 rounded-full text-xs font-bold"></span>
+            <span id="prop-detail-score" class="px-2.5 py-0.5 rounded-md text-xs font-mono font-bold bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200"></span>
+          </div>
+          <h3 id="prop-detail-title" class="text-base sm:text-xl font-black text-slate-900 dark:text-white leading-snug"></h3>
+          <p id="prop-detail-author" class="text-xs text-slate-500 dark:text-slate-400 mt-1"></p>
+        </div>
+        <button onclick="closeProposalDetailModal()" class="w-8 h-8 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-500 hover:text-black dark:hover:text-white flex items-center justify-center flex-shrink-0 transition">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Content Scrollable Body -->
+      <div class="flex-1 overflow-y-auto p-4 sm:p-6 space-y-5 text-xs text-slate-700 dark:text-slate-300">
+        
+        <!-- 1. O que muda na sua vida? (Plain Language Box) -->
+        <div class="p-4 rounded-2xl bg-gradient-to-r from-sky-50 to-blue-50 dark:from-sky-950/40 dark:to-blue-950/20 border border-sky-200 dark:border-sky-500/30 space-y-1.5">
+          <span class="text-[10px] uppercase font-extrabold text-sky-800 dark:text-cyan-300 flex items-center gap-1.5">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-sky-600 dark:text-cyan-400"></i> Em Palavras Simples: O Que Isso Muda Na Sua Vida?
+          </span>
+          <p id="prop-detail-summary" class="text-xs sm:text-sm font-semibold text-slate-900 dark:text-white leading-relaxed"></p>
+        </div>
+
+        <!-- 2. O Problema e a Solução -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/90 border border-slate-200 dark:border-white/5 space-y-2">
+            <span class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+              <i data-lucide="alert-circle" class="w-4 h-4 text-amber-500"></i> Qual problema o povo enfrenta hoje?
+            </span>
+            <p id="prop-detail-problem" class="text-slate-600 dark:text-slate-400 leading-relaxed"></p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/90 border border-slate-200 dark:border-white/5 space-y-2">
+            <span class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i> Como a proposta vai funcionar na prática?
+            </span>
+            <p id="prop-detail-solution" class="text-slate-600 dark:text-slate-400 leading-relaxed"></p>
+          </div>
+        </div>
+
+        <!-- 3. Dinheiro, Custo e Quem Paga -->
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/90 border border-slate-200 dark:border-white/5 space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+              <i data-lucide="coins" class="w-4 h-4 text-amber-500"></i> Quanto custa e de onde sai o dinheiro público?
+            </span>
+            <span class="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 font-bold bg-emerald-100 dark:bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-300 dark:border-emerald-500/20">Viabilidade Financeira Analisada</span>
+          </div>
+          <p id="prop-detail-budget" class="text-slate-600 dark:text-slate-400 leading-relaxed"></p>
+        </div>
+
+        <!-- 4. Prazos e Quem é Beneficiado -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/90 border border-slate-200 dark:border-white/5 space-y-1.5">
+            <span class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+              <i data-lucide="clock" class="w-4 h-4 text-sky-500"></i> Prazos e Cronograma de Entrega
+            </span>
+            <p id="prop-detail-timeline" class="text-slate-600 dark:text-slate-400 leading-relaxed"></p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/90 border border-slate-200 dark:border-white/5 space-y-1.5">
+            <span class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+              <i data-lucide="users" class="w-4 h-4 text-purple-500"></i> Quem ganha diretamente com isso?
+            </span>
+            <p id="prop-detail-beneficiaries" class="text-slate-600 dark:text-slate-400 leading-relaxed"></p>
+          </div>
+        </div>
+
+        <!-- 5. Tese de Prós e Contras da IA -->
+        <div class="space-y-2 pt-1">
+          <h4 class="font-bold text-slate-900 dark:text-white text-xs uppercase tracking-wider">Tese de Auditoria Técnica e Riscos (IA Imparcial)</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="p-3 bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/20 rounded-xl space-y-1">
+              <span class="font-bold text-emerald-800 dark:text-emerald-300 flex items-center gap-1">
+                <i data-lucide="thumbs-up" class="w-3.5 h-3.5"></i> Pontos Positivos (Prós):
+              </span>
+              <p id="prop-detail-pros" class="text-slate-700 dark:text-slate-300 text-[11px] leading-relaxed"></p>
+            </div>
+
+            <div class="p-3 bg-red-50 dark:bg-red-500/10 border border-red-200 dark:border-red-500/20 rounded-xl space-y-1">
+              <span class="font-bold text-red-800 dark:text-crimson flex items-center gap-1">
+                <i data-lucide="thumbs-down" class="w-3.5 h-3.5"></i> Riscos e Críticas (Contras):
+              </span>
+              <p id="prop-detail-cons" class="text-slate-700 dark:text-slate-300 text-[11px] leading-relaxed"></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer: Live Voting & Close -->
+      <div class="p-4 bg-slate-50 dark:bg-slate-800/90 border-t border-slate-200 dark:border-white/10 flex flex-wrap items-center justify-between gap-3">
+        <div class="flex items-center gap-2">
+          <span class="text-xs text-slate-500">O que você acha desta proposta?</span>
+          <button id="prop-detail-vote-support-btn" class="px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex items-center gap-1.5 transition">
+            <i data-lucide="thumbs-up" class="w-3.5 h-3.5"></i> Eu Apoio
+          </button>
+          <button id="prop-detail-vote-reject-btn" class="px-3 py-1.5 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-xs flex items-center gap-1.5 transition">
+            <i data-lucide="thumbs-down" class="w-3.5 h-3.5"></i> Não Concordo
+          </button>
+        </div>
+
+        <button onclick="closeProposalDetailModal()" class="px-4 py-1.5 rounded-xl bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 text-slate-800 dark:text-white font-semibold text-xs transition">
+          Fechar Detalhes
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= MODAL: AUDITORIA DAS FONTES & BLINDAGEM JURÍDICA ================= -->
+  <div id="legal-sources-modal" class="fixed inset-0 z-50 bg-slate-900/70 dark:bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-2 sm:p-4 overflow-y-auto">
+    <div class="bg-white dark:bg-slate-900 border border-emerald-500/30 w-full max-w-3xl rounded-3xl overflow-hidden shadow-2xl flex flex-col max-h-[92vh] my-auto text-slate-900 dark:text-slate-100">
+      
+      <!-- Header -->
+      <div class="p-4 sm:p-6 bg-slate-50 dark:bg-slate-800/90 border-b border-slate-200 dark:border-white/10 flex items-start justify-between gap-3">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-2xl bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 flex items-center justify-center border border-emerald-300 dark:border-emerald-500/30 shadow-md">
+            <i data-lucide="shield-check" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-500/30">
+              Auditoria de Dados Públicos & Blindagem Jurídica
+            </span>
+            <h3 class="text-base sm:text-lg font-black text-slate-900 dark:text-white mt-0.5">Origem Oficial dos Dados & Amparo Legal</h3>
+          </div>
+        </div>
+        <button onclick="closeLegalSourcesModal()" class="w-8 h-8 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-500 hover:text-black dark:hover:text-white flex items-center justify-center flex-shrink-0 transition">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Content Body -->
+      <div class="flex-1 overflow-y-auto p-4 sm:p-6 space-y-6 text-xs text-slate-700 dark:text-slate-300">
+        
+        <!-- Intro Notice -->
+        <div class="p-4 rounded-2xl bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-950/40 dark:to-teal-950/20 border border-emerald-200 dark:border-emerald-500/30 space-y-2">
+          <strong class="text-emerald-900 dark:text-emerald-300 font-bold block text-sm">
+            Compromisso de Imparcialidade, Neutralidade e Transparência Pública
+          </strong>
+          <p class="leading-relaxed text-[11px] text-slate-700 dark:text-slate-300">
+            Esta plataforma é apartidária e <strong>não emite juízo de valor ou opinião pessoal</strong>. Todos os indicadores, notas, valores de despesas, registros biométricos de presença, processos e propostas são agregados e indexados de <strong>bancos de dados e repositórios governamentais oficiais da República Federativa do Brasil</strong>, assegurados pelo princípio constitucional da publicidade dos atos do Estado.
+          </p>
+        </div>
+
+        <!-- 1. Marco Legal e Legislação Brasileira Aplicável -->
+        <div class="space-y-3">
+          <h4 class="font-bold text-slate-900 dark:text-white text-xs uppercase tracking-wider flex items-center gap-1.5">
+            <i data-lucide="scale" class="w-4 h-4 text-emerald-600 dark:text-emerald-400"></i> Marco Legal e Fundamentação Jurídica Expressa
+          </h4>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[11px]">
+            <div class="p-3 bg-slate-50 dark:bg-slate-800/90 rounded-xl border border-slate-200 dark:border-white/5 space-y-1">
+              <span class="font-bold text-slate-900 dark:text-white block">📜 Constituição Federal de 1988</span>
+              <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                <strong>Art. 5º, incisos XXXIII e LX:</strong> Direito fundamental de todo cidadão a receber dos órgãos públicos informações de seu interesse particular ou coletivo, sob pena de responsabilidade.
+              </p>
+            </div>
+
+            <div class="p-3 bg-slate-50 dark:bg-slate-800/90 rounded-xl border border-slate-200 dark:border-white/5 space-y-1">
+              <span class="font-bold text-slate-900 dark:text-white block">📂 Lei de Acesso à Informação (Lei 12.527/11)</span>
+              <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                Determina o princípio da transparência ativa e a ampla divulgação de receitas, despesas públicas, remuneração e atividade funcional dos agentes públicos eleitos.
+              </p>
+            </div>
+
+            <div class="p-3 bg-slate-50 dark:bg-slate-800/90 rounded-xl border border-slate-200 dark:border-white/5 space-y-1">
+              <span class="font-bold text-slate-900 dark:text-white block">🔒 LGPD - Dados Manifestamente Públicos (Lei 13.709/18)</span>
+              <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                <strong>Art. 7º, § 4º:</strong> É dispensada a exigência do consentimento para o tratamento de dados cujo acesso é tornado manifestamente público pelo titular no exercício de funções públicas.
+              </p>
+            </div>
+
+            <div class="p-3 bg-slate-50 dark:bg-slate-800/90 rounded-xl border border-slate-200 dark:border-white/5 space-y-1">
+              <span class="font-bold text-slate-900 dark:text-white block">⚖️ Lei da Ficha Limpa (LC 135/2010)</span>
+              <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                Parâmetro legal que estabelece a inelegibilidade de candidatos condenados por órgãos colegiados em crimes contra a administração pública, lavagem de dinheiro ou improbidade.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Repositórios e Fontes de Dados Conectadas -->
+        <div class="space-y-3">
+          <h4 class="font-bold text-slate-900 dark:text-white text-xs uppercase tracking-wider flex items-center gap-1.5">
+            <i data-lucide="database" class="w-4 h-4 text-sky-600 dark:text-cyan-400"></i> Repositórios Conectados & Protocolos de Atualização
+          </h4>
+
+          <div class="space-y-2 text-[11px]">
+            <div class="p-3 bg-slate-50 dark:bg-slate-800/90 rounded-xl border border-slate-200 dark:border-white/5 flex items-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-sky-100 dark:bg-sky-500/20 text-sky-700 dark:text-cyan-400 flex items-center justify-center flex-shrink-0 font-bold">TSE</div>
+              <div>
+                <strong class="text-slate-900 dark:text-white">Tribunal Superior Eleitoral (TSE / DivulgaCandContas)</strong>
+                <p class="text-slate-600 dark:text-slate-400 mt-0.5 leading-relaxed">
+                  Registro oficial de candidatura, plano de governo protocolado, certidão de quitação eleitoral, declaração de bens e data oficial de filiação partidária.
+                </p>
+              </div>
+            </div>
+
+            <div class="p-3 bg-slate-50 dark:bg-slate-800/90 rounded-xl border border-slate-200 dark:border-white/5 flex items-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-purple-100 dark:bg-purple-500/20 text-purple-700 dark:text-purple-400 flex items-center justify-center flex-shrink-0 font-bold">API</div>
+              <div>
+                <strong class="text-slate-900 dark:text-white">Câmara dos Deputados & Senado Federal (Dados Abertos)</strong>
+                <p class="text-slate-600 dark:text-slate-400 mt-0.5 leading-relaxed">
+                  Registro biométrico de presença em plenário (ano atual), faltas justificadas e não justificadas, despesas com a Cota Parlamentar (CEAP) e projetos de lei apresentados.
+                </p>
+              </div>
+            </div>
+
+            <div class="p-3 bg-slate-50 dark:bg-slate-800/90 rounded-xl border border-slate-200 dark:border-white/5 flex items-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-amber-100 dark:bg-amber-500/20 text-amber-700 dark:text-amber-400 flex items-center justify-center flex-shrink-0 font-bold">CNJ</div>
+              <div>
+                <strong class="text-slate-900 dark:text-white">Poder Judiciário (STF, STJ, Tribunais de Justiça e TRFs)</strong>
+                <p class="text-slate-600 dark:text-slate-400 mt-0.5 leading-relaxed">
+                  Varredura de certidões públicas nos tribunais superiores e estaduais com indicação exata do tribunal, número do processo e status atual de tramitação.
+                </p>
+              </div>
+            </div>
+
+            <div class="p-3 bg-slate-50 dark:bg-slate-800/90 rounded-xl border border-slate-200 dark:border-white/5 flex items-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 flex items-center justify-center flex-shrink-0 font-bold">IFCN</div>
+              <div>
+                <strong class="text-slate-900 dark:text-white">Checagem de Fatos (Agências Signatárias da IFCN)</strong>
+                <p class="text-slate-600 dark:text-slate-400 mt-0.5 leading-relaxed">
+                  Compilação de verificações jornalísticas com link direto para a checagem original de agências certificadas pelo International Fact-Checking Network.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Canal de Contraditório -->
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/90 border border-slate-200 dark:border-white/5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div>
+            <strong class="text-slate-900 dark:text-white text-xs block">Direito de Resposta & Contraditório Ágil (Art. 5º, V da CF)</strong>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400">Assessorias jurídicas e candidatos podem submeter certidões reformadas ou erratas para atualização em até 24h úteis.</p>
+          </div>
+          <button onclick="closeLegalSourcesModal(); openContraditoryModal();" class="px-3.5 py-2 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs whitespace-nowrap transition">
+            Abrir Canal de Contraditório
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Footer -->
+      <div class="p-4 bg-slate-50 dark:bg-slate-800/90 border-t border-slate-200 dark:border-white/10 flex items-center justify-between">
+        <span class="text-[10px] text-slate-500">Hash de Integridade dos Dados: #TSE-BR-2026-SHA256</span>
+        <button onclick="closeLegalSourcesModal()" class="px-4 py-1.5 rounded-xl bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 text-slate-800 dark:text-white font-semibold text-xs transition">
+          Fechar Auditoria
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= MODAL: CONTRADITÓRIO & DIREITO DE RESPOSTA ================= -->
+  <div id="contraditory-modal" class="fixed inset-0 z-50 bg-slate-900/60 dark:bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-slate-900 border border-sky-300 dark:border-cyan-500/30 w-full max-w-md rounded-2xl p-6 shadow-2xl space-y-4 text-slate-900 dark:text-white">
+      <div class="flex items-center justify-between">
+        <h3 class="text-base font-bold flex items-center gap-2">
+          <i data-lucide="shield-alert" class="w-5 h-5 text-sky-600 dark:text-cyan-400"></i> Canal Oficial do Candidato & Assessoria
+        </h3>
+        <button onclick="closeContraditoryModal()" class="text-slate-400 hover:text-black dark:hover:text-white">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+        Garantimos o direito de resposta e a imediata retificação caso novos documentos públicos, certidões ou sentenças reformadas sejam apresentadas por vias oficiais.
+      </p>
+
+      <form onsubmit="submitContraditory(event)" class="space-y-3">
+        <div>
+          <label class="text-[11px] text-slate-600 dark:text-slate-300 block mb-1">E-mail Institucional ou de Assessoria:</label>
+          <input type="email" required placeholder="assessoria@candidato.com.br" class="w-full bg-slate-50 dark:bg-slate-800/90 border border-slate-200 dark:border-white/10 rounded-xl px-3 py-2 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-sky-500">
+        </div>
+        <div>
+          <label class="text-[11px] text-slate-600 dark:text-slate-300 block mb-1">Link do Processo / Certidão / Proposta Oficial:</label>
+          <input type="url" required placeholder="https://tse.jus.br/... ou https://stf.jus.br/..." class="w-full bg-slate-50 dark:bg-slate-800/90 border border-slate-200 dark:border-white/10 rounded-xl px-3 py-2 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-sky-500">
+        </div>
+        <div>
+          <label class="text-[11px] text-slate-600 dark:text-slate-300 block mb-1">Esclarecimento Formal:</label>
+          <textarea rows="3" required placeholder="Descreva a atualização de status processual ou errata de proposta..." class="w-full bg-slate-50 dark:bg-slate-800/90 border border-slate-200 dark:border-white/10 rounded-xl px-3 py-2 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-sky-500"></textarea>
+        </div>
+        <button type="submit" class="w-full py-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs transition shadow-md shadow-sky-600/20">
+          Enviar para Auditoria Técnica
+        </button>
+      </form>
+    </div>
+  </div>
+
+  
+  <!-- ================= BANNER & MODAL DE COMPLIANCE E BLINDAGEM JURÍDICA ================= -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 mb-4">
+    <div class="p-4 rounded-2xl bg-gradient-to-r from-sky-50 via-slate-50 to-indigo-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900 border border-sky-200 dark:border-white/10 shadow-xs flex flex-col md:flex-row items-center justify-between gap-3 text-xs">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-xl bg-sky-100 dark:bg-cyan-500/20 text-sky-700 dark:text-cyan-300 flex items-center justify-center flex-shrink-0">
+          <i data-lucide="shield-check" class="w-4 h-4"></i>
+        </div>
+        <div>
+          <span class="font-extrabold text-slate-900 dark:text-white block">Auditoria Cívica 100% Apartidária e Auditável</span>
+          <p class="text-slate-600 dark:text-slate-400 text-[11px]">Conformidade estrita com a Lei Eleitoral nº 9.504/97, Resoluções TSE 23.610/23.732 e LGPD (Art. 7º, § 4º).</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-2 flex-shrink-0">
+        <button onclick="openComplianceModal()" class="px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 text-sky-700 dark:text-cyan-300 font-bold border border-slate-200 dark:border-white/10 transition shadow-xs cursor-pointer flex items-center gap-1.5">
+          <i data-lucide="scale" class="w-3.5 h-3.5"></i> Ver Diretrizes de Compliance & Fontes
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL DE COMPLIANCE E BLINDAGEM JURÍDICA -->
+  <div id="compliance-modal" class="hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/15 rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 space-y-5 shadow-2xl">
+      <div class="flex items-center justify-between border-b border-slate-200 dark:border-white/10 pb-3">
+        <div class="flex items-center gap-2">
+          <i data-lucide="shield-check" class="w-5 h-5 text-sky-600 dark:text-cyan-400"></i>
+          <h3 class="text-base font-black text-slate-900 dark:text-white">Governança Jurídica, Isenção & LGPD</h3>
+        </div>
+        <button onclick="closeComplianceModal()" class="p-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-400 hover:text-white transition">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="space-y-4 text-xs text-slate-700 dark:text-slate-300 leading-relaxed">
+        <div class="p-3.5 rounded-xl bg-sky-50 dark:bg-cyan-950/20 border border-sky-200 dark:border-cyan-500/20 space-y-1">
+          <strong class="text-sky-900 dark:text-cyan-300 block font-extrabold uppercase text-[11px]">1. Cláusula de Isenção Partidária & Imparcialidade Algorítmica</strong>
+          <p>O Figuras Políticas é um observatório de integridade cívica de iniciativa da sociedade civil, mantido sem recursos de partidos políticos, coligações ou comitês de campanha. A metodologia de pontuação do Score Cívico (0 a 100) e o algoritmo do Match Eleitoral utilizam os mesmos critérios objetivos, matemáticos e neutros para todos os 45 candidatos, sem qualquer discriminação ideológica.</p>
+        </div>
+
+        <div class="space-y-1">
+          <strong class="text-slate-900 dark:text-white font-extrabold block">2. Tratamento de Dados Públicos (LGPD - Lei nº 13.709/2018)</strong>
+          <p>Nos termos do Art. 7º, § 3º e § 4º da LGPD, o tratamento de dados cujo acesso é tornado público pelo Estado ou pelos próprios titulares no exercício de mandato representativo prescinde de consentimento, tendo em vista o manifesto interesse público, o princípio da publicidade (Art. 37 da CF/88) e a Lei de Acesso à Informação (Lei nº 12.527/2011).</p>
+        </div>
+
+        <div class="space-y-1">
+          <strong class="text-slate-900 dark:text-white font-extrabold block">3. Legislação Eleitoral & Resoluções TSE 2024</strong>
+          <p>A plataforma não realiza propaganda eleitoral paga, não emite pedido explícito de voto (Art. 36-A da Lei 9.504/97), não utiliza deepfakes ou conteúdos descontextualizados e sinaliza formalmente toda síntese editorial assistida por inteligência artificial (Resoluções TSE nº 23.610/19 e 23.732/24).</p>
+        </div>
+
+        <div class="space-y-1">
+          <strong class="text-slate-900 dark:text-white font-extrabold block">4. Fontes Primárias Auditáveis</strong>
+          <p>100% dos dados consolidados derivam de bancos públicos oficiais: TSE DivulgaCandContas, Portal da Transparência da CGU, API da Câmara dos Deputados, API do Senado Federal, CNJ e redes certificadas da IFCN.</p>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-white/5 space-y-2">
+          <strong class="text-slate-900 dark:text-white font-extrabold block">Canal Oficial de Contraditório e Retificação Formal</strong>
+          <p class="text-[11px]">Candidatos, assessorias jurídicas ou cidadãos que identifiquem certidões judiciais atualizadas, quitações eleitorais ou arquivamento de inquéritos podem solicitar revisão documental formal:</p>
+          <div class="flex items-center gap-2 font-mono text-[11px] text-sky-700 dark:text-cyan-400">
+            <i data-lucide="mail" class="w-3.5 h-3.5"></i> compliance@figuraspoliticas.org (SLA de resposta: 48h úteis)
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-end pt-2">
+        <button onclick="closeComplianceModal()" class="px-4 py-2 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs transition cursor-pointer">
+          Compreendi e Concordo
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openComplianceModal() {
+      const m = document.getElementById('compliance-modal');
+      if (m) {
+        m.classList.remove('hidden');
+        lucide.createIcons();
+      }
+    }
+    function closeComplianceModal() {
+      const m = document.getElementById('compliance-modal');
+      if (m) m.classList.add('hidden');
+    }
+    window.openComplianceModal = openComplianceModal;
+    window.closeComplianceModal = closeComplianceModal;
+  </script>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-slate-100 dark:bg-slate-950 border-t border-slate-200 dark:border-white/10 py-8 px-4 mt-12 text-xs text-slate-600 dark:text-slate-400 transition-colors">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <div class="space-y-2">
+        <div class="flex items-center gap-2">
+          <div class="w-6 h-6 rounded-lg bg-gradient-to-tr from-sky-600 to-indigo-600 dark:from-cyan-500 dark:to-purple-600 flex items-center justify-center text-white">
+            <i data-lucide="scan-eye" class="w-3.5 h-3.5"></i>
+          </div>
+          <span class="font-bold text-slate-900 dark:text-white" id="footer-brand-name">Figuras Políticas</span>
+        </div>
+        <p class="text-[11px] text-slate-500 leading-relaxed">
+          Plataforma apartidária de inteligência eleitoral e dados públicos abertos. Todos os dados são agregados de repositórios governamentais oficiais.
+        </p>
+      </div>
+
+      <div class="space-y-1">
+        <span class="font-semibold text-slate-900 dark:text-white block mb-1">Fontes Oficiais Conectadas</span>
+        <p class="text-[11px]">• TSE (DivulgaCandContas)</p>
+        <p class="text-[11px]">• Portal da Transparência / CEAP</p>
+        <p class="text-[11px]">• API Câmara e Senado Federal</p>
+        <p class="text-[11px]">• CNJ e Tribunais Superiores</p>
+      </div>
+
+      <div class="space-y-1">
+        <span class="font-semibold text-slate-900 dark:text-white block mb-1">Transparência & Jurídico</span>
+        <p class="text-[11px]">• Marco Civil da Internet (Lei 12.965/14)</p>
+        <p class="text-[11px]">• Lei de Acesso à Informação (12.527/11)</p>
+        <p class="text-[11px]">• LGPD - Dados Públicos (Art. 7º, § 4º)</p>
+        <p class="text-[11px]">• Metodologia Estatística Registrada</p>
+      </div>
+
+      <div class="space-y-2">
+        <span class="font-semibold text-slate-900 dark:text-white block">Compartilhe a Verdade</span>
+        <div class="flex items-center gap-2">
+          <a href="#" class="w-8 h-8 rounded-lg bg-white dark:bg-slate-800/90 hover:bg-slate-50 dark:hover:bg-slate-800 border border-slate-200 dark:border-white/10 flex items-center justify-center text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white transition">
+            <i data-lucide="camera" class="w-4 h-4"></i>
+          </a>
+          <a href="#" class="w-8 h-8 rounded-lg bg-white dark:bg-slate-800/90 hover:bg-slate-50 dark:hover:bg-slate-800 border border-slate-200 dark:border-white/10 flex items-center justify-center text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white transition">
+            <i data-lucide="share-2" class="w-4 h-4"></i>
+          </a>
+          <a href="#" class="w-8 h-8 rounded-lg bg-white dark:bg-slate-800/90 hover:bg-slate-50 dark:hover:bg-slate-800 border border-slate-200 dark:border-white/10 flex items-center justify-center text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white transition">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================= BARRA DE NAVEGAÇÃO INFERIOR MOBILE (TOUCH TARGETS >= 44PX) ================= -->
+  <nav class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 dark:bg-slate-900/95 border-t border-slate-200 dark:border-white/10 backdrop-blur-md flex items-center justify-around py-1 px-2 shadow-2xl safe-area-bottom">
+    <button onclick="navigateTab('feed')" id="mobile-nav-feed" class="flex flex-col items-center justify-center flex-1 py-1 text-[10px] font-bold text-sky-600 dark:text-cyan-400 min-h-[44px] transition cursor-pointer">
+      <i data-lucide="layout-grid" class="w-5 h-5 mb-0.5"></i>
+      <span>Feed</span>
+    </button>
+    <button onclick="navigateTab('ranking')" id="mobile-nav-ranking" class="flex flex-col items-center justify-center flex-1 py-1 text-[10px] font-medium text-slate-600 dark:text-slate-400 hover:text-sky-600 dark:hover:text-cyan-400 min-h-[44px] transition cursor-pointer">
+      <i data-lucide="trophy" class="w-5 h-5 mb-0.5 text-amber-500"></i>
+      <span>Ranking</span>
+    </button>
+    <button onclick="navigateTab('comparator')" id="mobile-nav-comparator" class="flex flex-col items-center justify-center flex-1 py-1 text-[10px] font-medium text-slate-600 dark:text-slate-400 hover:text-sky-600 dark:hover:text-cyan-400 min-h-[44px] transition relative cursor-pointer">
+      <i data-lucide="scale" class="w-5 h-5 mb-0.5 text-purple-500"></i>
+      <span>Comparar</span>
+      <span id="mobile-compare-badge" class="hidden absolute top-0.5 right-3 w-4 h-4 bg-purple-600 text-white rounded-full text-[9px] font-black flex items-center justify-center">2</span>
+    </button>
+    <button onclick="navigateTab('match')" id="mobile-nav-match" class="flex flex-col items-center justify-center flex-1 py-1 text-[10px] font-medium text-slate-600 dark:text-slate-400 hover:text-sky-600 dark:hover:text-cyan-400 min-h-[44px] transition cursor-pointer">
+      <i data-lucide="sparkles" class="w-5 h-5 mb-0.5 text-amber-500"></i>
+      <span>Match</span>
+    </button>
+    <button onclick="navigateTab('incumbents')" id="mobile-nav-incumbents" class="flex flex-col items-center justify-center flex-1 py-1 text-[10px] font-medium text-slate-600 dark:text-slate-400 hover:text-sky-600 dark:hover:text-cyan-400 min-h-[44px] transition cursor-pointer">
+      <i data-lucide="landmark" class="w-5 h-5 mb-0.5 text-emerald-600 dark:text-emerald-400"></i>
+      <span>Mandatos</span>
+    </button>
+  </nav>
+
+  <!-- ================= MODAL: GLOSSÁRIO CÍVICO & GUIA DE TERMOS PARA LEIGOS ================= -->
+  <div id="glossary-modal" class="fixed inset-0 z-50 bg-slate-900/70 dark:bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-3 sm:p-4 overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="glossary-modal-title">
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/15 w-full max-w-3xl rounded-3xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh] my-auto text-slate-900 dark:text-slate-100">
+      
+      <!-- Modal Header -->
+      <div class="p-4 sm:p-6 bg-amber-50 dark:bg-slate-950 border-b border-amber-200 dark:border-white/10 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-2xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-600 dark:text-amber-400 flex-shrink-0">
+            <i data-lucide="lightbulb" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 id="glossary-modal-title" class="font-extrabold text-base sm:text-lg text-slate-900 dark:text-white flex items-center gap-2">
+              Glossário Cívico Descomplicado
+              <span class="text-[10px] uppercase font-mono px-2 py-0.5 rounded-full bg-amber-200 dark:bg-amber-500/20 text-amber-900 dark:text-amber-300 font-bold">Guia para Leigos</span>
+            </h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400">
+              Entenda o que significam os termos da política em linguagem simples e direta.
+            </p>
+          </div>
+        </div>
+        <button onclick="closeGlossaryModal()" class="w-8 h-8 rounded-xl bg-white dark:bg-slate-800 text-slate-500 hover:text-slate-950 dark:hover:text-white flex items-center justify-center transition border border-slate-200 dark:border-white/10 flex-shrink-0 cursor-pointer" aria-label="Fechar modal">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body (Grid of Cards) -->
+      <div class="p-4 sm:p-6 space-y-4 overflow-y-auto text-xs">
+        
+        <!-- CEAP -->
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-white/10 space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-extrabold text-sky-700 dark:text-cyan-400 flex items-center gap-1.5 font-mono">
+              <i data-lucide="wallet" class="w-4 h-4"></i> CEAP (Cota Parlamentar)
+            </span>
+            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-sky-100 dark:bg-cyan-500/20 text-sky-800 dark:text-cyan-300 font-mono">
+              Verba do Mandato
+            </span>
+          </div>
+          <p class="text-slate-700 dark:text-slate-300 leading-relaxed font-sans">
+            <strong>O que significa para você:</strong> É o dinheiro público mensal — <em>além do salário pessoal</em> — que deputados e senadores têm direito de gastar para manter seus escritórios, passagens aéreas, combustível, hospedagem e contratação de consultorias.
+          </p>
+          <div class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/5 text-[11px] text-slate-600 dark:text-slate-400">
+            🔍 <strong>Como o Raio-X avalia:</strong> Mostramos se o político gastou 100% do teto permitido ou se economizou e devolveu dinheiro aos cofres públicos.
+          </div>
+        </div>
+
+        <!-- RREO -->
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-white/10 space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-extrabold text-emerald-700 dark:text-emerald-400 flex items-center gap-1.5 font-mono">
+              <i data-lucide="file-spreadsheet" class="w-4 h-4"></i> RREO (Execução Orçamentária)
+            </span>
+            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 font-mono">
+              Balanço do Governo
+            </span>
+          </div>
+          <p class="text-slate-700 dark:text-slate-300 leading-relaxed font-sans">
+            <strong>O que significa para você:</strong> É o balanço contábil obrigatório divulgado a cada 2 meses onde prefeitos e governadores comprovam formalmente quanto arrecadaram em impostos e onde gastaram.
+          </p>
+          <div class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/5 text-[11px] text-slate-600 dark:text-slate-400">
+            🔍 <strong>Regra Constitucional:</strong> A Constituição exige que no mínimo 12% da receita do estado seja aplicada em saúde e 25% em educação pública.
+          </div>
+        </div>
+
+        <!-- LRF -->
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-white/10 space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-extrabold text-amber-700 dark:text-amber-400 flex items-center gap-1.5 font-mono">
+              <i data-lucide="scale" class="w-4 h-4"></i> LRF (Lei de Responsabilidade Fiscal)
+            </span>
+            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 font-mono">
+              Trava de Dívida
+            </span>
+          </div>
+          <p class="text-slate-700 dark:text-slate-300 leading-relaxed font-sans">
+            <strong>O que significa para você:</strong> É a lei federal que proíbe governantes de gastarem mais dinheiro do que arrecadam. Ela estabelece um teto para contratação de funcionários e gastos com folha de pagamento, punindo com inelegibilidade prefeitos e governadores que deixarem dívidas sem dinheiro em caixa.
+          </p>
+        </div>
+
+        <!-- Emendas Impositivas vs Emendas Pix -->
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-white/10 space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-extrabold text-purple-700 dark:text-purple-400 flex items-center gap-1.5 font-mono">
+              <i data-lucide="send" class="w-4 h-4"></i> Emendas Impositivas & Emendas Pix
+            </span>
+            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-purple-100 dark:bg-purple-500/20 text-purple-800 dark:text-purple-300 font-mono">
+              Verba para Cidades
+            </span>
+          </div>
+          <p class="text-slate-700 dark:text-slate-300 leading-relaxed font-sans">
+            <strong>O que significa para você:</strong> Fatias do orçamento federal que cada deputado ou senador tem o direito garantido de enviar para hospitais, escolas e obras nas cidades do seu estado.
+          </p>
+          <div class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/5 text-[11px] text-slate-600 dark:text-slate-400">
+            🔍 <strong>Edital Aberto vs Emenda Pix:</strong> O Raio-X premia parlamentares que selecionam projetos via edital público transparente e penaliza transferências sem projeto prévio (Emendas Pix).
+          </div>
+        </div>
+
+        <!-- Ficha Limpa & Condenação Colegiada -->
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-white/10 space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-extrabold text-rose-700 dark:text-rose-400 flex items-center gap-1.5 font-mono">
+              <i data-lucide="gavel" class="w-4 h-4"></i> Ficha Limpa (Lei Complementar 135/2010)
+            </span>
+            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 font-mono">
+              Critério de Inelegibilidade
+            </span>
+          </div>
+          <p class="text-slate-700 dark:text-slate-300 leading-relaxed font-sans">
+            <strong>O que significa para você:</strong> A lei barra a candidatura de qualquer político condenado por um tribunal com mais de um juiz (órgão colegiado) por crimes contra a administração pública, lavagem de dinheiro ou corrupção.
+          </p>
+          <div class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/5 text-[11px] text-slate-600 dark:text-slate-400">
+            ⚖️ <strong>Processos vs Condenações:</strong> Ter uma denúncia ou investigação em andamento não torna o candidato inelegível de imediato pela Constituição Federal (Art. 5º, LVII). O Raio-X lista com transparência o status exato perante o STF, STJ e TCU.
+          </div>
+        </div>
+
+        <!-- FEFC -->
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-white/10 space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-extrabold text-teal-700 dark:text-teal-400 flex items-center gap-1.5 font-mono">
+              <i data-lucide="coins" class="w-4 h-4"></i> FEFC (Fundão Eleitoral)
+            </span>
+            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-teal-100 dark:bg-teal-500/20 text-teal-800 dark:text-teal-300 font-mono">
+              Financiamento Público
+            </span>
+          </div>
+          <p class="text-slate-700 dark:text-slate-300 leading-relaxed font-sans">
+            <strong>O que significa para você:</strong> É o Fundo Especial de Financiamento de Campanha, criado pelo Congresso em 2017 para financiar campanhas eleitorais com dinheiro dos impostos após a proibição de doações de empresas privadas.
+          </p>
+        </div>
+
+        <!-- Custo por Minuto -->
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-white/10 space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-extrabold text-indigo-700 dark:text-indigo-400 flex items-center gap-1.5 font-mono">
+              <i data-lucide="clock" class="w-4 h-4"></i> Custo por Minuto do Político
+            </span>
+            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-indigo-100 dark:bg-indigo-500/20 text-indigo-800 dark:text-indigo-300 font-mono">
+              Impacto no Bolso
+            </span>
+          </div>
+          <p class="text-slate-700 dark:text-slate-300 leading-relaxed font-sans">
+            <strong>O que significa para você:</strong> O cálculo cívico que soma o salário bruto e toda a verba de gabinete utilizada pelo mandato e divide pelos 525.600 minutos do ano corrido (24h por dia). Mostra em centavos ou reais quanto cada minuto daquele mandato custa à sociedade.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-4 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-white/10 flex items-center justify-between text-xs">
+        <span class="text-slate-500 dark:text-slate-400 font-mono text-[11px]">
+          Fonte: Legislação Federal, Regimentos da Câmara/Senado e TSE
+        </span>
+        <button onclick="closeGlossaryModal()" class="px-4 py-2 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs shadow-md transition cursor-pointer">
+          Entendi, voltar ao site
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= JAVASCRIPT: THEME TOGGLE, DATA & RADAR LOGIC ================= -->
+  <!-- ================= SCRIPTS MODULARES DO RAIO-X POLÍTICO ================= -->
+  <script src="../data/candidates.js"></script>
+  <script src="../js/state.js"></script>
+  <script src="../js/stickers.js"></script>
+  <script src="../js/ranking.js"></script>
+  <script src="../js/dossie.js"></script>
+  <script src="../js/comparator.js"></script>
+  <script src="../js/quiz.js"></script>
+  <script src="../js/app.js"></script>
+
+</body>
+</html>

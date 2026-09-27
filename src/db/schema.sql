@@ -213,5 +213,30 @@ CREATE TABLE IF NOT EXISTS candidate_statements (
   FOREIGN KEY (candidate_id) REFERENCES candidates(id) ON DELETE CASCADE
 );
 
+CREATE TABLE IF NOT EXISTS candidate_political_capacity (
+  candidate_id TEXT PRIMARY KEY,
+  score REAL DEFAULT 85,
+  level TEXT NOT NULL,
+  academic_degree TEXT,
+  academic_details TEXT,
+  political_schools TEXT,
+  political_exam_score TEXT,
+  public_track_record_years INTEGER DEFAULT 8,
+  public_track_record_text TEXT,
+  technical_skills_json TEXT,
+  anti_fool_evaluation TEXT,
+  FOREIGN KEY (candidate_id) REFERENCES candidates(id) ON DELETE CASCADE
+);
 
-
+CREATE TABLE IF NOT EXISTS civic_contradictory_requests (
+  id TEXT PRIMARY KEY,
+  protocol TEXT UNIQUE NOT NULL,
+  requester_name TEXT NOT NULL,
+  requester_email TEXT NOT NULL,
+  candidate_name TEXT NOT NULL,
+  request_type TEXT NOT NULL,
+  proof_link TEXT,
+  justification TEXT NOT NULL,
+  status TEXT DEFAULT 'PENDENTE_ANALISE_48H',
+  created_at TEXT NOT NULL
+);

@@ -4,6 +4,7 @@
 
 const { AppDatabase } = require('../src/db/database');
 const { EXECUTIVE_AND_SENATE_POLITICIANS } = require('../src/ingestion/executive_and_senate_data');
+const { candidatesData } = require('../data/candidates');
 
 function ingestMultiOffice() {
   console.log('='.repeat(70));
@@ -129,9 +130,18 @@ function ingestMultiOffice() {
       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     `);
 
+    const candMap = new Map();
+    if (Array.isArray(candidatesData)) {
+      candidatesData.forEach(c => candMap.set(c.id, c));
+    }
+
     let count = 0;
     for (const p of EXECUTIVE_AND_SENATE_POLITICIANS) {
       count++;
+      const candMatch = candMap.get(p.id) || {};
+      const overallScore = candMatch.overallScore ?? p.overallScore ?? 75;
+      const r = candMatch.radar || p.radar || {};
+
       // 1. Cand
       upsertCand.run(
         p.id,
@@ -143,22 +153,22 @@ function ingestMultiOffice() {
         p.state,
         p.city || '',
         p.age || 50,
-        p.avatar,
+        p.avatar || candMatch.avatar,
         p.education || 'Ensino Superior Completo',
         p.careerHistory || '',
         p.aiSummary || '',
-        p.overallScore || 85
+        overallScore
       );
 
       // 2. Metrics
       upsertMetrics.run(
         p.id,
-        p.radar?.integridade || 90,
-        p.radar?.eficiencia || 90,
-        p.radar?.transparencia || 90,
-        p.radar?.coerencia || 88,
-        p.radar?.viabilidade || 88,
-        p.radar?.assiduidade || p.radar?.presenca || 92
+        r.integridade ?? 78,
+        r.eficiencia ?? 68,
+        r.transparencia ?? 77,
+        r.coerencia ?? 70,
+        r.viabilidade ?? 70,
+        r.assiduidade ?? r.presenca ?? 85
       );
 
       // 3. Attendance

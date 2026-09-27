@@ -2,11 +2,20 @@
 // Consome a API de Dados Abertos v2 (100% Gratuita, Sem Chave de API, Oficial)
 // https://dadosabertos.camara.leg.br/api/v2/
 
+const { CircuitBreaker } = require('../utils/circuit_breaker');
+
 const BASE_URL = 'https://dadosabertos.camara.leg.br/api/v2';
 
+const defaultCamaraBreaker = new CircuitBreaker({
+  maxFailures: 3,
+  windowMs: 60 * 1000,
+  resetTimeoutMs: 30 * 60 * 1000
+});
+
 class CamaraExtractor {
-  constructor(fetchImpl = null) {
+  constructor(fetchImpl = null, circuitBreaker = null) {
     this.fetch = fetchImpl || globalThis.fetch;
+    this.circuitBreaker = circuitBreaker || defaultCamaraBreaker;
   }
 
   /**
@@ -24,16 +33,20 @@ class CamaraExtractor {
     if (siglaUf) params.append('siglaUf', siglaUf);
 
     const url = `${BASE_URL}/deputados?${params.toString()}`;
-    const response = await this.fetch(url, {
-      headers: { 'Accept': 'application/json' }
-    });
+    return this.circuitBreaker.execute(`camara:search:${nome}:${siglaUf}`, async () => {
+      const response = await this.fetch(url, {
+        headers: { 'Accept': 'application/json' }
+      });
 
-    if (!response.ok) {
-      throw new Error(`Erro ao consultar Câmara: HTTP ${response.status}`);
-    }
+      if (!response.ok) {
+        const err = new Error(`Erro ao consultar Câmara: HTTP ${response.status}`);
+        err.status = response.status;
+        throw err;
+      }
 
-    const json = await response.json();
-    return json.dados || [];
+      const json = await response.json();
+      return json.dados || [];
+    }, []);
   }
 
   /**
@@ -43,28 +56,32 @@ class CamaraExtractor {
    */
   async getDeputadoDetalhes(deputadoId) {
     const url = `${BASE_URL}/deputados/${deputadoId}`;
-    const response = await this.fetch(url, {
-      headers: { 'Accept': 'application/json' }
-    });
+    return this.circuitBreaker.execute(`camara:detalhes:${deputadoId}`, async () => {
+      const response = await this.fetch(url, {
+        headers: { 'Accept': 'application/json' }
+      });
 
-    if (!response.ok) {
-      throw new Error(`Erro ao obter dados do deputado ${deputadoId}: HTTP ${response.status}`);
-    }
+      if (!response.ok) {
+        const err = new Error(`Erro ao obter dados do deputado ${deputadoId}: HTTP ${response.status}`);
+        err.status = response.status;
+        throw err;
+      }
 
-    const json = await response.json();
-    const d = json.dados;
-    return {
-      camaraId: d.id,
-      nomeCivil: d.nomeCivil,
-      nomeEleitoral: d.ultimoStatus.nomeEleitoral,
-      partido: d.ultimoStatus.siglaPartido,
-      uf: d.ultimoStatus.siglaUf,
-      urlFoto: d.ultimoStatus.urlFoto,
-      email: d.ultimoStatus.email,
-      situacao: d.ultimoStatus.situacao,
-      condicaoEleitoral: d.ultimoStatus.condicaoEleitoral,
-      gabinete: d.ultimoStatus.gabinete
-    };
+      const json = await response.json();
+      const d = json.dados;
+      return {
+        camaraId: d.id,
+        nomeCivil: d.nomeCivil,
+        nomeEleitoral: d.ultimoStatus.nomeEleitoral,
+        partido: d.ultimoStatus.siglaPartido,
+        uf: d.ultimoStatus.siglaUf,
+        urlFoto: d.ultimoStatus.urlFoto,
+        email: d.ultimoStatus.email,
+        situacao: d.ultimoStatus.situacao,
+        condicaoEleitoral: d.ultimoStatus.condicaoEleitoral,
+        gabinete: d.ultimoStatus.gabinete
+      };
+    }, null);
   }
 
   /**
@@ -76,16 +93,20 @@ class CamaraExtractor {
    */
   async getDespesasCeap(deputadoId, ano = 2026, itens = 100) {
     const url = `${BASE_URL}/deputados/${deputadoId}/despesas?ano=${ano}&itens=${itens}&ordem=DESC&ordenarPor=mes`;
-    const response = await this.fetch(url, {
-      headers: { 'Accept': 'application/json' }
-    });
+    const rawDespesas = await this.circuitBreaker.execute(`camara:despesas:${deputadoId}:${ano}`, async () => {
+      const response = await this.fetch(url, {
+        headers: { 'Accept': 'application/json' }
+      });
 
-    if (!response.ok) {
-      throw new Error(`Erro ao obter despesas CEAP do deputado ${deputadoId}: HTTP ${response.status}`);
-    }
+      if (!response.ok) {
+        const err = new Error(`Erro ao obter despesas CEAP do deputado ${deputadoId}: HTTP ${response.status}`);
+        err.status = response.status;
+        throw err;
+      }
 
-    const json = await response.json();
-    const rawDespesas = json.dados || [];
+      const json = await response.json();
+      return json.dados || [];
+    }, []);
 
     return this.processarDespesasCeap(rawDespesas, ano);
   }
@@ -155,22 +176,26 @@ class CamaraExtractor {
    */
   async getProposicoes(deputadoId, ano = 2026) {
     const url = `${BASE_URL}/proposicoes?idDeputadoAutor=${deputadoId}&ano=${ano}&ordem=DESC&ordenarPor=id`;
-    const response = await this.fetch(url, {
-      headers: { 'Accept': 'application/json' }
-    });
+    return this.circuitBreaker.execute(`camara:proposicoes:${deputadoId}:${ano}`, async () => {
+      const response = await this.fetch(url, {
+        headers: { 'Accept': 'application/json' }
+      });
 
-    if (!response.ok) {
-      throw new Error(`Erro ao obter proposições: HTTP ${response.status}`);
-    }
+      if (!response.ok) {
+        const err = new Error(`Erro ao obter proposições: HTTP ${response.status}`);
+        err.status = response.status;
+        throw err;
+      }
 
-    const json = await response.json();
-    return (json.dados || []).map(p => ({
-      id: p.id,
-      siglaTipo: p.siglaTipo,
-      numero: p.numero,
-      ano: p.ano,
-      ementa: p.ementa
-    }));
+      const json = await response.json();
+      return (json.dados || []).map(p => ({
+        id: p.id,
+        siglaTipo: p.siglaTipo,
+        numero: p.numero,
+        ano: p.ano,
+        ementa: p.ementa
+      }));
+    }, []);
   }
 }
 

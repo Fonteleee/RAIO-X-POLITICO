@@ -2,6 +2,8 @@
 // Raio-X Político - Auditoria e Verificação Contínua de Integridade de Dados e Fotos
 // Garante que nenhum candidato possua foto trocada, partido incorreto ou dados eleitorais defasados.
 
+const fs = require('fs');
+const path = require('path');
 const { AppDatabase } = require('../src/db/database');
 
 const VERIFIED_SENATE_CODES = {
@@ -73,9 +75,16 @@ function verifyIntegrity(options = { checkNetwork: false }) {
       }
     }
 
-    // 2. Verificação de avatar não quebrado / não vazio
-    if (!c.avatar || (!c.avatar.startsWith('https://') && !c.avatar.startsWith('http://'))) {
+    // 2. Verificação de avatar não quebrado / não vazio (remoto ou local)
+    const isLocalAvatar = typeof c.avatar === 'string' && (c.avatar.startsWith('img/candidates/') || c.avatar.startsWith('/img/candidates/'));
+    const isRemoteAvatar = typeof c.avatar === 'string' && (c.avatar.startsWith('https://') || c.avatar.startsWith('http://'));
+    if (!c.avatar || (!isLocalAvatar && !isRemoteAvatar)) {
       errors.push(`[${c.id}] URL de avatar inválida: ${c.avatar}`);
+    } else if (isLocalAvatar) {
+      const localFilePath = path.join(__dirname, '..', c.avatar.replace(/^\//, ''));
+      if (!fs.existsSync(localFilePath) || fs.statSync(localFilePath).size < 1000) {
+        errors.push(`[${c.id}] Arquivo de avatar local não existe ou é inválido (<1000b): ${c.avatar}`);
+      }
     }
 
     // 3. Auditoria estrita de Senadores (impedir fotos trocadas)

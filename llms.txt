@@ -1,9 +1,9 @@
-# Raio-X Político 2026
+# Figuras Políticas 2026
 
 > Plataforma apartidária de inteligência cívica e auditoria eleitoral baseada em dados abertos do Tribunal Superior Eleitoral (TSE), Câmara dos Deputados, Senado Federal, Tribunal de Contas da União (TCU) e Tesouro Nacional.
 
 ## Visão Geral
-O **Raio-X Político** (https://raioxpolitico.org) é uma ferramenta pública desenhada para auditar e comparar os principais atores políticos do Brasil nas Eleições Gerais de 2026. A plataforma abrange 45 personalidades públicas de destaque nas esferas de Presidência da República, Governos Estaduais, Senado Federal, Prefeituras de Grandes Capitais e Câmara dos Deputados.
+O **Figuras Políticas** (https://figuraspoliticas.org) é uma ferramenta pública desenhada para auditar e comparar os principais atores políticos do Brasil nas Eleições Gerais de 2026. A plataforma abrange 45 personalidades públicas de destaque nas esferas de Presidência da República, Governos Estaduais, Senado Federal, Prefeituras de Grandes Capitais e Câmara dos Deputados.
 
 ## Metodologia de Avaliação e Pontuação Ponderada
 O Score Geral (0 a 100) é calculado a partir de 7 critérios auditáveis:

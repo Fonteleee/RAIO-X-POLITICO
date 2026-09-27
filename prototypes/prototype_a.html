@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protótipo A - Modern Slate & Emerald Civic | Raio-X Político</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            civic: {
+              50: '#F0FDF4',
+              500: '#10B981',
+              600: '#059669',
+              700: '#047857',
+            },
+            slate: {
+              850: '#151F32',
+              950: '#0B1120',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #F8FAFC; color: #0F172A; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+  </style>
+</head>
+<body class="bg-slate-50 min-h-screen text-slate-900 pb-20">
+
+  <!-- Top Prototype Switcher Banner -->
+  <div class="bg-slate-900 text-white px-4 py-2 text-xs flex items-center justify-between sticky top-0 z-50 shadow-md">
+    <div class="flex items-center gap-2">
+      <span class="px-2 py-0.5 rounded bg-emerald-500 text-slate-950 font-black uppercase text-[10px]">Protótipo A</span>
+      <span class="font-bold">Modern Slate & Emerald Civic (Foco em Clareza & Alta Legibilidade)</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <a href="index.html" class="text-slate-300 hover:text-white underline text-xs">← Ver Galeria de Protótipos</a>
+      <a href="prototype_b.html" class="px-2 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-200">Testar Protótipo B</a>
+      <a href="prototype_c.html" class="px-2 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-200">Testar Protótipo C</a>
+    </div>
+  </div>
+
+  <!-- Header & Logo -->
+  <header class="bg-white border-b border-slate-200 sticky top-8 z-40 shadow-xs">
+    <div class="max-w-6xl mx-auto px-4 py-3.5 flex items-center justify-between">
+      <!-- Novo Logo Modern Slate -->
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 via-teal-500 to-sky-600 flex items-center justify-center text-white shadow-md shadow-emerald-600/20">
+          <i data-lucide="scan-eye" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-1.5">
+            <span class="text-lg font-black tracking-tight text-slate-900">RAIO-X</span>
+            <span class="text-lg font-black tracking-tight text-emerald-600">POLÍTICO</span>
+            <span class="px-1.5 py-0.5 rounded text-[9px] font-black bg-slate-100 text-slate-700 border border-slate-300">2026</span>
+          </div>
+          <p class="text-[11px] font-semibold text-slate-500 -mt-0.5">Auditoria Factual & Inteligência Cívica Independente</p>
+        </div>
+      </div>
+
+      <!-- Navigation Pills -->
+      <nav class="hidden md:flex items-center gap-1 bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-semibold">
+        <button class="px-3 py-1.5 rounded-lg bg-white text-emerald-700 font-bold shadow-xs">Feed Cívico</button>
+        <button class="px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900">Ranking por Cargo</button>
+        <button class="px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900">Comparador 1v1</button>
+        <button class="px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900">Match 2026</button>
+        <button class="px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900">Em Exercício (158)</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 pt-6 space-y-8">
+
+    <!-- Seção 1: Barra de Busca com Integridade em Alto Contraste -->
+    <section class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+      <div class="flex flex-col sm:flex-row items-stretch gap-2">
+        <div class="relative flex-1">
+          <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5"></i>
+          <input type="text" placeholder="Buscar político, partido, cargo ou estado..." value="Flávio Bolsonaro" class="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+        </div>
+        <button class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-xl shadow-sm transition flex items-center justify-center gap-2 cursor-pointer">
+          <i data-lucide="search" class="w-3.5 h-3.5"></i>
+          <span>Buscar Candidato</span>
+        </button>
+      </div>
+
+      <!-- Barra de Integridade Corrigida (Alto Contraste) -->
+      <div class="flex items-center gap-2 pt-2 border-t border-slate-100 flex-wrap text-xs">
+        <span class="font-extrabold text-slate-900 uppercase tracking-wider text-xs flex items-center gap-1.5 bg-slate-100 px-2 py-1 rounded-lg border border-slate-200">
+          <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
+          <span>INTEGRIDADE:</span>
+        </span>
+        <button class="px-3 py-1.5 rounded-lg bg-slate-900 text-white font-bold text-xs shadow-xs">Todos (164)</button>
+        <button class="px-3 py-1.5 rounded-lg bg-emerald-50 text-emerald-800 font-bold text-xs border border-emerald-300 hover:bg-emerald-100">🟢 Ficha Limpa Plena</button>
+        <button class="px-3 py-1.5 rounded-lg bg-amber-50 text-amber-900 font-bold text-xs border border-amber-300 hover:bg-amber-100">🟡 Alerta Judicial / Investigação</button>
+        <button class="px-3 py-1.5 rounded-lg bg-rose-50 text-rose-900 font-bold text-xs border border-rose-300 hover:bg-rose-100">🔴 Inelegíveis / Condenações</button>
+      </div>
+    </section>
+
+    <!-- Seção 2: Demonstração do Card do Feed com Novos Botões -->
+    <section class="space-y-3">
+      <div class="flex items-center justify-between">
+        <h2 class="text-sm font-extrabold text-slate-800 uppercase tracking-wider flex items-center gap-2">
+          <i data-lucide="layout-grid" class="w-4 h-4 text-emerald-600"></i>
+          Card do Feed (Botões Otimizados: "Dossiê" & "Figurinha")
+        </h2>
+        <span class="text-xs text-slate-500">Exemplo de Card no Modo Claro Nativo</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <!-- Card 1: Flávio Bolsonaro -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm space-y-4 hover:border-emerald-500/40 transition">
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex items-center gap-3">
+              <img src="https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5988.jpg" alt="Flávio Bolsonaro" class="w-14 h-14 rounded-xl object-cover border border-slate-200 shadow-xs">
+              <div>
+                <div class="flex items-center gap-1.5">
+                  <span class="px-2 py-0.5 rounded text-[10px] font-black bg-sky-50 text-sky-800 border border-sky-200">PL • Nº 22</span>
+                  <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-700">Senador (RJ)</span>
+                </div>
+                <h3 class="text-base font-extrabold text-slate-900 mt-1">Flávio Bolsonaro</h3>
+                <p class="text-xs text-slate-500">Flávio Nantes Bolsonaro • 44 anos • 23 anos na política</p>
+              </div>
+            </div>
+            <span class="px-2.5 py-1 rounded-xl text-xs font-mono font-black bg-amber-100 text-amber-900 border border-amber-300">
+              IPR: 46/100
+            </span>
+          </div>
+
+          <!-- Métricas IPR Dinâmicas -->
+          <div class="grid grid-cols-3 gap-2 text-center text-xs">
+            <div class="p-2 rounded-xl bg-slate-50 border border-slate-100">
+              <span class="text-[10px] uppercase font-bold text-slate-500 block">Custo ao Erário</span>
+              <strong class="text-rose-700 font-mono font-black text-xs">R$ 34,2 mi</strong>
+            </div>
+            <div class="p-2 rounded-xl bg-slate-50 border border-slate-100">
+              <span class="text-[10px] uppercase font-bold text-slate-500 block">Leis Aprovadas</span>
+              <strong class="text-emerald-700 font-black text-xs">6 leis</strong>
+            </div>
+            <div class="p-2 rounded-xl bg-slate-50 border border-slate-100">
+              <span class="text-[10px] uppercase font-bold text-slate-500 block">Cerimoniais</span>
+              <strong class="text-amber-700 font-mono font-black text-xs">68%</strong>
+            </div>
+          </div>
+
+          <!-- Botões do Card Reformulados -->
+          <div class="pt-3 border-t border-slate-100 flex items-center gap-2">
+            <button class="flex-1 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-sm transition cursor-pointer">
+              <i data-lucide="folder-search" class="w-3.5 h-3.5"></i>
+              <span>Dossiê</span>
+            </button>
+            <button class="px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-sm transition cursor-pointer" title="Gerar Figurinha Colecionável">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+              <span>Figurinha</span>
+            </button>
+            <button class="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-700" title="Comparar candidato">
+              <i data-lucide="scale" class="w-4 h-4 text-purple-600"></i>
+            </button>
+            <button class="p-2 rounded-xl bg-emerald-100 hover:bg-emerald-200 border border-emerald-300 text-emerald-800" title="Compartilhar no WhatsApp">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 2: Tarcísio de Freitas -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm space-y-4 hover:border-emerald-500/40 transition">
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex items-center gap-3">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Tarc%C3%ADsio_Gomes_de_Freitas_em_2023.jpg/330px-Tarc%C3%ADsio_Gomes_de_Freitas_em_2023.jpg" alt="Tarcísio" class="w-14 h-14 rounded-xl object-cover border border-slate-200 shadow-xs">
+              <div>
+                <div class="flex items-center gap-1.5">
+                  <span class="px-2 py-0.5 rounded text-[10px] font-black bg-blue-50 text-blue-800 border border-blue-200">REP • Nº 10</span>
+                  <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-700">Governador (SP)</span>
+                </div>
+                <h3 class="text-base font-extrabold text-slate-900 mt-1">Tarcísio de Freitas</h3>
+                <p class="text-xs text-slate-500">Governador de SP • Mandato 2023-2026</p>
+              </div>
+            </div>
+            <span class="px-2.5 py-1 rounded-xl text-xs font-mono font-black bg-emerald-100 text-emerald-900 border border-emerald-300">
+              IPR: 94/100
+            </span>
+          </div>
+
+          <!-- Métricas IPR Dinâmicas -->
+          <div class="grid grid-cols-3 gap-2 text-center text-xs">
+            <div class="p-2 rounded-xl bg-slate-50 border border-slate-100">
+              <span class="text-[10px] uppercase font-bold text-slate-500 block">Orçamento Gestão</span>
+              <strong class="text-emerald-700 font-mono font-black text-xs">R$ 328 bi</strong>
+            </div>
+            <div class="p-2 rounded-xl bg-slate-50 border border-slate-100">
+              <span class="text-[10px] uppercase font-bold text-slate-500 block">Metas Entregues</span>
+              <strong class="text-emerald-700 font-black text-xs">96%</strong>
+            </div>
+            <div class="p-2 rounded-xl bg-slate-50 border border-slate-100">
+              <span class="text-[10px] uppercase font-bold text-slate-500 block">TCE Fiscal</span>
+              <strong class="text-emerald-700 font-mono font-black text-xs">100%</strong>
+            </div>
+          </div>
+
+          <!-- Botões do Card Reformulados -->
+          <div class="pt-3 border-t border-slate-100 flex items-center gap-2">
+            <button class="flex-1 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-sm transition cursor-pointer">
+              <i data-lucide="folder-search" class="w-3.5 h-3.5"></i>
+              <span>Dossiê</span>
+            </button>
+            <button class="px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-sm transition cursor-pointer">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+              <span>Figurinha</span>
+            </button>
+            <button class="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-700">
+              <i data-lucide="scale" class="w-4 h-4 text-purple-600"></i>
+            </button>
+            <button class="p-2 rounded-xl bg-emerald-100 hover:bg-emerald-200 border border-emerald-300 text-emerald-800">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 3: Análise do Político IA em Modo Claro (Fundo Limpo & Alto Contraste) -->
+    <section class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm space-y-5">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 pb-4">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-indigo-50 border border-indigo-200 flex items-center justify-center text-indigo-600">
+            <i data-lucide="sparkles" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <h3 class="text-sm font-extrabold text-slate-900 uppercase tracking-wider">Análise do Político IA (Auditoria Crítica Independente)</h3>
+            <p class="text-xs text-slate-500">Conformidade com a Resolução TSE nº 23.732/2024</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-amber-50 text-amber-900 border border-amber-300">
+            Risco ao Eleitor: Elevado
+          </span>
+          <span class="px-3 py-1 rounded-full text-xs font-mono font-black bg-slate-900 text-white">
+            Score IA: 48/100
+          </span>
+        </div>
+      </div>
+
+      <!-- Veredito Custo-Benefício Claro -->
+      <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-1.5">
+        <span class="text-[11px] font-black text-slate-700 uppercase tracking-wider flex items-center gap-1.5">
+          <i data-lucide="scale" class="w-4 h-4 text-emerald-600"></i>
+          Veredito de Custo-Benefício Cívico
+        </span>
+        <p class="text-xs sm:text-sm text-slate-800 leading-relaxed font-medium">
+          Custo-benefício considerado desfavorável: mandato com elevado custo acumulado ao erário público (R$ 34,2 milhões ao longo de 23 anos) e conversão legislativa de apenas 6 leis aprovadas, sendo 68% de caráter cerimonial ou toponímico.
+        </p>
+      </div>
+
+      <!-- Análise dos 3 Gargalos da Cidade/Estado -->
+      <div class="p-4 rounded-2xl bg-indigo-50/50 border border-indigo-100 space-y-2.5">
+        <span class="text-xs font-black text-indigo-900 uppercase tracking-wider flex items-center gap-1.5">
+          <i data-lucide="target" class="w-4 h-4 text-indigo-600"></i>
+          Aderência aos 3 Principais Gargalos do Rio de Janeiro
+        </span>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-2.5 text-xs">
+          <div class="p-2.5 rounded-xl bg-white border border-indigo-100">
+            <span class="text-[10px] font-bold text-rose-700 block">Gargalo #1: Segurança & Milícias</span>
+            <p class="text-slate-700 mt-1">Zero propostas estruturantes protocoladas sobre desarticulação financeira de milícias.</p>
+          </div>
+          <div class="p-2.5 rounded-xl bg-white border border-indigo-100">
+            <span class="text-[10px] font-bold text-amber-700 block">Gargalo #2: Saúde Pública</span>
+            <p class="text-slate-700 mt-1">Destinação de emendas pontuais para hospitais, sem reforma de gestão.</p>
+          </div>
+          <div class="p-2.5 rounded-xl bg-white border border-indigo-100">
+            <span class="text-[10px] font-bold text-emerald-700 block">Gargalo #3: Turismo & Economia</span>
+            <p class="text-slate-700 mt-1">Projetos de incentivo a eventos e desoneração hoteleira apresentados.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pontos Fortes vs Críticas Severas -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+        <div class="p-4 rounded-2xl bg-emerald-50/60 border border-emerald-200 space-y-2">
+          <h4 class="font-extrabold text-emerald-900 uppercase tracking-wider flex items-center gap-1.5">
+            <i data-lucide="thumbs-up" class="w-4 h-4 text-emerald-600"></i> Pontos Fortes & Entregas Comprovadas
+          </h4>
+          <ul class="space-y-1.5 text-slate-700">
+            <li class="flex items-start gap-1.5"><i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i><span>Alta fidelidade à base eleitoral conservadora no Rio de Janeiro.</span></li>
+            <li class="flex items-start gap-1.5"><i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i><span>Assiduidade parlamentar de 91% nas sessões deliberativas do Senado.</span></li>
+            <li class="flex items-start gap-1.5"><i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i><span>Capacidade de articulação e liderança de bancada partidária.</span></li>
+          </ul>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-rose-50/60 border border-rose-200 space-y-2">
+          <h4 class="font-extrabold text-rose-900 uppercase tracking-wider flex items-center gap-1.5">
+            <i data-lucide="alert-triangle" class="w-4 h-4 text-rose-600"></i> Críticas Severas & Inconsistências
+          </h4>
+          <ul class="space-y-1.5 text-slate-700">
+            <li class="flex items-start gap-1.5"><i data-lucide="x" class="w-4 h-4 text-rose-600 shrink-0 mt-0.5"></i><span>Custo por entrega legislativa de alta relevância com impacto diluído.</span></li>
+            <li class="flex items-start gap-1.5"><i data-lucide="x" class="w-4 h-4 text-rose-600 shrink-0 mt-0.5"></i><span>Uso de 98% da cota CEAP com consultorias e divulgação.</span></li>
+            <li class="flex items-start gap-1.5"><i data-lucide="x" class="w-4 h-4 text-rose-600 shrink-0 mt-0.5"></i><span>Histórico de processos e apurações sobre funcionários de gabinete.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

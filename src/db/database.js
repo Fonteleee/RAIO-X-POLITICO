@@ -86,6 +86,14 @@ class AppDatabase {
       FROM candidate_campaign_finance WHERE candidate_id = ?
     `);
 
+    const polCapStmt = this.db.prepare(`
+      SELECT score, level, academic_degree as academicDegree, academic_details as academicDetails,
+             political_schools as politicalSchools, political_exam_score as politicalExamScore,
+             public_track_record_years as publicTrackRecordYears, public_track_record_text as publicTrackRecordText,
+             technical_skills_json as technicalSkillsJson, anti_fool_evaluation as antiFoolEvaluation
+      FROM candidate_political_capacity WHERE candidate_id = ?
+    `);
+
     for (const cand of candidates) {
       cand.proposals = propStmt.all(cand.id) || [];
       cand.radar = {
@@ -167,6 +175,22 @@ class AppDatabase {
           roiText: cand.roiText || 'R$ 28,50 por R$ 1 gasto'
         }
       };
+
+      const capRow = polCapStmt.get(cand.id);
+      if (capRow) {
+        cand.politicalCapacity = {
+          score: capRow.score,
+          level: capRow.level,
+          academicDegree: capRow.academicDegree,
+          academicDetails: capRow.academicDetails,
+          politicalSchools: capRow.politicalSchools,
+          politicalExamScore: capRow.politicalExamScore,
+          publicTrackRecordYears: capRow.publicTrackRecordYears,
+          publicTrackRecordText: capRow.publicTrackRecordText,
+          technicalSkills: capRow.technicalSkillsJson ? JSON.parse(capRow.technicalSkillsJson) : [],
+          antiFoolEvaluation: capRow.antiFoolEvaluation
+        };
+      }
     }
     return candidates;
   }
@@ -356,6 +380,32 @@ class AppDatabase {
     `);
     cand.recentStatements = stmtStmt.all(id) || [];
 
+    // Capacidade Política, Qualificações Técnicas & Avaliação Anti-Caricatura
+    const polCapStmt = this.db.prepare(`
+      SELECT score, level, academic_degree as academicDegree, academic_details as academicDetails,
+             political_schools as politicalSchools, political_exam_score as politicalExamScore,
+             public_track_record_years as publicTrackRecordYears, public_track_record_text as publicTrackRecordText,
+             technical_skills_json as technicalSkillsJson, anti_fool_evaluation as antiFoolEvaluation
+      FROM candidate_political_capacity WHERE candidate_id = ?
+    `);
+    const capRow = polCapStmt.get(id);
+    if (capRow) {
+      cand.politicalCapacity = {
+        score: capRow.score,
+        level: capRow.level,
+        academicDegree: capRow.academicDegree,
+        academicDetails: capRow.academicDetails,
+        politicalSchools: capRow.politicalSchools,
+        politicalExamScore: capRow.politicalExamScore,
+        publicTrackRecordYears: capRow.publicTrackRecordYears,
+        publicTrackRecordText: capRow.publicTrackRecordText,
+        technicalSkills: capRow.technicalSkillsJson ? JSON.parse(capRow.technicalSkillsJson) : [],
+        antiFoolEvaluation: capRow.antiFoolEvaluation
+      };
+    } else {
+      cand.politicalCapacity = null;
+    }
+
     return cand;
   }
 
@@ -382,6 +432,40 @@ class AppDatabase {
     const stmt = this.db.prepare(`UPDATE candidate_proposals SET ${column} = ${column} + 1 WHERE id = ?`);
     const res = stmt.run(proposalId);
     return res.changes > 0;
+  }
+
+  // Registro e governança de solicitações de contraditório pré-litígio
+  addContradictoryRequest({ requesterName, requesterEmail, candidateName, requestType, proofLink, justification }) {
+    const crypto = require('node:crypto');
+    const id = 'req_' + Date.now() + '_' + crypto.randomBytes(3).toString('hex');
+    const hash = crypto.randomBytes(3).toString('hex').toUpperCase();
+    const protocol = `FP-CONTRADITORIO-2026-${Date.now().toString().slice(-6)}-${hash}`;
+    const createdAt = new Date().toISOString();
+
+    const stmt = this.db.prepare(`
+      INSERT INTO civic_contradictory_requests 
+      (id, protocol, requester_name, requester_email, candidate_name, request_type, proof_link, justification, status, created_at)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'PENDENTE_ANALISE_48H', ?)
+    `);
+    stmt.run(
+      id,
+      protocol,
+      requesterName || 'Anônimo',
+      requesterEmail || '',
+      candidateName || 'Geral',
+      requestType || 'Outro',
+      proofLink || '',
+      justification || '',
+      createdAt
+    );
+
+    return {
+      success: true,
+      protocol,
+      slaHours: 48,
+      status: 'PENDENTE_ANALISE_48H',
+      createdAt
+    };
   }
 }
 

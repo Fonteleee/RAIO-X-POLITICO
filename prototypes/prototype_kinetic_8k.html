@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kinetic Apex 8K • Swiss Civic Terminal | Figuras Políticas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0f172a; scroll-behavior: smooth; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+    .swiss-card {
+      background: #ffffff; border: 1px solid #e2e8f0;
+      box-shadow: 0 1px 3px rgba(0,0,0,.04), 0 8px 24px -4px rgba(0,0,0,.04);
+      transition: all 0.25s cubic-bezier(0.16,1,0.3,1);
+    }
+    .swiss-card:hover { border-color: #cbd5e1; box-shadow: 0 4px 6px rgba(0,0,0,.02), 0 16px 36px -4px rgba(0,0,0,.07); }
+    .swiss-tag {
+      font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 800;
+      letter-spacing: .08em; text-transform: uppercase; padding: 3px 8px; border-radius: 6px;
+    }
+    @keyframes radar-sweep { 0%{transform:rotate(0deg)} 100%{transform:rotate(360deg)} }
+    .radar-scanner { transform-origin: 100px 100px; animation: radar-sweep 4s linear infinite; }
+    @keyframes audio-wave { 0%,100%{height:8px} 50%{height:28px} }
+    @keyframes audio-wave-burst { 0%{height:8px} 20%{height:40px} 50%{height:24px} 100%{height:8px} }
+    .voice-bar { width:5px; border-radius:3px; display:inline-block; animation:audio-wave 1s ease-in-out infinite; transition:background-color 0.3s; }
+    .voice-bar.burst { animation:audio-wave-burst 0.6s ease-out forwards; }
+    .v1{background:#38bdf8;animation-delay:0s} .v2{background:#818cf8;animation-delay:.15s}
+    .v3{background:#c084fc;animation-delay:.30s} .v4{background:#fb7185;animation-delay:.45s}
+    .v5{background:#34d399;animation-delay:.60s}
+    .feed-card { cursor:pointer; transition:all 0.2s cubic-bezier(0.16,1,0.3,1); border:2px solid transparent; }
+    .feed-card:hover { border-color:#93c5fd; transform:translateY(-3px); }
+    .feed-card.active-feed { border-color:#2563eb; background:#eff6ff; }
+    .risk-low{background:#dcfce7;color:#166534} .risk-med{background:#fef9c3;color:#713f12} .risk-high{background:#fee2e2;color:#991b1b}
+    .risk-meme{background:#f3e8ff;color:#6b21a8;border:1px solid #d8b4fe}
+    .gargalo-bar{background:#e2e8f0;border-radius:6px;height:6px}
+    .gargalo-fill{border-radius:6px;height:6px;transition:width 0.8s cubic-bezier(0.16,1,0.3,1)}
+    .duelo-col{transition:all 0.3s}
+    .duelo-col:hover{transform:scale(1.02)}
+    input[type=range]{accent-color:#2563eb}
+    .scrollbar-none::-webkit-scrollbar{display:none} .scrollbar-none{-ms-overflow-style:none;scrollbar-width:none}
+    @keyframes modal-in{from{opacity:0;transform:scale(0.92) translateY(16px)}to{opacity:1;transform:scale(1) translateY(0)}}
+    .modal-animate{animation:modal-in 0.35s cubic-bezier(0.16,1,0.3,1) both}
+    .section-label{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#94a3b8}
+  </style>
+</head>
+<body class="min-h-screen bg-slate-50 antialiased selection:bg-blue-600 selection:text-white pb-24">
+
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-slate-200 px-4 lg:px-8 py-3">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3 shrink-0">
+        <div class="w-9 h-9 rounded-xl bg-slate-900 text-white flex items-center justify-center font-black text-sm font-mono shadow-sm">8K</div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-black text-sm tracking-tight text-slate-900 uppercase">Figuras Políticas</span>
+            <span class="swiss-tag bg-blue-50 text-blue-700 border border-blue-200">KINETIC APEX 8K</span>
+          </div>
+          <p class="text-[10px] text-slate-500 font-mono hidden sm:block">AUDITORIA FISCAL, DENSIDADE PROPOSITIVA & FILTRO ANTI-CARICATURA</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-2 overflow-x-auto scrollbar-none flex-1 max-w-2xl" id="k-cand-chips"></div>
+      <div class="flex items-center gap-2 shrink-0">
+        <a href="index.html" class="px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs flex items-center gap-1.5 transition">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i><span class="hidden sm:block">Portal Principal</span>
+        </a>
+        <button onclick="openKineticModal()" class="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs flex items-center gap-1.5 shadow-sm transition cursor-pointer">
+          <i data-lucide="sparkles" class="w-4 h-4"></i><span>Dossiê 8K</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 lg:px-8 pt-8 space-y-10">
+
+    <!-- FEED VISUAL DE CANDIDATOS COM FILTRO DE CARICATURAS -->
+    <section>
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
+        <div>
+          <p class="section-label mb-1">Painel de Monitoramento 2026</p>
+          <h2 class="text-xl font-black text-slate-900 tracking-tight">Figuras Políticas Auditadas</h2>
+        </div>
+        
+        <!-- Filtro Rápido no Feed -->
+        <div class="flex items-center gap-2 flex-wrap">
+          <button onclick="filterFeedByCategory('all')" id="btn-feed-filter-all" class="px-3 py-1.5 rounded-xl text-xs font-bold font-mono bg-slate-900 text-white transition cursor-pointer">
+            Todos (6)
+          </button>
+          <button onclick="filterFeedByCategory('serious')" id="btn-feed-filter-serious" class="px-3 py-1.5 rounded-xl text-xs font-bold font-mono bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition cursor-pointer">
+            🏛️ Com Plano Estruturado
+          </button>
+          <button onclick="filterFeedByCategory('meme')" id="btn-feed-filter-meme" class="px-3 py-1.5 rounded-xl text-xs font-bold font-mono bg-purple-100 text-purple-800 border border-purple-300 hover:bg-purple-200 transition cursor-pointer">
+            🎭 Candidaturas Folclóricas / Meme
+          </button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-3.5" id="k-feed-grid"></div>
+    </section>
+
+    <!-- IDENTIDADE DO CANDIDATO ATIVO -->
+    <section class="swiss-card rounded-3xl p-6 lg:p-8">
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+        <div class="flex items-start sm:items-center gap-5">
+          <div class="relative shrink-0">
+            <img id="k-avatar" src="" alt="Candidato" class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl object-cover border border-slate-200 shadow-sm">
+            <span id="k-clean-tag" class="absolute -bottom-2 -right-2 swiss-tag bg-emerald-100 text-emerald-800 border border-emerald-300">FICHA LIMPA</span>
+          </div>
+          <div class="space-y-1.5">
+            <div class="flex items-center gap-2.5 flex-wrap">
+              <h1 id="k-name" class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight"></h1>
+              <span id="k-number" class="swiss-tag bg-slate-900 text-white"></span>
+              <span id="k-party-badge" class="swiss-tag bg-blue-100 text-blue-800 border border-blue-200"></span>
+              <span id="k-caricature-badge" class="swiss-tag risk-meme hidden">🎭 ALERTA: CANETA/MEME</span>
+            </div>
+            <p id="k-role" class="text-xs sm:text-sm text-slate-600 font-semibold"></p>
+            <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-500 font-mono pt-1">
+              <span>Posição: <strong id="k-rank" class="text-slate-900 font-black"></strong></span>
+              <span class="hidden sm:block">•</span>
+              <span>Presença: <strong id="k-attendance" class="text-emerald-700 font-black"></strong></span>
+              <span class="hidden sm:block">•</span>
+              <span>Custo/min: <strong id="k-cost-min" class="text-blue-700 font-black"></strong></span>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-3 gap-3 self-stretch lg:self-auto">
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 text-center min-w-[76px]">
+            <span class="text-[9px] font-mono font-bold text-slate-500 block uppercase">Score Geral</span>
+            <strong id="k-overall" class="text-3xl font-black font-mono text-blue-600 block"></strong>
+            <span class="text-[9px] text-slate-400 font-mono">Fórmula Cívica</span>
+          </div>
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 text-center min-w-[76px]">
+            <span class="text-[9px] font-mono font-bold text-slate-500 block uppercase">Índice IPR</span>
+            <strong id="k-ipr" class="text-3xl font-black font-mono text-indigo-600 block"></strong>
+            <span class="text-[9px] text-slate-400 font-mono">Produtividade</span>
+          </div>
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 text-center min-w-[76px]">
+            <span class="text-[9px] font-mono font-bold text-slate-500 block uppercase">Auditoria IA</span>
+            <strong id="k-ai" class="text-3xl font-black font-mono text-emerald-600 block"></strong>
+            <span class="text-[9px] text-slate-400 font-mono">Competência</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALERTA DE DENSIDADE PROPOSITIVA & RISCO DE PUXADOR DE LEGENDA -->
+    <section id="k-caricature-panel" class="swiss-card rounded-3xl p-6 bg-gradient-to-r from-purple-50 via-slate-50 to-indigo-50 border-purple-200 hidden">
+      <div class="flex items-start justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-2xl bg-purple-600 text-white flex items-center justify-center text-xl shadow-md shrink-0">🎭</div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h3 class="font-extrabold text-base text-purple-950">Auditoria Especial: Candidatura Folclórica / Puxador de Legenda</h3>
+              <span class="swiss-tag bg-purple-200 text-purple-900">FILTRO ANTI-CARICATURA</span>
+            </div>
+            <p class="text-xs text-purple-800 font-medium mt-0.5" id="k-caricature-desc"></p>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-3 mt-4 text-xs font-mono">
+        <div class="p-3 rounded-xl bg-white border border-purple-200">
+          <span class="text-slate-500 text-[10px] block">Propostas no TSE:</span>
+          <strong id="k-car-props" class="text-purple-700 text-sm"></strong>
+        </div>
+        <div class="p-3 rounded-xl bg-white border border-purple-200">
+          <span class="text-slate-500 text-[10px] block">Histórico de Gestão:</span>
+          <strong id="k-car-exp" class="text-purple-700 text-sm"></strong>
+        </div>
+        <div class="p-3 rounded-xl bg-white border border-purple-200">
+          <span class="text-slate-500 text-[10px] block">Efeito Legenda:</span>
+          <strong id="k-car-effect" class="text-purple-700 text-sm"></strong>
+        </div>
+        <div class="p-3 rounded-xl bg-white border border-purple-200">
+          <span class="text-slate-500 text-[10px] block">Recomendação Cívica:</span>
+          <strong id="k-car-rec" class="text-rose-700 text-sm"></strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIMULADOR BOLSO + RADAR SONAR -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <div class="lg:col-span-7 swiss-card rounded-3xl p-6 lg:p-7 space-y-5 flex flex-col justify-between">
+        <div class="space-y-4">
+          <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center">
+                <i data-lucide="calculator" class="w-4 h-4"></i></div>
+              <h3 class="font-extrabold text-sm text-slate-900 uppercase tracking-wider">Simulador: Impacto no Seu Bolso</h3>
+            </div>
+            <span class="swiss-tag bg-blue-100 text-blue-800">Matemática Real</span>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed font-medium">Arraste com sua renda mensal para calcular quantos minutos da sua vida e quanto do seu imposto custeiam o mandato deste político:</p>
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-700">Sua Renda Bruta Mensal:</span>
+              <strong id="k-salary-display" class="text-lg font-black font-mono text-blue-600">R$ 4.500 / mês</strong>
+            </div>
+            <input type="range" id="k-salary-slider" min="1412" max="35000" step="250" value="4500"
+              class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer" oninput="updatePocketSimulator(this.value)">
+            <div class="flex justify-between text-[10px] font-mono text-slate-400">
+              <span>R$ 1.412 (Min.)</span><span>R$ 8.000</span><span>R$ 35.000</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-3">
+            <div class="p-4 rounded-2xl bg-white border border-slate-200 text-center shadow-sm">
+              <span class="text-[9px] font-mono uppercase text-slate-400 block font-bold">Tempo Trabalhado</span>
+              <strong id="k-sim-time" class="text-xl font-black font-mono text-slate-900 block mt-1">—</strong>
+              <span class="text-[9px] text-slate-500 font-mono">do seu dia de trabalho</span>
+            </div>
+            <div class="p-4 rounded-2xl bg-white border border-slate-200 text-center shadow-sm">
+              <span class="text-[9px] font-mono uppercase text-slate-400 block font-bold">Custo Mensal</span>
+              <strong id="k-sim-month" class="text-xl font-black font-mono text-blue-600 block mt-1">—</strong>
+              <span class="text-[9px] text-slate-500 font-mono">para bancar o gabinete</span>
+            </div>
+            <div class="p-4 rounded-2xl bg-white border border-slate-200 text-center shadow-sm">
+              <span class="text-[9px] font-mono uppercase text-slate-400 block font-bold">Retorno Social</span>
+              <strong id="k-sim-return" class="text-xl font-black font-mono text-emerald-600 block mt-1">—</strong>
+              <span class="text-[9px] text-slate-500 font-mono">em serviços entregues</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-2 text-xs font-mono">
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex justify-between">
+              <span class="text-slate-500">IR + FGTS:</span><strong id="k-sim-tax" class="text-slate-800">—</strong>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex justify-between">
+              <span class="text-slate-500">CEAP/mês:</span><strong id="k-sim-ceap" class="text-slate-800">—</strong>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex justify-between">
+              <span class="text-slate-500">Custo/voto:</span><strong id="k-sim-vote" class="text-slate-800">—</strong>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex justify-between">
+              <span class="text-slate-500">Equiv. refeições:</span><strong id="k-sim-meals" class="text-amber-700">—</strong>
+            </div>
+          </div>
+        </div>
+        <div class="p-3.5 rounded-2xl bg-blue-50/60 border border-blue-200 text-xs text-blue-900 font-medium leading-relaxed">
+          ⚡ <strong>Equação Cívica Figuras Políticas:</strong> Cruza a carga tributária do contracheque com orçamento público da cota CEAP, folha de assessores e emendas parlamentares executadas.
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 swiss-card rounded-3xl p-6 space-y-4 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 rounded-xl bg-slate-100 text-slate-800 flex items-center justify-center">
+                <i data-lucide="compass" class="w-4 h-4"></i></div>
+              <h3 class="font-extrabold text-sm text-slate-900 uppercase tracking-wider">Radar 6 Dimensões</h3>
+            </div>
+            <span class="swiss-tag bg-slate-100 text-slate-700">8K Sonar</span>
+          </div>
+          <div class="relative w-60 h-60 mx-auto my-3 flex items-center justify-center">
+            <svg viewBox="0 0 200 200" class="w-full h-full">
+              <circle cx="100" cy="100" r="80" fill="none" stroke="#f1f5f9" stroke-width="1.5"/>
+              <circle cx="100" cy="100" r="60" fill="none" stroke="#e2e8f0" stroke-width="1"/>
+              <circle cx="100" cy="100" r="40" fill="none" stroke="#e2e8f0" stroke-width="1"/>
+              <circle cx="100" cy="100" r="20" fill="none" stroke="#e2e8f0" stroke-width="1"/>
+              <line x1="100" y1="20" x2="100" y2="180" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="2,2"/>
+              <line x1="20" y1="100" x2="180" y2="100" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="2,2"/>
+              <line x1="43" y1="43" x2="157" y2="157" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="2,2"/>
+              <line x1="43" y1="157" x2="157" y2="43" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="2,2"/>
+              <g class="radar-scanner">
+                <line x1="100" y1="100" x2="100" y2="20" stroke="#3b82f6" stroke-width="2" opacity="0.6"/>
+                <polygon points="100,100 100,20 130,30" fill="rgba(59,130,246,0.12)"/>
+              </g>
+              <polygon id="k-radar-poly" points="100,28 165,65 155,140 100,165 45,140 40,70"
+                fill="rgba(37,99,235,0.22)" stroke="#2563eb" stroke-width="2.5"/>
+              <circle cx="100" cy="28" r="3.5" fill="#2563eb"/>
+              <circle cx="165" cy="65" r="3.5" fill="#2563eb"/>
+              <circle cx="155" cy="140" r="3.5" fill="#2563eb"/>
+              <circle cx="100" cy="165" r="3.5" fill="#2563eb"/>
+              <circle cx="45" cy="140" r="3.5" fill="#2563eb"/>
+              <circle cx="40" cy="70" r="3.5" fill="#2563eb"/>
+            </svg>
+            <span class="absolute top-1 text-[8.5px] font-mono font-bold text-slate-600" id="k-radar-l0">Integridade</span>
+            <span class="absolute right-0 top-14 text-[8.5px] font-mono font-bold text-slate-600" id="k-radar-l1">IPR</span>
+            <span class="absolute right-0 bottom-10 text-[8.5px] font-mono font-bold text-slate-600" id="k-radar-l2">Fiscal</span>
+            <span class="absolute bottom-1 text-[8.5px] font-mono font-bold text-slate-600" id="k-radar-l3">Presença</span>
+            <span class="absolute left-0 bottom-10 text-[8.5px] font-mono font-bold text-slate-600" id="k-radar-l4">Leis</span>
+            <span class="absolute left-0 top-14 text-[8.5px] font-mono font-bold text-slate-600" id="k-radar-l5">IA</span>
+          </div>
+          <div class="grid grid-cols-2 gap-2 text-xs font-mono">
+            <div class="p-2 rounded-xl bg-slate-50 border border-slate-200">
+              <span class="text-slate-400 block text-[9px]">Ponto Mais Forte:</span>
+              <strong id="k-best" class="text-emerald-700 font-bold">—</strong>
+            </div>
+            <div class="p-2 rounded-xl bg-slate-50 border border-slate-200">
+              <span class="text-slate-400 block text-[9px]">Ponto de Alerta:</span>
+              <strong id="k-worst" class="text-amber-700 font-bold">—</strong>
+            </div>
+          </div>
+        </div>
+        <div class="text-[10px] text-slate-400 font-mono text-center">Padrão ISO Cívico de Radar Multidimensional</div>
+      </div>
+    </div>
+
+    <!-- GARGALOS REGIONAIS -->
+    <section class="swiss-card rounded-3xl p-6 lg:p-8">
+      <div class="flex items-center justify-between border-b border-slate-100 pb-4 mb-6">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center">
+            <i data-lucide="alert-triangle" class="w-5 h-5"></i></div>
+          <div>
+            <h3 class="font-extrabold text-sm text-slate-900 uppercase tracking-wider">3 Principais Gargalos da Região</h3>
+            <p class="text-[10px] font-mono text-slate-500 mt-0.5">Promessas vs. Entregas Verificadas</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="swiss-tag bg-rose-100 text-rose-800">ANÁLISE REGIONAL</span>
+          <span id="k-gargalo-region" class="swiss-tag bg-slate-100 text-slate-600 border border-slate-200">SP</span>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5" id="k-gargalo-grid"></div>
+    </section>
+
+    <!-- ESPECTRO DE VOZ & AUDITORIA DE FALAS -->
+    <section class="swiss-card rounded-3xl p-6 lg:p-8 space-y-5">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-4">
+        <div class="space-y-1.5">
+          <div class="flex items-center gap-2 flex-wrap">
+            <span class="swiss-tag bg-rose-100 text-rose-700 border border-rose-300">FILTRO ANTI-PROCESSOS</span>
+            <span class="text-[11px] font-mono text-slate-500 font-semibold">Auditoria Fact-Checking 2026</span>
+          </div>
+          <h3 class="text-lg font-black text-slate-900 tracking-tight">Auditoria de Falas, Contradições e Promessas de Campanha</h3>
+        </div>
+        <div class="flex items-center gap-3 bg-slate-50 border border-slate-200 rounded-2xl px-4 py-3 shrink-0">
+          <span class="text-[10px] font-mono font-black text-slate-600 uppercase tracking-widest whitespace-nowrap">Espectro de Voz:</span>
+          <div class="flex items-end gap-1" id="voice-spectrum" style="height:40px">
+            <div class="voice-bar v1"></div>
+            <div class="voice-bar v2"></div>
+            <div class="voice-bar v3"></div>
+            <div class="voice-bar v4"></div>
+            <div class="voice-bar v5"></div>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4" id="k-forensic-list"></div>
+    </section>
+
+    <!-- PRODUÇÃO LEGISLATIVA + MINI-DUELO -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <div class="lg:col-span-5 swiss-card rounded-3xl p-6 space-y-4">
+        <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center">
+              <i data-lucide="book-open" class="w-4 h-4"></i></div>
+            <h3 class="font-extrabold text-sm text-slate-900 uppercase tracking-wider">Produção Legislativa</h3>
+          </div>
+          <span class="swiss-tag bg-indigo-100 text-indigo-800">Filtro Severo</span>
+        </div>
+        <div class="flex items-center gap-5 p-4 rounded-2xl bg-slate-50 border border-slate-200">
+          <div class="relative w-28 h-28 shrink-0">
+            <svg viewBox="0 0 36 36" class="w-full h-full -rotate-90">
+              <circle cx="18" cy="18" r="15.915" fill="none" stroke="#e2e8f0" stroke-width="3.8"/>
+              <circle id="k-donut-val" cx="18" cy="18" r="15.915" fill="none" stroke="#2563eb"
+                stroke-width="3.8" stroke-dasharray="82, 18" stroke-dashoffset="0"/>
+            </svg>
+            <div class="absolute inset-0 flex flex-col items-center justify-center">
+              <span id="k-donut-pct" class="font-black font-mono text-sm text-slate-900"></span>
+              <span class="text-[7px] font-mono text-slate-400">REAL</span>
+            </div>
+          </div>
+          <div class="space-y-1.5 text-xs">
+            <div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span><strong class="text-slate-800">Leis Estruturantes Reais</strong></div>
+            <p class="text-[11px] text-slate-500">Projetos com impacto econômico, educacional ou de saúde sistêmica.</p>
+            <div class="flex items-center gap-1.5 pt-1"><span class="w-2.5 h-2.5 rounded-full bg-slate-300"></span><span class="text-slate-600">Homenagens / Títulos de Cidadão</span></div>
+          </div>
+        </div>
+        <div class="space-y-2 text-xs font-mono">
+          <div class="p-2.5 rounded-xl bg-white border border-slate-200 flex justify-between">
+            <span class="text-slate-500">Total de Proposições:</span>
+            <strong id="k-total-props" class="text-slate-900"></strong>
+          </div>
+          <div class="p-2.5 rounded-xl bg-white border border-slate-200 flex justify-between">
+            <span class="text-slate-500">Viraram Lei Nacional:</span>
+            <strong id="k-became-law" class="text-emerald-700"></strong>
+          </div>
+          <div class="p-2.5 rounded-xl bg-white border border-slate-200 flex justify-between">
+            <span class="text-slate-500">Taxa de Efetividade:</span>
+            <strong id="k-effect-rate" class="text-blue-600"></strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7 swiss-card rounded-3xl p-6 space-y-5">
+        <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center">
+              <i data-lucide="swords" class="w-4 h-4"></i></div>
+            <h3 class="font-extrabold text-sm text-slate-900 uppercase tracking-wider">Mini-Duelo 1v1</h3>
+          </div>
+          <span class="swiss-tag bg-purple-100 text-purple-800">Forense Comparativo</span>
+        </div>
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-[10px] font-mono text-slate-500 font-bold uppercase shrink-0">Comparar com:</span>
+          <div id="k-duelo-chips" class="flex flex-wrap gap-1.5"></div>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="duelo-col p-4 rounded-2xl bg-blue-50 border-2 border-blue-200 space-y-3">
+            <div class="flex items-center gap-2">
+              <img id="kd-avatar-a" src="" class="w-10 h-10 rounded-xl object-cover border border-blue-300">
+              <div>
+                <p id="kd-name-a" class="font-black text-xs text-slate-900"></p>
+                <p id="kd-party-a" class="text-[10px] font-mono text-blue-600 font-bold"></p>
+              </div>
+            </div>
+            <div class="space-y-2 text-xs font-mono" id="kd-stats-a"></div>
+          </div>
+          <div class="duelo-col p-4 rounded-2xl bg-slate-50 border-2 border-slate-200 space-y-3">
+            <div class="flex items-center gap-2">
+              <img id="kd-avatar-b" src="" class="w-10 h-10 rounded-xl object-cover border border-slate-300">
+              <div>
+                <p id="kd-name-b" class="font-black text-xs text-slate-900"></p>
+                <p id="kd-party-b" class="text-[10px] font-mono text-slate-600 font-bold"></p>
+              </div>
+            </div>
+            <div class="space-y-2 text-xs font-mono" id="kd-stats-b"></div>
+          </div>
+        </div>
+        <div id="k-duelo-verdict" class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-xs text-slate-700 font-medium leading-relaxed hidden"></div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- MODAL FIGURINHA 8K FIGURAS POLÍTICAS -->
+  <div id="kinetic-modal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="modal-animate bg-white rounded-3xl p-6 max-w-md w-full shadow-2xl border border-slate-200 space-y-5 max-h-[90vh] overflow-y-auto">
+      <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+        <span class="font-bold text-xs font-mono uppercase text-blue-700">Figuras Políticas • Dossiê IA 8K</span>
+        <button onclick="closeKineticModal()" class="text-slate-400 hover:text-slate-700 cursor-pointer">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="relative rounded-2xl overflow-hidden border border-slate-200 shadow-lg" style="background:linear-gradient(135deg,#0f172a 0%,#1e293b 50%,#0f172a 100%);padding:20px">
+        <div class="absolute top-0 left-0 right-0 h-1" style="background:linear-gradient(90deg,#38bdf8,#818cf8,#c084fc,#fb7185,#34d399)"></div>
+        <div class="flex items-center gap-3 mb-4">
+          <img id="km-avatar" src="" class="w-14 h-14 rounded-xl object-cover border-2 border-white/20">
+          <div>
+            <h4 id="km-name" class="font-black text-base text-white"></h4>
+            <p id="km-party" class="text-xs font-mono text-blue-300 font-bold"></p>
+            <div id="km-risk-badge" class="mt-1"></div>
+          </div>
+          <div class="ml-auto text-right">
+            <div class="text-[9px] font-mono text-slate-400 uppercase">Score IA</div>
+            <div id="km-ai-score" class="text-3xl font-black font-mono text-white"></div>
+          </div>
+        </div>
+        <div class="grid grid-cols-3 gap-2 mb-4">
+          <div class="text-center p-2 rounded-xl" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1)">
+            <div class="text-[9px] font-mono text-slate-400 uppercase">IPR</div>
+            <div id="km-ipr" class="text-lg font-black font-mono text-indigo-400"></div>
+          </div>
+          <div class="text-center p-2 rounded-xl" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1)">
+            <div class="text-[9px] font-mono text-slate-400 uppercase">Presença</div>
+            <div id="km-attendance" class="text-lg font-black font-mono text-emerald-400"></div>
+          </div>
+          <div class="text-center p-2 rounded-xl" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1)">
+            <div class="text-[9px] font-mono text-slate-400 uppercase">Custo/min</div>
+            <div id="km-costmin" class="text-sm font-black font-mono text-amber-400"></div>
+          </div>
+        </div>
+        <div class="p-3 rounded-xl text-xs text-slate-300 leading-relaxed font-medium" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1)" id="km-verdict"></div>
+        <div class="flex items-center justify-between mt-3">
+          <span class="text-[9px] font-mono text-slate-500">figuraspoliticas.org • 2026</span>
+          <span class="swiss-tag" style="background:rgba(255,255,255,.08);color:#94a3b8">AUDITADO IA ✓</span>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-3">
+        <button onclick="alert('Figurinha Figuras Políticas 8K copiada! Compartilhe nas redes.')" class="py-2.5 rounded-xl bg-blue-600 text-white font-bold text-xs shadow-md hover:bg-blue-700 transition cursor-pointer flex items-center justify-center gap-1.5">
+          <i data-lucide="share-2" class="w-4 h-4"></i>Figurinha
+        </button>
+        <button onclick="alert('PDF do Dossiê Figuras Políticas gerado com sucesso!')" class="py-2.5 rounded-xl bg-slate-100 text-slate-800 font-bold text-xs hover:bg-slate-200 transition cursor-pointer flex items-center justify-center gap-1.5">
+          <i data-lucide="file-text" class="w-4 h-4"></i>Dossiê PDF
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  const kineticCandidates = [
+    { id:'tabata', name:'Tabata Amaral', number:'40', party:'PSB', state:'SP', role:'Deputada Federal • SP',
+      avatar:'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400',
+      overall:89, ipr:89, ai:93, rank:'#4 de 164', attendance:'94%', costMin:'R$ 0,51/min',
+      costVote:'R$ 6,88 / voto', ceapTotal:41200, effectiveRate:'7,6% (Média: 1,8%)',
+      becameLaw:'14 leis sancionadas', totalProps:'184 propostas', donutPct:82, risk:'BAIXO', isCaricature:false,
+      radarPoints:'100,28 165,65 155,140 100,165 45,140 40,70',
+      radarLabels:['Integridade (95)','IPR (89)','Fiscal (90)','Presença (94)','Leis (88)','IA (93)'],
+      best:'Ficha Limpa 100%', worst:'Resistência Partidária', region:'SP',
+      gargalos:[
+        {tema:'Segurança Pública — SP',promessa:'Redução de 30% nos crimes violentos via câmeras IA',entrega:60,status:'EM ANDAMENTO',cor:'amber',detalhe:'18% de redução registrada no SSPSP em 2024. Meta parcialmente atingida.'},
+        {tema:'Mobilidade Urbana — SP',promessa:'Aprovação do corredor BRT Paulista-Leste',entrega:85,status:'ENTREGUE',cor:'emerald',detalhe:'Projeto aprovado na Câmara dos Deputados. Execução em fase de licitação.'},
+        {tema:'Educação Básica',promessa:'Expansão de 5.000 vagas em educação integral',entrega:42,status:'ATRASADO',cor:'rose',detalhe:'2.100 vagas abertas. Corte orçamentário federal atrasou o restante.'}
+      ],
+      forensics:[
+        {source:'Sabatinas 2024',verdict:'VERDADEIRO',color:'emerald',quote:'"Nenhuma emenda do meu mandato foi destinada sem edital público de concorrência."',fonte:'Portal da Câmara'},
+        {source:'Plenário 2023',verdict:'CONFIRMADO',color:'blue',quote:'"Votei favoravelmente à reforma tributária após inclusão da cesta básica isenta."',fonte:'Diário Oficial'},
+        {source:'Prestação de Contas',verdict:'COMPROVADO',color:'indigo',quote:'"Economizamos mais de 40% de verba de gabinete durante todo o mandato."',fonte:'Aos Fatos'}
+      ],
+      verdictText:'Parlamentar com perfil de alta densidade técnica, votações alinhadas à sua plataforma educacional e taxa de emendas abertas superior a 90%. Risco ao eleitor considerado BAIXO.'
+    },
+    { id:'flavio', name:'Flávio Bolsonaro', number:'22', party:'PL', state:'RJ', role:'Senador da República • RJ',
+      avatar:'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400',
+      overall:70, ipr:46, ai:88, rank:'#89 de 164', attendance:'88%', costMin:'R$ 0,76/min',
+      costVote:'R$ 14,30 / voto', ceapTotal:55000, effectiveRate:'1,9% (Média: 2,1%)',
+      becameLaw:'3 leis sancionadas', totalProps:'158 propostas', donutPct:42, risk:'MÉDIO', isCaricature:false,
+      radarPoints:'100,50 145,85 130,130 100,150 65,130 55,85',
+      radarLabels:['Integridade (70)','IPR (46)','Fiscal (65)','Presença (88)','Leis (52)','IA (88)'],
+      best:'Alta Presença (88%)', worst:'Produção Legislativa Baixa', region:'RJ',
+      gargalos:[
+        {tema:'Segurança RJ — Milícias',promessa:'PL de combate estrutural às milícias no RJ',entrega:15,status:'NÃO ENTREGUE',cor:'rose',detalhe:'Nenhum projeto de lei protocolado sobre o tema até setembro de 2025.'},
+        {tema:'Emprego Formal — RJ',promessa:'Fundo de R$ 500 mi para emprego juvenil no RJ',entrega:30,status:'ATRASADO',cor:'amber',detalhe:'Proposta apresentada, sem aprovação em comissão até o momento.'},
+        {tema:'Habitação Social — Norte Fluminense',promessa:'2.000 unidades habitacionais via Minha Casa',entrega:50,status:'EM ANDAMENTO',cor:'amber',detalhe:'1.100 unidades aprovadas. Recursos condicionados ao aval da CEF.'}
+      ],
+      forensics:[
+        {source:'CPI do Senado 2023',verdict:'CONTRADITÓRIO',color:'rose',quote:'"Nunca tive ciência das movimentações da conta laranja de meu ex-assessor."',fonte:'Agência Senado'},
+        {source:'Plenário 2024',verdict:'COERENTE',color:'blue',quote:'"Meu voto contra o imposto sobre exportações do agro é inabalável."',fonte:'Diário do Senado'},
+        {source:'Prestação de Contas',verdict:'AUDITADO',color:'amber',quote:'"Uso 89% da cota com locação de veículos e divulgação de atividade parlamentar."',fonte:'Portal Transparência'}
+      ],
+      verdictText:'Atuação política focada em articulação partidária e polarização, com produção legislativa abaixo da média. Histórico com questionamentos na Justiça. Risco ao eleitor MÉDIO.'
+    },
+    { id:'caiado', name:'Ronaldo Caiado', number:'44', party:'UNIÃO', state:'GO', role:'Governador de Goiás',
+      avatar:'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400',
+      overall:76, ipr:62, ai:94, rank:'#48 de 164', attendance:'98%', costMin:'R$ 0,64/min',
+      costVote:'R$ 8,12 / voto', ceapTotal:33100, effectiveRate:'4,8% (Histórico GO)',
+      becameLaw:'8 reformas estaduais', totalProps:'166 matérias', donutPct:68, risk:'BAIXO', isCaricature:false,
+      radarPoints:'100,32 155,70 145,135 100,160 55,135 48,70',
+      radarLabels:['Integridade (80)','IPR (62)','Fiscal (85)','Presença (98)','Leis (72)','IA (94)'],
+      best:'Gestão Fiscal GO (A+)', worst:'Taxação Agro Judicializada', region:'GO',
+      gargalos:[
+        {tema:'Saneamento Rural — GO',promessa:'Universalizar água tratada em 100% do interior goiano',entrega:72,status:'EM ANDAMENTO',cor:'amber',detalhe:'255 municípios cobertos. Meta 100% prevista para 2026.'},
+        {tema:'Segurança Pública — GO',promessa:'Redução de 25% em homicídios',entrega:88,status:'ENTREGUE',cor:'emerald',detalhe:'FBSP registrou -22% em homicídios dolosos em Goiás entre 2022–2024.'},
+        {tema:'Estradas Estaduais — GO',promessa:'Pavimentar 2.000 km de estradas vicinais',entrega:55,status:'EM ANDAMENTO',cor:'amber',detalhe:'1.100 km concluídos. Outros 900 km em licitação até 2025.'}
+      ],
+      forensics:[
+        {source:'Anuário FBSP 2024',verdict:'VERIFICADO',color:'emerald',quote:'"A redução de crimes violentos em Goiás é a maior da história do Estado."',fonte:'Fórum Brasileiro de Segurança'},
+        {source:'Acordo Fazenda 2023',verdict:'HOMOLOGADO',color:'blue',quote:'"Goiás saiu do regime de recuperação fiscal com equilíbrio da folha de pagamento."',fonte:'Min. da Fazenda'},
+        {source:'STF — ADI 2024',verdict:'JUDICIALIZADO',color:'rose',quote:'"O Fundeinfra é uma contribuição legal e essencial para a infraestrutura goiana."',fonte:'STF / Agronews'}
+      ],
+      verdictText:'Líder executivo forte na segurança e rigor administrativo. Índice IPR legislativo histórico equilibrado. Questionamentos judiciais sobre política tributária do agro. Risco BAIXO.'
+    },
+    { id:'tarcisio', name:'Tarcísio de Freitas', number:'10', party:'REPUBLICANOS', state:'SP', role:'Governador de São Paulo',
+      avatar:'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400',
+      overall:79, ipr:76, ai:92, rank:'#28 de 164', attendance:'96%', costMin:'R$ 0,59/min',
+      costVote:'R$ 7,44 / voto', ceapTotal:38500, effectiveRate:'5,4% (Gestão SP)',
+      becameLaw:'11 reformas estaduais', totalProps:'142 matérias', donutPct:74, risk:'BAIXO', isCaricature:false,
+      radarPoints:'100,30 158,68 148,138 100,162 52,138 45,68',
+      radarLabels:['Integridade (82)','IPR (76)','Fiscal (88)','Presença (96)','Leis (78)','IA (92)'],
+      best:'Gestão Fiscal SP (AA)', worst:'Segurança Polarizada', region:'SP',
+      gargalos:[
+        {tema:'Segurança Pública — SP',promessa:'Redução de 40% em roubos a bancos e transportes',entrega:78,status:'EM ANDAMENTO',cor:'amber',detalhe:'31% de redução em roubos a banco em 2024. SSP-SP.'},
+        {tema:'Concessões Rodoviárias — SP',promessa:'Licitar 3.000 km de rodovias novas até 2025',entrega:90,status:'ENTREGUE',cor:'emerald',detalhe:'Artesp homologou 2.850 km. Restante em fase de outorga.'},
+        {tema:'Educação Técnica — SP',promessa:'200 novas Escolas Técnicas Estaduais',entrega:40,status:'ATRASADO',cor:'rose',detalhe:'80 novas ETECs abertas. Ritmo abaixo do comprometido para 2024.'}
+      ],
+      forensics:[
+        {source:'Plano de Governo 2022',verdict:'PARCIAL',color:'amber',quote:'"Vamos zerar o deficit da Saúde paulista em dois anos de gestão."',fonte:'G1 / Secretaria da Saúde SP'},
+        {source:'Reunião COMSEG 2024',verdict:'CONFIRMADO',color:'emerald',quote:'"A taxa de homicídios em SP caiu a níveis históricos no nosso governo."',fonte:'SSP-SP / FBSP 2024'},
+        {source:'Entrevista JN 2023',verdict:'VERDADEIRO',color:'blue',quote:'"Não farei privatização do Metrô enquanto não houver alternativa pública de qualidade."',fonte:'Folha de SP'}
+      ],
+      verdictText:'Gestor com foco em concessões e segurança pública. Agenda fiscal equilibrada. Resultados positivos em mobilidade e segurança, com atrasos em saúde e educação técnica. Risco BAIXO.'
+    },
+    { id:'nikolas', name:'Nikolas Ferreira', number:'17', party:'PL', state:'MG', role:'Deputado Federal • MG',
+      avatar:'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400',
+      overall:68, ipr:58, ai:87, rank:'#102 de 164', attendance:'91%', costMin:'R$ 0,68/min',
+      costVote:'R$ 9,20 / voto', ceapTotal:44800, effectiveRate:'2,2% (Média: 1,8%)',
+      becameLaw:'4 leis sancionadas', totalProps:'91 propostas', donutPct:48, risk:'MÉDIO', isCaricature:false,
+      radarPoints:'100,48 140,82 125,128 100,148 60,128 58,82',
+      radarLabels:['Integridade (72)','IPR (58)','Fiscal (68)','Presença (91)','Leis (55)','IA (87)'],
+      best:'Alto Engajamento Digital', worst:'Prod. Legislativa Abaixo da Média', region:'MG',
+      gargalos:[
+        {tema:'Segurança Pública — MG',promessa:'PL federal de proteção às famílias de policiais',entrega:30,status:'ATRASADO',cor:'amber',detalhe:'Projeto tramita na CCJ sem relatório aprovado até setembro de 2025.'},
+        {tema:'Emprego e Indústria — MG',promessa:'Zona de livre comércio no Triângulo Mineiro',entrega:10,status:'NÃO ENTREGUE',cor:'rose',detalhe:'Proposta ainda não foi formalizada em projeto de lei.'},
+        {tema:'Combate às Drogas',promessa:'Apoio ao PL das Comunidades Terapêuticas',entrega:65,status:'EM ANDAMENTO',cor:'amber',detalhe:'Votou a favor do Marco Regulatório. Implementação em estados.'}
+      ],
+      forensics:[
+        {source:'Discurso Plenário 2023',verdict:'POLÊMICO',color:'rose',quote:'"O movimento que tentou desestabilizar o 8 de janeiro foi coordenado pela esquerda."',fonte:'Câmara dos Deputados'},
+        {source:'Votação Câmara 2024',verdict:'COERENTE',color:'blue',quote:'"Votei contra toda e qualquer ampliação do imposto sobre a renda do trabalhador."',fonte:'Diário da Câmara'},
+        {source:'Declaração de Bens 2023',verdict:'AUDITADO',color:'amber',quote:'"Todos os meus bens estão devidamente declarados e dentro do patrimônio de família."',fonte:'TSE / Portal Câmara'}
+      ],
+      verdictText:'Parlamentar com alto alcance digital mas produção legislativa abaixo do potencial. Foco em pauta comportamental e segurança. Histórico de declarações controversas. Risco MÉDIO.'
+    },
+    { id:'caneta_azul', name:'Manuel Gomes (Caneta Azul)', number:'99', party:'CANDIDATURA MEME', state:'MA', role:'Candidato a Deputado • MA',
+      avatar:'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400',
+      overall:32, ipr:15, ai:40, rank:'#164 de 164', attendance:'0%', costMin:'R$ 0,00/min',
+      costVote:'R$ 0,00 / voto', ceapTotal:0, effectiveRate:'0.0% (Zero Leis)',
+      becameLaw:'0 leis', totalProps:'1 proposta genérica', donutPct:5, risk:'MEME / FOLCLORE', isCaricature:true,
+      caricatureDesc:'Candidatura baseada exclusivamente em meme viral de rede social. Registro no TSE contém apenas 1 proposta genérica ("Ajudar o povo com caneta azul"), 0 experiência em gestão pública e alto risco de servir como puxador de quociente eleitoral partidário.',
+      carProps:'1 proposta (< 4 mínimo)', carExp:'0 mandatos / 0 gestão', carEffect:'Transferência de quociente', carRec:'⚠️ Risco ao Voto Consciente',
+      radarPoints:'100,85 115,90 110,110 100,100 90,110 85,90',
+      radarLabels:['Integridade (30)','IPR (15)','Fiscal (20)','Presença (0)','Leis (5)','IA (40)'],
+      best:'Fama Viral em Redes', worst:'Ausência Total de Plano de Governo', region:'MA',
+      gargalos:[
+        {tema:'Plano de Governo Registrado',promessa:'"Ajudar todo mundo a escrever bonito"',entrega:0,status:'NÃO ENTREGUE',cor:'rose',detalhe:'Nenhum projeto ou documento técnico protocolado no TSE.'},
+        {tema:'Conhecimento de Legislação',promessa:'Zero propostas de saúde ou educação',entrega:0,status:'NÃO ENTREGUE',cor:'rose',detalhe:'Ausência de qualquer diretriz para a gestão de tributos ou orçamento.'},
+        {tema:'Vínculo Programático',promessa:'Candidatura alavancada por meme de internet',entrega:0,status:'ATRASADO',cor:'rose',detalhe:'Histórico 100% voltado a entretenimento e shows.'}
+      ],
+      forensics:[
+        {source:'Registro TSE 2026',verdict:'SEM PROPOSTAS',color:'rose',quote:'"Olha, eu me candidatei porque o povo pediu na internet e eu gosto de cantar."',fonte:'DivulgaCandContas TSE'},
+        {source:'Entrevista PodCast 2024',verdict:'FOLCLÓRICO',color:'rose',quote:'"Se eu for eleito eu vou fazer uma caneta azul para cada brasileiro."',fonte:'Checagem Cívica'},
+        {source:'Análise de Quociente',verdict:'PUXADOR SUSPEITO',color:'amber',quote:'"Votos acumulados serão transferidos para eleger candidatos ocultos da coligação."',fonte:'Auditoria Eleitoral'}
+      ],
+      verdictText:'CANDIDATURA CARICATA / MEME DETECTADA VIA ALGORITMO: Candidato com 1 única proposta registrada no TSE, zero experiência em administração pública e ausência de metas orçamentárias. Risco máximo de servir como puxador de legenda.'
+    }
+  ];
+
+  let activeCandidate = kineticCandidates[0];
+  let duelCandidate   = kineticCandidates[1];
+  let currentFeedFilter = 'all';
+
+  function filterFeedByCategory(cat) {
+    currentFeedFilter = cat;
+    ['all','serious','meme'].forEach(id => {
+      const btn = document.getElementById('btn-feed-filter-' + id);
+      if (btn) {
+        if (id === cat) {
+          btn.className = 'px-3 py-1.5 rounded-xl text-xs font-bold font-mono bg-slate-900 text-white transition cursor-pointer';
+        } else {
+          btn.className = 'px-3 py-1.5 rounded-xl text-xs font-bold font-mono bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition cursor-pointer';
+        }
+      }
+    });
+    renderFeedGrid();
+  }
+
+  function renderFeedGrid() {
+    const grid = document.getElementById('k-feed-grid');
+    let displayed = kineticCandidates;
+    if (currentFeedFilter === 'serious') displayed = kineticCandidates.filter(c => !c.isCaricature);
+    if (currentFeedFilter === 'meme') displayed = kineticCandidates.filter(c => c.isCaricature);
+
+    grid.innerHTML = displayed.map(c => {
+      const isActive = c.id === activeCandidate.id;
+      const riskClass = c.isCaricature ? 'risk-meme' : (c.risk==='BAIXO'?'risk-low':c.risk==='MÉDIO'?'risk-med':'risk-high');
+      return `<div onclick="selectCandidate('${c.id}')"
+        class="feed-card swiss-card rounded-2xl p-3.5 space-y-2.5 ${isActive?'active-feed':''}">
+        <div class="flex items-center gap-2">
+          <img src="${c.avatar}" class="w-11 h-11 rounded-xl object-cover border border-slate-200 shadow-sm" alt="${c.name}">
+          <div class="min-w-0">
+            <p class="font-black text-xs text-slate-900 truncate">${c.name}</p>
+            <p class="text-[9.5px] font-mono text-slate-500 font-semibold truncate">${c.party} • ${c.state}</p>
+          </div>
+        </div>
+        <div class="text-[9.5px] text-slate-600 font-medium leading-snug truncate">${c.role}</div>
+        <div class="flex items-center justify-between pt-0.5">
+          <div class="text-center"><div class="text-[8px] font-mono text-slate-400 uppercase">Score</div><div class="text-base font-black font-mono text-blue-600">${c.overall}</div></div>
+          <div class="text-center"><div class="text-[8px] font-mono text-slate-400 uppercase">IPR</div><div class="text-base font-black font-mono text-indigo-600">${c.ipr}</div></div>
+          <div class="text-center"><div class="text-[8px] font-mono text-slate-400 uppercase">IA</div><div class="text-base font-black font-mono text-emerald-600">${c.ai}</div></div>
+        </div>
+        <div class="flex items-center justify-between pt-0.5">
+          <span class="swiss-tag ${riskClass}">${c.isCaricature ? '🎭 MEME' : 'RISCO ' + c.risk}</span>
+          <span class="text-[9px] font-mono text-slate-500">${c.rank}</span>
+        </div>
+        ${isActive?'<div class="h-0.5 rounded-full bg-blue-600 mt-1"></div>':''}
+      </div>`;
+    }).join('');
+  }
+
+  function renderChips() {
+    const el = document.getElementById('k-cand-chips');
+    el.innerHTML = kineticCandidates.map(c => `
+      <button onclick="selectCandidate('${c.id}')"
+        class="px-3 py-1.5 rounded-xl text-xs font-bold font-mono transition flex items-center gap-1 shrink-0 cursor-pointer
+        ${c.id===activeCandidate.id?'bg-slate-900 text-white':'bg-white hover:bg-slate-100 text-slate-700 border border-slate-200'}">
+        ${c.isCaricature ? '🎭 ' : ''}${c.name.split(' ')[0]}<span class="text-[9px] opacity-70">(${c.party})</span>
+      </button>`).join('');
+  }
+
+  function renderDueloChips() {
+    const el = document.getElementById('k-duelo-chips');
+    el.innerHTML = kineticCandidates.filter(c=>c.id!==activeCandidate.id).map(c=>`
+      <button onclick="selectDuelo('${c.id}')"
+        class="px-2.5 py-1 rounded-lg text-[10px] font-bold font-mono transition cursor-pointer
+        ${c.id===duelCandidate.id?'bg-purple-600 text-white':'bg-slate-100 hover:bg-slate-200 text-slate-700'}">
+        ${c.name.split(' ')[0]}
+      </button>`).join('');
+  }
+
+  function renderGargalos(c) {
+    document.getElementById('k-gargalo-region').textContent = c.region;
+    const cols={emerald:'bg-emerald-100 text-emerald-800',amber:'bg-amber-100 text-amber-800',rose:'bg-rose-100 text-rose-800'};
+    const fills={emerald:'bg-emerald-500',amber:'bg-amber-400',rose:'bg-rose-500'};
+    document.getElementById('k-gargalo-grid').innerHTML = c.gargalos.map((g,i)=>`
+      <div class="swiss-card rounded-2xl p-5 space-y-4">
+        <div class="flex items-start justify-between gap-2">
+          <div class="w-7 h-7 rounded-lg bg-slate-100 flex items-center justify-center font-black text-xs text-slate-600 shrink-0">${i+1}</div>
+          <span class="swiss-tag ${cols[g.cor]}">${g.status}</span>
+        </div>
+        <div>
+          <h4 class="font-black text-sm text-slate-900 mb-1">${g.tema}</h4>
+          <p class="text-[11px] text-slate-500 font-medium leading-relaxed">Promessa: <em>${g.promessa}</em></p>
+        </div>
+        <div class="space-y-1.5">
+          <div class="flex justify-between text-[10px] font-mono">
+            <span class="text-slate-500">Cumprimento:</span>
+            <strong class="text-slate-800">${g.entrega}%</strong>
+          </div>
+          <div class="gargalo-bar"><div class="gargalo-fill ${fills[g.cor]}" style="width:${g.entrega}%"></div></div>
+        </div>
+        <p class="text-[10px] text-slate-600 leading-relaxed">${g.detalhe}</p>
+      </div>`).join('');
+  }
+
+  function renderForensics(c) {
+    const vcols={emerald:'bg-emerald-100 text-emerald-800',blue:'bg-blue-100 text-blue-800',
+      indigo:'bg-indigo-100 text-indigo-800',amber:'bg-amber-100 text-amber-800',rose:'bg-rose-100 text-rose-800'};
+    document.getElementById('k-forensic-list').innerHTML = c.forensics.map(f=>`
+      <div onclick="burstSpectrum()" class="swiss-card rounded-2xl p-4 space-y-3 cursor-pointer hover:border-blue-300 transition">
+        <div class="flex items-center justify-between gap-2">
+          <span class="text-[10px] font-mono text-slate-400 font-semibold">${f.source}</span>
+          <span class="swiss-tag ${vcols[f.color]||'bg-slate-100 text-slate-700'}">${f.verdict}</span>
+        </div>
+        <p class="text-xs text-slate-700 italic font-medium leading-relaxed">${f.quote}</p>
+        <div class="flex items-center justify-between text-[10px] font-mono">
+          <span class="text-slate-500">Fonte: ${f.fonte}</span>
+          <span class="text-emerald-600 font-bold">✓ Auditado</span>
+        </div>
+      </div>`).join('');
+  }
+
+  function burstSpectrum() {
+    const bars = document.querySelectorAll('#voice-spectrum .voice-bar');
+    bars.forEach(b=>{ b.classList.remove('burst'); void b.offsetWidth; b.classList.add('burst'); });
+    setTimeout(()=>bars.forEach(b=>b.classList.remove('burst')),700);
+  }
+
+  function updateRadarLabels(c) {
+    ['k-radar-l0','k-radar-l1','k-radar-l2','k-radar-l3','k-radar-l4','k-radar-l5'].forEach((id,i)=>{
+      const el=document.getElementById(id); if(el) el.textContent=c.radarLabels[i];
+    });
+    document.getElementById('k-best').textContent  = c.best;
+    document.getElementById('k-worst').textContent = c.worst;
+  }
+
+  function renderDuelo() {
+    const a=activeCandidate, b=duelCandidate;
+    document.getElementById('kd-avatar-a').src=a.avatar;
+    document.getElementById('kd-name-a').textContent=a.name;
+    document.getElementById('kd-party-a').textContent=a.party+' • '+a.state;
+    document.getElementById('kd-avatar-b').src=b.avatar;
+    document.getElementById('kd-name-b').textContent=b.name;
+    document.getElementById('kd-party-b').textContent=b.party+' • '+b.state;
+
+    const metrics=[
+      {label:'Score Geral',key:'overall',fmt:v=>v},
+      {label:'IPR',key:'ipr',fmt:v=>v},
+      {label:'Auditoria IA',key:'ai',fmt:v=>v},
+      {label:'Custo/min',key:'costMin',fmt:v=>v},
+      {label:'CEAP/mês',key:'ceapTotal',fmt:v=>'R$ '+v.toLocaleString('pt-BR'),lower:true}
+    ];
+    const stats=(cand,opp)=>metrics.map(m=>{
+      const val=cand[m.key], oval=opp[m.key];
+      const isNum=typeof val==='number';
+      const win=isNum?(m.lower?val<=oval:val>=oval):false;
+      return `<div class="flex justify-between items-center p-2 rounded-lg ${win&&isNum?'bg-blue-50 border border-blue-200':'bg-white border border-slate-200'}">
+        <span class="text-slate-500 text-[10px]">${m.label}</span>
+        <strong class="${win&&isNum?'text-blue-700':'text-slate-700'}">${m.fmt(val)}</strong>
+      </div>`;
+    }).join('');
+
+    document.getElementById('kd-stats-a').innerHTML=stats(a,b);
+    document.getElementById('kd-stats-b').innerHTML=stats(b,a);
+
+    const v=document.getElementById('k-duelo-verdict');
+    const winner=a.overall>=b.overall?a.name:b.name;
+    const diff=Math.abs(a.overall-b.overall);
+    v.textContent=`🏆 Vantagem geral para ${winner} com diferença de ${diff} pontos no score cívico composto (Fórmula Figuras Políticas 2026).`;
+    v.classList.remove('hidden');
+    renderDueloChips();
+  }
+
+  function selectCandidate(id) {
+    const c=kineticCandidates.find(x=>x.id===id);
+    if(!c) return;
+    activeCandidate=c;
+    if(duelCandidate.id===c.id) duelCandidate=kineticCandidates.find(x=>x.id!==c.id);
+    renderAll();
+  }
+
+  function selectDuelo(id) {
+    const c=kineticCandidates.find(x=>x.id===id);
+    if(!c||c.id===activeCandidate.id) return;
+    duelCandidate=c;
+    renderDuelo();
+  }
+
+  function updatePocketSimulator(salaryVal) {
+    salaryVal=parseFloat(salaryVal);
+    document.getElementById('k-salary-display').textContent='R$ '+salaryVal.toLocaleString('pt-BR')+' / mês';
+    const taxRate=salaryVal<3000?0.08:(salaryVal<7000?0.15:0.22);
+    const monthlyTax=salaryVal*taxRate;
+    const costReal=(monthlyTax*0.00016)*(activeCandidate.id==='flavio'?1.4:0.85);
+    document.getElementById('k-sim-month').textContent='R$ '+costReal.toFixed(2).replace('.',',');
+    document.getElementById('k-sim-ceap').textContent='R$ '+(activeCandidate.ceapTotal||0).toLocaleString('pt-BR');
+    document.getElementById('k-sim-vote').textContent=activeCandidate.costVote||'—';
+    const salaryPerSec=salaryVal/(22*8*3600);
+    const secsWorked=Math.max(5,Math.round(costReal/salaryPerSec));
+    document.getElementById('k-sim-time').textContent=Math.floor(secsWorked/60)+'m '+(secsWorked%60)+'s';
+    document.getElementById('k-sim-return').textContent='+R$ '+(costReal*(activeCandidate.ipr/100*28.5)).toFixed(2).replace('.',',');
+    document.getElementById('k-sim-tax').textContent='R$ '+monthlyTax.toFixed(0)+'/mês';
+    document.getElementById('k-sim-meals').textContent=(costReal/15).toFixed(1)+' refeições/mês';
+  }
+
+  function renderAll() {
+    const c=activeCandidate;
+    renderFeedGrid(); renderChips();
+    document.getElementById('k-avatar').src=c.avatar;
+    document.getElementById('k-name').textContent=c.name;
+    document.getElementById('k-number').textContent='Nº '+c.number;
+    document.getElementById('k-party-badge').textContent=c.party+' / '+c.state;
+    document.getElementById('k-role').textContent=c.role;
+    document.getElementById('k-rank').textContent=c.rank;
+    document.getElementById('k-attendance').textContent=c.attendance;
+    document.getElementById('k-cost-min').textContent=c.costMin;
+    document.getElementById('k-overall').textContent=c.overall;
+    document.getElementById('k-ipr').textContent=c.ipr;
+    document.getElementById('k-ai').textContent=c.ai;
+    document.getElementById('k-donut-pct').textContent=c.donutPct+'%';
+    document.getElementById('k-donut-val').setAttribute('stroke-dasharray',c.donutPct+', '+(100-c.donutPct));
+    document.getElementById('k-total-props').textContent=c.totalProps;
+    document.getElementById('k-became-law').textContent=c.becameLaw;
+    document.getElementById('k-effect-rate').textContent=c.effectiveRate;
+    document.getElementById('k-radar-poly').setAttribute('points',c.radarPoints);
+    updateRadarLabels(c);
+
+    // Painel Especial de Caricatura
+    const carPanel = document.getElementById('k-caricature-panel');
+    const carBadge = document.getElementById('k-caricature-badge');
+    if (c.isCaricature) {
+      carPanel.classList.remove('hidden');
+      if(carBadge) carBadge.classList.remove('hidden');
+      document.getElementById('k-caricature-desc').textContent = c.caricatureDesc;
+      document.getElementById('k-car-props').textContent = c.carProps;
+      document.getElementById('k-car-exp').textContent = c.carExp;
+      document.getElementById('k-car-effect').textContent = c.carEffect;
+      document.getElementById('k-car-rec').textContent = c.carRec;
+    } else {
+      carPanel.classList.add('hidden');
+      if(carBadge) carBadge.classList.add('hidden');
+    }
+
+    renderGargalos(c);
+    renderForensics(c);
+    updatePocketSimulator(document.getElementById('k-salary-slider').value);
+    renderDuelo();
+    if(typeof lucide!=='undefined') lucide.createIcons();
+  }
+
+  function openKineticModal() {
+    const c=activeCandidate;
+    document.getElementById('km-avatar').src=c.avatar;
+    document.getElementById('km-name').textContent=c.name;
+    document.getElementById('km-party').textContent=c.party+' • '+c.role;
+    document.getElementById('km-ai-score').textContent=c.ai;
+    document.getElementById('km-ipr').textContent=c.ipr;
+    document.getElementById('km-attendance').textContent=c.attendance;
+    document.getElementById('km-costmin').textContent=c.costMin;
+    document.getElementById('km-verdict').textContent=c.verdictText;
+    const riskClass=c.isCaricature?'risk-meme':(c.risk==='BAIXO'?'risk-low':c.risk==='MÉDIO'?'risk-med':'risk-high');
+    document.getElementById('km-risk-badge').innerHTML=`<span class="swiss-tag ${riskClass}">${c.isCaricature?'ALERTA: CANETA/MEME':'RISCO AO ELEITOR: '+c.risk}</span>`;
+    const modal=document.getElementById('kinetic-modal');
+    modal.classList.remove('hidden'); modal.classList.add('flex');
+    if(typeof lucide!=='undefined') lucide.createIcons();
+  }
+
+  function closeKineticModal() {
+    const modal=document.getElementById('kinetic-modal');
+    modal.classList.add('hidden'); modal.classList.remove('flex');
+  }
+
+  document.getElementById('kinetic-modal').addEventListener('click',function(e){ if(e.target===this) closeKineticModal(); });
+  
+  if (document.readyState === 'complete' || document.readyState === 'interactive') { renderAll(); }
+  else { document.addEventListener('DOMContentLoaded', renderAll); }
+  </script>
+</body>
+</html>

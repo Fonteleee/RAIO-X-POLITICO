@@ -33,3 +33,5 @@ build/
 data/*.db
 data/*.sqlite
 
+# Local output
+output/
