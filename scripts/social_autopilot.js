@@ -7,6 +7,7 @@
 
 const fs = require('node:fs');
 const path = require('node:path');
+const crypto = require('node:crypto');
 const { AppDatabase } = require('../src/db/database');
 
 // Calendário Editorial Semanal Automatizado
@@ -347,6 +348,27 @@ Faça o teste de compatibilidade gratuito:
     };
   }
 
+  _buildOAuth1Header({ method, url, consumerKey, consumerSecret, token, tokenSecret }) {
+    const oauthParams = {
+      oauth_consumer_key: consumerKey,
+      oauth_nonce: crypto.randomBytes(16).toString('hex'),
+      oauth_signature_method: 'HMAC-SHA1',
+      oauth_timestamp: Math.floor(Date.now() / 1000).toString(),
+      oauth_token: token,
+      oauth_version: '1.0'
+    };
+
+    const sortedKeys = Object.keys(oauthParams).sort();
+    const paramString = sortedKeys.map(k => `${encodeURIComponent(k)}=${encodeURIComponent(oauthParams[k])}`).join('&');
+    const baseString = `${method.toUpperCase()}&${encodeURIComponent(url)}&${encodeURIComponent(paramString)}`;
+    const signingKey = `${encodeURIComponent(consumerSecret)}&${encodeURIComponent(tokenSecret)}`;
+    const signature = crypto.createHmac('sha1', signingKey).update(baseString).digest('base64');
+
+    oauthParams.oauth_signature = signature;
+    const headerParts = Object.keys(oauthParams).sort().map(k => `${encodeURIComponent(k)}="${encodeURIComponent(oauthParams[k])}"`);
+    return `OAuth ${headerParts.join(', ')}`;
+  }
+
   async dispatch(post) {
     const queueDir = path.join(__dirname, '..', 'output', 'social_queue');
     if (!fs.existsSync(queueDir)) {
@@ -457,6 +479,64 @@ Faça o teste de compatibilidade gratuito:
         }
       } catch (err) {
         console.warn(`⚠️ Erro ao disparar Threads: ${err.message}`);
+      }
+    }
+
+    // 5. X (Twitter) API v2 Dispatch (Suporta OAuth 1.0a e OAuth 2.0)
+    const tweetText = `${post.title}\n\n${post.copy.x}\n\n🔗 ${post.link}`.slice(0, 280);
+    const hasOAuth1 = process.env.X_API_KEY && process.env.X_API_SECRET && process.env.X_ACCESS_TOKEN && process.env.X_ACCESS_SECRET;
+    const hasOAuth2 = process.env.X_BEARER_TOKEN || process.env.X_ACCESS_TOKEN;
+
+    if (hasOAuth1) {
+      try {
+        const url = 'https://api.twitter.com/2/tweets';
+        const authHeader = this._buildOAuth1Header({
+          method: 'POST',
+          url,
+          consumerKey: process.env.X_API_KEY,
+          consumerSecret: process.env.X_API_SECRET,
+          token: process.env.X_ACCESS_TOKEN,
+          tokenSecret: process.env.X_ACCESS_SECRET
+        });
+        const res = await fetch(url, {
+          method: 'POST',
+          headers: {
+            'Authorization': authHeader,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ text: tweetText })
+        });
+        if (res.ok) {
+          results.x = true;
+          console.log('✅ Publicado com sucesso no X (Twitter) via OAuth 1.0a');
+        } else {
+          const errData = await res.json().catch(() => ({}));
+          console.warn(`⚠️ X (Twitter) API retornou status ${res.status}:`, JSON.stringify(errData));
+        }
+      } catch (err) {
+        console.warn(`⚠️ Erro ao disparar X (Twitter) OAuth 1.0a: ${err.message}`);
+      }
+    } else if (hasOAuth2) {
+      try {
+        const url = 'https://api.twitter.com/2/tweets';
+        const token = process.env.X_BEARER_TOKEN || process.env.X_ACCESS_TOKEN;
+        const res = await fetch(url, {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ text: tweetText })
+        });
+        if (res.ok) {
+          results.x = true;
+          console.log('✅ Publicado com sucesso no X (Twitter) via OAuth 2.0');
+        } else {
+          const errData = await res.json().catch(() => ({}));
+          console.warn(`⚠️ X (Twitter) API retornou status ${res.status}:`, JSON.stringify(errData));
+        }
+      } catch (err) {
+        console.warn(`⚠️ Erro ao disparar X (Twitter) OAuth 2.0: ${err.message}`);
       }
     }
 
