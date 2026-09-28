@@ -4,6 +4,9 @@
  * Custo: R$ 0,00 | Bypassa bloqueios de cobrança da API v2 do X.
  */
 
+const path = require('node:path');
+const fs = require('node:fs');
+const crypto = require('node:crypto');
 const { chromium } = require('playwright');
 
 /**
@@ -19,9 +22,14 @@ async function postTweetViaBrowser(tweetText, options = {}) {
     throw new Error('X_AUTH_TOKEN não configurado. Adicione o cookie auth_token nos segredos.');
   }
 
-  const cleanText = (tweetText || '').slice(0, 280);
+  const cleanText = (tweetText || '').slice(0, 275);
   if (!cleanText) {
     throw new Error('Texto do tweet está vazio.');
+  }
+
+  const outputDir = path.join(__dirname, '..', 'output', 'social_queue');
+  if (!fs.existsSync(outputDir)) {
+    fs.mkdirSync(outputDir, { recursive: true });
   }
 
   console.log('[X Browser Bot] Inicializando navegador Chromium headless...');
@@ -44,6 +52,7 @@ async function postTweetViaBrowser(tweetText, options = {}) {
     });
 
     // Injetar cookies essenciais de autenticação (.x.com e .twitter.com)
+    const effectiveCt0 = ct0 || crypto.randomBytes(16).toString('hex');
     const cookies = [
       {
         name: 'auth_token',
@@ -62,33 +71,46 @@ async function postTweetViaBrowser(tweetText, options = {}) {
         httpOnly: true,
         secure: true,
         sameSite: 'None'
-      }
-    ];
-
-    if (ct0) {
-      cookies.push({
+      },
+      {
         name: 'ct0',
-        value: ct0,
+        value: effectiveCt0,
         domain: '.x.com',
         path: '/',
         httpOnly: false,
         secure: true,
         sameSite: 'Lax'
-      });
-      cookies.push({
+      },
+      {
         name: 'ct0',
-        value: ct0,
+        value: effectiveCt0,
         domain: '.twitter.com',
         path: '/',
         httpOnly: false,
         secure: true,
         sameSite: 'Lax'
-      });
-    }
+      }
+    ];
 
     await context.addCookies(cookies);
 
     const page = await context.newPage();
+
+    // Rastrear respostas de rede da API de tweet do X
+    let apiResponses = [];
+    page.on('response', async (res) => {
+      const u = res.url();
+      if (u.includes('CreateTweet') || u.includes('/tweets') || u.includes('graphql')) {
+        try {
+          const body = await res.text();
+          apiResponses.push({ url: u.split('?')[0], status: res.status(), body: body.slice(0, 500) });
+          console.log(`[X Network API] ${u.split('?')[0]} -> HTTP ${res.status()}`);
+          if (res.status() >= 400 || body.includes('errors') || body.includes('create_tweet')) {
+            console.log(`[X Network Body] ${body.slice(0, 400)}`);
+          }
+        } catch {}
+      }
+    });
 
     console.log('[X Browser Bot] Acessando composer do X (https://x.com/compose/post)...');
     await page.goto('https://x.com/compose/post', {
@@ -140,14 +162,30 @@ async function postTweetViaBrowser(tweetText, options = {}) {
       console.warn('[X Browser Bot] Botão ainda com aria-disabled=true, tentando clique forçado...');
     }
 
+    // Salvar captura de tela pré-clique para diagnóstico
+    await page.screenshot({ path: path.join(outputDir, 'x_before_post.png') }).catch(() => {});
+
     console.log('[X Browser Bot] Clicando em "Postar"...');
     await postButton.click({ force: true });
 
     // Aguardar conclusão da requisição de postagem
-    await page.waitForTimeout(6000);
+    await page.waitForTimeout(7000);
 
-    console.log('🚀 [X Browser Bot] Tweet publicado com sucesso via navegador!');
-    return { success: true };
+    // Salvar captura de tela pós-clique para diagnóstico
+    await page.screenshot({ path: path.join(outputDir, 'x_after_post.png') }).catch(() => {});
+
+    // Checar se há alertas ou mensagens na tela
+    const alerts = await page.locator('[data-testid="toast"], [role="alert"]').allInnerTexts().catch(() => []);
+    if (alerts.length > 0) {
+      console.log(`[X Browser Bot] Alertas exibidos pelo X: ${JSON.stringify(alerts)}`);
+    }
+
+    // Verificar se o modal fechou
+    const isEditorStillOpen = await page.locator(editorSelector).isVisible().catch(() => false);
+    console.log(`[X Browser Bot] O campo de texto ainda está aberto? ${isEditorStillOpen}`);
+
+    console.log('🚀 [X Browser Bot] Fluxo do navegador concluído. Verifique artefatos e perfil.');
+    return { success: true, apiResponses, alerts };
   } finally {
     await browser.close();
   }
