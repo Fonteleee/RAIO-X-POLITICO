@@ -21,14 +21,10 @@ jobs:
       - name: Configurar Node.js LTS
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: 'npm'
-
-      - name: Instalar Dependências
-        run: npm ci --prefer-offline || npm install
+          node-version: 22
 
       - name: Semear Banco de Dados Cívico (SQLite)
-        run: npm run seed
+        run: node src/db/seed.js
 
       - name: Executar Motor Autônomo de Marketing
         env:
