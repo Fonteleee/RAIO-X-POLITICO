@@ -518,6 +518,9 @@ Faça o teste de compatibilidade gratuito:
           console.log(`🚀 [X Autopilot] Tweet publicado com sucesso via OAuth 1.0a! ID do Tweet: ${resBody.data.id}`);
         } else {
           console.warn(`⚠️ [X Autopilot] OAuth 1.0a retornou HTTP ${res.status}:`, JSON.stringify(resBody));
+          if (res.status === 402 || JSON.stringify(resBody).includes('credits-depleted')) {
+            console.warn(`💳 [X Autopilot] ATENÇÃO: O X bloqueou a postagem porque a conta está no plano "Pay Per Use" com saldo $0.00 (Status 402: credits depleted). O X encerrou a gratuidade da API v2.`);
+          }
         }
       } catch (err) {
         console.warn(`⚠️ [X Autopilot] Falha de rede em OAuth 1.0a: ${err.message}`);
@@ -545,9 +548,58 @@ Faça o teste de compatibilidade gratuito:
           console.log(`🚀 [X Autopilot] Tweet publicado com sucesso via OAuth 2.0! ID do Tweet: ${resBody.data.id}`);
         } else {
           console.warn(`⚠️ [X Autopilot] OAuth 2.0 retornou HTTP ${res.status}:`, JSON.stringify(resBody));
+          if (res.status === 402 || JSON.stringify(resBody).includes('credits-depleted')) {
+            console.warn(`💳 [X Autopilot] ATENÇÃO: O X bloqueou a postagem porque a conta está no plano "Pay Per Use" com saldo $0.00 (Status 402: credits depleted). O X encerrou a gratuidade da API v2.`);
+          }
         }
       } catch (err) {
         console.warn(`⚠️ [X Autopilot] Falha de rede em OAuth 2.0: ${err.message}`);
+      }
+    }
+
+    // 6. Bluesky (AT Protocol) Dispatch - 100% Gratuito
+    if (process.env.BLUESKY_HANDLE && process.env.BLUESKY_APP_PASSWORD) {
+      try {
+        console.log(`[Bluesky Autopilot] Autenticando com @${process.env.BLUESKY_HANDLE}...`);
+        const sessionRes = await fetch('https://bsky.social/xrpc/com.atproto.server.createSession', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            identifier: process.env.BLUESKY_HANDLE,
+            password: process.env.BLUESKY_APP_PASSWORD
+          })
+        });
+        const session = await sessionRes.json();
+        if (session.accessJwt && session.did) {
+          const bskyText = `${post.title}\n\n${post.copy.x}\n\n🔗 ${post.link}`.slice(0, 300);
+          const postRes = await fetch('https://bsky.social/xrpc/com.atproto.repo.createRecord', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${session.accessJwt}`
+            },
+            body: JSON.stringify({
+              repo: session.did,
+              collection: 'app.bsky.feed.post',
+              record: {
+                '$type': 'app.bsky.feed.post',
+                text: bskyText,
+                createdAt: new Date().toISOString()
+              }
+            })
+          });
+          const postData = await postRes.json();
+          if (postRes.ok && postData.uri) {
+            results.bluesky = true;
+            console.log(`🚀 [Bluesky Autopilot] Post publicado com sucesso no Bluesky! URI: ${postData.uri}`);
+          } else {
+            console.warn(`⚠️ [Bluesky Autopilot] Erro ao postar:`, JSON.stringify(postData));
+          }
+        } else {
+          console.warn(`⚠️ [Bluesky Autopilot] Falha de autenticação:`, JSON.stringify(session));
+        }
+      } catch (err) {
+        console.warn(`⚠️ [Bluesky Autopilot] Erro de rede: ${err.message}`);
       }
     }
 
