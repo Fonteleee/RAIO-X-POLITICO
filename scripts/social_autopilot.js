@@ -482,11 +482,16 @@ Faça o teste de compatibilidade gratuito:
       }
     }
 
-    // 5. X (Twitter) API v2 Dispatch (Suporta OAuth 1.0a e OAuth 2.0)
+    // 5. X (Twitter) API v2 Dispatch
     const tweetText = `${post.title}\n\n${post.copy.x}\n\n🔗 ${post.link}`.slice(0, 280);
-    const hasOAuth1 = process.env.X_API_KEY && process.env.X_API_SECRET && process.env.X_ACCESS_TOKEN && process.env.X_ACCESS_SECRET;
-    const hasOAuth2 = process.env.X_BEARER_TOKEN || process.env.X_ACCESS_TOKEN;
+    const hasOAuth1 = !!(process.env.X_API_KEY && process.env.X_API_SECRET && process.env.X_ACCESS_TOKEN && process.env.X_ACCESS_SECRET);
+    const hasOAuth2 = !!(process.env.X_BEARER_TOKEN || process.env.X_ACCESS_TOKEN);
 
+    console.log(`[X Autopilot] Checando credenciais: OAuth 1.0a disponível: ${hasOAuth1} (API_KEY: ${!!process.env.X_API_KEY}, ACCESS_TOKEN: ${!!process.env.X_ACCESS_TOKEN}) | OAuth 2.0 disponível: ${hasOAuth2}`);
+
+    let xSuccess = false;
+
+    // Tentativa 1: OAuth 1.0a (se as 4 chaves estiverem presentes)
     if (hasOAuth1) {
       try {
         const url = 'https://api.twitter.com/2/tweets';
@@ -506,20 +511,25 @@ Faça o teste de compatibilidade gratuito:
           },
           body: JSON.stringify({ text: tweetText })
         });
-        if (res.ok) {
+        const resBody = await res.json().catch(() => ({}));
+        if (res.ok && resBody.data && resBody.data.id) {
+          xSuccess = true;
           results.x = true;
-          console.log('✅ Publicado com sucesso no X (Twitter) via OAuth 1.0a');
+          console.log(`🚀 [X Autopilot] Tweet publicado com sucesso via OAuth 1.0a! ID do Tweet: ${resBody.data.id}`);
         } else {
-          const errData = await res.json().catch(() => ({}));
-          console.warn(`⚠️ X (Twitter) API retornou status ${res.status}:`, JSON.stringify(errData));
+          console.warn(`⚠️ [X Autopilot] OAuth 1.0a retornou HTTP ${res.status}:`, JSON.stringify(resBody));
         }
       } catch (err) {
-        console.warn(`⚠️ Erro ao disparar X (Twitter) OAuth 1.0a: ${err.message}`);
+        console.warn(`⚠️ [X Autopilot] Falha de rede em OAuth 1.0a: ${err.message}`);
       }
-    } else if (hasOAuth2) {
+    }
+
+    // Tentativa 2: Fallback para OAuth 2.0 (se OAuth 1.0a não publicou e temos token)
+    if (!xSuccess && hasOAuth2) {
       try {
         const url = 'https://api.twitter.com/2/tweets';
         const token = process.env.X_BEARER_TOKEN || process.env.X_ACCESS_TOKEN;
+        console.log('[X Autopilot] Tentando envio via OAuth 2.0 Bearer Token...');
         const res = await fetch(url, {
           method: 'POST',
           headers: {
@@ -528,15 +538,16 @@ Faça o teste de compatibilidade gratuito:
           },
           body: JSON.stringify({ text: tweetText })
         });
-        if (res.ok) {
+        const resBody = await res.json().catch(() => ({}));
+        if (res.ok && resBody.data && resBody.data.id) {
+          xSuccess = true;
           results.x = true;
-          console.log('✅ Publicado com sucesso no X (Twitter) via OAuth 2.0');
+          console.log(`🚀 [X Autopilot] Tweet publicado com sucesso via OAuth 2.0! ID do Tweet: ${resBody.data.id}`);
         } else {
-          const errData = await res.json().catch(() => ({}));
-          console.warn(`⚠️ X (Twitter) API retornou status ${res.status}:`, JSON.stringify(errData));
+          console.warn(`⚠️ [X Autopilot] OAuth 2.0 retornou HTTP ${res.status}:`, JSON.stringify(resBody));
         }
       } catch (err) {
-        console.warn(`⚠️ Erro ao disparar X (Twitter) OAuth 2.0: ${err.message}`);
+        console.warn(`⚠️ [X Autopilot] Falha de rede em OAuth 2.0: ${err.message}`);
       }
     }
 
