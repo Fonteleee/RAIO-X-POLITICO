@@ -4,6 +4,8 @@ on:
   schedule:
     # 12:00 UTC = 09:00 Horário de Brasília (BRT), todos os dias
     - cron: '0 12 * * *'
+  push:
+    branches: [ main ]
   workflow_dispatch: # Permite disparar manualmente pelo painel do GitHub com 1 clique
 
 permissions:
