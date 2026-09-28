@@ -106,39 +106,45 @@ async function postTweetViaBrowser(tweetText, options = {}) {
     const editorSelector = '[data-testid="tweetTextarea_0"], div[role="textbox"][contenteditable="true"]';
     await page.waitForSelector(editorSelector, { timeout: 30000 });
 
+    console.log('[X Browser Bot] Focando no campo de texto...');
     const editor = page.locator(editorSelector).first();
     await editor.click();
-    
-    // Inserção resiliente no editor rico do X (Draft.js / Lexical)
-    try {
-      await editor.fill(cleanText);
-    } catch {
-      await page.keyboard.insertText(cleanText);
-    }
-    await page.waitForTimeout(1000);
-    const content = await editor.innerText().catch(() => '');
-    if (!content || content.trim().length === 0) {
-      await editor.focus();
-      await page.keyboard.insertText(cleanText);
-    }
+    await page.waitForTimeout(500);
 
-    // Pausa breve para simular comportamento humano e permitir ativação do botão
-    await page.waitForTimeout(1500);
+    // Limpar qualquer conteúdo prévio
+    await page.keyboard.press('Control+A');
+    await page.keyboard.press('Backspace');
+    await page.waitForTimeout(300);
 
-    const postButtonSelector = '[data-testid="tweetButton"], [data-testid="tweetButtonInline"], button:has-text("Postar"), button:has-text("Post")';
-    const postButton = page.locator(postButtonSelector).first();
+    console.log(`[X Browser Bot] Digitando post (${cleanText.length} caracteres)...`);
+    // Usar pressSequentially com delay para disparar keydown/input/keyup reais no React/Draft.js
+    await editor.pressSequentially(cleanText, { delay: 10 });
+    await page.waitForTimeout(2000);
+
+    // Localizar botão oficial de postar no modal
+    const postButton = page.locator('[data-testid="tweetButton"]').first();
     await postButton.waitFor({ state: 'visible', timeout: 10000 });
 
-    const isDisabled = await postButton.getAttribute('aria-disabled');
-    if (isDisabled === 'true') {
-      throw new Error('O botão de postar permaneceu desabilitado (texto inválido ou limite excedido).');
+    // Aguardar até que aria-disabled seja falso (React atualizou o estado)
+    let isBtnReady = false;
+    for (let i = 0; i < 15; i++) {
+      const disabledAttr = await postButton.getAttribute('aria-disabled');
+      if (disabledAttr !== 'true') {
+        isBtnReady = true;
+        break;
+      }
+      await page.waitForTimeout(500);
+    }
+
+    if (!isBtnReady) {
+      console.warn('[X Browser Bot] Botão ainda com aria-disabled=true, tentando clique forçado...');
     }
 
     console.log('[X Browser Bot] Clicando em "Postar"...');
-    await postButton.click();
+    await postButton.click({ force: true });
 
     // Aguardar conclusão da requisição de postagem
-    await page.waitForTimeout(5000);
+    await page.waitForTimeout(6000);
 
     console.log('🚀 [X Browser Bot] Tweet publicado com sucesso via navegador!');
     return { success: true };

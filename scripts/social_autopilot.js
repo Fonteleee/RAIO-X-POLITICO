@@ -147,18 +147,14 @@ class SocialMarketingAutopilot {
     const name1 = c1.ballot_name || c1.name;
     const name2 = c2.ballot_name || c2.name;
 
-    const copyX = `${config.title}
-${name1} (${c1.party}-${c1.state}) 🆚 ${name2} (${c2.party}-${c2.state})
+    const copyX = `⚔️ DUELO CÍVICO: ${name1} (${c1.party}) 🆚 ${name2} (${c2.party})
+• ${name1}: Nota ${c1.overall_score}/100
+• ${name2}: Nota ${c2.overall_score}/100
 
-📊 Nota Geral Auditada (6 Eixos Oficiais):
-• ${name1}: ${c1.overall_score}/100 (Integridade: ${r1.integridade || 75}%)
-• ${name2}: ${c2.overall_score}/100 (Integridade: ${r2.integridade || 75}%)
-
-Quem tem o melhor plano e histórico para 2026?
-${config.cta}
-🔗 https://raioxpolitico.org/dossie.html?id=${c1.id}
-
-#FigurasPoliticas #Eleicoes2026 #Transparencia #PoliticaBrasil`;
+Quem tem o melhor histórico para 2026?
+🔗 Compare no Figuras Políticas:
+https://raioxpolitico.org/dossie.html?id=${c1.id}
+#FigurasPoliticas`;
 
     const copyInstagram = `${config.title} 🔍
 ${name1} (${c1.party}) vs ${name2} (${c2.party})
@@ -203,19 +199,16 @@ Presença: ${r2.presenca || 85}%
 
   _buildCustoPost(config, cand, radar) {
     const name = cand.ballot_name || cand.name;
-    const copyX = `${config.title}
+    const copyX = `💸 SEGUNDA DO DINHEIRO PÚBLICO
 Quanto custa o mandato de ${name} (${cand.party}-${cand.state})?
 
-🔍 Auditoria Oficial TSE & Transparência:
 • Nota Geral: ${cand.overall_score}/100
-• Eficiência de Gastos: ${radar.eficiencia || 70}/100
+• Eficiência: ${radar.eficiencia || 70}/100
 • Integridade: ${radar.integridade || 75}/100
 
-Você concorda com a destinação dos recursos públicos?
-Audite os comprovantes:
-🔗 https://raioxpolitico.org/dossie.html?id=${cand.id}
-
-#Transparencia #DinheiroPublico #Eleicoes2026 #FigurasPoliticas`;
+🔗 Audite no Figuras Políticas:
+https://raioxpolitico.org/dossie.html?id=${cand.id}
+#FigurasPoliticas`;
 
     const copyInstagram = `${config.title} 🧾
 Você sabe quanto custa cada minuto de mandato de ${name} (${cand.party}-${cand.state})?
@@ -290,17 +283,13 @@ Veja como seu parlamentar votou nas pautas mais polêmicas:
     const t2 = top3[1] ? (top3[1].ballot_name || top3[1].name) : 'Candidato 2';
     const t3 = top3[2] ? (top3[2].ballot_name || top3[2].name) : 'Candidato 3';
 
-    const copy = `${config.title}
-Quem lidera o ranking de eficiência e integridade cívica esta semana?
+    const copy = `📊 TOP 3 DO RANKING NACIONAL:
+🥇 1º ${t1} (${top3[0]?.party || ''}) - Nota ${top3[0]?.overall_score || 85}
+🥈 2º ${t2} (${top3[1]?.party || ''}) - Nota ${top3[1]?.overall_score || 82}
+🥉 3º ${t3} (${top3[2]?.party || ''}) - Nota ${top3[2]?.overall_score || 80}
 
-🥇 1º Lugar: ${t1} (${top3[0]?.party || ''}) - Nota ${top3[0]?.overall_score || 85}
-🥈 2º Lugar: ${t2} (${top3[1]?.party || ''}) - Nota ${top3[1]?.overall_score || 82}
-🥉 3º Lugar: ${t3} (${top3[2]?.party || ''}) - Nota ${top3[2]?.overall_score || 80}
-
-Veja a posição do seu deputado no Ranking Nacional:
-🔗 https://raioxpolitico.org/index.html#ranking
-
-#RankingPolitico #EficienciaPublica #Eleicoes2026 #FigurasPoliticas`;
+🔗 Ranking completo: https://raioxpolitico.org/index.html#ranking
+#FigurasPoliticas`;
 
     return {
       date: new Date().toISOString(),
@@ -319,18 +308,13 @@ Veja a posição do seu deputado no Ranking Nacional:
 
   _buildPadraoPost(config, cand, radar) {
     const name = cand.ballot_name || cand.name;
-    const copy = `${config.title}
-Você sabe quem realmente te representa em 2026?
+    const copy = `🎯 MATCH ELEITORAL 2026
+Você sabe quem realmente te representa?
+${name} (${cand.party}-${cand.state}) • Nota Geral: ${cand.overall_score}/100
 
-Conheça o perfil completo de ${name} (${cand.party}-${cand.state}):
-• Nota Geral: ${cand.overall_score}/100
-• Integridade: ${radar.integridade || 80}/100
-• Presença: ${radar.presenca || 90}/100
-
-Faça o teste de compatibilidade gratuito:
-🔗 https://raioxpolitico.org/index.html#quiz
-
-#MatchEleitoral #Cidadania #Eleicoes2026 #FigurasPoliticas`;
+🔗 Teste de compatibilidade em 2 min:
+https://raioxpolitico.org/index.html#quiz
+#FigurasPoliticas`;
 
     return {
       date: new Date().toISOString(),
@@ -483,7 +467,7 @@ Faça o teste de compatibilidade gratuito:
     }
 
     // 5. X (Twitter) API v2 Dispatch
-    const tweetText = `${post.title}\n\n${post.copy.x}\n\n🔗 ${post.link}`.slice(0, 280);
+    const tweetText = (post.copy && post.copy.x ? post.copy.x : `${post.title}\n\n🔗 ${post.link}`).trim().slice(0, 275);
     const hasOAuth1 = !!(process.env.X_API_KEY && process.env.X_API_SECRET && process.env.X_ACCESS_TOKEN && process.env.X_ACCESS_SECRET);
     const hasOAuth2 = !!(process.env.X_BEARER_TOKEN || process.env.X_ACCESS_TOKEN);
 
