@@ -43,12 +43,21 @@ async function postTweetViaBrowser(tweetText, options = {}) {
       timezoneId: 'America/Sao_Paulo'
     });
 
-    // Injetar cookies essenciais de autenticação
+    // Injetar cookies essenciais de autenticação (.x.com e .twitter.com)
     const cookies = [
       {
         name: 'auth_token',
         value: authToken,
         domain: '.x.com',
+        path: '/',
+        httpOnly: true,
+        secure: true,
+        sameSite: 'None'
+      },
+      {
+        name: 'auth_token',
+        value: authToken,
+        domain: '.twitter.com',
         path: '/',
         httpOnly: true,
         secure: true,
@@ -61,6 +70,15 @@ async function postTweetViaBrowser(tweetText, options = {}) {
         name: 'ct0',
         value: ct0,
         domain: '.x.com',
+        path: '/',
+        httpOnly: false,
+        secure: true,
+        sameSite: 'Lax'
+      });
+      cookies.push({
+        name: 'ct0',
+        value: ct0,
+        domain: '.twitter.com',
         path: '/',
         httpOnly: false,
         secure: true,
@@ -90,12 +108,24 @@ async function postTweetViaBrowser(tweetText, options = {}) {
 
     const editor = page.locator(editorSelector).first();
     await editor.click();
-    await editor.fill(cleanText);
+    
+    // Inserção resiliente no editor rico do X (Draft.js / Lexical)
+    try {
+      await editor.fill(cleanText);
+    } catch {
+      await page.keyboard.insertText(cleanText);
+    }
+    await page.waitForTimeout(1000);
+    const content = await editor.innerText().catch(() => '');
+    if (!content || content.trim().length === 0) {
+      await editor.focus();
+      await page.keyboard.insertText(cleanText);
+    }
 
     // Pausa breve para simular comportamento humano e permitir ativação do botão
     await page.waitForTimeout(1500);
 
-    const postButtonSelector = '[data-testid="tweetButton"], [data-testid="tweetButtonInline"]';
+    const postButtonSelector = '[data-testid="tweetButton"], [data-testid="tweetButtonInline"], button:has-text("Postar"), button:has-text("Post")';
     const postButton = page.locator(postButtonSelector).first();
     await postButton.waitFor({ state: 'visible', timeout: 10000 });
 
