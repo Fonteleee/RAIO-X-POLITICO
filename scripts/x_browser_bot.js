@@ -143,33 +143,29 @@ async function postTweetViaBrowser(tweetText, options = {}) {
     await editor.pressSequentially(cleanText, { delay: 10 });
     await page.waitForTimeout(2000);
 
-    // Localizar botão oficial de postar no modal
-    const postButton = page.locator('[data-testid="tweetButton"]').first();
-    await postButton.waitFor({ state: 'visible', timeout: 10000 });
-
-    // Aguardar até que aria-disabled seja falso (React atualizou o estado)
-    let isBtnReady = false;
-    for (let i = 0; i < 15; i++) {
-      const disabledAttr = await postButton.getAttribute('aria-disabled');
-      if (disabledAttr !== 'true') {
-        isBtnReady = true;
-        break;
-      }
-      await page.waitForTimeout(500);
-    }
-
-    if (!isBtnReady) {
-      console.warn('[X Browser Bot] Botão ainda com aria-disabled=true, tentando clique forçado...');
-    }
-
     // Salvar captura de tela pré-clique para diagnóstico
     await page.screenshot({ path: path.join(outputDir, 'x_before_post.png') }).catch(() => {});
 
-    console.log('[X Browser Bot] Clicando em "Postar"...');
-    await postButton.click({ force: true });
+    console.log('[X Browser Bot] Enviando post via atalho nativo Control+Enter...');
+    await editor.focus();
+    await page.keyboard.press('Control+Enter');
+    await page.waitForTimeout(1500);
+
+    // Localizar botão oficial de postar DENTRO do diálogo modal (role="dialog")
+    const dialogPostButton = page.locator('div[role="dialog"] [data-testid="tweetButton"]')
+      .or(page.locator('div[role="dialog"]').getByRole('button', { name: /^Post$/i }))
+      .or(page.locator('[data-testid="tweetButton"]').last());
+
+    const isDialogBtnVisible = await dialogPostButton.isVisible().catch(() => false);
+    if (isDialogBtnVisible) {
+      console.log('[X Browser Bot] Clicando explicitamente no botão "Post" do diálogo modal...');
+      await dialogPostButton.click();
+    } else {
+      console.log('[X Browser Bot] Botão do diálogo não visível (já enviado via Control+Enter).');
+    }
 
     // Aguardar conclusão da requisição de postagem
-    await page.waitForTimeout(7000);
+    await page.waitForTimeout(8000);
 
     // Salvar captura de tela pós-clique para diagnóstico
     await page.screenshot({ path: path.join(outputDir, 'x_after_post.png') }).catch(() => {});
