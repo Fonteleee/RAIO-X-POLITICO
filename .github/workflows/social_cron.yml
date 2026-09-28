@@ -1,9 +1,12 @@
-name: Figuras Políticas - Autopilot Social Diário (09:00 BRT)
+name: Figuras Políticas - Autopilot Social (3x ao Dia: 09h, 13h e 20h BRT)
 
 on:
   schedule:
-    # 09:00 BRT = 12:00 UTC (diariamente)
-    - cron: '0 12 * * *'
+    # 3 disparos automáticos diários em horários nobres de engajamento no Brasil (UTC-3):
+    # - 09:00 BRT = 12:00 UTC (Manhã: Dinheiro Público & Cota Parlamentar)
+    # - 13:00 BRT = 16:00 UTC (Almoço: Duelo Cívico 1v1 / Comparador)
+    # - 20:00 BRT = 23:00 UTC (Noite: Coerência de Votos / Ranking)
+    - cron: '0 12,16,23 * * *'
   workflow_dispatch: # Permite disparo manual com 1 clique a qualquer momento
   push:
     branches:

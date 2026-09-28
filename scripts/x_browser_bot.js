@@ -141,7 +141,21 @@ async function postTweetViaBrowser(tweetText, options = {}) {
     console.log(`[X Browser Bot] Digitando post (${cleanText.length} caracteres)...`);
     // Usar pressSequentially com delay para disparar keydown/input/keyup reais no React/Draft.js
     await editor.pressSequentially(cleanText, { delay: 10 });
-    await page.waitForTimeout(2000);
+    await page.waitForTimeout(1500);
+
+    // Se houver foto oficial do político, anexar diretamente ao post
+    if (options.imagePath && fs.existsSync(options.imagePath)) {
+      try {
+        console.log(`[X Browser Bot] Anexando foto oficial do político: ${options.imagePath}...`);
+        const fileInput = page.locator('input[type="file"]').first();
+        await fileInput.setInputFiles(path.resolve(options.imagePath));
+        console.log('[X Browser Bot] Aguardando renderização da foto no composer...');
+        await page.waitForTimeout(3500);
+        console.log('[X Browser Bot] Foto oficial anexada com sucesso!');
+      } catch (imgErr) {
+        console.warn(`⚠️ [X Browser Bot] Falha ao anexar imagem: ${imgErr.message}`);
+      }
+    }
 
     // Salvar captura de tela pré-clique para diagnóstico
     await page.screenshot({ path: path.join(outputDir, 'x_before_post.png') }).catch(() => {});

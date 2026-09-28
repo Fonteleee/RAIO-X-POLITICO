@@ -69,8 +69,30 @@ class SocialMarketingAutopilot {
    * Seleciona o conteúdo do dia com base no dia da semana e dados do SQLite
    */
   generateDailyPost(targetDate = new Date()) {
+    const hour = targetDate.getUTCHours(); // em UTC (09:00 BRT = 12 UTC, 13:00 BRT = 16 UTC, 20:00 BRT = 23 UTC)
     const dayOfWeek = targetDate.getDay();
-    const config = WEEKLY_THEMES[dayOfWeek];
+    const defaultThemeConfig = WEEKLY_THEMES[dayOfWeek] || WEEKLY_THEMES[1];
+
+    // Rotação dinâmica para 3 posts diários em horários de pico (09h, 13h e 20h BRT):
+    let slotTheme = defaultThemeConfig.theme;
+    if (process.env.POST_THEME) {
+      slotTheme = process.env.POST_THEME;
+    } else if (hour >= 11 && hour < 15) {
+      slotTheme = 'CUSTO_PUBLICO'; // Manhã (09:00 BRT): Dinheiro Público & Cota Parlamentar
+    } else if (hour >= 15 && hour < 19) {
+      slotTheme = 'DUELO_1V1'; // Almoço (13:00 BRT): Duelo 1v1 / Comparador
+    } else {
+      slotTheme = (dayOfWeek % 2 === 0) ? 'COERENCIA_VOTO' : 'RANKING_CEAP'; // Noite (20:00 BRT): Coerência / Ranking
+    }
+
+    const config = {
+      ...defaultThemeConfig,
+      theme: slotTheme,
+      title: slotTheme === 'CUSTO_PUBLICO' ? '💸 DINHEIRO PÚBLICO EM FOCO' :
+             slotTheme === 'DUELO_1V1' ? '⚔️ DUELO CÍVICO' :
+             slotTheme === 'COERENCIA_VOTO' ? '⚖️ DISCURSO VS. PLENÁRIO' : '📊 TOP 3 DO RANKING NACIONAL'
+    };
+
     const db = this.appDb.db;
 
     // Busca candidatos com dados auditados no SQLite
@@ -133,6 +155,16 @@ class SocialMarketingAutopilot {
       default:
         post = this._buildPadraoPost(config, cand1, radar1);
         break;
+    }
+
+    // Anexar foto oficial do político cadastrada no sistema
+    const targetCandId = post.candId || post.candId1;
+    if (targetCandId) {
+      const candidateImg = path.join(__dirname, '..', 'img', 'candidates', `${targetCandId}.jpg`);
+      if (fs.existsSync(candidateImg)) {
+        post.imagePath = candidateImg;
+        console.log(`📸 Foto oficial anexada ao post: ${candidateImg}`);
+      }
     }
 
     // Salva o post gerado em JSON e HTML para arquivamento e inspeção
@@ -243,17 +275,16 @@ Acesse o Figuras Políticas pelo link da bio e faça a auditoria em 1 clique!
 
   _buildCoerenciaPost(config, cand, radar) {
     const name = cand.ballot_name || cand.name;
-    const copyX = `${config.title}
-${name} (${cand.party}-${cand.state}): Discurso de campanha vs Voto no Plenário!
+    const copyX = `⚖️ DISCURSO VS. PLENÁRIO
+${name} (${cand.party}-${cand.state})
 
-⚖️ Índice de Coerência Auditado: ${radar.coerencia || 72}/100
-• Alinhamento Partidário: 88%
-• Risco de Migração na Janela: Baixo
+• Coerência de Voto: ${radar.coerencia || 72}/100
+• Fidelidade Partidária: 88%
+• Nota Geral: ${cand.overall_score}/100
 
-Veja como seu parlamentar votou nas pautas mais polêmicas:
-🔗 https://raioxpolitico.org/dossie.html?id=${cand.id}
-
-#CoerenciaPolitica #VotacaoNominal #CamaraDosDeputados #FigurasPoliticas`;
+🔗 Audite as votações no Figuras Políticas:
+https://raioxpolitico.org/dossie.html?id=${cand.id}
+#FigurasPoliticas`;
 
     return {
       date: new Date().toISOString(),
@@ -273,7 +304,7 @@ Veja como seu parlamentar votou nas pautas mais polêmicas:
 
   _buildRankingPost(config) {
     const top3 = this.appDb.db.prepare(`
-      SELECT ballot_name, name, party, state, overall_score
+      SELECT id, ballot_name, name, party, state, overall_score
       FROM candidates
       ORDER BY overall_score DESC
       LIMIT 3
@@ -295,6 +326,7 @@ Veja como seu parlamentar votou nas pautas mais polêmicas:
       date: new Date().toISOString(),
       theme: config.theme,
       title: 'Top 3 do Ranking Nacional',
+      candId: top3[0]?.id,
       copy: {
         x: copy,
         threads: copy,
@@ -548,7 +580,8 @@ https://raioxpolitico.org/index.html#quiz
         const { postTweetViaBrowser } = require('./x_browser_bot');
         const browserRes = await postTweetViaBrowser(tweetText, {
           authToken: process.env.X_AUTH_TOKEN,
-          ct0: process.env.X_CT0
+          ct0: process.env.X_CT0,
+          imagePath: post.imagePath
         });
         if (browserRes && browserRes.success) {
           xSuccess = true;
