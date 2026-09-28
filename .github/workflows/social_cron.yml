@@ -2,19 +2,25 @@ name: Figuras Políticas - Autopilot Social Diário (09:00 BRT)
 
 on:
   schedule:
-    # 12:00 UTC = 09:00 Horário de Brasília (BRT), todos os dias
+    # 09:00 BRT = 12:00 UTC (diariamente)
     - cron: '0 12 * * *'
+  workflow_dispatch: # Permite disparo manual com 1 clique a qualquer momento
   push:
-    branches: [ main ]
-  workflow_dispatch: # Permite disparar manualmente pelo painel do GitHub com 1 clique
-
-permissions:
-  contents: read
+    branches:
+      - main
+    paths:
+      - 'scripts/social_autopilot.js'
+      - 'scripts/x_browser_bot.js'
+      - '.github/workflows/social_cron.yml'
 
 jobs:
   run-autopilot:
     name: Figuras Políticas - Gerar & Distribuir Post Cívico
     runs-on: ubuntu-latest
+
+    env:
+      X_AUTH_TOKEN: ${{ secrets.X_AUTH_TOKEN }}
+      X_CT0: ${{ secrets.X_CT0 }}
 
     steps:
       - name: Checkout do Repositório
@@ -24,6 +30,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
+
+      - name: Instalar Dependências
+        run: npm ci
+
+      - name: Instalar Navegador Chromium (para Bot do X)
+        if: env.X_AUTH_TOKEN != ''
+        run: npx playwright install --with-deps chromium
 
       - name: Semear Banco de Dados Cívico (SQLite)
         run: node src/db/seed.js
@@ -42,6 +55,8 @@ jobs:
           X_API_SECRET: ${{ secrets.X_API_SECRET }}
           X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
           X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
+          X_AUTH_TOKEN: ${{ secrets.X_AUTH_TOKEN }}
+          X_CT0: ${{ secrets.X_CT0 }}
           BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
           BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
         run: node scripts/social_autopilot.js

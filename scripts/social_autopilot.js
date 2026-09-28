@@ -557,6 +557,25 @@ Faça o teste de compatibilidade gratuito:
       }
     }
 
+    // Tentativa 3: Bot de Navegador Playwright (Custo R$ 0,00 - Bypassa bloqueio de créditos da API)
+    if (!xSuccess && process.env.X_AUTH_TOKEN) {
+      try {
+        console.log('[X Autopilot] Acionando Bot de Navegador Playwright (Sessão auth_token, R$ 0,00)...');
+        const { postTweetViaBrowser } = require('./x_browser_bot');
+        const browserRes = await postTweetViaBrowser(tweetText, {
+          authToken: process.env.X_AUTH_TOKEN,
+          ct0: process.env.X_CT0
+        });
+        if (browserRes && browserRes.success) {
+          xSuccess = true;
+          results.x = true;
+          console.log('🚀 [X Autopilot] Tweet postado com sucesso pelo Bot de Navegador no X!');
+        }
+      } catch (bErr) {
+        console.warn(`⚠️ [X Autopilot] Bot de Navegador encontrou erro: ${bErr.message}`);
+      }
+    }
+
     // 6. Bluesky (AT Protocol) Dispatch - 100% Gratuito
     if (process.env.BLUESKY_HANDLE && process.env.BLUESKY_APP_PASSWORD) {
       try {
