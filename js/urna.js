@@ -151,7 +151,7 @@
               Simulador de Votação & Educação Cívica
             </h2>
             <p class="text-xs text-slate-500 dark:text-slate-400">
-              Digite o número do seu candidato, confira a foto oficial, ouça o áudio da urna e acesse o raio-x do mandato.
+              Digite o número do seu candidato, confira a foto oficial, ouça o áudio da urna e acesse o dossiê do mandato.
             </p>
           </div>
 
@@ -559,7 +559,7 @@
             </span>
             <div>
               <h3 class="text-sm sm:text-base font-black text-slate-900 dark:text-white">
-                Raio-X do seu Voto Simulado: ${displayName} (${c.party})
+                Dossiê do seu Voto Simulado: ${displayName} (${c.party})
               </h3>
               <span class="text-[11px] text-slate-500 dark:text-slate-400 font-mono">Antes de votar em 2026, conheça o histórico oficial:</span>
             </div>
@@ -618,7 +618,7 @@
   }
 
   window.shareUrnaSimulation = function(name, number, party) {
-    const text = `🗳️ Acabei de simular meu voto na Urna Eletrônica 2026 para ${name} (${party} - Nº ${number}) no Observatório Raio-X Político!\nConfira a auditoria de gastos, presença e ficha limpa de todos os candidatos em: ${window.location.origin}`;
+    const text = `🗳️ Acabei de simular meu voto na Urna Eletrônica 2026 para ${name} (${party} - Nº ${number}) no Observatório Figuras Políticas!\nConfira a auditoria de gastos, presença e ficha limpa de todos os candidatos em: ${window.location.origin}`;
     const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
     window.open(url, '_blank');
   };

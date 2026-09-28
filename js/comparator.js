@@ -489,7 +489,7 @@
           <div class="relative z-10 flex items-center justify-between border-b border-white/10 pb-1">
             <div class="flex items-center gap-1">
               <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse shadow-sm shadow-emerald-400/50"></span>
-              <span class="text-[8.5px] sm:text-[9px] font-mono font-black uppercase tracking-wider text-white/90">RAIO-X POLÍTICO • DUELO CÍVICO</span>
+              <span class="text-[8.5px] sm:text-[9px] font-mono font-black uppercase tracking-wider text-white/90">FIGURAS POLÍTICAS • DUELO CÍVICO</span>
             </div>
             <span class="text-[7.5px] font-mono font-bold px-1.5 py-0.2 rounded-full bg-white/10 text-white/80 border border-white/10 backdrop-blur-md">
               04/10/2026
@@ -624,7 +624,7 @@
       const name2 = cand2.ballotName || cand2.name;
       const cost1 = cand1.campaignFinance?.costPerVote || 'R$ 9,23/voto';
       const cost2 = cand2.campaignFinance?.costPerVote || 'R$ 11,40/voto';
-      const text = `⚔️ *DUELO CÍVICO 2026:*\n${name1} (${cand1.party}) vs ${name2} (${cand2.party})\n\n📊 *Custo por Voto TSE:* ${name1} (${cost1}) vs ${name2} (${cost2})\n🛡️ *Ficha Limpa:* Ambos auditados perante CNJ e STF\n\nVeja o confronto completo e auditado no Raio-X Político:\n${window.location.origin}/index.html?cand1=${cand1.id}&cand2=${cand2.id}#tab-comparator`;
+      const text = `⚔️ *DUELO CÍVICO 2026:*\n${name1} (${cand1.party}) vs ${name2} (${cand2.party})\n\n📊 *Custo por Voto TSE:* ${name1} (${cost1}) vs ${name2} (${cost2})\n🛡️ *Ficha Limpa:* Ambos auditados perante CNJ e STF\n\nVeja o confronto completo e auditado no Figuras Políticas:\n${window.location.origin}/index.html?cand1=${cand1.id}&cand2=${cand2.id}#tab-comparator`;
       window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank');
     }
 

@@ -1,4 +1,4 @@
-name: Social Marketing Autopilot (Daily 09:00 BRT)
+name: Figuras Políticas - Autopilot Social Diário (09:00 BRT)
 
 on:
   schedule:
@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   run-autopilot:
-    name: Gerar & Distribuir Post Cívico Diário
+    name: Figuras Políticas - Gerar & Distribuir Post Cívico
     runs-on: ubuntu-latest
 
     steps:

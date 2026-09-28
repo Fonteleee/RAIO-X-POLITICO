@@ -1,5 +1,5 @@
 /**
- * RAIO-X POLÍTICO - AUTOPILOT DE MARKETING CÍVICO
+ * FIGURAS POLÍTICAS - AUTOPILOT DE MARKETING CÍVICO
  * Motor 100% Autônomo de Geração e Distribuição de Conteúdo Viral Diário
  * Redes Suportadas: Instagram, Facebook, X (Twitter), Threads, Telegram e WhatsApp
  * Custo: R$ 0,00 | Intervenção Humana: ZERO
@@ -15,7 +15,7 @@ const WEEKLY_THEMES = {
     theme: 'CUSTO_PUBLICO',
     title: '💸 SEGUNDA DO DINHEIRO PÚBLICO',
     tagline: 'Quanto o mandato deste político custou por minuto ao contribuinte?',
-    cta: 'Veja o cálculo completo no Raio-X Político:'
+    cta: 'Veja o cálculo completo no Figuras Políticas:'
   },
   2: { // Terça-feira
     theme: 'DUELO_1V1',
@@ -227,7 +227,7 @@ Nossa plataforma analisa cada centavo da Cota Parlamentar e gastos de campanha r
 • Índice de Transparência: ${radar.transparencia || 80}%
 
 O que esse valor compraria em leitos de hospital, creches ou escolas no seu estado?
-Acesse o Raio-X Político pelo link da bio e faça a auditoria em 1 clique!
+Acesse o Figuras Políticas pelo link da bio e faça a auditoria em 1 clique!
 
 #Fiscalize #TransparenciaPublica #GastosParlamentares #FigurasPoliticas #Eleicoes2026`;
 
@@ -321,7 +321,7 @@ Veja a posição do seu deputado no Ranking Nacional:
     const copy = `${config.title}
 Você sabe quem realmente te representa em 2026?
 
-Conheça o raio-x completo de ${name} (${cand.party}-${cand.state}):
+Conheça o perfil completo de ${name} (${cand.party}-${cand.state}):
 • Nota Geral: ${cand.overall_score}/100
 • Integridade: ${radar.integridade || 80}/100
 • Presença: ${radar.presenca || 90}/100
@@ -476,7 +476,7 @@ if (require.main === module) {
       const autopilot = new SocialMarketingAutopilot();
       const post = autopilot.generateDailyPost();
       console.log('======================================================================');
-      console.log('🤖 RAIO-X POLÍTICO - POST DIÁRIO GERADO COM SUCESSO');
+      console.log('🤖 FIGURAS POLÍTICAS - POST DIÁRIO GERADO COM SUCESSO');
       console.log('======================================================================');
       console.log(`Tema: ${post.theme}`);
       console.log(`Título: ${post.title}`);

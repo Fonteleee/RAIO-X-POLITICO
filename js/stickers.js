@@ -387,7 +387,7 @@
             <div class="flex items-center justify-between border-b-2 border-stone-950 pb-1.5">
               <div class="flex items-center gap-1.5">
                 <span class="w-3 h-3 bg-emerald-600 rounded-sm"></span>
-                <span class="text-[9px] font-black uppercase tracking-widest text-stone-950 font-mono">RAIO-X POLÍTICO • DUELO</span>
+                <span class="text-[9px] font-black uppercase tracking-widest text-stone-950 font-mono">FIGURAS POLÍTICAS • DUELO</span>
               </div>
               <span class="text-[8.5px] font-mono font-black text-emerald-700">04/10/2026</span>
             </div>
@@ -471,7 +471,7 @@
           target.innerHTML = `
             <div class="flex items-center justify-between border-b border-amber-400/30 pb-1.5">
               <span class="text-[9px] font-black uppercase tracking-widest text-amber-300 font-mono flex items-center gap-1">
-                ⭐ RAIO-X POLÍTICO • DUELO FIFA
+                ⭐ FIGURAS POLÍTICAS • DUELO FIFA
               </span>
               <span class="text-[8.5px] font-mono font-bold text-slate-300">04/10/2026</span>
             </div>
@@ -561,7 +561,7 @@
           target.className = 'w-[335px] max-w-[335px] box-border bg-[#fdfbf7] p-4 rounded-[1.75rem] border-2 border-stone-400 text-stone-900 shadow-2xl relative flex flex-col justify-between font-sans overflow-hidden';
           target.innerHTML = `
             <div class="flex items-center justify-between border-b-2 border-stone-900 pb-1.5">
-              <span class="text-[9px] font-black uppercase tracking-widest text-stone-900 font-mono">RAIO-X POLÍTICO • DUELO EDITORIAL</span>
+              <span class="text-[9px] font-black uppercase tracking-widest text-stone-900 font-mono">FIGURAS POLÍTICAS • DUELO EDITORIAL</span>
               <span class="text-[8.5px] font-mono font-black text-stone-900">04/10/2026</span>
             </div>
 
@@ -613,7 +613,7 @@
           target.className = 'w-[335px] max-w-[335px] box-border bg-[#f8fafc] p-4 rounded-[1.75rem] border border-slate-300 text-slate-900 shadow-2xl relative flex flex-col justify-between font-sans overflow-hidden';
           target.innerHTML = `
             <div class="flex items-center justify-between border-b border-slate-200 pb-1.5">
-              <span class="text-[9px] font-black uppercase tracking-widest text-slate-800 font-mono">RAIO-X POLÍTICO • BENTO DUEL</span>
+              <span class="text-[9px] font-black uppercase tracking-widest text-slate-800 font-mono">FIGURAS POLÍTICAS • BENTO DUEL</span>
               <span class="text-[8px] font-mono font-bold px-2 py-0.5 rounded-full bg-slate-200 text-slate-700">04/10/2026</span>
             </div>
 
@@ -777,7 +777,7 @@
             <div class="relative z-10 flex items-center justify-between border-b border-white/10 pb-2">
               <div class="flex items-center gap-1.5">
                 <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span class="text-[9px] font-mono font-black uppercase tracking-widest text-white/90">RAIO-X • CONFRONTO 2026</span>
+                <span class="text-[9px] font-mono font-black uppercase tracking-widest text-white/90">FIGURAS POLÍTICAS • DUELO 2026</span>
               </div>
               <span class="text-[8px] font-mono font-bold px-2 py-0.5 rounded-full bg-white/10 text-white/80 border border-white/10">
                 04/10/2026
@@ -892,7 +892,7 @@
           target.innerHTML = `
             <div class="flex items-center justify-between border-b border-slate-200 pb-1.5 font-mono text-[8px] font-black uppercase">
               <span class="text-slate-900 flex items-center gap-1.5">
-                ⚔️ CONFRONTO CÍVICO 50/50 • RAIO-X
+                ⚔️ CONFRONTO CÍVICO 50/50 • FIGURAS POLÍTICAS
               </span>
               <span class="text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">04/10/2026</span>
             </div>
@@ -2346,7 +2346,7 @@
           <div class="flex items-center justify-between border-b-2 border-stone-950 pb-1.5">
             <div class="flex items-center gap-1.5">
               <span class="w-3 h-3 bg-emerald-600 rounded-sm"></span>
-              <span class="text-[9px] font-black uppercase tracking-widest text-stone-950 font-mono">RAIO-X POLÍTICO</span>
+              <span class="text-[9px] font-black uppercase tracking-widest text-stone-950 font-mono">FIGURAS POLÍTICAS</span>
             </div>
             <span class="text-[8.5px] font-mono font-black text-emerald-700">04/10/2026</span>
           </div>
@@ -2438,7 +2438,7 @@
           <!-- Header Padronizado -->
           <div class="flex items-center justify-between border-b border-amber-400/30 pb-1.5">
             <span class="text-[9px] font-black uppercase tracking-widest text-amber-300 font-mono flex items-center gap-1">
-              ⭐ RAIO-X POLÍTICO
+              ⭐ FIGURAS POLÍTICAS
             </span>
             <span class="text-[8.5px] font-mono font-bold text-slate-300">04/10/2026</span>
           </div>
@@ -2543,7 +2543,7 @@
         target.innerHTML = `
           <!-- Header Padronizado -->
           <div class="flex items-center justify-between border-b-2 border-stone-900 pb-1.5">
-            <span class="text-[9px] font-black uppercase tracking-widest text-stone-900 font-mono">RAIO-X POLÍTICO</span>
+            <span class="text-[9px] font-black uppercase tracking-widest text-stone-900 font-mono">FIGURAS POLÍTICAS</span>
             <span class="text-[8.5px] font-mono font-black text-stone-900">04/10/2026</span>
           </div>
 
@@ -2615,7 +2615,7 @@
         target.innerHTML = `
           <!-- Header Padronizado -->
           <div class="flex items-center justify-between border-b border-slate-200 pb-1.5">
-            <span class="text-[9px] font-black uppercase tracking-widest text-slate-800 font-mono">RAIO-X POLÍTICO</span>
+            <span class="text-[9px] font-black uppercase tracking-widest text-slate-800 font-mono">FIGURAS POLÍTICAS</span>
             <span class="text-[8px] font-mono font-bold px-2 py-0.5 rounded-full bg-slate-200 text-slate-700">04/10/2026</span>
           </div>
 
@@ -2817,7 +2817,7 @@
           <div class="relative z-10 flex items-center justify-between border-b border-white/10 pb-2">
             <div class="flex items-center gap-1.5">
               <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span class="text-[9px] font-mono font-black uppercase tracking-widest text-white/90">RAIO-X • DOSSIÊ OFICIAL</span>
+              <span class="text-[9px] font-mono font-black uppercase tracking-widest text-white/90">FIGURAS POLÍTICAS • DOSSIÊ OFICIAL</span>
             </div>
             <span class="text-[8px] font-mono font-bold px-2 py-0.5 rounded-full bg-white/10 text-white/80 border border-white/10">
               04/10/2026

@@ -1,17 +1,17 @@
-# 🏛️ Raio-X Político | Inteligência Cívica & Dossiê Eleitoral 2026
+# 🏛️ Figuras Políticas | Observatório Cívico & Dossiê Eleitoral 2026
 
 [![Licença: MIT](https://img.shields.io/badge/Licen%C3%A7a-MIT-blue.svg)](LICENSE)
 [![Compliance: Res. TSE 23.732/2024](https://img.shields.io/badge/TSE-Res.%2023.732%2F2024-emerald.svg)](https://www.tse.jus.br/)
 [![LGPD & LAI](https://img.shields.io/badge/LGPD%20%26%20LAI-100%25%20Auditado-cyan.svg)](https://www.gov.br/acessoainformacao/)
 [![Eleições](https://img.shields.io/badge/Elei%C3%A7%C3%B5es%20Gerais-04%2F10%2F2026-purple.svg)](https://raioxpolitico.org)
 
-> Plataforma independente de transparência pública, auditoria algorítmica e combate à desinformação eleitoral. O **Raio-X Político** transforma bases de dados governamentais abertas em dossiês interativos, radares de competência e figurinhas cívicas colecionáveis para redes sociais e WhatsApp.
+> Plataforma independente de transparência pública, auditoria algorítmica e combate à desinformação eleitoral. O **Figuras Políticas** transforma bases de dados governamentais abertas em dossiês interativos, radares de competência e figurinhas cívicas colecionáveis para redes sociais e WhatsApp.
 
 ---
 
 ## 🎯 Proposta de Valor & Diferenciais Cívicos
 
-O **Raio-X Político** resolve a opacidade eleitoral ao cruzar dados de **4 fontes públicas oficiais** para responder com precisão matemática às três perguntas fundamentais do eleitor:
+O **Figuras Políticas** resolve a opacidade eleitoral ao cruzar dados de **4 fontes públicas oficiais** para responder com precisão matemática às três perguntas fundamentais do eleitor:
 1. **O que o político realmente faz?** (Assiduidade biométrica, relatorias e leis sancionadas).
 2. **Quanto ele custa à sociedade?** (Auditoria de notas da CEAP, evolução patrimonial e ROI cívico).
 3. **O discurso bate com os fatos?** (Ficha Limpa, processos do CNJ e fact-checking de debates).
@@ -52,7 +52,7 @@ Exportação de cards em alta resolução (1080p e 4K) em proporções **9:16 (S
 
 ## ⚖️ Marco Legal & Blindagem Jurídica
 
-O **Raio-X Político** opera em estrita conformidade com a ordem jurídica brasileira:
+O **Figuras Políticas** opera em estrita conformidade com a ordem jurídica brasileira:
 
 | Legislação | Dispositivo Aplicável | Aplicação na Plataforma |
 |---|---|---|
@@ -108,7 +108,7 @@ http://localhost:8080/index.html
 
 ## 🤖 Indexação por IA & AI-SEO (`llms.txt`)
 
-O projeto implementa o padrão aberto **`llms.txt`** e dados estruturados **Schema.org JSON-LD**, permitindo que motores de busca por IA (Perplexity, SearchGPT, Google Gemini, Claude) utilizem o Raio-X Político como fonte primária confiável nas Eleições de 2026.
+O projeto implementa o padrão aberto **`llms.txt`** e dados estruturados **Schema.org JSON-LD**, permitindo que motores de busca por IA (Perplexity, SearchGPT, Google Gemini, Claude) utilizem o Figuras Políticas como fonte primária confiável nas Eleições de 2026.
 
 ---
 
@@ -117,4 +117,4 @@ O projeto implementa o padrão aberto **`llms.txt`** e dados estruturados **Sche
 Este projeto é distribuído sob a licença **MIT**.
 
 ---
-**Observatório Raio-X Político • Eleições Gerais de 04 de Outubro de 2026**
+**Observatório Figuras Políticas • Eleições Gerais de 04 de Outubro de 2026**

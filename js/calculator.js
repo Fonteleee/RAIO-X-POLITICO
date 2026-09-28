@@ -225,7 +225,7 @@
     };
 
     window.shareTaxImpactWhatsApp = function(candName, days, hours) {
-      const text = `💸 Sabia que com o meu salário, eu trabalhei ${days} dias (${hours} horas) este ano só para pagar o mandato de ${candName}? Descubra quanto do seu imposto banca os políticos no Observatório Raio-X Político: ${window.location.origin}`;
+      const text = `💸 Sabia que com o meu salário, eu trabalhei ${days} dias (${hours} horas) este ano só para pagar o mandato de ${candName}? Descubra quanto do seu imposto banca os políticos no Observatório Figuras Políticas: ${window.location.origin}`;
       const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
       window.open(url, '_blank');
     };
