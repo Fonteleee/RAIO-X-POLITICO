@@ -98,6 +98,9 @@ async function postTweetViaBrowser(tweetText, options = {}) {
 
     // Rastrear respostas de rede da API de tweet do X
     let apiResponses = [];
+    let tweetCreated = false;
+    let createdTweetId = null;
+
     page.on('response', async (res) => {
       const u = res.url();
       if (u.includes('CreateTweet') || u.includes('/tweets') || u.includes('graphql')) {
@@ -105,8 +108,18 @@ async function postTweetViaBrowser(tweetText, options = {}) {
           const body = await res.text();
           apiResponses.push({ url: u.split('?')[0], status: res.status(), body: body.slice(0, 500) });
           console.log(`[X Network API] ${u.split('?')[0]} -> HTTP ${res.status()}`);
-          if (res.status() >= 400 || body.includes('errors') || body.includes('create_tweet')) {
-            console.log(`[X Network Body] ${body.slice(0, 400)}`);
+          if (u.includes('CreateTweet')) {
+            if (res.status() === 200) {
+              const parsed = JSON.parse(body);
+              const restId = parsed?.data?.create_tweet?.tweet_results?.result?.rest_id;
+              if (restId) {
+                tweetCreated = true;
+                createdTweetId = restId;
+                console.log(`🎉 [X Network API] Tweet criado com sucesso! ID do Tweet: ${restId}`);
+              }
+            } else {
+              console.warn(`⚠️ [X Network API] CreateTweet falhou: HTTP ${res.status()} - ${body.slice(0, 300)}`);
+            }
           }
         } catch {}
       }
@@ -159,9 +172,9 @@ async function postTweetViaBrowser(tweetText, options = {}) {
 
         // Aguardar o botão de tweet ser reabilitado após o upload da imagem
         await page.waitForFunction(() => {
-          const btn = document.querySelector('div[role="dialog"] [data-testid="tweetButton"]') || document.querySelector('[data-testid="tweetButton"]');
+          const btn = document.querySelector('[data-testid="tweetButton"]') || document.querySelector('[data-testid="tweetButtonInline"]');
           return btn && btn.getAttribute('aria-disabled') !== 'true';
-        }, { timeout: 20000 }).catch(() => {
+        }, { timeout: 25000 }).catch(() => {
           console.log('[X Browser Bot] Aviso: timeout esperando botão de tweet reabilitar, prosseguindo com envio...');
         });
 
@@ -174,32 +187,46 @@ async function postTweetViaBrowser(tweetText, options = {}) {
     // Salvar captura de tela pré-clique para diagnóstico
     await page.screenshot({ path: path.join(outputDir, 'x_before_post.png') }).catch(() => {});
 
-    // Localizar botão oficial de postar DENTRO do diálogo modal (role="dialog")
-    const dialogPostButton = page.locator('div[role="dialog"] [data-testid="tweetButton"]')
-      .or(page.locator('div[role="dialog"]').getByRole('button', { name: /^Post$/i }))
-      .or(page.locator('[data-testid="tweetButton"]').last());
+    // Estratégia 1: Focar novamente no editor e disparar atalho nativo Control+Enter
+    console.log('[X Browser Bot] Focando no editor e disparando envio via Control+Enter...');
+    await editor.click();
+    await editor.focus();
+    await page.keyboard.press('Control+Enter');
 
-    const isDialogBtnVisible = await dialogPostButton.isVisible().catch(() => false);
-    if (isDialogBtnVisible) {
-      console.log('[X Browser Bot] Clicando no botão oficial "Post" do diálogo modal...');
-      await dialogPostButton.click({ force: true });
-    } else {
-      console.log('[X Browser Bot] Botão do diálogo não diretamente visível, usando atalho nativo Control+Enter...');
-      await editor.focus();
-      await page.keyboard.press('Control+Enter');
+    // Aguardar até 3s para checar se CreateTweet foi disparado
+    for (let i = 0; i < 6; i++) {
+      if (tweetCreated) break;
+      await page.waitForTimeout(500);
     }
 
-    // Fallback: se após 1.5s o editor ainda estiver aberto, reforçar com Control+Enter
-    await page.waitForTimeout(1500);
-    const isStillOpen = await page.locator(editorSelector).isVisible().catch(() => false);
-    if (isStillOpen) {
-      console.log('[X Browser Bot] Modal ainda visível, reforçando envio com Control+Enter...');
-      await editor.focus();
-      await page.keyboard.press('Control+Enter');
+    // Estratégia 2: Se CreateTweet não disparou, clicar no botão de postar oficial
+    if (!tweetCreated) {
+      console.log('[X Browser Bot] Control+Enter não finalizou envio. Localizando botão oficial de Tweet...');
+      const postBtn = page.locator('button[data-testid="tweetButton"], [data-testid="tweetButton"]').first();
+      const isVisible = await postBtn.isVisible().catch(() => false);
+      if (isVisible) {
+        console.log('[X Browser Bot] Clicando no botão oficial de Tweet...');
+        await postBtn.click().catch(async () => {
+          console.log('[X Browser Bot] Fallback: disparo via click programático no DOM...');
+          await page.evaluate(() => {
+            const b = document.querySelector('button[data-testid="tweetButton"]') || document.querySelector('[data-testid="tweetButton"]');
+            if (b) b.click();
+          });
+        });
+      } else {
+        console.log('[X Browser Bot] Botão não diretamente visível, tentativa programática no DOM...');
+        await page.evaluate(() => {
+          const b = document.querySelector('button[data-testid="tweetButton"]') || document.querySelector('[data-testid="tweetButton"]');
+          if (b) b.click();
+        });
+      }
     }
 
-    // Aguardar conclusão da requisição de postagem
-    await page.waitForTimeout(8000);
+    // Aguardar confirmação de rede do CreateTweet por até 10 segundos
+    for (let i = 0; i < 10; i++) {
+      if (tweetCreated) break;
+      await page.waitForTimeout(1000);
+    }
 
     // Salvar captura de tela pós-clique para diagnóstico
     await page.screenshot({ path: path.join(outputDir, 'x_after_post.png') }).catch(() => {});
@@ -214,8 +241,12 @@ async function postTweetViaBrowser(tweetText, options = {}) {
     const isEditorStillOpen = await page.locator(editorSelector).isVisible().catch(() => false);
     console.log(`[X Browser Bot] O campo de texto ainda está aberto? ${isEditorStillOpen}`);
 
-    console.log('🚀 [X Browser Bot] Fluxo do navegador concluído. Verifique artefatos e perfil.');
-    return { success: true, apiResponses, alerts };
+    if (!tweetCreated) {
+      throw new Error(`Falha na confirmação da postagem no X: o endpoint CreateTweet não retornou sucesso. Alertas na tela: ${JSON.stringify(alerts)}`);
+    }
+
+    console.log(`🚀 [X Browser Bot] Sucesso absoluto! Tweet ID ${createdTweetId} confirmado na rede do X.`);
+    return { success: true, tweetId: createdTweetId, apiResponses, alerts };
   } finally {
     await browser.close();
   }
