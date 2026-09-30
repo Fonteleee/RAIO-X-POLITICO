@@ -147,11 +147,25 @@ async function postTweetViaBrowser(tweetText, options = {}) {
     if (options.imagePath && fs.existsSync(options.imagePath)) {
       try {
         console.log(`[X Browser Bot] Anexando foto oficial do político: ${options.imagePath}...`);
-        const fileInput = page.locator('input[type="file"]').first();
+        const fileInput = page.locator('input[data-testid="fileInput"], input[type="file"][accept*="image"], input[type="file"]').first();
+        await fileInput.waitFor({ state: 'attached', timeout: 15000 });
         await fileInput.setInputFiles(path.resolve(options.imagePath));
-        console.log('[X Browser Bot] Aguardando renderização da foto no composer...');
-        await page.waitForTimeout(3500);
-        console.log('[X Browser Bot] Foto oficial anexada com sucesso!');
+        console.log('[X Browser Bot] Aguardando processamento e renderização da foto no composer...');
+
+        // Aguardar o preview da imagem aparecer no composer (attachments)
+        await page.locator('[data-testid="attachments"], div[aria-label*="mídia"], div[aria-label*="media"]').first()
+          .waitFor({ state: 'visible', timeout: 20000 })
+          .catch(() => console.log('[X Browser Bot] Timeout aguardando preview de attachment, checando botão de post...'));
+
+        // Aguardar o botão de tweet ser reabilitado após o upload da imagem
+        await page.waitForFunction(() => {
+          const btn = document.querySelector('div[role="dialog"] [data-testid="tweetButton"]') || document.querySelector('[data-testid="tweetButton"]');
+          return btn && btn.getAttribute('aria-disabled') !== 'true';
+        }, { timeout: 20000 }).catch(() => {
+          console.log('[X Browser Bot] Aviso: timeout esperando botão de tweet reabilitar, prosseguindo com envio...');
+        });
+
+        console.log('[X Browser Bot] Foto oficial processada e pronta para publicação!');
       } catch (imgErr) {
         console.warn(`⚠️ [X Browser Bot] Falha ao anexar imagem: ${imgErr.message}`);
       }
@@ -160,11 +174,6 @@ async function postTweetViaBrowser(tweetText, options = {}) {
     // Salvar captura de tela pré-clique para diagnóstico
     await page.screenshot({ path: path.join(outputDir, 'x_before_post.png') }).catch(() => {});
 
-    console.log('[X Browser Bot] Enviando post via atalho nativo Control+Enter...');
-    await editor.focus();
-    await page.keyboard.press('Control+Enter');
-    await page.waitForTimeout(1500);
-
     // Localizar botão oficial de postar DENTRO do diálogo modal (role="dialog")
     const dialogPostButton = page.locator('div[role="dialog"] [data-testid="tweetButton"]')
       .or(page.locator('div[role="dialog"]').getByRole('button', { name: /^Post$/i }))
@@ -172,10 +181,21 @@ async function postTweetViaBrowser(tweetText, options = {}) {
 
     const isDialogBtnVisible = await dialogPostButton.isVisible().catch(() => false);
     if (isDialogBtnVisible) {
-      console.log('[X Browser Bot] Clicando explicitamente no botão "Post" do diálogo modal...');
-      await dialogPostButton.click();
+      console.log('[X Browser Bot] Clicando no botão oficial "Post" do diálogo modal...');
+      await dialogPostButton.click({ force: true });
     } else {
-      console.log('[X Browser Bot] Botão do diálogo não visível (já enviado via Control+Enter).');
+      console.log('[X Browser Bot] Botão do diálogo não diretamente visível, usando atalho nativo Control+Enter...');
+      await editor.focus();
+      await page.keyboard.press('Control+Enter');
+    }
+
+    // Fallback: se após 1.5s o editor ainda estiver aberto, reforçar com Control+Enter
+    await page.waitForTimeout(1500);
+    const isStillOpen = await page.locator(editorSelector).isVisible().catch(() => false);
+    if (isStillOpen) {
+      console.log('[X Browser Bot] Modal ainda visível, reforçando envio com Control+Enter...');
+      await editor.focus();
+      await page.keyboard.press('Control+Enter');
     }
 
     // Aguardar conclusão da requisição de postagem

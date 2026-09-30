@@ -1,4 +1,4 @@
-name: Figuras Políticas - Autopilot Social (3x ao Dia: 09h, 13h e 20h BRT)
+name: "Figuras Políticas - Autopilot Social (3x ao Dia - 09h, 13h e 20h BRT)"
 
 on:
   schedule:
@@ -7,7 +7,7 @@ on:
     # - 13:00 BRT = 16:00 UTC (Almoço: Duelo Cívico 1v1 / Comparador)
     # - 20:00 BRT = 23:00 UTC (Noite: Coerência de Votos / Ranking)
     - cron: '0 12,16,23 * * *'
-  workflow_dispatch: # Permite disparo manual com 1 clique a qualquer momento
+  workflow_dispatch:
   push:
     branches:
       - main
