@@ -46,7 +46,7 @@ async function postTweetViaBrowser(tweetText, options = {}) {
   try {
     const context = await browser.newContext({
       userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
-      viewport: { width: 1280, height: 720 },
+      viewport: { width: 1366, height: 1080 },
       locale: 'pt-BR',
       timezoneId: 'America/Sao_Paulo'
     });
@@ -187,11 +187,14 @@ async function postTweetViaBrowser(tweetText, options = {}) {
     // Salvar captura de tela pré-clique para diagnóstico
     await page.screenshot({ path: path.join(outputDir, 'x_before_post.png') }).catch(() => {});
 
-    // Estratégia 1: Focar novamente no editor e disparar atalho nativo Control+Enter
+    // Estratégia 1: Focar novamente no editor e disparar atalho nativo Control+Enter com down/up explícito
     console.log('[X Browser Bot] Focando no editor e disparando envio via Control+Enter...');
     await editor.click();
     await editor.focus();
-    await page.keyboard.press('Control+Enter');
+    await page.waitForTimeout(400);
+    await page.keyboard.down('Control');
+    await page.keyboard.press('Enter');
+    await page.keyboard.up('Control');
 
     // Aguardar até 3s para checar se CreateTweet foi disparado
     for (let i = 0; i < 6; i++) {
@@ -203,11 +206,12 @@ async function postTweetViaBrowser(tweetText, options = {}) {
     if (!tweetCreated) {
       console.log('[X Browser Bot] Control+Enter não finalizou envio. Localizando botão oficial de Tweet...');
       const postBtn = page.locator('button[data-testid="tweetButton"], [data-testid="tweetButton"]').first();
+      await postBtn.scrollIntoViewIfNeeded().catch(() => {});
       const isVisible = await postBtn.isVisible().catch(() => false);
       if (isVisible) {
-        console.log('[X Browser Bot] Clicando no botão oficial de Tweet...');
-        await postBtn.click().catch(async () => {
-          console.log('[X Browser Bot] Fallback: disparo via click programático no DOM...');
+        console.log('[X Browser Bot] Clicando no botão oficial de Tweet com scrollIntoView...');
+        await postBtn.click({ timeout: 8000 }).catch(async (clkErr) => {
+          console.log(`[X Browser Bot] Fallback clique via evaluate no DOM: ${clkErr.message}`);
           await page.evaluate(() => {
             const b = document.querySelector('button[data-testid="tweetButton"]') || document.querySelector('[data-testid="tweetButton"]');
             if (b) b.click();
