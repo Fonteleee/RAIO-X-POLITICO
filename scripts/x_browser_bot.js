@@ -130,19 +130,74 @@ async function postTweetViaBrowser(tweetText, options = {}) {
       waitUntil: 'domcontentloaded',
       timeout: 45000
     });
+    await page.waitForTimeout(2500);
+
+    const currentUrl = page.url();
+    const currentTitle = await page.title().catch(() => '');
+    console.log(`[X Browser Bot] Página carregada: URL=${currentUrl} | Título=${currentTitle}`);
+
+    // Salvar captura inicial para auditoria visual
+    await page.screenshot({ path: path.join(outputDir, 'x_step1_initial.png') }).catch(() => {});
 
     // Verificar se foi redirecionado para a tela de login
-    const currentUrl = page.url();
     if (currentUrl.includes('/login') || currentUrl.includes('/i/flow/login')) {
       throw new Error('Cookie inválido ou expirado: o X redirecionou para a página de login.');
     }
 
+    // Fechar possíveis diálogos de consentimento de cookies ou avisos
+    try {
+      const dismissSelectors = [
+        'button:has-text("Refuse non-essential cookies")',
+        'button:has-text("Recusar cookies não essenciais")',
+        'button:has-text("Aceitar todos os cookies")',
+        'button:has-text("Accept all cookies")',
+        'button:has-text("Agora não")',
+        'button:has-text("Not now")',
+        '[data-testid="SheetDialog"] [role="button"]'
+      ];
+      for (const sel of dismissSelectors) {
+        const btn = page.locator(sel).first();
+        if (await btn.isVisible().catch(() => false)) {
+          console.log(`[X Browser Bot] Dispensando aviso/overlay: ${sel}...`);
+          await btn.click().catch(() => {});
+          await page.waitForTimeout(500);
+        }
+      }
+    } catch {}
+
     console.log('[X Browser Bot] Localizando campo de texto do tweet...');
     const editorSelector = '[data-testid="tweetTextarea_0"], div[role="textbox"][contenteditable="true"]';
-    await page.waitForSelector(editorSelector, { timeout: 30000 });
+    let editor = page.locator(editorSelector).first();
+    let isEditorVisible = await editor.isVisible().catch(() => false);
+
+    // Se o modal não abriu direto na rota /compose/post, clicar no botão "Postar" da barra lateral
+    if (!isEditorVisible) {
+      console.log('[X Browser Bot] Editor não visível imediatamente. Tentando botão da barra lateral [data-testid="SideNav_NewTweet_Button"]...');
+      const sideNavBtn = page.locator('[data-testid="SideNav_NewTweet_Button"]').first();
+      if (await sideNavBtn.isVisible().catch(() => false)) {
+        console.log('[X Browser Bot] Clicando no botão da barra lateral para abrir modal de post...');
+        await sideNavBtn.click().catch(() => {});
+        await page.waitForTimeout(2000);
+        editor = page.locator(editorSelector).first();
+        isEditorVisible = await editor.isVisible().catch(() => false);
+      }
+    }
+
+    // Se ainda não estiver visível, aguardar com diagnóstico estrito
+    if (!isEditorVisible) {
+      try {
+        await page.waitForSelector(editorSelector, { timeout: 20000 });
+        editor = page.locator(editorSelector).first();
+      } catch (errWait) {
+        await page.screenshot({ path: path.join(outputDir, 'x_error_no_editor.png') }).catch(() => {});
+        const bodySnippet = await page.innerText('body').catch(() => 'indisponível');
+        console.warn(`[X Browser Bot Diagnóstico] URL: ${page.url()} | Título: ${await page.title().catch(() => '')}`);
+        console.warn(`[X Browser Bot Diagnóstico] Texto visível:\n${bodySnippet.slice(0, 400)}`);
+        throw new Error(`Campo de texto do tweet não encontrado na página ${page.url()}: ${errWait.message}`);
+      }
+    }
 
     console.log('[X Browser Bot] Focando no campo de texto...');
-    const editor = page.locator(editorSelector).first();
     await editor.click();
     await page.waitForTimeout(500);
 
