@@ -747,4 +747,4 @@ if (require.main === module) {
   })();
 }
 
-module.exports = { SocialMarketingAutopilot, WEEKLY_THEMES };
+module.exports = { SocialMarketingAutopilot, SocialAutopilotService: SocialMarketingAutopilot, WEEKLY_THEMES };

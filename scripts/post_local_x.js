@@ -8,14 +8,14 @@
 
 const path = require('node:path');
 const fs = require('node:fs');
-const { SocialAutopilotService } = require('./social_autopilot');
+const { SocialMarketingAutopilot } = require('./social_autopilot');
 
 async function runLocalSocialPost() {
   console.log('======================================================');
   console.log('🇧🇷 FIGURAS POLÍTICAS - AUTOPILOT LOCAL (IP RESIDENCIAL)');
   console.log('======================================================');
 
-  const autopilot = new SocialAutopilotService();
+  const autopilot = new SocialMarketingAutopilot();
   const post = autopilot.generateDailyPost(new Date());
 
   console.log(`\n📋 Pauta Gerada:`);
