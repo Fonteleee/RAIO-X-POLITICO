@@ -454,24 +454,38 @@ https://raioxpolitico.org/index.html#quiz
       }
     }
 
-    // 3. Meta (Facebook Page) Dispatch
+    // 3. Meta (Facebook Page) Dispatch (com Foto Oficial)
     if (process.env.META_PAGE_ID && process.env.META_ACCESS_TOKEN) {
       try {
-        const url = `https://graph.facebook.com/v20.0/${process.env.META_PAGE_ID}/feed`;
-        const res = await fetch(url, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            message: post.copy.facebook || post.copy.instagram,
-            link: post.link,
-            access_token: process.env.META_ACCESS_TOKEN
-          })
-        });
+        const message = `${post.copy.facebook || post.copy.instagram}\n\n🔗 ${post.link}`;
+        let res;
+        if (post.imagePath && fs.existsSync(post.imagePath)) {
+          const formData = new FormData();
+          const imgBytes = fs.readFileSync(post.imagePath);
+          formData.append('source', new Blob([imgBytes]), path.basename(post.imagePath));
+          formData.append('caption', message);
+          formData.append('access_token', process.env.META_ACCESS_TOKEN);
+          res = await fetch(`https://graph.facebook.com/v20.0/${process.env.META_PAGE_ID}/photos`, {
+            method: 'POST',
+            body: formData
+          });
+        } else {
+          res = await fetch(`https://graph.facebook.com/v20.0/${process.env.META_PAGE_ID}/feed`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              message,
+              link: post.link,
+              access_token: process.env.META_ACCESS_TOKEN
+            })
+          });
+        }
         if (res.ok) {
           results.meta = true;
-          console.log('✅ Publicado com sucesso na Página do Facebook');
+          console.log('✅ Publicado com sucesso na Página do Facebook (com foto oficial)');
         } else {
-          console.warn(`⚠️ Meta/Facebook API retornou status ${res.status}`);
+          const errData = await res.json().catch(() => ({}));
+          console.warn(`⚠️ Meta/Facebook API retornou status ${res.status}:`, JSON.stringify(errData));
         }
       } catch (err) {
         console.warn(`⚠️ Erro ao disparar Meta Facebook: ${err.message}`);
