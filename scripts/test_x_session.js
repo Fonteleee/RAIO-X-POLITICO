@@ -30,7 +30,7 @@ async function testXSession() {
   }
 
   console.log('\n[1/4] Inicializando navegador Chromium com flags Stealth...');
-  const browser = await chromium.launch({
+  const launchOptions = {
     headless: true,
     args: [
       '--no-sandbox',
@@ -40,7 +40,21 @@ async function testXSession() {
       '--disable-features=IsolateOrigins,site-per-process',
       '--lang=pt-BR,pt'
     ]
-  });
+  };
+
+  const chromePaths = [
+    'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+    'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
+    path.join(process.env.LOCALAPPDATA || '', 'Google', 'Chrome', 'Application', 'chrome.exe')
+  ];
+  for (const cPath of chromePaths) {
+    if (fs.existsSync(cPath)) {
+      launchOptions.executablePath = cPath;
+      break;
+    }
+  }
+
+  const browser = await chromium.launch(launchOptions);
 
   try {
     const context = await browser.newContext({

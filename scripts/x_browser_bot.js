@@ -119,19 +119,24 @@ async function executeTweetAttempt(page, cleanText, imagePath, strategyName, out
       }
     } catch {}
 
-    // 3. Localizar o editor de texto (modal ou inline da home)
-    const editorSelector = '[data-testid="tweetTextarea_0"], div[role="textbox"][contenteditable="true"]';
-    let editor = page.locator(editorSelector).first();
+    // 3. Localizar o editor de texto (modal em #layers ou inline da timeline)
+    let editor = page.locator('div[id="layers"] [data-testid="tweetTextarea_0"], div[role="dialog"] [data-testid="tweetTextarea_0"]').first();
     let isEditorVisible = await editor.isVisible().catch(() => false);
 
-    // Se o editor inline não estiver aberto, tentar abrir modal via botão lateral
+    // Se o modal não estiver aberto, tentar o inline da timeline
+    if (!isEditorVisible) {
+      editor = page.locator('[data-testid="tweetTextarea_0"], div[role="textbox"][contenteditable="true"]').first();
+      isEditorVisible = await editor.isVisible().catch(() => false);
+    }
+
+    // Se ainda não estiver aberto, tentar abrir modal via botão lateral
     if (!isEditorVisible) {
       console.log('[X Bot] Tentando abrir modal via botão lateral [data-testid="SideNav_NewTweet_Button"]...');
       const sideNavBtn = page.locator('[data-testid="SideNav_NewTweet_Button"]').first();
       if (await sideNavBtn.isVisible().catch(() => false)) {
-        await sideNavBtn.click().catch(() => {});
+        await sideNavBtn.click({ force: true }).catch(() => {});
         await page.waitForTimeout(2000);
-        editor = page.locator(editorSelector).first();
+        editor = page.locator('div[id="layers"] [data-testid="tweetTextarea_0"], [data-testid="tweetTextarea_0"]').last();
         isEditorVisible = await editor.isVisible().catch(() => false);
       }
     }
@@ -144,41 +149,44 @@ async function executeTweetAttempt(page, cleanText, imagePath, strategyName, out
         timeout: 30000
       }).catch(() => {});
       await page.waitForTimeout(2500);
-      editor = page.locator(editorSelector).first();
+      editor = page.locator('div[id="layers"] [data-testid="tweetTextarea_0"], [data-testid="tweetTextarea_0"]').last();
       isEditorVisible = await editor.isVisible().catch(() => false);
     }
 
     if (!isEditorVisible) {
-      await page.waitForSelector(editorSelector, { timeout: 15000 });
-      editor = page.locator(editorSelector).first();
+      await page.waitForSelector('[data-testid="tweetTextarea_0"]', { timeout: 15000 });
+      editor = page.locator('div[id="layers"] [data-testid="tweetTextarea_0"], [data-testid="tweetTextarea_0"]').last();
     }
 
     console.log('[X Bot] Focando no campo de texto...');
-    await editor.click();
-    await page.waitForTimeout(400);
+    await editor.click({ force: true }).catch(() => {});
+    await editor.focus().catch(() => {});
+    await page.waitForTimeout(300);
 
-    // Limpar conteúdo anterior
+    // Limpar conteúdo anterior com segurança
     await page.keyboard.press('Control+A');
     await page.keyboard.press('Backspace');
     await page.waitForTimeout(200);
 
-    // Digitar texto
-    console.log(`[X Bot] Digitando texto do tweet (${cleanText.length} caracteres)...`);
-    await editor.pressSequentially(cleanText, { delay: 8 });
+    // Digitar texto de forma instantânea e robusta (sem travar no DraftJS)
+    console.log(`[X Bot] Inserindo texto do tweet (${cleanText.length} caracteres)...`);
+    await page.keyboard.insertText(cleanText);
     await page.waitForTimeout(1000);
 
     // 4. Anexar imagem oficial se fornecida
     if (imagePath && fs.existsSync(imagePath)) {
       try {
         console.log(`[X Bot] Anexando foto oficial do político: ${imagePath}...`);
-        const fileInput = page.locator('input[data-testid="fileInput"], input[type="file"][accept*="image"], input[type="file"]').first();
+        const fileInput = page.locator('div[id="layers"] input[type="file"], input[data-testid="fileInput"], input[type="file"]').last();
         await fileInput.waitFor({ state: 'attached', timeout: 10000 });
         await fileInput.setInputFiles(path.resolve(imagePath));
         console.log('[X Bot] Aguardando processamento da foto pelo X...');
 
         // Aguardar preview ou reabilitação do botão de postar
         await page.waitForFunction(() => {
-          const btn = document.querySelector('[data-testid="tweetButton"]') || document.querySelector('[data-testid="tweetButtonInline"]');
+          const btn = document.querySelector('div[id="layers"] [data-testid="tweetButton"]') ||
+                      document.querySelector('[data-testid="tweetButton"]') ||
+                      document.querySelector('[data-testid="tweetButtonInline"]');
           return btn && btn.getAttribute('aria-disabled') !== 'true';
         }, { timeout: 20000 }).catch(() => {
           console.log('[X Bot] Timeout aguardando botão de tweet reabilitar, prosseguindo com envio...');
@@ -195,8 +203,8 @@ async function executeTweetAttempt(page, cleanText, imagePath, strategyName, out
     // 5. Enviar tweet
     // Estratégia A: Foco no editor + atalho nativo Control+Enter
     console.log('[X Bot] Focando no editor e disparando envio via Control+Enter...');
-    await editor.click();
-    await editor.focus();
+    await editor.click({ force: true }).catch(() => {});
+    await editor.focus().catch(() => {});
     await page.waitForTimeout(300);
     await page.keyboard.down('Control');
     await page.keyboard.press('Enter');
@@ -210,15 +218,17 @@ async function executeTweetAttempt(page, cleanText, imagePath, strategyName, out
 
     // Estratégia B: Se CreateTweet não disparou, clicar no botão oficial
     if (!tweetCreated) {
-      console.log('[X Bot] Control+Enter não finalizou envio, acionando botão oficial de Tweet...');
-      const postBtn = page.locator('button[data-testid="tweetButton"], button[data-testid="tweetButtonInline"], [data-testid="tweetButton"]').first();
+      console.log('[X Bot] Control+Enter não finalizou envio, acionando botão oficial de Tweet com force: true...');
+      const postBtn = page.locator('div[id="layers"] [data-testid="tweetButton"], [data-testid="tweetButton"], [data-testid="tweetButtonInline"]').last();
       await postBtn.scrollIntoViewIfNeeded().catch(() => {});
       const isPostBtnVisible = await postBtn.isVisible().catch(() => false);
       if (isPostBtnVisible) {
-        await postBtn.click({ timeout: 6000 }).catch(async () => {
+        await postBtn.click({ force: true, timeout: 6000 }).catch(async () => {
           console.log('[X Bot] Fallback: disparo via click programático no DOM...');
           await page.evaluate(() => {
-            const b = document.querySelector('button[data-testid="tweetButton"]') || document.querySelector('button[data-testid="tweetButtonInline"]');
+            const b = document.querySelector('div[id="layers"] [data-testid="tweetButton"]') ||
+                      document.querySelector('[data-testid="tweetButton"]') ||
+                      document.querySelector('[data-testid="tweetButtonInline"]');
             if (b) b.click();
           });
         });
@@ -269,7 +279,7 @@ async function postTweetViaBrowser(tweetText, options = {}) {
   }
 
   console.log('[X Browser Bot] Inicializando navegador Chromium com flags Stealth...');
-  const browser = await chromium.launch({
+  const launchOptions = {
     headless: options.headless !== false,
     args: [
       '--no-sandbox',
@@ -279,7 +289,21 @@ async function postTweetViaBrowser(tweetText, options = {}) {
       '--disable-features=IsolateOrigins,site-per-process',
       '--lang=pt-BR,pt'
     ]
-  });
+  };
+
+  const chromePaths = [
+    'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+    'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
+    path.join(process.env.LOCALAPPDATA || '', 'Google', 'Chrome', 'Application', 'chrome.exe')
+  ];
+  for (const cPath of chromePaths) {
+    if (fs.existsSync(cPath)) {
+      launchOptions.executablePath = cPath;
+      break;
+    }
+  }
+
+  const browser = await chromium.launch(launchOptions);
 
   try {
     const context = await browser.newContext({
