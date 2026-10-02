@@ -62,6 +62,7 @@ jobs:
           X_CT0: ${{ secrets.X_CT0 }}
           BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
           BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+          SOCIAL_WEBHOOK_URL: ${{ secrets.SOCIAL_WEBHOOK_URL }}
         run: node scripts/social_autopilot.js
 
       - name: Salvar Artefato do Post Diário
