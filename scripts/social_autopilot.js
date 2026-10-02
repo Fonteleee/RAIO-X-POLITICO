@@ -397,22 +397,36 @@ https://raioxpolitico.org/index.html#quiz
 
     const results = { telegram: false, discord: false, meta: false, threads: false, x: false };
 
-    // 1. Telegram Dispatch
+    // 1. Telegram Dispatch (com Foto Oficial em alta resolução)
     if (process.env.TELEGRAM_BOT_TOKEN && process.env.TELEGRAM_CHAT_ID) {
       try {
-        const text = `📢 *${post.title}*\n\n${post.copy.telegram || post.copy.x}\n\n🔗 ${post.link}`;
-        const res = await fetch(`https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            chat_id: process.env.TELEGRAM_CHAT_ID,
-            text,
-            parse_mode: 'Markdown'
-          })
-        });
+        const caption = `📢 *${post.title}*\n\n${post.copy.telegram || post.copy.x}\n\n🔗 ${post.link}`.slice(0, 1024);
+        let res;
+        if (post.imagePath && fs.existsSync(post.imagePath)) {
+          const fileBytes = fs.readFileSync(post.imagePath);
+          const formData = new FormData();
+          formData.append('chat_id', process.env.TELEGRAM_CHAT_ID);
+          formData.append('caption', caption);
+          formData.append('parse_mode', 'Markdown');
+          formData.append('photo', new Blob([fileBytes]), path.basename(post.imagePath));
+          res = await fetch(`https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendPhoto`, {
+            method: 'POST',
+            body: formData
+          });
+        } else {
+          res = await fetch(`https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              chat_id: process.env.TELEGRAM_CHAT_ID,
+              text: caption,
+              parse_mode: 'Markdown'
+            })
+          });
+        }
         if (res.ok) {
           results.telegram = true;
-          console.log('✅ Publicado com sucesso no Canal do Telegram');
+          console.log('✅ Publicado com sucesso no Canal do Telegram (com foto oficial)');
         } else {
           console.warn(`⚠️ Telegram falhou: status ${res.status}`);
         }
@@ -593,7 +607,7 @@ https://raioxpolitico.org/index.html#quiz
       }
     }
 
-    // 6. Bluesky (AT Protocol) Dispatch - 100% Gratuito
+    // 6. Bluesky (AT Protocol) Dispatch - 100% Gratuito (com Foto Oficial em alta resolução)
     if (process.env.BLUESKY_HANDLE && process.env.BLUESKY_APP_PASSWORD) {
       try {
         console.log(`[Bluesky Autopilot] Autenticando com @${process.env.BLUESKY_HANDLE}...`);
@@ -608,6 +622,45 @@ https://raioxpolitico.org/index.html#quiz
         const session = await sessionRes.json();
         if (session.accessJwt && session.did) {
           const bskyText = `${post.title}\n\n${post.copy.x}\n\n🔗 ${post.link}`.slice(0, 300);
+          let embed = undefined;
+
+          // Upload da foto oficial do candidato via uploadBlob
+          if (post.imagePath && fs.existsSync(post.imagePath)) {
+            try {
+              const imgBytes = fs.readFileSync(post.imagePath);
+              const blobRes = await fetch('https://bsky.social/xrpc/com.atproto.repo.uploadBlob', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'image/jpeg',
+                  'Authorization': `Bearer ${session.accessJwt}`
+                },
+                body: imgBytes
+              });
+              const blobData = await blobRes.json();
+              if (blobRes.ok && blobData.blob) {
+                embed = {
+                  $type: 'app.bsky.embed.images',
+                  images: [{
+                    alt: post.title || 'Foto Oficial do Político',
+                    image: blobData.blob
+                  }]
+                };
+                console.log('📸 [Bluesky Autopilot] Foto oficial anexada com sucesso via AT Protocol!');
+              }
+            } catch (blobErr) {
+              console.warn(`⚠️ [Bluesky Autopilot] Falha ao anexar imagem blob: ${blobErr.message}`);
+            }
+          }
+
+          const recordBody = {
+            $type: 'app.bsky.feed.post',
+            text: bskyText,
+            createdAt: new Date().toISOString()
+          };
+          if (embed) {
+            recordBody.embed = embed;
+          }
+
           const postRes = await fetch('https://bsky.social/xrpc/com.atproto.repo.createRecord', {
             method: 'POST',
             headers: {
@@ -617,11 +670,7 @@ https://raioxpolitico.org/index.html#quiz
             body: JSON.stringify({
               repo: session.did,
               collection: 'app.bsky.feed.post',
-              record: {
-                '$type': 'app.bsky.feed.post',
-                text: bskyText,
-                createdAt: new Date().toISOString()
-              }
+              record: recordBody
             })
           });
           const postData = await postRes.json();
@@ -636,6 +685,32 @@ https://raioxpolitico.org/index.html#quiz
         }
       } catch (err) {
         console.warn(`⚠️ [Bluesky Autopilot] Erro de rede: ${err.message}`);
+      }
+    }
+
+    // 7. Universal Social Webhook (Make.com / Buffer / Zapier / Publer)
+    if (process.env.SOCIAL_WEBHOOK_URL) {
+      try {
+        console.log(`[Social Webhook] Disparando payload para parceiro oficial de automação social...`);
+        const hookRes = await fetch(process.env.SOCIAL_WEBHOOK_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            title: post.title,
+            theme: post.theme,
+            text: post.copy.x,
+            link: post.link,
+            imagePath: post.imagePath ? path.basename(post.imagePath) : null,
+            imageUrl: post.candId ? `https://raioxpolitico.org/img/candidates/${post.candId}.jpg` : null,
+            timestamp: new Date().toISOString()
+          })
+        });
+        if (hookRes.ok) {
+          results.webhook = true;
+          console.log('🚀 [Social Webhook] Payload entregue com sucesso!');
+        }
+      } catch (hookErr) {
+        console.warn(`⚠️ [Social Webhook] Erro ao disparar webhook: ${hookErr.message}`);
       }
     }
 
