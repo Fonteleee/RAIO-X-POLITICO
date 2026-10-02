@@ -3,20 +3,21 @@
  * Publicação autônoma via Playwright usando sessão de cookie (auth_token).
  * Custo: R$ 0,00 | Bypassa bloqueios de cobrança da API v2 do X.
  * 
- * ARQUITETURA DE RESILIÊNCIA & FALLBACK MULTINÍVEL:
- * 1. Estratégia Principal: Publicação enriquecida COM FOTO OFICIAL do político.
- * 2. Fallback Imediato: Se houver qualquer timeout/recusa de mídia no X,
- *    degrada graciosamente para TEXTO PURO + LINK DO DOSSIÊ (método comprovado).
- * 3. Confirmação de Rede: Valida o endpoint GraphQL CreateTweet (HTTP 200 + rest_id).
+ * ARQUITETURA DE RESILIÊNCIA, STEALTH & FALLBACK:
+ * 1. Stealth Flags: Evasão ativa do checkpoint Cloudflare ("Um momento…") sem expor webdriver.
+ * 2. Sessão Limpa: Injeta auth_token oficial sem inventar cookies CSRF forjados.
+ * 3. Detecção e Espera Ativa: Aguarda o término do handshake anti-bot caso ocorra.
+ * 4. Fallback Multinível: Tenta primeiro COM FOTO OFICIAL; se houver atrito na API de mídia,
+ *    degrada no mesmo ciclo para TEXTO PURO + LINK DO DOSSIÊ (método comprovado).
+ * 5. Confirmação de Rede: Valida o endpoint GraphQL CreateTweet (HTTP 200 + rest_id).
  */
 
 const path = require('node:path');
 const fs = require('node:fs');
-const crypto = require('node:crypto');
 const { chromium } = require('playwright');
 
 /**
- * Executa uma tentativa de postagem com timeout, auto-dispensa de overlays e submissão redundante.
+ * Executa uma tentativa de postagem com evasão de checkpoint, auto-dispensa de overlays e submissão redundante.
  * @param {import('playwright').Page} page
  * @param {string} cleanText
  * @param {string|null} imagePath
@@ -64,12 +65,33 @@ async function executeTweetAttempt(page, cleanText, imagePath, strategyName, out
     console.log('[X Bot] Acessando timeline inicial (https://x.com/home)...');
     await page.goto('https://x.com/home', {
       waitUntil: 'domcontentloaded',
-      timeout: 35000
+      timeout: 45000
     }).catch(() => {});
     await page.waitForTimeout(2500);
 
-    const currentUrl = page.url();
-    console.log(`[X Bot] URL ativa: ${currentUrl} | Título: ${await page.title().catch(() => '')}`);
+    let title = await page.title().catch(() => '');
+    let currentUrl = page.url();
+    console.log(`[X Bot] URL ativa: ${currentUrl} | Título: "${title}"`);
+
+    // Detecção ativa de tela de checkpoint / desafio ("Um momento…" / "Just a moment...")
+    if (title.includes('Um momento') || title.includes('Just a moment') || title.includes('moment')) {
+      console.log('🛡️ [X Bot] Tela de verificação anti-bot ("Um momento…") detectada.');
+      console.log('⏳ [X Bot] Aguardando resolução automática do desafio Cloudflare/Twitter (até 35s)...');
+
+      try {
+        await page.waitForFunction(() => {
+          const t = document.title || '';
+          return !t.includes('Um momento') && !t.includes('Just a moment') && !t.includes('moment');
+        }, { timeout: 35000 });
+        title = await page.title().catch(() => '');
+        currentUrl = page.url();
+        console.log(`✅ [X Bot] Desafio superado! Novo título: "${title}" | URL: ${currentUrl}`);
+      } catch {
+        console.warn('⚠️ [X Bot] Timeout aguardando resolução de "Um momento…". Tentando recarregar a página...');
+        await page.reload({ waitUntil: 'domcontentloaded', timeout: 30000 }).catch(() => {});
+        await page.waitForTimeout(3000);
+      }
+    }
 
     // Verificar se caiu na tela de login
     if (currentUrl.includes('/login') || currentUrl.includes('/i/flow/login')) {
@@ -127,7 +149,7 @@ async function executeTweetAttempt(page, cleanText, imagePath, strategyName, out
     }
 
     if (!isEditorVisible) {
-      await page.waitForSelector(editorSelector, { timeout: 12000 });
+      await page.waitForSelector(editorSelector, { timeout: 15000 });
       editor = page.locator(editorSelector).first();
     }
 
@@ -158,7 +180,7 @@ async function executeTweetAttempt(page, cleanText, imagePath, strategyName, out
         await page.waitForFunction(() => {
           const btn = document.querySelector('[data-testid="tweetButton"]') || document.querySelector('[data-testid="tweetButtonInline"]');
           return btn && btn.getAttribute('aria-disabled') !== 'true';
-        }, { timeout: 18000 }).catch(() => {
+        }, { timeout: 20000 }).catch(() => {
           console.log('[X Bot] Timeout aguardando botão de tweet reabilitar, prosseguindo com envio...');
         });
         console.log('[X Bot] Processamento de foto concluído.');
@@ -224,7 +246,7 @@ async function executeTweetAttempt(page, cleanText, imagePath, strategyName, out
 }
 
 /**
- * Publica um post no X através de um navegador Chromium headless com Fallback Multinível
+ * Publica um post no X através de um navegador Chromium headless com Fallback Multinível e Stealth
  * @param {string} tweetText - Texto a ser postado (máx 280 caracteres)
  * @param {object} options - Opções adicionais (authToken, ct0, imagePath, headless)
  */
@@ -246,14 +268,16 @@ async function postTweetViaBrowser(tweetText, options = {}) {
     fs.mkdirSync(outputDir, { recursive: true });
   }
 
-  console.log('[X Browser Bot] Inicializando navegador Chromium headless...');
+  console.log('[X Browser Bot] Inicializando navegador Chromium com flags Stealth...');
   const browser = await chromium.launch({
     headless: options.headless !== false,
     args: [
       '--no-sandbox',
       '--disable-setuid-sandbox',
       '--disable-dev-shm-usage',
-      '--disable-blink-features=AutomationControlled'
+      '--disable-blink-features=AutomationControlled',
+      '--disable-features=IsolateOrigins,site-per-process',
+      '--lang=pt-BR,pt'
     ]
   });
 
@@ -265,8 +289,34 @@ async function postTweetViaBrowser(tweetText, options = {}) {
       timezoneId: 'America/Sao_Paulo'
     });
 
-    // Injetar cookies essenciais de autenticação (.x.com e .twitter.com)
-    const effectiveCt0 = ct0 || crypto.randomBytes(16).toString('hex');
+    // Injeção de scripts stealth para mascarar automação no Cloudflare/Akamai
+    await context.addInitScript(() => {
+      // 1. Ocultar webdriver
+      Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
+      delete navigator.__proto__.webdriver;
+
+      // 2. Simular window.chrome de um navegador comum
+      window.chrome = {
+        app: { isInstalled: false },
+        webstore: { onInstallStageChanged: {}, onDownloadProgress: {} },
+        runtime: { PlatformOs: { WIN: 'win' } }
+      };
+
+      // 3. Simular plugins nativos do Chromium
+      Object.defineProperty(navigator, 'plugins', {
+        get: () => [
+          { name: 'Chrome PDF Plugin', filename: 'internal-pdf-viewer' },
+          { name: 'Chrome PDF Viewer', filename: 'mhjfbmdgcfjbbpaeojofohoefgiehjai' }
+        ]
+      });
+
+      // 4. Idiomas consistentes
+      Object.defineProperty(navigator, 'languages', {
+        get: () => ['pt-BR', 'pt', 'en-US', 'en']
+      });
+    });
+
+    // Injetar cookies essenciais de autenticação
     const cookies = [
       {
         name: 'auth_token',
@@ -285,26 +335,32 @@ async function postTweetViaBrowser(tweetText, options = {}) {
         httpOnly: true,
         secure: true,
         sameSite: 'None'
-      },
-      {
-        name: 'ct0',
-        value: effectiveCt0,
-        domain: '.x.com',
-        path: '/',
-        httpOnly: false,
-        secure: true,
-        sameSite: 'Lax'
-      },
-      {
-        name: 'ct0',
-        value: effectiveCt0,
-        domain: '.twitter.com',
-        path: '/',
-        httpOnly: false,
-        secure: true,
-        sameSite: 'Lax'
       }
     ];
+
+    // Injeta ct0 APENAS se fornecido explicitamente pelo usuário (evita forjar tokens que quebram a sessão)
+    if (ct0) {
+      cookies.push(
+        {
+          name: 'ct0',
+          value: ct0,
+          domain: '.x.com',
+          path: '/',
+          httpOnly: false,
+          secure: true,
+          sameSite: 'Lax'
+        },
+        {
+          name: 'ct0',
+          value: ct0,
+          domain: '.twitter.com',
+          path: '/',
+          httpOnly: false,
+          secure: true,
+          sameSite: 'Lax'
+        }
+      );
+    }
 
     await context.addCookies(cookies);
     const page = await context.newPage();
