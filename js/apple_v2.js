@@ -269,7 +269,7 @@
         if (typeof openDossie === 'function') {
           openDossie(cand.id);
         } else {
-          window.location.href = `dossie_v2.html?id=${cand.id}`;
+          window.location.href = `dossie.html?id=${cand.id}`;
         }
       };
       card.onkeydown = (e) => {
@@ -541,7 +541,7 @@
 
         <!-- Card Bottom Actions: posicionamento elevado e sem distanciamento vazio -->
         <div class="pt-2 border-t border-black/5 dark:border-white/10 flex items-center gap-1.5 mt-1.5">
-          <button onclick="event.stopPropagation(); if(typeof openDossie === 'function') openDossie('${cand.id}'); else window.location.href='dossie_v2.html?id=${cand.id}';" class="flex-1 py-1.5 px-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs flex items-center justify-center gap-1.5 shadow-md shadow-blue-600/20 transition cursor-pointer">
+          <button onclick="event.stopPropagation(); if(typeof openDossie === 'function') openDossie('${cand.id}'); else window.location.href='dossie.html?id=${cand.id}';" class="flex-1 py-1.5 px-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs flex items-center justify-center gap-1.5 shadow-md shadow-blue-600/20 transition cursor-pointer">
             <i data-lucide="folder-search" class="w-3.5 h-3.5"></i> Dossiê
           </button>
           <button onclick="event.stopPropagation(); if(typeof openExportModalFor === 'function') openExportModalFor('${cand.id}');" class="px-3 py-1.5 rounded-xl bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:opacity-95 text-white font-semibold text-xs shadow-md shadow-indigo-500/20 transition flex items-center justify-center gap-1.5 cursor-pointer" title="Gerar Figurinha Colecionável (17 Temas)">
@@ -748,7 +748,7 @@
   window.renderAppleCandidatesFeed = renderAppleCandidatesFeed;
   window.attach3DTiltToCards = attach3DTiltToCards;
   window.openDossie = function (candId, initialSubTab = 'visao-geral') {
-    window.location.href = `dossie_v2.html?id=${encodeURIComponent(candId)}&tab=${encodeURIComponent(initialSubTab)}`;
+    window.location.href = `dossie.html?id=${encodeURIComponent(candId)}&tab=${encodeURIComponent(initialSubTab)}`;
   };
 
   // Override ranking.js renderCandidatesFeed so any filter call renders Apple cards
