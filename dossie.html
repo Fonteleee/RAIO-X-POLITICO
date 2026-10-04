@@ -2022,6 +2022,7 @@
   </div>
 
   <!-- ================= SCRIPTS DE INICIALIZAÇÃO & RENDERIZAÇÃO ================= -->
+  <script src="data/candidates.js" defer></script>
   <script src="data/judiciary_authorities.js" defer></script>
   
   <script src="data/national_bottlenecks.js" defer></script>
@@ -2180,18 +2181,7 @@
         updateThemeIcon();
       }
 
-      // Tenta buscar da API REST /api/candidates/:id
-      try {
-        const response = await fetch(`/api/candidates/${candId}`);
-        if (response.ok) {
-          const resJson = await response.json();
-          if (resJson.success && resJson.data) {
-            currentCand = normalizeCandidateData(resJson.data);
-          }
-        }
-      } catch (e) {
-        console.warn('API REST inacessível, usando dados locais de fallback:', e);
-      }
+      /* Fetch bloqueado para performance (GitHub Pages static) */
 
       if (!currentCand) {
         if (typeof candidatesData !== 'undefined' && Array.isArray(candidatesData)) {
