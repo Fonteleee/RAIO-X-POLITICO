@@ -627,8 +627,13 @@ window.candidatesData = [];
 
     // ================= SINCRONIZAÇÃO REATIVA COM A API REST & SQLITE =================
     async function syncWithBackend() {
+      if (window.location.hostname.includes("github.io") || window.location.protocol === "file:") {
+        console.log("GitHub Pages / Local file detectado. Usando dados estáticos.");
+        if (typeof renderCandidatesFeed === "function") renderCandidatesFeed(candidatesData);
+        return;
+      }
       try {
-        const res = await fetch('/api/candidates');
+        const res = await fetch('/api/candidates').catch(() => ({ ok: false })); // Fallback Inteligente
         if (res.ok) {
           const json = await res.json();
           if (json.success && Array.isArray(json.data) && json.data.length > 0) {
