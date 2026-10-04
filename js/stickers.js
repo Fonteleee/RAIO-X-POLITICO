@@ -3108,7 +3108,7 @@
 
         async function shareToInstagram() {
       try {
-        const target = document.getElementById('sticker-target');
+        const target = document.getElementById('export-card-target');
         if (!target) return;
         const btn = document.getElementById('btn-share-insta');
         if (btn) btn.innerHTML = '<i data-lucide="loader-2" class="w-4 h-4 animate-spin text-white"></i> Gerando...';
@@ -3129,7 +3129,7 @@
             });
           } else {
             alert("Seu dispositivo não suporta envio direto. A figurinha será baixada para você postar manualmente no Instagram.");
-            downloadSticker();
+            downloadExportedImage('fhd');
           }
           if (btn) btn.innerHTML = '<i data-lucide="camera" class="w-4 h-4 text-white"></i> 📸 Postar no Instagram (Stories / Feed)';
           if (window.lucide) lucide.createIcons();
@@ -3181,3 +3181,5 @@
     function closeLegalSourcesModal() {
       document.getElementById('legal-sources-modal').classList.add('hidden');
     }
+
+
