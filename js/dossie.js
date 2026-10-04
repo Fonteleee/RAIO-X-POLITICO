@@ -996,13 +996,18 @@ window.burstSpectrum = burstSpectrum;
     container.innerHTML = html;
   }
   
-  // Hook into openDossie to render promises
-  const oldOpenDossie = window.openDossie;
-  if(oldOpenDossie) {
-    window.openDossie = function(id) {
-      oldOpenDossie(id);
-      const cand = (typeof candidatesData !== 'undefined' ? candidatesData : []).find(c => c.id === id);
-      if(cand) renderPromessas(cand);
-    }
-  }
   
+  // Automatically render promises on page load for the active candidate
+  document.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+          const urlParams = new URLSearchParams(window.location.search);
+          const candId = urlParams.get('id');
+          if(candId) {
+             const cands = (typeof window.candidatesData !== 'undefined') ? window.candidatesData : [];
+             const cand = cands.find(c => c.id === candId) || (typeof activeDossieCandidate !== 'undefined' ? activeDossieCandidate : null);
+             if (cand && typeof renderPromessas === 'function') {
+                 renderPromessas(cand);
+             }
+          }
+      }, 500); // delay to ensure data is loaded
+  });
