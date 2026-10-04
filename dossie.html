@@ -292,7 +292,7 @@
 
           <!-- Botões de Ação Rápida -->
           <div class="space-y-2 pt-1">
-            <button onclick="exportCard()" class="w-full py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:opacity-95 text-white font-extrabold text-xs shadow-md shadow-indigo-500/20 flex items-center justify-center gap-2 transition cursor-pointer">
+            <button onclick="exportCard()" class="w-full py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-extrabold text-xs shadow-md shadow-indigo-500/20 flex items-center justify-center gap-2 transition cursor-pointer">
               <i data-lucide="sparkles" class="w-4 h-4"></i>
               <span>BAIXAR FIGURINHA DO CANDIDATO</span>
             </button>
@@ -312,7 +312,7 @@
         <!-- Barra de Navegação das 9 Abas (2 Linhas Organizadas, Sem Rolagem Horizontal) -->
         <nav role="tablist" class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 p-4.5 rounded-2xl shadow-xs space-y-1.5">
           <!-- Linha 1: Atuação Direta & Mandato (5 Abas) -->
-          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-1.5">
+          <div class="flex overflow-x-auto whitespace-nowrap no-scrollbar gap-1.5 snap-x">
             <button onclick="switchTab('visao-geral')" id="tab-btn-visao-geral" role="tab" class="tab-btn active px-2.5 py-2 rounded-xl font-bold text-xs flex items-center justify-center gap-1.5 transition cursor-pointer bg-sky-600 text-white shadow-xs">
               <i data-lucide="layout-dashboard" class="w-3.5 h-3.5"></i>
               <span>Visão Geral</span>
@@ -335,7 +335,7 @@
             </button>
           </div>
           <!-- Linha 2: Fiscalização, Integridade, Cenário & Projeção Futuro (5 Abas) -->
-          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-1.5">
+          <div class="flex overflow-x-auto whitespace-nowrap no-scrollbar gap-1.5 snap-x">
             <button onclick="switchTab('debates-falas')" id="tab-btn-debates-falas" role="tab" class="tab-btn px-2.5 py-2 rounded-xl font-medium text-xs flex items-center justify-center gap-1.5 transition cursor-pointer bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700">
               <i data-lucide="message-square-quote" class="w-3.5 h-3.5 text-amber-500"></i>
               <span>Falas</span>

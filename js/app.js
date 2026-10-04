@@ -1,4 +1,4 @@
-window.candidatesData = [];
+window.candidatesData = window.candidatesData || [];
 // Figuras Políticas - Ponto de Entrada, Modais Auxiliares, Busca Global e Bootstrap
 
 // ================= LOCATION MODAL LOGIC =================

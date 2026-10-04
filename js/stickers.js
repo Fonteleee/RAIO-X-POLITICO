@@ -3106,9 +3106,38 @@
       }
     }
 
-    function shareToInstagram() {
-      alert("Para postar no Instagram:\n1. Baixe o card em Full HD\n2. Abra o Instagram e selecione 'Adicionar ao Story' ou 'Nova Publicação'\n3. O link do dossiê já foi copiado para sua área de transferência para usar na figurinha de Link!");
-      copyToClipboardShare();
+        async function shareToInstagram() {
+      try {
+        const target = document.getElementById('sticker-target');
+        if (!target) return;
+        const btn = document.getElementById('btn-share-insta');
+        if (btn) btn.innerHTML = '<i data-lucide="loader-2" class="w-4 h-4 animate-spin text-white"></i> Gerando...';
+        
+        const canvas = await html2canvas(target, { scale: 3, useCORS: true, backgroundColor: null });
+        canvas.toBlob(async (blob) => {
+          if (!blob) {
+            if (btn) btn.innerHTML = '<i data-lucide="camera" class="w-4 h-4 text-white"></i> 📸 Postar no Instagram (Stories / Feed)';
+            return;
+          }
+          const file = new File([blob], 'raiox_politico_figurinha.png', { type: 'image/png' });
+          
+          if (navigator.canShare && navigator.canShare({ files: [file] })) {
+            await navigator.share({
+              files: [file],
+              title: 'Raio-X Político',
+              text: 'Confira a análise deste político no Raio-X Político!'
+            });
+          } else {
+            alert("Seu dispositivo não suporta envio direto. A figurinha será baixada para você postar manualmente no Instagram.");
+            downloadSticker();
+          }
+          if (btn) btn.innerHTML = '<i data-lucide="camera" class="w-4 h-4 text-white"></i> 📸 Postar no Instagram (Stories / Feed)';
+          if (window.lucide) lucide.createIcons();
+        }, 'image/png');
+      } catch (err) {
+        console.error(err);
+        alert("Erro ao processar imagem para o Instagram.");
+      }
     }
 
     async function shareCardImageNative() {
