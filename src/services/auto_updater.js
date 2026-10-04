@@ -101,21 +101,33 @@ class AutoUpdaterService {
     }
   }
 
-  // Agendador nativo para disparar às 08:00 da manhã diariamente
   scheduleDailyWorker() {
-    console.log(`[AutoUpdater] Agendador ativo: Próxima execução programada para as 08:00.`);
+    console.log(`[AutoUpdater] Agendador ativo: Cálculo inteligente ativado para as 08:00.`);
     
-    // Checagem periódica a cada hora para disparar às 08:00 da manhã
-    setInterval(() => {
+    const scheduleNext = () => {
       const now = new Date();
-      const currentHour = now.getHours();
-      const currentMinute = now.getMinutes();
+      let nextRun = new Date();
+      nextRun.setHours(8, 0, 0, 0);
       
-      // Se for 08:00 (entre 08:00 e 08:05)
-      if (currentHour === 8 && currentMinute < 5) {
-        this.runDailyMaintenance().catch(err => console.error('[AutoUpdater Scheduled] Erro:', err));
+      if (now.getTime() >= nextRun.getTime()) {
+        nextRun.setDate(nextRun.getDate() + 1);
       }
-    }, 5 * 60 * 1000); // Checa a cada 5 minutos
+      
+      const timeToNextRun = nextRun.getTime() - now.getTime();
+      console.log(`[AutoUpdater] Próxima execução em ${Math.round(timeToNextRun / 60000)} minutos.`);
+      
+      setTimeout(async () => {
+        try {
+          await this.runDailyMaintenance();
+        } catch (err) {
+          console.error('[AutoUpdater Scheduled] Erro:', err);
+        } finally {
+          scheduleNext();
+        }
+      }, timeToNextRun);
+    };
+
+    scheduleNext();
   }
 }
 

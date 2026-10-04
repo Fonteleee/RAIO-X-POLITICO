@@ -240,3 +240,7 @@ CREATE TABLE IF NOT EXISTS civic_contradictory_requests (
   status TEXT DEFAULT 'PENDENTE_ANALISE_48H',
   created_at TEXT NOT NULL
 );
+
+CREATE INDEX IF NOT EXISTS idx_candidate_debate_statements_candidate_id ON candidate_debate_statements(candidate_id);
+CREATE INDEX IF NOT EXISTS idx_candidate_proposals_candidate_id ON candidate_proposals(candidate_id);
+CREATE INDEX IF NOT EXISTS idx_candidate_statements_candidate_id ON candidate_statements(candidate_id);

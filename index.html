@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
@@ -27,7 +27,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/tailwind-compiled.css">
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -139,7 +139,7 @@
     }
 
     /* Textura 8K Procedural & Elementos 3D Táteis */
-    .bg-mesh-8k {
+    . {
       background-image: 
         radial-gradient(at 15% 15%, rgba(14, 165, 233, 0.08) 0px, transparent 60%),
         radial-gradient(at 85% 20%, rgba(168, 85, 247, 0.07) 0px, transparent 55%),
@@ -216,7 +216,7 @@
     }
   </style>
 </head>
-<body class="min-h-screen flex flex-col antialiased selection:bg-blue-500 selection:text-white bg-mesh-8k">
+<body class="min-h-screen flex flex-col antialiased selection:bg-blue-500 selection:text-white ">
 
   <!-- ================= FLOATING LIQUID GLASS NAVIGATION ================= -->
   <header class="sticky top-0 z-40 apple-glass-nav transition-all duration-300">
@@ -231,7 +231,7 @@
           <h1 class="font-bold text-xs sm:text-sm tracking-tight text-neutral-900 dark:text-white leading-tight">
             Figuras Políticas
           </h1>
-          <p class="text-[10px] text-neutral-500 dark:text-neutral-400 font-medium">
+          <p class="text-xs text-neutral-500 dark:text-neutral-400 font-medium">
             Veja quem te representa.
           </p>
         </div>
@@ -250,13 +250,13 @@
             placeholder="Buscar político, partido ou cargo..." 
             class="w-full pl-9 pr-14 py-1.5 bg-black/5 dark:bg-white/10 border border-black/5 dark:border-white/10 rounded-full text-xs font-medium text-neutral-900 dark:text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-blue-500/30 transition"
           >
-          <span class="absolute right-2 px-1.5 py-0.2 rounded-full bg-black/5 dark:bg-white/10 text-[9px] font-mono text-neutral-500 pointer-events-none">
+          <span class="absolute right-2 px-1.5 py-0.2 rounded-full bg-black/5 dark:bg-white/10 text-xs font-mono text-neutral-500 pointer-events-none">
             Ctrl+K
           </span>
         </div>
         
         <!-- Live Instant Search Dropdown -->
-        <div id="global-search-dropdown" class="hidden absolute top-full left-0 right-0 mt-2 bg-white/95 dark:bg-neutral-900/95 border border-black/10 dark:border-white/15 rounded-2xl shadow-2xl p-2 z-50 max-h-96 overflow-y-auto space-y-1 backdrop-blur-2xl">
+        <div id="global-search-dropdown" class="hidden absolute top-full left-0 right-0 mt-2 bg-white/95 dark:bg-neutral-900/95 border border-black/10 dark:border-white/15 rounded-2xl shadow-2xl p-4 z-50 max-h-96 overflow-y-auto space-y-1 ">
           <!-- Populated dynamically via js/app.js -->
         </div>
       </div>
@@ -264,25 +264,25 @@
       <!-- Right Actions: Login, Theme Toggle, Location & Support -->
       <div class="flex items-center gap-1.5 flex-shrink-0">
         <!-- Location Selector -->
-        <button onclick="openLocationModal()" class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-black/5 dark:bg-white/10 border border-black/5 dark:border-white/10 text-[11px] font-medium text-neutral-800 dark:text-neutral-200 hover:bg-black/10 dark:hover:bg-white/15 transition cursor-pointer">
+        <button onclick="openLocationModal()" class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-black/5 dark:bg-white/10 border border-black/5 dark:border-white/10 text-sm font-medium text-neutral-800 dark:text-neutral-200 hover:bg-black/10 dark:hover:bg-white/15 transition cursor-pointer">
           <i data-lucide="map-pin" class="w-3 h-3 text-blue-600 dark:text-blue-400"></i>
           <span id="current-location-display" class="hidden sm:inline">São Paulo, SP</span>
           <i data-lucide="chevron-down" class="w-2.5 h-2.5 text-neutral-400"></i>
         </button>
 
         <!-- Theme Toggle Button -->
-        <button onclick="toggleAppleTheme()" id="theme-toggle-btn" class="p-1.5 rounded-full bg-black/5 dark:bg-white/10 text-neutral-700 dark:text-neutral-200 hover:bg-black/10 dark:hover:bg-white/15 transition cursor-pointer" title="Alternar Modo Escuro / Claro">
+        <button onclick="toggleAppleTheme()" id="theme-toggle-btn" class="p-4.5 rounded-full bg-black/5 dark:bg-white/10 text-neutral-700 dark:text-neutral-200 hover:bg-black/10 dark:hover:bg-white/15 transition cursor-pointer" title="Alternar Modo Escuro / Claro">
           <i id="theme-toggle-icon" data-lucide="moon" class="w-3.5 h-3.5"></i>
         </button>
 
         <!-- Login / User Button -->
-        <button onclick="openLoginModal()" class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-black/5 dark:bg-white/10 text-[11px] font-semibold text-neutral-800 dark:text-neutral-200 hover:bg-black/10 dark:hover:bg-white/15 transition cursor-pointer">
+        <button onclick="openLoginModal()" class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-black/5 dark:bg-white/10 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:bg-black/10 dark:hover:bg-white/15 transition cursor-pointer">
           <i data-lucide="user" class="w-3 h-3 text-blue-600 dark:text-blue-400"></i>
           <span id="user-btn-label">Entrar</span>
         </button>
 
         <!-- Crowdfunding CTA -->
-        <button onclick="openDonateModal()" class="hidden sm:flex items-center gap-1 px-3 py-1 rounded-full bg-blue-600 hover:bg-blue-500 text-white text-[11px] font-semibold shadow-xs transition cursor-pointer">
+        <button onclick="openDonateModal()" class="hidden sm:flex items-center gap-1 px-3 py-1 rounded-full bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold shadow-xs transition cursor-pointer">
           <i data-lucide="heart" class="w-3 h-3 fill-white/20"></i> Apoiar
         </button>
       </div>
@@ -292,7 +292,7 @@
 
   <!-- ================= SUB-HEADER: ELECTION TIMELINE & 10 FONTES (COMPACTO) ================= -->
   <section id="apple-election-timeline-bar" class="border-b border-black/5 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.02] py-1 px-4">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1.5 text-[11px]">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1.5 text-sm">
       
       <!-- Election Countdown -->
       <div class="flex items-center gap-1.5 text-neutral-600 dark:text-neutral-400">
@@ -306,15 +306,15 @@
 
       <!-- Official Sources & Layman Terms -->
       <div class="flex items-center gap-1.5 flex-wrap">
-        <button onclick="openOfficesGuideModal()" class="flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-purple-500/10 hover:bg-purple-500/20 text-purple-700 dark:text-purple-300 border border-purple-500/20 font-medium text-[10.5px] transition cursor-pointer" title="Guia Cívico dos 10 Principais Cargos Públicos">
+        <button onclick="openOfficesGuideModal()" class="flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-purple-500/10 hover:bg-purple-500/20 text-purple-700 dark:text-purple-300 border border-purple-500/20 font-medium text-xs transition cursor-pointer" title="Guia Cívico dos 10 Principais Cargos Públicos">
           <i data-lucide="landmark" class="w-3 h-3 text-purple-500"></i>
           <span>Guia dos 10 Cargos</span>
         </button>
-        <button onclick="openGlossaryModal()" class="flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-black/5 dark:bg-white/10 hover:bg-black/10 dark:hover:bg-white/15 text-neutral-700 dark:text-neutral-300 font-medium text-[10.5px] transition cursor-pointer">
+        <button onclick="openGlossaryModal()" class="flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-black/5 dark:bg-white/10 hover:bg-black/10 dark:hover:bg-white/15 text-neutral-700 dark:text-neutral-300 font-medium text-xs transition cursor-pointer">
           <i data-lucide="help-circle" class="w-3 h-3 text-amber-500"></i>
           <span>Termos para Leigos</span>
         </button>
-        <button onclick="openLegalSourcesModal()" class="flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20 font-medium text-[10.5px] transition cursor-pointer">
+        <button onclick="openLegalSourcesModal()" class="flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20 font-medium text-xs transition cursor-pointer">
           <i data-lucide="shield-check" class="w-3 h-3 text-emerald-500"></i>
           <span>10 Fontes Oficiais</span>
         </button>
@@ -329,12 +329,12 @@
       A inteligência eleitoral redesenhada.
     </h2>
 
-    <p class="text-[11.5px] sm:text-xs text-neutral-500 dark:text-neutral-400 max-w-xl mx-auto font-medium leading-snug">
+    <p class="text-sm sm:text-xs text-neutral-500 dark:text-neutral-400 max-w-xl mx-auto font-medium leading-snug">
       Auditoria de gastos, propostas e integridade de 200 candidatos e 158 mandatários com 100% dos dados consolidados.
     </p>
 
     <!-- Live Badges -->
-    <div class="flex flex-wrap items-center justify-center gap-1.5 pt-0.5 text-[10px] font-semibold">
+    <div class="flex flex-wrap items-center justify-center gap-1.5 pt-0.5 text-xs font-semibold">
       <span class="px-2.5 py-0.5 rounded-full bg-blue-500/10 text-blue-700 dark:text-blue-300 border border-blue-500/20">
         200 Candidatos Auditados
       </span>
@@ -352,34 +352,34 @@
 
   <!-- ================= DYNAMIC CAPSULE SEGMENTED CONTROL ================= -->
   <div class="sticky top-14 z-30 py-1.5 flex justify-center px-4">
-    <div class="apple-segmented-container shadow-xs">
+    <div role="tablist" class="apple-segmented-container shadow-xs">
       <div id="apple-segmented-pill" class="apple-segmented-pill"></div>
 
-      <button data-apple-tab="feed" onclick="switchAppleTab('feed')" class="apple-segment-btn text-black dark:text-white font-bold cursor-pointer">
+      <button data-apple-tab="feed" onclick="switchAppleTab('feed')" role="tab" class="apple-segment-btn text-black dark:text-white font-bold cursor-pointer">
         <i data-lucide="layout-grid" class="w-3.5 h-3.5"></i>
         <span>Feed Cívico</span>
       </button>
-      <button data-apple-tab="ranking" onclick="switchAppleTab('ranking')" class="apple-segment-btn text-neutral-500 dark:text-neutral-400 cursor-pointer">
+      <button data-apple-tab="ranking" onclick="switchAppleTab('ranking')" role="tab" class="apple-segment-btn text-neutral-500 dark:text-neutral-400 cursor-pointer">
         <i data-lucide="trophy" class="w-3.5 h-3.5"></i>
         <span>Ranking Auditado</span>
       </button>
-      <button data-apple-tab="comparator" onclick="switchAppleTab('comparator')" class="apple-segment-btn text-neutral-500 dark:text-neutral-400 cursor-pointer">
+      <button data-apple-tab="comparator" onclick="switchAppleTab('comparator')" role="tab" class="apple-segment-btn text-neutral-500 dark:text-neutral-400 cursor-pointer">
         <i data-lucide="scale" class="w-3.5 h-3.5"></i>
         <span>Comparador 1v1</span>
       </button>
-      <button data-apple-tab="match" onclick="switchAppleTab('match')" class="apple-segment-btn text-neutral-500 dark:text-neutral-400 cursor-pointer">
+      <button data-apple-tab="match" onclick="switchAppleTab('match')" role="tab" class="apple-segment-btn text-neutral-500 dark:text-neutral-400 cursor-pointer">
         <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
         <span>Match Eleitoral</span>
       </button>
-      <button data-apple-tab="incumbents" onclick="switchAppleTab('incumbents')" class="apple-segment-btn text-neutral-500 dark:text-neutral-400 cursor-pointer">
+      <button data-apple-tab="incumbents" onclick="switchAppleTab('incumbents')" role="tab" class="apple-segment-btn text-neutral-500 dark:text-neutral-400 cursor-pointer">
         <i data-lucide="landmark" class="w-3.5 h-3.5"></i>
         <span>Em Exercício</span>
       </button>
-      <button data-apple-tab="urna" onclick="switchAppleTab('urna')" class="apple-segment-btn text-neutral-500 dark:text-neutral-400 cursor-pointer">
+      <button data-apple-tab="urna" onclick="switchAppleTab('urna')" role="tab" class="apple-segment-btn text-neutral-500 dark:text-neutral-400 cursor-pointer">
         <i data-lucide="check-square" class="w-3.5 h-3.5"></i>
         <span>Urna Virtual</span>
       </button>
-      <button data-apple-tab="gargalos" onclick="switchAppleTab('gargalos')" class="apple-segment-btn text-neutral-500 dark:text-neutral-400 cursor-pointer">
+      <button data-apple-tab="gargalos" onclick="switchAppleTab('gargalos')" role="tab" class="apple-segment-btn text-neutral-500 dark:text-neutral-400 cursor-pointer">
         <i data-lucide="compass" class="w-3.5 h-3.5"></i>
         <span>30 Gargalos</span>
       </button>
@@ -392,7 +392,7 @@
     <!-- TAB 1: FEED DE CANDIDATOS -->
     <div id="tab-feed" class="space-y-3">
       <!-- Office Filters & Search Bar in Apple Bento Material (Compacto & Imediato) -->
-      <div class="p-2.5 sm:p-3 rounded-2xl bg-white/70 dark:bg-[#1c1c1e]/70 backdrop-blur-xl border border-black/5 dark:border-white/10 shadow-xs space-y-2">
+      <div class="p-4.5 sm:p-3 rounded-2xl bg-white/70 dark:bg-[#1c1c1e]/70  border border-black/5 dark:border-white/10 shadow-xs space-y-2">
         <div class="flex flex-col sm:flex-row items-stretch gap-2">
           <div class="relative flex-1">
             <i data-lucide="search" class="w-3.5 h-3.5 text-neutral-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
@@ -410,28 +410,28 @@
         </div>
 
         <!-- 🧭 BÚSSOLA ESPACIAL 3D DOS TRÊS PODERES (ELEMENTO VISUAL PREMIUM 1) -->
-        <div id="civic-compass-3d" class="p-3 rounded-2xl bg-gradient-to-r from-blue-500/5 via-indigo-500/5 to-purple-500/5 border border-black/5 dark:border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div id="civic-compass-3d" class="p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 border border-black/5 dark:border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div class="flex items-center gap-2.5">
             <div class="w-8 h-8 rounded-xl bg-blue-600/10 dark:bg-blue-400/20 text-blue-600 dark:text-blue-400 flex items-center justify-center font-bold text-xs shadow-xs">
               <i data-lucide="compass" class="w-4 h-4"></i>
             </div>
             <div>
-              <span class="text-[10px] font-mono font-bold text-neutral-500 uppercase tracking-wider block">BÚSSOLA ESPACIAL 3D • EQUILÍBRIO DA REPÚBLICA</span>
+              <span class="text-xs font-mono font-bold text-neutral-500 uppercase tracking-wider block">BÚSSOLA ESPACIAL 3D • EQUILÍBRIO DA REPÚBLICA</span>
               <h4 class="text-xs font-bold text-neutral-900 dark:text-white">Selecione o Poder Constitucional para Auditoria</h4>
             </div>
           </div>
           <div class="flex items-center gap-1.5">
-            <button onclick="setAppleOfficeFilter('todos')" class="px-2.5 py-1 rounded-xl text-[11px] font-semibold bg-white dark:bg-neutral-800 border border-black/10 dark:border-white/10 hover:border-blue-500 text-neutral-800 dark:text-neutral-200 transition flex items-center gap-1 shadow-2xs cursor-pointer">
-              <span>🌐 Todos</span> <span class="font-mono text-[10px] text-neutral-500">(215)</span>
+            <button onclick="setAppleOfficeFilter('todos')" class="px-2.5 py-1 rounded-xl text-sm font-semibold bg-white dark:bg-neutral-800 border border-black/10 dark:border-white/10 hover:border-blue-500 text-neutral-800 dark:text-neutral-200 transition flex items-center gap-1 shadow-2xs cursor-pointer">
+              <span>🌐 Todos</span> <span class="font-mono text-xs text-neutral-500">(215)</span>
             </button>
-            <button onclick="setAppleOfficeFilter('Presidente')" class="px-2.5 py-1 rounded-xl text-[11px] font-semibold bg-white dark:bg-neutral-800 border border-black/10 dark:border-white/10 hover:border-amber-500 text-neutral-800 dark:text-neutral-200 transition flex items-center gap-1 shadow-2xs cursor-pointer">
+            <button onclick="setAppleOfficeFilter('Presidente')" class="px-2.5 py-1 rounded-xl text-sm font-semibold bg-white dark:bg-neutral-800 border border-black/10 dark:border-white/10 hover:border-amber-500 text-neutral-800 dark:text-neutral-200 transition flex items-center gap-1 shadow-2xs cursor-pointer">
               <i data-lucide="landmark" class="w-3 h-3 text-amber-500"></i> <span>Executivo</span>
             </button>
-            <button onclick="setAppleOfficeFilter('Deputado Federal')" class="px-2.5 py-1 rounded-xl text-[11px] font-semibold bg-white dark:bg-neutral-800 border border-black/10 dark:border-white/10 hover:border-blue-500 text-neutral-800 dark:text-neutral-200 transition flex items-center gap-1 shadow-2xs cursor-pointer">
+            <button onclick="setAppleOfficeFilter('Deputado Federal')" class="px-2.5 py-1 rounded-xl text-sm font-semibold bg-white dark:bg-neutral-800 border border-black/10 dark:border-white/10 hover:border-blue-500 text-neutral-800 dark:text-neutral-200 transition flex items-center gap-1 shadow-2xs cursor-pointer">
               <i data-lucide="scroll-text" class="w-3 h-3 text-blue-500"></i> <span>Legislativo</span>
             </button>
-            <button onclick="setAppleOfficeFilter('Judiciário')" class="px-2.5 py-1 rounded-xl text-[11px] font-semibold bg-white dark:bg-neutral-800 border border-purple-300 dark:border-purple-600 text-purple-700 dark:text-purple-300 hover:bg-purple-500/10 transition flex items-center gap-1 shadow-2xs cursor-pointer">
-              <i data-lucide="scale" class="w-3 h-3 text-purple-500"></i> <span>Judiciário</span> <span class="font-mono text-[10px] text-purple-600">(15)</span>
+            <button onclick="setAppleOfficeFilter('Judiciário')" class="px-2.5 py-1 rounded-xl text-sm font-semibold bg-white dark:bg-neutral-800 border border-purple-300 dark:border-purple-600 text-purple-700 dark:text-purple-300 hover:bg-purple-500/10 transition flex items-center gap-1 shadow-2xs cursor-pointer">
+              <i data-lucide="scale" class="w-3 h-3 text-purple-500"></i> <span>Judiciário</span> <span class="font-mono text-xs text-purple-600">(15)</span>
             </button>
           </div>
         </div>
@@ -460,16 +460,16 @@
       </div>
 
       <!-- Feed Stats Header -->
-      <div class="flex items-center justify-between text-[11px] text-neutral-500 dark:text-neutral-400 px-1">
+      <div class="flex items-center justify-between text-sm text-neutral-500 dark:text-neutral-400 px-1">
         <span id="feed-stats-count">Carregando catálogo de candidatos...</span>
-        <span class="font-mono text-[10px]">Clique no card para abrir o dossiê</span>
+        <span class="font-mono text-xs">Clique no card para abrir o dossiê</span>
       </div>
 
       <!-- Candidate 3D Bento Grid -->
       <div id="candidates-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
 
       <!-- Pagination Bar -->
-      <div id="pagination-controls" class="p-3.5 rounded-2xl bg-white/70 dark:bg-[#1c1c1e]/70 backdrop-blur-xl border border-black/5 dark:border-white/10 shadow-xs flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+      <div id="pagination-controls" class="p-3.5 rounded-2xl bg-white/70 dark:bg-[#1c1c1e]/70  border border-black/5 dark:border-white/10 shadow-xs flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
         <div id="pagination-info" class="text-neutral-600 dark:text-neutral-400 font-medium"></div>
         <div id="pagination-buttons" class="flex items-center gap-1.5"></div>
       </div>
@@ -483,7 +483,7 @@
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200 dark:border-white/10 pb-4">
           <div class="space-y-1">
             <div class="flex items-center gap-2">
-              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-500/30 flex items-center gap-1">
+              <span class="px-2.5 py-0.5 rounded-full text-xs font-black uppercase tracking-wider bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-500/30 flex items-center gap-1">
                 <i data-lucide="trophy" class="w-3.5 h-3.5 text-amber-500"></i> Auditoria Comparativa Oficial
               </span>
               <span class="text-xs font-mono text-slate-400">Eleições 2026</span>
@@ -497,13 +497,13 @@
           </div>
 
           <!-- ⚖️ BALANÇA CONSTITUCIONAL 3D INTERATIVA (ELEMENTO VISUAL PREMIUM 3) -->
-          <div id="civic-scale-3d" class="p-4 rounded-3xl bg-gradient-to-br from-purple-500/5 via-blue-500/5 to-emerald-500/5 border border-black/5 dark:border-white/10 shadow-xs flex flex-col md:flex-row items-center justify-between gap-4">
+          <div id="civic-scale-3d" class="p-4 rounded-3xl bg-slate-100 dark:bg-slate-800 border border-black/5 dark:border-white/10 shadow-xs flex flex-col md:flex-row items-center justify-between gap-4">
             <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-purple-600 to-indigo-600 text-white flex items-center justify-center shadow-md shadow-purple-500/20">
+              <div class="w-10 h-10 rounded-2xl bg-slate-100 dark:bg-slate-800 text-white flex items-center justify-center shadow-md shadow-purple-500/20">
                 <i data-lucide="scale" class="w-5 h-5"></i>
               </div>
               <div>
-                <span class="text-[10px] font-mono font-bold text-purple-700 dark:text-purple-400 uppercase tracking-widest block">BALANÇA CÍVICA 3D • PRODUTIVIDADE VS CUSTO AO CONTRIBUINTE</span>
+                <span class="text-xs font-mono font-bold text-purple-700 dark:text-purple-400 uppercase tracking-widest block">BALANÇA CÍVICA 3D • PRODUTIVIDADE VS CUSTO AO CONTRIBUINTE</span>
                 <h3 class="text-sm sm:text-base font-bold text-neutral-900 dark:text-white tracking-tight">Equilíbrio Constitucional e Eficiência Fiscal dos Três Poderes</h3>
               </div>
             </div>
@@ -523,8 +523,8 @@
 
           <!-- Constitutional Power & Role-Based Ranking Tabs -->
           <div class="flex flex-col gap-2">
-            <div class="flex items-center gap-1.5 bg-slate-100 dark:bg-slate-800/80 p-1.5 rounded-xl border border-slate-200 dark:border-white/5 text-xs flex-wrap">
-              <span class="text-[10px] font-extrabold uppercase text-slate-500 dark:text-slate-400 px-2">Poder Constitucional:</span>
+            <div class="flex items-center gap-1.5 bg-slate-100 dark:bg-slate-800/80 p-4.5 rounded-xl border border-slate-200 dark:border-white/5 text-xs flex-wrap">
+              <span class="text-xs font-extrabold uppercase text-slate-500 dark:text-slate-400 px-2">Poder Constitucional:</span>
               <button onclick="filterRankingByPower('todos')" id="rank-power-todos" class="rank-power-btn px-3 py-1.5 rounded-lg bg-sky-600 text-white font-bold transition shadow-sm cursor-pointer">
                 ⚖️ Todos os Poderes (215)
               </button>
@@ -539,8 +539,8 @@
               </button>
             </div>
 
-            <div class="flex items-center gap-1.5 bg-slate-100 dark:bg-slate-800/80 p-1.5 rounded-xl border border-slate-200 dark:border-white/5 text-xs flex-wrap">
-              <span class="text-[10px] font-extrabold uppercase text-slate-500 dark:text-slate-400 px-2">Filtrar por Cargo:</span>
+            <div class="flex items-center gap-1.5 bg-slate-100 dark:bg-slate-800/80 p-4.5 rounded-xl border border-slate-200 dark:border-white/5 text-xs flex-wrap">
+              <span class="text-xs font-extrabold uppercase text-slate-500 dark:text-slate-400 px-2">Filtrar por Cargo:</span>
               <button onclick="filterRankingByOffice('todos')" id="rank-btn-todos" class="rank-office-btn px-3 py-1.5 rounded-lg bg-sky-600 text-white font-bold transition shadow-sm cursor-pointer">
                 🌐 Todos os Cargos
               </button>
@@ -566,7 +566,7 @@
         <!-- Sorting Criteria Selector & Search -->
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
                     <div class="flex items-center gap-2 flex-wrap">
-            <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Ordenar por:</span>
+            <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Ordenar por:</span>
             <button onclick="sortRankingBy('pontuacao')" id="sort-btn-pontuacao" class="px-2.5 py-1 rounded-lg bg-sky-100 dark:bg-cyan-500/20 text-sky-800 dark:text-cyan-300 border border-sky-300 dark:border-cyan-500/30 font-bold flex items-center gap-1 transition">
               🏆 Pontuação Geral
             </button>
@@ -590,7 +590,7 @@
             </button>
           </div>
 
-          <span id="ranking-count-summary" class="text-[11px] font-mono text-slate-500 dark:text-slate-400">
+          <span id="ranking-count-summary" class="text-sm font-mono text-slate-500 dark:text-slate-400">
             Exibindo 3 candidatos auditados
           </span>
         </div>
@@ -613,7 +613,7 @@
             <i data-lucide="list-ordered" class="w-4 h-4 text-sky-600 dark:text-cyan-400"></i>
             Tabela Detalhada de Classificação por Competência do Cargo
           </h3>
-          <span class="text-[11px] text-slate-400">Clique na linha do político para abrir o Dossiê completo</span>
+          <span class="text-sm text-slate-400">Clique na linha do político para abrir o Dossiê completo</span>
         </div>
 
         <!-- Barra de Pesquisa Própria da Tabela de Ranking (Destaque Cívico 4K) -->
@@ -623,7 +623,7 @@
               <i data-lucide="search" class="w-4 h-4 text-sky-600 dark:text-sky-400"></i>
               <span>Localizar Candidato na Tabela</span>
             </label>
-            <span id="ranking-search-status-badge" class="text-[10px] font-mono font-bold text-sky-800 dark:text-sky-300 bg-sky-100 dark:bg-sky-900/60 px-2.5 py-0.5 rounded-md border border-sky-200 dark:border-sky-500/20">
+            <span id="ranking-search-status-badge" class="text-xs font-mono font-bold text-sky-800 dark:text-sky-300 bg-sky-100 dark:bg-sky-900/60 px-2.5 py-0.5 rounded-md border border-sky-200 dark:border-sky-500/20">
               Exibindo todos os 200 candidatos
             </span>
           </div>
@@ -649,8 +649,8 @@
           </div>
 
           <!-- Filtros Rápidos de Estado/Partido -->
-          <div class="flex items-center gap-1.5 flex-wrap text-[11px] text-slate-500 dark:text-slate-400">
-            <span class="font-bold text-[10px] uppercase text-slate-400">Atalhos rápidos:</span>
+          <div class="flex items-center gap-1.5 flex-wrap text-sm text-slate-500 dark:text-slate-400">
+            <span class="font-bold text-xs uppercase text-slate-400">Atalhos rápidos:</span>
             <button type="button" onclick="quickFilterRankingSearch('SP')" class="px-2 py-0.5 rounded-md bg-white dark:bg-slate-800 hover:bg-sky-100 dark:hover:bg-sky-900/50 border border-slate-200 dark:border-white/10 font-mono font-bold text-sky-700 dark:text-sky-300 transition cursor-pointer">SP</button>
             <button type="button" onclick="quickFilterRankingSearch('RJ')" class="px-2 py-0.5 rounded-md bg-white dark:bg-slate-800 hover:bg-sky-100 dark:hover:bg-sky-900/50 border border-slate-200 dark:border-white/10 font-mono font-bold text-sky-700 dark:text-sky-300 transition cursor-pointer">RJ</button>
             <button type="button" onclick="quickFilterRankingSearch('MG')" class="px-2 py-0.5 rounded-md bg-white dark:bg-slate-800 hover:bg-sky-100 dark:hover:bg-sky-900/50 border border-slate-200 dark:border-white/10 font-mono font-bold text-sky-700 dark:text-sky-300 transition cursor-pointer">MG</button>
@@ -664,7 +664,7 @@
         <div class="w-full overflow-x-auto border border-black/5 dark:border-white/10 rounded-2xl shadow-xs">
           <table class="w-full text-left text-xs border-collapse">
             <thead>
-              <tr class="border-b border-slate-200 dark:border-white/10 text-[11px] text-slate-400 font-semibold uppercase tracking-wider bg-slate-50/80 dark:bg-white/[0.03]">
+              <tr class="border-b border-slate-200 dark:border-white/10 text-sm text-slate-400 font-semibold uppercase tracking-wider bg-slate-50/80 dark:bg-white/[0.03]">
                 <th class="py-2.5 px-2 text-center w-10">Posição</th>
                 <th class="py-2.5 px-2">Candidato & Partido</th>
                 <th class="py-2.5 px-2">Cargo Disputado</th>
@@ -694,7 +694,7 @@
 
     <!-- TAB 3: COMPARADOR 1v1 (LAYOUT ULTRA-COMPACTO • FIGURINHA IMEDIATA NO TOPO SEM ROLAGEM) -->
     <div id="tab-comparator" class="hidden space-y-2.5">
-      <div class="glass-panel p-2.5 sm:p-3 rounded-2xl space-y-2">
+      <div class="glass-panel p-4.5 sm:p-3 rounded-2xl space-y-2">
         <!-- Barra de Controle Cívico Compacta (Top Strip) -->
         <div class="flex flex-wrap items-center justify-between gap-1.5 pb-2 border-b border-slate-200 dark:border-white/10">
           <div class="flex items-center gap-1.5 flex-shrink-0">
@@ -704,7 +704,7 @@
           </div>
 
           <!-- Duelos Populares 1-Clique em Linha Compacta -->
-          <div class="flex items-center gap-1 overflow-x-auto text-[10.5px] scrollbar-none py-0.5" id="popular-duels-bar">
+          <div class="flex items-center gap-1 overflow-x-auto text-xs scrollbar-none py-0.5" id="popular-duels-bar">
             <button id="pduel-1" onclick="selectPopularDuel('cand-tabata-amaral', 'cand-kim-kataguiri')" class="popular-duel-btn active px-2 py-0.5 rounded-lg bg-purple-600 text-white font-bold transition shadow-xs flex-shrink-0 cursor-pointer flex items-center gap-1">
               <span>🗳️</span> <span>Tabata ⚔️ Kim</span>
             </button>
@@ -718,13 +718,13 @@
 
           <!-- Botões de Compartilhamento Compactos -->
           <div class="flex items-center gap-1 flex-wrap flex-shrink-0">
-            <button onclick="shareDuelWhatsApp()" class="px-2 py-0.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-[10.5px] shadow-xs flex items-center gap-1 transition cursor-pointer" title="Compartilhar no WhatsApp">
+            <button onclick="shareDuelWhatsApp()" class="px-2 py-0.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-xs flex items-center gap-1 transition cursor-pointer" title="Compartilhar no WhatsApp">
               <i data-lucide="message-circle" class="w-3 h-3"></i> <span class="hidden sm:inline">WhatsApp</span>
             </button>
-            <button onclick="exportComparisonCard()" class="px-2 py-0.5 rounded-lg bg-purple-600 hover:bg-purple-500 text-white font-bold text-[10.5px] shadow-xs flex items-center gap-1 transition cursor-pointer" title="Figurinha Stories">
+            <button onclick="exportComparisonCard()" class="px-2 py-0.5 rounded-lg bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs shadow-xs flex items-center gap-1 transition cursor-pointer" title="Figurinha Stories">
               <i data-lucide="sparkles" class="w-3 h-3"></i> <span>Figurinha 4K</span>
             </button>
-            <button onclick="copyDuelLink()" class="px-1.5 py-0.5 rounded-lg bg-slate-100 dark:bg-white/10 hover:bg-slate-200 dark:hover:bg-white/20 text-slate-700 dark:text-slate-200 font-bold text-[10.5px] border border-slate-200 dark:border-white/10 transition cursor-pointer" title="Copiar link do duelo">
+            <button onclick="copyDuelLink()" class="px-1.5 py-0.5 rounded-lg bg-slate-100 dark:bg-white/10 hover:bg-slate-200 dark:hover:bg-white/20 text-slate-700 dark:text-slate-200 font-bold text-xs border border-slate-200 dark:border-white/10 transition cursor-pointer" title="Copiar link do duelo">
               <i data-lucide="copy" class="w-3 h-3"></i>
             </button>
           </div>
@@ -741,13 +741,13 @@
 
         <!-- Candidate Selectors for Comparison with Live Search (Design Compacto & Ergonômico) -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 my-1.5">
-          <div class="p-2 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-amber-500/30 shadow-xs space-y-1">
+          <div class="p-4 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-amber-500/30 shadow-xs space-y-1">
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-1.5">
                 <span class="w-2.5 h-2.5 rounded-full bg-amber-500 ring-2 ring-amber-500/20"></span>
-                <span class="text-[10px] text-amber-700 dark:text-amber-400 font-bold uppercase tracking-wider">Candidato A (Laranja)</span>
+                <span class="text-xs text-amber-700 dark:text-amber-400 font-bold uppercase tracking-wider">Candidato A (Laranja)</span>
               </div>
-              <div id="compare-mini-1" class="text-right text-[10px]"></div>
+              <div id="compare-mini-1" class="text-right text-xs"></div>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
               <input type="text" id="compare-search-1" placeholder="🔍 Buscar Candidato A..." oninput="filterCompareSelect(1, this.value)" class="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 rounded-lg px-2.5 py-1 text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-amber-500">
@@ -757,13 +757,13 @@
             </div>
           </div>
 
-          <div class="p-2 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-purple-500/30 shadow-xs space-y-1">
+          <div class="p-4 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-purple-500/30 shadow-xs space-y-1">
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-1.5">
                 <span class="w-2.5 h-2.5 rounded-full bg-purple-600 ring-2 ring-purple-600/20"></span>
-                <span class="text-[10px] text-purple-700 dark:text-purple-400 font-bold uppercase tracking-wider">Candidato B (Roxo)</span>
+                <span class="text-xs text-purple-700 dark:text-purple-400 font-bold uppercase tracking-wider">Candidato B (Roxo)</span>
               </div>
-              <div id="compare-mini-2" class="text-right text-[10px]"></div>
+              <div id="compare-mini-2" class="text-right text-xs"></div>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
               <input type="text" id="compare-search-2" placeholder="🔍 Buscar Candidato B..." oninput="filterCompareSelect(2, this.value)" class="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 rounded-lg px-2.5 py-1 text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-purple-500">
@@ -776,7 +776,7 @@
 
         <!-- Mode Switcher: Radar vs Planos de Governo TSE (Compacto) -->
         <div class="flex justify-center my-2">
-          <div class="inline-flex p-1 rounded-xl bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-white/10 text-xs font-bold shadow-xs">
+          <div class="inline-flex p-4 rounded-xl bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-white/10 text-xs font-bold shadow-xs">
             <button id="btn-compare-mode-radar" onclick="setComparatorMode('radar')" class="px-3.5 py-1 rounded-lg bg-purple-600 text-white shadow-xs transition flex items-center gap-1.5 cursor-pointer">
               <i data-lucide="bar-chart-2" class="w-3.5 h-3.5"></i> <span>Radar & Indicadores</span>
             </button>
@@ -792,13 +792,13 @@
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-3 items-start my-2">
             
             <!-- Overlaid Radar Chart (Compacto) -->
-            <div class="lg:col-span-5 bg-white/80 dark:bg-[#1c1c1e]/80 backdrop-blur-xl p-3 sm:p-3.5 rounded-2xl border border-black/5 dark:border-white/10 shadow-sm flex flex-col items-center">
+            <div class="lg:col-span-5 bg-white/80 dark:bg-[#1c1c1e]/80  p-3 sm:p-3.5 rounded-2xl border border-black/5 dark:border-white/10 shadow-sm flex flex-col items-center">
               <div class="w-full flex items-center justify-between mb-1">
                 <h3 class="text-xs sm:text-sm font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
                   <i data-lucide="radar" class="w-3.5 h-3.5 text-purple-600 dark:text-purple-400"></i>
                   Radar 6 Eixos
                 </h3>
-                <span class="text-[9.5px] font-mono px-2 py-0.2 rounded-full bg-purple-500/10 text-purple-700 dark:text-purple-300 font-bold">0 a 100</span>
+                <span class="text-xs font-mono px-2 py-0.2 rounded-full bg-purple-500/10 text-purple-700 dark:text-purple-300 font-bold">0 a 100</span>
               </div>
               
               <div class="radar-container w-full h-[260px] flex items-center justify-center">
@@ -806,12 +806,12 @@
               </div>
 
               <!-- Compact Collapsible Methodology Accordion -->
-              <details class="group w-full mt-2 rounded-xl bg-black/[0.03] dark:bg-white/[0.04] border border-black/5 dark:border-white/10 p-2 text-xs">
-                <summary class="font-bold cursor-pointer text-slate-700 dark:text-slate-200 flex items-center justify-between select-none text-[11px]">
+              <details class="group w-full mt-2 rounded-xl bg-black/[0.03] dark:bg-white/[0.04] border border-black/5 dark:border-white/10 p-4 text-xs">
+                <summary class="font-bold cursor-pointer text-slate-700 dark:text-slate-200 flex items-center justify-between select-none text-sm">
                   <span class="flex items-center gap-1"><i data-lucide="info" class="w-3 h-3 text-sky-500"></i> Metodologia dos 6 Eixos</span>
                   <i data-lucide="chevron-down" class="w-3 h-3 group-open:rotate-180 transition-transform text-slate-400"></i>
                 </summary>
-                <div class="mt-2 pt-1.5 border-t border-black/5 dark:border-white/10 space-y-1.5 text-[10.5px] text-slate-600 dark:text-slate-400">
+                <div class="mt-2 pt-1.5 border-t border-black/5 dark:border-white/10 space-y-1.5 text-xs text-slate-600 dark:text-slate-400">
                   <div><strong class="text-sky-600 dark:text-cyan-400 font-semibold">Integridade:</strong> Sem condenações colegiadas e sem inquéritos STF/STJ.</div>
                   <div><strong class="text-sky-600 dark:text-cyan-400 font-semibold">Eficiência:</strong> Leis estruturantes aprovadas e relatorias.</div>
                   <div><strong class="text-sky-600 dark:text-cyan-400 font-semibold">Gastos:</strong> Economia da cota parlamentar (CEAP) vs teto.</div>
@@ -849,7 +849,7 @@
         
         <!-- Header do Match -->
         <div class="text-center max-w-xl mx-auto mb-6 space-y-2">
-          <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center mx-auto shadow-md text-black">
+          <div class="w-12 h-12 rounded-2xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center mx-auto shadow-md text-black">
             <i data-lucide="sparkles" class="w-6 h-6"></i>
           </div>
           <h2 class="text-2xl font-black text-slate-900 dark:text-white">Match Eleitoral 2026</h2>
@@ -866,7 +866,7 @@
                 <i data-lucide="map-pin" class="w-4 h-4 text-amber-500"></i>
                 1. Onde você vota?
               </h3>
-              <p class="text-[11px] text-slate-500 dark:text-slate-400">Personalize para ver apenas os candidatos da sua região ou teste outro estado.</p>
+              <p class="text-sm text-slate-500 dark:text-slate-400">Personalize para ver apenas os candidatos da sua região ou teste outro estado.</p>
             </div>
             <div class="flex items-center gap-2 w-full sm:w-auto">
               <select id="match-state-select" onchange="onMatchStateChange(this.value)" class="bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-300 dark:border-white/15 rounded-xl px-3 py-2 text-xs font-bold focus:outline-none focus:border-amber-500 cursor-pointer w-full sm:w-48 shadow-xs">
@@ -911,7 +911,7 @@
                 <span>Deputado Federal</span>
               </label>
             </div>
-            <p class="text-[10.5px] text-slate-500 dark:text-slate-400 mt-2 flex items-center gap-1">
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 flex items-center gap-1">
               <i data-lucide="info" class="w-3 h-3 text-sky-500"></i>
               Filtro ativo: apenas candidatos confirmados para 2026. Políticos inelegíveis ou fora da disputa não aparecem no cálculo.
             </p>
@@ -1028,7 +1028,7 @@
         <div class="glass-panel p-4 sm:p-5 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-3">
           <div>
             <div class="flex items-center gap-2">
-              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-500/30 flex items-center gap-1">
+              <span class="px-2.5 py-0.5 rounded-full text-xs font-black uppercase tracking-wider bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-500/30 flex items-center gap-1">
                 <i data-lucide="check-square" class="w-3.5 h-3.5 text-emerald-600"></i> Simulador Oficial TSE
               </span>
               <span class="text-xs font-mono text-slate-400">Modelo Eletrônico UE2022</span>
@@ -1042,8 +1042,8 @@
           </div>
 
           <!-- Seletor de Cargo -->
-          <div class="flex items-center gap-1.5 flex-wrap bg-slate-100 dark:bg-slate-800/80 p-1.5 rounded-xl border border-slate-200 dark:border-white/5 text-xs">
-            <span class="text-[10px] font-extrabold uppercase text-slate-500 dark:text-slate-400 px-1">Cargo:</span>
+          <div class="flex items-center gap-1.5 flex-wrap bg-slate-100 dark:bg-slate-800/80 p-4.5 rounded-xl border border-slate-200 dark:border-white/5 text-xs">
+            <span class="text-xs font-extrabold uppercase text-slate-500 dark:text-slate-400 px-1">Cargo:</span>
             <button onclick="window.setUrnaOffice('Presidente')" class="px-2.5 py-1 rounded-lg font-bold text-xs transition cursor-pointer bg-emerald-600 text-white shadow-xs">Presidente</button>
             <button onclick="window.setUrnaOffice('Governador')" class="px-2.5 py-1 rounded-lg font-bold text-xs transition cursor-pointer text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700">Governador</button>
             <button onclick="window.setUrnaOffice('Senador')" class="px-2.5 py-1 rounded-lg font-bold text-xs transition cursor-pointer text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700">Senador</button>
@@ -1084,11 +1084,11 @@
             </div>
 
             <!-- Rodapé da Tela LCD com Instruções Oficiais -->
-            <div class="border-t-2 border-slate-800/40 dark:border-emerald-500/30 pt-3 text-[11px] leading-tight space-y-1">
+            <div class="border-t-2 border-slate-800/40 dark:border-emerald-500/30 pt-3 text-sm leading-tight space-y-1">
               <div class="flex items-center gap-2">
                 <span class="font-bold">Aperte a tecla:</span>
               </div>
-              <div class="grid grid-cols-2 gap-2 text-[10.5px]">
+              <div class="grid grid-cols-2 gap-2 text-xs">
                 <div><strong class="text-emerald-800 dark:text-emerald-300">CONFIRMA</strong> para GRAVAR este voto</div>
                 <div><strong class="text-amber-800 dark:text-amber-400">CORRIGE</strong> para REINICIAR este voto</div>
               </div>
@@ -1105,37 +1105,37 @@
                 </div>
                 <span class="text-xs font-bold uppercase tracking-wider text-slate-300">Justiça Eleitoral</span>
               </div>
-              <span class="text-[10px] font-mono text-emerald-400 flex items-center gap-1">
+              <span class="text-xs font-mono text-emerald-400 flex items-center gap-1">
                 <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Áudio Ativo
               </span>
             </div>
 
             <!-- Grid de Teclas 1 a 9 -->
             <div class="grid grid-cols-3 gap-2.5 max-w-[280px] mx-auto pt-1">
-              <button onclick="window.pressUrnaKey('1')" class="urna-key h-13 rounded-xl bg-gradient-to-b from-[#33383f] to-[#1f2227] hover:from-[#3c424a] hover:to-[#262a30] active:translate-y-1 border-t border-white/20 border-b-2 border-black font-extrabold text-xl font-mono shadow-md flex items-center justify-center cursor-pointer transition-transform">1</button>
-              <button onclick="window.pressUrnaKey('2')" class="urna-key h-13 rounded-xl bg-gradient-to-b from-[#33383f] to-[#1f2227] hover:from-[#3c424a] hover:to-[#262a30] active:translate-y-1 border-t border-white/20 border-b-2 border-black font-extrabold text-xl font-mono shadow-md flex items-center justify-center cursor-pointer transition-transform">2</button>
-              <button onclick="window.pressUrnaKey('3')" class="urna-key h-13 rounded-xl bg-gradient-to-b from-[#33383f] to-[#1f2227] hover:from-[#3c424a] hover:to-[#262a30] active:translate-y-1 border-t border-white/20 border-b-2 border-black font-extrabold text-xl font-mono shadow-md flex items-center justify-center cursor-pointer transition-transform">3</button>
-              <button onclick="window.pressUrnaKey('4')" class="urna-key h-13 rounded-xl bg-gradient-to-b from-[#33383f] to-[#1f2227] hover:from-[#3c424a] hover:to-[#262a30] active:translate-y-1 border-t border-white/20 border-b-2 border-black font-extrabold text-xl font-mono shadow-md flex items-center justify-center cursor-pointer transition-transform">4</button>
-              <button onclick="window.pressUrnaKey('5')" class="urna-key h-13 rounded-xl bg-gradient-to-b from-[#33383f] to-[#1f2227] hover:from-[#3c424a] hover:to-[#262a30] active:translate-y-1 border-t border-white/20 border-b-2 border-black font-extrabold text-xl font-mono shadow-md flex items-center justify-center cursor-pointer transition-transform">5</button>
-              <button onclick="window.pressUrnaKey('6')" class="urna-key h-13 rounded-xl bg-gradient-to-b from-[#33383f] to-[#1f2227] hover:from-[#3c424a] hover:to-[#262a30] active:translate-y-1 border-t border-white/20 border-b-2 border-black font-extrabold text-xl font-mono shadow-md flex items-center justify-center cursor-pointer transition-transform">6</button>
-              <button onclick="window.pressUrnaKey('7')" class="urna-key h-13 rounded-xl bg-gradient-to-b from-[#33383f] to-[#1f2227] hover:from-[#3c424a] hover:to-[#262a30] active:translate-y-1 border-t border-white/20 border-b-2 border-black font-extrabold text-xl font-mono shadow-md flex items-center justify-center cursor-pointer transition-transform">7</button>
-              <button onclick="window.pressUrnaKey('8')" class="urna-key h-13 rounded-xl bg-gradient-to-b from-[#33383f] to-[#1f2227] hover:from-[#3c424a] hover:to-[#262a30] active:translate-y-1 border-t border-white/20 border-b-2 border-black font-extrabold text-xl font-mono shadow-md flex items-center justify-center cursor-pointer transition-transform">8</button>
-              <button onclick="window.pressUrnaKey('9')" class="urna-key h-13 rounded-xl bg-gradient-to-b from-[#33383f] to-[#1f2227] hover:from-[#3c424a] hover:to-[#262a30] active:translate-y-1 border-t border-white/20 border-b-2 border-black font-extrabold text-xl font-mono shadow-md flex items-center justify-center cursor-pointer transition-transform">9</button>
+              <button onclick="window.pressUrnaKey('1')" class="urna-key h-13 rounded-xl bg-slate-100 dark:bg-slate-800 hover:from-[#3c424a] hover:to-[#262a30] active:translate-y-1 border-t border-white/20 border-b-2 border-black font-extrabold text-xl font-mono shadow-md flex items-center justify-center cursor-pointer transition-transform">1</button>
+              <button onclick="window.pressUrnaKey('2')" class="urna-key h-13 rounded-xl bg-slate-100 dark:bg-slate-800 hover:from-[#3c424a] hover:to-[#262a30] active:translate-y-1 border-t border-white/20 border-b-2 border-black font-extrabold text-xl font-mono shadow-md flex items-center justify-center cursor-pointer transition-transform">2</button>
+              <button onclick="window.pressUrnaKey('3')" class="urna-key h-13 rounded-xl bg-slate-100 dark:bg-slate-800 hover:from-[#3c424a] hover:to-[#262a30] active:translate-y-1 border-t border-white/20 border-b-2 border-black font-extrabold text-xl font-mono shadow-md flex items-center justify-center cursor-pointer transition-transform">3</button>
+              <button onclick="window.pressUrnaKey('4')" class="urna-key h-13 rounded-xl bg-slate-100 dark:bg-slate-800 hover:from-[#3c424a] hover:to-[#262a30] active:translate-y-1 border-t border-white/20 border-b-2 border-black font-extrabold text-xl font-mono shadow-md flex items-center justify-center cursor-pointer transition-transform">4</button>
+              <button onclick="window.pressUrnaKey('5')" class="urna-key h-13 rounded-xl bg-slate-100 dark:bg-slate-800 hover:from-[#3c424a] hover:to-[#262a30] active:translate-y-1 border-t border-white/20 border-b-2 border-black font-extrabold text-xl font-mono shadow-md flex items-center justify-center cursor-pointer transition-transform">5</button>
+              <button onclick="window.pressUrnaKey('6')" class="urna-key h-13 rounded-xl bg-slate-100 dark:bg-slate-800 hover:from-[#3c424a] hover:to-[#262a30] active:translate-y-1 border-t border-white/20 border-b-2 border-black font-extrabold text-xl font-mono shadow-md flex items-center justify-center cursor-pointer transition-transform">6</button>
+              <button onclick="window.pressUrnaKey('7')" class="urna-key h-13 rounded-xl bg-slate-100 dark:bg-slate-800 hover:from-[#3c424a] hover:to-[#262a30] active:translate-y-1 border-t border-white/20 border-b-2 border-black font-extrabold text-xl font-mono shadow-md flex items-center justify-center cursor-pointer transition-transform">7</button>
+              <button onclick="window.pressUrnaKey('8')" class="urna-key h-13 rounded-xl bg-slate-100 dark:bg-slate-800 hover:from-[#3c424a] hover:to-[#262a30] active:translate-y-1 border-t border-white/20 border-b-2 border-black font-extrabold text-xl font-mono shadow-md flex items-center justify-center cursor-pointer transition-transform">8</button>
+              <button onclick="window.pressUrnaKey('9')" class="urna-key h-13 rounded-xl bg-slate-100 dark:bg-slate-800 hover:from-[#3c424a] hover:to-[#262a30] active:translate-y-1 border-t border-white/20 border-b-2 border-black font-extrabold text-xl font-mono shadow-md flex items-center justify-center cursor-pointer transition-transform">9</button>
             </div>
 
             <!-- Tecla 0 Centralizada -->
             <div class="flex justify-center max-w-[280px] mx-auto">
-              <button onclick="window.pressUrnaKey('0')" class="urna-key w-22 h-13 rounded-xl bg-gradient-to-b from-[#33383f] to-[#1f2227] hover:from-[#3c424a] hover:to-[#262a30] active:translate-y-1 border-t border-white/20 border-b-2 border-black font-extrabold text-xl font-mono shadow-md flex items-center justify-center cursor-pointer transition-transform">0</button>
+              <button onclick="window.pressUrnaKey('0')" class="urna-key w-22 h-13 rounded-xl bg-slate-100 dark:bg-slate-800 hover:from-[#3c424a] hover:to-[#262a30] active:translate-y-1 border-t border-white/20 border-b-2 border-black font-extrabold text-xl font-mono shadow-md flex items-center justify-center cursor-pointer transition-transform">0</button>
             </div>
 
             <!-- Teclas Especiais: BRANCO, CORRIGE, CONFIRMA -->
             <div class="grid grid-cols-3 gap-2 pt-2 border-t border-white/10">
-              <button onclick="window.pressUrnaBlank()" class="h-12 rounded-xl bg-gradient-to-b from-slate-100 to-slate-300 hover:from-white hover:to-slate-200 active:translate-y-1 border-t border-white border-b-2 border-slate-500 text-slate-900 font-extrabold text-[11px] uppercase tracking-wider shadow-md flex items-center justify-center cursor-pointer transition-transform">Branco</button>
-              <button onclick="window.pressUrnaCorrige()" class="h-12 rounded-xl bg-gradient-to-b from-amber-500 to-amber-700 hover:from-amber-400 hover:to-amber-600 active:translate-y-1 border-t border-amber-300 border-b-2 border-amber-900 text-white font-extrabold text-[11px] uppercase tracking-wider shadow-md flex items-center justify-center cursor-pointer transition-transform">Corrige</button>
-              <button onclick="window.pressUrnaConfirma()" class="h-13 -mt-1 rounded-xl bg-gradient-to-b from-emerald-500 to-emerald-700 hover:from-emerald-400 hover:to-emerald-600 active:translate-y-1 border-t border-emerald-300 border-b-3 border-emerald-950 text-white font-black text-xs uppercase tracking-wider shadow-lg flex items-center justify-center cursor-pointer transition-transform">Confirma</button>
+              <button onclick="window.pressUrnaBlank()" class="h-12 rounded-xl bg-slate-100 dark:bg-slate-800 hover:from-white hover:to-slate-200 active:translate-y-1 border-t border-white border-b-2 border-slate-500 text-slate-900 font-extrabold text-sm uppercase tracking-wider shadow-md flex items-center justify-center cursor-pointer transition-transform">Branco</button>
+              <button onclick="window.pressUrnaCorrige()" class="h-12 rounded-xl bg-slate-100 dark:bg-slate-800 hover:from-amber-400 hover:to-amber-600 active:translate-y-1 border-t border-amber-300 border-b-2 border-amber-900 text-white font-extrabold text-sm uppercase tracking-wider shadow-md flex items-center justify-center cursor-pointer transition-transform">Corrige</button>
+              <button onclick="window.pressUrnaConfirma()" class="h-13 -mt-1 rounded-xl bg-slate-100 dark:bg-slate-800 hover:from-emerald-400 hover:to-emerald-600 active:translate-y-1 border-t border-emerald-300 border-b-3 border-emerald-950 text-white font-black text-xs uppercase tracking-wider shadow-lg flex items-center justify-center cursor-pointer transition-transform">Confirma</button>
             </div>
 
-            <div class="text-[10px] text-center text-slate-400 font-sans pt-1">
+            <div class="text-xs text-center text-slate-400 font-sans pt-1">
               Dica: Você também pode usar o teclado numérico físico do seu computador.
             </div>
           </div>
@@ -1152,11 +1152,11 @@
     <!-- TAB 7: OBSERVATÓRIO DOS 30 MAIORES GARGALOS NACIONAIS (2026-2030) -->
     <div id="tab-gargalos" class="hidden space-y-6">
       <!-- Apple Bento Header -->
-      <div class="p-5 sm:p-7 rounded-3xl bg-white/80 dark:bg-[#1c1c1e]/80 backdrop-blur-xl border border-slate-200/60 dark:border-white/10 shadow-[0_2px_12px_rgba(0,0,0,0.03)] space-y-4">
+      <div class="p-5 sm:p-7 rounded-3xl bg-white/80 dark:bg-[#1c1c1e]/80  border border-slate-200/60 dark:border-white/10 shadow-sm space-y-4">
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200 dark:border-white/10 pb-4">
           <div class="space-y-1.5">
             <div class="flex items-center gap-2">
-              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-purple-100 dark:bg-purple-950/50 text-purple-800 dark:text-purple-300 border border-purple-300 dark:border-purple-800/40 flex items-center gap-1">
+              <span class="px-2.5 py-0.5 rounded-full text-xs font-black uppercase tracking-wider bg-purple-100 dark:bg-purple-950/50 text-purple-800 dark:text-purple-300 border border-purple-300 dark:border-purple-800/40 flex items-center gap-1">
                 <i data-lucide="compass" class="w-3.5 h-3.5 text-purple-600 dark:text-purple-400"></i> Observatório Estrutural 2026-2030
               </span>
               <span class="text-xs font-mono text-slate-400">Metodologia Científica IPEA / DIAP / OCDE</span>
@@ -1172,18 +1172,18 @@
           <div class="flex items-center gap-3">
             <div class="p-3 rounded-2xl bg-purple-50 dark:bg-purple-950/30 border border-purple-200 dark:border-purple-800/40 text-center">
               <div class="text-2xl font-black text-purple-700 dark:text-purple-300 font-mono">30</div>
-              <div class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase">Gargalos Mapeados</div>
+              <div class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase">Gargalos Mapeados</div>
             </div>
             <div class="p-3 rounded-2xl bg-sky-50 dark:bg-sky-950/30 border border-sky-200 dark:border-sky-800/40 text-center">
               <div class="text-2xl font-black text-sky-700 dark:text-cyan-300 font-mono">6</div>
-              <div class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase">Macro-Eixos</div>
+              <div class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase">Macro-Eixos</div>
             </div>
           </div>
         </div>
 
         <!-- Filtros por Macro-Eixo -->
         <div class="flex items-center gap-1.5 flex-wrap pt-1">
-          <span class="text-[10px] font-bold uppercase text-slate-500 dark:text-slate-400 mr-1">Filtrar por Eixo:</span>
+          <span class="text-xs font-bold uppercase text-slate-500 dark:text-slate-400 mr-1">Filtrar por Eixo:</span>
           <button onclick="filterBottlenecksByAxis('todos')" data-axis="todos" class="bottleneck-axis-btn px-3 py-1.5 rounded-full text-xs font-bold bg-purple-600 text-white shadow-xs transition cursor-pointer">
             🌐 Todos os Gargalos (30)
           </button>
@@ -1217,32 +1217,32 @@
   </main>
 
   <!-- ================= MOBILE NAVIGATION BAR ================= -->
-  <nav class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/80 dark:bg-black/80 border-t border-black/5 dark:border-white/10 backdrop-blur-2xl flex items-center justify-around py-1 px-2 shadow-2xl safe-area-bottom">
-    <button onclick="switchAppleTab('feed')" id="mobile-nav-feed" class="flex flex-col items-center justify-center flex-1 py-1 text-[10px] font-bold text-blue-600 dark:text-blue-400 min-h-[44px] transition cursor-pointer">
+  <nav role="tablist" class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/80 dark:bg-black/80 border-t border-black/5 dark:border-white/10  flex items-center justify-around py-1 px-2 shadow-2xl safe-area-bottom">
+    <button onclick="switchAppleTab('feed')" id="mobile-nav-feed" class="flex flex-col items-center justify-center flex-1 py-1 text-xs font-bold text-blue-600 dark:text-blue-400 min-h-[44px] transition cursor-pointer">
       <i data-lucide="layout-grid" class="w-5 h-5 mb-0.5"></i>
       <span>Feed</span>
     </button>
-    <button onclick="switchAppleTab('ranking')" id="mobile-nav-ranking" class="flex flex-col items-center justify-center flex-1 py-1 text-[10px] font-medium text-neutral-500 dark:text-neutral-400 min-h-[44px] transition cursor-pointer">
+    <button onclick="switchAppleTab('ranking')" id="mobile-nav-ranking" class="flex flex-col items-center justify-center flex-1 py-1 text-xs font-medium text-neutral-500 dark:text-neutral-400 min-h-[44px] transition cursor-pointer">
       <i data-lucide="trophy" class="w-5 h-5 mb-0.5 text-amber-500"></i>
       <span>Ranking</span>
     </button>
-    <button onclick="switchAppleTab('comparator')" id="mobile-nav-comparator" class="flex flex-col items-center justify-center flex-1 py-1 text-[10px] font-medium text-neutral-500 dark:text-neutral-400 min-h-[44px] transition cursor-pointer">
+    <button onclick="switchAppleTab('comparator')" id="mobile-nav-comparator" class="flex flex-col items-center justify-center flex-1 py-1 text-xs font-medium text-neutral-500 dark:text-neutral-400 min-h-[44px] transition cursor-pointer">
       <i data-lucide="scale" class="w-5 h-5 mb-0.5 text-purple-500"></i>
       <span>Comparar</span>
     </button>
-    <button onclick="switchAppleTab('match')" id="mobile-nav-match" class="flex flex-col items-center justify-center flex-1 py-1 text-[10px] font-medium text-neutral-500 dark:text-neutral-400 min-h-[44px] transition cursor-pointer">
+    <button onclick="switchAppleTab('match')" id="mobile-nav-match" class="flex flex-col items-center justify-center flex-1 py-1 text-xs font-medium text-neutral-500 dark:text-neutral-400 min-h-[44px] transition cursor-pointer">
       <i data-lucide="sparkles" class="w-5 h-5 mb-0.5 text-amber-500"></i>
       <span>Match</span>
     </button>
-    <button onclick="switchAppleTab('incumbents')" id="mobile-nav-incumbents" class="flex flex-col items-center justify-center flex-1 py-1 text-[10px] font-medium text-neutral-500 dark:text-neutral-400 min-h-[44px] transition cursor-pointer">
+    <button onclick="switchAppleTab('incumbents')" id="mobile-nav-incumbents" class="flex flex-col items-center justify-center flex-1 py-1 text-xs font-medium text-neutral-500 dark:text-neutral-400 min-h-[44px] transition cursor-pointer">
       <i data-lucide="landmark" class="w-5 h-5 mb-0.5 text-emerald-500"></i>
       <span>Mandatos</span>
     </button>
-    <button onclick="switchAppleTab('urna')" id="mobile-nav-urna" class="flex flex-col items-center justify-center flex-1 py-1 text-[10px] font-medium text-neutral-500 dark:text-neutral-400 min-h-[44px] transition cursor-pointer">
+    <button onclick="switchAppleTab('urna')" id="mobile-nav-urna" class="flex flex-col items-center justify-center flex-1 py-1 text-xs font-medium text-neutral-500 dark:text-neutral-400 min-h-[44px] transition cursor-pointer">
       <i data-lucide="check-square" class="w-5 h-5 mb-0.5 text-emerald-600 dark:text-emerald-400"></i>
       <span>Urna</span>
     </button>
-    <button onclick="switchAppleTab('gargalos')" id="mobile-nav-gargalos" class="flex flex-col items-center justify-center flex-1 py-1 text-[10px] font-medium text-neutral-500 dark:text-neutral-400 min-h-[44px] transition cursor-pointer">
+    <button onclick="switchAppleTab('gargalos')" id="mobile-nav-gargalos" class="flex flex-col items-center justify-center flex-1 py-1 text-xs font-medium text-neutral-500 dark:text-neutral-400 min-h-[44px] transition cursor-pointer">
       <i data-lucide="compass" class="w-5 h-5 mb-0.5 text-purple-600 dark:text-purple-400"></i>
       <span>Gargalos</span>
     </button>
@@ -1253,9 +1253,9 @@
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
       <div class="space-y-1">
         <p class="font-bold text-neutral-800 dark:text-neutral-200">Figuras Políticas • Veja quem te representa.</p>
-        <p class="text-[11px]">Plataforma independente de transparência cívica e auditoria eleitoral. Dados públicos via LAI nº 12.527/2011.</p>
+        <p class="text-sm">Plataforma independente de transparência cívica e auditoria eleitoral. Dados públicos via LAI nº 12.527/2011.</p>
       </div>
-      <div class="flex items-center gap-3 text-[11px] font-medium flex-wrap justify-center">
+      <div class="flex items-center gap-3 text-sm font-medium flex-wrap justify-center">
         <button onclick="openModal('terms-modal')" class="hover:text-black dark:hover:text-white transition cursor-pointer">Termos de Uso</button>
         <span>•</span>
         <button onclick="openOfficesGuideModal()" class="hover:text-black dark:hover:text-white transition cursor-pointer">Guia dos 10 Cargos</button>
@@ -1271,7 +1271,7 @@
   <div id="dossie-modal" class="hidden"></div>
     <!-- ================= MODAL: EXPORTADOR DE CARDS PARA INSTAGRAM / STORIES ================= -->
   <!-- ================= MODAL: DETALHES DO GARGALO NACIONAL & CANDIDATOS PROPONENTES ================= -->
-  <div id="bottleneck-details-modal" class="fixed inset-0 z-50 bg-slate-900/70 dark:bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
+  <div id="bottleneck-details-modal" class="fixed inset-0 z-50 bg-slate-900/70 dark:bg-black/80  hidden flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
     <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/15 w-full max-w-3xl rounded-3xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh] my-auto text-slate-900 dark:text-slate-100">
       <div class="p-4 sm:p-6 bg-slate-50 dark:bg-slate-950 border-b border-slate-200 dark:border-white/10 flex items-center justify-between">
         <div class="flex items-center gap-2.5">
@@ -1291,7 +1291,7 @@
       <div class="p-4 sm:p-6 space-y-4 overflow-y-auto text-xs text-slate-700 dark:text-slate-300 leading-relaxed font-sans">
         <!-- Diagnóstico -->
         <div class="p-4 rounded-2xl bg-rose-50 dark:bg-rose-950/20 border border-rose-200 dark:border-rose-900/30 space-y-1">
-          <span class="text-[10px] uppercase font-bold text-rose-700 dark:text-rose-400 flex items-center gap-1">
+          <span class="text-xs uppercase font-bold text-rose-700 dark:text-rose-400 flex items-center gap-1">
             <i data-lucide="alert-octagon" class="w-3.5 h-3.5"></i> Diagnóstico Técnico do Entrave Crônico:
           </span>
           <p id="modal-bottleneck-diagnosis" class="text-xs text-slate-800 dark:text-slate-200 leading-relaxed"></p>
@@ -1299,7 +1299,7 @@
 
         <!-- Solução Sugerida -->
         <div class="p-4 rounded-2xl bg-purple-50 dark:bg-purple-950/20 border border-purple-200 dark:border-purple-900/30 space-y-1">
-          <span class="text-[10px] uppercase font-bold text-purple-700 dark:text-purple-300 flex items-center gap-1">
+          <span class="text-xs uppercase font-bold text-purple-700 dark:text-purple-300 flex items-center gap-1">
             <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i> Diretriz de Solução Recomendada (IPEA / DIAP / OCDE):
           </span>
           <p id="modal-bottleneck-solution" class="text-xs text-slate-800 dark:text-slate-200 leading-relaxed font-medium"></p>
@@ -1319,7 +1319,7 @@
       </div>
 
       <div class="p-4 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-white/10 flex items-center justify-between text-xs">
-        <span class="text-slate-500 dark:text-slate-400 font-mono text-[11px]">
+        <span class="text-slate-500 dark:text-slate-400 font-mono text-sm">
           Fonte: Observatório dos 30 Gargalos Nacionais & DivulgaCandContas TSE 2026
         </span>
         <button onclick="closeBottleneckDetailsModal()" class="px-4 py-2 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs shadow-md transition cursor-pointer">
@@ -1330,7 +1330,7 @@
   </div>
 
   <!-- ================= MODAL: TERMOS DE USO & POLÍTICA DE PRIVACIDADE (LGPD & COMPLIANCE ELEITORAL) ================= -->
-  <div id="terms-modal" class="fixed inset-0 z-50 bg-slate-900/70 dark:bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
+  <div id="terms-modal" class="fixed inset-0 z-50 bg-slate-900/70 dark:bg-black/80  hidden flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
     <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/15 w-full max-w-3xl rounded-3xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh] my-auto text-slate-900 dark:text-slate-100">
       <div class="p-4 sm:p-6 bg-slate-50 dark:bg-slate-950 border-b border-slate-200 dark:border-white/10 flex items-center justify-between">
         <div class="flex items-center gap-2.5">
@@ -1397,8 +1397,8 @@
     </div>
   </div>
 
-  <div id="export-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-2xl hidden flex items-center justify-center p-2 sm:p-4 overflow-y-auto">
-    <div class="bg-white/85 dark:bg-[#1c1c1e]/85 backdrop-blur-3xl border border-black/10 dark:border-white/15 w-full max-w-4xl max-h-[95vh] rounded-[28px] overflow-hidden shadow-2xl flex flex-col my-auto text-neutral-900 dark:text-neutral-100 font-sans">
+  <div id="export-modal" class="fixed inset-0 z-50 bg-black/60  hidden flex items-center justify-center p-4 sm:p-4 overflow-y-auto">
+    <div class="bg-white/85 dark:bg-[#1c1c1e]/85  border border-black/10 dark:border-white/15 w-full max-w-4xl max-h-[95vh] rounded-[28px] overflow-hidden shadow-2xl flex flex-col my-auto text-neutral-900 dark:text-neutral-100 font-sans">
       
       <!-- Modal Header -->
       <div class="px-6 py-4 border-b border-black/5 dark:border-white/10 flex items-center justify-between flex-shrink-0">
@@ -1408,7 +1408,7 @@
           </div>
           <div>
             <h3 class="font-bold text-neutral-900 dark:text-white text-sm tracking-tight">Figurinha Cívica Oficial • Eleições 2026</h3>
-            <p class="text-[11px] text-neutral-500 dark:text-neutral-400">Card colecionável pronto para viralizar nos Stories e WhatsApp</p>
+            <p class="text-sm text-neutral-500 dark:text-neutral-400">Card colecionável pronto para viralizar nos Stories e WhatsApp</p>
           </div>
         </div>
         <button onclick="closeExportModal()" class="w-8 h-8 rounded-full bg-black/5 dark:bg-white/10 hover:bg-black/10 dark:hover:bg-white/15 text-neutral-500 dark:text-neutral-400 flex items-center justify-center transition cursor-pointer" title="Fechar">
@@ -1425,7 +1425,7 @@
             <div id="export-card-target" class="w-[320px] sm:w-[330px] bg-[#070b16] p-4 rounded-[1.75rem] border-2 border-blue-500/40 shadow-2xl text-white relative flex flex-col justify-between" style="min-height: 520px;">
               
               <!-- Trading Card Holographic Top Banner -->
-              <div class="px-2.5 py-1 rounded-full bg-gradient-to-r from-blue-500/20 via-indigo-400/30 to-purple-500/20 border border-blue-400/40 text-center flex items-center justify-between text-[8px] font-black tracking-widest text-blue-300 uppercase shadow-sm">
+              <div class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-blue-400/40 text-center flex items-center justify-between text-[8px] font-black tracking-widest text-blue-300 uppercase shadow-sm">
                 <span class="flex items-center gap-1"><i data-lucide="award" class="w-3 h-3 text-blue-400"></i> FIGURINHA CÍVICA ELEIÇÕES 2026</span>
                 <span class="bg-blue-500 text-white px-1.5 py-0.2 rounded font-black text-[8px]">OFICIAL</span>
               </div>
@@ -1436,9 +1436,9 @@
               </div>
 
               <!-- Radar de Intensidade & Qualidade Política Canvas Section (HUD Dark Neon) -->
-              <div class="my-1 bg-[#0c1222]/95 p-2.5 rounded-2xl border border-blue-500/30 flex flex-col items-center shadow-inner relative overflow-hidden">
+              <div class="my-1 bg-[#0c1222]/95 p-4.5 rounded-2xl border border-blue-500/30 flex flex-col items-center shadow-inner relative overflow-hidden">
                 <div class="flex items-center justify-between w-full mb-0.5">
-                  <span class="text-[9.5px] font-black text-blue-300 uppercase tracking-wider flex items-center gap-1.5 font-mono">
+                  <span class="text-xs font-black text-blue-300 uppercase tracking-wider flex items-center gap-1.5 font-mono">
                     <i data-lucide="activity" class="w-3 h-3 text-blue-400"></i> RADAR DE QUALIDADE
                   </span>
                   <span class="text-[8.5px] px-1.5 py-0.2 rounded bg-blue-500/20 text-blue-300 font-mono font-bold">Escala 0-100</span>
@@ -1450,7 +1450,7 @@
               </div>
 
               <!-- Power Stats & Impact Grid (Rendered Dynamically) -->
-              <div id="export-card-stats" class="grid grid-cols-2 gap-1.5 text-[10px] my-1">
+              <div id="export-card-stats" class="grid grid-cols-2 gap-1.5 text-xs my-1">
                 <!-- Injected dynamically via JS -->
               </div>
 
@@ -1477,11 +1477,11 @@
             <div class="space-y-2">
               <div class="flex items-center justify-between">
                 <span class="text-xs font-bold text-neutral-800 dark:text-neutral-200">Modelo da Figurinha:</span>
-                <span class="text-[10.5px] font-semibold text-blue-600 dark:text-blue-400 bg-blue-500/10 px-2.5 py-0.5 rounded-full border border-blue-500/20">Viral Cívico</span>
+                <span class="text-xs font-semibold text-blue-600 dark:text-blue-400 bg-blue-500/10 px-2.5 py-0.5 rounded-full border border-blue-500/20">Viral Cívico</span>
               </div>
 
               <!-- Filtros de Canal de Viralização (Apple Capsule) -->
-              <div class="flex items-center gap-1 bg-black/5 dark:bg-white/10 p-1 rounded-full text-xs font-semibold">
+              <div class="flex items-center gap-1 bg-black/5 dark:bg-white/10 p-4 rounded-full text-xs font-semibold">
                 <button type="button" onclick="filterStickersCategory('all')" id="stk-filter-all" class="flex-1 py-1 rounded-full bg-white dark:bg-[#2c2c2e] text-neutral-900 dark:text-white shadow-xs transition cursor-pointer">Todas</button>
                 <button type="button" onclick="filterStickersCategory('whatsapp')" id="stk-filter-whatsapp" class="flex-1 py-1 rounded-full text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition cursor-pointer">WhatsApp</button>
                 <button type="button" onclick="filterStickersCategory('instagram')" id="stk-filter-instagram" class="flex-1 py-1 rounded-full text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition cursor-pointer">Instagram</button>
@@ -1491,93 +1491,93 @@
               <!-- Catálogo de Figurinhas com Nomes em Português -->
               <div id="stickers-theme-grid" class="grid grid-cols-3 gap-1.5 max-h-[175px] overflow-y-auto pr-1 custom-scrollbar">
                 <!-- Novas Figurinhas Cívicas Virais: Entregas, Gargalos & Futuro -->
-                <button onclick="setExportVisualTheme('what_he_did')" id="btn-theme-what_he_did" data-stk-cat="whatsapp instagram all" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-[10px] border border-emerald-500/30 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-emerald-50 dark:hover:bg-emerald-950/20">
+                <button onclick="setExportVisualTheme('what_he_did')" id="btn-theme-what_he_did" data-stk-cat="whatsapp instagram all" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-xs border border-emerald-500/30 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-emerald-50 dark:hover:bg-emerald-950/20">
                   <span class="text-emerald-700 dark:text-emerald-400 font-bold">✅ O Que Fez</span>
                   <span class="text-[7.5px] opacity-75 font-mono">Entregas Reais</span>
                 </button>
-                <button onclick="setExportVisualTheme('what_he_didnt')" id="btn-theme-what_he_didnt" data-stk-cat="whatsapp twitter all" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-[10px] border border-rose-500/30 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-rose-50 dark:hover:bg-rose-950/20">
+                <button onclick="setExportVisualTheme('what_he_didnt')" id="btn-theme-what_he_didnt" data-stk-cat="whatsapp twitter all" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-xs border border-rose-500/30 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-rose-50 dark:hover:bg-rose-950/20">
                   <span class="text-rose-700 dark:text-rose-400 font-bold">❌ O Que Não Fez</span>
                   <span class="text-[7.5px] opacity-75 font-mono">Gargalos Ativos</span>
                 </button>
-                <button onclick="setExportVisualTheme('future_projection')" id="btn-theme-future_projection" data-stk-cat="whatsapp instagram twitter all" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-[10px] border border-purple-500/30 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-purple-50 dark:hover:bg-purple-950/20">
+                <button onclick="setExportVisualTheme('future_projection')" id="btn-theme-future_projection" data-stk-cat="whatsapp instagram twitter all" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-xs border border-purple-500/30 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-purple-50 dark:hover:bg-purple-950/20">
                   <span class="text-purple-700 dark:text-purple-400 font-bold">🔮 Futuro 2026</span>
                   <span class="text-[7.5px] opacity-75 font-mono">E Se Eleito?</span>
                 </button>
 
                 <!-- WhatsApp: Duelos & Fiscalização -->
-                <button onclick="setExportVisualTheme('duel_5050')" id="btn-theme-duel_5050" data-stk-cat="whatsapp" data-duel-only="true" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-[10px] border border-black/5 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-black/5 dark:hover:bg-white/10">
+                <button onclick="setExportVisualTheme('duel_5050')" id="btn-theme-duel_5050" data-stk-cat="whatsapp" data-duel-only="true" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-xs border border-black/5 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-black/5 dark:hover:bg-white/10">
                   <span>⚔️ Duelo 50/50</span>
                   <span class="text-[7.5px] opacity-75 font-mono">Street Battle</span>
                 </button>
-                <button onclick="setExportVisualTheme('duel_economy')" id="btn-theme-duel_economy" data-stk-cat="whatsapp" data-duel-only="true" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-[10px] border border-black/5 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-black/5 dark:hover:bg-white/10">
+                <button onclick="setExportVisualTheme('duel_economy')" id="btn-theme-duel_economy" data-stk-cat="whatsapp" data-duel-only="true" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-xs border border-black/5 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-black/5 dark:hover:bg-white/10">
                   <span>💸 Duelo Gastos</span>
                   <span class="text-[7.5px] opacity-75 font-mono">Economia Cota</span>
                 </button>
-                <button onclick="setExportVisualTheme('citizen_receipt')" id="btn-theme-citizen_receipt" data-stk-cat="whatsapp" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-[10px] border border-black/5 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-black/5 dark:hover:bg-white/10">
+                <button onclick="setExportVisualTheme('citizen_receipt')" id="btn-theme-citizen_receipt" data-stk-cat="whatsapp" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-xs border border-black/5 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-black/5 dark:hover:bg-white/10">
                   <span>🧾 Recibo Fiscal</span>
                   <span class="text-[7.5px] opacity-75 font-mono">Cupom Eleitor</span>
                 </button>
-                <button onclick="setExportVisualTheme('mandate_clock')" id="btn-theme-mandate_clock" data-stk-cat="whatsapp" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-[10px] border border-black/5 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-black/5 dark:hover:bg-white/10">
+                <button onclick="setExportVisualTheme('mandate_clock')" id="btn-theme-mandate_clock" data-stk-cat="whatsapp" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-xs border border-black/5 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-black/5 dark:hover:bg-white/10">
                   <span>⏱️ Custo/Minuto</span>
                   <span class="text-[7.5px] opacity-75 font-mono">Impostômetro</span>
                 </button>
-                <button onclick="setExportVisualTheme('ai_audit')" id="btn-theme-ai_audit" data-stk-cat="whatsapp" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-[10px] border border-blue-500/30 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-blue-500/10">
+                <button onclick="setExportVisualTheme('ai_audit')" id="btn-theme-ai_audit" data-stk-cat="whatsapp" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-xs border border-blue-500/30 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-blue-500/10">
                   <span class="text-blue-600 dark:text-blue-400 font-bold">🤖 Dossiê IA</span>
                   <span class="text-[7.5px] font-bold text-amber-500 dark:text-amber-400 font-mono">Sem Filtro</span>
                 </button>
-                <button onclick="setExportVisualTheme('judicial_clearance')" id="btn-theme-judicial_clearance" data-stk-cat="whatsapp" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-[10px] border border-black/5 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-black/5 dark:hover:bg-white/10">
+                <button onclick="setExportVisualTheme('judicial_clearance')" id="btn-theme-judicial_clearance" data-stk-cat="whatsapp" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-xs border border-black/5 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-black/5 dark:hover:bg-white/10">
                   <span>⚖️ Ficha Limpa</span>
                   <span class="text-[7.5px] opacity-75 font-mono">Boletim TSE</span>
                 </button>
 
                 <!-- Instagram & TikTok: Visual & Gamificação -->
-                <button onclick="setExportVisualTheme('swiss')" id="btn-theme-swiss" data-stk-cat="instagram" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-blue-600 text-white font-bold text-[10px] shadow-md shadow-blue-500/25 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer">
+                <button onclick="setExportVisualTheme('swiss')" id="btn-theme-swiss" data-stk-cat="instagram" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-blue-600 text-white font-bold text-xs shadow-md shadow-blue-500/25 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer">
                   <span>📊 Radar Oficial</span>
                   <span class="text-[7.5px] opacity-90 font-mono">6 Dimensões</span>
                 </button>
-                <button onclick="setExportVisualTheme('fifa')" id="btn-theme-fifa" data-stk-cat="instagram" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-[10px] border border-black/5 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-black/5 dark:hover:bg-white/10">
+                <button onclick="setExportVisualTheme('fifa')" id="btn-theme-fifa" data-stk-cat="instagram" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-xs border border-black/5 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-black/5 dark:hover:bg-white/10">
                   <span>🎮 Gamificação</span>
                   <span class="text-[7.5px] opacity-75 font-mono">Card FIFA OVR</span>
                 </button>
-                <button onclick="setExportVisualTheme('civic_affinity')" id="btn-theme-civic_affinity" data-stk-cat="instagram" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-[10px] border border-black/5 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-black/5 dark:hover:bg-white/10">
+                <button onclick="setExportVisualTheme('civic_affinity')" id="btn-theme-civic_affinity" data-stk-cat="instagram" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-xs border border-black/5 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-black/5 dark:hover:bg-white/10">
                   <span>🎯 Match Eleitor</span>
                   <span class="text-[7.5px] opacity-75 font-mono">Afinidade %</span>
                 </button>
-                <button onclick="setExportVisualTheme('bento')" id="btn-theme-bento" data-stk-cat="instagram" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-[10px] border border-black/5 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-black/5 dark:hover:bg-white/10">
+                <button onclick="setExportVisualTheme('bento')" id="btn-theme-bento" data-stk-cat="instagram" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-xs border border-black/5 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-black/5 dark:hover:bg-white/10">
                   <span>👤 Perfil Modular</span>
                   <span class="text-[7.5px] opacity-75 font-mono">Bento Grid</span>
                 </button>
-                <button onclick="setExportVisualTheme('story_viral_9_16')" id="btn-theme-story_viral_9_16" data-stk-cat="instagram" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-[10px] border border-black/5 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-black/5 dark:hover:bg-white/10">
+                <button onclick="setExportVisualTheme('story_viral_9_16')" id="btn-theme-story_viral_9_16" data-stk-cat="instagram" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-xs border border-black/5 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-black/5 dark:hover:bg-white/10">
                   <span>⚡ Story Choque</span>
                   <span class="text-[7.5px] opacity-75 font-mono">9:16 Vertical</span>
                 </button>
 
                 <!-- X / Twitter & Notícias: Fatos & Dinheiro -->
-                <button onclick="setExportVisualTheme('twitter')" id="btn-theme-twitter" data-stk-cat="twitter" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-[10px] border border-black/5 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-black/5 dark:hover:bg-white/10">
+                <button onclick="setExportVisualTheme('twitter')" id="btn-theme-twitter" data-stk-cat="twitter" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-xs border border-black/5 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-black/5 dark:hover:bg-white/10">
                   <span>🔍 Fato-Check</span>
                   <span class="text-[7.5px] opacity-75 font-mono">X / Threads</span>
                 </button>
-                <button onclick="setExportVisualTheme('campaign_finance')" id="btn-theme-campaign_finance" data-stk-cat="twitter" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-[10px] border border-black/5 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-black/5 dark:hover:bg-white/10">
+                <button onclick="setExportVisualTheme('campaign_finance')" id="btn-theme-campaign_finance" data-stk-cat="twitter" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-xs border border-black/5 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-black/5 dark:hover:bg-white/10">
                   <span>💰 Campanha TSE</span>
                   <span class="text-[7.5px] opacity-75 font-mono">Gasto & Voto</span>
                 </button>
-                <button onclick="setExportVisualTheme('quote_truth')" id="btn-theme-quote_truth" data-stk-cat="twitter" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-[10px] border border-black/5 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-black/5 dark:hover:bg-white/10">
+                <button onclick="setExportVisualTheme('quote_truth')" id="btn-theme-quote_truth" data-stk-cat="twitter" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-xs border border-black/5 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-black/5 dark:hover:bg-white/10">
                   <span>🎙️ Falas Debate</span>
                   <span class="text-[7.5px] opacity-75 font-mono">Veredito Real</span>
                 </button>
-                <button onclick="setExportVisualTheme('law_productivity')" id="btn-theme-law_productivity" data-stk-cat="twitter" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-[10px] border border-black/5 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-black/5 dark:hover:bg-white/10">
+                <button onclick="setExportVisualTheme('law_productivity')" id="btn-theme-law_productivity" data-stk-cat="twitter" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-xs border border-black/5 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-black/5 dark:hover:bg-white/10">
                   <span>📜 Leis Reais</span>
                   <span class="text-[7.5px] opacity-75 font-mono">Produtividade</span>
                 </button>
-                <button onclick="setExportVisualTheme('executive')" id="btn-theme-executive" data-stk-cat="twitter" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-[10px] border border-black/5 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-black/5 dark:hover:bg-white/10">
+                <button onclick="setExportVisualTheme('executive')" id="btn-theme-executive" data-stk-cat="twitter" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-xs border border-black/5 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-black/5 dark:hover:bg-white/10">
                   <span>🏛️ Dossiê Executivo</span>
                   <span class="text-[7.5px] opacity-75 font-mono">Editorial Creme</span>
                 </button>
-                <button onclick="setExportVisualTheme('apple')" id="btn-theme-apple" data-stk-cat="all whatsapp instagram twitter" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-[10px] border border-sky-500/30 dark:border-sky-500/30 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-black/5 dark:hover:bg-white/10">
+                <button onclick="setExportVisualTheme('apple')" id="btn-theme-apple" data-stk-cat="all whatsapp instagram twitter" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-xs border border-sky-500/30 dark:border-sky-500/30 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-black/5 dark:hover:bg-white/10">
                   <span class="font-bold text-sky-600 dark:text-sky-400"> Apple Glass</span>
                   <span class="text-[7.5px] opacity-75 font-mono">Dossiê 4K</span>
                 </button>
-                <button onclick="setExportVisualTheme('alerta_decisao_2026')" id="btn-theme-alerta_decisao_2026" data-stk-cat="twitter" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-[10px] border border-black/5 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-black/5 dark:hover:bg-white/10">
+                <button onclick="setExportVisualTheme('alerta_decisao_2026')" id="btn-theme-alerta_decisao_2026" data-stk-cat="twitter" class="sticker-opt-btn py-2 px-1 rounded-2xl bg-white/70 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium text-xs border border-black/5 dark:border-white/10 flex flex-col items-center justify-center gap-0.5 transition cursor-pointer hover:bg-black/5 dark:hover:bg-white/10">
                   <span>🚨 Alerta TSE</span>
                   <span class="text-[7.5px] opacity-75 font-mono">04/10/2026</span>
                 </button>
@@ -1587,7 +1587,7 @@
             <!-- Formato do Card (Apple Capsule) -->
             <div>
               <span class="text-xs font-semibold text-neutral-600 dark:text-neutral-400 block mb-1.5">Escolha o Formato do Card:</span>
-              <div class="grid grid-cols-2 gap-2 bg-black/5 dark:bg-white/10 p-1 rounded-full">
+              <div class="grid grid-cols-2 gap-2 bg-black/5 dark:bg-white/10 p-4 rounded-full">
                 <button onclick="setExportFormat('stories')" id="btn-format-stories" class="py-1.5 px-3 rounded-full bg-blue-600 text-white font-bold text-xs shadow-md shadow-blue-500/25 flex items-center justify-center gap-1.5 transition cursor-pointer">
                   <i data-lucide="smartphone" class="w-3.5 h-3.5"></i> Stories (9:16)
                 </button>
@@ -1598,7 +1598,7 @@
             </div>
 
             <!-- Instagram Direct Share Button -->
-            <button onclick="shareToInstagram()" id="btn-share-insta" class="w-full py-2.5 rounded-full bg-gradient-to-r from-[#f09433] via-[#dc2743] to-[#bc1888] hover:opacity-95 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-md shadow-pink-600/20 transition cursor-pointer">
+            <button onclick="shareToInstagram()" id="btn-share-insta" class="w-full py-2.5 rounded-full bg-slate-100 dark:bg-slate-800 hover:opacity-95 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-md shadow-pink-600/20 transition cursor-pointer">
               <i data-lucide="camera" class="w-4 h-4 text-white"></i> 📸 Postar no Instagram (Stories / Feed)
             </button>
 
@@ -1623,7 +1623,7 @@
               </button>
             </div>
 
-            <p class="text-[10.5px] text-neutral-500 dark:text-neutral-400 text-center leading-tight pt-1">
+            <p class="text-xs text-neutral-500 dark:text-neutral-400 text-center leading-tight pt-1">
               Compartilhe dados cívicos oficiais auditados perante TSE, Câmara e Senado.
             </p>
 
@@ -1636,7 +1636,7 @@
   </div>
 
   <!-- ================= MODAL: LOGIN / CADASTRO DO ELEITOR ================= -->
-  <div id="login-modal" class="fixed inset-0 z-60 bg-slate-900/60 dark:bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+  <div id="login-modal" class="fixed inset-0 z-60 bg-slate-900/60 dark:bg-black/80  hidden flex items-center justify-center p-4">
     <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/15 w-full max-w-md rounded-3xl p-6 shadow-2xl space-y-4 text-slate-900 dark:text-white">
       <div class="flex items-center justify-between">
         <div class="flex items-center gap-2.5">
@@ -1645,7 +1645,7 @@
           </div>
           <div>
             <h3 class="text-base font-bold">Acesso do Eleitor</h3>
-            <p class="text-[10px] text-slate-500 dark:text-slate-400">Salve seus candidatos favoritos e histórico de votos</p>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Salve seus candidatos favoritos e histórico de votos</p>
           </div>
         </div>
         <button onclick="closeLoginModal()" class="text-slate-400 hover:text-black dark:hover:text-white cursor-pointer">
@@ -1665,7 +1665,7 @@
 
         <div class="relative my-3 text-center">
           <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-slate-200 dark:border-white/10"></div></div>
-          <span class="relative bg-white dark:bg-slate-900 px-2 text-[10px] text-slate-400 font-mono">OU COM SEU E-MAIL</span>
+          <span class="relative bg-white dark:bg-slate-900 px-2 text-xs text-slate-400 font-mono">OU COM SEU E-MAIL</span>
         </div>
 
         <form onsubmit="handleEmailLogin(event)" class="space-y-2">
@@ -1676,7 +1676,7 @@
           </button>
         </form>
 
-        <p class="text-[10px] text-slate-500 text-center pt-2">
+        <p class="text-xs text-slate-500 text-center pt-2">
           Seus dados são 100% confidenciais e protegidos pela LGPD (Art. 7º).
         </p>
       </div>
@@ -1684,7 +1684,7 @@
   </div>
 
   <!-- ================= MODAL: SELETOR DE LOCALIZAÇÃO (UF & CIDADE) ================= -->
-  <div id="location-modal" class="fixed inset-0 z-60 bg-slate-900/60 dark:bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+  <div id="location-modal" class="fixed inset-0 z-60 bg-slate-900/60 dark:bg-black/80  hidden flex items-center justify-center p-4">
     <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/15 w-full max-w-md rounded-2xl p-6 shadow-2xl space-y-4 text-slate-900 dark:text-white">
       <div class="flex items-center justify-between">
         <h3 class="text-base font-bold flex items-center gap-2">
@@ -1732,7 +1732,7 @@
   </div>
 
   <!-- ================= MODAL: APOIO CÍVICO / DOAÇÃO / CLUBE PRO ================= -->
-  <div id="donate-modal" class="fixed inset-0 z-60 bg-slate-900/60 dark:bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+  <div id="donate-modal" class="fixed inset-0 z-60 bg-slate-900/60 dark:bg-black/80  hidden flex items-center justify-center p-4">
     <div class="bg-white dark:bg-slate-900 border border-amber-300 dark:border-amber-500/30 w-full max-w-md rounded-3xl p-6 shadow-2xl space-y-4 text-slate-900 dark:text-white animate-in fade-in zoom-in duration-200">
       <div class="flex items-center justify-between border-b border-slate-100 dark:border-white/10 pb-3">
         <div class="flex items-center gap-2.5">
@@ -1741,7 +1741,7 @@
           </div>
           <div>
             <h3 class="text-sm font-black tracking-tight text-slate-900 dark:text-white">Apoie o Figuras Políticas</h3>
-            <span class="text-[10px] text-slate-500 dark:text-slate-400 block font-medium">Plataforma Cívica 100% Independente</span>
+            <span class="text-xs text-slate-500 dark:text-slate-400 block font-medium">Plataforma Cívica 100% Independente</span>
           </div>
         </div>
         <button onclick="closeDonateModal()" class="w-7 h-7 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-400 hover:text-slate-900 dark:hover:text-white flex items-center justify-center transition cursor-pointer">
@@ -1755,31 +1755,31 @@
 
       <!-- Opções de Micro-Apoio Cívico -->
       <div class="grid grid-cols-3 gap-2 text-center">
-        <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-white/5">
-          <span class="text-[10px] text-slate-500 dark:text-slate-400 block">Café Cívico</span>
+        <div class="p-4.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-white/5">
+          <span class="text-xs text-slate-500 dark:text-slate-400 block">Café Cívico</span>
           <strong class="text-sm font-black font-mono text-emerald-600 dark:text-emerald-400 block mt-0.5">R$ 5,00</strong>
         </div>
-        <div class="p-2.5 rounded-xl bg-amber-50 dark:bg-amber-500/10 border border-amber-200 dark:border-amber-500/20">
-          <span class="text-[10px] text-amber-800 dark:text-amber-300 font-bold block">1 Auditoria</span>
+        <div class="p-4.5 rounded-xl bg-amber-50 dark:bg-amber-500/10 border border-amber-200 dark:border-amber-500/20">
+          <span class="text-xs text-amber-800 dark:text-amber-300 font-bold block">1 Auditoria</span>
           <strong class="text-sm font-black font-mono text-amber-700 dark:text-amber-400 block mt-0.5">R$ 15,00</strong>
         </div>
-        <div class="p-2.5 rounded-xl bg-sky-50 dark:bg-sky-500/10 border border-sky-200 dark:border-sky-500/20">
-          <span class="text-[10px] text-sky-800 dark:text-cyan-300 font-bold block">Servidor Livre</span>
+        <div class="p-4.5 rounded-xl bg-sky-50 dark:bg-sky-500/10 border border-sky-200 dark:border-sky-500/20">
+          <span class="text-xs text-sky-800 dark:text-cyan-300 font-bold block">Servidor Livre</span>
           <strong class="text-sm font-black font-mono text-sky-700 dark:text-cyan-400 block mt-0.5">R$ 30,00</strong>
         </div>
       </div>
 
       <!-- Chave Pix Copia e Cola -->
       <div class="bg-slate-50 dark:bg-slate-800/90 p-3.5 rounded-2xl border border-slate-200 dark:border-white/10 space-y-2">
-        <div class="flex items-center justify-between text-[11px]">
+        <div class="flex items-center justify-between text-sm">
           <span class="text-amber-800 dark:text-amber-400 font-bold flex items-center gap-1">
             <i data-lucide="qr-code" class="w-3.5 h-3.5"></i> Chave Pix Oficial (E-mail):
           </span>
-          <span id="pix-copy-badge" class="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold hidden flex items-center gap-1">
+          <span id="pix-copy-badge" class="text-xs text-emerald-600 dark:text-emerald-400 font-bold hidden flex items-center gap-1">
             <i data-lucide="check" class="w-3 h-3"></i> Copiado com Sucesso!
           </span>
         </div>
-        <div class="flex items-center justify-between bg-white dark:bg-slate-900 p-2 rounded-xl border border-slate-200 dark:border-white/5 gap-2">
+        <div class="flex items-center justify-between bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-white/5 gap-2">
           <span class="font-mono text-xs text-slate-800 dark:text-slate-200 truncate select-all">apoio@figuraspoliticas.org</span>
           <button id="btn-copy-pix" onclick="copyPixKeyToClipboard()" class="px-3 py-1.5 bg-amber-500 hover:bg-amber-400 text-slate-950 rounded-lg text-xs font-black transition flex items-center gap-1 cursor-pointer shrink-0 shadow-xs">
             <i data-lucide="copy" class="w-3 h-3"></i> Copiar Pix
@@ -1787,7 +1787,7 @@
         </div>
       </div>
 
-      <div class="pt-1 border-t border-slate-100 dark:border-white/10 flex items-center justify-between text-[11px] text-slate-500 dark:text-slate-400">
+      <div class="pt-1 border-t border-slate-100 dark:border-white/10 flex items-center justify-between text-sm text-slate-500 dark:text-slate-400">
         <span class="flex items-center gap-1">
           <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-500"></i> Custo de Operação: R$ 0,00
         </span>
@@ -1797,7 +1797,7 @@
   </div>
 
   <!-- ================= MODAL: INFORMAÇÕES ELEITORAIS ================= -->
-  <div id="electoral-modal" class="fixed inset-0 z-50 bg-slate-900/60 dark:bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+  <div id="electoral-modal" class="fixed inset-0 z-50 bg-slate-900/60 dark:bg-black/80  hidden flex items-center justify-center p-4">
     <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/15 w-full max-w-lg rounded-2xl p-6 shadow-2xl space-y-4 text-slate-900 dark:text-white">
       <div class="flex items-center justify-between">
         <h3 class="text-base font-bold flex items-center gap-2">
@@ -1826,7 +1826,7 @@
   </div>
 
   <!-- ================= MODAL: DETALHAMENTO COMPLETO DA PROPOSTA (PLANO DE GOVERNO & LEIS) ================= -->
-  <div id="proposal-detail-modal" class="fixed inset-0 z-50 bg-slate-900/70 dark:bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-2 sm:p-4 overflow-y-auto">
+  <div id="proposal-detail-modal" class="fixed inset-0 z-50 bg-slate-900/70 dark:bg-black/85  hidden flex items-center justify-center p-4 sm:p-4 overflow-y-auto">
     <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/15 w-full max-w-3xl rounded-3xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh] my-auto text-slate-900 dark:text-slate-100">
       
       <!-- Header -->
@@ -1849,8 +1849,8 @@
       <div class="flex-1 overflow-y-auto p-4 sm:p-6 space-y-5 text-xs text-slate-700 dark:text-slate-300">
         
         <!-- 1. O que muda na sua vida? (Plain Language Box) -->
-        <div class="p-4 rounded-2xl bg-gradient-to-r from-sky-50 to-blue-50 dark:from-sky-950/40 dark:to-blue-950/20 border border-sky-200 dark:border-sky-500/30 space-y-1.5">
-          <span class="text-[10px] uppercase font-extrabold text-sky-800 dark:text-cyan-300 flex items-center gap-1.5">
+        <div class="p-4 rounded-2xl bg-slate-100 dark:bg-slate-800 dark:from-sky-950/40 dark:to-blue-950/20 border border-sky-200 dark:border-sky-500/30 space-y-1.5">
+          <span class="text-xs uppercase font-extrabold text-sky-800 dark:text-cyan-300 flex items-center gap-1.5">
             <i data-lucide="sparkles" class="w-3.5 h-3.5 text-sky-600 dark:text-cyan-400"></i> Em Palavras Simples: O Que Isso Muda Na Sua Vida?
           </span>
           <p id="prop-detail-summary" class="text-xs sm:text-sm font-semibold text-slate-900 dark:text-white leading-relaxed"></p>
@@ -1879,7 +1879,7 @@
             <span class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
               <i data-lucide="coins" class="w-4 h-4 text-amber-500"></i> Quanto custa e de onde sai o dinheiro público?
             </span>
-            <span class="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 font-bold bg-emerald-100 dark:bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-300 dark:border-emerald-500/20">Viabilidade Financeira Analisada</span>
+            <span class="text-xs font-mono text-emerald-600 dark:text-emerald-400 font-bold bg-emerald-100 dark:bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-300 dark:border-emerald-500/20">Viabilidade Financeira Analisada</span>
           </div>
           <p id="prop-detail-budget" class="text-slate-600 dark:text-slate-400 leading-relaxed"></p>
         </div>
@@ -1909,14 +1909,14 @@
               <span class="font-bold text-emerald-800 dark:text-emerald-300 flex items-center gap-1">
                 <i data-lucide="thumbs-up" class="w-3.5 h-3.5"></i> Pontos Positivos (Prós):
               </span>
-              <p id="prop-detail-pros" class="text-slate-700 dark:text-slate-300 text-[11px] leading-relaxed"></p>
+              <p id="prop-detail-pros" class="text-slate-700 dark:text-slate-300 text-sm leading-relaxed"></p>
             </div>
 
             <div class="p-3 bg-red-50 dark:bg-red-500/10 border border-red-200 dark:border-red-500/20 rounded-xl space-y-1">
               <span class="font-bold text-red-800 dark:text-crimson flex items-center gap-1">
                 <i data-lucide="thumbs-down" class="w-3.5 h-3.5"></i> Riscos e Críticas (Contras):
               </span>
-              <p id="prop-detail-cons" class="text-slate-700 dark:text-slate-300 text-[11px] leading-relaxed"></p>
+              <p id="prop-detail-cons" class="text-slate-700 dark:text-slate-300 text-sm leading-relaxed"></p>
             </div>
           </div>
         </div>
@@ -1944,7 +1944,7 @@
   </div>
 
   <!-- ================= MODAL: AUDITORIA DAS FONTES & BLINDAGEM JURÍDICA ================= -->
-  <div id="legal-sources-modal" class="fixed inset-0 z-60 bg-slate-900/70 dark:bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-2 sm:p-4 overflow-y-auto">
+  <div id="legal-sources-modal" class="fixed inset-0 z-60 bg-slate-900/70 dark:bg-black/85  hidden flex items-center justify-center p-4 sm:p-4 overflow-y-auto">
     <div class="bg-white dark:bg-slate-900 border border-emerald-500/30 w-full max-w-3xl rounded-3xl overflow-hidden shadow-2xl flex flex-col max-h-[92vh] my-auto text-slate-900 dark:text-slate-100">
       
       <!-- Header -->
@@ -1954,7 +1954,7 @@
             <i data-lucide="shield-check" class="w-6 h-6"></i>
           </div>
           <div>
-            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-500/30">
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-500/30">
               Auditoria de Dados Públicos & Blindagem Jurídica
             </span>
             <h3 class="text-base sm:text-lg font-black text-slate-900 dark:text-white mt-0.5">Origem Oficial dos Dados & Amparo Legal</h3>
@@ -1969,11 +1969,11 @@
       <div class="flex-1 overflow-y-auto p-4 sm:p-6 space-y-6 text-xs text-slate-700 dark:text-slate-300">
         
         <!-- Intro Notice -->
-        <div class="p-4 rounded-2xl bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-950/40 dark:to-teal-950/20 border border-emerald-200 dark:border-emerald-500/30 space-y-2">
+        <div class="p-4 rounded-2xl bg-slate-100 dark:bg-slate-800 dark:from-emerald-950/40 dark:to-teal-950/20 border border-emerald-200 dark:border-emerald-500/30 space-y-2">
           <strong class="text-emerald-900 dark:text-emerald-300 font-bold block text-sm">
             Compromisso de Imparcialidade, Neutralidade e Transparência Pública
           </strong>
-          <p class="leading-relaxed text-[11px] text-slate-700 dark:text-slate-300">
+          <p class="leading-relaxed text-sm text-slate-700 dark:text-slate-300">
             Esta plataforma é apartidária e <strong>não emite juízo de valor ou opinião pessoal</strong>. Todos os indicadores, notas, valores de despesas, registros biométricos de presença, processos e propostas são agregados e indexados de <strong>bancos de dados e repositórios governamentais oficiais da República Federativa do Brasil</strong>, assegurados pelo princípio constitucional da publicidade dos atos do Estado.
           </p>
         </div>
@@ -1984,7 +1984,7 @@
             <i data-lucide="scale" class="w-4 h-4 text-emerald-600 dark:text-emerald-400"></i> Marco Legal e Fundamentação Jurídica Expressa
           </h4>
           
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[11px]">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
             <div class="p-3 bg-slate-50 dark:bg-slate-800/90 rounded-xl border border-slate-200 dark:border-white/5 space-y-1">
               <span class="font-bold text-slate-900 dark:text-white block">📜 Constituição Federal de 1988</span>
               <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -2021,7 +2021,7 @@
             <i data-lucide="database" class="w-4 h-4 text-sky-600 dark:text-cyan-400"></i> Repositórios Conectados & Protocolos de Atualização
           </h4>
 
-          <div class="space-y-2 text-[11px]">
+          <div class="space-y-2 text-sm">
             <div class="p-3 bg-slate-50 dark:bg-slate-800/90 rounded-xl border border-slate-200 dark:border-white/5 flex items-start gap-3">
               <div class="w-8 h-8 rounded-lg bg-sky-100 dark:bg-sky-500/20 text-sky-700 dark:text-cyan-400 flex items-center justify-center flex-shrink-0 font-bold">TSE</div>
               <div>
@@ -2068,7 +2068,7 @@
         <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/90 border border-slate-200 dark:border-white/5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div>
             <strong class="text-slate-900 dark:text-white text-xs block">Direito de Resposta & Contraditório Ágil (Art. 5º, V da CF)</strong>
-            <p class="text-[11px] text-slate-500 dark:text-slate-400">Assessorias jurídicas e candidatos podem submeter certidões reformadas ou erratas para atualização em até 24h úteis.</p>
+            <p class="text-sm text-slate-500 dark:text-slate-400">Assessorias jurídicas e candidatos podem submeter certidões reformadas ou erratas para atualização em até 24h úteis.</p>
           </div>
           <button onclick="closeLegalSourcesModal(); openContraditoryModal();" class="px-3.5 py-2 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs whitespace-nowrap transition">
             Abrir Canal de Contraditório
@@ -2079,7 +2079,7 @@
 
       <!-- Footer -->
       <div class="p-4 bg-slate-50 dark:bg-slate-800/90 border-t border-slate-200 dark:border-white/10 flex items-center justify-between">
-        <span class="text-[10px] text-slate-500">Hash de Integridade dos Dados: #TSE-BR-2026-SHA256</span>
+        <span class="text-xs text-slate-500">Hash de Integridade dos Dados: #TSE-BR-2026-SHA256</span>
         <button onclick="closeLegalSourcesModal()" class="px-4 py-1.5 rounded-xl bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 text-slate-800 dark:text-white font-semibold text-xs transition">
           Fechar Auditoria
         </button>
@@ -2089,7 +2089,7 @@
   </div>
 
   <!-- ================= MODAL: CONTRADITÓRIO & DIREITO DE RESPOSTA ================= -->
-  <div id="contraditory-modal" class="fixed inset-0 z-50 bg-slate-900/60 dark:bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+  <div id="contraditory-modal" class="fixed inset-0 z-50 bg-slate-900/60 dark:bg-black/80  hidden flex items-center justify-center p-4">
     <div class="bg-white dark:bg-slate-900 border border-sky-300 dark:border-cyan-500/30 w-full max-w-md rounded-2xl p-6 shadow-2xl space-y-4 text-slate-900 dark:text-white">
       <div class="flex items-center justify-between">
         <h3 class="text-base font-bold flex items-center gap-2">
@@ -2106,23 +2106,23 @@
 
       <form onsubmit="submitContraditory(event)" class="space-y-3" id="contraditory-form">
         <div>
-          <label class="text-[11px] text-slate-600 dark:text-slate-300 block mb-1">Nome do Solicitante / Assessoria:</label>
+          <label class="text-sm text-slate-600 dark:text-slate-300 block mb-1">Nome do Solicitante / Assessoria:</label>
           <input type="text" name="requesterName" required placeholder="Assessoria Jurídica / Candidato" class="w-full bg-slate-50 dark:bg-slate-800/90 border border-slate-200 dark:border-white/10 rounded-xl px-3 py-2 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-sky-500">
         </div>
         <div>
-          <label class="text-[11px] text-slate-600 dark:text-slate-300 block mb-1">E-mail Institucional ou de Assessoria:</label>
+          <label class="text-sm text-slate-600 dark:text-slate-300 block mb-1">E-mail Institucional ou de Assessoria:</label>
           <input type="email" name="requesterEmail" required placeholder="assessoria@candidato.com.br" class="w-full bg-slate-50 dark:bg-slate-800/90 border border-slate-200 dark:border-white/10 rounded-xl px-3 py-2 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-sky-500">
         </div>
         <div>
-          <label class="text-[11px] text-slate-600 dark:text-slate-300 block mb-1">Nome do Candidato / Figura Pública:</label>
+          <label class="text-sm text-slate-600 dark:text-slate-300 block mb-1">Nome do Candidato / Figura Pública:</label>
           <input type="text" name="candidateName" required placeholder="Nome do Político Auditado" class="w-full bg-slate-50 dark:bg-slate-800/90 border border-slate-200 dark:border-white/10 rounded-xl px-3 py-2 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-sky-500">
         </div>
         <div>
-          <label class="text-[11px] text-slate-600 dark:text-slate-300 block mb-1">Link do Processo / Certidão / Proposta Oficial:</label>
+          <label class="text-sm text-slate-600 dark:text-slate-300 block mb-1">Link do Processo / Certidão / Proposta Oficial:</label>
           <input type="url" name="proofLink" required placeholder="https://tse.jus.br/... ou https://stf.jus.br/..." class="w-full bg-slate-50 dark:bg-slate-800/90 border border-slate-200 dark:border-white/10 rounded-xl px-3 py-2 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-sky-500">
         </div>
         <div>
-          <label class="text-[11px] text-slate-600 dark:text-slate-300 block mb-1">Esclarecimento Formal Fundamentado:</label>
+          <label class="text-sm text-slate-600 dark:text-slate-300 block mb-1">Esclarecimento Formal Fundamentado:</label>
           <textarea name="justification" rows="3" required placeholder="Descreva a atualização de status processual ou errata de proposta..." class="w-full bg-slate-50 dark:bg-slate-800/90 border border-slate-200 dark:border-white/10 rounded-xl px-3 py-2 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-sky-500"></textarea>
         </div>
         <button type="submit" id="contraditory-submit-btn" class="w-full py-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs transition shadow-md shadow-sky-600/20 cursor-pointer">
@@ -2134,8 +2134,8 @@
           <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400"></i>
           <span>Protocolo Formal Emitido com Sucesso</span>
         </div>
-        <div class="font-mono text-[11px] bg-white dark:bg-slate-900 p-2 rounded border border-emerald-200 dark:border-emerald-500/20 text-emerald-700 dark:text-emerald-300 select-all font-bold" id="contraditory-protocol-display"></div>
-        <p class="text-[11px] text-slate-600 dark:text-slate-300 leading-relaxed">
+        <div class="font-mono text-sm bg-white dark:bg-slate-900 p-4 rounded border border-emerald-200 dark:border-emerald-500/20 text-emerald-700 dark:text-emerald-300 select-all font-bold" id="contraditory-protocol-display"></div>
+        <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
           Prazo regulamentar de análise: <strong>48 horas úteis</strong>. Nossa equipe técnica de integridade confrontará o link fornecido diretamente no tribunal/repositório oficial.
         </p>
       </div>
@@ -2145,14 +2145,14 @@
   
   <!-- ================= BANNER & MODAL DE COMPLIANCE E BLINDAGEM JURÍDICA ================= -->
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 mb-4">
-    <div class="p-4 rounded-2xl bg-gradient-to-r from-sky-50 via-slate-50 to-indigo-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900 border border-sky-200 dark:border-white/10 shadow-xs flex flex-col md:flex-row items-center justify-between gap-3 text-xs">
+    <div class="p-4 rounded-2xl bg-slate-100 dark:bg-slate-800 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900 border border-sky-200 dark:border-white/10 shadow-xs flex flex-col md:flex-row items-center justify-between gap-3 text-xs">
       <div class="flex items-center gap-3">
         <div class="w-8 h-8 rounded-xl bg-sky-100 dark:bg-cyan-500/20 text-sky-700 dark:text-cyan-300 flex items-center justify-center flex-shrink-0">
           <i data-lucide="shield-check" class="w-4 h-4"></i>
         </div>
         <div>
           <span class="font-extrabold text-slate-900 dark:text-white block">Auditoria Cívica 100% Apartidária e Auditável</span>
-          <p class="text-slate-600 dark:text-slate-400 text-[11px]">Conformidade estrita com a Lei Eleitoral nº 9.504/97, Resoluções TSE 23.610/23.732 e LGPD (Art. 7º, § 4º).</p>
+          <p class="text-slate-600 dark:text-slate-400 text-sm">Conformidade estrita com a Lei Eleitoral nº 9.504/97, Resoluções TSE 23.610/23.732 e LGPD (Art. 7º, § 4º).</p>
         </div>
       </div>
       <div class="flex items-center gap-2 flex-shrink-0">
@@ -2164,21 +2164,21 @@
   </div>
 
   <!-- MODAL DE COMPLIANCE E BLINDAGEM JURÍDICA -->
-  <div id="compliance-modal" class="hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4">
+  <div id="compliance-modal" class="hidden fixed inset-0 z-50 bg-slate-950/80  flex items-center justify-center p-4">
     <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/15 rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 space-y-5 shadow-2xl">
       <div class="flex items-center justify-between border-b border-slate-200 dark:border-white/10 pb-3">
         <div class="flex items-center gap-2">
           <i data-lucide="shield-check" class="w-5 h-5 text-sky-600 dark:text-cyan-400"></i>
           <h3 class="text-base font-black text-slate-900 dark:text-white">Governança Jurídica, Isenção & LGPD</h3>
         </div>
-        <button onclick="closeComplianceModal()" class="p-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-400 hover:text-white transition">
+        <button onclick="closeComplianceModal()" class="p-4 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-400 hover:text-white transition">
           <i data-lucide="x" class="w-5 h-5"></i>
         </button>
       </div>
 
       <div class="space-y-4 text-xs text-slate-700 dark:text-slate-300 leading-relaxed">
         <div class="p-3.5 rounded-xl bg-sky-50 dark:bg-cyan-950/20 border border-sky-200 dark:border-cyan-500/20 space-y-1">
-          <strong class="text-sky-900 dark:text-cyan-300 block font-extrabold uppercase text-[11px]">1. Cláusula de Isenção Partidária & Imparcialidade Algorítmica</strong>
+          <strong class="text-sky-900 dark:text-cyan-300 block font-extrabold uppercase text-sm">1. Cláusula de Isenção Partidária & Imparcialidade Algorítmica</strong>
           <p>O Figuras Políticas é um observatório de integridade cívica de iniciativa da sociedade civil, mantido sem recursos de partidos políticos, coligações ou comitês de campanha. A metodologia de pontuação do Score Cívico (0 a 100) e o algoritmo do Match Eleitoral utilizam os mesmos critérios objetivos, matemáticos e neutros para todos os 45 candidatos, sem qualquer discriminação ideológica.</p>
         </div>
 
@@ -2199,8 +2199,8 @@
 
         <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-white/5 space-y-2">
           <strong class="text-slate-900 dark:text-white font-extrabold block">Canal Oficial de Contraditório e Retificação Formal</strong>
-          <p class="text-[11px]">Candidatos, assessorias jurídicas ou cidadãos que identifiquem certidões judiciais atualizadas, quitações eleitorais ou arquivamento de inquéritos podem solicitar revisão documental formal:</p>
-          <div class="flex items-center gap-2 font-mono text-[11px] text-sky-700 dark:text-cyan-400">
+          <p class="text-sm">Candidatos, assessorias jurídicas ou cidadãos que identifiquem certidões judiciais atualizadas, quitações eleitorais ou arquivamento de inquéritos podem solicitar revisão documental formal:</p>
+          <div class="flex items-center gap-2 font-mono text-sm text-sky-700 dark:text-cyan-400">
             <i data-lucide="mail" class="w-3.5 h-3.5"></i> compliance@figuraspoliticas.org (SLA de resposta: 48h úteis)
           </div>
         </div>
@@ -2232,7 +2232,7 @@
 
 
     <!-- ================= MODAL: GLOSSÁRIO CÍVICO & GUIA DE TERMOS PARA LEIGOS ================= -->
-  <div id="glossary-modal" class="fixed inset-0 z-60 bg-slate-900/70 dark:bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-3 sm:p-4 overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="glossary-modal-title">
+  <div id="glossary-modal" class="fixed inset-0 z-60 bg-slate-900/70 dark:bg-black/85  hidden flex items-center justify-center p-3 sm:p-4 overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="glossary-modal-title">
     <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/15 w-full max-w-3xl rounded-3xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh] my-auto text-slate-900 dark:text-slate-100">
       
       <!-- Modal Header -->
@@ -2244,7 +2244,7 @@
           <div>
             <h3 id="glossary-modal-title" class="font-extrabold text-base sm:text-lg text-slate-900 dark:text-white flex items-center gap-2">
               Glossário Cívico Descomplicado
-              <span class="text-[10px] uppercase font-mono px-2 py-0.5 rounded-full bg-amber-200 dark:bg-amber-500/20 text-amber-900 dark:text-amber-300 font-bold">Guia para Leigos</span>
+              <span class="text-xs uppercase font-mono px-2 py-0.5 rounded-full bg-amber-200 dark:bg-amber-500/20 text-amber-900 dark:text-amber-300 font-bold">Guia para Leigos</span>
             </h3>
             <p class="text-xs text-slate-600 dark:text-slate-400">
               Entenda o que significam os termos da política em linguagem simples e direta.
@@ -2265,14 +2265,14 @@
             <span class="text-xs font-extrabold text-sky-700 dark:text-cyan-400 flex items-center gap-1.5 font-mono">
               <i data-lucide="wallet" class="w-4 h-4"></i> CEAP (Cota Parlamentar)
             </span>
-            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-sky-100 dark:bg-cyan-500/20 text-sky-800 dark:text-cyan-300 font-mono">
+            <span class="px-2 py-0.5 rounded-full text-xs font-bold bg-sky-100 dark:bg-cyan-500/20 text-sky-800 dark:text-cyan-300 font-mono">
               Verba do Mandato
             </span>
           </div>
           <p class="text-slate-700 dark:text-slate-300 leading-relaxed font-sans">
             <strong>O que significa para você:</strong> É o dinheiro público mensal — <em>além do salário pessoal</em> — que deputados e senadores têm direito de gastar para manter seus escritórios, passagens aéreas, combustível, hospedagem e contratação de consultorias.
           </p>
-          <div class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/5 text-[11px] text-slate-600 dark:text-slate-400">
+          <div class="p-4.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/5 text-sm text-slate-600 dark:text-slate-400">
             🔍 <strong>Como o Figuras Políticas avalia:</strong> Mostramos se o político gastou 100% do teto permitido ou se economizou e devolveu dinheiro aos cofres públicos.
           </div>
         </div>
@@ -2283,14 +2283,14 @@
             <span class="text-xs font-extrabold text-emerald-700 dark:text-emerald-400 flex items-center gap-1.5 font-mono">
               <i data-lucide="file-spreadsheet" class="w-4 h-4"></i> RREO (Execução Orçamentária)
             </span>
-            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 font-mono">
+            <span class="px-2 py-0.5 rounded-full text-xs font-bold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 font-mono">
               Balanço do Governo
             </span>
           </div>
           <p class="text-slate-700 dark:text-slate-300 leading-relaxed font-sans">
             <strong>O que significa para você:</strong> É o balanço contábil obrigatório divulgado a cada 2 meses onde prefeitos e governadores comprovam formalmente quanto arrecadaram em impostos e onde gastaram.
           </p>
-          <div class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/5 text-[11px] text-slate-600 dark:text-slate-400">
+          <div class="p-4.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/5 text-sm text-slate-600 dark:text-slate-400">
             🔍 <strong>Regra Constitucional:</strong> A Constituição exige que no mínimo 12% da receita do estado seja aplicada em saúde e 25% em educação pública.
           </div>
         </div>
@@ -2301,7 +2301,7 @@
             <span class="text-xs font-extrabold text-amber-700 dark:text-amber-400 flex items-center gap-1.5 font-mono">
               <i data-lucide="scale" class="w-4 h-4"></i> LRF (Lei de Responsabilidade Fiscal)
             </span>
-            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 font-mono">
+            <span class="px-2 py-0.5 rounded-full text-xs font-bold bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 font-mono">
               Trava de Dívida
             </span>
           </div>
@@ -2316,14 +2316,14 @@
             <span class="text-xs font-extrabold text-purple-700 dark:text-purple-400 flex items-center gap-1.5 font-mono">
               <i data-lucide="send" class="w-4 h-4"></i> Emendas Impositivas & Emendas Pix
             </span>
-            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-purple-100 dark:bg-purple-500/20 text-purple-800 dark:text-purple-300 font-mono">
+            <span class="px-2 py-0.5 rounded-full text-xs font-bold bg-purple-100 dark:bg-purple-500/20 text-purple-800 dark:text-purple-300 font-mono">
               Verba para Cidades
             </span>
           </div>
           <p class="text-slate-700 dark:text-slate-300 leading-relaxed font-sans">
             <strong>O que significa para você:</strong> Fatias do orçamento federal que cada deputado ou senador tem o direito garantido de enviar para hospitais, escolas e obras nas cidades do seu estado.
           </p>
-          <div class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/5 text-[11px] text-slate-600 dark:text-slate-400">
+          <div class="p-4.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/5 text-sm text-slate-600 dark:text-slate-400">
             🔍 <strong>Edital Aberto vs Emenda Pix:</strong> O Figuras Políticas premia parlamentares que selecionam projetos via edital público transparente e penaliza transferências sem projeto prévio (Emendas Pix).
           </div>
         </div>
@@ -2334,14 +2334,14 @@
             <span class="text-xs font-extrabold text-rose-700 dark:text-rose-400 flex items-center gap-1.5 font-mono">
               <i data-lucide="gavel" class="w-4 h-4"></i> Ficha Limpa (Lei Complementar 135/2010)
             </span>
-            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 font-mono">
+            <span class="px-2 py-0.5 rounded-full text-xs font-bold bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 font-mono">
               Critério de Inelegibilidade
             </span>
           </div>
           <p class="text-slate-700 dark:text-slate-300 leading-relaxed font-sans">
             <strong>O que significa para você:</strong> A lei barra a candidatura de qualquer político condenado por um tribunal com mais de um juiz (órgão colegiado) por crimes contra a administração pública, lavagem de dinheiro ou corrupção.
           </p>
-          <div class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/5 text-[11px] text-slate-600 dark:text-slate-400">
+          <div class="p-4.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/5 text-sm text-slate-600 dark:text-slate-400">
             ⚖️ <strong>Processos vs Condenações:</strong> Ter uma denúncia ou investigação em andamento não torna o candidato inelegível de imediato pela Constituição Federal (Art. 5º, LVII). O Figuras Políticas lista com transparência o status exato perante o STF, STJ e TCU.
           </div>
         </div>
@@ -2352,7 +2352,7 @@
             <span class="text-xs font-extrabold text-teal-700 dark:text-teal-400 flex items-center gap-1.5 font-mono">
               <i data-lucide="coins" class="w-4 h-4"></i> FEFC (Fundão Eleitoral)
             </span>
-            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-teal-100 dark:bg-teal-500/20 text-teal-800 dark:text-teal-300 font-mono">
+            <span class="px-2 py-0.5 rounded-full text-xs font-bold bg-teal-100 dark:bg-teal-500/20 text-teal-800 dark:text-teal-300 font-mono">
               Financiamento Público
             </span>
           </div>
@@ -2367,7 +2367,7 @@
             <span class="text-xs font-extrabold text-indigo-700 dark:text-indigo-400 flex items-center gap-1.5 font-mono">
               <i data-lucide="clock" class="w-4 h-4"></i> Custo por Minuto do Político
             </span>
-            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-indigo-100 dark:bg-indigo-500/20 text-indigo-800 dark:text-indigo-300 font-mono">
+            <span class="px-2 py-0.5 rounded-full text-xs font-bold bg-indigo-100 dark:bg-indigo-500/20 text-indigo-800 dark:text-indigo-300 font-mono">
               Impacto no Bolso
             </span>
           </div>
@@ -2380,7 +2380,7 @@
 
       <!-- Modal Footer -->
       <div class="p-4 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-white/10 flex items-center justify-between text-xs">
-        <span class="text-slate-500 dark:text-slate-400 font-mono text-[11px]">
+        <span class="text-slate-500 dark:text-slate-400 font-mono text-sm">
           Fonte: Legislação Federal, Regimentos da Câmara/Senado e TSE
         </span>
         <button onclick="closeGlossaryModal()" class="px-4 py-2 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs shadow-md transition cursor-pointer">
@@ -2392,7 +2392,7 @@
   </div>
 
   <!-- ================= MODAL: GUIA DOS 10 PRINCIPAIS CARGOS & PODERES ================= -->
-  <div id="offices-guide-modal" class="fixed inset-0 z-60 bg-slate-900/70 dark:bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-3 sm:p-4 overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="offices-guide-modal-title">
+  <div id="offices-guide-modal" class="fixed inset-0 z-60 bg-slate-900/70 dark:bg-black/85  hidden flex items-center justify-center p-3 sm:p-4 overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="offices-guide-modal-title">
     <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/15 w-full max-w-4xl rounded-3xl overflow-hidden shadow-2xl flex flex-col max-h-[92vh] my-auto text-slate-900 dark:text-slate-100">
       
       <!-- Modal Header -->
@@ -2404,7 +2404,7 @@
           <div>
             <h3 id="offices-guide-modal-title" class="font-extrabold text-base sm:text-lg text-slate-900 dark:text-white flex items-center gap-2">
               Guia Cívico dos 10 Principais Cargos & Poderes
-              <span class="text-[10px] uppercase font-mono px-2 py-0.5 rounded-full bg-purple-200 dark:bg-purple-500/20 text-purple-900 dark:text-purple-300 font-bold">Educação Eleitoral</span>
+              <span class="text-xs uppercase font-mono px-2 py-0.5 rounded-full bg-purple-200 dark:bg-purple-500/20 text-purple-900 dark:text-purple-300 font-bold">Educação Eleitoral</span>
             </h3>
             <p class="text-xs text-slate-600 dark:text-slate-400">
               Entenda as atribuições reais de cada cargo, o que <strong>NÃO</strong> pode ser prometido, salários e como fiscalizar.
@@ -2422,12 +2422,12 @@
           <input type="text" oninput="filterOfficesGuide(this.value)" placeholder="🔍 Buscar cargo (ex: Presidente, Deputado, Vereador...)" class="w-full bg-white dark:bg-slate-950 border border-slate-200 dark:border-white/10 rounded-xl px-3 py-1.5 text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-purple-500">
         </div>
         <div class="flex items-center gap-1.5 overflow-x-auto w-full sm:w-auto scrollbar-none pb-0.5">
-          <button onclick="filterOfficesGuide('')" class="px-2.5 py-1 rounded-lg bg-purple-600 text-white text-[11px] font-bold transition">Todos (10)</button>
-          <button onclick="filterOfficesGuide('executivo')" class="px-2.5 py-1 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-[11px] font-medium hover:bg-slate-300 dark:hover:bg-slate-700 transition">Executivo</button>
-          <button onclick="filterOfficesGuide('legislativo')" class="px-2.5 py-1 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-[11px] font-medium hover:bg-slate-300 dark:hover:bg-slate-700 transition">Legislativo</button>
-          <button onclick="filterOfficesGuide('federal')" class="px-2.5 py-1 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-[11px] font-medium hover:bg-slate-300 dark:hover:bg-slate-700 transition">Federal</button>
-          <button onclick="filterOfficesGuide('estadual')" class="px-2.5 py-1 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-[11px] font-medium hover:bg-slate-300 dark:hover:bg-slate-700 transition">Estadual</button>
-          <button onclick="filterOfficesGuide('municipal')" class="px-2.5 py-1 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-[11px] font-medium hover:bg-slate-300 dark:hover:bg-slate-700 transition">Municipal</button>
+          <button onclick="filterOfficesGuide('')" class="px-2.5 py-1 rounded-lg bg-purple-600 text-white text-sm font-bold transition">Todos (10)</button>
+          <button onclick="filterOfficesGuide('executivo')" class="px-2.5 py-1 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm font-medium hover:bg-slate-300 dark:hover:bg-slate-700 transition">Executivo</button>
+          <button onclick="filterOfficesGuide('legislativo')" class="px-2.5 py-1 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm font-medium hover:bg-slate-300 dark:hover:bg-slate-700 transition">Legislativo</button>
+          <button onclick="filterOfficesGuide('federal')" class="px-2.5 py-1 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm font-medium hover:bg-slate-300 dark:hover:bg-slate-700 transition">Federal</button>
+          <button onclick="filterOfficesGuide('estadual')" class="px-2.5 py-1 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm font-medium hover:bg-slate-300 dark:hover:bg-slate-700 transition">Estadual</button>
+          <button onclick="filterOfficesGuide('municipal')" class="px-2.5 py-1 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm font-medium hover:bg-slate-300 dark:hover:bg-slate-700 transition">Municipal</button>
         </div>
       </div>
 
@@ -2441,15 +2441,15 @@
               <span class="w-7 h-7 rounded-xl bg-blue-500/20 text-blue-600 dark:text-blue-400 font-black flex items-center justify-center text-xs">01</span>
               <div>
                 <h4 class="text-sm font-extrabold text-slate-900 dark:text-white">Presidente da República</h4>
-                <span class="text-[10px] font-mono text-slate-500">Poder Executivo Federal • Mandato de 4 anos</span>
+                <span class="text-xs font-mono text-slate-500">Poder Executivo Federal • Mandato de 4 anos</span>
               </div>
             </div>
             <div class="flex items-center gap-1.5 flex-wrap">
-              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300">Executivo</span>
-              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-purple-100 dark:bg-purple-500/20 text-purple-800 dark:text-purple-300">Federal</span>
+              <span class="px-2 py-0.5 rounded-full text-xs font-bold bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300">Executivo</span>
+              <span class="px-2 py-0.5 rounded-full text-xs font-bold bg-purple-100 dark:bg-purple-500/20 text-purple-800 dark:text-purple-300">Federal</span>
             </div>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-[11.5px]">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
             <div class="space-y-1.5">
               <div class="font-bold text-emerald-700 dark:text-emerald-400 flex items-center gap-1"><i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i> O que realmente faz:</div>
               <p class="text-slate-700 dark:text-slate-300 leading-relaxed">Chefe de Estado e de Governo. Administra as diretrizes do país, executa o Orçamento Geral da União, comanda as Forças Armadas, sanciona ou veta leis federais aprovadas pelo Congresso e conduz as relações diplomáticas internacionais.</p>
@@ -2459,7 +2459,7 @@
               <p class="text-slate-700 dark:text-slate-300 leading-relaxed">Não pode criar ou extinguir tributos por vontade própria sem aprovação do Congresso; não pode interferir no Judiciário nem cancelar decisões do STF; não aprova leis sem articulação com a maioria dos 513 deputados e 81 senadores.</p>
             </div>
           </div>
-          <div class="pt-2 border-t border-slate-200 dark:border-white/5 flex flex-wrap items-center justify-between gap-2 text-[11px]">
+          <div class="pt-2 border-t border-slate-200 dark:border-white/5 flex flex-wrap items-center justify-between gap-2 text-sm">
             <div><strong class="text-amber-600 dark:text-amber-400">💰 Subsídio Oficial:</strong> R$ 46.366,19 + residência no Palácio da Alvorada e estrutura executiva.</div>
             <div><strong class="text-sky-600 dark:text-cyan-400">🔍 Como fiscalizar:</strong> <a href="https://portaldatransparencia.gov.br" target="_blank" rel="noopener" class="underline hover:text-sky-500">Portal da Transparência da CGU</a> e TCU.</div>
           </div>
@@ -2472,15 +2472,15 @@
               <span class="w-7 h-7 rounded-xl bg-blue-500/20 text-blue-600 dark:text-blue-400 font-black flex items-center justify-center text-xs">02</span>
               <div>
                 <h4 class="text-sm font-extrabold text-slate-900 dark:text-white">Vice-Presidente da República</h4>
-                <span class="text-[10px] font-mono text-slate-500">Poder Executivo Federal • Sucessão e Articulação</span>
+                <span class="text-xs font-mono text-slate-500">Poder Executivo Federal • Sucessão e Articulação</span>
               </div>
             </div>
             <div class="flex items-center gap-1.5 flex-wrap">
-              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300">Executivo</span>
-              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-purple-100 dark:bg-purple-500/20 text-purple-800 dark:text-purple-300">Federal</span>
+              <span class="px-2 py-0.5 rounded-full text-xs font-bold bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300">Executivo</span>
+              <span class="px-2 py-0.5 rounded-full text-xs font-bold bg-purple-100 dark:bg-purple-500/20 text-purple-800 dark:text-purple-300">Federal</span>
             </div>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-[11.5px]">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
             <div class="space-y-1.5">
               <div class="font-bold text-emerald-700 dark:text-emerald-400 flex items-center gap-1"><i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i> O que realmente faz:</div>
               <p class="text-slate-700 dark:text-slate-300 leading-relaxed">Substitui o Presidente em viagens ao exterior, licenças médicas ou impedimento definitivo. Participa dos conselhos da República e de Defesa Nacional e lidera missões diplomáticas ou ministérios extraordinários delegados pelo titular.</p>
@@ -2490,7 +2490,7 @@
               <p class="text-slate-700 dark:text-slate-300 leading-relaxed">Não possui caneta autônoma para editar Medidas Provisórias ou decretos presidenciais enquanto o Presidente estiver no exercício pleno do mandato.</p>
             </div>
           </div>
-          <div class="pt-2 border-t border-slate-200 dark:border-white/5 flex flex-wrap items-center justify-between gap-2 text-[11px]">
+          <div class="pt-2 border-t border-slate-200 dark:border-white/5 flex flex-wrap items-center justify-between gap-2 text-sm">
             <div><strong class="text-amber-600 dark:text-amber-400">💰 Subsídio Oficial:</strong> R$ 46.366,19 + residência no Palácio do Jaburu.</div>
             <div><strong class="text-sky-600 dark:text-cyan-400">🔍 Como fiscalizar:</strong> Portal da Transparência da Presidência da República.</div>
           </div>
@@ -2503,15 +2503,15 @@
               <span class="w-7 h-7 rounded-xl bg-teal-500/20 text-teal-600 dark:text-teal-400 font-black flex items-center justify-center text-xs">03</span>
               <div>
                 <h4 class="text-sm font-extrabold text-slate-900 dark:text-white">Governador de Estado / Distrito Federal</h4>
-                <span class="text-[10px] font-mono text-slate-500">Poder Executivo Estadual • Mandato de 4 anos</span>
+                <span class="text-xs font-mono text-slate-500">Poder Executivo Estadual • Mandato de 4 anos</span>
               </div>
             </div>
             <div class="flex items-center gap-1.5 flex-wrap">
-              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300">Executivo</span>
-              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-teal-100 dark:bg-teal-500/20 text-teal-800 dark:text-teal-300">Estadual</span>
+              <span class="px-2 py-0.5 rounded-full text-xs font-bold bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300">Executivo</span>
+              <span class="px-2 py-0.5 rounded-full text-xs font-bold bg-teal-100 dark:bg-teal-500/20 text-teal-800 dark:text-teal-300">Estadual</span>
             </div>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-[11.5px]">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
             <div class="space-y-1.5">
               <div class="font-bold text-emerald-700 dark:text-emerald-400 flex items-center gap-1"><i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i> O que realmente faz:</div>
               <p class="text-slate-700 dark:text-slate-300 leading-relaxed">Comanda as forças de Segurança Pública (Polícia Militar, Polícia Civil, Polícia Penal e Corpo de Bombeiros); administra a rede estadual de Ensino Médio; gere hospitais estaduais de referência e policlínicas; conserva rodovias estaduais (rodovias com sigla da UF) e arrecada ICMS e IPVA.</p>
@@ -2521,7 +2521,7 @@
               <p class="text-slate-700 dark:text-slate-300 leading-relaxed">Não pode alterar o Código Penal ou leis processuais (exclusividade da União); não define a taxa Selic ou regras da previdência geral do INSS; não constrói creches ou postos básicos de saúde locais (função dos municípios).</p>
             </div>
           </div>
-          <div class="pt-2 border-t border-slate-200 dark:border-white/5 flex flex-wrap items-center justify-between gap-2 text-[11px]">
+          <div class="pt-2 border-t border-slate-200 dark:border-white/5 flex flex-wrap items-center justify-between gap-2 text-sm">
             <div><strong class="text-amber-600 dark:text-amber-400">💰 Subsídio Oficial:</strong> De R$ 28.000 a R$ 41.800 (definido pela Assembleia de cada estado).</div>
             <div><strong class="text-sky-600 dark:text-cyan-400">🔍 Como fiscalizar:</strong> Portais da Transparência dos Governos Estaduais e TCE.</div>
           </div>
@@ -2534,15 +2534,15 @@
               <span class="w-7 h-7 rounded-xl bg-teal-500/20 text-teal-600 dark:text-teal-400 font-black flex items-center justify-center text-xs">04</span>
               <div>
                 <h4 class="text-sm font-extrabold text-slate-900 dark:text-white">Vice-Governador</h4>
-                <span class="text-[10px] font-mono text-slate-500">Poder Executivo Estadual • Sucessão</span>
+                <span class="text-xs font-mono text-slate-500">Poder Executivo Estadual • Sucessão</span>
               </div>
             </div>
             <div class="flex items-center gap-1.5 flex-wrap">
-              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300">Executivo</span>
-              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-teal-100 dark:bg-teal-500/20 text-teal-800 dark:text-teal-300">Estadual</span>
+              <span class="px-2 py-0.5 rounded-full text-xs font-bold bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300">Executivo</span>
+              <span class="px-2 py-0.5 rounded-full text-xs font-bold bg-teal-100 dark:bg-teal-500/20 text-teal-800 dark:text-teal-300">Estadual</span>
             </div>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-[11.5px]">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
             <div class="space-y-1.5">
               <div class="font-bold text-emerald-700 dark:text-emerald-400 flex items-center gap-1"><i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i> O que realmente faz:</div>
               <p class="text-slate-700 dark:text-slate-300 leading-relaxed">Garante a estabilidade governamental na ausência do governador. Frequentemente lidera secretarias estratégicas (ex: Desenvolvimento Econômico ou Casa Civil) ou coordena comitês de emergência regional.</p>
@@ -2552,7 +2552,7 @@
               <p class="text-slate-700 dark:text-slate-300 leading-relaxed">Não pode expedir decretos de desapropriação ou nomear secretários enquanto o titular não estiver formalmente afastado.</p>
             </div>
           </div>
-          <div class="pt-2 border-t border-slate-200 dark:border-white/5 flex flex-wrap items-center justify-between gap-2 text-[11px]">
+          <div class="pt-2 border-t border-slate-200 dark:border-white/5 flex flex-wrap items-center justify-between gap-2 text-sm">
             <div><strong class="text-amber-600 dark:text-amber-400">💰 Subsídio Oficial:</strong> Fixado em 80% a 95% do teto do governador estadual.</div>
             <div><strong class="text-sky-600 dark:text-cyan-400">🔍 Como fiscalizar:</strong> Portal de Transparência do Governo Estadual.</div>
           </div>
@@ -2565,15 +2565,15 @@
               <span class="w-7 h-7 rounded-xl bg-purple-500/20 text-purple-600 dark:text-purple-400 font-black flex items-center justify-center text-xs">05</span>
               <div>
                 <h4 class="text-sm font-extrabold text-slate-900 dark:text-white">Senador da República</h4>
-                <span class="text-[10px] font-mono text-slate-500">Poder Legislativo Federal (Senado) • Mandato de 8 anos • 3 por UF</span>
+                <span class="text-xs font-mono text-slate-500">Poder Legislativo Federal (Senado) • Mandato de 8 anos • 3 por UF</span>
               </div>
             </div>
             <div class="flex items-center gap-1.5 flex-wrap">
-              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-purple-100 dark:bg-purple-500/20 text-purple-800 dark:text-purple-300">Legislativo</span>
-              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-purple-100 dark:bg-purple-500/20 text-purple-800 dark:text-purple-300">Federal</span>
+              <span class="px-2 py-0.5 rounded-full text-xs font-bold bg-purple-100 dark:bg-purple-500/20 text-purple-800 dark:text-purple-300">Legislativo</span>
+              <span class="px-2 py-0.5 rounded-full text-xs font-bold bg-purple-100 dark:bg-purple-500/20 text-purple-800 dark:text-purple-300">Federal</span>
             </div>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-[11.5px]">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
             <div class="space-y-1.5">
               <div class="font-bold text-emerald-700 dark:text-emerald-400 flex items-center gap-1"><i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i> O que realmente faz:</div>
               <p class="text-slate-700 dark:text-slate-300 leading-relaxed">Representa os Estados perante a Federação de forma igualitária. Sabatina e aprova Ministros do STF, Procurador-Geral da República e diretores do Banco Central; julga processos de impeachment; autoriza operações financeiras externas e vota leis e reformas constitucionais.</p>
@@ -2583,7 +2583,7 @@
               <p class="text-slate-700 dark:text-slate-300 leading-relaxed">Promessa de campanha proibida: <em>"Vou asfaltar estradas do município ou construir postos"</em>. O senador não tem poder executivo de contratação direta; ele pode apenas destinar recursos através de emendas parlamentares aprovadas no orçamento.</p>
             </div>
           </div>
-          <div class="pt-2 border-t border-slate-200 dark:border-white/5 flex flex-wrap items-center justify-between gap-2 text-[11px]">
+          <div class="pt-2 border-t border-slate-200 dark:border-white/5 flex flex-wrap items-center justify-between gap-2 text-sm">
             <div><strong class="text-amber-600 dark:text-amber-400">💰 Subsídio Oficial:</strong> R$ 46.366,19 + CEAP (R$ 15k a R$ 44k/mês) + assessores de gabinete.</div>
             <div><strong class="text-sky-600 dark:text-cyan-400">🔍 Como fiscalizar:</strong> <a href="https://senado.leg.br/transparencia" target="_blank" rel="noopener" class="underline hover:text-sky-500">Portal da Transparência do Senado</a>.</div>
           </div>
@@ -2596,15 +2596,15 @@
               <span class="w-7 h-7 rounded-xl bg-purple-500/20 text-purple-600 dark:text-purple-400 font-black flex items-center justify-center text-xs">06</span>
               <div>
                 <h4 class="text-sm font-extrabold text-slate-900 dark:text-white">Deputado Federal</h4>
-                <span class="text-[10px] font-mono text-slate-500">Poder Legislativo Federal (Câmara) • Mandato de 4 anos • 513 parlamentares</span>
+                <span class="text-xs font-mono text-slate-500">Poder Legislativo Federal (Câmara) • Mandato de 4 anos • 513 parlamentares</span>
               </div>
             </div>
             <div class="flex items-center gap-1.5 flex-wrap">
-              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-purple-100 dark:bg-purple-500/20 text-purple-800 dark:text-purple-300">Legislativo</span>
-              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-purple-100 dark:bg-purple-500/20 text-purple-800 dark:text-purple-300">Federal</span>
+              <span class="px-2 py-0.5 rounded-full text-xs font-bold bg-purple-100 dark:bg-purple-500/20 text-purple-800 dark:text-purple-300">Legislativo</span>
+              <span class="px-2 py-0.5 rounded-full text-xs font-bold bg-purple-100 dark:bg-purple-500/20 text-purple-800 dark:text-purple-300">Federal</span>
             </div>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-[11.5px]">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
             <div class="space-y-1.5">
               <div class="font-bold text-emerald-700 dark:text-emerald-400 flex items-center gap-1"><i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i> O que realmente faz:</div>
               <p class="text-slate-700 dark:text-slate-300 leading-relaxed">Representa a população em proporção à densidade eleitoral. Propõe e vota Projetos de Lei, Medidas Provisórias e PECs; vota o Orçamento Anual da União (LOA); autoriza a abertura de processo de impeachment do Presidente e fiscaliza os ministérios do Executivo.</p>
@@ -2614,7 +2614,7 @@
               <p class="text-slate-700 dark:text-slate-300 leading-relaxed">Não pode prometer construir obras físicas por contra própria, criar empregos públicos sem concurso, nem intervir em preços de supermercados ou impostos municipais como IPTU ou taxa de lixo.</p>
             </div>
           </div>
-          <div class="pt-2 border-t border-slate-200 dark:border-white/5 flex flex-wrap items-center justify-between gap-2 text-[11px]">
+          <div class="pt-2 border-t border-slate-200 dark:border-white/5 flex flex-wrap items-center justify-between gap-2 text-sm">
             <div><strong class="text-amber-600 dark:text-amber-400">💰 Subsídio Oficial:</strong> R$ 46.366,19 + Cota CEAP (R$ 36k a R$ 51k) + R$ 133k/mês para secretários de gabinete.</div>
             <div><strong class="text-sky-600 dark:text-cyan-400">🔍 Como fiscalizar:</strong> <a href="https://camara.leg.br/transparencia" target="_blank" rel="noopener" class="underline hover:text-sky-500">Portal da Transparência da Câmara</a>.</div>
           </div>
@@ -2627,15 +2627,15 @@
               <span class="w-7 h-7 rounded-xl bg-indigo-500/20 text-indigo-600 dark:text-indigo-400 font-black flex items-center justify-center text-xs">07</span>
               <div>
                 <h4 class="text-sm font-extrabold text-slate-900 dark:text-white">Deputado Estadual / Distrital</h4>
-                <span class="text-[10px] font-mono text-slate-500">Poder Legislativo Estadual • Assembleia Legislativa / CLDF</span>
+                <span class="text-xs font-mono text-slate-500">Poder Legislativo Estadual • Assembleia Legislativa / CLDF</span>
               </div>
             </div>
             <div class="flex items-center gap-1.5 flex-wrap">
-              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-purple-100 dark:bg-purple-500/20 text-purple-800 dark:text-purple-300">Legislativo</span>
-              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-teal-100 dark:bg-teal-500/20 text-teal-800 dark:text-teal-300">Estadual</span>
+              <span class="px-2 py-0.5 rounded-full text-xs font-bold bg-purple-100 dark:bg-purple-500/20 text-purple-800 dark:text-purple-300">Legislativo</span>
+              <span class="px-2 py-0.5 rounded-full text-xs font-bold bg-teal-100 dark:bg-teal-500/20 text-teal-800 dark:text-teal-300">Estadual</span>
             </div>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-[11.5px]">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
             <div class="space-y-1.5">
               <div class="font-bold text-emerald-700 dark:text-emerald-400 flex items-center gap-1"><i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i> O que realmente faz:</div>
               <p class="text-slate-700 dark:text-slate-300 leading-relaxed">Cria e altera leis de competência estadual (regras de ICMS, IPVA, criação de programas regionais); fiscaliza a execução das contas do Governador e aprova o orçamento do Estado; sabatina indicações de conselheiros do Tribunal de Contas do Estado (TCE).</p>
@@ -2645,7 +2645,7 @@
               <p class="text-slate-700 dark:text-slate-300 leading-relaxed">Não pode prometer reformar leis do Código de Trânsito ou CLT (competência federal); não pode legislar sobre o plano diretor das cidades ou iluminação de bairros.</p>
             </div>
           </div>
-          <div class="pt-2 border-t border-slate-200 dark:border-white/5 flex flex-wrap items-center justify-between gap-2 text-[11px]">
+          <div class="pt-2 border-t border-slate-200 dark:border-white/5 flex flex-wrap items-center justify-between gap-2 text-sm">
             <div><strong class="text-amber-600 dark:text-amber-400">💰 Subsídio Oficial:</strong> Até 75% do deputado federal (R$ 34.774,64) + verba indenizatória estadual.</div>
             <div><strong class="text-sky-600 dark:text-cyan-400">🔍 Como fiscalizar:</strong> Portal da Transparência da Assembleia Legislativa do respectivo Estado.</div>
           </div>
@@ -2658,15 +2658,15 @@
               <span class="w-7 h-7 rounded-xl bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-black flex items-center justify-center text-xs">08</span>
               <div>
                 <h4 class="text-sm font-extrabold text-slate-900 dark:text-white">Prefeito Municipal</h4>
-                <span class="text-[10px] font-mono text-slate-500">Poder Executivo Municipal • Mandato de 4 anos</span>
+                <span class="text-xs font-mono text-slate-500">Poder Executivo Municipal • Mandato de 4 anos</span>
               </div>
             </div>
             <div class="flex items-center gap-1.5 flex-wrap">
-              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300">Executivo</span>
-              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300">Municipal</span>
+              <span class="px-2 py-0.5 rounded-full text-xs font-bold bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300">Executivo</span>
+              <span class="px-2 py-0.5 rounded-full text-xs font-bold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300">Municipal</span>
             </div>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-[11.5px]">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
             <div class="space-y-1.5">
               <div class="font-bold text-emerald-700 dark:text-emerald-400 flex items-center gap-1"><i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i> O que realmente faz:</div>
               <p class="text-slate-700 dark:text-slate-300 leading-relaxed">Gerencia os serviços essenciais do dia a dia da cidade: pavimentação, trânsito urbano, ônibus municipais, coleta de lixo, iluminação pública, vagas em creches, escolas de ensino fundamental, postos de saúde de atenção básica (UBS e UPAs) e arrecadação de IPTU e ISS.</p>
@@ -2676,7 +2676,7 @@
               <p class="text-slate-700 dark:text-slate-300 leading-relaxed">Não pode prometer comandar a Polícia Militar (atribuição do governador); não tem gerência sobre rodovias federais ou estaduais que cortam a cidade; não pode criar leis penais contra a criminalidade.</p>
             </div>
           </div>
-          <div class="pt-2 border-t border-slate-200 dark:border-white/5 flex flex-wrap items-center justify-between gap-2 text-[11px]">
+          <div class="pt-2 border-t border-slate-200 dark:border-white/5 flex flex-wrap items-center justify-between gap-2 text-sm">
             <div><strong class="text-amber-600 dark:text-amber-400">💰 Subsídio Oficial:</strong> Varia por lei municipal (de R$ 15.000 em cidades pequenas a R$ 38.000 em capitais).</div>
             <div><strong class="text-sky-600 dark:text-cyan-400">🔍 Como fiscalizar:</strong> Portal da Transparência da Prefeitura, TCM e Ministério Público Estadual.</div>
           </div>
@@ -2689,15 +2689,15 @@
               <span class="w-7 h-7 rounded-xl bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-black flex items-center justify-center text-xs">09</span>
               <div>
                 <h4 class="text-sm font-extrabold text-slate-900 dark:text-white">Vice-Prefeito</h4>
-                <span class="text-[10px] font-mono text-slate-500">Poder Executivo Municipal • Sucessão e Apoio</span>
+                <span class="text-xs font-mono text-slate-500">Poder Executivo Municipal • Sucessão e Apoio</span>
               </div>
             </div>
             <div class="flex items-center gap-1.5 flex-wrap">
-              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300">Executivo</span>
-              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300">Municipal</span>
+              <span class="px-2 py-0.5 rounded-full text-xs font-bold bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300">Executivo</span>
+              <span class="px-2 py-0.5 rounded-full text-xs font-bold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300">Municipal</span>
             </div>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-[11.5px]">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
             <div class="space-y-1.5">
               <div class="font-bold text-emerald-700 dark:text-emerald-400 flex items-center gap-1"><i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i> O que realmente faz:</div>
               <p class="text-slate-700 dark:text-slate-300 leading-relaxed">Assume o comando da prefeitura em licenças ou afastamentos do prefeito. Costuma atuar como secretário de pastas como Obras, Habitação ou Articulação com bairros e comunidades.</p>
@@ -2707,7 +2707,7 @@
               <p class="text-slate-700 dark:text-slate-300 leading-relaxed">Não pode vetar leis da Câmara Municipal nem assinar termos de cooperação sem a devida delegação do titular.</p>
             </div>
           </div>
-          <div class="pt-2 border-t border-slate-200 dark:border-white/5 flex flex-wrap items-center justify-between gap-2 text-[11px]">
+          <div class="pt-2 border-t border-slate-200 dark:border-white/5 flex flex-wrap items-center justify-between gap-2 text-sm">
             <div><strong class="text-amber-600 dark:text-amber-400">💰 Subsídio Oficial:</strong> Definido entre 50% e 75% do subsídio do prefeito municipal.</div>
             <div><strong class="text-sky-600 dark:text-cyan-400">🔍 Como fiscalizar:</strong> Portal da Transparência do Município.</div>
           </div>
@@ -2720,15 +2720,15 @@
               <span class="w-7 h-7 rounded-xl bg-amber-500/20 text-amber-600 dark:text-amber-400 font-black flex items-center justify-center text-xs">10</span>
               <div>
                 <h4 class="text-sm font-extrabold text-slate-900 dark:text-white">Vereador</h4>
-                <span class="text-[10px] font-mono text-slate-500">Poder Legislativo Municipal • Câmara Municipal • Mandato de 4 anos</span>
+                <span class="text-xs font-mono text-slate-500">Poder Legislativo Municipal • Câmara Municipal • Mandato de 4 anos</span>
               </div>
             </div>
             <div class="flex items-center gap-1.5 flex-wrap">
-              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-purple-100 dark:bg-purple-500/20 text-purple-800 dark:text-purple-300">Legislativo</span>
-              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300">Municipal</span>
+              <span class="px-2 py-0.5 rounded-full text-xs font-bold bg-purple-100 dark:bg-purple-500/20 text-purple-800 dark:text-purple-300">Legislativo</span>
+              <span class="px-2 py-0.5 rounded-full text-xs font-bold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300">Municipal</span>
             </div>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-[11.5px]">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
             <div class="space-y-1.5">
               <div class="font-bold text-emerald-700 dark:text-emerald-400 flex items-center gap-1"><i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i> O que realmente faz:</div>
               <p class="text-slate-700 dark:text-slate-300 leading-relaxed">É o fiscal direto do dinheiro do contribuinte na cidade. Fiscaliza os gastos do prefeito, obras públicas e postos de saúde; vota o Plano Diretor, zoneamento urbano e o orçamento municipal; propõe leis de alcance local (como segurança em agências bancárias e regras de comércio).</p>
@@ -2738,7 +2738,7 @@
               <p class="text-slate-700 dark:text-slate-300 leading-relaxed"><strong>Promessa clássica enganosa:</strong> Vereador <em>NÃO</em> asfalta rua, não constrói UBS, não contrata médico e não compra ambulância. Ele não tem caneta executiva; apenas pode indicar pedidos à prefeitura ou destinar emendas impositivas municipais.</p>
             </div>
           </div>
-          <div class="pt-2 border-t border-slate-200 dark:border-white/5 flex flex-wrap items-center justify-between gap-2 text-[11px]">
+          <div class="pt-2 border-t border-slate-200 dark:border-white/5 flex flex-wrap items-center justify-between gap-2 text-sm">
             <div><strong class="text-amber-600 dark:text-amber-400">💰 Subsídio Oficial:</strong> R$ 5.000 a R$ 26.000 (conforme população da cidade e limites constitucionais).</div>
             <div><strong class="text-sky-600 dark:text-cyan-400">🔍 Como fiscalizar:</strong> Portal da Transparência da Câmara Municipal de Vereadores e TCM/TCE.</div>
           </div>
@@ -2748,7 +2748,7 @@
 
       <!-- Modal Footer -->
       <div class="p-4 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-white/10 flex items-center justify-between text-xs">
-        <span class="text-slate-500 dark:text-slate-400 font-mono text-[11px]">
+        <span class="text-slate-500 dark:text-slate-400 font-mono text-sm">
           Fontes: Constituição Federal de 1988 (Art. 14 a 84), LC nº 64/90 e Portais de Transparência
         </span>
         <button onclick="closeOfficesGuideModal()" class="px-4 py-2 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs shadow-md transition cursor-pointer">
@@ -2763,10 +2763,11 @@
   <!-- ================= SCRIPTS MODULARES DO FIGURAS POLÍTICAS ================= -->
 
   <!-- ================= CORE SCRIPTS (Deferred for Non-Blocking Initial Render & Fast FCP) ================= -->
-  <script src="data/candidates.js" defer></script>
+  
   <script src="data/judiciary_authorities.js" defer></script>
   <script src="data/national_bottlenecks.js" defer></script>
   <script src="js/national_bottlenecks.js" defer></script>
+  <script src="data/candidates.js" defer></script>
   <script src="js/state.js" defer></script>
   <script src="js/stickers.js" defer></script>
   <script src="js/ranking.js" defer></script>
@@ -2778,5 +2779,57 @@
   <script src="js/urna.js" defer></script>
   <script src="js/calculator.js" defer></script>
 
+  <!-- Bottom Navigation Bar (Mobile) -->
+  <nav class="sm:hidden fixed bottom-0 left-0 right-0 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-white/10 flex justify-around items-center p-3 z-50">
+    <button class="flex flex-col items-center gap-1 text-slate-500 hover:text-slate-900 dark:hover:text-white transition" onclick="switchAppleTab('feed')">
+      <i data-lucide="layout-grid" class="w-5 h-5"></i>
+      <span class="text-xs font-semibold">Feed</span>
+    </button>
+    <button class="flex flex-col items-center gap-1 text-slate-500 hover:text-slate-900 dark:hover:text-white transition" onclick="switchAppleTab('ranking')">
+      <i data-lucide="trophy" class="w-5 h-5"></i>
+      <span class="text-xs font-semibold">Ranking</span>
+    </button>
+    <button class="flex flex-col items-center gap-1 text-slate-500 hover:text-slate-900 dark:hover:text-white transition" onclick="openLoginModal()">
+      <i data-lucide="user" class="w-5 h-5"></i>
+      <span class="text-xs font-semibold">Perfil</span>
+    </button>
+  </nav>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const compass = document.getElementById("civic-compass-3d");
+  const pills = document.querySelector('[data-office-pill="todos"]')?.parentElement;
+  
+  if (compass && pills) {
+    const btnContainer = document.querySelector('#filter-search').parentElement.parentElement;
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-xs font-semibold text-slate-700 dark:text-slate-300 transition cursor-pointer flex items-center gap-1";
+    btn.innerHTML = <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sliders-horizontal"><line x1="21" x2="14" y1="4" y2="4"/><line x1="10" x2="3" y1="4" y2="4"/><line x1="21" x2="12" y1="12" y2="12"/><line x1="8" x2="3" y1="12" y2="12"/><line x1="21" x2="16" y1="20" y2="20"/><line x1="12" x2="3" y1="20" y2="20"/><line x1="14" x2="14" y1="2" y2="6"/><line x1="8" x2="8" y1="10" y2="14"/><line x1="16" x2="16" y1="18" y2="22"/></svg> Filtros;
+    btn.onclick = () => document.getElementById("filters-modal").classList.remove("hidden");
+    btnContainer.appendChild(btn);
+
+    const modal = document.createElement("div");
+    modal.id = "filters-modal";
+    modal.className = "hidden fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-blur-sm p-4";
+    modal.innerHTML = 
+      <div class="bg-white dark:bg-slate-900 rounded-2xl p-5 w-full max-w-2xl shadow-xl relative border border-slate-200 dark:border-slate-800 space-y-4">
+        <button onclick="document.getElementById('filters-modal').classList.add('hidden')" class="absolute top-3 right-3 p-2 text-slate-500 hover:text-slate-800 dark:hover:text-white rounded-full bg-slate-100 dark:bg-slate-800">✕</button>
+        <h3 class="text-lg font-bold text-slate-900 dark:text-white">Filtros Avançados</h3>
+        <div id="modal-filters-content" class="space-y-4"></div>
+        <div class="flex justify-end pt-2">
+           <button onclick="document.getElementById('filters-modal').classList.add('hidden')" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-sm font-bold transition">Aplicar Filtros</button>
+        </div>
+      </div>
+    ;
+    document.body.appendChild(modal);
+    
+    const content = document.getElementById("modal-filters-content");
+    content.appendChild(compass);
+    content.appendChild(pills);
+  }
+});
+</script>
 </body>
 </html>
+
+

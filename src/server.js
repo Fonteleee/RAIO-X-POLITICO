@@ -144,7 +144,7 @@ function serve404Page(res) {
 }
 
 function parseBody(req) {
-  return new Promise((resolve) => {
+  return new Promise((resolve, reject) => {
     let body = '';
     let size = 0;
     const MAX_SIZE = 100 * 1024; // 100 KB
@@ -152,7 +152,7 @@ function parseBody(req) {
       size += chunk.length;
       if (size > MAX_SIZE) {
         req.destroy();
-        resolve({});
+        reject(new Error('PAYLOAD_TOO_LARGE'));
         return;
       }
       body += chunk;
@@ -169,7 +169,7 @@ function parseBody(req) {
 }
 
 const server = http.createServer(async (req, res) => {
-  const clientIp = req.headers['x-forwarded-for']?.split(',')[0].trim() || req.socket.remoteAddress || '127.0.0.1';
+  const clientIp = req.socket.remoteAddress || '127.0.0.1';
   
   // Rate Limiter defensivo contra abusos de requisição e scraping descontrolado
   if (!checkRateLimit(clientIp)) {
@@ -352,6 +352,27 @@ const server = http.createServer(async (req, res) => {
             });
           }
         } catch {}
+
+        const pageParam = parsedUrl.searchParams.get('page');
+        const limitParam = parsedUrl.searchParams.get('limit');
+        
+        if (pageParam || limitParam) {
+          const page = parseInt(pageParam) || 1;
+          const limit = parseInt(limitParam) || 50;
+          const startIndex = (page - 1) * limit;
+          const endIndex = page * limit;
+          const paginatedCandidates = candidates.slice(startIndex, endIndex);
+
+          return sendJson(res, 200, { 
+            success: true, 
+            count: paginatedCandidates.length, 
+            total: candidates.length,
+            page,
+            totalPages: Math.ceil(candidates.length / limit),
+            data: paginatedCandidates 
+          });
+        }
+
         return sendJson(res, 200, { success: true, count: candidates.length, data: candidates });
       }
 
@@ -435,6 +456,9 @@ const server = http.createServer(async (req, res) => {
 
       return sendJson(res, 404, { error: 'Endpoint não encontrado' });
     } catch (err) {
+      if (err.message === 'PAYLOAD_TOO_LARGE') {
+        return sendJson(res, 413, { error: 'Payload Too Large' });
+      }
       console.error('[API Error]:', err);
       return sendJson(res, 500, { error: 'Erro interno no servidor' });
     }

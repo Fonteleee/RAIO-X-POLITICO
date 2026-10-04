@@ -966,3 +966,43 @@ function burstSpectrum() {
 }
 
 window.burstSpectrum = burstSpectrum;
+
+  function renderPromessas(cand) {
+    const container = document.getElementById('promessas-container');
+    if(!container) return;
+    
+    // Mock data for promises
+    const promessas = [
+      { text: "Zeramento da fila de creches", status: "Em Andamento", pct: 45 },
+      { text: "Redução do ICMS para combustíveis", status: "Cumprida", pct: 100 },
+      { text: "Construção de 3 novos hospitais", status: "Quebrada", pct: 10 }
+    ];
+    
+    let html = '';
+    promessas.forEach(p => {
+      let color = p.status === 'Cumprida' ? 'emerald' : p.status === 'Quebrada' ? 'red' : 'amber';
+      html += `
+        <div class="p-3 border border-slate-200 dark:border-white/10 rounded-xl bg-slate-50 dark:bg-slate-800/50">
+          <div class="flex justify-between items-center mb-2">
+            <span class="font-bold text-sm text-slate-800 dark:text-slate-200">${p.text}</span>
+            <span class="text-xs font-bold text-${color}-600 dark:text-${color}-400 bg-${color}-100 dark:bg-${color}-900/30 px-2 py-0.5 rounded-md border border-${color}-200 dark:border-${color}-500/30">${p.status}</span>
+          </div>
+          <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-1.5">
+            <div class="bg-${color}-500 h-1.5 rounded-full" style="width: ${p.pct}%"></div>
+          </div>
+        </div>
+      `;
+    });
+    container.innerHTML = html;
+  }
+  
+  // Hook into openDossie to render promises
+  const oldOpenDossie = window.openDossie;
+  if(oldOpenDossie) {
+    window.openDossie = function(id) {
+      oldOpenDossie(id);
+      const cand = (typeof candidatesData !== 'undefined' ? candidatesData : []).find(c => c.id === id);
+      if(cand) renderPromessas(cand);
+    }
+  }
+  

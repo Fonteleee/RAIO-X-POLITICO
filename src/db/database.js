@@ -58,44 +58,59 @@ class AppDatabase {
       ORDER BY c.overall_score DESC
     `);
     const candidates = stmt.all();
-    const propStmt = this.db.prepare(`
-      SELECT id, title, category, score, summary, budget_and_cost as budgetAndCost, support_votes as supportVotes, reject_votes as rejectVotes 
-      FROM candidate_proposals WHERE candidate_id = ?
-    `);
 
-    const billsStmt = this.db.prepare(`
-      SELECT total_proposed as total, annual_avg as annualAvgProposed, approved, annual_approved as annualAvgApproved,
+    // Consolidated queries to prevent N+1 problem
+    const allProps = this.db.prepare(`
+      SELECT id, candidate_id, title, category, score, summary, budget_and_cost as budgetAndCost, support_votes as supportVotes, reject_votes as rejectVotes 
+      FROM candidate_proposals
+    `).all();
+    const propsByCand = {};
+    for (const p of allProps) {
+      if (!propsByCand[p.candidate_id]) propsByCand[p.candidate_id] = [];
+      propsByCand[p.candidate_id].push(p);
+    }
+
+    const allBills = this.db.prepare(`
+      SELECT candidate_id, total_proposed as total, annual_avg as annualAvgProposed, approved, annual_approved as annualAvgApproved,
              success_rate_pct as approvalRatePct, fiscal_count as fiscalCount, highlight_json as highlightJson, mandates_json as mandatesJson
-      FROM candidate_bills WHERE candidate_id = ?
-    `);
+      FROM candidate_bills
+    `).all();
+    const billsByCand = {};
+    for (const b of allBills) billsByCand[b.candidate_id] = b;
 
-    const jurStmt = this.db.prepare(`
-      SELECT constitutional_duties as constitutionalDuties, coverage_pct as coveragePct, covered_count as coveredCount,
+    const allJur = this.db.prepare(`
+      SELECT candidate_id, constitutional_duties as constitutionalDuties, coverage_pct as coveragePct, covered_count as coveredCount,
              total_count as totalCount, priority_goal as priorityGoal, problems_json as problemsJson
-      FROM candidate_jurisdiction WHERE candidate_id = ?
-    `);
+      FROM candidate_jurisdiction
+    `).all();
+    const jurByCand = {};
+    for (const j of allJur) jurByCand[j.candidate_id] = j;
 
-    const campStmt = this.db.prepare(`
-      SELECT election_year as electionYear, office_elected as officeElected, total_spent as totalSpent,
+    const allCamp = this.db.prepare(`
+      SELECT candidate_id, election_year as electionYear, office_elected as officeElected, total_spent as totalSpent,
              total_spent_formatted as totalSpentFormatted, total_received as totalReceived,
              total_received_formatted as totalReceivedFormatted, votes_received as votesReceived,
              cost_per_vote as costPerVote, tse_spending_limit as tseSpendingLimit, status_tse as statusTse,
              public_fund_pct as publicFundPct, private_donations_pct as privateDonationsPct,
              own_resources_pct as ownResourcesPct, crowdfunding_pct as crowdfundingPct,
              top_donors_json as topDonorsJson, top_expenses_json as topExpensesJson, tse_url as tseUrl
-      FROM candidate_campaign_finance WHERE candidate_id = ?
-    `);
+      FROM candidate_campaign_finance
+    `).all();
+    const campByCand = {};
+    for (const c of allCamp) campByCand[c.candidate_id] = c;
 
-    const polCapStmt = this.db.prepare(`
-      SELECT score, level, academic_degree as academicDegree, academic_details as academicDetails,
+    const allPolCap = this.db.prepare(`
+      SELECT candidate_id, score, level, academic_degree as academicDegree, academic_details as academicDetails,
              political_schools as politicalSchools, political_exam_score as politicalExamScore,
              public_track_record_years as publicTrackRecordYears, public_track_record_text as publicTrackRecordText,
              technical_skills_json as technicalSkillsJson, anti_fool_evaluation as antiFoolEvaluation
-      FROM candidate_political_capacity WHERE candidate_id = ?
-    `);
+      FROM candidate_political_capacity
+    `).all();
+    const polCapByCand = {};
+    for (const pc of allPolCap) polCapByCand[pc.candidate_id] = pc;
 
     for (const cand of candidates) {
-      cand.proposals = propStmt.all(cand.id) || [];
+      cand.proposals = propsByCand[cand.id] || [];
       cand.radar = {
         integridade: cand.integridade || 90,
         eficiencia: cand.eficiencia || 90,
@@ -114,7 +129,7 @@ class AppDatabase {
         committees: []
       };
 
-      const bRow = billsStmt.get(cand.id);
+      const bRow = billsByCand[cand.id];
       if (bRow) {
         cand.bills = {
           total: bRow.total,
@@ -128,7 +143,7 @@ class AppDatabase {
         };
       }
 
-      const jRow = jurStmt.get(cand.id);
+      const jRow = jurByCand[cand.id];
       if (jRow) {
         cand.jurisdictionProblemsMatch = {
           constitutionalDuties: jRow.constitutionalDuties,
@@ -141,7 +156,7 @@ class AppDatabase {
         };
       }
 
-      const cRow = campStmt.get(cand.id);
+      const cRow = campByCand[cand.id];
       if (cRow) {
         cand.campaignFinance = {
           electionYear: cRow.electionYear,
@@ -176,7 +191,7 @@ class AppDatabase {
         }
       };
 
-      const capRow = polCapStmt.get(cand.id);
+      const capRow = polCapByCand[cand.id];
       if (capRow) {
         cand.politicalCapacity = {
           score: capRow.score,
