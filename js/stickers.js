@@ -396,7 +396,7 @@
               <div class="col-span-5 flex items-center gap-2">
                 <img src="${safeAvatar1}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg1}';" class="w-10 h-10 rounded-xl object-cover border-2 border-stone-950 shadow-sm flex-shrink-0">
                 <div class="min-w-0 text-left">
-                  <strong class="font-black text-[11px] text-stone-950 block truncate uppercase leading-tight">${name1}</strong>
+                  <strong class="font-black text-[11px] text-stone-950 block line-clamp-2 text-balance break-words uppercase leading-tight">${name1}</strong>
                   <span class="text-[8px] font-mono font-bold text-stone-600">${cand1.party} • ${score1} pts</span>
                 </div>
               </div>
@@ -405,7 +405,7 @@
               </div>
               <div class="col-span-5 flex items-center justify-end gap-2 text-right">
                 <div class="min-w-0">
-                  <strong class="font-black text-[11px] text-stone-950 block truncate uppercase leading-tight">${name2}</strong>
+                  <strong class="font-black text-[11px] text-stone-950 block line-clamp-2 text-balance break-words uppercase leading-tight">${name2}</strong>
                   <span class="text-[8px] font-mono font-bold text-stone-600">${cand2.party} • ${score2} pts</span>
                 </div>
                 <img src="${safeAvatar2}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg2}';" class="w-10 h-10 rounded-xl object-cover border-2 border-stone-950 shadow-sm flex-shrink-0">
@@ -480,14 +480,14 @@
               <div class="col-span-5 flex items-center gap-2">
                 <img src="${safeAvatar1}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg1}';" class="w-10 h-10 rounded-xl object-cover border-2 border-amber-400 shadow-sm flex-shrink-0">
                 <div class="min-w-0 text-left">
-                  <strong class="font-black text-[11px] text-amber-300 block truncate uppercase leading-tight">${name1}</strong>
+                  <strong class="font-black text-[11px] text-amber-300 block line-clamp-2 text-balance break-words uppercase leading-tight">${name1}</strong>
                   <span class="text-[8px] font-mono font-bold text-slate-300">${cand1.party} • ${score1} OVR</span>
                 </div>
               </div>
               <div class="col-span-1 text-center font-black text-[9px] text-amber-400">VS</div>
               <div class="col-span-5 flex items-center justify-end gap-2 text-right">
                 <div class="min-w-0">
-                  <strong class="font-black text-[11px] text-purple-300 block truncate uppercase leading-tight">${name2}</strong>
+                  <strong class="font-black text-[11px] text-purple-300 block line-clamp-2 text-balance break-words uppercase leading-tight">${name2}</strong>
                   <span class="text-[8px] font-mono font-bold text-slate-300">${cand2.party} • ${score2} OVR</span>
                 </div>
                 <img src="${safeAvatar2}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg2}';" class="w-10 h-10 rounded-xl object-cover border-2 border-purple-400 shadow-sm flex-shrink-0">
@@ -568,12 +568,12 @@
             <div class="grid grid-cols-2 gap-2 my-1">
               <div class="p-2 rounded-xl bg-stone-100 border border-stone-300 space-y-1 text-center">
                 <img src="${safeAvatar1}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg1}';" class="w-10 h-10 rounded-xl object-cover border-2 border-stone-900 mx-auto shadow-sm">
-                <strong class="text-[11px] font-black text-stone-950 block truncate uppercase leading-tight">${name1}</strong>
+                <strong class="text-[11px] font-black text-stone-950 block line-clamp-2 text-balance break-words uppercase leading-tight">${name1}</strong>
                 <span class="px-2 py-0.5 rounded bg-stone-900 text-white font-mono text-[9px] font-black">Score: ${score1}</span>
               </div>
               <div class="p-2 rounded-xl bg-stone-100 border border-stone-300 space-y-1 text-center">
                 <img src="${safeAvatar2}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg2}';" class="w-10 h-10 rounded-xl object-cover border-2 border-stone-900 mx-auto shadow-sm">
-                <strong class="text-[11px] font-black text-stone-950 block truncate uppercase leading-tight">${name2}</strong>
+                <strong class="text-[11px] font-black text-stone-950 block line-clamp-2 text-balance break-words uppercase leading-tight">${name2}</strong>
                 <span class="px-2 py-0.5 rounded bg-stone-900 text-white font-mono text-[9px] font-black">Score: ${score2}</span>
               </div>
             </div>
@@ -620,12 +620,12 @@
             <div class="grid grid-cols-2 gap-2 my-1">
               <div class="p-2.5 bg-white rounded-2xl border border-slate-200 space-y-1 text-center shadow-sm">
                 <img src="${safeAvatar1}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg1}';" class="w-10 h-10 rounded-xl object-cover border-2 border-sky-400 mx-auto">
-                <strong class="text-[11px] font-black text-slate-900 block truncate uppercase leading-tight">${name1}</strong>
+                <strong class="text-[11px] font-black text-slate-900 block line-clamp-2 text-balance break-words uppercase leading-tight">${name1}</strong>
                 <span class="px-2 py-0.5 rounded bg-slate-950 text-sky-400 font-mono text-[9px] font-black">Score: ${score1}</span>
               </div>
               <div class="p-2.5 bg-white rounded-2xl border border-slate-200 space-y-1 text-center shadow-sm">
                 <img src="${safeAvatar2}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg2}';" class="w-10 h-10 rounded-xl object-cover border-2 border-purple-400 mx-auto">
-                <strong class="text-[11px] font-black text-slate-900 block truncate uppercase leading-tight">${name2}</strong>
+                <strong class="text-[11px] font-black text-slate-900 block line-clamp-2 text-balance break-words uppercase leading-tight">${name2}</strong>
                 <span class="px-2 py-0.5 rounded bg-slate-950 text-purple-400 font-mono text-[9px] font-black">Score: ${score2}</span>
               </div>
             </div>
@@ -663,7 +663,7 @@
 
             <div class="p-2 rounded-2xl bg-slate-950 text-white flex items-center justify-between text-[7.5px] font-bold">
               <span class="text-slate-400">💵 SALÁRIOS MÍNIMOS/ANO:</span>
-              <span class="text-emerald-400 font-mono truncate">${name1}: ${salMin1} vs ${name2}: ${salMin2}</span>
+              <span class="text-emerald-400 font-mono line-clamp-2 text-balance break-words">${name1}: ${salMin1} vs ${name2}: ${salMin2}</span>
             </div>
 
             ${smartFooter}
@@ -793,7 +793,7 @@
                   ${scoreWinner === 1 ? '<span class="absolute -top-1 -right-1 text-[9px]">👑</span>' : ''}
                 </div>
                 <div class="min-w-0 text-left">
-                  <strong class="font-extrabold text-[11px] text-white block truncate uppercase leading-tight">${name1}</strong>
+                  <strong class="font-extrabold text-[11px] text-white block line-clamp-2 text-balance break-words uppercase leading-tight">${name1}</strong>
                   <span class="text-[8px] font-mono font-bold text-amber-400">${cand1.party} • Nº ${cand1.number}</span>
                   <div class="text-[8.5px] font-mono font-black text-amber-300">Score ${score1}</div>
                 </div>
@@ -809,7 +809,7 @@
               <!-- Contender 2 -->
               <div class="col-span-5 flex items-center justify-end gap-2 text-right">
                 <div class="min-w-0">
-                  <strong class="font-extrabold text-[11px] text-white block truncate uppercase leading-tight">${name2}</strong>
+                  <strong class="font-extrabold text-[11px] text-white block line-clamp-2 text-balance break-words uppercase leading-tight">${name2}</strong>
                   <span class="text-[8px] font-mono font-bold text-purple-400">${cand2.party} • Nº ${cand2.number}</span>
                   <div class="text-[8.5px] font-mono font-black text-purple-300">Score ${score2}</div>
                 </div>
@@ -900,7 +900,7 @@
             <div class="grid grid-cols-2 gap-2 my-2 relative">
               <div class="p-2.5 rounded-2xl bg-sky-50/70 border border-sky-200 text-center space-y-1">
                 <img src="${safeAvatar1}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg1}';" class="w-12 h-12 rounded-2xl object-cover mx-auto border-2 border-sky-500 shadow-sm">
-                <h4 class="font-black text-xs uppercase truncate text-slate-900 leading-tight">${fullName1}</h4>
+                <h4 class="font-black text-xs uppercase line-clamp-2 text-balance break-words text-slate-900 leading-tight">${fullName1}</h4>
                 <span class="text-[9px] font-mono font-bold text-sky-700 block">${cand1.party} • Nº ${cand1.number || '00'}</span>
                 
                 <div class="py-1 px-2 rounded-xl bg-sky-600 text-white font-black font-mono text-sm shadow-xs">
@@ -929,7 +929,7 @@
 
               <div class="p-2.5 rounded-2xl bg-purple-50/70 border border-purple-200 text-center space-y-1">
                 <img src="${safeAvatar2}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg2}';" class="w-12 h-12 rounded-2xl object-cover mx-auto border-2 border-purple-500 shadow-sm">
-                <h4 class="font-black text-xs uppercase truncate text-slate-900 leading-tight">${fullName2}</h4>
+                <h4 class="font-black text-xs uppercase line-clamp-2 text-balance break-words text-slate-900 leading-tight">${fullName2}</h4>
                 <span class="text-[9px] font-mono font-bold text-purple-700 block">${cand2.party} • Nº ${cand2.number || '00'}</span>
                 
                 <div class="py-1 px-2 rounded-xl bg-purple-600 text-white font-black font-mono text-sm shadow-xs">
@@ -983,7 +983,7 @@
 
             <div class="grid grid-cols-2 gap-2 my-2 text-center">
               <div class="p-2.5 rounded-2xl bg-amber-50 border border-amber-200 space-y-1">
-                <strong class="text-xs uppercase text-slate-900 block truncate">${name1}</strong>
+                <strong class="text-xs uppercase text-slate-900 block line-clamp-2 text-balance break-words">${name1}</strong>
                 <span class="text-[9px] font-bold text-amber-700 block font-mono">${cand1.party}</span>
                 <span class="text-[8px] text-slate-500 block">Gasto Mensal Cota:</span>
                 <div class="text-sm font-black font-mono text-amber-900">${spendMonthly1}</div>
@@ -991,7 +991,7 @@
               </div>
 
               <div class="p-2.5 rounded-2xl bg-purple-50 border border-purple-200 space-y-1">
-                <strong class="text-xs uppercase text-slate-900 block truncate">${name2}</strong>
+                <strong class="text-xs uppercase text-slate-900 block line-clamp-2 text-balance break-words">${name2}</strong>
                 <span class="text-[9px] font-bold text-purple-700 block font-mono">${cand2.party}</span>
                 <span class="text-[8px] text-slate-500 block">Gasto Mensal Cota:</span>
                 <div class="text-sm font-black font-mono text-purple-900">${spendMonthly2}</div>
@@ -1033,7 +1033,7 @@
             <div class="grid grid-cols-2 gap-2 my-2">
               <div class="p-2.5 rounded-2xl bg-amber-50 border border-amber-200 text-center space-y-1">
                 <img src="${safeAvatar1}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg1}';" class="w-11 h-11 rounded-xl object-cover mx-auto border-2 border-amber-500 shadow-sm">
-                <h4 class="font-black text-xs uppercase truncate text-slate-900">${name1}</h4>
+                <h4 class="font-black text-xs uppercase line-clamp-2 text-balance break-words text-slate-900">${name1}</h4>
                 <span class="text-[9px] font-mono font-bold text-amber-700 block">${cand1.party}</span>
                 <span class="text-[8px] text-slate-500 block">Total (${camp1.electionYear || '2022'}):</span>
                 <div class="text-xs font-black font-mono text-amber-900">${camp1.totalSpentFormatted || 'R$ 16,5M'}</div>
@@ -1042,7 +1042,7 @@
 
               <div class="p-2.5 rounded-2xl bg-purple-50 border border-purple-200 text-center space-y-1">
                 <img src="${safeAvatar2}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg2}';" class="w-11 h-11 rounded-xl object-cover mx-auto border-2 border-purple-500 shadow-sm">
-                <h4 class="font-black text-xs uppercase truncate text-slate-900">${name2}</h4>
+                <h4 class="font-black text-xs uppercase line-clamp-2 text-balance break-words text-slate-900">${name2}</h4>
                 <span class="text-[9px] font-mono font-bold text-purple-700 block">${cand2.party}</span>
                 <span class="text-[8px] text-slate-500 block">Total (${camp2.electionYear || '2022'}):</span>
                 <div class="text-xs font-black font-mono text-purple-900">${camp2.totalSpentFormatted || 'R$ 12,3M'}</div>
@@ -1082,14 +1082,14 @@
 
             <div class="grid grid-cols-2 gap-2 my-2 text-[8px] border-b border-stone-300 pb-2">
               <div class="space-y-1">
-                <strong class="text-[9.5px] font-black uppercase block truncate text-stone-950">${name1} (${cand1.party})</strong>
+                <strong class="text-[9.5px] font-black uppercase block line-clamp-2 text-balance break-words text-stone-950">${name1} (${cand1.party})</strong>
                 <div class="flex justify-between"><span>Cota Parlamentar/mês:</span><strong>${spendMonthly1}</strong></div>
                 <div class="flex justify-between"><span>Custo por minuto:</span><strong>${costMin1}</strong></div>
                 <div class="flex justify-between"><span>Presença:</span><strong>${cand1.attendance.ratePct}%</strong></div>
                 <div class="flex justify-between"><span>Equiv. Salários:</span><strong class="text-emerald-800">${salMin1}</strong></div>
               </div>
               <div class="space-y-1 border-l border-stone-300 pl-2">
-                <strong class="text-[9.5px] font-black uppercase block truncate text-stone-950">${name2} (${cand2.party})</strong>
+                <strong class="text-[9.5px] font-black uppercase block line-clamp-2 text-balance break-words text-stone-950">${name2} (${cand2.party})</strong>
                 <div class="flex justify-between"><span>Cota Parlamentar/mês:</span><strong>${spendMonthly2}</strong></div>
                 <div class="flex justify-between"><span>Custo por minuto:</span><strong>${costMin2}</strong></div>
                 <div class="flex justify-between"><span>Presença:</span><strong>${cand2.attendance.ratePct}%</strong></div>
@@ -1132,7 +1132,7 @@
             <div class="grid grid-cols-2 gap-2 my-2 text-center font-mono">
               <div class="p-2.5 rounded-2xl bg-slate-800/80 border border-cyan-500/30 space-y-1">
                 <img src="${safeAvatar1}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg1}';" class="w-10 h-10 rounded-xl object-cover mx-auto border-2 border-cyan-400">
-                <strong class="text-xs uppercase text-white block truncate">${name1}</strong>
+                <strong class="text-xs uppercase text-white block line-clamp-2 text-balance break-words">${name1}</strong>
                 <span class="text-[8px] text-slate-400 block">Custo por Minuto:</span>
                 <div class="text-sm font-black text-cyan-300">${costMin1}</div>
                 <div class="text-[8px] text-slate-300">Presença: <strong>${cand1.attendance.ratePct}%</strong></div>
@@ -1140,7 +1140,7 @@
 
               <div class="p-2.5 rounded-2xl bg-slate-800/80 border border-purple-500/30 space-y-1">
                 <img src="${safeAvatar2}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg2}';" class="w-10 h-10 rounded-xl object-cover mx-auto border-2 border-purple-400">
-                <strong class="text-xs uppercase text-white block truncate">${name2}</strong>
+                <strong class="text-xs uppercase text-white block line-clamp-2 text-balance break-words">${name2}</strong>
                 <span class="text-[8px] text-slate-400 block">Custo por Minuto:</span>
                 <div class="text-sm font-black text-purple-300">${costMin2}</div>
                 <div class="text-[8px] text-slate-300">Presença: <strong>${cand2.attendance.ratePct}%</strong></div>
@@ -1178,7 +1178,7 @@
             <div class="grid grid-cols-2 gap-2 my-2 text-center">
               <div class="p-2.5 rounded-2xl bg-emerald-50/70 border border-emerald-200 space-y-1">
                 <img src="${safeAvatar1}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg1}';" class="w-10 h-10 rounded-xl object-cover mx-auto border-2 border-emerald-500 shadow-sm">
-                <strong class="text-xs uppercase text-slate-900 block truncate">${name1}</strong>
+                <strong class="text-xs uppercase text-slate-900 block line-clamp-2 text-balance break-words">${name1}</strong>
                 <span class="px-2 py-0.5 rounded-full text-[8.5px] font-bold bg-emerald-100 text-emerald-800 inline-block font-mono">
                   ${clean1.includes('0') ? '✓ Ficha Limpa' : 'Auditado'}
                 </span>
@@ -1189,7 +1189,7 @@
 
               <div class="p-2.5 rounded-2xl bg-emerald-50/70 border border-emerald-200 space-y-1">
                 <img src="${safeAvatar2}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg2}';" class="w-10 h-10 rounded-xl object-cover mx-auto border-2 border-emerald-500 shadow-sm">
-                <strong class="text-xs uppercase text-slate-900 block truncate">${name2}</strong>
+                <strong class="text-xs uppercase text-slate-900 block line-clamp-2 text-balance break-words">${name2}</strong>
                 <span class="px-2 py-0.5 rounded-full text-[8.5px] font-bold bg-emerald-100 text-emerald-800 inline-block font-mono">
                   ${clean2.includes('0') ? '✓ Ficha Limpa' : 'Auditado'}
                 </span>
@@ -1228,14 +1228,14 @@
             <div class="grid grid-cols-2 gap-2 my-2 text-center font-mono">
               <div class="p-2 rounded-2xl bg-indigo-900/40 border border-indigo-400/30 space-y-1">
                 <img src="${safeAvatar1}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg1}';" class="w-10 h-10 rounded-xl object-cover mx-auto border-2 border-indigo-400">
-                <strong class="text-xs uppercase text-white block truncate">${name1}</strong>
+                <strong class="text-xs uppercase text-white block line-clamp-2 text-balance break-words">${name1}</strong>
                 <span class="text-[8px] text-indigo-300 block">${cand1.party}</span>
                 <span class="px-2 py-0.5 rounded bg-indigo-600/60 text-[8.5px] font-bold inline-block">Score: ${score1}</span>
               </div>
 
               <div class="p-2 rounded-2xl bg-purple-900/40 border border-purple-400/30 space-y-1">
                 <img src="${safeAvatar2}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg2}';" class="w-10 h-10 rounded-xl object-cover mx-auto border-2 border-purple-400">
-                <strong class="text-xs uppercase text-white block truncate">${name2}</strong>
+                <strong class="text-xs uppercase text-white block line-clamp-2 text-balance break-words">${name2}</strong>
                 <span class="text-[8px] text-purple-300 block">${cand2.party}</span>
                 <span class="px-2 py-0.5 rounded bg-purple-600/60 text-[8.5px] font-bold inline-block">Score: ${score2}</span>
               </div>
@@ -1277,7 +1277,7 @@
               <div class="flex items-center gap-2.5 p-2 rounded-2xl bg-white/10 border border-white/15">
                 <img src="${safeAvatar1}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg1}';" class="w-12 h-12 rounded-xl object-cover border-2 border-sky-400 shadow-sm flex-shrink-0">
                 <div class="min-w-0 flex-1 text-left">
-                  <strong class="font-black text-xs text-white block truncate uppercase">${fullName1}</strong>
+                  <strong class="font-black text-xs text-white block line-clamp-2 text-balance break-words uppercase">${fullName1}</strong>
                   <span class="text-[9px] font-mono text-sky-400 font-bold">${cand1.party} • Nº ${cand1.number || '00'}</span>
                 </div>
                 <div class="text-right">
@@ -1292,7 +1292,7 @@
               <div class="flex items-center gap-2.5 p-2 rounded-2xl bg-white/10 border border-white/15">
                 <img src="${safeAvatar2}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg2}';" class="w-12 h-12 rounded-xl object-cover border-2 border-purple-400 shadow-sm flex-shrink-0">
                 <div class="min-w-0 flex-1 text-left">
-                  <strong class="font-black text-xs text-white block truncate uppercase">${fullName2}</strong>
+                  <strong class="font-black text-xs text-white block line-clamp-2 text-balance break-words uppercase">${fullName2}</strong>
                   <span class="text-[9px] font-mono text-purple-400 font-bold">${cand2.party} • Nº ${cand2.number || '00'}</span>
                 </div>
                 <div class="text-right">
@@ -1340,14 +1340,14 @@
             <div class="grid grid-cols-2 gap-2 my-2 text-center">
               <div class="p-2.5 rounded-2xl bg-indigo-50/70 border border-indigo-200 space-y-1">
                 <img src="${safeAvatar1}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg1}';" class="w-10 h-10 rounded-xl object-cover mx-auto border-2 border-indigo-500 shadow-sm">
-                <strong class="text-xs uppercase text-slate-900 block truncate">${name1}</strong>
+                <strong class="text-xs uppercase text-slate-900 block line-clamp-2 text-balance break-words">${name1}</strong>
                 <div class="text-sm font-black font-mono text-indigo-900">${truth1}% Fatos</div>
                 <span class="text-[8px] text-slate-500 block">Declarações auditadas</span>
               </div>
 
               <div class="p-2.5 rounded-2xl bg-purple-50/70 border border-purple-200 space-y-1">
                 <img src="${safeAvatar2}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg2}';" class="w-10 h-10 rounded-xl object-cover mx-auto border-2 border-purple-500 shadow-sm">
-                <strong class="text-xs uppercase text-slate-900 block truncate">${name2}</strong>
+                <strong class="text-xs uppercase text-slate-900 block line-clamp-2 text-balance break-words">${name2}</strong>
                 <div class="text-sm font-black font-mono text-purple-900">${truth2}% Fatos</div>
                 <span class="text-[8px] text-slate-500 block">Declarações auditadas</span>
               </div>
@@ -1384,14 +1384,14 @@
 
             <div class="grid grid-cols-2 gap-2 my-2 text-center font-mono">
               <div class="p-2.5 rounded-2xl bg-slate-50 border border-slate-300 space-y-1">
-                <strong class="text-xs uppercase text-slate-900 block truncate font-sans">${name1}</strong>
+                <strong class="text-xs uppercase text-slate-900 block line-clamp-2 text-balance break-words font-sans">${name1}</strong>
                 <div class="text-sm font-black text-slate-900">${l1} Leis</div>
                 <span class="text-[7.5px] text-slate-500 block">${p1} Projetos Protocolados</span>
                 <span class="text-[7.5px] text-emerald-700 font-bold block">Emendas: ${emendas1}</span>
               </div>
 
               <div class="p-2.5 rounded-2xl bg-slate-50 border border-slate-300 space-y-1">
-                <strong class="text-xs uppercase text-slate-900 block truncate font-sans">${name2}</strong>
+                <strong class="text-xs uppercase text-slate-900 block line-clamp-2 text-balance break-words font-sans">${name2}</strong>
                 <div class="text-sm font-black text-slate-900">${l2} Leis</div>
                 <span class="text-[7.5px] text-slate-500 block">${p2} Projetos Protocolados</span>
                 <span class="text-[7.5px] text-emerald-700 font-bold block">Emendas: ${emendas2}</span>
@@ -1429,14 +1429,14 @@
             <div class="grid grid-cols-2 gap-2 my-2 text-center">
               <div class="p-2.5 rounded-2xl bg-white border border-amber-300 space-y-1 shadow-xs">
                 <img src="${safeAvatar1}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg1}';" class="w-10 h-10 rounded-xl object-cover mx-auto border-2 border-amber-500">
-                <strong class="text-xs uppercase text-slate-900 block truncate">${name1}</strong>
+                <strong class="text-xs uppercase text-slate-900 block line-clamp-2 text-balance break-words">${name1}</strong>
                 <div class="text-sm font-black font-mono text-amber-700">Nº ${cand1.number || '00'}</div>
                 <span class="text-[8px] font-mono text-slate-600 block">${score1} pts • ${cand1.party}</span>
               </div>
 
               <div class="p-2.5 rounded-2xl bg-white border border-amber-300 space-y-1 shadow-xs">
                 <img src="${safeAvatar2}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg2}';" class="w-10 h-10 rounded-xl object-cover mx-auto border-2 border-amber-500">
-                <strong class="text-xs uppercase text-slate-900 block truncate">${name2}</strong>
+                <strong class="text-xs uppercase text-slate-900 block line-clamp-2 text-balance break-words">${name2}</strong>
                 <div class="text-sm font-black font-mono text-amber-700">Nº ${cand2.number || '00'}</div>
                 <span class="text-[8px] font-mono text-slate-600 block">${score2} pts • ${cand2.party}</span>
               </div>
@@ -1491,7 +1491,7 @@
                   <img src="${safeAvatar1}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg1}';" class="w-11 h-11 rounded-xl object-cover border-2 border-purple-500 shadow-xs">
                   <span class="absolute -bottom-1 -right-1 text-[8px] font-black px-1 rounded bg-purple-600 text-white font-mono">${ai1.overallScore || 85}</span>
                 </div>
-                <strong class="text-xs uppercase text-slate-900 block truncate">${name1}</strong>
+                <strong class="text-xs uppercase text-slate-900 block line-clamp-2 text-balance break-words">${name1}</strong>
                 <span class="text-[8px] font-mono text-purple-700 block font-bold">${cand1.party} • ${cand1.state || 'BR'}</span>
                 <span class="inline-block text-[7.5px] font-black font-mono px-1.5 py-0.5 rounded ${riskColor1}">Risco: ${risk1}</span>
               </div>
@@ -1501,7 +1501,7 @@
                   <img src="${safeAvatar2}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg2}';" class="w-11 h-11 rounded-xl object-cover border-2 border-purple-500 shadow-xs">
                   <span class="absolute -bottom-1 -right-1 text-[8px] font-black px-1 rounded bg-purple-600 text-white font-mono">${ai2.overallScore || 82}</span>
                 </div>
-                <strong class="text-xs uppercase text-slate-900 block truncate">${name2}</strong>
+                <strong class="text-xs uppercase text-slate-900 block line-clamp-2 text-balance break-words">${name2}</strong>
                 <span class="text-[8px] font-mono text-purple-700 block font-bold">${cand2.party} • ${cand2.state || 'BR'}</span>
                 <span class="inline-block text-[7.5px] font-black font-mono px-1.5 py-0.5 rounded ${riskColor2}">Risco: ${risk2}</span>
               </div>
@@ -1598,7 +1598,7 @@
           <div class="flex items-center gap-3 my-2 p-2.5 rounded-2xl bg-[#f5f5f7] border border-[#e5e5ea]/80">
             <img src="${safeAvatar}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(cand.name)}&background=059669&color=fff&bold=true&size=128';" class="w-12 h-12 rounded-xl object-cover border border-emerald-500/40 shadow-xs flex-shrink-0 bg-white">
             <div class="min-w-0 text-left">
-              <h4 class="font-extrabold text-xs text-slate-900 uppercase tracking-tight truncate">${cand.ballotName || cand.name}</h4>
+              <h4 class="font-extrabold text-xs text-slate-900 uppercase tracking-tight line-clamp-2 text-balance break-words">${cand.ballotName || cand.name}</h4>
               <p class="text-[9.5px] font-mono font-bold text-emerald-700">${cand.party} • Nº ${cand.number}</p>
               <span class="text-[8px] text-slate-500 truncate block">${cand.position} (${cand.state || 'BR'})</span>
             </div>
@@ -1683,7 +1683,7 @@
           <div class="flex items-center gap-3 my-2 p-2.5 rounded-2xl bg-[#f5f5f7] border border-[#e5e5ea]/80">
             <img src="${safeAvatar}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(cand.name)}&background=dc2626&color=fff&bold=true&size=128';" class="w-12 h-12 rounded-xl object-cover border border-rose-500/40 shadow-xs flex-shrink-0 bg-white">
             <div class="min-w-0 text-left">
-              <h4 class="font-extrabold text-xs text-slate-900 uppercase tracking-tight truncate">${cand.ballotName || cand.name}</h4>
+              <h4 class="font-extrabold text-xs text-slate-900 uppercase tracking-tight line-clamp-2 text-balance break-words">${cand.ballotName || cand.name}</h4>
               <p class="text-[9.5px] font-mono font-bold text-rose-700">${cand.party} • Nº ${cand.number}</p>
               <span class="text-[8px] text-slate-500 truncate block">${cand.position} (${cand.state || 'BR'})</span>
             </div>
@@ -1772,7 +1772,7 @@
             <div class="flex items-center gap-2.5 min-w-0">
               <img src="${safeAvatar}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(cand.name)}&background=7c3aed&color=fff&bold=true&size=128';" class="w-11 h-11 rounded-xl object-cover border border-purple-500/40 shadow-xs flex-shrink-0 bg-white">
               <div class="min-w-0 text-left">
-                <h4 class="font-extrabold text-xs text-slate-900 uppercase tracking-tight truncate">${cand.ballotName || cand.name}</h4>
+                <h4 class="font-extrabold text-xs text-slate-900 uppercase tracking-tight line-clamp-2 text-balance break-words">${cand.ballotName || cand.name}</h4>
                 <p class="text-[9.5px] font-mono font-bold text-purple-700">${cand.party} • Nº ${cand.number}</p>
                 <span class="text-[8px] text-slate-500 truncate block">Cargo: ${cand.position}</span>
               </div>
@@ -1848,7 +1848,7 @@
           <div class="my-2 space-y-1.5 text-[9px]">
             <div class="flex justify-between font-bold">
               <span>AGENTE PÚBLICO:</span>
-              <span class="uppercase font-black truncate max-w-[170px]">${cand.name}</span>
+              <span class="uppercase font-black line-clamp-2 text-balance break-words max-w-[170px]">${cand.name}</span>
             </div>
             <div class="flex justify-between text-stone-600">
               <span>CARGO / PARTIDO:</span>
@@ -1909,7 +1909,7 @@
           <div class="flex items-center gap-3 my-2">
             <img src="${safeAvatar}" referrerpolicy="no-referrer" class="w-14 h-14 rounded-2xl object-cover border-2 border-amber-400 shadow-md">
             <div>
-              <h4 class="font-black text-sm uppercase truncate text-white leading-tight">${cand.name}</h4>
+              <h4 class="font-black text-sm uppercase line-clamp-2 text-balance break-words text-white leading-tight">${cand.name}</h4>
               <p class="text-[10.5px] font-bold text-amber-300 font-mono">${cand.party} • ${cand.position}</p>
             </div>
           </div>
@@ -1988,7 +1988,7 @@
               <span class="absolute -bottom-1 -right-1 text-[8.5px] font-black px-1.5 py-0.2 rounded-full bg-purple-600 text-white font-mono shadow-xs">${overallScore}</span>
             </div>
             <div class="min-w-0">
-              <h4 class="font-black text-sm uppercase truncate text-slate-900 leading-tight">${cand.name}</h4>
+              <h4 class="font-black text-sm uppercase line-clamp-2 text-balance break-words text-slate-900 leading-tight">${cand.name}</h4>
               <p class="text-[10px] font-bold text-purple-700 font-mono truncate">${cand.party} • ${cand.position} • ${cand.state || 'BR'}</p>
               <div class="mt-1">${riskBadge}</div>
             </div>
@@ -2050,7 +2050,7 @@
               <span class="px-2 py-0.5 rounded-full text-[9px] font-black bg-emerald-100 text-emerald-800 border border-emerald-300">
                 🟢 ${eth.cleanRecordStatus || 'Ficha Limpa Oficial'}
               </span>
-              <h4 class="font-black text-sm uppercase truncate text-slate-900 mt-1 leading-tight">${cand.name}</h4>
+              <h4 class="font-black text-sm uppercase line-clamp-2 text-balance break-words text-slate-900 mt-1 leading-tight">${cand.name}</h4>
               <p class="text-[10px] font-bold text-slate-500 font-mono">${cand.party} • ${cand.position}</p>
             </div>
           </div>
@@ -2104,7 +2104,7 @@
           <div class="flex items-center gap-3 my-2">
             <img src="${safeAvatar}" referrerpolicy="no-referrer" class="w-13 h-13 rounded-2xl object-cover border-2 border-indigo-400 shadow-md">
             <div>
-              <h4 class="font-black text-sm uppercase truncate text-white leading-tight">${cand.name}</h4>
+              <h4 class="font-black text-sm uppercase line-clamp-2 text-balance break-words text-white leading-tight">${cand.name}</h4>
               <p class="text-[10px] font-bold text-indigo-300 font-mono">${cand.party} • ${cand.position}</p>
             </div>
           </div>
@@ -2192,7 +2192,7 @@
           <div class="flex items-center gap-3 my-2">
             <img src="${safeAvatar}" referrerpolicy="no-referrer" class="w-13 h-13 rounded-2xl object-cover border-2 border-amber-500 shadow-md">
             <div>
-              <h4 class="font-black text-sm uppercase truncate text-slate-900 leading-tight">${cand.name}</h4>
+              <h4 class="font-black text-sm uppercase line-clamp-2 text-balance break-words text-slate-900 leading-tight">${cand.name}</h4>
               <p class="text-[10px] font-bold text-slate-500 font-mono">${cand.party} • ${cand.position}</p>
             </div>
           </div>
@@ -2240,7 +2240,7 @@
             <div class="flex items-center gap-2">
               <img src="${safeAvatar}" referrerpolicy="no-referrer" class="w-10 h-10 rounded-xl object-cover border border-slate-300">
               <div>
-                <strong class="font-black text-xs uppercase text-slate-900 block truncate">${cand.name}</strong>
+                <strong class="font-black text-xs uppercase text-slate-900 block line-clamp-2 text-balance break-words">${cand.name}</strong>
                 <span class="text-[9px] text-slate-500 font-mono">${cand.party} • ${deb.broadcaster || 'Debate Oficial'}</span>
               </div>
             </div>
@@ -2279,7 +2279,7 @@
           <div class="flex items-center gap-3 my-2">
             <img src="${safeAvatar}" referrerpolicy="no-referrer" class="w-13 h-13 rounded-2xl object-cover border-2 border-purple-500 shadow-md">
             <div>
-              <h4 class="font-black text-sm uppercase truncate text-slate-900 leading-tight">${cand.name}</h4>
+              <h4 class="font-black text-sm uppercase line-clamp-2 text-balance break-words text-slate-900 leading-tight">${cand.name}</h4>
               <p class="text-[10px] font-bold text-slate-500 font-mono">${cand.party} • ${cand.position}</p>
             </div>
           </div>
@@ -2323,7 +2323,7 @@
           <div class="flex items-center gap-3 my-1">
             <img src="${safeAvatar}" referrerpolicy="no-referrer" class="w-12 h-12 rounded-xl object-cover border border-amber-400">
             <div>
-              <h4 class="font-black text-xs uppercase text-white truncate">${cand.name}</h4>
+              <h4 class="font-black text-xs uppercase text-white line-clamp-2 text-balance break-words">${cand.name}</h4>
               <p class="text-[10px] font-mono text-amber-400 font-bold">${cand.party} • ${cand.position} • Nº ${cand.number}</p>
             </div>
           </div>
@@ -2356,7 +2356,7 @@
             <div class="flex items-center gap-2.5 min-w-0">
               <img src="${safeAvatar}" crossorigin="anonymous" referrerpolicy="no-referrer" onerror="this.onerror=null; this.removeAttribute('crossorigin'); this.src='${cand.avatar}'; this.onerror=function(){ this.src='https://ui-avatars.com/api/?name=' + encodeURIComponent('${encodeURIComponent(cand.name)}') + '&background=0284c7&color=fff&bold=true&size=128'; };" class="w-[52px] h-[52px] rounded-2xl object-cover border-2 border-stone-950 shadow-md flex-shrink-0">
               <div class="min-w-0 space-y-0.5 text-left">
-                <h4 class="font-black text-sm text-stone-950 uppercase tracking-tight truncate leading-tight">${cand.name}</h4>
+                <h4 class="font-black text-sm text-stone-950 uppercase tracking-tight line-clamp-2 text-balance break-words leading-tight">${cand.name}</h4>
                 <p class="text-[11px] font-black text-emerald-700 font-mono leading-none">${cand.party} • Nº ${cand.number}</p>
                 <span class="text-[8.5px] font-bold text-stone-600 block truncate">Pretensão: ${cand.position}</span>
               </div>
@@ -2448,7 +2448,7 @@
             <div class="flex items-center gap-2.5 min-w-0">
               <img src="${safeAvatar}" crossorigin="anonymous" referrerpolicy="no-referrer" onerror="this.onerror=null; this.removeAttribute('crossorigin'); this.src='${cand.avatar}'; this.onerror=function(){ this.src='https://ui-avatars.com/api/?name=' + encodeURIComponent('${encodeURIComponent(cand.name)}') + '&background=0284c7&color=fff&bold=true&size=128'; };" class="w-14 h-14 rounded-2xl object-cover border-2 border-amber-400 shadow-md flex-shrink-0">
               <div class="min-w-0 text-left space-y-0.5">
-                <h4 class="font-black text-sm text-white uppercase tracking-tight truncate leading-tight">${cand.name}</h4>
+                <h4 class="font-black text-sm text-white uppercase tracking-tight line-clamp-2 text-balance break-words leading-tight">${cand.name}</h4>
                 <p class="text-[11px] font-black text-amber-400 font-mono leading-none">${cand.party} • Nº ${cand.number}</p>
                 <span class="text-[8.5px] text-slate-300 truncate block">Pretensão: ${cand.position}</span>
               </div>
@@ -2552,7 +2552,7 @@
             <div class="flex items-center gap-2.5 min-w-0">
               <img src="${safeAvatar}" crossorigin="anonymous" referrerpolicy="no-referrer" onerror="this.onerror=null; this.removeAttribute('crossorigin'); this.src='${cand.avatar}'; this.onerror=function(){ this.src='https://ui-avatars.com/api/?name=' + encodeURIComponent('${encodeURIComponent(cand.name)}') + '&background=0284c7&color=fff&bold=true&size=128'; };" class="w-14 h-14 rounded-2xl object-cover border-2 border-stone-900 shadow-md flex-shrink-0">
               <div class="min-w-0 text-left space-y-0.5">
-                <h4 class="font-black text-sm text-stone-950 uppercase tracking-tight truncate leading-tight">${cand.name}</h4>
+                <h4 class="font-black text-sm text-stone-950 uppercase tracking-tight line-clamp-2 text-balance break-words leading-tight">${cand.name}</h4>
                 <p class="text-[11px] font-bold text-stone-700 font-mono leading-none">${cand.party} • Nº ${cand.number}</p>
                 <span class="text-[8.5px] font-medium text-stone-600 block">Pretensão: ${cand.position}</span>
               </div>
@@ -2624,7 +2624,7 @@
             <div class="flex items-center gap-3 min-w-0">
               <img src="${safeAvatar}" crossorigin="anonymous" referrerpolicy="no-referrer" onerror="this.onerror=null; this.removeAttribute('crossorigin'); this.src='${cand.avatar}'; this.onerror=function(){ this.src='https://ui-avatars.com/api/?name=' + encodeURIComponent('${encodeURIComponent(cand.name)}') + '&background=0284c7&color=fff&bold=true&size=128'; };" class="w-14 h-14 rounded-2xl object-cover border-2 border-slate-200 shadow-sm flex-shrink-0">
               <div class="min-w-0 text-left space-y-0.5">
-                <h4 class="font-black text-sm text-slate-950 uppercase tracking-tight truncate leading-tight">${cand.name}</h4>
+                <h4 class="font-black text-sm text-slate-950 uppercase tracking-tight line-clamp-2 text-balance break-words leading-tight">${cand.name}</h4>
                 <p class="text-[11px] font-black text-sky-600 font-mono leading-none">${cand.party} • Nº ${cand.number}</p>
                 <span class="text-[9px] font-bold text-slate-600 block truncate">Pretensão: ${cand.position}</span>
               </div>
@@ -2723,7 +2723,7 @@
               <div class="flex items-center gap-2 min-w-0">
                 <img src="${safeAvatar}" crossorigin="anonymous" referrerpolicy="no-referrer" onerror="this.onerror=null; this.removeAttribute('crossorigin'); this.src='${cand.avatar}'; this.onerror=function(){ this.src='https://ui-avatars.com/api/?name=' + encodeURIComponent('${encodeURIComponent(cand.name)}') + '&background=0284c7&color=fff&bold=true&size=128'; };" class="w-[38px] h-[38px] rounded-xl object-cover border border-[#2f3336]">
                 <div class="min-w-0">
-                  <h5 class="font-bold text-xs text-white truncate leading-none">${cand.name}</h5>
+                  <h5 class="font-bold text-xs text-white line-clamp-2 text-balance break-words leading-none">${cand.name}</h5>
                   <p class="text-[9px] text-slate-400 font-mono mt-0.5">${cand.party} • Nº ${cand.number} (${cand.position})</p>
                 </div>
               </div>
@@ -2829,7 +2829,7 @@
             <div class="flex items-center gap-2.5 min-w-0">
               <img src="${safeAvatar}" crossorigin="anonymous" referrerpolicy="no-referrer" onerror="this.onerror=null; this.removeAttribute('crossorigin'); this.src='${cand.avatar}'; this.onerror=function(){ this.src='https://ui-avatars.com/api/?name=' + encodeURIComponent('${encodeURIComponent(cand.name)}') + '&background=0284c7&color=fff&bold=true&size=128'; };" class="w-12 h-12 rounded-2xl object-cover ring-1 ring-white/20 shadow-md flex-shrink-0 bg-slate-800">
               <div class="min-w-0 space-y-0.5 text-left">
-                <h4 class="font-extrabold text-xs text-white uppercase tracking-tight truncate leading-tight">${fullName}</h4>
+                <h4 class="font-extrabold text-xs text-white uppercase tracking-tight line-clamp-2 text-balance break-words leading-tight">${fullName}</h4>
                 <p class="text-[10px] font-mono font-extrabold text-sky-400 leading-none">${cand.party} • Nº ${cand.number}</p>
                 <span class="text-[8px] text-white/60 truncate block">${cand.position} (${cand.state})</span>
               </div>
@@ -3032,7 +3032,50 @@
     }
 
 
-        async function downloadExportedImage(resolution = 'fhd') {
+        
+    async function generateCanvasSecurely(target, scaleFactor, bg) {
+        // Clone the element to render it properly off-screen
+        const clone = target.cloneNode(true);
+        // Force width for 9:16 aspect ratio base
+        const baseWidth = 420; 
+        clone.style.width = baseWidth + 'px';
+        clone.style.height = 'auto';
+        clone.style.position = 'absolute';
+        clone.style.top = '-9999px';
+        clone.style.left = '-9999px';
+        clone.style.transform = 'none';
+        clone.style.maxWidth = 'none';
+        clone.style.maxHeight = 'none';
+        clone.style.margin = '0';
+        clone.style.overflow = 'visible';
+        
+                // Remove truncate to avoid text clipping
+        const truncates = clone.querySelectorAll('.truncate, [class*="line-clamp-"]');
+        truncates.forEach(el => {
+            el.className = el.className.replace(/truncate/g, '').replace(/line-clamp-\d+/g, '');
+            el.style.whiteSpace = 'normal';
+            el.style.overflow = 'visible';
+            el.style.display = 'block'; // Overwrite webkit-box
+        });
+        
+        document.body.appendChild(clone);
+        await new Promise(r => setTimeout(r, 200));
+        
+        const canvas = await html2canvas(clone, {
+            backgroundColor: bg,
+            scale: scaleFactor,
+            useCORS: true,
+            allowTaint: true,
+            logging: false,
+            width: baseWidth,
+            height: clone.scrollHeight
+        });
+        
+        document.body.removeChild(clone);
+        return canvas;
+    }
+
+    async function downloadExportedImage(resolution = 'fhd') {
       const target = document.getElementById('export-card-target');
       const scaleFactor = resolution === '4k' ? 3.5 : 2.2;
       const btn = resolution === '4k' ? document.getElementById('btn-dl-4k') : document.getElementById('btn-dl-fhd');
@@ -3045,15 +3088,7 @@
       try {
         await new Promise(r => setTimeout(r, 100));
 
-        const canvas = await html2canvas(target, { 
-          backgroundColor: cardBg, 
-          scale: scaleFactor,
-          useCORS: true,
-          allowTaint: true,
-          logging: false,
-          windowWidth: target.scrollWidth,
-          windowHeight: target.scrollHeight
-        });
+        const canvas = await generateCanvasSecurely(target, scaleFactor, cardBg);
 
         const link = document.createElement('a');
         const resLabel = resolution === '4k' ? '4K-UltraHD' : 'FullHD-1080p';
@@ -3088,7 +3123,7 @@
       const cardBg = exportVisualTheme === 'twitter' || isExportComparison ? '#070b16' : '#ffffff';
 
       try {
-        const canvas = await html2canvas(target, { backgroundColor: cardBg, scale: 2.2, useCORS: true, allowTaint: true });
+        const canvas = await generateCanvasSecurely(target, scaleFactor, cardBg);
         canvas.toBlob(async (blob) => {
           if (blob) {
             await navigator.clipboard.write([
@@ -3113,7 +3148,7 @@
         const btn = document.getElementById('btn-share-insta');
         if (btn) btn.innerHTML = '<i data-lucide="loader-2" class="w-4 h-4 animate-spin text-white"></i> Gerando...';
         
-        const canvas = await html2canvas(target, { scale: 3, useCORS: true, backgroundColor: null });
+        const canvas = await generateCanvasSecurely(target, scaleFactor, cardBg);
         canvas.toBlob(async (blob) => {
           if (!blob) {
             if (btn) btn.innerHTML = '<i data-lucide="camera" class="w-4 h-4 text-white"></i> 📸 Postar no Instagram (Stories / Feed)';
@@ -3150,7 +3185,7 @@
       const shareUrl = activeExportCandidate ? `${window.location.origin}/dossie.html?id=${activeExportCandidate.id}` : window.location.href;
 
       try {
-        const canvas = await html2canvas(target, { backgroundColor: cardBg, scale: 2.0, useCORS: true, allowTaint: true });
+        const canvas = await generateCanvasSecurely(target, scaleFactor, cardBg);
         canvas.toBlob(async (blob) => {
           if (blob && navigator.canShare && navigator.canShare({ files: [new File([blob], 'figurinha.png', { type: 'image/png' })] })) {
             const file = new File([blob], `figurinha-${candName.toLowerCase().replace(/\s+/g, '-')}.png`, { type: 'image/png' });

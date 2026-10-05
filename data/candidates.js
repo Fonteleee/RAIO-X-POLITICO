@@ -157,7 +157,7 @@ var candidatesData = _root.candidatesData = [
         "id": "cand-joao-campos-prop-1",
         "title": "Pacto Antifacção e Inteligência de Segurança Pública",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 87,
         "summary": "Pacto Antifacção e Inteligência de Segurança Pública",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -165,14 +165,14 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 702,
+        "rejectVotes": 84
       },
       {
         "id": "cand-joao-campos-prop-2",
         "title": "Hospital da Criança no Agreste e Saúde no Sertão",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 81,
         "summary": "Hospital da Criança no Agreste e Saúde no Sertão",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -180,14 +180,14 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 740,
+        "rejectVotes": 12
       },
       {
         "id": "cand-joao-campos-prop-3",
         "title": "Programa Embarque Digital Estadual e Triplicação da BR-101",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 75,
         "summary": "Programa Embarque Digital Estadual e Triplicação da BR-101",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -195,8 +195,8 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 778,
+        "rejectVotes": 20
       }
     ],
     "polls": {
@@ -799,7 +799,7 @@ var candidatesData = _root.candidatesData = [
         "id": "cand-ronaldo-caiado-prop-1",
         "title": "Segurança Nacional com Modelo Goiano Tolerância Zero",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 79,
         "summary": "Segurança Nacional com Modelo Goiano Tolerância Zero",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -807,14 +807,14 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 194,
+        "rejectVotes": 56
       },
       {
         "id": "cand-ronaldo-caiado-prop-2",
         "title": "Rigor Fiscal e Eficiência Administrativa",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 93,
         "summary": "Rigor Fiscal e Eficiência Administrativa",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -822,14 +822,14 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 232,
+        "rejectVotes": 64
       },
       {
         "id": "cand-ronaldo-caiado-prop-3",
         "title": "Fortalecimento do Agronegócio e Infraestrutura Logística",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 87,
         "summary": "Fortalecimento do Agronegócio e Infraestrutura Logística",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -837,8 +837,8 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 270,
+        "rejectVotes": 72
       }
     ],
     "polls": {
@@ -2083,7 +2083,7 @@ var candidatesData = _root.candidatesData = [
         "id": "cand-tarcisio-de-freitas-prop-1",
         "title": "Trem Intercidades (TIC) Campinas e Vale do Paraíba",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 77,
         "summary": "Trem Intercidades (TIC) Campinas e Vale do Paraíba",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -2091,14 +2091,14 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 692,
+        "rejectVotes": 74
       },
       {
         "id": "cand-tarcisio-de-freitas-prop-2",
         "title": "Muralha Paulista: Cerco Eletrônico Total com IA",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 91,
         "summary": "Muralha Paulista: Cerco Eletrônico Total com IA",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -2106,8 +2106,8 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 730,
+        "rejectVotes": 82
       },
       {
         "id": "cand-tarcisio-de-freitas-prop-3",
@@ -2121,8 +2121,8 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 768,
+        "rejectVotes": 90
       }
     ],
     "polls": {
@@ -2724,7 +2724,7 @@ var candidatesData = _root.candidatesData = [
         "id": "cand-simone-tebet-prop-1",
         "title": "Orçamento Público com Foco na Primeira Infância",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 82,
         "summary": "Orçamento Público com Foco na Primeira Infância",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -2732,14 +2732,14 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 817,
+        "rejectVotes": 39
       },
       {
         "id": "cand-simone-tebet-prop-2",
         "title": "Competitividade da Indústria Paulista e Reforma Tributária",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 76,
         "summary": "Competitividade da Indústria Paulista e Reforma Tributária",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -2747,14 +2747,14 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 855,
+        "rejectVotes": 47
       },
       {
         "id": "cand-simone-tebet-prop-3",
         "title": "Governança Fiscal Transparente e Combate ao Desperdício",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 90,
         "summary": "Governança Fiscal Transparente e Combate ao Desperdício",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -2762,8 +2762,8 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 893,
+        "rejectVotes": 55
       }
     ],
     "polls": {
@@ -4056,7 +4056,7 @@ var candidatesData = _root.candidatesData = [
         "id": "cand-helder-barbalho-prop-1",
         "title": "Marco Regulatório da Bioeconomia e Créditos de Carbono",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 94,
         "summary": "Marco Regulatório da Bioeconomia e Créditos de Carbono",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -4064,14 +4064,14 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 289,
+        "rejectVotes": 71
       },
       {
         "id": "cand-helder-barbalho-prop-2",
         "title": "Compensação Tarifária para Estados Produtores de Energia",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 88,
         "summary": "Compensação Tarifária para Estados Produtores de Energia",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -4079,14 +4079,14 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 327,
+        "rejectVotes": 79
       },
       {
         "id": "cand-helder-barbalho-prop-3",
         "title": "Infraestrutura Hidroviária e Logística Sustentável",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 82,
         "summary": "Infraestrutura Hidroviária e Logística Sustentável",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -4094,8 +4094,8 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 365,
+        "rejectVotes": 87
       }
     ],
     "polls": {
@@ -4723,7 +4723,7 @@ var candidatesData = _root.candidatesData = [
         "id": "cand-eduardo-paes-prop-1",
         "title": "Reestruturação da Segurança e Tolerância ao Crime",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 84,
         "summary": "Reestruturação da Segurança e Tolerância ao Crime",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -4731,14 +4731,14 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 799,
+        "rejectVotes": 21
       },
       {
         "id": "cand-eduardo-paes-prop-2",
         "title": "Conexão Intermunicipal e Expansão de VLTs e Trens",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 78,
         "summary": "Conexão Intermunicipal e Expansão de VLTs e Trens",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -4746,14 +4746,14 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 837,
+        "rejectVotes": 29
       },
       {
         "id": "cand-eduardo-paes-prop-3",
         "title": "Polos Regionais de Saúde Especializada e Redução de Filas",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 92,
         "summary": "Polos Regionais de Saúde Especializada e Redução de Filas",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -4761,8 +4761,8 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 875,
+        "rejectVotes": 37
       }
     ],
     "polls": {
@@ -5365,7 +5365,7 @@ var candidatesData = _root.candidatesData = [
         "id": "cand-ciro-gomes-prop-1",
         "title": "Tolerância Zero contra Facções Criminosas",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 87,
         "summary": "Tolerância Zero contra Facções Criminosas",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -5373,14 +5373,14 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 602,
+        "rejectVotes": 64
       },
       {
         "id": "cand-ciro-gomes-prop-2",
         "title": "Expansão dos Hospitais Regionais no Interior",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 81,
         "summary": "Expansão dos Hospitais Regionais no Interior",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -5388,14 +5388,14 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 640,
+        "rejectVotes": 72
       },
       {
         "id": "cand-ciro-gomes-prop-3",
         "title": "Universalização do Ensino Integral (Modelo Sobral)",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 75,
         "summary": "Universalização do Ensino Integral (Modelo Sobral)",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -5403,8 +5403,8 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 678,
+        "rejectVotes": 80
       }
     ],
     "polls": {
@@ -6007,7 +6007,7 @@ var candidatesData = _root.candidatesData = [
         "id": "cand-romeu-zema-prop-1",
         "title": "O Brasil sem Intocáveis: Fim dos Supersalários",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 80,
         "summary": "O Brasil sem Intocáveis: Fim dos Supersalários",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -6015,14 +6015,14 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 615,
+        "rejectVotes": 77
       },
       {
         "id": "cand-romeu-zema-prop-2",
         "title": "Desregulamentação e Amplo Programa de Privatizações",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 94,
         "summary": "Desregulamentação e Amplo Programa de Privatizações",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -6030,14 +6030,14 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 653,
+        "rejectVotes": 85
       },
       {
         "id": "cand-romeu-zema-prop-3",
         "title": "Pacto Federativo com Descentralização Tributária",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 88,
         "summary": "Pacto Federativo com Descentralização Tributária",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -6045,8 +6045,8 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 691,
+        "rejectVotes": 13
       }
     ],
     "polls": {
@@ -7990,7 +7990,7 @@ var candidatesData = _root.candidatesData = [
         "id": "cand-eduardo-leite-prop-1",
         "title": "Plano Rio Grande: Reconstrução Climática Resiliente",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 90,
         "summary": "Plano Rio Grande: Reconstrução Climática Resiliente",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -7998,14 +7998,14 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 905,
+        "rejectVotes": 47
       },
       {
         "id": "cand-eduardo-leite-prop-2",
         "title": "Responsabilidade Fiscal e Sustentabilidade da Previdência",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 84,
         "summary": "Responsabilidade Fiscal e Sustentabilidade da Previdência",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -8013,14 +8013,14 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 943,
+        "rejectVotes": 55
       },
       {
         "id": "cand-eduardo-leite-prop-3",
         "title": "Ensino Médio Vocacionado e Inovação Tecnológica",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 78,
         "summary": "Ensino Médio Vocacionado e Inovação Tecnológica",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -8028,8 +8028,8 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 181,
+        "rejectVotes": 63
       }
     ],
     "polls": {
@@ -9274,7 +9274,7 @@ var candidatesData = _root.candidatesData = [
         "id": "cand-lula-prop-1",
         "title": "Isenção de Imposto de Renda para até R$ 5.000",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 84,
         "summary": "Isenção de Imposto de Renda para até R$ 5.000",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -9282,14 +9282,14 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 819,
+        "rejectVotes": 41
       },
       {
         "id": "cand-lula-prop-2",
         "title": "Novo PAC e Reindustrialização Verde",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 78,
         "summary": "Novo PAC e Reindustrialização Verde",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -9297,14 +9297,14 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 857,
+        "rejectVotes": 49
       },
       {
         "id": "cand-lula-prop-3",
         "title": "Fortalecimento do SUS e Programa Mais Especialistas",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 92,
         "summary": "Fortalecimento do SUS e Programa Mais Especialistas",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -9312,8 +9312,8 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 895,
+        "rejectVotes": 57
       }
     ],
     "polls": {
@@ -9915,7 +9915,7 @@ var candidatesData = _root.candidatesData = [
         "id": "cand-rodrigo-pacheco-prop-1",
         "title": "Fiscalização e Controle Preventivo no TCU",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 80,
         "summary": "Fiscalização e Controle Preventivo no TCU",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -9923,14 +9923,14 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 315,
+        "rejectVotes": 17
       },
       {
         "id": "cand-rodrigo-pacheco-prop-2",
         "title": "Regulamentação e Implementação da Reforma Tributária",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 94,
         "summary": "Regulamentação e Implementação da Reforma Tributária",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -9938,14 +9938,14 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 353,
+        "rejectVotes": 25
       },
       {
         "id": "cand-rodrigo-pacheco-prop-3",
         "title": "Defesa do Pacto Federativo e Dívida dos Estados",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 88,
         "summary": "Defesa do Pacto Federativo e Dívida dos Estados",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -9953,8 +9953,8 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 391,
+        "rejectVotes": 33
       }
     ],
     "polls": {
@@ -11224,7 +11224,7 @@ var candidatesData = _root.candidatesData = [
         "id": "cand-jair-bolsonaro-prop-1",
         "title": "Apoio à Candidatura Presidencial de Flávio Bolsonaro (PL)",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 76,
         "summary": "Apoio à Candidatura Presidencial de Flávio Bolsonaro (PL)",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -11232,14 +11232,14 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 231,
+        "rejectVotes": 13
       },
       {
         "id": "cand-jair-bolsonaro-prop-2",
         "title": "Defesa de Anistia Ampla e Liberdades Civis",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 90,
         "summary": "Defesa de Anistia Ampla e Liberdades Civis",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -11247,14 +11247,14 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 269,
+        "rejectVotes": 21
       },
       {
         "id": "cand-jair-bolsonaro-prop-3",
         "title": "Pautas da Família e Liberdade Econômica",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 84,
         "summary": "Pautas da Família e Liberdade Econômica",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -11262,8 +11262,8 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 307,
+        "rejectVotes": 29
       }
     ],
     "polls": {
@@ -11866,7 +11866,7 @@ var candidatesData = _root.candidatesData = [
         "id": "cand-claudio-castro-prop-1",
         "title": "Defesa Institucional e Recursos Judiciais",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 88,
         "summary": "Defesa Institucional e Recursos Judiciais",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -11874,14 +11874,14 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 223,
+        "rejectVotes": 85
       },
       {
         "id": "cand-claudio-castro-prop-2",
         "title": "Transição Administrativa do Estado do Rio de Janeiro",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 82,
         "summary": "Transição Administrativa do Estado do Rio de Janeiro",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -11889,14 +11889,14 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 261,
+        "rejectVotes": 13
       },
       {
         "id": "cand-claudio-castro-prop-3",
         "title": "Apoio às Candidaturas Parlamentares do PL-RJ",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 76,
         "summary": "Apoio às Candidaturas Parlamentares do PL-RJ",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -11904,8 +11904,8 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 299,
+        "rejectVotes": 21
       }
     ],
     "polls": {
@@ -12508,7 +12508,7 @@ var candidatesData = _root.candidatesData = [
         "id": "cand-flavio-bolsonaro-prop-1",
         "title": "Novo Teto de Gastos e Corte de 10 Ministérios",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 75,
         "summary": "Novo Teto de Gastos e Corte de 10 Ministérios",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -12516,14 +12516,14 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 450,
+        "rejectVotes": 72
       },
       {
         "id": "cand-flavio-bolsonaro-prop-2",
         "title": "Endurecimento Penal e Presídios Federais de Segurança Máxima",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 89,
         "summary": "Endurecimento Penal e Presídios Federais de Segurança Máxima",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -12531,14 +12531,14 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 488,
+        "rejectVotes": 80
       },
       {
         "id": "cand-flavio-bolsonaro-prop-3",
         "title": "Reforma do Judiciário e Fim da Reeleição no Executivo",
         "category": "Gestão Pública",
-        "score": 85,
+        "score": 83,
         "summary": "Reforma do Judiciário e Fim da Reeleição no Executivo",
         "problemStatement": "Necessidade de aprimoramento estrutural com foco no cidadão.",
         "solutionDetails": "Implementação técnica com monitoramento contínuo.",
@@ -12546,8 +12546,8 @@ var candidatesData = _root.candidatesData = [
         "timeline": "4 anos",
         "pros": "Impacto socioeconômico mensurável e modernização dos serviços.",
         "cons": "Demanda articulação orçamentária e pacto federativo.",
-        "supportVotes": 1200,
-        "rejectVotes": 150
+        "supportVotes": 526,
+        "rejectVotes": 88
       }
     ],
     "polls": {
@@ -26505,7 +26505,7 @@ var candidatesData = _root.candidatesData = [
         "id": "prop-zambelli-1",
         "title": "Cadeia para Maus-Tratos a Animais e Fundo de Castração Gratuita",
         "category": "Causa Animal",
-        "score": 9.5,
+        "score": 91,
         "summary": "Endurecimento de penas para violência contra cães e gatos, proibição definitiva de testes cosméticos e castração pública móvel.",
         "problemStatement": "Milhões de animais abandonados sofrem abusos nas ruas e transmitem zoonoses por ausência de políticas públicas de controle populacional.",
         "solutionDetails": "Aumento da pena mínima para 4 anos de reclusão sem fiança e custeio federal para unidades do Castramóvel em todos os municípios.",
@@ -26513,8 +26513,8 @@ var candidatesData = _root.candidatesData = [
         "timeline": "12 meses",
         "pros": "Saúde pública preventiva, controle ético de natalidade e respeito à vida animal.",
         "cons": "Demanda articulação dos municípios com conselhos de medicina veterinária.",
-        "supportVotes": 4480,
-        "rejectVotes": 150
+        "supportVotes": 786,
+        "rejectVotes": 88
       },
       {
         "id": "prop-zambelli-2",
@@ -86136,8 +86136,9 @@ var candidatesData = _root.candidatesData = [
         "title": "Maioridade Penal aos 16 Anos para Crimes Hediondos",
         "description": "Emenda Constitucional estabelecendo imputabilidade penal plena para latrocínio, homicídio e estupro.",
         "impact": "Fim da impunidade de criminosos juvenis violentos.",
-        "supportVotes": 1820,
-        "rejectVotes": 150
+        "supportVotes": 830,
+        "rejectVotes": 52,
+        "score": 75
       },
       {
         "id": "cand-carlos-jordy-prop-2",
@@ -102451,7 +102452,6 @@ var candidatesData = _root.candidatesData = [
     ]
   }
 ];
-
 var incumbentsData = _root.incumbentsData = [
   {
     "id": "inc-cand-joao-campos",

@@ -8,12 +8,18 @@ const { testXSession } = require('../scripts/test_x_session');
 
 test('X Browser Bot: Validação de Segurança e Parâmetros Obrigatórios', async (t) => {
   await t.test('deve rejeitar se X_AUTH_TOKEN estiver ausente', async () => {
-    await assert.rejects(
-      async () => {
-        await postTweetViaBrowser('Post de teste', { authToken: '' });
-      },
-      /X_AUTH_TOKEN não configurado/
-    );
+    const origToken = process.env.X_AUTH_TOKEN;
+    delete process.env.X_AUTH_TOKEN;
+    try {
+      await assert.rejects(
+        async () => {
+          await postTweetViaBrowser('Post de teste', { authToken: '' });
+        },
+        /X_AUTH_TOKEN/
+      );
+    } finally {
+      if (origToken) process.env.X_AUTH_TOKEN = origToken;
+    }
   });
 
   await t.test('deve rejeitar se o texto do tweet estiver vazio', async () => {

@@ -2304,11 +2304,11 @@
           title: p.title,
           description: p.description || p.summary || p.solutionDetails || '',
           budget: p.budget || p.budgetAndCost || 'Previsto em dota��o or�ament�ria',
-          feasibility: p.feasibility || (p.score ? `Viabilidade: ${p.score}/10` : 'Alta Viabilidade Or�ament�ria'),
+          feasibility: p.feasibility || (p.score ? `Viabilidade: ${p.score}/100` : 'Alta Viabilidade Or�ament�ria'),
           feasibilityClass: p.feasibilityClass || 'text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-300 dark:border-emerald-500/20',
           supportVotes: p.supportVotes || 150,
           rejectVotes: p.rejectVotes || 12
-        })) : fb.proposals,
+        })) : [],
         amendments: (apiCand.parliamentaryAmendments && apiCand.parliamentaryAmendments.totalAllocated) ? {
           total: apiCand.parliamentaryAmendments.totalAllocated,
           openBidPct: `${apiCand.parliamentaryAmendments.openBidPct || 100}%`,
@@ -5959,6 +5959,7 @@
   </nav>
 </body>
 </html>
+
 
 
 
