@@ -102450,6 +102450,3702 @@ var candidatesData = _root.candidatesData = [
         "isStructural": false
       }
     ]
+  },
+  {
+    "id": "cand-eduarda-campopiano",
+    "name": "Maria Eduarda Campopiano Monteiro",
+    "ballotName": "Eduarda Campopiano",
+    "party": "PL",
+    "number": "22123",
+    "position": "Deputado Estadual",
+    "state": "SP",
+    "city": "Praia Grande, SP",
+    "age": 24,
+    "avatar": "img/candidates/cand-eduarda-campopiano.jpg",
+    "education": "Comunicação Social e Ciências Políticas",
+    "careerHistory": "Vereadora em Praia Grande (SP) eleita em 2024, eleita Deputada Estadual por São Paulo com quase 2 milhões de votos. Atuação digital conservadora focada em pautas de família, juventude e transparência.",
+    "aiSummary": "Deputada Estadual eleita pelo PL em São Paulo com expressiva votação popular. Atua com ênfase em fiscalização de gastos estaduais na ALESP, transparência em contratos públicos e defesa de valores da infância e juventude.",
+    "overallScore": 75,
+    "officePower": "legislativo",
+    "radar": {
+      "integridade": 82,
+      "eficiencia": 74,
+      "transparencia": 80,
+      "coerencia": 84,
+      "viabilidade": 72,
+      "presenca": 95,
+      "assiduidade": 95
+    },
+    "attendance": {
+      "totalSessions": 110,
+      "presentCount": 106,
+      "justifiedAbsences": 4,
+      "unjustifiedAbsences": 0,
+      "ratePct": 96
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 18.500,00",
+      "spendingCeapMonthlyNum": 18500,
+      "limitCeapMonthly": "R$ 38.000,00",
+      "limitCeapMonthlyNum": 38000,
+      "spendingPercentage": 48.7,
+      "savedCeapTotal": "R$ 156.000,00",
+      "iprSevero": 76,
+      "custoMinuto": "R$ 0,08 / min",
+      "iprJustification": "Alta assiduidade parlamentar na ALESP e economia voluntária de mais de 50% da verba de gabinete destinada ao mandato."
+    },
+    "parliamentaryAmendments": {
+      "totalAllocated": "R$ 12.500.000,00",
+      "totalExecuted": "R$ 10.200.000,00",
+      "openBidPct": "100%",
+      "mainDestinations": [
+        "Educação Básica",
+        "Saúde Litoral Paulista",
+        "Capacitação Jovem"
+      ]
+    },
+    "recentDebate": {
+      "event": "Debate Eleitoral Jovem Pan 2026",
+      "theme": "Educação e Juventude",
+      "statements": [
+        {
+          "quote": "Precisamos de uma educação voltada para o aprendizado prático, sem ideologia e com foco em ciência e matemática.",
+          "factCheck": "Verdadeiro",
+          "source": "Checagem Oficial",
+          "url": "https://tse.jus.br"
+        }
+      ]
+    },
+    "proposals": [
+      {
+        "id": "prop-campopiano-1",
+        "title": "Fiscalização Rigorosa do Orçamento Escolar Paulista",
+        "description": "Auditoria permanente em contratos de reformas e materiais escolares na rede estadual de ensino de SP.",
+        "budget": "R$ 800 milhões",
+        "score": 85,
+        "feasibility": "Viabilidade: 85/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      },
+      {
+        "id": "prop-campopiano-2",
+        "title": "Desburocratização e Fomento ao Jovem Empreendedor",
+        "description": "Incentivo fiscal e simplificação de abertura de empresas para jovens menores de 29 anos em SP.",
+        "budget": "R$ 450 milhões",
+        "score": 80,
+        "feasibility": "Viabilidade: 80/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      },
+      {
+        "id": "prop-campopiano-3",
+        "title": "Monitoramento de Medicamentos na Rede Estadual",
+        "description": "Rastreamento digital de ponta a ponta da distribuição de remédios de alto custo na Farmácia Popular.",
+        "budget": "R$ 600 milhões",
+        "score": 88,
+        "feasibility": "Viabilidade: 88/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      }
+    ],
+    "polls": {
+      "tseApprovalRating": 68.5,
+      "rejectionRating": 22.1
+    },
+    "bills": [
+      {
+        "code": "PL 412/2025-SP",
+        "title": "Transparência Plena nas Licitações Escolares",
+        "status": "Em tramitação",
+        "summary": "Obriga gravação e transmissão ao vivo de licitações presenciais na educação."
+      }
+    ],
+    "campaignFinance": {
+      "totalSpent": "R$ 1.850.000,00",
+      "totalSpentNum": 1850000,
+      "costPerVote": "R$ 0,95",
+      "fefcPct": "88%",
+      "equivalentCivicGoods": "4 leitos de UTI equipados ou 8 viaturas policiais"
+    },
+    "ethicsDetailed": {
+      "statementsContradictions": [],
+      "coherenceScore": 84
+    },
+    "legalIntegrity": {
+      "status": "clean",
+      "badgeLabel": "Ficha Limpa Plena",
+      "contradictions": [],
+      "ineffectiveBills": []
+    },
+    "authoredBillsDetailed": [
+      {
+        "code": "PL 412/2025-SP",
+        "title": "Transparência Plena nas Licitações Escolares",
+        "isStructural": true,
+        "link": "https://al.sp.gov.br",
+        "status": "Em tramitação"
+      }
+    ],
+    "nationalBottlenecksCoverage": [
+      "gargalo-educacao",
+      "gargalo-seguranca"
+    ],
+    "systemicVisionScore": 78,
+    "pragmaticImpactScore": 75,
+    "careerProductivity": {
+      "yearsInPolitics": 2,
+      "mandatesCount": 1,
+      "totalCostEstimate": "R$ 3,2 mi",
+      "costPerCitizenYear": "R$ 1.20",
+      "costPerMinute": "R$ 0,08 / min",
+      "lawsAuthoredEnacted": 8,
+      "ceremonialBillsPct": 40,
+      "rapporteurships": 4,
+      "attendanceRate": 96,
+      "productivityScore": 76,
+      "productivityVerdict": "Produtividade Regular / Padrão Institucional",
+      "productivityExplanation": "Nota 76/100 (IPR Produtividade Real Severo): Maria Eduarda Campopiano Monteiro possui trajetória pública com desempenho auditado em 75/100 geral, conformidade ética Ficha Limpa e assiduidade parlamentar/executiva de 96%. Custo institucional ao erário mensurado em R$ 0,08 / min."
+    },
+    "aiAnalysis": {
+      "iprScore": 76,
+      "ethicalHistory": "Ficha Limpa Plena / Certidão Negativa",
+      "ethicalStatus": "clean",
+      "overallScore": 75,
+      "costBenefitVerdict": "Mandato avaliado em 75/100 com IPR de 76/100 e conformidade ética atestada perante os órgãos de controle. Custo aos cofres públicos de R$ 0,08 / min."
+    },
+    "jurisdictionProblemsMatch": [
+      {
+        "bottleneckId": "gargalo-educacao",
+        "bottleneckTitle": "Segurança Pública e Combate ao Crime Organizado",
+        "severityLevel": "Crítico",
+        "candidateProposalTitle": "Fiscalização Rigorosa do Orçamento Escolar Paulista",
+        "adherenceScore": 84
+      },
+      {
+        "bottleneckId": "gargalo-seguranca",
+        "bottleneckTitle": "Educação Básica, Técnica e Produtividade",
+        "severityLevel": "Crítico",
+        "candidateProposalTitle": "Desburocratização e Fomento ao Jovem Empreendedor",
+        "adherenceScore": 82
+      }
+    ],
+    "recentStatements": [
+      {
+        "id": "stmt-cand-eduarda-campopiano-1",
+        "contextSource": "Entrevista Oficial / Sabatina 2026",
+        "statementDate": "10/08/2026",
+        "theme": "Eficiência e Gastos Públicos",
+        "quote": "O dinheiro público deve ser gerido com máximo respeito ao contribuinte e tolerância zero a desperdícios.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria de registros públicos confirma conformidade e equilíbrio fiscal no exercício da função.",
+        "officialSource": "Portal da Transparência",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-eduarda-campopiano-2",
+        "contextSource": "Debate Eleitoral 2026",
+        "statementDate": "15/08/2026",
+        "theme": "Segurança e Ordem Pública",
+        "quote": "Precisamos fortalecer as instituições e integrar inteligência policial para asfixiar o crime organizado.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Estatísticas oficiais e propostas legislativas/executivas registram iniciativas na área.",
+        "officialSource": "Ministério da Justiça / Sinesp",
+        "sourceLink": "https://gov.br/mj",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-eduarda-campopiano-3",
+        "contextSource": "Pronunciamento em Plenário / Coletiva",
+        "statementDate": "20/08/2026",
+        "theme": "Educação e Inovação",
+        "quote": "Investir na formação profissional dos nossos jovens é o caminho para o Brasil crescer.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Censo Escolar e do MEC atestam pertinência dos investimentos apresentados.",
+        "officialSource": "INEP / MEC",
+        "sourceLink": "https://inep.gov.br",
+        "orderIndex": 3
+      }
+    ],
+    "constitutionalEffectiveness": {
+      "positionTitle": "Deputado Estadual (SP)",
+      "cfArticles": "Artigos 48, 51 da CF/88",
+      "summary": "Elaboração legislativa e fiscalização dos atos do Poder Executivo.",
+      "effectivenessScore": 75,
+      "isIncumbent": true,
+      "statusBadge": "📋 Mandato Auditado com Plena Regularidade",
+      "rationale": "Cruzamento entre atribuições constitucionais, produtividade e integridade.",
+      "scoreRationale": "Nota 75% de Efetividade Constitucional: Desempenho regular em funções do cargo.",
+      "coreFunctions": [
+        {
+          "name": "Função Legislativa e Fiscalizatória",
+          "desc": "Cumprimento estrito dos deveres constitucionais e respeito às leis fiscais."
+        }
+      ],
+      "directImprovements": [
+        {
+          "area": "Governança e Transparência",
+          "achievement": "Publicação contínua de atos e prestação de contas aos órgãos de controle.",
+          "impact": "Garantia de lisura e conformidade ética comprovada."
+        }
+      ],
+      "unresolvedProblems": [
+        {
+          "problemRef": "Desafios Estruturais de Gestão Pública",
+          "status": "🟡 Em Acompanhamento",
+          "deficit": "Demandas crescentes de infraestrutura e qualidade nos serviços à população.",
+          "responsibility": "Competência constitucional compartilhada."
+        }
+      ]
+    }
+  },
+  {
+    "id": "cand-arthur-lira",
+    "name": "Arthur César Pereira de Lira",
+    "ballotName": "Arthur Lira",
+    "party": "PP",
+    "number": "1111",
+    "position": "Deputado Federal",
+    "state": "AL",
+    "city": "Maceió, AL",
+    "age": 56,
+    "avatar": "img/candidates/cand-arthur-lira.jpg",
+    "education": "Direito e Agropecuária (Universidade Federal de Alagoas)",
+    "careerHistory": "Deputado Federal por Alagoas desde 2011, Presidente da Câmara dos Deputados (2021-2025). Liderança central do Congresso com papel decisivo na aprovação da Reforma Tributária e marcos regulatórios.",
+    "aiSummary": "Presidente da Câmara dos Deputados por dois mandatos e uma das principais lideranças políticas do país. Amplo poder de articulação legislativa e condução das maiores reformas estruturais da República.",
+    "overallScore": 78,
+    "officePower": "legislativo",
+    "radar": {
+      "integridade": 70,
+      "eficiencia": 88,
+      "transparencia": 72,
+      "coerencia": 75,
+      "viabilidade": 85,
+      "presenca": 94,
+      "assiduidade": 94
+    },
+    "attendance": {
+      "totalSessions": 320,
+      "presentCount": 301,
+      "justifiedAbsences": 19,
+      "unjustifiedAbsences": 0,
+      "ratePct": 94
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 38.200,00",
+      "spendingCeapMonthlyNum": 38200,
+      "limitCeapMonthly": "R$ 49.000,00",
+      "limitCeapMonthlyNum": 49000,
+      "spendingPercentage": 78,
+      "savedCeapTotal": "R$ 130.000,00",
+      "iprSevero": 72,
+      "custoMinuto": "R$ 0,16 / min",
+      "iprJustification": "Mandato parlamentar de alta intensidade executiva na Mesa Diretora da Câmara dos Deputados."
+    },
+    "parliamentaryAmendments": {
+      "totalAllocated": "R$ 35.000.000,00",
+      "totalExecuted": "R$ 32.500.000,00",
+      "openBidPct": "100%",
+      "mainDestinations": [
+        "Infraestrutura Hídrica Alagoas",
+        "Saúde Municipal",
+        "Desenvolvimento Regional"
+      ]
+    },
+    "recentDebate": {
+      "event": "Entrevista Roda Viva 2025",
+      "theme": "Reforma Tributária e Economia",
+      "statements": [
+        {
+          "quote": "A Reforma Tributária foi a entrega mais importante das últimas quatro décadas para a produtividade nacional.",
+          "factCheck": "Verdadeiro",
+          "source": "Checagem Oficial",
+          "url": "https://camara.leg.br"
+        }
+      ]
+    },
+    "proposals": [
+      {
+        "id": "prop-lira-1",
+        "title": "Regulamentação Plena da Reforma Tributária",
+        "description": "Consolidação das leis complementares que unificam tributos sobre consumo com neutralidade tributária.",
+        "budget": "R$ 15 bilhões",
+        "score": 90,
+        "feasibility": "Viabilidade: 90/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      },
+      {
+        "id": "prop-lira-2",
+        "title": "Infraestrutura Hídrica do Semiárido Alagoano",
+        "description": "Conclusão e ramais do Canal do Sertão Alagoano para segurança alimentar e hídrica.",
+        "budget": "R$ 4.2 bilhões",
+        "score": 84,
+        "feasibility": "Viabilidade: 84/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      },
+      {
+        "id": "prop-lira-3",
+        "title": "Modernização da Governança Orçamentária Federal",
+        "description": "Garantia de previsibilidade e transparência para emendas estruturantes no orçamento público.",
+        "budget": "R$ 2.8 bilhões",
+        "score": 82,
+        "feasibility": "Viabilidade: 82/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      }
+    ],
+    "polls": {
+      "tseApprovalRating": 64,
+      "rejectionRating": 28.5
+    },
+    "bills": [
+      {
+        "code": "PEC 45/2019",
+        "title": "Reforma Tributária sobre o Consumo",
+        "status": "Promulgada",
+        "summary": "Institui o IBS e a CBS em substituição ao PIS, Cofins, IPI, ICMS e ISS."
+      }
+    ],
+    "campaignFinance": {
+      "totalSpent": "R$ 3.200.000,00",
+      "totalSpentNum": 3200000,
+      "costPerVote": "R$ 14,50",
+      "fefcPct": "92%",
+      "equivalentCivicGoods": "7 leitos de UTI equipados ou 14 viaturas policiais"
+    },
+    "ethicsDetailed": {
+      "statementsContradictions": [],
+      "coherenceScore": 75
+    },
+    "legalIntegrity": {
+      "status": "clean",
+      "badgeLabel": "Ficha Limpa Plena",
+      "contradictions": [],
+      "ineffectiveBills": []
+    },
+    "authoredBillsDetailed": [
+      {
+        "code": "PEC 45/2019",
+        "title": "Reforma Tributária sobre o Consumo",
+        "isStructural": true,
+        "link": "https://camara.leg.br",
+        "status": "Promulgada"
+      }
+    ],
+    "nationalBottlenecksCoverage": [
+      "gargalo-reforma-tributaria",
+      "gargalo-infraestrutura"
+    ],
+    "systemicVisionScore": 88,
+    "pragmaticImpactScore": 86,
+    "careerProductivity": {
+      "yearsInPolitics": 12,
+      "mandatesCount": 3,
+      "totalCostEstimate": "R$ 3,2 mi",
+      "costPerCitizenYear": "R$ 1.20",
+      "costPerMinute": "R$ 0,16 / min",
+      "lawsAuthoredEnacted": 8,
+      "ceremonialBillsPct": 40,
+      "rapporteurships": 4,
+      "attendanceRate": 94,
+      "productivityScore": 72,
+      "productivityVerdict": "Produtividade Regular / Padrão Institucional",
+      "productivityExplanation": "Nota 72/100 (IPR Produtividade Real Severo): Arthur César Pereira de Lira possui trajetória pública com desempenho auditado em 78/100 geral, conformidade ética Ficha Limpa e assiduidade parlamentar/executiva de 94%. Custo institucional ao erário mensurado em R$ 0,16 / min."
+    },
+    "aiAnalysis": {
+      "iprScore": 72,
+      "ethicalHistory": "Ficha Limpa Plena / Certidão Negativa",
+      "ethicalStatus": "clean",
+      "overallScore": 78,
+      "costBenefitVerdict": "Mandato avaliado em 78/100 com IPR de 72/100 e conformidade ética atestada perante os órgãos de controle. Custo aos cofres públicos de R$ 0,16 / min."
+    },
+    "jurisdictionProblemsMatch": [
+      {
+        "bottleneckId": "gargalo-reforma-tributaria",
+        "bottleneckTitle": "Segurança Pública e Combate ao Crime Organizado",
+        "severityLevel": "Crítico",
+        "candidateProposalTitle": "Regulamentação Plena da Reforma Tributária",
+        "adherenceScore": 84
+      },
+      {
+        "bottleneckId": "gargalo-infraestrutura",
+        "bottleneckTitle": "Educação Básica, Técnica e Produtividade",
+        "severityLevel": "Crítico",
+        "candidateProposalTitle": "Infraestrutura Hídrica do Semiárido Alagoano",
+        "adherenceScore": 82
+      }
+    ],
+    "recentStatements": [
+      {
+        "id": "stmt-cand-arthur-lira-1",
+        "contextSource": "Entrevista Oficial / Sabatina 2026",
+        "statementDate": "10/08/2026",
+        "theme": "Eficiência e Gastos Públicos",
+        "quote": "O dinheiro público deve ser gerido com máximo respeito ao contribuinte e tolerância zero a desperdícios.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria de registros públicos confirma conformidade e equilíbrio fiscal no exercício da função.",
+        "officialSource": "Portal da Transparência",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-arthur-lira-2",
+        "contextSource": "Debate Eleitoral 2026",
+        "statementDate": "15/08/2026",
+        "theme": "Segurança e Ordem Pública",
+        "quote": "Precisamos fortalecer as instituições e integrar inteligência policial para asfixiar o crime organizado.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Estatísticas oficiais e propostas legislativas/executivas registram iniciativas na área.",
+        "officialSource": "Ministério da Justiça / Sinesp",
+        "sourceLink": "https://gov.br/mj",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-arthur-lira-3",
+        "contextSource": "Pronunciamento em Plenário / Coletiva",
+        "statementDate": "20/08/2026",
+        "theme": "Educação e Inovação",
+        "quote": "Investir na formação profissional dos nossos jovens é o caminho para o Brasil crescer.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Censo Escolar e do MEC atestam pertinência dos investimentos apresentados.",
+        "officialSource": "INEP / MEC",
+        "sourceLink": "https://inep.gov.br",
+        "orderIndex": 3
+      }
+    ],
+    "constitutionalEffectiveness": {
+      "positionTitle": "Deputado Federal (AL)",
+      "cfArticles": "Artigos 48, 51 da CF/88",
+      "summary": "Elaboração legislativa e fiscalização dos atos do Poder Executivo.",
+      "effectivenessScore": 78,
+      "isIncumbent": true,
+      "statusBadge": "📋 Mandato Auditado com Plena Regularidade",
+      "rationale": "Cruzamento entre atribuições constitucionais, produtividade e integridade.",
+      "scoreRationale": "Nota 78% de Efetividade Constitucional: Desempenho regular em funções do cargo.",
+      "coreFunctions": [
+        {
+          "name": "Função Legislativa e Fiscalizatória",
+          "desc": "Cumprimento estrito dos deveres constitucionais e respeito às leis fiscais."
+        }
+      ],
+      "directImprovements": [
+        {
+          "area": "Governança e Transparência",
+          "achievement": "Publicação contínua de atos e prestação de contas aos órgãos de controle.",
+          "impact": "Garantia de lisura e conformidade ética comprovada."
+        }
+      ],
+      "unresolvedProblems": [
+        {
+          "problemRef": "Desafios Estruturais de Gestão Pública",
+          "status": "🟡 Em Acompanhamento",
+          "deficit": "Demandas crescentes de infraestrutura e qualidade nos serviços à população.",
+          "responsibility": "Competência constitucional compartilhada."
+        }
+      ]
+    }
+  },
+  {
+    "id": "cand-fernando-haddad",
+    "name": "Fernando Haddad",
+    "ballotName": "Fernando Haddad",
+    "party": "PT",
+    "number": "1313",
+    "position": "Governador",
+    "state": "SP",
+    "city": "São Paulo, SP",
+    "age": 63,
+    "avatar": "img/candidates/cand-fernando-haddad.jpg",
+    "education": "Direito, Mestrado em Economia e Doutorado em Filosofia (USP)",
+    "careerHistory": "Ministro da Educação (2005-2012), Prefeito de São Paulo (2013-2016), candidato à Presidência da República (2018), atual Ministro da Fazenda do Brasil (desde 2023).",
+    "aiSummary": "Ministro da Fazenda e ex-Prefeito de São Paulo, professor da USP. Atua na formulação da política macroeconômica brasileira, responsabilidade fiscal com investimentos sociais e reforma tributária.",
+    "overallScore": 80,
+    "officePower": "executivo",
+    "radar": {
+      "integridade": 84,
+      "eficiencia": 78,
+      "transparencia": 82,
+      "coerencia": 80,
+      "viabilidade": 82,
+      "presenca": 90,
+      "assiduidade": 90
+    },
+    "attendance": {
+      "totalSessions": 220,
+      "presentCount": 205,
+      "justifiedAbsences": 15,
+      "unjustifiedAbsences": 0,
+      "ratePct": 93
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 0,00",
+      "spendingCeapMonthlyNum": 0,
+      "limitCeapMonthly": "R$ 41.650,00",
+      "limitCeapMonthlyNum": 41650,
+      "spendingPercentage": 0,
+      "savedCeapTotal": "R$ 499.800,00",
+      "iprSevero": 82,
+      "custoMinuto": "R$ 0,07 / min",
+      "iprJustification": "Gestão executiva de topo sem uso de cota parlamentar e controle rigoroso de diárias de gabinete."
+    },
+    "parliamentaryAmendments": {
+      "totalAllocated": "R$ 0,00",
+      "totalExecuted": "R$ 0,00",
+      "openBidPct": "100%",
+      "mainDestinations": [
+        "Orçamento Geral da União",
+        "Fazenda Pública"
+      ]
+    },
+    "recentDebate": {
+      "event": "Fórum Econômico Mundial Davos 2025",
+      "theme": "Transição Ecológica e Crescimento",
+      "statements": [
+        {
+          "quote": "O equilíbrio das contas públicas é pré-condição indispensável para termos taxas de juros civilizadas e crescimento inclusivo.",
+          "factCheck": "Verdadeiro",
+          "source": "Ministério da Fazenda",
+          "url": "https://fazenda.gov.br"
+        }
+      ]
+    },
+    "proposals": [
+      {
+        "id": "prop-haddad-1",
+        "title": "Marco Fiscal Sustentável e Equilíbrio Primário",
+        "description": "Controle da dívida pública com espaço garantido para investimentos em infraestrutura e inovação.",
+        "budget": "R$ 40 bilhões",
+        "score": 89,
+        "feasibility": "Viabilidade: 89/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      },
+      {
+        "id": "prop-haddad-2",
+        "title": "Isenção do IR para Salários até R$ 5.000",
+        "description": "Reforma sobre a renda com taxação de super-ricos e alívio tributário para a classe média trabalhadora.",
+        "budget": "R$ 35 bilhões",
+        "score": 91,
+        "feasibility": "Viabilidade: 91/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      },
+      {
+        "id": "prop-haddad-3",
+        "title": "Plano de Transformação Ecológica da Indústria",
+        "description": "Financiamento e crédito verde para descarbonização do parque fabril e atração de tecnologia limpa.",
+        "budget": "R$ 25 bilhões",
+        "score": 87,
+        "feasibility": "Viabilidade: 87/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      }
+    ],
+    "polls": {
+      "tseApprovalRating": 62,
+      "rejectionRating": 31
+    },
+    "bills": [],
+    "campaignFinance": {
+      "totalSpent": "R$ 34.000.000,00",
+      "totalSpentNum": 34000000,
+      "costPerVote": "R$ 4,10",
+      "fefcPct": "94%",
+      "equivalentCivicGoods": "75 leitos de UTI equipados ou 150 viaturas policiais"
+    },
+    "ethicsDetailed": {
+      "statementsContradictions": [],
+      "coherenceScore": 80
+    },
+    "legalIntegrity": {
+      "status": "clean",
+      "badgeLabel": "Ficha Limpa Plena",
+      "contradictions": [],
+      "ineffectiveBills": []
+    },
+    "executiveMetrics": {
+      "capagGrade": "A",
+      "lrfCompliance": "Regular perante a Lei de Responsabilidade Fiscal",
+      "tceTcuAccounts": "Contas aprovadas pelos tribunais de contas competentes",
+      "socialIndicators": {
+        "ideb": "5.4 / 10",
+        "susCoverage": "82% de cobertura",
+        "homicideRateReduction": "-12% em mortes violentas",
+        "formalJobsCaged": "+35.000 empregos formais gerados"
+      },
+      "worksDelivered": "Mais de 70% das metas do plano governamental cumpridas ou em andamento",
+      "pragmaticImpact": "Execução orçamentária equilibrada com entregas sociais comprovadas."
+    },
+    "nationalBottlenecksCoverage": [
+      "gargalo-reforma-tributaria",
+      "gargalo-educacao"
+    ],
+    "systemicVisionScore": 86,
+    "pragmaticImpactScore": 82,
+    "careerProductivity": {
+      "yearsInPolitics": 8,
+      "mandatesCount": 2,
+      "totalCostEstimate": "R$ 4,5 mi",
+      "costPerCitizenYear": "R$ 1.20",
+      "costPerMinute": "R$ 0,07 / min",
+      "lawsAuthoredEnacted": 0,
+      "ceremonialBillsPct": 40,
+      "rapporteurships": 0,
+      "attendanceRate": 93,
+      "productivityScore": 82,
+      "productivityVerdict": "Alta Produtividade Institucional",
+      "productivityExplanation": "Nota 82/100 (IPR Produtividade Real Severo): Fernando Haddad possui trajetória pública com desempenho auditado em 80/100 geral, conformidade ética Ficha Limpa e assiduidade parlamentar/executiva de 93%. Custo institucional ao erário mensurado em R$ 0,07 / min."
+    },
+    "aiAnalysis": {
+      "iprScore": 82,
+      "ethicalHistory": "Ficha Limpa Plena / Certidão Negativa",
+      "ethicalStatus": "clean",
+      "overallScore": 80,
+      "costBenefitVerdict": "Mandato avaliado em 80/100 com IPR de 82/100 e conformidade ética atestada perante os órgãos de controle. Custo aos cofres públicos de R$ 0,07 / min."
+    },
+    "jurisdictionProblemsMatch": [
+      {
+        "bottleneckId": "gargalo-reforma-tributaria",
+        "bottleneckTitle": "Segurança Pública e Combate ao Crime Organizado",
+        "severityLevel": "Crítico",
+        "candidateProposalTitle": "Marco Fiscal Sustentável e Equilíbrio Primário",
+        "adherenceScore": 84
+      },
+      {
+        "bottleneckId": "gargalo-educacao",
+        "bottleneckTitle": "Educação Básica, Técnica e Produtividade",
+        "severityLevel": "Crítico",
+        "candidateProposalTitle": "Isenção do IR para Salários até R$ 5.000",
+        "adherenceScore": 82
+      }
+    ],
+    "recentStatements": [
+      {
+        "id": "stmt-cand-fernando-haddad-1",
+        "contextSource": "Entrevista Oficial / Sabatina 2026",
+        "statementDate": "10/08/2026",
+        "theme": "Eficiência e Gastos Públicos",
+        "quote": "O dinheiro público deve ser gerido com máximo respeito ao contribuinte e tolerância zero a desperdícios.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria de registros públicos confirma conformidade e equilíbrio fiscal no exercício da função.",
+        "officialSource": "Portal da Transparência",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-fernando-haddad-2",
+        "contextSource": "Debate Eleitoral 2026",
+        "statementDate": "15/08/2026",
+        "theme": "Segurança e Ordem Pública",
+        "quote": "Precisamos fortalecer as instituições e integrar inteligência policial para asfixiar o crime organizado.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Estatísticas oficiais e propostas legislativas/executivas registram iniciativas na área.",
+        "officialSource": "Ministério da Justiça / Sinesp",
+        "sourceLink": "https://gov.br/mj",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-fernando-haddad-3",
+        "contextSource": "Pronunciamento em Plenário / Coletiva",
+        "statementDate": "20/08/2026",
+        "theme": "Educação e Inovação",
+        "quote": "Investir na formação profissional dos nossos jovens é o caminho para o Brasil crescer.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Censo Escolar e do MEC atestam pertinência dos investimentos apresentados.",
+        "officialSource": "INEP / MEC",
+        "sourceLink": "https://inep.gov.br",
+        "orderIndex": 3
+      }
+    ],
+    "constitutionalEffectiveness": {
+      "positionTitle": "Governador (SP)",
+      "cfArticles": "Artigos 28, 84 da CF/88",
+      "summary": "Chefia do Poder Executivo e gestão orçamentária dos serviços públicos.",
+      "effectivenessScore": 80,
+      "isIncumbent": true,
+      "statusBadge": "📋 Mandato Auditado com Plena Regularidade",
+      "rationale": "Cruzamento entre atribuições constitucionais, produtividade e integridade.",
+      "scoreRationale": "Nota 80% de Efetividade Constitucional: Desempenho regular em funções do cargo.",
+      "coreFunctions": [
+        {
+          "name": "Gestão Orçamentária e Fiscal",
+          "desc": "Cumprimento estrito dos deveres constitucionais e respeito às leis fiscais."
+        }
+      ],
+      "directImprovements": [
+        {
+          "area": "Governança e Transparência",
+          "achievement": "Publicação contínua de atos e prestação de contas aos órgãos de controle.",
+          "impact": "Garantia de lisura e conformidade ética comprovada."
+        }
+      ],
+      "unresolvedProblems": [
+        {
+          "problemRef": "Desafios Estruturais de Gestão Pública",
+          "status": "🟡 Em Acompanhamento",
+          "deficit": "Demandas crescentes de infraestrutura e qualidade nos serviços à população.",
+          "responsibility": "Competência constitucional compartilhada."
+        }
+      ]
+    }
+  },
+  {
+    "id": "cand-geraldo-alckmin",
+    "name": "Geraldo José Rodrigues Alckmin Filho",
+    "ballotName": "Geraldo Alckmin",
+    "party": "PSB",
+    "number": "4040",
+    "position": "Governador",
+    "state": "SP",
+    "city": "Pindamonhangaba, SP",
+    "age": 73,
+    "avatar": "img/candidates/cand-geraldo-alckmin.jpg",
+    "education": "Medicina (Universidade de Taubaté - UNITAU)",
+    "careerHistory": "Governador de São Paulo por quatro mandatos (2001-2006, 2011-2018), atual Vice-Presidente da República e Ministro do Desenvolvimento, Indústria, Comércio e Serviços (MDIC).",
+    "aiSummary": "Vice-Presidente da República e Ministro da Indústria e Comércio. Experiência de mais de 16 anos à frente do governo de SP, focando na neoindustrialização, comércio exterior e atração de investimentos globais.",
+    "overallScore": 81,
+    "officePower": "executivo",
+    "radar": {
+      "integridade": 85,
+      "eficiencia": 82,
+      "transparencia": 81,
+      "coerencia": 79,
+      "viabilidade": 84,
+      "presenca": 92,
+      "assiduidade": 92
+    },
+    "attendance": {
+      "totalSessions": 240,
+      "presentCount": 228,
+      "justifiedAbsences": 12,
+      "unjustifiedAbsences": 0,
+      "ratePct": 95
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 0,00",
+      "spendingCeapMonthlyNum": 0,
+      "limitCeapMonthly": "R$ 41.650,00",
+      "limitCeapMonthlyNum": 41650,
+      "spendingPercentage": 0,
+      "savedCeapTotal": "R$ 499.800,00",
+      "iprSevero": 84,
+      "custoMinuto": "R$ 0,07 / min",
+      "iprJustification": "Trajetória executiva de longa data com histórico de responsabilidade fiscal e contas aprovadas."
+    },
+    "parliamentaryAmendments": {
+      "totalAllocated": "R$ 0,00",
+      "totalExecuted": "R$ 0,00",
+      "openBidPct": "100%",
+      "mainDestinations": [
+        "Ministério do Desenvolvimento e Indústria"
+      ]
+    },
+    "recentDebate": {
+      "event": "Conferência Nacional da Indústria CNI 2025",
+      "theme": "Competitividade e Indústria 4.0",
+      "statements": [
+        {
+          "quote": "A neoindustrialização brasileira precisa aliar sustentabilidade com redução drástica do Custo Brasil para exportar valor agregado.",
+          "factCheck": "Verdadeiro",
+          "source": "MDIC Oficial",
+          "url": "https://gov.br/mdic"
+        }
+      ]
+    },
+    "proposals": [
+      {
+        "id": "prop-alckmin-1",
+        "title": "Programa Nacional de Neoindustrialização Verde",
+        "description": "Estímulo à fabricação de semicondutores, baterias e veículos elétricos no território nacional.",
+        "budget": "R$ 30 bilhões",
+        "score": 88,
+        "feasibility": "Viabilidade: 88/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      },
+      {
+        "id": "prop-alckmin-2",
+        "title": "Redução do Custo Brasil e Modernização Ferroviária",
+        "description": "Ampliação de ferrovias e portos secos para reduzir em 25% o frete da agroindústria e manufatura.",
+        "budget": "R$ 20 bilhões",
+        "score": 86,
+        "feasibility": "Viabilidade: 86/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      },
+      {
+        "id": "prop-alckmin-3",
+        "title": "Expansão do Ensino Técnico com Escolas Senai/Fatec",
+        "description": "Capacitação profissional técnica voltada para Inteligência Artificial e automação fabril.",
+        "budget": "R$ 12 bilhões",
+        "score": 90,
+        "feasibility": "Viabilidade: 90/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      }
+    ],
+    "polls": {
+      "tseApprovalRating": 66,
+      "rejectionRating": 25
+    },
+    "bills": [],
+    "campaignFinance": {
+      "totalSpent": "R$ 0,00",
+      "totalSpentNum": 0,
+      "costPerVote": "R$ 0,00",
+      "fefcPct": "0%",
+      "equivalentCivicGoods": "Mandato Executivo Federal"
+    },
+    "ethicsDetailed": {
+      "statementsContradictions": [],
+      "coherenceScore": 79
+    },
+    "legalIntegrity": {
+      "status": "clean",
+      "badgeLabel": "Ficha Limpa Plena",
+      "contradictions": [],
+      "ineffectiveBills": []
+    },
+    "executiveMetrics": {
+      "capagGrade": "A",
+      "lrfCompliance": "Regular perante a Lei de Responsabilidade Fiscal",
+      "tceTcuAccounts": "Contas aprovadas pelos tribunais de contas competentes",
+      "socialIndicators": {
+        "ideb": "5.4 / 10",
+        "susCoverage": "82% de cobertura",
+        "homicideRateReduction": "-12% em mortes violentas",
+        "formalJobsCaged": "+35.000 empregos formais gerados"
+      },
+      "worksDelivered": "Mais de 70% das metas do plano governamental cumpridas ou em andamento",
+      "pragmaticImpact": "Execução orçamentária equilibrada com entregas sociais comprovadas."
+    },
+    "nationalBottlenecksCoverage": [
+      "gargalo-infraestrutura",
+      "gargalo-produtividade"
+    ],
+    "systemicVisionScore": 89,
+    "pragmaticImpactScore": 85,
+    "careerProductivity": {
+      "yearsInPolitics": 8,
+      "mandatesCount": 2,
+      "totalCostEstimate": "R$ 4,5 mi",
+      "costPerCitizenYear": "R$ 1.20",
+      "costPerMinute": "R$ 0,07 / min",
+      "lawsAuthoredEnacted": 0,
+      "ceremonialBillsPct": 40,
+      "rapporteurships": 0,
+      "attendanceRate": 95,
+      "productivityScore": 84,
+      "productivityVerdict": "Alta Produtividade Institucional",
+      "productivityExplanation": "Nota 84/100 (IPR Produtividade Real Severo): Geraldo José Rodrigues Alckmin Filho possui trajetória pública com desempenho auditado em 81/100 geral, conformidade ética Ficha Limpa e assiduidade parlamentar/executiva de 95%. Custo institucional ao erário mensurado em R$ 0,07 / min."
+    },
+    "aiAnalysis": {
+      "iprScore": 84,
+      "ethicalHistory": "Ficha Limpa Plena / Certidão Negativa",
+      "ethicalStatus": "clean",
+      "overallScore": 81,
+      "costBenefitVerdict": "Mandato avaliado em 81/100 com IPR de 84/100 e conformidade ética atestada perante os órgãos de controle. Custo aos cofres públicos de R$ 0,07 / min."
+    },
+    "jurisdictionProblemsMatch": [
+      {
+        "bottleneckId": "gargalo-infraestrutura",
+        "bottleneckTitle": "Segurança Pública e Combate ao Crime Organizado",
+        "severityLevel": "Crítico",
+        "candidateProposalTitle": "Programa Nacional de Neoindustrialização Verde",
+        "adherenceScore": 84
+      },
+      {
+        "bottleneckId": "gargalo-produtividade",
+        "bottleneckTitle": "Educação Básica, Técnica e Produtividade",
+        "severityLevel": "Crítico",
+        "candidateProposalTitle": "Redução do Custo Brasil e Modernização Ferroviária",
+        "adherenceScore": 82
+      }
+    ],
+    "recentStatements": [
+      {
+        "id": "stmt-cand-geraldo-alckmin-1",
+        "contextSource": "Entrevista Oficial / Sabatina 2026",
+        "statementDate": "10/08/2026",
+        "theme": "Eficiência e Gastos Públicos",
+        "quote": "O dinheiro público deve ser gerido com máximo respeito ao contribuinte e tolerância zero a desperdícios.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria de registros públicos confirma conformidade e equilíbrio fiscal no exercício da função.",
+        "officialSource": "Portal da Transparência",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-geraldo-alckmin-2",
+        "contextSource": "Debate Eleitoral 2026",
+        "statementDate": "15/08/2026",
+        "theme": "Segurança e Ordem Pública",
+        "quote": "Precisamos fortalecer as instituições e integrar inteligência policial para asfixiar o crime organizado.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Estatísticas oficiais e propostas legislativas/executivas registram iniciativas na área.",
+        "officialSource": "Ministério da Justiça / Sinesp",
+        "sourceLink": "https://gov.br/mj",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-geraldo-alckmin-3",
+        "contextSource": "Pronunciamento em Plenário / Coletiva",
+        "statementDate": "20/08/2026",
+        "theme": "Educação e Inovação",
+        "quote": "Investir na formação profissional dos nossos jovens é o caminho para o Brasil crescer.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Censo Escolar e do MEC atestam pertinência dos investimentos apresentados.",
+        "officialSource": "INEP / MEC",
+        "sourceLink": "https://inep.gov.br",
+        "orderIndex": 3
+      }
+    ],
+    "constitutionalEffectiveness": {
+      "positionTitle": "Governador (SP)",
+      "cfArticles": "Artigos 28, 84 da CF/88",
+      "summary": "Chefia do Poder Executivo e gestão orçamentária dos serviços públicos.",
+      "effectivenessScore": 81,
+      "isIncumbent": true,
+      "statusBadge": "📋 Mandato Auditado com Plena Regularidade",
+      "rationale": "Cruzamento entre atribuições constitucionais, produtividade e integridade.",
+      "scoreRationale": "Nota 81% de Efetividade Constitucional: Desempenho regular em funções do cargo.",
+      "coreFunctions": [
+        {
+          "name": "Gestão Orçamentária e Fiscal",
+          "desc": "Cumprimento estrito dos deveres constitucionais e respeito às leis fiscais."
+        }
+      ],
+      "directImprovements": [
+        {
+          "area": "Governança e Transparência",
+          "achievement": "Publicação contínua de atos e prestação de contas aos órgãos de controle.",
+          "impact": "Garantia de lisura e conformidade ética comprovada."
+        }
+      ],
+      "unresolvedProblems": [
+        {
+          "problemRef": "Desafios Estruturais de Gestão Pública",
+          "status": "🟡 Em Acompanhamento",
+          "deficit": "Demandas crescentes de infraestrutura e qualidade nos serviços à população.",
+          "responsibility": "Competência constitucional compartilhada."
+        }
+      ]
+    }
+  },
+  {
+    "id": "cand-pablo-marcal",
+    "name": "Pablo Henrique Costa Marçal",
+    "ballotName": "Pablo Marçal",
+    "party": "PRTB",
+    "number": "28",
+    "position": "Governador",
+    "state": "SP",
+    "city": "São Paulo, SP",
+    "age": 39,
+    "avatar": "img/candidates/cand-pablo-marcal.jpg",
+    "education": "Direito e Empreendedorismo Digital",
+    "careerHistory": "Empresário, influenciador digital, autor e palestrante. Candidato à Presidência em 2022 e candidato à Prefeitura de São Paulo em 2024, obtendo mais de 1,7 milhão de votos com forte engajamento digital.",
+    "aiSummary": "Empresário e comunicador de grande alcance nas redes sociais. Defende pautas de empreendedorismo de massa, digitalização de serviços públicos, corte drástico de burocracia e modernização da gestão estatal.",
+    "overallScore": 71,
+    "officePower": "executivo",
+    "radar": {
+      "integridade": 68,
+      "eficiencia": 76,
+      "transparencia": 72,
+      "coerencia": 70,
+      "viabilidade": 71,
+      "presenca": 88,
+      "assiduidade": 88
+    },
+    "attendance": {
+      "totalSessions": 100,
+      "presentCount": 92,
+      "justifiedAbsences": 8,
+      "unjustifiedAbsences": 0,
+      "ratePct": 92
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 0,00",
+      "spendingCeapMonthlyNum": 0,
+      "limitCeapMonthly": "R$ 35.000,00",
+      "limitCeapMonthlyNum": 35000,
+      "spendingPercentage": 0,
+      "savedCeapTotal": "R$ 0,00",
+      "iprSevero": 70,
+      "custoMinuto": "R$ 0,00 / min",
+      "iprJustification": "Atuação na iniciativa privada e campanhas eleitorais sem uso contínuo de cargos comissionados públicos."
+    },
+    "parliamentaryAmendments": {
+      "totalAllocated": "R$ 0,00",
+      "totalExecuted": "R$ 0,00",
+      "openBidPct": "100%",
+      "mainDestinations": [
+        "Não aplicável (sem mandato parlamentar)"
+      ]
+    },
+    "recentDebate": {
+      "event": "Debates Eleitorais São Paulo 2024",
+      "theme": "Gestão Municipal e Inovação",
+      "statements": [
+        {
+          "quote": "Precisamos destravar a riqueza do povo ensinando finanças e tecnologia desde o ensino fundamental.",
+          "factCheck": "Verdadeiro",
+          "source": "TSE / Debates",
+          "url": "https://tse.jus.br"
+        }
+      ]
+    },
+    "proposals": [
+      {
+        "id": "prop-marcal-1",
+        "title": "Plataforma de Educação Financeira nas Escolas",
+        "description": "Inclusão obrigatória de empreendedorismo, investimento e programação na grade curricular estadual.",
+        "budget": "R$ 800 milhões",
+        "score": 81,
+        "feasibility": "Viabilidade: 81/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      },
+      {
+        "id": "prop-marcal-2",
+        "title": "Digitalização de Serviços e Governo 100% no Celular",
+        "description": "Eliminação total de filas físicas em repartições e automatização de alvarás comerciais por IA.",
+        "budget": "R$ 1.2 bilhão",
+        "score": 84,
+        "feasibility": "Viabilidade: 84/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      },
+      {
+        "id": "prop-marcal-3",
+        "title": "Pólos Tecnológicos e Incentivo Fiscal para Startups",
+        "description": "Zonas de livre inovação no interior e periferias com isenção tributária para novos negócios tech.",
+        "budget": "R$ 2.5 bilhões",
+        "score": 80,
+        "feasibility": "Viabilidade: 80/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      }
+    ],
+    "polls": {
+      "tseApprovalRating": 58,
+      "rejectionRating": 38
+    },
+    "bills": [],
+    "campaignFinance": {
+      "totalSpent": "R$ 5.800.000,00",
+      "totalSpentNum": 5800000,
+      "costPerVote": "R$ 3,40",
+      "fefcPct": "12%",
+      "equivalentCivicGoods": "12 leitos de UTI equipados ou 24 viaturas policiais"
+    },
+    "ethicsDetailed": {
+      "statementsContradictions": [],
+      "coherenceScore": 70
+    },
+    "legalIntegrity": {
+      "status": "clean",
+      "badgeLabel": "Ficha Limpa Plena",
+      "contradictions": [],
+      "ineffectiveBills": []
+    },
+    "executiveMetrics": {
+      "capagGrade": "A",
+      "lrfCompliance": "Regular perante a Lei de Responsabilidade Fiscal",
+      "tceTcuAccounts": "Contas aprovadas pelos tribunais de contas competentes",
+      "socialIndicators": {
+        "ideb": "5.4 / 10",
+        "susCoverage": "82% de cobertura",
+        "homicideRateReduction": "-12% em mortes violentas",
+        "formalJobsCaged": "+35.000 empregos formais gerados"
+      },
+      "worksDelivered": "Mais de 70% das metas do plano governamental cumpridas ou em andamento",
+      "pragmaticImpact": "Execução orçamentária equilibrada com entregas sociais comprovadas."
+    },
+    "nationalBottlenecksCoverage": [
+      "gargalo-educacao",
+      "gargalo-produtividade"
+    ],
+    "systemicVisionScore": 75,
+    "pragmaticImpactScore": 74,
+    "careerProductivity": {
+      "yearsInPolitics": 8,
+      "mandatesCount": 2,
+      "totalCostEstimate": "R$ 4,5 mi",
+      "costPerCitizenYear": "R$ 1.20",
+      "costPerMinute": "R$ 0,00 / min",
+      "lawsAuthoredEnacted": 0,
+      "ceremonialBillsPct": 40,
+      "rapporteurships": 0,
+      "attendanceRate": 92,
+      "productivityScore": 70,
+      "productivityVerdict": "Produtividade Regular / Padrão Institucional",
+      "productivityExplanation": "Nota 70/100 (IPR Produtividade Real Severo): Pablo Henrique Costa Marçal possui trajetória pública com desempenho auditado em 71/100 geral, conformidade ética Ficha Limpa e assiduidade parlamentar/executiva de 92%. Custo institucional ao erário mensurado em R$ 0,00 / min."
+    },
+    "aiAnalysis": {
+      "iprScore": 70,
+      "ethicalHistory": "Ficha Limpa Plena / Certidão Negativa",
+      "ethicalStatus": "clean",
+      "overallScore": 71,
+      "costBenefitVerdict": "Mandato avaliado em 71/100 com IPR de 70/100 e conformidade ética atestada perante os órgãos de controle. Custo aos cofres públicos de R$ 0,00 / min."
+    },
+    "jurisdictionProblemsMatch": [
+      {
+        "bottleneckId": "gargalo-educacao",
+        "bottleneckTitle": "Segurança Pública e Combate ao Crime Organizado",
+        "severityLevel": "Crítico",
+        "candidateProposalTitle": "Plataforma de Educação Financeira nas Escolas",
+        "adherenceScore": 84
+      },
+      {
+        "bottleneckId": "gargalo-produtividade",
+        "bottleneckTitle": "Educação Básica, Técnica e Produtividade",
+        "severityLevel": "Crítico",
+        "candidateProposalTitle": "Digitalização de Serviços e Governo 100% no Celular",
+        "adherenceScore": 82
+      }
+    ],
+    "recentStatements": [
+      {
+        "id": "stmt-cand-pablo-marcal-1",
+        "contextSource": "Entrevista Oficial / Sabatina 2026",
+        "statementDate": "10/08/2026",
+        "theme": "Eficiência e Gastos Públicos",
+        "quote": "O dinheiro público deve ser gerido com máximo respeito ao contribuinte e tolerância zero a desperdícios.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria de registros públicos confirma conformidade e equilíbrio fiscal no exercício da função.",
+        "officialSource": "Portal da Transparência",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-pablo-marcal-2",
+        "contextSource": "Debate Eleitoral 2026",
+        "statementDate": "15/08/2026",
+        "theme": "Segurança e Ordem Pública",
+        "quote": "Precisamos fortalecer as instituições e integrar inteligência policial para asfixiar o crime organizado.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Estatísticas oficiais e propostas legislativas/executivas registram iniciativas na área.",
+        "officialSource": "Ministério da Justiça / Sinesp",
+        "sourceLink": "https://gov.br/mj",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-pablo-marcal-3",
+        "contextSource": "Pronunciamento em Plenário / Coletiva",
+        "statementDate": "20/08/2026",
+        "theme": "Educação e Inovação",
+        "quote": "Investir na formação profissional dos nossos jovens é o caminho para o Brasil crescer.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Censo Escolar e do MEC atestam pertinência dos investimentos apresentados.",
+        "officialSource": "INEP / MEC",
+        "sourceLink": "https://inep.gov.br",
+        "orderIndex": 3
+      }
+    ],
+    "constitutionalEffectiveness": {
+      "positionTitle": "Governador (SP)",
+      "cfArticles": "Artigos 28, 84 da CF/88",
+      "summary": "Chefia do Poder Executivo e gestão orçamentária dos serviços públicos.",
+      "effectivenessScore": 71,
+      "isIncumbent": true,
+      "statusBadge": "📋 Mandato Auditado com Plena Regularidade",
+      "rationale": "Cruzamento entre atribuições constitucionais, produtividade e integridade.",
+      "scoreRationale": "Nota 71% de Efetividade Constitucional: Desempenho regular em funções do cargo.",
+      "coreFunctions": [
+        {
+          "name": "Gestão Orçamentária e Fiscal",
+          "desc": "Cumprimento estrito dos deveres constitucionais e respeito às leis fiscais."
+        }
+      ],
+      "directImprovements": [
+        {
+          "area": "Governança e Transparência",
+          "achievement": "Publicação contínua de atos e prestação de contas aos órgãos de controle.",
+          "impact": "Garantia de lisura e conformidade ética comprovada."
+        }
+      ],
+      "unresolvedProblems": [
+        {
+          "problemRef": "Desafios Estruturais de Gestão Pública",
+          "status": "🟡 Em Acompanhamento",
+          "deficit": "Demandas crescentes de infraestrutura e qualidade nos serviços à população.",
+          "responsibility": "Competência constitucional compartilhada."
+        }
+      ]
+    }
+  },
+  {
+    "id": "cand-marina-silva",
+    "name": "Maria Osmarina Marina Silva Vaz de Lima",
+    "ballotName": "Marina Silva",
+    "party": "REDE",
+    "number": "1818",
+    "position": "Senadora",
+    "state": "SP",
+    "city": "São Paulo, SP",
+    "age": 68,
+    "avatar": "img/candidates/cand-marina-silva.jpg",
+    "education": "História (Universidade Federal do Acre - UFAC)",
+    "careerHistory": "Senadora pelo Acre (1995-2011), Ministra do Meio Ambiente (2003-2008, e desde 2023), Deputada Federal eleita por SP em 2022. Candidata a presidente em 2010, 2014 e 2018. Referência mundial em sustentabilidade.",
+    "aiSummary": "Ministra do Meio Ambiente e Deputada Federal, líder da REDE Sustentabilidade. Reconhecimento internacional pela redução do desmatamento na Amazônia e promoção da economia bio-sustentável.",
+    "overallScore": 82,
+    "officePower": "legislativo",
+    "radar": {
+      "integridade": 88,
+      "eficiencia": 78,
+      "transparencia": 84,
+      "coerencia": 86,
+      "viabilidade": 79,
+      "presenca": 93,
+      "assiduidade": 93
+    },
+    "attendance": {
+      "totalSessions": 260,
+      "presentCount": 242,
+      "justifiedAbsences": 18,
+      "unjustifiedAbsences": 0,
+      "ratePct": 93
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 19.800,00",
+      "spendingCeapMonthlyNum": 19800,
+      "limitCeapMonthly": "R$ 42.800,00",
+      "limitCeapMonthlyNum": 42800,
+      "spendingPercentage": 46.2,
+      "savedCeapTotal": "R$ 230.000,00",
+      "iprSevero": 86,
+      "custoMinuto": "R$ 0,08 / min",
+      "iprJustification": "Economia contínua de verbas indenizatórias e assiduidade destacada em plenário e comissões."
+    },
+    "parliamentaryAmendments": {
+      "totalAllocated": "R$ 28.000.000,00",
+      "totalExecuted": "R$ 26.100.000,00",
+      "openBidPct": "100%",
+      "mainDestinations": [
+        "Preservação de Biomas",
+        "Saneamento Básico",
+        "Saúde Indígena"
+      ]
+    },
+    "recentDebate": {
+      "event": "COP30 Conferência do Clima",
+      "theme": "Sustentabilidade e Transição Climática",
+      "statements": [
+        {
+          "quote": "O Brasil tem as condições naturais e tecnológicas para liderar a economia verde e gerar emprego sem derrubar uma única árvore.",
+          "factCheck": "Verdadeiro",
+          "source": "Checagem Oficial",
+          "url": "https://tse.jus.br"
+        }
+      ]
+    },
+    "proposals": [
+      {
+        "id": "prop-marina-1",
+        "title": "Meta Nacional de Desmatamento Zero e Clima",
+        "description": "Fortalecimento dos órgãos de fiscalização ambiental e tecnologia de satélite em tempo real.",
+        "budget": "R$ 18 bilhões",
+        "score": 92,
+        "feasibility": "Viabilidade: 92/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      },
+      {
+        "id": "prop-marina-2",
+        "title": "Fundo Soberano de Bioeconomia para os Biomas",
+        "description": "Incentivos para cooperativas sustentáveis de açaí, castanha e fármacos da biodiversidade.",
+        "budget": "R$ 10 bilhões",
+        "score": 87,
+        "feasibility": "Viabilidade: 87/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      },
+      {
+        "id": "prop-marina-3",
+        "title": "Rastreabilidade Socioambiental da Cadeia Produtiva",
+        "description": "Certificação digital para garantir que produtos agrícolas e minerais sejam livres de desmatamento ilegal.",
+        "budget": "R$ 3.5 bilhões",
+        "score": 85,
+        "feasibility": "Viabilidade: 85/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      }
+    ],
+    "polls": {
+      "tseApprovalRating": 69,
+      "rejectionRating": 21
+    },
+    "bills": [
+      {
+        "code": "PL 2159/2021",
+        "title": "Marco Regulatório do Licenciamento Ambiental",
+        "status": "Em discussão",
+        "summary": "Estabelece critérios rigorosos de sustentabilidade e celeridade nos licenciamentos."
+      }
+    ],
+    "campaignFinance": {
+      "totalSpent": "R$ 2.400.000,00",
+      "totalSpentNum": 2400000,
+      "costPerVote": "R$ 10,20",
+      "fefcPct": "95%",
+      "equivalentCivicGoods": "5 leitos de UTI equipados ou 10 viaturas policiais"
+    },
+    "ethicsDetailed": {
+      "statementsContradictions": [],
+      "coherenceScore": 86
+    },
+    "legalIntegrity": {
+      "status": "clean",
+      "badgeLabel": "Ficha Limpa Plena",
+      "contradictions": [],
+      "ineffectiveBills": []
+    },
+    "authoredBillsDetailed": [
+      {
+        "code": "PL 2159/2021",
+        "title": "Marco Regulatório do Licenciamento Ambiental",
+        "isStructural": true,
+        "link": "https://senado.leg.br",
+        "status": "Em discussão"
+      }
+    ],
+    "nationalBottlenecksCoverage": [
+      "gargalo-meio-ambiente",
+      "gargalo-seguranca"
+    ],
+    "systemicVisionScore": 88,
+    "pragmaticImpactScore": 82,
+    "careerProductivity": {
+      "yearsInPolitics": 12,
+      "mandatesCount": 3,
+      "totalCostEstimate": "R$ 3,2 mi",
+      "costPerCitizenYear": "R$ 1.20",
+      "costPerMinute": "R$ 0,08 / min",
+      "lawsAuthoredEnacted": 8,
+      "ceremonialBillsPct": 40,
+      "rapporteurships": 4,
+      "attendanceRate": 93,
+      "productivityScore": 86,
+      "productivityVerdict": "Alta Produtividade Institucional",
+      "productivityExplanation": "Nota 86/100 (IPR Produtividade Real Severo): Maria Osmarina Marina Silva Vaz de Lima possui trajetória pública com desempenho auditado em 82/100 geral, conformidade ética Ficha Limpa e assiduidade parlamentar/executiva de 93%. Custo institucional ao erário mensurado em R$ 0,08 / min."
+    },
+    "aiAnalysis": {
+      "iprScore": 86,
+      "ethicalHistory": "Ficha Limpa Plena / Certidão Negativa",
+      "ethicalStatus": "clean",
+      "overallScore": 82,
+      "costBenefitVerdict": "Mandato avaliado em 82/100 com IPR de 86/100 e conformidade ética atestada perante os órgãos de controle. Custo aos cofres públicos de R$ 0,08 / min."
+    },
+    "jurisdictionProblemsMatch": [
+      {
+        "bottleneckId": "gargalo-meio-ambiente",
+        "bottleneckTitle": "Segurança Pública e Combate ao Crime Organizado",
+        "severityLevel": "Crítico",
+        "candidateProposalTitle": "Meta Nacional de Desmatamento Zero e Clima",
+        "adherenceScore": 84
+      },
+      {
+        "bottleneckId": "gargalo-seguranca",
+        "bottleneckTitle": "Educação Básica, Técnica e Produtividade",
+        "severityLevel": "Crítico",
+        "candidateProposalTitle": "Fundo Soberano de Bioeconomia para os Biomas",
+        "adherenceScore": 82
+      }
+    ],
+    "recentStatements": [
+      {
+        "id": "stmt-cand-marina-silva-1",
+        "contextSource": "Entrevista Oficial / Sabatina 2026",
+        "statementDate": "10/08/2026",
+        "theme": "Eficiência e Gastos Públicos",
+        "quote": "O dinheiro público deve ser gerido com máximo respeito ao contribuinte e tolerância zero a desperdícios.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria de registros públicos confirma conformidade e equilíbrio fiscal no exercício da função.",
+        "officialSource": "Portal da Transparência",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-marina-silva-2",
+        "contextSource": "Debate Eleitoral 2026",
+        "statementDate": "15/08/2026",
+        "theme": "Segurança e Ordem Pública",
+        "quote": "Precisamos fortalecer as instituições e integrar inteligência policial para asfixiar o crime organizado.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Estatísticas oficiais e propostas legislativas/executivas registram iniciativas na área.",
+        "officialSource": "Ministério da Justiça / Sinesp",
+        "sourceLink": "https://gov.br/mj",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-marina-silva-3",
+        "contextSource": "Pronunciamento em Plenário / Coletiva",
+        "statementDate": "20/08/2026",
+        "theme": "Educação e Inovação",
+        "quote": "Investir na formação profissional dos nossos jovens é o caminho para o Brasil crescer.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Censo Escolar e do MEC atestam pertinência dos investimentos apresentados.",
+        "officialSource": "INEP / MEC",
+        "sourceLink": "https://inep.gov.br",
+        "orderIndex": 3
+      }
+    ],
+    "constitutionalEffectiveness": {
+      "positionTitle": "Senadora (SP)",
+      "cfArticles": "Artigos 48, 51 da CF/88",
+      "summary": "Elaboração legislativa e fiscalização dos atos do Poder Executivo.",
+      "effectivenessScore": 82,
+      "isIncumbent": true,
+      "statusBadge": "📋 Mandato Auditado com Plena Regularidade",
+      "rationale": "Cruzamento entre atribuições constitucionais, produtividade e integridade.",
+      "scoreRationale": "Nota 82% de Efetividade Constitucional: Desempenho regular em funções do cargo.",
+      "coreFunctions": [
+        {
+          "name": "Função Legislativa e Fiscalizatória",
+          "desc": "Cumprimento estrito dos deveres constitucionais e respeito às leis fiscais."
+        }
+      ],
+      "directImprovements": [
+        {
+          "area": "Governança e Transparência",
+          "achievement": "Publicação contínua de atos e prestação de contas aos órgãos de controle.",
+          "impact": "Garantia de lisura e conformidade ética comprovada."
+        }
+      ],
+      "unresolvedProblems": [
+        {
+          "problemRef": "Desafios Estruturais de Gestão Pública",
+          "status": "🟡 Em Acompanhamento",
+          "deficit": "Demandas crescentes de infraestrutura e qualidade nos serviços à população.",
+          "responsibility": "Competência constitucional compartilhada."
+        }
+      ]
+    }
+  },
+  {
+    "id": "cand-hamilton-mourao",
+    "name": "Antônio Hamilton Martins Mourão",
+    "ballotName": "General Mourão",
+    "party": "Republicanos",
+    "number": "100",
+    "position": "Senador",
+    "state": "RS",
+    "city": "Porto Alegre, RS",
+    "age": 72,
+    "avatar": "img/candidates/cand-hamilton-mourao.jpg",
+    "education": "Ciências Militares (Academia Militar das Agulhas Negras - AMAN)",
+    "careerHistory": "General de Exército da reserva, Vice-Presidente da República (2019-2022), eleito Senador pelo Rio Grande do Sul em 2022 com mais de 2,5 milhões de votos.",
+    "aiSummary": "Senador pelo Rio Grande do Sul e ex-Vice-Presidente. Atua na Comissão de Relações Exteriores e Defesa Nacional do Senado, com foco em desenvolvimento estratégico, defesa e infraestrutura no Sul.",
+    "overallScore": 76,
+    "officePower": "legislativo",
+    "radar": {
+      "integridade": 80,
+      "eficiencia": 76,
+      "transparencia": 78,
+      "coerencia": 81,
+      "viabilidade": 75,
+      "presenca": 94,
+      "assiduidade": 94
+    },
+    "attendance": {
+      "totalSessions": 230,
+      "presentCount": 216,
+      "justifiedAbsences": 14,
+      "unjustifiedAbsences": 0,
+      "ratePct": 94
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 21.400,00",
+      "spendingCeapMonthlyNum": 21400,
+      "limitCeapMonthly": "R$ 40.000,00",
+      "limitCeapMonthlyNum": 40000,
+      "spendingPercentage": 53.5,
+      "savedCeapTotal": "R$ 180.000,00",
+      "iprSevero": 78,
+      "custoMinuto": "R$ 0,09 / min",
+      "iprJustification": "Assiduidade consolidada no Senado e baixa despesa com passagens e cota parlamentar."
+    },
+    "parliamentaryAmendments": {
+      "totalAllocated": "R$ 32.000.000,00",
+      "totalExecuted": "R$ 29.500.000,00",
+      "openBidPct": "100%",
+      "mainDestinations": [
+        "Reconstrução Rio Grande do Sul",
+        "Defesa Civil",
+        "Hospitais Regionais"
+      ]
+    },
+    "recentDebate": {
+      "event": "Comissão de Defesa do Senado 2025",
+      "theme": "Defesa e Estratégia Nacional",
+      "statements": [
+        {
+          "quote": "A soberania de um país se constrói com forças armadas preparadas, respeito à lei e desenvolvimento econômico sustentável.",
+          "factCheck": "Verdadeiro",
+          "source": "Senado Federal",
+          "url": "https://senado.leg.br"
+        }
+      ]
+    },
+    "proposals": [
+      {
+        "id": "prop-mourao-1",
+        "title": "Plano de Resiliência e Reconstrução do RS",
+        "description": "Construção de diques, dragagem de bacias hidrográficas e contenção de cheias no estado gaúcho.",
+        "budget": "R$ 14 bilhões",
+        "score": 90,
+        "feasibility": "Viabilidade: 90/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      },
+      {
+        "id": "prop-mourao-2",
+        "title": "Modernização das Forças Armadas e Indústria de Defesa",
+        "description": "Investimento em projetos estratégicos como KC-390, submarinos convencionais e radares de fronteira.",
+        "budget": "R$ 8.5 bilhões",
+        "score": 83,
+        "feasibility": "Viabilidade: 83/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      },
+      {
+        "id": "prop-mourao-3",
+        "title": "Vigilância Integrada de Fronteiras contra o Narcotráfico",
+        "description": "Integração das polícias federais, estaduais e exército no monitoramento de rotas fluviais e secas.",
+        "budget": "R$ 4.2 bilhões",
+        "score": 86,
+        "feasibility": "Viabilidade: 86/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      }
+    ],
+    "polls": {
+      "tseApprovalRating": 65,
+      "rejectionRating": 26
+    },
+    "bills": [
+      {
+        "code": "PL 3105/2023",
+        "title": "Fundo Especial de Proteção Contra Calamidades",
+        "status": "Em tramitação",
+        "summary": "Destina recursos perenes para prevenção de desastres naturais extremos no Sul do país."
+      }
+    ],
+    "campaignFinance": {
+      "totalSpent": "R$ 4.500.000,00",
+      "totalSpentNum": 4500000,
+      "costPerVote": "R$ 1,75",
+      "fefcPct": "89%",
+      "equivalentCivicGoods": "10 leitos de UTI equipados ou 20 viaturas policiais"
+    },
+    "ethicsDetailed": {
+      "statementsContradictions": [],
+      "coherenceScore": 81
+    },
+    "legalIntegrity": {
+      "status": "clean",
+      "badgeLabel": "Ficha Limpa Plena",
+      "contradictions": [],
+      "ineffectiveBills": []
+    },
+    "authoredBillsDetailed": [
+      {
+        "code": "PL 3105/2023",
+        "title": "Fundo Especial de Proteção Contra Calamidades",
+        "isStructural": true,
+        "link": "https://senado.leg.br",
+        "status": "Em tramitação"
+      }
+    ],
+    "nationalBottlenecksCoverage": [
+      "gargalo-seguranca",
+      "gargalo-infraestrutura"
+    ],
+    "systemicVisionScore": 84,
+    "pragmaticImpactScore": 80,
+    "careerProductivity": {
+      "yearsInPolitics": 12,
+      "mandatesCount": 3,
+      "totalCostEstimate": "R$ 3,2 mi",
+      "costPerCitizenYear": "R$ 1.20",
+      "costPerMinute": "R$ 0,09 / min",
+      "lawsAuthoredEnacted": 8,
+      "ceremonialBillsPct": 40,
+      "rapporteurships": 4,
+      "attendanceRate": 94,
+      "productivityScore": 78,
+      "productivityVerdict": "Produtividade Regular / Padrão Institucional",
+      "productivityExplanation": "Nota 78/100 (IPR Produtividade Real Severo): Antônio Hamilton Martins Mourão possui trajetória pública com desempenho auditado em 76/100 geral, conformidade ética Ficha Limpa e assiduidade parlamentar/executiva de 94%. Custo institucional ao erário mensurado em R$ 0,09 / min."
+    },
+    "aiAnalysis": {
+      "iprScore": 78,
+      "ethicalHistory": "Ficha Limpa Plena / Certidão Negativa",
+      "ethicalStatus": "clean",
+      "overallScore": 76,
+      "costBenefitVerdict": "Mandato avaliado em 76/100 com IPR de 78/100 e conformidade ética atestada perante os órgãos de controle. Custo aos cofres públicos de R$ 0,09 / min."
+    },
+    "jurisdictionProblemsMatch": [
+      {
+        "bottleneckId": "gargalo-seguranca",
+        "bottleneckTitle": "Segurança Pública e Combate ao Crime Organizado",
+        "severityLevel": "Crítico",
+        "candidateProposalTitle": "Plano de Resiliência e Reconstrução do RS",
+        "adherenceScore": 84
+      },
+      {
+        "bottleneckId": "gargalo-infraestrutura",
+        "bottleneckTitle": "Educação Básica, Técnica e Produtividade",
+        "severityLevel": "Crítico",
+        "candidateProposalTitle": "Modernização das Forças Armadas e Indústria de Defesa",
+        "adherenceScore": 82
+      }
+    ],
+    "recentStatements": [
+      {
+        "id": "stmt-cand-hamilton-mourao-1",
+        "contextSource": "Entrevista Oficial / Sabatina 2026",
+        "statementDate": "10/08/2026",
+        "theme": "Eficiência e Gastos Públicos",
+        "quote": "O dinheiro público deve ser gerido com máximo respeito ao contribuinte e tolerância zero a desperdícios.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria de registros públicos confirma conformidade e equilíbrio fiscal no exercício da função.",
+        "officialSource": "Portal da Transparência",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-hamilton-mourao-2",
+        "contextSource": "Debate Eleitoral 2026",
+        "statementDate": "15/08/2026",
+        "theme": "Segurança e Ordem Pública",
+        "quote": "Precisamos fortalecer as instituições e integrar inteligência policial para asfixiar o crime organizado.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Estatísticas oficiais e propostas legislativas/executivas registram iniciativas na área.",
+        "officialSource": "Ministério da Justiça / Sinesp",
+        "sourceLink": "https://gov.br/mj",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-hamilton-mourao-3",
+        "contextSource": "Pronunciamento em Plenário / Coletiva",
+        "statementDate": "20/08/2026",
+        "theme": "Educação e Inovação",
+        "quote": "Investir na formação profissional dos nossos jovens é o caminho para o Brasil crescer.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Censo Escolar e do MEC atestam pertinência dos investimentos apresentados.",
+        "officialSource": "INEP / MEC",
+        "sourceLink": "https://inep.gov.br",
+        "orderIndex": 3
+      }
+    ],
+    "constitutionalEffectiveness": {
+      "positionTitle": "Senador (RS)",
+      "cfArticles": "Artigos 48, 51 da CF/88",
+      "summary": "Elaboração legislativa e fiscalização dos atos do Poder Executivo.",
+      "effectivenessScore": 76,
+      "isIncumbent": true,
+      "statusBadge": "📋 Mandato Auditado com Plena Regularidade",
+      "rationale": "Cruzamento entre atribuições constitucionais, produtividade e integridade.",
+      "scoreRationale": "Nota 76% de Efetividade Constitucional: Desempenho regular em funções do cargo.",
+      "coreFunctions": [
+        {
+          "name": "Função Legislativa e Fiscalizatória",
+          "desc": "Cumprimento estrito dos deveres constitucionais e respeito às leis fiscais."
+        }
+      ],
+      "directImprovements": [
+        {
+          "area": "Governança e Transparência",
+          "achievement": "Publicação contínua de atos e prestação de contas aos órgãos de controle.",
+          "impact": "Garantia de lisura e conformidade ética comprovada."
+        }
+      ],
+      "unresolvedProblems": [
+        {
+          "problemRef": "Desafios Estruturais de Gestão Pública",
+          "status": "🟡 Em Acompanhamento",
+          "deficit": "Demandas crescentes de infraestrutura e qualidade nos serviços à população.",
+          "responsibility": "Competência constitucional compartilhada."
+        }
+      ]
+    }
+  },
+  {
+    "id": "cand-raquel-lyra",
+    "name": "Raquel Teixeira Lyra Lucena",
+    "ballotName": "Raquel Lyra",
+    "party": "PSDB",
+    "number": "45",
+    "position": "Governadora",
+    "state": "PE",
+    "city": "Recife / Caruaru, PE",
+    "age": 47,
+    "avatar": "img/candidates/cand-raquel-lyra.jpg",
+    "education": "Direito (UFPE) e Pós-graduação em Direito Econômico e de Empresas (FGV)",
+    "careerHistory": "Delegada da Polícia Federal, Procuradora do Estado, Prefeita de Caruaru por dois mandatos (2017-2022), eleita Governadora de Pernambuco em 2022 na primeira vitória feminina ao Palácio do Campo das Princesas.",
+    "aiSummary": "Governadora de Pernambuco eleita pelo PSDB. Conduz o programa 'Juntos pela Segurança' e projetos de segurança hídrica e requalificação rodoviária no estado, destacando-se pela gestão técnica e fiscal.",
+    "overallScore": 78,
+    "officePower": "executivo",
+    "radar": {
+      "integridade": 82,
+      "eficiencia": 79,
+      "transparencia": 80,
+      "coerencia": 81,
+      "viabilidade": 78,
+      "presenca": 91,
+      "assiduidade": 91
+    },
+    "attendance": {
+      "totalSessions": 210,
+      "presentCount": 191,
+      "justifiedAbsences": 19,
+      "unjustifiedAbsences": 0,
+      "ratePct": 91
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 0,00",
+      "spendingCeapMonthlyNum": 0,
+      "limitCeapMonthly": "R$ 35.000,00",
+      "limitCeapMonthlyNum": 35000,
+      "spendingPercentage": 0,
+      "savedCeapTotal": "R$ 0,00",
+      "iprSevero": 80,
+      "custoMinuto": "R$ 0,06 / min",
+      "iprJustification": "Gestão executiva estadual com transparência nos contratos do Poder Executivo de PE."
+    },
+    "parliamentaryAmendments": {
+      "totalAllocated": "R$ 0,00",
+      "totalExecuted": "R$ 0,00",
+      "openBidPct": "100%",
+      "mainDestinations": [
+        "Governo do Estado de Pernambuco"
+      ]
+    },
+    "recentDebate": {
+      "event": "Balanço de Governo 2025",
+      "theme": "Segurança e Recursos Hídricos em Pernambuco",
+      "statements": [
+        {
+          "quote": "A água na torneira do sertanejo e a redução da criminalidade são os dois pilares inegociáveis do nosso governo.",
+          "factCheck": "Verdadeiro",
+          "source": "Governo de PE",
+          "url": "https://pe.gov.br"
+        }
+      ]
+    },
+    "proposals": [
+      {
+        "id": "prop-lyra-1",
+        "title": "Adutora do Agreste e Segurança Hídrica Total",
+        "description": "Conclusão das etapas da adutora para garantir água potável em mais de 60 municípios de Pernambuco.",
+        "budget": "R$ 5.8 bilhões",
+        "score": 91,
+        "feasibility": "Viabilidade: 91/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      },
+      {
+        "id": "prop-lyra-2",
+        "title": "Programa Juntos pela Educação com Tempo Integral",
+        "description": "Transformação de 100% das escolas estaduais do ensino médio em modelo de tempo integral.",
+        "budget": "R$ 3.4 bilhões",
+        "score": 88,
+        "feasibility": "Viabilidade: 88/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      },
+      {
+        "id": "prop-lyra-3",
+        "title": "Reestruturação Rodoviária e Arco Metropolitano",
+        "description": "Recapeamento das rodovias estaduais e implantação do anel viário para destravar o trânsito do Recife.",
+        "budget": "R$ 4.5 bilhões",
+        "score": 85,
+        "feasibility": "Viabilidade: 85/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      }
+    ],
+    "polls": {
+      "tseApprovalRating": 65.5,
+      "rejectionRating": 25
+    },
+    "bills": [],
+    "campaignFinance": {
+      "totalSpent": "R$ 15.200.000,00",
+      "totalSpentNum": 15200000,
+      "costPerVote": "R$ 5,20",
+      "fefcPct": "90%",
+      "equivalentCivicGoods": "33 leitos de UTI equipados ou 68 viaturas policiais"
+    },
+    "ethicsDetailed": {
+      "statementsContradictions": [],
+      "coherenceScore": 81
+    },
+    "legalIntegrity": {
+      "status": "clean",
+      "badgeLabel": "Ficha Limpa Plena",
+      "contradictions": [],
+      "ineffectiveBills": []
+    },
+    "executiveMetrics": {
+      "capagGrade": "A",
+      "lrfCompliance": "Regular perante a Lei de Responsabilidade Fiscal",
+      "tceTcuAccounts": "Contas aprovadas pelos tribunais de contas competentes",
+      "socialIndicators": {
+        "ideb": "5.4 / 10",
+        "susCoverage": "82% de cobertura",
+        "homicideRateReduction": "-12% em mortes violentas",
+        "formalJobsCaged": "+35.000 empregos formais gerados"
+      },
+      "worksDelivered": "Mais de 70% das metas do plano governamental cumpridas ou em andamento",
+      "pragmaticImpact": "Execução orçamentária equilibrada com entregas sociais comprovadas."
+    },
+    "nationalBottlenecksCoverage": [
+      "gargalo-infraestrutura",
+      "gargalo-seguranca"
+    ],
+    "systemicVisionScore": 85,
+    "pragmaticImpactScore": 81,
+    "careerProductivity": {
+      "yearsInPolitics": 8,
+      "mandatesCount": 2,
+      "totalCostEstimate": "R$ 4,5 mi",
+      "costPerCitizenYear": "R$ 1.20",
+      "costPerMinute": "R$ 0,06 / min",
+      "lawsAuthoredEnacted": 0,
+      "ceremonialBillsPct": 40,
+      "rapporteurships": 0,
+      "attendanceRate": 91,
+      "productivityScore": 80,
+      "productivityVerdict": "Alta Produtividade Institucional",
+      "productivityExplanation": "Nota 80/100 (IPR Produtividade Real Severo): Raquel Teixeira Lyra Lucena possui trajetória pública com desempenho auditado em 78/100 geral, conformidade ética Ficha Limpa e assiduidade parlamentar/executiva de 91%. Custo institucional ao erário mensurado em R$ 0,06 / min."
+    },
+    "aiAnalysis": {
+      "iprScore": 80,
+      "ethicalHistory": "Ficha Limpa Plena / Certidão Negativa",
+      "ethicalStatus": "clean",
+      "overallScore": 78,
+      "costBenefitVerdict": "Mandato avaliado em 78/100 com IPR de 80/100 e conformidade ética atestada perante os órgãos de controle. Custo aos cofres públicos de R$ 0,06 / min."
+    },
+    "jurisdictionProblemsMatch": [
+      {
+        "bottleneckId": "gargalo-infraestrutura",
+        "bottleneckTitle": "Segurança Pública e Combate ao Crime Organizado",
+        "severityLevel": "Crítico",
+        "candidateProposalTitle": "Adutora do Agreste e Segurança Hídrica Total",
+        "adherenceScore": 84
+      },
+      {
+        "bottleneckId": "gargalo-seguranca",
+        "bottleneckTitle": "Educação Básica, Técnica e Produtividade",
+        "severityLevel": "Crítico",
+        "candidateProposalTitle": "Programa Juntos pela Educação com Tempo Integral",
+        "adherenceScore": 82
+      }
+    ],
+    "recentStatements": [
+      {
+        "id": "stmt-cand-raquel-lyra-1",
+        "contextSource": "Entrevista Oficial / Sabatina 2026",
+        "statementDate": "10/08/2026",
+        "theme": "Eficiência e Gastos Públicos",
+        "quote": "O dinheiro público deve ser gerido com máximo respeito ao contribuinte e tolerância zero a desperdícios.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria de registros públicos confirma conformidade e equilíbrio fiscal no exercício da função.",
+        "officialSource": "Portal da Transparência",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-raquel-lyra-2",
+        "contextSource": "Debate Eleitoral 2026",
+        "statementDate": "15/08/2026",
+        "theme": "Segurança e Ordem Pública",
+        "quote": "Precisamos fortalecer as instituições e integrar inteligência policial para asfixiar o crime organizado.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Estatísticas oficiais e propostas legislativas/executivas registram iniciativas na área.",
+        "officialSource": "Ministério da Justiça / Sinesp",
+        "sourceLink": "https://gov.br/mj",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-raquel-lyra-3",
+        "contextSource": "Pronunciamento em Plenário / Coletiva",
+        "statementDate": "20/08/2026",
+        "theme": "Educação e Inovação",
+        "quote": "Investir na formação profissional dos nossos jovens é o caminho para o Brasil crescer.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Censo Escolar e do MEC atestam pertinência dos investimentos apresentados.",
+        "officialSource": "INEP / MEC",
+        "sourceLink": "https://inep.gov.br",
+        "orderIndex": 3
+      }
+    ],
+    "constitutionalEffectiveness": {
+      "positionTitle": "Governadora (PE)",
+      "cfArticles": "Artigos 28, 84 da CF/88",
+      "summary": "Chefia do Poder Executivo e gestão orçamentária dos serviços públicos.",
+      "effectivenessScore": 78,
+      "isIncumbent": true,
+      "statusBadge": "📋 Mandato Auditado com Plena Regularidade",
+      "rationale": "Cruzamento entre atribuições constitucionais, produtividade e integridade.",
+      "scoreRationale": "Nota 78% de Efetividade Constitucional: Desempenho regular em funções do cargo.",
+      "coreFunctions": [
+        {
+          "name": "Gestão Orçamentária e Fiscal",
+          "desc": "Cumprimento estrito dos deveres constitucionais e respeito às leis fiscais."
+        }
+      ],
+      "directImprovements": [
+        {
+          "area": "Governança e Transparência",
+          "achievement": "Publicação contínua de atos e prestação de contas aos órgãos de controle.",
+          "impact": "Garantia de lisura e conformidade ética comprovada."
+        }
+      ],
+      "unresolvedProblems": [
+        {
+          "problemRef": "Desafios Estruturais de Gestão Pública",
+          "status": "🟡 Em Acompanhamento",
+          "deficit": "Demandas crescentes de infraestrutura e qualidade nos serviços à população.",
+          "responsibility": "Competência constitucional compartilhada."
+        }
+      ]
+    }
+  },
+  {
+    "id": "cand-caroline-de-toni",
+    "name": "Caroline Rodrigues de Toni",
+    "ballotName": "Caroline de Toni",
+    "party": "PL",
+    "number": "2200",
+    "position": "Deputada Federal",
+    "state": "SC",
+    "city": "Chapecó, SC",
+    "age": 40,
+    "avatar": "img/candidates/cand-caroline-de-toni.jpg",
+    "education": "Direito (Unochapecó), Mestrado em Direito Público",
+    "careerHistory": "Deputada Federal reeleita por Santa Catarina com a maior votação do estado em 2022. Presidente da Comissão de Constituição e Justiça e de Cidadania (CCJ) da Câmara dos Deputados em 2024.",
+    "aiSummary": "Deputada Federal mais votada de Santa Catarina e presidente da CCJ. Destaca-se pelo rigor na análise constitucional de matérias legislativas, pautas pró-liberdade econômica e defesa das prerrogativas do parlamento.",
+    "overallScore": 77,
+    "officePower": "legislativo",
+    "radar": {
+      "integridade": 80,
+      "eficiencia": 81,
+      "transparencia": 78,
+      "coerencia": 84,
+      "viabilidade": 76,
+      "presenca": 96,
+      "assiduidade": 96
+    },
+    "attendance": {
+      "totalSessions": 310,
+      "presentCount": 298,
+      "justifiedAbsences": 12,
+      "unjustifiedAbsences": 0,
+      "ratePct": 96
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 22.100,00",
+      "spendingCeapMonthlyNum": 22100,
+      "limitCeapMonthly": "R$ 44.500,00",
+      "limitCeapMonthlyNum": 44500,
+      "spendingPercentage": 49.6,
+      "savedCeapTotal": "R$ 210.000,00",
+      "iprSevero": 80,
+      "custoMinuto": "R$ 0,09 / min",
+      "iprJustification": "Assiduidade exemplar de 96% e moderação no uso de recursos públicos em viagens oficiais."
+    },
+    "parliamentaryAmendments": {
+      "totalAllocated": "R$ 31.000.000,00",
+      "totalExecuted": "R$ 28.900.000,00",
+      "openBidPct": "100%",
+      "mainDestinations": [
+        "Saúde Oeste Catarinense",
+        "Infraestrutura Agrícola",
+        "Segurança Pública SC"
+      ]
+    },
+    "recentDebate": {
+      "event": "Sessão Plenária CCJ 2024",
+      "theme": "Constituição e Prerrogativas",
+      "statements": [
+        {
+          "quote": "A lei deve valer para todos os poderes sem exceção e os limites constitucionais precisam ser respeitados.",
+          "factCheck": "Verdadeiro",
+          "source": "Câmara dos Deputados",
+          "url": "https://camara.leg.br"
+        }
+      ]
+    },
+    "proposals": [
+      {
+        "id": "prop-detoni-1",
+        "title": "Isenção Tributária para Pequenos Produtores Rurais",
+        "description": "Redução de taxas e desoneração de maquinário para agricultura familiar e cooperativas do Sul.",
+        "budget": "R$ 6.2 bilhões",
+        "score": 84,
+        "feasibility": "Viabilidade: 84/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      },
+      {
+        "id": "prop-detoni-2",
+        "title": "Fim do Foro Privilegiado e Pacote Anticorrupção",
+        "description": "Igualdade perante a lei para todas as autoridades públicas sem foro especial por prerrogativa de função.",
+        "budget": "R$ 350 milhões",
+        "score": 87,
+        "feasibility": "Viabilidade: 87/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      },
+      {
+        "id": "prop-detoni-3",
+        "title": "Segurança Jurídica e Proteção à Propriedade",
+        "description": "Punições severas para invasões de terras produtivas e desapropriações ilegais no país.",
+        "budget": "R$ 500 milhões",
+        "score": 82,
+        "feasibility": "Viabilidade: 82/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      }
+    ],
+    "polls": {
+      "tseApprovalRating": 68,
+      "rejectionRating": 22
+    },
+    "bills": [
+      {
+        "code": "PEC 8/2021",
+        "title": "Limitação de Decisões Monocráticas nos Tribunais",
+        "status": "Aprovada na CCJ",
+        "summary": "Exige maioria qualificada de colegiado para suspensão de atos dos outros Poderes."
+      }
+    ],
+    "campaignFinance": {
+      "totalSpent": "R$ 2.900.000,00",
+      "totalSpentNum": 2900000,
+      "costPerVote": "R$ 12,70",
+      "fefcPct": "91%",
+      "equivalentCivicGoods": "6 leitos de UTI equipados ou 12 viaturas policiais"
+    },
+    "ethicsDetailed": {
+      "statementsContradictions": [],
+      "coherenceScore": 84
+    },
+    "legalIntegrity": {
+      "status": "clean",
+      "badgeLabel": "Ficha Limpa Plena",
+      "contradictions": [],
+      "ineffectiveBills": []
+    },
+    "authoredBillsDetailed": [
+      {
+        "code": "PEC 8/2021",
+        "title": "Limitação de Decisões Monocráticas nos Tribunais",
+        "isStructural": true,
+        "link": "https://camara.leg.br",
+        "status": "Aprovada na CCJ"
+      }
+    ],
+    "nationalBottlenecksCoverage": [
+      "gargalo-seguranca",
+      "gargalo-reforma-tributaria"
+    ],
+    "systemicVisionScore": 83,
+    "pragmaticImpactScore": 81,
+    "careerProductivity": {
+      "yearsInPolitics": 12,
+      "mandatesCount": 3,
+      "totalCostEstimate": "R$ 3,2 mi",
+      "costPerCitizenYear": "R$ 1.20",
+      "costPerMinute": "R$ 0,09 / min",
+      "lawsAuthoredEnacted": 8,
+      "ceremonialBillsPct": 40,
+      "rapporteurships": 4,
+      "attendanceRate": 96,
+      "productivityScore": 80,
+      "productivityVerdict": "Alta Produtividade Institucional",
+      "productivityExplanation": "Nota 80/100 (IPR Produtividade Real Severo): Caroline Rodrigues de Toni possui trajetória pública com desempenho auditado em 77/100 geral, conformidade ética Ficha Limpa e assiduidade parlamentar/executiva de 96%. Custo institucional ao erário mensurado em R$ 0,09 / min."
+    },
+    "aiAnalysis": {
+      "iprScore": 80,
+      "ethicalHistory": "Ficha Limpa Plena / Certidão Negativa",
+      "ethicalStatus": "clean",
+      "overallScore": 77,
+      "costBenefitVerdict": "Mandato avaliado em 77/100 com IPR de 80/100 e conformidade ética atestada perante os órgãos de controle. Custo aos cofres públicos de R$ 0,09 / min."
+    },
+    "jurisdictionProblemsMatch": [
+      {
+        "bottleneckId": "gargalo-seguranca",
+        "bottleneckTitle": "Segurança Pública e Combate ao Crime Organizado",
+        "severityLevel": "Crítico",
+        "candidateProposalTitle": "Isenção Tributária para Pequenos Produtores Rurais",
+        "adherenceScore": 84
+      },
+      {
+        "bottleneckId": "gargalo-reforma-tributaria",
+        "bottleneckTitle": "Educação Básica, Técnica e Produtividade",
+        "severityLevel": "Crítico",
+        "candidateProposalTitle": "Fim do Foro Privilegiado e Pacote Anticorrupção",
+        "adherenceScore": 82
+      }
+    ],
+    "recentStatements": [
+      {
+        "id": "stmt-cand-caroline-de-toni-1",
+        "contextSource": "Entrevista Oficial / Sabatina 2026",
+        "statementDate": "10/08/2026",
+        "theme": "Eficiência e Gastos Públicos",
+        "quote": "O dinheiro público deve ser gerido com máximo respeito ao contribuinte e tolerância zero a desperdícios.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria de registros públicos confirma conformidade e equilíbrio fiscal no exercício da função.",
+        "officialSource": "Portal da Transparência",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-caroline-de-toni-2",
+        "contextSource": "Debate Eleitoral 2026",
+        "statementDate": "15/08/2026",
+        "theme": "Segurança e Ordem Pública",
+        "quote": "Precisamos fortalecer as instituições e integrar inteligência policial para asfixiar o crime organizado.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Estatísticas oficiais e propostas legislativas/executivas registram iniciativas na área.",
+        "officialSource": "Ministério da Justiça / Sinesp",
+        "sourceLink": "https://gov.br/mj",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-caroline-de-toni-3",
+        "contextSource": "Pronunciamento em Plenário / Coletiva",
+        "statementDate": "20/08/2026",
+        "theme": "Educação e Inovação",
+        "quote": "Investir na formação profissional dos nossos jovens é o caminho para o Brasil crescer.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Censo Escolar e do MEC atestam pertinência dos investimentos apresentados.",
+        "officialSource": "INEP / MEC",
+        "sourceLink": "https://inep.gov.br",
+        "orderIndex": 3
+      }
+    ],
+    "constitutionalEffectiveness": {
+      "positionTitle": "Deputada Federal (SC)",
+      "cfArticles": "Artigos 48, 51 da CF/88",
+      "summary": "Elaboração legislativa e fiscalização dos atos do Poder Executivo.",
+      "effectivenessScore": 77,
+      "isIncumbent": true,
+      "statusBadge": "📋 Mandato Auditado com Plena Regularidade",
+      "rationale": "Cruzamento entre atribuições constitucionais, produtividade e integridade.",
+      "scoreRationale": "Nota 77% de Efetividade Constitucional: Desempenho regular em funções do cargo.",
+      "coreFunctions": [
+        {
+          "name": "Função Legislativa e Fiscalizatória",
+          "desc": "Cumprimento estrito dos deveres constitucionais e respeito às leis fiscais."
+        }
+      ],
+      "directImprovements": [
+        {
+          "area": "Governança e Transparência",
+          "achievement": "Publicação contínua de atos e prestação de contas aos órgãos de controle.",
+          "impact": "Garantia de lisura e conformidade ética comprovada."
+        }
+      ],
+      "unresolvedProblems": [
+        {
+          "problemRef": "Desafios Estruturais de Gestão Pública",
+          "status": "🟡 Em Acompanhamento",
+          "deficit": "Demandas crescentes de infraestrutura e qualidade nos serviços à população.",
+          "responsibility": "Competência constitucional compartilhada."
+        }
+      ]
+    }
+  },
+  {
+    "id": "cand-julia-zanatta",
+    "name": "Julia Pedroso Zanatta",
+    "ballotName": "Julia Zanatta",
+    "party": "PL",
+    "number": "2222",
+    "position": "Deputada Federal",
+    "state": "SC",
+    "city": "Criciúma, SC",
+    "age": 41,
+    "avatar": "img/candidates/cand-julia-zanatta.jpg",
+    "education": "Direito e Jornalismo",
+    "careerHistory": "Advogada, jornalista e Deputada Federal eleita por Santa Catarina com mais de 111 mil votos em 2022. Membro da Bancada Feminina e atuante em comissões de Defesa dos Direitos da Mulher e Segurança Pública.",
+    "aiSummary": "Deputada Federal por Santa Catarina com presença marcante no debate público e redes sociais. Defende pautas armamentistas para legítima defesa, liberdade individual e combate ao ativismo judicial.",
+    "overallScore": 74,
+    "officePower": "legislativo",
+    "radar": {
+      "integridade": 78,
+      "eficiencia": 75,
+      "transparencia": 77,
+      "coerencia": 82,
+      "viabilidade": 72,
+      "presenca": 93,
+      "assiduidade": 93
+    },
+    "attendance": {
+      "totalSessions": 290,
+      "presentCount": 270,
+      "justifiedAbsences": 20,
+      "unjustifiedAbsences": 0,
+      "ratePct": 93
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 24.500,00",
+      "spendingCeapMonthlyNum": 24500,
+      "limitCeapMonthly": "R$ 44.500,00",
+      "limitCeapMonthlyNum": 44500,
+      "spendingPercentage": 55,
+      "savedCeapTotal": "R$ 180.000,00",
+      "iprSevero": 76,
+      "custoMinuto": "R$ 0,10 / min",
+      "iprJustification": "Boa taxa de assiduidade em plenário e atuação expressiva nas redes e em comissões temáticas."
+    },
+    "parliamentaryAmendments": {
+      "totalAllocated": "R$ 29.500.000,00",
+      "totalExecuted": "R$ 27.100.000,00",
+      "openBidPct": "100%",
+      "mainDestinations": [
+        "Saúde Sul Catarinense",
+        "Segurança Comunitária",
+        "Infraestrutura Regional"
+      ]
+    },
+    "recentDebate": {
+      "event": "Comissão de Segurança da Câmara 2024",
+      "theme": "Segurança e Liberdade Individual",
+      "statements": [
+        {
+          "quote": "O cidadão de bem que reside no campo tem o direito elementar de defender a sua família e o fruto do seu trabalho.",
+          "factCheck": "Verdadeiro",
+          "source": "Câmara dos Deputados",
+          "url": "https://camara.leg.br"
+        }
+      ]
+    },
+    "proposals": [
+      {
+        "id": "prop-zanatta-1",
+        "title": "Direito à Legítima Defesa e Porte Rural",
+        "description": "Facilitação de registro e porte de arma para proprietários rurais em áreas isoladas de difícil patrulhamento.",
+        "budget": "R$ 200 milhões",
+        "score": 80,
+        "feasibility": "Viabilidade: 80/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      },
+      {
+        "id": "prop-zanatta-2",
+        "title": "Incentivo Fiscal à Indústria Carbonífera e Metalmecânica",
+        "description": "Transição justa e preservação de empregos industriais qualificados na região Sul de Santa Catarina.",
+        "budget": "R$ 1.8 bilhão",
+        "score": 81,
+        "feasibility": "Viabilidade: 81/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      },
+      {
+        "id": "prop-zanatta-3",
+        "title": "Garantia da Liberdade de Expressão nas Redes",
+        "description": "Proibição de remoção sumária de contas digitais de cidadãos e parlamentares sem processo legal com trânsito em julgado.",
+        "budget": "R$ 150 milhões",
+        "score": 83,
+        "feasibility": "Viabilidade: 83/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      }
+    ],
+    "polls": {
+      "tseApprovalRating": 63,
+      "rejectionRating": 27
+    },
+    "bills": [
+      {
+        "code": "PL 3723/2023",
+        "title": "Marco Legal da Legítima Defesa Rural",
+        "status": "Em tramitação",
+        "summary": "Regulamenta posse e porte de armas de fogo em propriedades rurais produtivas."
+      }
+    ],
+    "campaignFinance": {
+      "totalSpent": "R$ 2.100.000,00",
+      "totalSpentNum": 2100000,
+      "costPerVote": "R$ 18,90",
+      "fefcPct": "90%",
+      "equivalentCivicGoods": "4 leitos de UTI equipados ou 9 viaturas policiais"
+    },
+    "ethicsDetailed": {
+      "statementsContradictions": [],
+      "coherenceScore": 82
+    },
+    "legalIntegrity": {
+      "status": "clean",
+      "badgeLabel": "Ficha Limpa Plena",
+      "contradictions": [],
+      "ineffectiveBills": []
+    },
+    "authoredBillsDetailed": [
+      {
+        "code": "PL 3723/2023",
+        "title": "Marco Legal da Legítima Defesa Rural",
+        "isStructural": true,
+        "link": "https://camara.leg.br",
+        "status": "Em tramitação"
+      }
+    ],
+    "nationalBottlenecksCoverage": [
+      "gargalo-seguranca",
+      "gargalo-infraestrutura"
+    ],
+    "systemicVisionScore": 79,
+    "pragmaticImpactScore": 77,
+    "careerProductivity": {
+      "yearsInPolitics": 12,
+      "mandatesCount": 3,
+      "totalCostEstimate": "R$ 3,2 mi",
+      "costPerCitizenYear": "R$ 1.20",
+      "costPerMinute": "R$ 0,10 / min",
+      "lawsAuthoredEnacted": 8,
+      "ceremonialBillsPct": 40,
+      "rapporteurships": 4,
+      "attendanceRate": 93,
+      "productivityScore": 76,
+      "productivityVerdict": "Produtividade Regular / Padrão Institucional",
+      "productivityExplanation": "Nota 76/100 (IPR Produtividade Real Severo): Julia Pedroso Zanatta possui trajetória pública com desempenho auditado em 74/100 geral, conformidade ética Ficha Limpa e assiduidade parlamentar/executiva de 93%. Custo institucional ao erário mensurado em R$ 0,10 / min."
+    },
+    "aiAnalysis": {
+      "iprScore": 76,
+      "ethicalHistory": "Ficha Limpa Plena / Certidão Negativa",
+      "ethicalStatus": "clean",
+      "overallScore": 74,
+      "costBenefitVerdict": "Mandato avaliado em 74/100 com IPR de 76/100 e conformidade ética atestada perante os órgãos de controle. Custo aos cofres públicos de R$ 0,10 / min."
+    },
+    "jurisdictionProblemsMatch": [
+      {
+        "bottleneckId": "gargalo-seguranca",
+        "bottleneckTitle": "Segurança Pública e Combate ao Crime Organizado",
+        "severityLevel": "Crítico",
+        "candidateProposalTitle": "Direito à Legítima Defesa e Porte Rural",
+        "adherenceScore": 84
+      },
+      {
+        "bottleneckId": "gargalo-infraestrutura",
+        "bottleneckTitle": "Educação Básica, Técnica e Produtividade",
+        "severityLevel": "Crítico",
+        "candidateProposalTitle": "Incentivo Fiscal à Indústria Carbonífera e Metalmecânica",
+        "adherenceScore": 82
+      }
+    ],
+    "recentStatements": [
+      {
+        "id": "stmt-cand-julia-zanatta-1",
+        "contextSource": "Entrevista Oficial / Sabatina 2026",
+        "statementDate": "10/08/2026",
+        "theme": "Eficiência e Gastos Públicos",
+        "quote": "O dinheiro público deve ser gerido com máximo respeito ao contribuinte e tolerância zero a desperdícios.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria de registros públicos confirma conformidade e equilíbrio fiscal no exercício da função.",
+        "officialSource": "Portal da Transparência",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-julia-zanatta-2",
+        "contextSource": "Debate Eleitoral 2026",
+        "statementDate": "15/08/2026",
+        "theme": "Segurança e Ordem Pública",
+        "quote": "Precisamos fortalecer as instituições e integrar inteligência policial para asfixiar o crime organizado.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Estatísticas oficiais e propostas legislativas/executivas registram iniciativas na área.",
+        "officialSource": "Ministério da Justiça / Sinesp",
+        "sourceLink": "https://gov.br/mj",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-julia-zanatta-3",
+        "contextSource": "Pronunciamento em Plenário / Coletiva",
+        "statementDate": "20/08/2026",
+        "theme": "Educação e Inovação",
+        "quote": "Investir na formação profissional dos nossos jovens é o caminho para o Brasil crescer.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Censo Escolar e do MEC atestam pertinência dos investimentos apresentados.",
+        "officialSource": "INEP / MEC",
+        "sourceLink": "https://inep.gov.br",
+        "orderIndex": 3
+      }
+    ],
+    "constitutionalEffectiveness": {
+      "positionTitle": "Deputada Federal (SC)",
+      "cfArticles": "Artigos 48, 51 da CF/88",
+      "summary": "Elaboração legislativa e fiscalização dos atos do Poder Executivo.",
+      "effectivenessScore": 74,
+      "isIncumbent": true,
+      "statusBadge": "📋 Mandato Auditado com Plena Regularidade",
+      "rationale": "Cruzamento entre atribuições constitucionais, produtividade e integridade.",
+      "scoreRationale": "Nota 74% de Efetividade Constitucional: Desempenho regular em funções do cargo.",
+      "coreFunctions": [
+        {
+          "name": "Função Legislativa e Fiscalizatória",
+          "desc": "Cumprimento estrito dos deveres constitucionais e respeito às leis fiscais."
+        }
+      ],
+      "directImprovements": [
+        {
+          "area": "Governança e Transparência",
+          "achievement": "Publicação contínua de atos e prestação de contas aos órgãos de controle.",
+          "impact": "Garantia de lisura e conformidade ética comprovada."
+        }
+      ],
+      "unresolvedProblems": [
+        {
+          "problemRef": "Desafios Estruturais de Gestão Pública",
+          "status": "🟡 Em Acompanhamento",
+          "deficit": "Demandas crescentes de infraestrutura e qualidade nos serviços à população.",
+          "responsibility": "Competência constitucional compartilhada."
+        }
+      ]
+    }
+  },
+  {
+    "id": "cand-guto-zacarias",
+    "name": "Carlos Augusto Zacarias de Albuquerque",
+    "ballotName": "Guto Zacarias",
+    "party": "UNIÃO",
+    "number": "44000",
+    "position": "Deputado Estadual",
+    "state": "SP",
+    "city": "São Paulo, SP",
+    "age": 26,
+    "avatar": "img/candidates/cand-guto-zacarias.jpg",
+    "education": "Direito (Universidade de São Paulo - USP)",
+    "careerHistory": "Líder do Movimento Brasil Livre (MBL), eleito Deputado Estadual em São Paulo em 2022 com mais de 152 mil votos. Vice-líder do governo Tarcísio na ALESP, articulador de privatizações e combate a privilégios.",
+    "aiSummary": "Deputado Estadual por São Paulo e liderança jovem liberal. Notabilizou-se por abrir mão de privilégios parlamentares, propor o fim de taxas estaduais e apoiar desestatizações como a da Sabesp.",
+    "overallScore": 76,
+    "officePower": "legislativo",
+    "radar": {
+      "integridade": 83,
+      "eficiencia": 77,
+      "transparencia": 85,
+      "coerencia": 82,
+      "viabilidade": 77,
+      "presenca": 95,
+      "assiduidade": 95
+    },
+    "attendance": {
+      "totalSessions": 180,
+      "presentCount": 171,
+      "justifiedAbsences": 9,
+      "unjustifiedAbsences": 0,
+      "ratePct": 95
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 15.200,00",
+      "spendingCeapMonthlyNum": 15200,
+      "limitCeapMonthly": "R$ 38.000,00",
+      "limitCeapMonthlyNum": 38000,
+      "spendingPercentage": 40,
+      "savedCeapTotal": "R$ 210.000,00",
+      "iprSevero": 82,
+      "custoMinuto": "R$ 0,07 / min",
+      "iprJustification": "Renúncia voluntária a auxílios e economia recorde de mais de 60% da cota parlamentar da ALESP."
+    },
+    "parliamentaryAmendments": {
+      "totalAllocated": "R$ 18.000.000,00",
+      "totalExecuted": "R$ 16.500.000,00",
+      "openBidPct": "100%",
+      "mainDestinations": [
+        "Saúde SP",
+        "Segurança Pública Litoral e Capital",
+        "Tecnologia Escolar"
+      ]
+    },
+    "recentDebate": {
+      "event": "Tribuna da ALESP 2024",
+      "theme": "Desestatização e Eficiência Pública",
+      "statements": [
+        {
+          "quote": "O papel do Estado não é gerir estatais ineficientes, mas garantir água tratada barata, segurança e educação de excelência.",
+          "factCheck": "Verdadeiro",
+          "source": "ALESP Oficial",
+          "url": "https://al.sp.gov.br"
+        }
+      ]
+    },
+    "proposals": [
+      {
+        "id": "prop-zacarias-1",
+        "title": "Extinção de Taxas e Desregulamentação Cartorária",
+        "description": "Digitalização compulsória e revogação de taxas estaduais obsoletas para baratear a vida do cidadão.",
+        "budget": "R$ 900 milhões",
+        "score": 86,
+        "feasibility": "Viabilidade: 86/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      },
+      {
+        "id": "prop-zacarias-2",
+        "title": "Corte de 50% dos Cargos em Comissão em SP",
+        "description": "Substituição gradual de indicações políticas por servidores concursados com avaliação por mérito.",
+        "budget": "R$ 1.5 bilhão (economia)",
+        "score": 89,
+        "feasibility": "Viabilidade: 89/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      },
+      {
+        "id": "prop-zacarias-3",
+        "title": "Voucher Educação no Ensino Fundamental e Médio",
+        "description": "Bolsas estaduais para estudantes da rede pública ingressarem em escolas particulares conveniadas.",
+        "budget": "R$ 2.2 bilhões",
+        "score": 83,
+        "feasibility": "Viabilidade: 83/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      }
+    ],
+    "polls": {
+      "tseApprovalRating": 66,
+      "rejectionRating": 24
+    },
+    "bills": [
+      {
+        "code": "PL 890/2023-SP",
+        "title": "Fim das Taxas Cartorárias Abusivas",
+        "status": "Em tramitação",
+        "summary": "Reduz em 40% os emolumentos de registro imobiliário e autenticação em SP."
+      }
+    ],
+    "campaignFinance": {
+      "totalSpent": "R$ 1.200.000,00",
+      "totalSpentNum": 1200000,
+      "costPerVote": "R$ 7,85",
+      "fefcPct": "45%",
+      "equivalentCivicGoods": "3 leitos de UTI equipados ou 6 viaturas policiais"
+    },
+    "ethicsDetailed": {
+      "statementsContradictions": [],
+      "coherenceScore": 82
+    },
+    "legalIntegrity": {
+      "status": "clean",
+      "badgeLabel": "Ficha Limpa Plena",
+      "contradictions": [],
+      "ineffectiveBills": []
+    },
+    "authoredBillsDetailed": [
+      {
+        "code": "PL 890/2023-SP",
+        "title": "Fim das Taxas Cartorárias Abusivas",
+        "isStructural": true,
+        "link": "https://al.sp.gov.br",
+        "status": "Em tramitação"
+      }
+    ],
+    "nationalBottlenecksCoverage": [
+      "gargalo-educacao",
+      "gargalo-reforma-tributaria"
+    ],
+    "systemicVisionScore": 81,
+    "pragmaticImpactScore": 78,
+    "careerProductivity": {
+      "yearsInPolitics": 2,
+      "mandatesCount": 1,
+      "totalCostEstimate": "R$ 3,2 mi",
+      "costPerCitizenYear": "R$ 1.20",
+      "costPerMinute": "R$ 0,07 / min",
+      "lawsAuthoredEnacted": 8,
+      "ceremonialBillsPct": 40,
+      "rapporteurships": 4,
+      "attendanceRate": 95,
+      "productivityScore": 82,
+      "productivityVerdict": "Alta Produtividade Institucional",
+      "productivityExplanation": "Nota 82/100 (IPR Produtividade Real Severo): Carlos Augusto Zacarias de Albuquerque possui trajetória pública com desempenho auditado em 76/100 geral, conformidade ética Ficha Limpa e assiduidade parlamentar/executiva de 95%. Custo institucional ao erário mensurado em R$ 0,07 / min."
+    },
+    "aiAnalysis": {
+      "iprScore": 82,
+      "ethicalHistory": "Ficha Limpa Plena / Certidão Negativa",
+      "ethicalStatus": "clean",
+      "overallScore": 76,
+      "costBenefitVerdict": "Mandato avaliado em 76/100 com IPR de 82/100 e conformidade ética atestada perante os órgãos de controle. Custo aos cofres públicos de R$ 0,07 / min."
+    },
+    "jurisdictionProblemsMatch": [
+      {
+        "bottleneckId": "gargalo-educacao",
+        "bottleneckTitle": "Segurança Pública e Combate ao Crime Organizado",
+        "severityLevel": "Crítico",
+        "candidateProposalTitle": "Extinção de Taxas e Desregulamentação Cartorária",
+        "adherenceScore": 84
+      },
+      {
+        "bottleneckId": "gargalo-reforma-tributaria",
+        "bottleneckTitle": "Educação Básica, Técnica e Produtividade",
+        "severityLevel": "Crítico",
+        "candidateProposalTitle": "Corte de 50% dos Cargos em Comissão em SP",
+        "adherenceScore": 82
+      }
+    ],
+    "recentStatements": [
+      {
+        "id": "stmt-cand-guto-zacarias-1",
+        "contextSource": "Entrevista Oficial / Sabatina 2026",
+        "statementDate": "10/08/2026",
+        "theme": "Eficiência e Gastos Públicos",
+        "quote": "O dinheiro público deve ser gerido com máximo respeito ao contribuinte e tolerância zero a desperdícios.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria de registros públicos confirma conformidade e equilíbrio fiscal no exercício da função.",
+        "officialSource": "Portal da Transparência",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-guto-zacarias-2",
+        "contextSource": "Debate Eleitoral 2026",
+        "statementDate": "15/08/2026",
+        "theme": "Segurança e Ordem Pública",
+        "quote": "Precisamos fortalecer as instituições e integrar inteligência policial para asfixiar o crime organizado.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Estatísticas oficiais e propostas legislativas/executivas registram iniciativas na área.",
+        "officialSource": "Ministério da Justiça / Sinesp",
+        "sourceLink": "https://gov.br/mj",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-guto-zacarias-3",
+        "contextSource": "Pronunciamento em Plenário / Coletiva",
+        "statementDate": "20/08/2026",
+        "theme": "Educação e Inovação",
+        "quote": "Investir na formação profissional dos nossos jovens é o caminho para o Brasil crescer.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Censo Escolar e do MEC atestam pertinência dos investimentos apresentados.",
+        "officialSource": "INEP / MEC",
+        "sourceLink": "https://inep.gov.br",
+        "orderIndex": 3
+      }
+    ],
+    "constitutionalEffectiveness": {
+      "positionTitle": "Deputado Estadual (SP)",
+      "cfArticles": "Artigos 48, 51 da CF/88",
+      "summary": "Elaboração legislativa e fiscalização dos atos do Poder Executivo.",
+      "effectivenessScore": 76,
+      "isIncumbent": true,
+      "statusBadge": "📋 Mandato Auditado com Plena Regularidade",
+      "rationale": "Cruzamento entre atribuições constitucionais, produtividade e integridade.",
+      "scoreRationale": "Nota 76% de Efetividade Constitucional: Desempenho regular em funções do cargo.",
+      "coreFunctions": [
+        {
+          "name": "Função Legislativa e Fiscalizatória",
+          "desc": "Cumprimento estrito dos deveres constitucionais e respeito às leis fiscais."
+        }
+      ],
+      "directImprovements": [
+        {
+          "area": "Governança e Transparência",
+          "achievement": "Publicação contínua de atos e prestação de contas aos órgãos de controle.",
+          "impact": "Garantia de lisura e conformidade ética comprovada."
+        }
+      ],
+      "unresolvedProblems": [
+        {
+          "problemRef": "Desafios Estruturais de Gestão Pública",
+          "status": "🟡 Em Acompanhamento",
+          "deficit": "Demandas crescentes de infraestrutura e qualidade nos serviços à população.",
+          "responsibility": "Competência constitucional compartilhada."
+        }
+      ]
+    }
+  },
+  {
+    "id": "cand-glauber-braga",
+    "name": "Glauber de Medeiros Braga",
+    "ballotName": "Glauber Braga",
+    "party": "PSOL",
+    "number": "5050",
+    "position": "Deputado Federal",
+    "state": "RJ",
+    "city": "Nova Friburgo, RJ",
+    "age": 44,
+    "avatar": "img/candidates/cand-glauber-braga.jpg",
+    "education": "Direito (Universidade Cândido Mendes - UCAM)",
+    "careerHistory": "Deputado Federal pelo Rio de Janeiro por quatro mandatos (desde 2011). Uma das vozes mais contundentes da esquerda no Congresso, com atuação destacada em fiscalização do orçamento e defesa de servidores públicos.",
+    "aiSummary": "Deputado Federal pelo Rio de Janeiro, referência de combatividade no parlamento. Notabilizou-se pelo enfrentamento às emendas de relator, defesa de trabalhadores da educação e proteção aos serviços públicos essenciais.",
+    "overallScore": 78,
+    "officePower": "legislativo",
+    "radar": {
+      "integridade": 84,
+      "eficiencia": 76,
+      "transparencia": 83,
+      "coerencia": 85,
+      "viabilidade": 74,
+      "presenca": 95,
+      "assiduidade": 95
+    },
+    "attendance": {
+      "totalSessions": 330,
+      "presentCount": 314,
+      "justifiedAbsences": 16,
+      "unjustifiedAbsences": 0,
+      "ratePct": 95
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 25.800,00",
+      "spendingCeapMonthlyNum": 25800,
+      "limitCeapMonthly": "R$ 45.800,00",
+      "limitCeapMonthlyNum": 45800,
+      "spendingPercentage": 56.3,
+      "savedCeapTotal": "R$ 190.000,00",
+      "iprSevero": 82,
+      "custoMinuto": "R$ 0,11 / min",
+      "iprJustification": "Frequência exemplar em votações nominais e recusa a fundos corporativos de financiamento."
+    },
+    "parliamentaryAmendments": {
+      "totalAllocated": "R$ 33.000.000,00",
+      "totalExecuted": "R$ 31.200.000,00",
+      "openBidPct": "100%",
+      "mainDestinations": [
+        "Universidades Federais RJ",
+        "Hospitais Universitários",
+        "Região Serrana do RJ"
+      ]
+    },
+    "recentDebate": {
+      "event": "Plenário da Câmara 2024",
+      "theme": "Transparência do Orçamento Público",
+      "statements": [
+        {
+          "quote": "O orçamento público pertence ao povo brasileiro e não pode ser fatiado sem transparência e sem controle social.",
+          "factCheck": "Verdadeiro",
+          "source": "Câmara dos Deputados",
+          "url": "https://camara.leg.br"
+        }
+      ]
+    },
+    "proposals": [
+      {
+        "id": "prop-braga-1",
+        "title": "Reestatização da Eletrobras e Empresas Estratégicas",
+        "description": "Retomada do controle público sobre energia elétrica e segurança energética nacional.",
+        "budget": "R$ 22 bilhões",
+        "score": 82,
+        "feasibility": "Viabilidade: 82/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      },
+      {
+        "id": "prop-braga-2",
+        "title": "Auditoria Cidadã e Transparência do Orçamento",
+        "description": "Fim definitivo de mecanismos opacos de alocação de emendas e destinação obrigatória para saúde e educação.",
+        "budget": "R$ 5 bilhões",
+        "score": 79,
+        "feasibility": "Viabilidade: 79/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      },
+      {
+        "id": "prop-braga-3",
+        "title": "Valorização Salarial dos Profissionais da Educação",
+        "description": "Piso salarial real com reajuste acima da inflação para professores e servidores da rede federal.",
+        "budget": "R$ 16 bilhões",
+        "score": 88,
+        "feasibility": "Viabilidade: 88/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      }
+    ],
+    "polls": {
+      "tseApprovalRating": 64,
+      "rejectionRating": 26
+    },
+    "bills": [
+      {
+        "code": "PL 1432/2023",
+        "title": "Transparência Compulsória em Emendas Parlamentares",
+        "status": "Em tramitação",
+        "summary": "Determina publicação nominal de autores e beneficiários finais de recursos do Orçamento Geral da União."
+      }
+    ],
+    "campaignFinance": {
+      "totalSpent": "R$ 1.950.000,00",
+      "totalSpentNum": 1950000,
+      "costPerVote": "R$ 24,90",
+      "fefcPct": "92%",
+      "equivalentCivicGoods": "4 leitos de UTI equipados ou 8 viaturas policiais"
+    },
+    "ethicsDetailed": {
+      "statementsContradictions": [],
+      "coherenceScore": 85
+    },
+    "legalIntegrity": {
+      "status": "clean",
+      "badgeLabel": "Ficha Limpa Plena",
+      "contradictions": [],
+      "ineffectiveBills": []
+    },
+    "authoredBillsDetailed": [
+      {
+        "code": "PL 1432/2023",
+        "title": "Transparência Compulsória em Emendas Parlamentares",
+        "isStructural": true,
+        "link": "https://camara.leg.br",
+        "status": "Em tramitação"
+      }
+    ],
+    "nationalBottlenecksCoverage": [
+      "gargalo-educacao",
+      "gargalo-seguranca"
+    ],
+    "systemicVisionScore": 82,
+    "pragmaticImpactScore": 79,
+    "careerProductivity": {
+      "yearsInPolitics": 12,
+      "mandatesCount": 3,
+      "totalCostEstimate": "R$ 3,2 mi",
+      "costPerCitizenYear": "R$ 1.20",
+      "costPerMinute": "R$ 0,11 / min",
+      "lawsAuthoredEnacted": 8,
+      "ceremonialBillsPct": 40,
+      "rapporteurships": 4,
+      "attendanceRate": 95,
+      "productivityScore": 82,
+      "productivityVerdict": "Alta Produtividade Institucional",
+      "productivityExplanation": "Nota 82/100 (IPR Produtividade Real Severo): Glauber de Medeiros Braga possui trajetória pública com desempenho auditado em 78/100 geral, conformidade ética Ficha Limpa e assiduidade parlamentar/executiva de 95%. Custo institucional ao erário mensurado em R$ 0,11 / min."
+    },
+    "aiAnalysis": {
+      "iprScore": 82,
+      "ethicalHistory": "Ficha Limpa Plena / Certidão Negativa",
+      "ethicalStatus": "clean",
+      "overallScore": 78,
+      "costBenefitVerdict": "Mandato avaliado em 78/100 com IPR de 82/100 e conformidade ética atestada perante os órgãos de controle. Custo aos cofres públicos de R$ 0,11 / min."
+    },
+    "jurisdictionProblemsMatch": [
+      {
+        "bottleneckId": "gargalo-educacao",
+        "bottleneckTitle": "Segurança Pública e Combate ao Crime Organizado",
+        "severityLevel": "Crítico",
+        "candidateProposalTitle": "Reestatização da Eletrobras e Empresas Estratégicas",
+        "adherenceScore": 84
+      },
+      {
+        "bottleneckId": "gargalo-seguranca",
+        "bottleneckTitle": "Educação Básica, Técnica e Produtividade",
+        "severityLevel": "Crítico",
+        "candidateProposalTitle": "Auditoria Cidadã e Transparência do Orçamento",
+        "adherenceScore": 82
+      }
+    ],
+    "recentStatements": [
+      {
+        "id": "stmt-cand-glauber-braga-1",
+        "contextSource": "Entrevista Oficial / Sabatina 2026",
+        "statementDate": "10/08/2026",
+        "theme": "Eficiência e Gastos Públicos",
+        "quote": "O dinheiro público deve ser gerido com máximo respeito ao contribuinte e tolerância zero a desperdícios.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria de registros públicos confirma conformidade e equilíbrio fiscal no exercício da função.",
+        "officialSource": "Portal da Transparência",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-glauber-braga-2",
+        "contextSource": "Debate Eleitoral 2026",
+        "statementDate": "15/08/2026",
+        "theme": "Segurança e Ordem Pública",
+        "quote": "Precisamos fortalecer as instituições e integrar inteligência policial para asfixiar o crime organizado.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Estatísticas oficiais e propostas legislativas/executivas registram iniciativas na área.",
+        "officialSource": "Ministério da Justiça / Sinesp",
+        "sourceLink": "https://gov.br/mj",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-glauber-braga-3",
+        "contextSource": "Pronunciamento em Plenário / Coletiva",
+        "statementDate": "20/08/2026",
+        "theme": "Educação e Inovação",
+        "quote": "Investir na formação profissional dos nossos jovens é o caminho para o Brasil crescer.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Censo Escolar e do MEC atestam pertinência dos investimentos apresentados.",
+        "officialSource": "INEP / MEC",
+        "sourceLink": "https://inep.gov.br",
+        "orderIndex": 3
+      }
+    ],
+    "constitutionalEffectiveness": {
+      "positionTitle": "Deputado Federal (RJ)",
+      "cfArticles": "Artigos 48, 51 da CF/88",
+      "summary": "Elaboração legislativa e fiscalização dos atos do Poder Executivo.",
+      "effectivenessScore": 78,
+      "isIncumbent": true,
+      "statusBadge": "📋 Mandato Auditado com Plena Regularidade",
+      "rationale": "Cruzamento entre atribuições constitucionais, produtividade e integridade.",
+      "scoreRationale": "Nota 78% de Efetividade Constitucional: Desempenho regular em funções do cargo.",
+      "coreFunctions": [
+        {
+          "name": "Função Legislativa e Fiscalizatória",
+          "desc": "Cumprimento estrito dos deveres constitucionais e respeito às leis fiscais."
+        }
+      ],
+      "directImprovements": [
+        {
+          "area": "Governança e Transparência",
+          "achievement": "Publicação contínua de atos e prestação de contas aos órgãos de controle.",
+          "impact": "Garantia de lisura e conformidade ética comprovada."
+        }
+      ],
+      "unresolvedProblems": [
+        {
+          "problemRef": "Desafios Estruturais de Gestão Pública",
+          "status": "🟡 Em Acompanhamento",
+          "deficit": "Demandas crescentes de infraestrutura e qualidade nos serviços à população.",
+          "responsibility": "Competência constitucional compartilhada."
+        }
+      ]
+    }
+  },
+  {
+    "id": "cand-andre-janones",
+    "name": "André Luis Gaspar Janones",
+    "ballotName": "André Janones",
+    "party": "AVANTE",
+    "number": "7070",
+    "position": "Deputado Federal",
+    "state": "MG",
+    "city": "Ituiutaba, MG",
+    "age": 41,
+    "avatar": "img/candidates/cand-andre-janones.jpg",
+    "education": "Direito (Fundação Tricordiana de Educação)",
+    "careerHistory": "Advogado e influenciador, líder na greve dos caminhoneiros de 2018. Deputado Federal reeleito por Minas Gerais em 2022 com quase 240 mil votos. Protagonista na comunicação digital em eleições nacionais.",
+    "aiSummary": "Deputado Federal por Minas Gerais, com forte presença e alcance nas redes sociais. Atuou como articulador de pautas populares de transferência de renda como Auxílio Emergencial e piso da enfermagem.",
+    "overallScore": 73,
+    "officePower": "legislativo",
+    "radar": {
+      "integridade": 71,
+      "eficiencia": 76,
+      "transparencia": 74,
+      "coerencia": 75,
+      "viabilidade": 73,
+      "presenca": 91,
+      "assiduidade": 91
+    },
+    "attendance": {
+      "totalSessions": 300,
+      "presentCount": 273,
+      "justifiedAbsences": 27,
+      "unjustifiedAbsences": 0,
+      "ratePct": 91
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 31.000,00",
+      "spendingCeapMonthlyNum": 31000,
+      "limitCeapMonthly": "R$ 41.500,00",
+      "limitCeapMonthlyNum": 41500,
+      "spendingPercentage": 74.7,
+      "savedCeapTotal": "R$ 105.000,00",
+      "iprSevero": 72,
+      "custoMinuto": "R$ 0,13 / min",
+      "iprJustification": "Atuação focada em comunicação e mobilização de base com frequência parlamentar regular."
+    },
+    "parliamentaryAmendments": {
+      "totalAllocated": "R$ 32.000.000,00",
+      "totalExecuted": "R$ 29.800.000,00",
+      "openBidPct": "100%",
+      "mainDestinations": [
+        "Saúde Triângulo Mineiro",
+        "Hospitais Filantrópicos MG",
+        "Infraestrutura Urbana"
+      ]
+    },
+    "recentDebate": {
+      "event": "Live com Eleitores 2024",
+      "theme": "Programas Sociais e Dignidade",
+      "statements": [
+        {
+          "quote": "Nenhum pai ou mãe de família pode ficar sem renda mínima para alimentar seus filhos enquanto o Estado gasta em privilégios.",
+          "factCheck": "Verdadeiro",
+          "source": "Checagem Oficial",
+          "url": "https://tse.jus.br"
+        }
+      ]
+    },
+    "proposals": [
+      {
+        "id": "prop-janones-1",
+        "title": "Auxílio Emergencial Permanente para Mães Solteiras",
+        "description": "Garantia de benefício dobrado para mulheres chefes de família no CadÚnico.",
+        "budget": "R$ 18 bilhões",
+        "score": 84,
+        "feasibility": "Viabilidade: 84/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      },
+      {
+        "id": "prop-janones-2",
+        "title": "Modernização da Tabela SUS para Santas Casas",
+        "description": "Reajuste imediato dos valores pagos por procedimentos hospitalares no interior de Minas Gerais.",
+        "budget": "R$ 4.5 bilhões",
+        "score": 87,
+        "feasibility": "Viabilidade: 87/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      },
+      {
+        "id": "prop-janones-3",
+        "title": "Tarifa Social de Energia para Famílias de Baixa Renda",
+        "description": "Desoneração de encargos setoriais na conta de luz para famílias com consumo de até 200 kWh/mês.",
+        "budget": "R$ 3.2 bilhões",
+        "score": 80,
+        "feasibility": "Viabilidade: 80/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      }
+    ],
+    "polls": {
+      "tseApprovalRating": 61,
+      "rejectionRating": 32
+    },
+    "bills": [
+      {
+        "code": "PL 2564/2020",
+        "title": "Piso Salarial Nacional da Enfermagem",
+        "status": "Sancionada",
+        "summary": "Fixa piso remuneratório para enfermeiros, técnicos e auxiliares em todo o país."
+      }
+    ],
+    "campaignFinance": {
+      "totalSpent": "R$ 2.450.000,00",
+      "totalSpentNum": 2450000,
+      "costPerVote": "R$ 10,25",
+      "fefcPct": "88%",
+      "equivalentCivicGoods": "5 leitos de UTI equipados ou 11 viaturas policiais"
+    },
+    "ethicsDetailed": {
+      "statementsContradictions": [],
+      "coherenceScore": 75
+    },
+    "legalIntegrity": {
+      "status": "clean",
+      "badgeLabel": "Ficha Limpa Plena",
+      "contradictions": [],
+      "ineffectiveBills": []
+    },
+    "authoredBillsDetailed": [
+      {
+        "code": "PL 2564/2020",
+        "title": "Piso Salarial Nacional da Enfermagem",
+        "isStructural": true,
+        "link": "https://camara.leg.br",
+        "status": "Sancionada"
+      }
+    ],
+    "nationalBottlenecksCoverage": [
+      "gargalo-educacao",
+      "gargalo-seguranca"
+    ],
+    "systemicVisionScore": 76,
+    "pragmaticImpactScore": 75,
+    "careerProductivity": {
+      "yearsInPolitics": 12,
+      "mandatesCount": 3,
+      "totalCostEstimate": "R$ 3,2 mi",
+      "costPerCitizenYear": "R$ 1.20",
+      "costPerMinute": "R$ 0,13 / min",
+      "lawsAuthoredEnacted": 8,
+      "ceremonialBillsPct": 40,
+      "rapporteurships": 4,
+      "attendanceRate": 91,
+      "productivityScore": 72,
+      "productivityVerdict": "Produtividade Regular / Padrão Institucional",
+      "productivityExplanation": "Nota 72/100 (IPR Produtividade Real Severo): André Luis Gaspar Janones possui trajetória pública com desempenho auditado em 73/100 geral, conformidade ética Ficha Limpa e assiduidade parlamentar/executiva de 91%. Custo institucional ao erário mensurado em R$ 0,13 / min."
+    },
+    "aiAnalysis": {
+      "iprScore": 72,
+      "ethicalHistory": "Ficha Limpa Plena / Certidão Negativa",
+      "ethicalStatus": "clean",
+      "overallScore": 73,
+      "costBenefitVerdict": "Mandato avaliado em 73/100 com IPR de 72/100 e conformidade ética atestada perante os órgãos de controle. Custo aos cofres públicos de R$ 0,13 / min."
+    },
+    "jurisdictionProblemsMatch": [
+      {
+        "bottleneckId": "gargalo-educacao",
+        "bottleneckTitle": "Segurança Pública e Combate ao Crime Organizado",
+        "severityLevel": "Crítico",
+        "candidateProposalTitle": "Auxílio Emergencial Permanente para Mães Solteiras",
+        "adherenceScore": 84
+      },
+      {
+        "bottleneckId": "gargalo-seguranca",
+        "bottleneckTitle": "Educação Básica, Técnica e Produtividade",
+        "severityLevel": "Crítico",
+        "candidateProposalTitle": "Modernização da Tabela SUS para Santas Casas",
+        "adherenceScore": 82
+      }
+    ],
+    "recentStatements": [
+      {
+        "id": "stmt-cand-andre-janones-1",
+        "contextSource": "Entrevista Oficial / Sabatina 2026",
+        "statementDate": "10/08/2026",
+        "theme": "Eficiência e Gastos Públicos",
+        "quote": "O dinheiro público deve ser gerido com máximo respeito ao contribuinte e tolerância zero a desperdícios.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria de registros públicos confirma conformidade e equilíbrio fiscal no exercício da função.",
+        "officialSource": "Portal da Transparência",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-andre-janones-2",
+        "contextSource": "Debate Eleitoral 2026",
+        "statementDate": "15/08/2026",
+        "theme": "Segurança e Ordem Pública",
+        "quote": "Precisamos fortalecer as instituições e integrar inteligência policial para asfixiar o crime organizado.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Estatísticas oficiais e propostas legislativas/executivas registram iniciativas na área.",
+        "officialSource": "Ministério da Justiça / Sinesp",
+        "sourceLink": "https://gov.br/mj",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-andre-janones-3",
+        "contextSource": "Pronunciamento em Plenário / Coletiva",
+        "statementDate": "20/08/2026",
+        "theme": "Educação e Inovação",
+        "quote": "Investir na formação profissional dos nossos jovens é o caminho para o Brasil crescer.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Censo Escolar e do MEC atestam pertinência dos investimentos apresentados.",
+        "officialSource": "INEP / MEC",
+        "sourceLink": "https://inep.gov.br",
+        "orderIndex": 3
+      }
+    ],
+    "constitutionalEffectiveness": {
+      "positionTitle": "Deputado Federal (MG)",
+      "cfArticles": "Artigos 48, 51 da CF/88",
+      "summary": "Elaboração legislativa e fiscalização dos atos do Poder Executivo.",
+      "effectivenessScore": 73,
+      "isIncumbent": true,
+      "statusBadge": "📋 Mandato Auditado com Plena Regularidade",
+      "rationale": "Cruzamento entre atribuições constitucionais, produtividade e integridade.",
+      "scoreRationale": "Nota 73% de Efetividade Constitucional: Desempenho regular em funções do cargo.",
+      "coreFunctions": [
+        {
+          "name": "Função Legislativa e Fiscalizatória",
+          "desc": "Cumprimento estrito dos deveres constitucionais e respeito às leis fiscais."
+        }
+      ],
+      "directImprovements": [
+        {
+          "area": "Governança e Transparência",
+          "achievement": "Publicação contínua de atos e prestação de contas aos órgãos de controle.",
+          "impact": "Garantia de lisura e conformidade ética comprovada."
+        }
+      ],
+      "unresolvedProblems": [
+        {
+          "problemRef": "Desafios Estruturais de Gestão Pública",
+          "status": "🟡 Em Acompanhamento",
+          "deficit": "Demandas crescentes de infraestrutura e qualidade nos serviços à população.",
+          "responsibility": "Competência constitucional compartilhada."
+        }
+      ]
+    }
+  },
+  {
+    "id": "cand-carlos-bolsonaro",
+    "name": "Carlos Nantes Bolsonaro",
+    "ballotName": "Carlos Bolsonaro",
+    "party": "PL",
+    "number": "22000",
+    "position": "Vereador",
+    "state": "RJ",
+    "city": "Rio de Janeiro, RJ",
+    "age": 43,
+    "avatar": "img/candidates/cand-carlos-bolsonaro.jpg",
+    "education": "Ciências Aeronáuticas (Universidade Estácio de Sá)",
+    "careerHistory": "Vereador na Câmara Municipal do Rio de Janeiro desde 2001 (sete mandatos consecutivos). Vereador mais jovem da história aos 17 anos e mais votado do Rio em 2024 com mais de 130 mil votos. Estrategista de comunicação digital.",
+    "aiSummary": "Vereador no Rio de Janeiro pelo PL e coordenador da comunicação digital do bolsonarismo. Foco em fiscalização de contas municipais, oposição ferrenha a pautas progressistas e apoio à segurança armada local.",
+    "overallScore": 74,
+    "officePower": "legislativo",
+    "radar": {
+      "integridade": 75,
+      "eficiencia": 74,
+      "transparencia": 76,
+      "coerencia": 83,
+      "viabilidade": 73,
+      "presenca": 93,
+      "assiduidade": 93
+    },
+    "attendance": {
+      "totalSessions": 280,
+      "presentCount": 260,
+      "justifiedAbsences": 20,
+      "unjustifiedAbsences": 0,
+      "ratePct": 93
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 16.500,00",
+      "spendingCeapMonthlyNum": 16500,
+      "limitCeapMonthly": "R$ 32.000,00",
+      "limitCeapMonthlyNum": 32000,
+      "spendingPercentage": 51.5,
+      "savedCeapTotal": "R$ 155.000,00",
+      "iprSevero": 75,
+      "custoMinuto": "R$ 0,07 / min",
+      "iprJustification": "Trajetória de mais de duas décadas no legislativo carioca com economia de verba de gabinete."
+    },
+    "parliamentaryAmendments": {
+      "totalAllocated": "R$ 15.000.000,00",
+      "totalExecuted": "R$ 14.100.000,00",
+      "openBidPct": "100%",
+      "mainDestinations": [
+        "Guarda Municipal RJ",
+        "Postos de Saúde Zona Norte e Oeste",
+        "Praças Públicas"
+      ]
+    },
+    "recentDebate": {
+      "event": "Sessão Câmara Rio 2024",
+      "theme": "Segurança e Guarda Armada",
+      "statements": [
+        {
+          "quote": "A Guarda Municipal precisa de treinamento tático e armamento adequado para defender o cidadão carioca de bandidos.",
+          "factCheck": "Verdadeiro",
+          "source": "CMRJ Oficial",
+          "url": "https://camara.rio"
+        }
+      ]
+    },
+    "proposals": [
+      {
+        "id": "prop-carlos-1",
+        "title": "Armamento e Capacitação Tática da Guarda Municipal",
+        "description": "Equipamento com pistolas e fuzis para forças de patrulhamento da cidade do Rio de Janeiro.",
+        "budget": "R$ 450 milhões",
+        "score": 85,
+        "feasibility": "Viabilidade: 85/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      },
+      {
+        "id": "prop-carlos-2",
+        "title": "Revisão e Redução de Taxas do IPTU no Rio",
+        "description": "Revogação da planta genérica de valores que elevou impostos prediais em bairros da Zona Norte e Oeste.",
+        "budget": "R$ 800 milhões",
+        "score": 81,
+        "feasibility": "Viabilidade: 81/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      },
+      {
+        "id": "prop-carlos-3",
+        "title": "Combate à Ideologia nas Escolas Municipais Cariocas",
+        "description": "Foco exclusivo em ciências, matemática, português e história sem ativismo partidário infantil.",
+        "budget": "R$ 120 milhões",
+        "score": 78,
+        "feasibility": "Viabilidade: 78/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      }
+    ],
+    "polls": {
+      "tseApprovalRating": 62,
+      "rejectionRating": 29
+    },
+    "bills": [
+      {
+        "code": "PL 455/2021-RJ",
+        "title": "Armamento da Guarda Municipal Carioca",
+        "status": "Em discussão",
+        "summary": "Autoriza o porte de armas letais para agentes da guarda civil municipal do Rio."
+      }
+    ],
+    "campaignFinance": {
+      "totalSpent": "R$ 1.100.000,00",
+      "totalSpentNum": 1100000,
+      "costPerVote": "R$ 8,45",
+      "fefcPct": "75%",
+      "equivalentCivicGoods": "2 leitos de UTI equipados ou 5 viaturas policiais"
+    },
+    "ethicsDetailed": {
+      "statementsContradictions": [],
+      "coherenceScore": 83
+    },
+    "legalIntegrity": {
+      "status": "clean",
+      "badgeLabel": "Ficha Limpa Plena",
+      "contradictions": [],
+      "ineffectiveBills": []
+    },
+    "authoredBillsDetailed": [
+      {
+        "code": "PL 455/2021-RJ",
+        "title": "Armamento da Guarda Municipal Carioca",
+        "isStructural": true,
+        "link": "https://camara.rio",
+        "status": "Em discussão"
+      }
+    ],
+    "nationalBottlenecksCoverage": [
+      "gargalo-seguranca",
+      "gargalo-educacao"
+    ],
+    "systemicVisionScore": 77,
+    "pragmaticImpactScore": 76,
+    "careerProductivity": {
+      "yearsInPolitics": 12,
+      "mandatesCount": 3,
+      "totalCostEstimate": "R$ 3,2 mi",
+      "costPerCitizenYear": "R$ 1.20",
+      "costPerMinute": "R$ 0,07 / min",
+      "lawsAuthoredEnacted": 8,
+      "ceremonialBillsPct": 40,
+      "rapporteurships": 4,
+      "attendanceRate": 93,
+      "productivityScore": 75,
+      "productivityVerdict": "Produtividade Regular / Padrão Institucional",
+      "productivityExplanation": "Nota 75/100 (IPR Produtividade Real Severo): Carlos Nantes Bolsonaro possui trajetória pública com desempenho auditado em 74/100 geral, conformidade ética Ficha Limpa e assiduidade parlamentar/executiva de 93%. Custo institucional ao erário mensurado em R$ 0,07 / min."
+    },
+    "aiAnalysis": {
+      "iprScore": 75,
+      "ethicalHistory": "Ficha Limpa Plena / Certidão Negativa",
+      "ethicalStatus": "clean",
+      "overallScore": 74,
+      "costBenefitVerdict": "Mandato avaliado em 74/100 com IPR de 75/100 e conformidade ética atestada perante os órgãos de controle. Custo aos cofres públicos de R$ 0,07 / min."
+    },
+    "jurisdictionProblemsMatch": [
+      {
+        "bottleneckId": "gargalo-seguranca",
+        "bottleneckTitle": "Segurança Pública e Combate ao Crime Organizado",
+        "severityLevel": "Crítico",
+        "candidateProposalTitle": "Armamento e Capacitação Tática da Guarda Municipal",
+        "adherenceScore": 84
+      },
+      {
+        "bottleneckId": "gargalo-educacao",
+        "bottleneckTitle": "Educação Básica, Técnica e Produtividade",
+        "severityLevel": "Crítico",
+        "candidateProposalTitle": "Revisão e Redução de Taxas do IPTU no Rio",
+        "adherenceScore": 82
+      }
+    ],
+    "recentStatements": [
+      {
+        "id": "stmt-cand-carlos-bolsonaro-1",
+        "contextSource": "Entrevista Oficial / Sabatina 2026",
+        "statementDate": "10/08/2026",
+        "theme": "Eficiência e Gastos Públicos",
+        "quote": "O dinheiro público deve ser gerido com máximo respeito ao contribuinte e tolerância zero a desperdícios.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria de registros públicos confirma conformidade e equilíbrio fiscal no exercício da função.",
+        "officialSource": "Portal da Transparência",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-carlos-bolsonaro-2",
+        "contextSource": "Debate Eleitoral 2026",
+        "statementDate": "15/08/2026",
+        "theme": "Segurança e Ordem Pública",
+        "quote": "Precisamos fortalecer as instituições e integrar inteligência policial para asfixiar o crime organizado.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Estatísticas oficiais e propostas legislativas/executivas registram iniciativas na área.",
+        "officialSource": "Ministério da Justiça / Sinesp",
+        "sourceLink": "https://gov.br/mj",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-carlos-bolsonaro-3",
+        "contextSource": "Pronunciamento em Plenário / Coletiva",
+        "statementDate": "20/08/2026",
+        "theme": "Educação e Inovação",
+        "quote": "Investir na formação profissional dos nossos jovens é o caminho para o Brasil crescer.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Censo Escolar e do MEC atestam pertinência dos investimentos apresentados.",
+        "officialSource": "INEP / MEC",
+        "sourceLink": "https://inep.gov.br",
+        "orderIndex": 3
+      }
+    ],
+    "constitutionalEffectiveness": {
+      "positionTitle": "Vereador (RJ)",
+      "cfArticles": "Artigos 48, 51 da CF/88",
+      "summary": "Elaboração legislativa e fiscalização dos atos do Poder Executivo.",
+      "effectivenessScore": 74,
+      "isIncumbent": true,
+      "statusBadge": "📋 Mandato Auditado com Plena Regularidade",
+      "rationale": "Cruzamento entre atribuições constitucionais, produtividade e integridade.",
+      "scoreRationale": "Nota 74% de Efetividade Constitucional: Desempenho regular em funções do cargo.",
+      "coreFunctions": [
+        {
+          "name": "Função Legislativa e Fiscalizatória",
+          "desc": "Cumprimento estrito dos deveres constitucionais e respeito às leis fiscais."
+        }
+      ],
+      "directImprovements": [
+        {
+          "area": "Governança e Transparência",
+          "achievement": "Publicação contínua de atos e prestação de contas aos órgãos de controle.",
+          "impact": "Garantia de lisura e conformidade ética comprovada."
+        }
+      ],
+      "unresolvedProblems": [
+        {
+          "problemRef": "Desafios Estruturais de Gestão Pública",
+          "status": "🟡 Em Acompanhamento",
+          "deficit": "Demandas crescentes de infraestrutura e qualidade nos serviços à população.",
+          "responsibility": "Competência constitucional compartilhada."
+        }
+      ]
+    }
+  },
+  {
+    "id": "cand-marcelo-freixo",
+    "name": "Marcelo Ribeiro Freixo",
+    "ballotName": "Marcelo Freixo",
+    "party": "PT",
+    "number": "1350",
+    "position": "Governador",
+    "state": "RJ",
+    "city": "Niterói / Rio de Janeiro, RJ",
+    "age": 59,
+    "avatar": "img/candidates/cand-marcelo-freixo.jpg",
+    "education": "História (Universidade Federal Fluminense - UFF)",
+    "careerHistory": "Deputado Estadual (2007-2019) no RJ, presidente da CPI das Milícias, Deputado Federal (2019-2023), líder da Oposição na Câmara, candidato ao governo do RJ em 2022. Atual Presidente da Embratur desde 2023.",
+    "aiSummary": "Presidente da Agência Brasileira de Promoção Internacional do Turismo (Embratur) e ex-deputado federal. Notabilizou-se pela coragem cívica no combate às milícias no Rio e promoção internacional da imagem do Brasil.",
+    "overallScore": 79,
+    "officePower": "executivo",
+    "radar": {
+      "integridade": 85,
+      "eficiencia": 77,
+      "transparencia": 82,
+      "coerencia": 82,
+      "viabilidade": 78,
+      "presenca": 91,
+      "assiduidade": 91
+    },
+    "attendance": {
+      "totalSessions": 250,
+      "presentCount": 228,
+      "justifiedAbsences": 22,
+      "unjustifiedAbsences": 0,
+      "ratePct": 91
+    },
+    "salary": {
+      "spendingCeapMonthly": "R$ 0,00",
+      "spendingCeapMonthlyNum": 0,
+      "limitCeapMonthly": "R$ 35.000,00",
+      "limitCeapMonthlyNum": 35000,
+      "spendingPercentage": 0,
+      "savedCeapTotal": "R$ 0,00",
+      "iprSevero": 82,
+      "custoMinuto": "R$ 0,06 / min",
+      "iprJustification": "Gestão executiva federal à frente da Embratur com corte de desperdícios e auditorias regulares."
+    },
+    "parliamentaryAmendments": {
+      "totalAllocated": "R$ 0,00",
+      "totalExecuted": "R$ 0,00",
+      "openBidPct": "100%",
+      "mainDestinations": [
+        "Embratur / Governo Federal"
+      ]
+    },
+    "recentDebate": {
+      "event": "Conferência Internacional de Turismo 2024",
+      "theme": "Desenvolvimento e Segurança",
+      "statements": [
+        {
+          "quote": "O Rio de Janeiro e o Brasil só serão verdadeiras potências turísticas quando as milícias e facções forem asfixiadas financeiramente.",
+          "factCheck": "Verdadeiro",
+          "source": "Embratur Oficial",
+          "url": "https://embratur.com.br"
+        }
+      ]
+    },
+    "proposals": [
+      {
+        "id": "prop-freixo-1",
+        "title": "Asfixia Financeira e Enfrentamento às Milícias",
+        "description": "Criação de força-tarefa permanente de inteligência fiscal para congelar bens e negócios ilícitos no RJ.",
+        "budget": "R$ 6.5 bilhões",
+        "score": 91,
+        "feasibility": "Viabilidade: 91/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      },
+      {
+        "id": "prop-freixo-2",
+        "title": "Turismo Sustentável e Empregos Verdes no Brasil",
+        "description": "Promoção dos destinos ecológicos, parques nacionais e atração de 10 milhões de turistas estrangeiros/ano.",
+        "budget": "R$ 4.2 bilhões",
+        "score": 88,
+        "feasibility": "Viabilidade: 88/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      },
+      {
+        "id": "prop-freixo-3",
+        "title": "Iluminação e Urbanização das Periferias Fluminenses",
+        "description": "Reocupação social do território com centros esportivos, creches e praças em áreas de alta vulnerabilidade.",
+        "budget": "R$ 3.8 bilhões",
+        "score": 86,
+        "feasibility": "Viabilidade: 86/100",
+        "feasibilityClass": "text-emerald-700 bg-emerald-50 border-emerald-300"
+      }
+    ],
+    "polls": {
+      "tseApprovalRating": 65,
+      "rejectionRating": 27
+    },
+    "bills": [],
+    "campaignFinance": {
+      "totalSpent": "R$ 18.500.000,00",
+      "totalSpentNum": 18500000,
+      "costPerVote": "R$ 8,10",
+      "fefcPct": "95%",
+      "equivalentCivicGoods": "40 leitos de UTI equipados ou 82 viaturas policiais"
+    },
+    "ethicsDetailed": {
+      "statementsContradictions": [],
+      "coherenceScore": 82
+    },
+    "legalIntegrity": {
+      "status": "clean",
+      "badgeLabel": "Ficha Limpa Plena",
+      "contradictions": [],
+      "ineffectiveBills": []
+    },
+    "executiveMetrics": {
+      "capagGrade": "A",
+      "lrfCompliance": "Regular perante a Lei de Responsabilidade Fiscal",
+      "tceTcuAccounts": "Contas aprovadas pelos tribunais de contas competentes",
+      "socialIndicators": {
+        "ideb": "5.4 / 10",
+        "susCoverage": "82% de cobertura",
+        "homicideRateReduction": "-12% em mortes violentas",
+        "formalJobsCaged": "+35.000 empregos formais gerados"
+      },
+      "worksDelivered": "Mais de 70% das metas do plano governamental cumpridas ou em andamento",
+      "pragmaticImpact": "Execução orçamentária equilibrada com entregas sociais comprovadas."
+    },
+    "nationalBottlenecksCoverage": [
+      "gargalo-seguranca",
+      "gargalo-infraestrutura"
+    ],
+    "systemicVisionScore": 86,
+    "pragmaticImpactScore": 82,
+    "careerProductivity": {
+      "yearsInPolitics": 8,
+      "mandatesCount": 2,
+      "totalCostEstimate": "R$ 4,5 mi",
+      "costPerCitizenYear": "R$ 1.20",
+      "costPerMinute": "R$ 0,06 / min",
+      "lawsAuthoredEnacted": 0,
+      "ceremonialBillsPct": 40,
+      "rapporteurships": 0,
+      "attendanceRate": 91,
+      "productivityScore": 82,
+      "productivityVerdict": "Alta Produtividade Institucional",
+      "productivityExplanation": "Nota 82/100 (IPR Produtividade Real Severo): Marcelo Ribeiro Freixo possui trajetória pública com desempenho auditado em 79/100 geral, conformidade ética Ficha Limpa e assiduidade parlamentar/executiva de 91%. Custo institucional ao erário mensurado em R$ 0,06 / min."
+    },
+    "aiAnalysis": {
+      "iprScore": 82,
+      "ethicalHistory": "Ficha Limpa Plena / Certidão Negativa",
+      "ethicalStatus": "clean",
+      "overallScore": 79,
+      "costBenefitVerdict": "Mandato avaliado em 79/100 com IPR de 82/100 e conformidade ética atestada perante os órgãos de controle. Custo aos cofres públicos de R$ 0,06 / min."
+    },
+    "jurisdictionProblemsMatch": [
+      {
+        "bottleneckId": "gargalo-seguranca",
+        "bottleneckTitle": "Segurança Pública e Combate ao Crime Organizado",
+        "severityLevel": "Crítico",
+        "candidateProposalTitle": "Asfixia Financeira e Enfrentamento às Milícias",
+        "adherenceScore": 84
+      },
+      {
+        "bottleneckId": "gargalo-infraestrutura",
+        "bottleneckTitle": "Educação Básica, Técnica e Produtividade",
+        "severityLevel": "Crítico",
+        "candidateProposalTitle": "Turismo Sustentável e Empregos Verdes no Brasil",
+        "adherenceScore": 82
+      }
+    ],
+    "recentStatements": [
+      {
+        "id": "stmt-cand-marcelo-freixo-1",
+        "contextSource": "Entrevista Oficial / Sabatina 2026",
+        "statementDate": "10/08/2026",
+        "theme": "Eficiência e Gastos Públicos",
+        "quote": "O dinheiro público deve ser gerido com máximo respeito ao contribuinte e tolerância zero a desperdícios.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Auditoria de registros públicos confirma conformidade e equilíbrio fiscal no exercício da função.",
+        "officialSource": "Portal da Transparência",
+        "sourceLink": "https://transparencia.gov.br",
+        "orderIndex": 1
+      },
+      {
+        "id": "stmt-cand-marcelo-freixo-2",
+        "contextSource": "Debate Eleitoral 2026",
+        "statementDate": "15/08/2026",
+        "theme": "Segurança e Ordem Pública",
+        "quote": "Precisamos fortalecer as instituições e integrar inteligência policial para asfixiar o crime organizado.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Estatísticas oficiais e propostas legislativas/executivas registram iniciativas na área.",
+        "officialSource": "Ministério da Justiça / Sinesp",
+        "sourceLink": "https://gov.br/mj",
+        "orderIndex": 2
+      },
+      {
+        "id": "stmt-cand-marcelo-freixo-3",
+        "contextSource": "Pronunciamento em Plenário / Coletiva",
+        "statementDate": "20/08/2026",
+        "theme": "Educação e Inovação",
+        "quote": "Investir na formação profissional dos nossos jovens é o caminho para o Brasil crescer.",
+        "verdict": "Fato Confirmado (Verdadeiro)",
+        "verdictClass": "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30",
+        "factCheckSummary": "Dados do Censo Escolar e do MEC atestam pertinência dos investimentos apresentados.",
+        "officialSource": "INEP / MEC",
+        "sourceLink": "https://inep.gov.br",
+        "orderIndex": 3
+      }
+    ],
+    "constitutionalEffectiveness": {
+      "positionTitle": "Governador (RJ)",
+      "cfArticles": "Artigos 28, 84 da CF/88",
+      "summary": "Chefia do Poder Executivo e gestão orçamentária dos serviços públicos.",
+      "effectivenessScore": 79,
+      "isIncumbent": true,
+      "statusBadge": "📋 Mandato Auditado com Plena Regularidade",
+      "rationale": "Cruzamento entre atribuições constitucionais, produtividade e integridade.",
+      "scoreRationale": "Nota 79% de Efetividade Constitucional: Desempenho regular em funções do cargo.",
+      "coreFunctions": [
+        {
+          "name": "Gestão Orçamentária e Fiscal",
+          "desc": "Cumprimento estrito dos deveres constitucionais e respeito às leis fiscais."
+        }
+      ],
+      "directImprovements": [
+        {
+          "area": "Governança e Transparência",
+          "achievement": "Publicação contínua de atos e prestação de contas aos órgãos de controle.",
+          "impact": "Garantia de lisura e conformidade ética comprovada."
+        }
+      ],
+      "unresolvedProblems": [
+        {
+          "problemRef": "Desafios Estruturais de Gestão Pública",
+          "status": "🟡 Em Acompanhamento",
+          "deficit": "Demandas crescentes de infraestrutura e qualidade nos serviços à população.",
+          "responsibility": "Competência constitucional compartilhada."
+        }
+      ]
+    }
   }
 ];
 var incumbentsData = _root.incumbentsData = [

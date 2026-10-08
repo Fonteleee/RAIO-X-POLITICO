@@ -7,8 +7,8 @@ const { AutoUpdaterService } = require('../src/services/auto_updater');
 const { AppDatabase } = require('../src/db/database');
 
 describe('Inteligência Cívica, IPR Severo e Mandatários em Exercício', () => {
-  it('deve validar que existem 200 candidatos enriquecidos no catálogo', () => {
-    // assert.strictEqual(candidatesData.length, 200, 'Catálogo deve conter exatamente 200 candidatos');
+  it('deve validar que existem pelo menos 200 candidatos enriquecidos no catálogo', () => {
+    assert.ok(candidatesData.length >= 215, 'Catálogo deve conter pelo menos 215 candidatos');
   });
 
   it('deve garantir que todos os 200 candidatos possuem IPR Severo com justificativa e custo público', () => {

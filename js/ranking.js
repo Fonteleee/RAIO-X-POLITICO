@@ -425,9 +425,9 @@
                 <div class="max-w-md mx-auto space-y-3">
                   <i data-lucide="${rankingTableSearchQuery ? 'search-x' : 'filter-x'}" class="w-8 h-8 mx-auto text-slate-400"></i>
                   <p class="font-bold text-sm text-slate-800 dark:text-slate-200">${noResultsMsg}</p>
-                  <p class="text-xs">${rankingTableSearchQuery ? 'Verifique a digitação ou tente outro termo.' : 'O observatório cívico possui 200 candidatos auditados no total.'}</p>
+                  <p class="text-xs">${rankingTableSearchQuery ? 'Verifique a digitação ou tente outro termo.' : 'O observatório cívico possui 215 candidatos auditados no total.'}</p>
                   <button onclick="${rankingTableSearchQuery ? 'clearRankingTableSearch()' : 'filterRankingByOffice(\'todos\')'}" class="px-4 py-2 bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs rounded-xl shadow-md cursor-pointer transition inline-flex items-center gap-1.5">
-                    <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i> ${rankingTableSearchQuery ? 'Limpar Busca na Tabela' : 'Ver Todos os 200 Candidatos'}
+                    <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i> ${rankingTableSearchQuery ? 'Limpar Busca na Tabela' : 'Ver Todos os Candidatos'}
                   </button>
                 </div>
               </td>
@@ -633,7 +633,7 @@
             <h4 class="font-bold text-slate-900 dark:text-white text-base">Nenhum candidato encontrado</h4>
             <p class="text-xs text-slate-500 dark:text-slate-400 max-w-md mx-auto">Nenhum resultado corresponde aos filtros de integridade, cargo, estado e busca textual.</p>
             <button onclick="resetFeedFilters()" class="px-4 py-2 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs shadow-md transition cursor-pointer">
-              Limpar Filtros & Ver Todos (200)
+              Limpar Filtros & Ver Todos
             </button>
           </div>
         `;
