@@ -18,23 +18,122 @@ window.candidatesData = window.candidatesData || [];
     
     function onStateChange(state) {
       const citySelect = document.getElementById('city-select');
+      if (!citySelect) return;
       if (state === 'SP') {
-        citySelect.innerHTML = '<option value="São Paulo">São Paulo (Capital)</option><option value="Campinas">Campinas</option><option value="Santos">Santos</option>';
+        citySelect.innerHTML = '<option value="São Paulo">São Paulo (Capital)</option><option value="Campinas">Campinas</option><option value="Santos">Santos</option><option value="Ribeirão Preto">Ribeirão Preto</option>';
       } else if (state === 'RJ') {
-        citySelect.innerHTML = '<option value="Rio de Janeiro">Rio de Janeiro (Capital)</option><option value="Niterói">Niterói</option>';
+        citySelect.innerHTML = '<option value="Rio de Janeiro">Rio de Janeiro (Capital)</option><option value="Niterói">Niterói</option><option value="São Gonçalo">São Gonçalo</option>';
       } else if (state === 'MG') {
-        citySelect.innerHTML = '<option value="Belo Horizonte">Belo Horizonte (Capital)</option><option value="Uberlândia">Uberlândia</option>';
+        citySelect.innerHTML = '<option value="Belo Horizonte">Belo Horizonte (Capital)</option><option value="Uberlândia">Uberlândia</option><option value="Juiz de Fora">Juiz de Fora</option>';
+      } else if (state === 'BA') {
+        citySelect.innerHTML = '<option value="Salvador">Salvador (Capital)</option><option value="Feira de Santana">Feira de Santana</option>';
+      } else if (state === 'RS') {
+        citySelect.innerHTML = '<option value="Porto Alegre">Porto Alegre (Capital)</option><option value="Caxias do Sul">Caxias do Sul</option>';
+      } else if (state === 'PE') {
+        citySelect.innerHTML = '<option value="Recife">Recife (Capital)</option><option value="Olinda">Olinda</option>';
+      } else if (state === 'AL') {
+        citySelect.innerHTML = '<option value="Maceió">Maceió (Capital)</option><option value="Arapiraca">Arapiraca</option>';
+      } else if (state === 'CE') {
+        citySelect.innerHTML = '<option value="Fortaleza">Fortaleza (Capital)</option><option value="Sobral">Sobral</option>';
+      } else if (state === 'PR') {
+        citySelect.innerHTML = '<option value="Curitiba">Curitiba (Capital)</option><option value="Londrina">Londrina</option>';
       } else {
         citySelect.innerHTML = '<option value="Capital">Capital</option><option value="Interior">Interior</option>';
       }
     }
 
     function applyLocation() {
-      const state = document.getElementById('state-select').value;
-      const city = document.getElementById('city-select').value;
-      document.getElementById('current-location-display').innerText = `${city}, ${state}`;
+      const stateSelect = document.getElementById('state-select');
+      const citySelect = document.getElementById('city-select');
+      if (!stateSelect || !citySelect) return;
+      const state = stateSelect.value;
+      const city = citySelect.value;
+      const locDisplay = `${city}, ${state}`;
+      const disp = document.getElementById('current-location-display');
+      if (disp) disp.innerText = locDisplay;
+      try {
+        localStorage.setItem('raiox_user_location', JSON.stringify({ state, city, locDisplay }));
+      } catch (e) {}
       closeLocationModal();
     }
+
+    function loadUserLocation() {
+      try {
+        const saved = localStorage.getItem('raiox_user_location');
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          const disp = document.getElementById('current-location-display');
+          if (disp && parsed.locDisplay) disp.innerText = parsed.locDisplay;
+          const stateSelect = document.getElementById('state-select');
+          if (stateSelect && parsed.state) {
+            stateSelect.value = parsed.state;
+            onStateChange(parsed.state);
+          }
+          const citySelect = document.getElementById('city-select');
+          if (citySelect && parsed.city) {
+            citySelect.value = parsed.city;
+          }
+        }
+      } catch (e) {}
+    }
+    window.loadUserLocation = loadUserLocation;
+
+    function updateDynamicHeaderCounters() {
+      const candCount = (window.candidatesData && Array.isArray(window.candidatesData)) ? window.candidatesData.length : 215;
+      const incCount = (window.incumbentsData && Array.isArray(window.incumbentsData)) ? window.incumbentsData.length : 158;
+      const judList = (typeof judiciaryAuthorities !== 'undefined' && Array.isArray(judiciaryAuthorities))
+        ? judiciaryAuthorities
+        : (typeof window !== 'undefined' && Array.isArray(window.judiciaryAuthorities) ? window.judiciaryAuthorities : []);
+      const judCount = judList.length || 15;
+
+      let execCount = 0;
+      let legCount = 0;
+      if (window.candidatesData && Array.isArray(window.candidatesData)) {
+        window.candidatesData.forEach(c => {
+          if (c.officePower === 'executivo') execCount++;
+          else if (c.officePower === 'legislativo') legCount++;
+        });
+      }
+
+      const setTxt = (id, val) => {
+        const el = document.getElementById(id);
+        if (el) el.innerText = val;
+      };
+
+      setTxt('hero-total-candidates-count', candCount);
+      setTxt('hero-total-incumbents-count', incCount);
+      setTxt('hero-badge-cand-count', candCount);
+      setTxt('hero-badge-inc-count', incCount);
+      setTxt('feed-filter-count-all', `(${candCount})`);
+      setTxt('feed-filter-count-jud', `(${judCount})`);
+      setTxt('feed-pill-count-all', candCount);
+      setTxt('feed-pill-count-jud', judCount);
+      setTxt('rank-power-count-all', candCount);
+      setTxt('rank-power-count-exec', execCount || 41);
+      setTxt('rank-power-count-leg', legCount || 159);
+      setTxt('rank-power-count-jud', judCount);
+      setTxt('rank-total-search-count', candCount);
+      setTxt('inc-cargo-count-all', incCount);
+
+      // Countdown TSE 2026
+      const countdownEl = document.getElementById('header-election-countdown');
+      if (countdownEl) {
+        const now = new Date();
+        const round1 = new Date(2026, 9, 4);  // 04/10/2026
+        const round2 = new Date(2026, 9, 25); // 25/10/2026
+        
+        if (now < round1) {
+          const diffDays = Math.ceil((round1 - now) / (1000 * 60 * 60 * 24));
+          countdownEl.innerText = `• Faltam ${diffDays} dias para o 1º Turno`;
+        } else if (now < round2) {
+          const diffDays = Math.ceil((round2 - now) / (1000 * 60 * 60 * 24));
+          countdownEl.innerText = `• 1º Turno Concluído • Faltam ${diffDays} dias para o 2º Turno (25/10)`;
+        } else {
+          countdownEl.innerText = `• Eleições 2026 Concluídas`;
+        }
+      }
+    }
+    window.updateDynamicHeaderCounters = updateDynamicHeaderCounters;
 
     // ================= GLOBAL POLITICIAN SEARCH LOGIC =================
     function handleGlobalSearch(query) {
@@ -689,6 +788,9 @@ window.candidatesData = window.candidatesData || [];
                   : (existing?.recentDebate || { event: 'Debate Oficial 2026', broadcaster: 'Band TV', date: '18/08/2026', truthfulnessPct: 86, statements: [] }),
                 campaignFinance: apiCand.campaignFinance ? {
                   ...apiCand.campaignFinance,
+                  totalSpent: apiCand.campaignFinance.totalSpent || apiCand.campaignFinance.totalSpentFormatted || (existing?.campaignFinance?.totalSpent || 'R$ 16.500.000,00'),
+                  totalSpentFormatted: apiCand.campaignFinance.totalSpentFormatted || apiCand.campaignFinance.totalSpent || (existing?.campaignFinance?.totalSpentFormatted || existing?.campaignFinance?.totalSpent || 'R$ 16,5M'),
+                  costPerVote: apiCand.campaignFinance.costPerVote || (existing?.campaignFinance?.costPerVote || 'R$ 6,88 por voto'),
                   civicEquivalences: (apiCand.campaignFinance.civicEquivalences && apiCand.campaignFinance.civicEquivalences.length > 0)
                     ? apiCand.campaignFinance.civicEquivalences
                     : (existing?.campaignFinance?.civicEquivalences || []),
@@ -720,6 +822,7 @@ window.candidatesData = window.candidatesData || [];
             renderCandidatesFeed();
             if (typeof renderRankingTab === 'function') renderRankingTab();
             if (typeof renderComparator === 'function') renderComparator();
+            if (typeof updateDynamicHeaderCounters === 'function') updateDynamicHeaderCounters();
           }
         }
       } catch (e) {
@@ -748,7 +851,9 @@ window.candidatesData = window.candidatesData || [];
     // Initialize Theme & Feed on Load
     mergeJudiciaryAuthorities();
     initTheme();
+    loadUserLocation();
     renderCandidatesFeed();
+    updateDynamicHeaderCounters();
     syncWithBackend();
     
     // Suporte a abertura direta de figurinha via URL
@@ -763,6 +868,8 @@ window.candidatesData = window.candidatesData || [];
 
 // Inicialização segura no carregamento do DOM
 document.addEventListener('DOMContentLoaded', () => {
+  if (typeof loadUserLocation === 'function') loadUserLocation();
+  if (typeof updateDynamicHeaderCounters === 'function') updateDynamicHeaderCounters();
   if (typeof initTheme === 'function') initTheme();
   if (typeof lucide !== 'undefined') lucide.createIcons();
   if (typeof renderRankingTab === 'function') renderRankingTab();

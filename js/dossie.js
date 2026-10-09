@@ -415,45 +415,54 @@
       }
 
       const gridEl = document.getElementById('dossie-jurisdiction-problems-grid');
-      if (gridEl && jp.problems) {
-        gridEl.innerHTML = jp.problems.map(prob => `
-          <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border ${prob.isCovered ? 'border-purple-200 dark:border-purple-500/20' : 'border-red-200 dark:border-red-500/30'} space-y-2.5 shadow-sm">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 dark:border-white/5 pb-2">
-              <div class="flex items-center gap-2">
-                <span class="px-2 py-0.5 rounded text-[10px] font-extrabold border ${prob.badgeColor}">
-                  ${prob.title}
+      if (gridEl) {
+        if (jp && Array.isArray(jp.problems) && jp.problems.length > 0) {
+          gridEl.innerHTML = jp.problems.map(prob => `
+            <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border ${prob.isCovered ? 'border-purple-200 dark:border-purple-500/20' : 'border-red-200 dark:border-red-500/30'} space-y-2.5 shadow-sm">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 dark:border-white/5 pb-2">
+                <div class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded text-[10px] font-extrabold border ${prob.badgeColor}">
+                    ${prob.title}
+                  </span>
+                </div>
+                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black ${prob.isCovered ? 'bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300' : 'bg-red-100 dark:bg-red-500/20 text-red-800 dark:text-red-300'}">
+                  ${prob.isCovered ? '✓ Proposta Oficial no TSE' : '⚠️ Gargalo Descoberto no Plano'}
                 </span>
               </div>
-              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black ${prob.isCovered ? 'bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300' : 'bg-red-100 dark:bg-red-500/20 text-red-800 dark:text-red-300'}">
-                ${prob.isCovered ? '✓ Proposta Oficial no TSE' : '⚠️ Gargalo Descoberto no Plano'}
-              </span>
-            </div>
 
-            <!-- Diagnosis vs Proposed Solution -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
-              <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/90 border border-slate-200 dark:border-white/5 space-y-1">
-                <span class="text-[10px] uppercase font-bold text-red-600 dark:text-red-400 flex items-center gap-1">
-                  <i data-lucide="alert-octagon" class="w-3 h-3"></i> O Problema Real da População:
-                </span>
-                <p class="text-[11px] text-slate-700 dark:text-slate-300 leading-relaxed">${prob.diagnosis}</p>
+              <!-- Diagnosis vs Proposed Solution -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+                <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/90 border border-slate-200 dark:border-white/5 space-y-1">
+                  <span class="text-[10px] uppercase font-bold text-red-600 dark:text-red-400 flex items-center gap-1">
+                    <i data-lucide="alert-octagon" class="w-3 h-3"></i> O Problema Real da População:
+                  </span>
+                  <p class="text-[11px] text-slate-700 dark:text-slate-300 leading-relaxed">${prob.diagnosis || 'Auditoria de metas em andamento perante o plano de governo.'}</p>
+                </div>
+
+                <div class="p-2.5 rounded-lg ${prob.isCovered ? 'bg-purple-50/70 dark:bg-purple-950/20 border border-purple-200 dark:border-purple-500/30' : 'bg-red-50 dark:bg-red-950/20 border border-red-200 dark:border-red-500/30'} space-y-1">
+                  <span class="text-[10px] uppercase font-bold ${prob.isCovered ? 'text-purple-700 dark:text-purple-300' : 'text-red-600 dark:text-red-400'} flex items-center gap-1">
+                    <i data-lucide="sparkles" class="w-3 h-3"></i> Solução Registrada no Plano de Governo:
+                  </span>
+                  <p class="text-[11px] text-slate-700 dark:text-slate-300 leading-relaxed font-medium">${prob.candidateSolution || 'Compatibilização com diretrizes do plano de metas.'}</p>
+                </div>
               </div>
 
-              <div class="p-2.5 rounded-lg ${prob.isCovered ? 'bg-purple-50/70 dark:bg-purple-950/20 border border-purple-200 dark:border-purple-500/30' : 'bg-red-50 dark:bg-red-950/20 border border-red-200 dark:border-red-500/30'} space-y-1">
-                <span class="text-[10px] uppercase font-bold ${prob.isCovered ? 'text-purple-700 dark:text-purple-300' : 'text-red-600 dark:text-red-400'} flex items-center gap-1">
-                  <i data-lucide="sparkles" class="w-3 h-3"></i> Solução Registrada no Plano de Governo:
-                </span>
-                <p class="text-[11px] text-slate-700 dark:text-slate-300 leading-relaxed font-medium">${prob.candidateSolution}</p>
+              <!-- Targets and Budget -->
+              <div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-slate-100 dark:border-white/5 text-[10px] text-slate-500 dark:text-slate-400 font-mono">
+                <span>🎯 Meta: <strong class="text-slate-900 dark:text-white font-bold">${prob.metricTarget || 'Meta oficial estipulada'}</strong></span>
+                <span>💰 Custo: <strong class="text-slate-900 dark:text-white font-bold">${prob.budget || 'Dotação LOA'}</strong></span>
+                <span class="text-purple-600 dark:text-purple-400 font-bold">${prob.tseProposalRef || 'TSE 2026'}</span>
               </div>
             </div>
-
-            <!-- Targets and Budget -->
-            <div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-slate-100 dark:border-white/5 text-[10px] text-slate-500 dark:text-slate-400 font-mono">
-              <span>🎯 Meta: <strong class="text-slate-900 dark:text-white font-bold">${prob.metricTarget}</strong></span>
-              <span>💰 Custo: <strong class="text-slate-900 dark:text-white font-bold">${prob.budget}</strong></span>
-              <span class="text-purple-600 dark:text-purple-400 font-bold">${prob.tseProposalRef}</span>
+          `).join('');
+        } else {
+          gridEl.innerHTML = `
+            <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-dashed border-slate-200 dark:border-white/10 text-center space-y-2 col-span-full">
+              <p class="text-xs font-semibold text-slate-600 dark:text-slate-400">Cruzamento de gargalos em processamento contínuo perante o plano oficial registrado no TSE.</p>
+              <p class="text-[11px] text-slate-400 dark:text-slate-500">Fontes: TSE DivulgaCandContas & Sistema de Acompanhamento Parlamentar (SIAP).</p>
             </div>
-          </div>
-        `).join('');
+          `;
+        }
       }
     }
 

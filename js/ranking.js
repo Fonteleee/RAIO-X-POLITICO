@@ -453,9 +453,9 @@
               .replace('Senador', 'Sen.')
               .replace('Senadora', 'Sen.')
               .replace('Presidente', 'Pres.');
-            const campSpent = cand.campaignFinance ? cand.campaignFinance.totalSpentFormatted.replace(' milhões', 'M').replace(' milhão', 'M') : 'R$ 16,5M';
-            const costVote = cand.campaignFinance ? cand.campaignFinance.costPerVote.replace(' / voto', ' por voto') : 'R$ 6,88 por voto';
-            const amendTotal = cand.parliamentaryAmendments ? cand.parliamentaryAmendments.totalExecuted.replace('.000.000,00', 'M').replace('.000,00', 'k') : 'R$ 35.1M';
+            const campSpent = (cand.campaignFinance?.totalSpentFormatted || cand.campaignFinance?.totalSpent || 'R$ 16,5M').replace(' milhões', 'M').replace(' milhão', 'M');
+            const costVote = (cand.campaignFinance?.costPerVote || 'R$ 6,88 por voto').replace(' / voto', ' por voto');
+            const amendTotal = (cand.parliamentaryAmendments?.totalExecuted || cand.parliamentaryAmendments?.totalAllocated || 'R$ 35.1M').replace('.000.000,00', 'M').replace('.000,00', 'k');
             const isClean = (!cand.ethics || cand.ethics.condemned === 0);
 
             return `

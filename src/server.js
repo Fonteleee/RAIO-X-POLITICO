@@ -543,7 +543,7 @@ const server = http.createServer(async (req, res) => {
     if (ext.match(/\.(jpg|jpeg|png|svg|ico|webp)$/)) {
       cacheControl = 'public, max-age=604800, stale-while-revalidate=86400';
     } else if (ext.match(/\.(js|css|woff2?|ttf|eot)$/)) {
-      cacheControl = 'public, max-age=86400, stale-while-revalidate=3600';
+      cacheControl = process.env.NODE_ENV === 'production' ? 'public, max-age=86400, stale-while-revalidate=3600' : 'no-cache, must-revalidate';
     } else if (ext === '.html') {
       cacheControl = 'no-cache, must-revalidate';
     } else {
