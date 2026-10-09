@@ -1,0 +1,13 @@
+# Figuras Políticas | Observatório Cívico & Dossiê Eleitoral 2026
+# https://fonteleee.github.io/figuras-politicas/
+
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /dossie.html
+Allow: /match.html
+Allow: /data/
+Allow: /img/
+
+# Sitemaps Oficiais para Indexação no Google e Mecanismos de Busca
+Sitemap: https://fonteleee.github.io/figuras-politicas/sitemap.xml

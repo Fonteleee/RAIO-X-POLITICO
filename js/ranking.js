@@ -654,21 +654,22 @@
           }
         };
         
-        const isExec = cand.position && (cand.position.includes('Presidente') || cand.position.includes('Governador') || cand.position.includes('Prefeito'));
-        const isPresident = cand.position && cand.position.includes('Presidente');
+        const isNoMandate = (cand.salary && typeof cand.salary.spendingCeapMonthly === 'string' && cand.salary.spendingCeapMonthly.includes('Sem Mandato')) || cand.isIncumbent === false || (cand.position && (cand.position.includes('Ex-') || cand.careerHistory?.includes('Inelegível')));
+        const isExec = !isNoMandate && cand.position && (cand.position.includes('Presidente') || cand.position.includes('Governador') || cand.position.includes('Prefeito')) && cand.officePower !== 'judiciario';
+        const isPresident = isExec && cand.position.includes('Presidente');
         let powerBadge;
-        if (cand.position && (cand.position.includes('Ex-') || cand.careerHistory?.includes('Inelegível'))) {
-          powerBadge = `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-rose-100 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 border border-rose-300 dark:border-rose-500/30 inline-flex items-center gap-1"><i data-lucide="shield-alert" class="w-3 h-3 text-rose-600 dark:text-rose-400"></i> ${cand.position}</span>`;
+        if (isNoMandate) {
+          powerBadge = `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-700 inline-flex items-center gap-1"><i data-lucide="user-check" class="w-3 h-3 text-slate-600 dark:text-slate-400"></i> Postulante • Sem Mandato</span>`;
         } else if (isExec) {
           powerBadge = `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-500/30 inline-flex items-center gap-1"><i data-lucide="landmark" class="w-3 h-3 text-amber-600 dark:text-amber-400"></i> Executivo</span>`;
         } else {
           powerBadge = `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-indigo-100 dark:bg-indigo-500/20 text-indigo-800 dark:text-indigo-300 border border-indigo-300 dark:border-indigo-500/30 inline-flex items-center gap-1"><i data-lucide="scale" class="w-3 h-3 text-indigo-600 dark:text-indigo-400"></i> Legislativo</span>`;
         }
         
-        const fiscalLabel = isExec ? 'Meta Fiscal' : 'Cota Parlamentar';
-        const fiscalValue = isExec ? (isPresident ? '100% TCU' : '100% TCE') : `${cand.salary?.spendingPercentage || 75}% teto`;
-        const attendanceLabel = isExec ? 'Gestão' : 'Presença';
-        const attendanceValue = isExec ? `${cand.attendance?.ratePct || 98}% Metas` : `${cand.attendance?.ratePct || 94}%`;
+        const fiscalLabel = isExec ? 'Meta Fiscal' : (isNoMandate ? 'Custo Atual' : 'Cota Parlamentar');
+        const fiscalValue = isExec ? (isPresident ? '100% TCU' : '100% TCE') : (isNoMandate ? 'R$ 0,00' : `${cand.salary?.spendingPercentage || 75}% teto`);
+        const attendanceLabel = isExec ? 'Gestão' : (isNoMandate ? 'Exercício' : 'Presença');
+        const attendanceValue = isExec ? `${cand.attendance?.ratePct || 98}% Metas` : (isNoMandate ? 'Sem Mandato' : `${cand.attendance?.ratePct || 94}%`);
 
         const displayName = cand.ballotName || cand.name;
         const subtitleName = (cand.ballotName && cand.ballotName !== cand.name) 
@@ -678,8 +679,8 @@
         // Destaque de cargo/votação removido conforme solicitação
         const officeBadge = '';
 
-        const mandateSalaryLabel = isExec ? 'Subsídio Mensal do Cargo:' : 'Cota Parlamentar Média / mês:';
-        const mandateSalaryValue = cand.salary?.spendingCeapMonthly || (isExec ? 'R$ 35.800,00' : 'R$ 34.200,00');
+        const mandateSalaryLabel = isExec ? 'Subsídio Mensal do Cargo:' : (isNoMandate ? 'Custo do Mandato:' : 'Cota Parlamentar Média / mês:');
+        const mandateSalaryValue = isNoMandate ? 'R$ 0,00 (Sem Mandato Ativo)' : (cand.salary?.spendingCeapMonthly || (isExec ? 'R$ 35.800,00' : 'R$ 34.200,00'));
         const roiBudgetSnippet = (isExec && cand.salary?.civicConversion?.roiText) ? `
           <div class="text-[10px] text-slate-700 dark:text-slate-300 font-medium flex items-center justify-between border-t border-amber-500/15 dark:border-amber-500/20 pt-1">
             <span class="flex items-center gap-1 font-semibold">

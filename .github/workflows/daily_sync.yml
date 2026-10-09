@@ -1,0 +1,46 @@
+name: "Figuras Políticas - Sincronização Diária de Dados & SEO"
+
+on:
+  schedule:
+    # Disparo diário às 06:00 da manhã no Brasil (09:00 UTC):
+    - cron: '0 9 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  daily-sync:
+    name: Sincronizar Dados Cívicos, Auditoria e SEO
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do Repositório
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configurar Node.js LTS
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Instalar Dependências
+        run: npm ci
+
+      - name: Executar Ciclo de Auto-Manutenção, Auditoria e Sitemap
+        run: node scripts/daily_data_sync.js
+
+      - name: Publicar Atualizações no GitHub e GitHub Pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add sitemap.xml robots.txt data/
+          if git diff --staged --quiet; then
+            echo "Nenhuma alteração de dados detectada neste ciclo."
+          else
+            git commit -m "chore(sync): auto-atualização diária de dados cívicos e sitemap [skip ci]"
+            git push origin main
+            git push origin main:gh-pages --force
+          fi

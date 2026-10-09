@@ -279,8 +279,9 @@
         }
       };
 
-      const isExec = cand.position && (cand.position.includes('Presidente') || cand.position.includes('Governador') || cand.position.includes('Prefeito')) && cand.officePower !== 'judiciario';
-      const isPresident = cand.position && cand.position.includes('Presidente') && cand.officePower !== 'judiciario';
+      const isNoMandate = (cand.salary && typeof cand.salary.spendingCeapMonthly === 'string' && cand.salary.spendingCeapMonthly.includes('Sem Mandato')) || cand.isIncumbent === false || (cand.position && (cand.position.includes('Ex-') || cand.careerHistory?.includes('Inelegível')));
+      const isExec = !isNoMandate && cand.position && (cand.position.includes('Presidente') || cand.position.includes('Governador') || cand.position.includes('Prefeito')) && cand.officePower !== 'judiciario';
+      const isPresident = isExec && cand.position.includes('Presidente');
       const isJud = cand.officePower === 'judiciario' || Boolean(cand.court);
 
       let powerBadge;
@@ -290,14 +291,16 @@
         powerBadge = `<span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-purple-500/10 text-purple-700 dark:text-purple-400 border border-purple-500/20 inline-flex items-center gap-1"><i data-lucide="scale" class="w-3 h-3 text-purple-500"></i> Judiciário (${cand.court || 'STF'})</span>`;
       } else if (isExec) {
         powerBadge = `<span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/10 text-amber-700 dark:text-amber-400 border border-amber-500/20 inline-flex items-center gap-1"><i data-lucide="landmark" class="w-3 h-3"></i> Executivo</span>`;
+      } else if (isNoMandate) {
+        powerBadge = `<span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-slate-500/10 text-slate-700 dark:text-slate-300 border border-slate-500/20 inline-flex items-center gap-1"><i data-lucide="user-check" class="w-3 h-3"></i> Postulante • Sem Mandato</span>`;
       } else {
         powerBadge = `<span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-blue-500/10 text-blue-700 dark:text-blue-400 border border-blue-500/20 inline-flex items-center gap-1"><i data-lucide="scale" class="w-3 h-3"></i> Legislativo</span>`;
       }
 
-      const fiscalLabel = isJud ? 'Subsídio CNJ' : (isExec ? 'Meta Fiscal' : 'Cota Parlamentar');
-      const fiscalValue = isJud ? (cand.salary?.baseSalary || 'R$ 44.008') : (isExec ? (isPresident ? '100% TCU' : '100% TCE') : `${cand.salary?.spendingPercentage || 75}% teto`);
-      const attendanceLabel = isJud ? 'Prazos ER 58' : (isExec ? 'Gestão' : 'Presença');
-      const attendanceValue = isJud ? (cand.judiciaryMetrics?.complianceER58 || '100% no Prazo') : (isExec ? `${cand.attendance?.ratePct || 98}% Metas` : `${cand.attendance?.ratePct || 94}%`);
+      const fiscalLabel = isJud ? 'Subsídio CNJ' : (isExec ? 'Meta Fiscal' : (isNoMandate ? 'Custo Atual' : 'Cota Parlamentar'));
+      const fiscalValue = isJud ? (cand.salary?.baseSalary || 'R$ 44.008') : (isExec ? (isPresident ? '100% TCU' : '100% TCE') : (isNoMandate ? 'R$ 0,00' : `${cand.salary?.spendingPercentage || 75}% teto`));
+      const attendanceLabel = isJud ? 'Prazos ER 58' : (isExec ? 'Gestão' : (isNoMandate ? 'Exercício' : 'Presença'));
+      const attendanceValue = isJud ? (cand.judiciaryMetrics?.complianceER58 || '100% no Prazo') : (isExec ? `${cand.attendance?.ratePct || 98}% Metas` : (isNoMandate ? 'Sem Mandato' : `${cand.attendance?.ratePct || 94}%`));
 
       const displayName = cand.ballotName || cand.name;
       const subtitleName = (cand.ballotName && cand.ballotName !== cand.name)
@@ -307,8 +310,8 @@
       // Removido destaque de cargo/votação conforme solicitação do usuário
       const officeBadge = '';
 
-      const mandateSalaryLabel = isJud ? 'Acervo no Gabinete:' : (isExec ? 'Subsídio Mensal do Cargo:' : 'Cota Parlamentar Média / mês:');
-      const mandateSalaryValue = isJud ? `${cand.judiciaryMetrics?.cabinetCases || 890} processos (DataJud)` : (cand.salary?.spendingCeapMonthly || (isExec ? 'R$ 35.800,00' : 'R$ 34.200,00'));
+      const mandateSalaryLabel = isJud ? 'Acervo no Gabinete:' : (isExec ? 'Subsídio Mensal do Cargo:' : (isNoMandate ? 'Custo do Mandato:' : 'Cota Parlamentar Média / mês:'));
+      const mandateSalaryValue = isJud ? `${cand.judiciaryMetrics?.cabinetCases || 890} processos (DataJud)` : (isNoMandate ? 'R$ 0,00 (Sem Mandato Ativo)' : (cand.salary?.spendingCeapMonthly || (isExec ? 'R$ 35.800,00' : 'R$ 34.200,00')));
       const roiBudgetSnippet = (isExec && cand.salary?.civicConversion?.roiText) ? `
         <div class="text-[10px] text-slate-700 dark:text-slate-300 font-medium flex items-center justify-between border-t border-amber-500/15 dark:border-amber-500/20 pt-1">
           <span class="flex items-center gap-1 font-semibold"><i data-lucide="landmark" class="w-3 h-3 text-blue-600 dark:text-blue-400"></i> Orçamento Sob Gestão:</span>
@@ -342,9 +345,6 @@
       const conflict = (!isJud && typeof window.detectConflictOfInterest === 'function')
         ? window.detectConflictOfInterest(cand)
         : null;
-      const predictive = (!isJud && typeof window.calculatePredictiveMigration === 'function')
-        ? window.calculatePredictiveMigration(cand)
-        : null;
       const audit = (typeof window.generateMetricAuditHash === 'function')
         ? window.generateMetricAuditHash(cand)
         : null;
@@ -356,11 +356,6 @@
         } else {
           conflictBadge = `<span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/10 text-emerald-800 dark:text-emerald-300 border border-emerald-500/20 inline-flex items-center gap-1" title="Sem conflito detectado: financiamento eleitoral difuso"><i data-lucide="shield-check" class="w-3 h-3 text-emerald-500"></i> Isento de Conflito</span>`;
         }
-      }
-
-      let predictiveBadge = '';
-      if (predictive && predictive.reelectionProbabilityPct > 0) {
-        predictiveBadge = `<span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-indigo-500/10 text-indigo-800 dark:text-indigo-300 border border-indigo-500/20 inline-flex items-center gap-1" title="${predictive.analyticalVerdict}"><i data-lucide="trending-up" class="w-3 h-3 text-indigo-500"></i> Projeção: ${predictive.reelectionProbabilityPct}% Reeleição • Janela: ${predictive.partyMigrationRisk}</span>`;
       }
 
       let auditBadge = '';
@@ -499,12 +494,11 @@
             </div>
           </div>
 
-          <!-- Badges de Integridade Legal, Produtividade, Conflito, Predição & Auditoria -->
+          <!-- Badges de Integridade Legal, Produtividade, Conflito & Auditoria -->
           <div class="flex flex-wrap items-center gap-1.5 mt-2 pt-2 border-t border-black/5 dark:border-white/10">
             ${legBadge}
             ${iprBadge}
             ${conflictBadge}
-            ${predictiveBadge}
             ${auditBadge}
           </div>
 

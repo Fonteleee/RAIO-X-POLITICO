@@ -5237,20 +5237,22 @@ var candidatesData = _root.candidatesData = [
       "indicadoresSociais": 86,
       "eficaciaPragmatica": 83
     },
+    "isIncumbent": false,
     "attendance": {
-      "totalSessions": 180,
-      "presentCount": 171,
-      "justifiedAbsences": 9,
+      "totalSessions": 0,
+      "presentCount": 0,
+      "justifiedAbsences": 0,
       "unjustifiedAbsences": 0,
-      "ratePct": 95
+      "ratePct": 0,
+      "status": "Não se aplica (Sem mandato em exercício)"
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00 (Sem Mandato Ativo)",
-      "spendingCeapMonthlyNum": 33763,
-      "limitCeapMonthly": "R$ 45.000,00",
-      "limitCeapMonthlyNum": 45000,
-      "spendingPercentage": 75,
-      "savedCeapTotal": "R$ 100%",
+      "spendingCeapMonthlyNum": 0,
+      "limitCeapMonthly": "Não se aplica",
+      "limitCeapMonthlyNum": 0,
+      "spendingPercentage": 0,
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,00",
         "costPerCitizenYear": "R$ 0,00",
@@ -11096,19 +11098,21 @@ var candidatesData = _root.candidatesData = [
       "indicadoresSociais": 86,
       "eficaciaPragmatica": 80
     },
+    "isIncumbent": false,
     "attendance": {
-      "totalSessions": 240,
-      "presentCount": 228,
-      "justifiedAbsences": 12,
+      "totalSessions": 0,
+      "presentCount": 0,
+      "justifiedAbsences": 0,
       "unjustifiedAbsences": 0,
-      "ratePct": 95
+      "ratePct": 0,
+      "status": "Não se aplica (Sem mandato em exercício)"
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 33.763,00",
-      "spendingCeapMonthlyNum": 33763,
-      "limitCeapMonthly": "R$ 45.000,00",
-      "limitCeapMonthlyNum": 45000,
-      "spendingPercentage": 100,
+      "spendingCeapMonthly": "R$ 0,00 (Sem Mandato Ativo)",
+      "spendingCeapMonthlyNum": 0,
+      "limitCeapMonthly": "Não se aplica",
+      "limitCeapMonthlyNum": 0,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,06 / min",
@@ -11738,19 +11742,21 @@ var candidatesData = _root.candidatesData = [
       "indicadoresSociais": 86,
       "eficaciaPragmatica": 83
     },
+    "isIncumbent": false,
     "attendance": {
-      "totalSessions": 244,
-      "presentCount": 232,
-      "justifiedAbsences": 12,
+      "totalSessions": 0,
+      "presentCount": 0,
+      "justifiedAbsences": 0,
       "unjustifiedAbsences": 0,
-      "ratePct": 95.1
+      "ratePct": 0,
+      "status": "Não se aplica (Sem mandato em exercício)"
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 35.000,00",
-      "spendingCeapMonthlyNum": 33763,
-      "limitCeapMonthly": "R$ 45.000,00",
-      "limitCeapMonthlyNum": 45000,
-      "spendingPercentage": 100,
+      "spendingCeapMonthly": "R$ 0,00 (Sem Mandato Ativo)",
+      "spendingCeapMonthlyNum": 0,
+      "limitCeapMonthly": "Não se aplica",
+      "limitCeapMonthlyNum": 0,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,07 / min",
@@ -35320,7 +35326,7 @@ var candidatesData = _root.candidatesData = [
     "ballotName": "ACM Neto",
     "party": "UNIÃO",
     "number": "44",
-    "position": "Governador",
+    "position": "Pré-candidato ao Governo do Estado",
     "state": "BA",
     "city": "Salvador",
     "age": 47,
@@ -35337,39 +35343,36 @@ var candidatesData = _root.candidatesData = [
       "transparencia": 78,
       "coerencia": 72,
       "viabilidade": 66,
-      "presenca": 86,
-      "assiduidade": 86,
+      "presenca": 0,
+      "assiduidade": 0,
       "gestaoFiscal": 67,
       "entregasObras": 66,
       "indicadoresSociais": 86,
       "eficaciaPragmatica": 86
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 184883.00",
+      "spendingCeapMonthly": "R$ 0,00 (Sem Mandato Ativo)",
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,38/min",
         "costPerCitizenYear": "R$ 0,06/ano",
         "salariosMinimos": "193 salários/ano",
         "roiText": "R$ 31,50 entregues por R$ 1 gasto"
-      }
+      },
+      "spendingCeapMonthlyNum": 0,
+      "limitCeapMonthly": "Não se aplica",
+      "limitCeapMonthlyNum": 0,
+      "spendingPercentage": 0,
+      "custoMinuto": "R$ 0,00 / min",
+      "iprJustification": "Candidato sem mandato eletivo ativo no período auditado; custo parlamentar nulo ao erário."
     },
     "attendance": {
-      "ratePct": 95,
-      "totalSessions": 120,
-      "presentCount": 112,
-      "justifiedAbsences": 1,
+      "totalSessions": 0,
+      "presentCount": 0,
+      "justifiedAbsences": 0,
       "unjustifiedAbsences": 0,
-      "committees": [
-        {
-          "name": "Comissão de Constituição, Justiça e Cidadania",
-          "presences": "96%"
-        },
-        {
-          "name": "Comissão de Finanças e Orçamento",
-          "presences": "94%"
-        }
-      ]
+      "ratePct": 0,
+      "status": "Não se aplica (Sem mandato em exercício)"
     },
     "bills": {
       "proposed": 33,
@@ -35717,7 +35720,8 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
-    }
+    },
+    "isIncumbent": false
   },
   {
     "id": "cand-jeronimo-rodrigues",
@@ -40420,7 +40424,7 @@ var candidatesData = _root.candidatesData = [
     "ballotName": "Marília Arraes",
     "party": "SOLIDARIEDADE",
     "number": "77",
-    "position": "Governadora",
+    "position": "Pré-candidata ao Governo do Estado",
     "state": "PE",
     "city": "Recife",
     "age": 41,
@@ -40437,39 +40441,36 @@ var candidatesData = _root.candidatesData = [
       "transparencia": 78,
       "coerencia": 72,
       "viabilidade": 66,
-      "presenca": 86,
-      "assiduidade": 86,
+      "presenca": 0,
+      "assiduidade": 0,
       "gestaoFiscal": 67,
       "entregasObras": 66,
       "indicadoresSociais": 86,
       "eficaciaPragmatica": 77
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 137433.00",
+      "spendingCeapMonthly": "R$ 0,00 (Sem Mandato Ativo)",
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,53/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "180 salários/ano",
         "roiText": "R$ 37,50 entregues por R$ 1 gasto"
-      }
+      },
+      "spendingCeapMonthlyNum": 0,
+      "limitCeapMonthly": "Não se aplica",
+      "limitCeapMonthlyNum": 0,
+      "spendingPercentage": 0,
+      "custoMinuto": "R$ 0,00 / min",
+      "iprJustification": "Candidato sem mandato eletivo ativo no período auditado; custo parlamentar nulo ao erário."
     },
     "attendance": {
-      "ratePct": 96,
-      "totalSessions": 120,
-      "presentCount": 113,
-      "justifiedAbsences": 4,
+      "totalSessions": 0,
+      "presentCount": 0,
+      "justifiedAbsences": 0,
       "unjustifiedAbsences": 0,
-      "committees": [
-        {
-          "name": "Comissão de Constituição, Justiça e Cidadania",
-          "presences": "96%"
-        },
-        {
-          "name": "Comissão de Finanças e Orçamento",
-          "presences": "94%"
-        }
-      ]
+      "ratePct": 0,
+      "status": "Não se aplica (Sem mandato em exercício)"
     },
     "bills": {
       "proposed": 53,
@@ -40817,7 +40818,8 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
-    }
+    },
+    "isIncumbent": false
   },
   {
     "id": "cand-gilson-machado",
@@ -41254,7 +41256,7 @@ var candidatesData = _root.candidatesData = [
     "ballotName": "Miguel Coelho",
     "party": "UNIÃO",
     "number": "44",
-    "position": "Governador",
+    "position": "Pré-candidato ao Governo do Estado",
     "state": "PE",
     "city": "Petrolina",
     "age": 35,
@@ -41271,39 +41273,36 @@ var candidatesData = _root.candidatesData = [
       "transparencia": 78,
       "coerencia": 72,
       "viabilidade": 66,
-      "presenca": 86,
-      "assiduidade": 86,
+      "presenca": 0,
+      "assiduidade": 0,
       "gestaoFiscal": 65,
       "entregasObras": 66,
       "indicadoresSociais": 86,
       "eficaciaPragmatica": 83
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 82992.00",
+      "spendingCeapMonthly": "R$ 0,00 (Sem Mandato Ativo)",
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,36/min",
         "costPerCitizenYear": "R$ 0,06/ano",
         "salariosMinimos": "170 salários/ano",
         "roiText": "R$ 36,50 entregues por R$ 1 gasto"
-      }
+      },
+      "spendingCeapMonthlyNum": 0,
+      "limitCeapMonthly": "Não se aplica",
+      "limitCeapMonthlyNum": 0,
+      "spendingPercentage": 0,
+      "custoMinuto": "R$ 0,00 / min",
+      "iprJustification": "Candidato sem mandato eletivo ativo no período auditado; custo parlamentar nulo ao erário."
     },
     "attendance": {
-      "ratePct": 96,
-      "totalSessions": 120,
-      "presentCount": 113,
-      "justifiedAbsences": 3,
+      "totalSessions": 0,
+      "presentCount": 0,
+      "justifiedAbsences": 0,
       "unjustifiedAbsences": 0,
-      "committees": [
-        {
-          "name": "Comissão de Constituição, Justiça e Cidadania",
-          "presences": "96%"
-        },
-        {
-          "name": "Comissão de Finanças e Orçamento",
-          "presences": "94%"
-        }
-      ]
+      "ratePct": 0,
+      "status": "Não se aplica (Sem mandato em exercício)"
     },
     "bills": {
       "proposed": 59,
@@ -41651,7 +41650,8 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
-    }
+    },
+    "isIncumbent": false
   },
   {
     "id": "cand-mendonca-filho",
@@ -43804,7 +43804,7 @@ var candidatesData = _root.candidatesData = [
     "ballotName": "Capitão Wagner",
     "party": "UNIÃO",
     "number": "44",
-    "position": "Governador",
+    "position": "Pré-candidato ao Governo do Estado",
     "state": "CE",
     "city": "Fortaleza",
     "age": 46,
@@ -43821,39 +43821,36 @@ var candidatesData = _root.candidatesData = [
       "transparencia": 78,
       "coerencia": 72,
       "viabilidade": 66,
-      "presenca": 84,
-      "assiduidade": 84,
+      "presenca": 0,
+      "assiduidade": 0,
       "gestaoFiscal": 68,
       "entregasObras": 66,
       "indicadoresSociais": 84,
       "eficaciaPragmatica": 86
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 99781.00",
+      "spendingCeapMonthly": "R$ 0,00 (Sem Mandato Ativo)",
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,48/min",
         "costPerCitizenYear": "R$ 0,09/ano",
         "salariosMinimos": "161 salários/ano",
         "roiText": "R$ 39,50 entregues por R$ 1 gasto"
-      }
+      },
+      "spendingCeapMonthlyNum": 0,
+      "limitCeapMonthly": "Não se aplica",
+      "limitCeapMonthlyNum": 0,
+      "spendingPercentage": 0,
+      "custoMinuto": "R$ 0,00 / min",
+      "iprJustification": "Candidato sem mandato eletivo ativo no período auditado; custo parlamentar nulo ao erário."
     },
     "attendance": {
-      "ratePct": 93,
-      "totalSessions": 120,
-      "presentCount": 114,
-      "justifiedAbsences": 5,
+      "totalSessions": 0,
+      "presentCount": 0,
+      "justifiedAbsences": 0,
       "unjustifiedAbsences": 0,
-      "committees": [
-        {
-          "name": "Comissão de Constituição, Justiça e Cidadania",
-          "presences": "96%"
-        },
-        {
-          "name": "Comissão de Finanças e Orçamento",
-          "presences": "94%"
-        }
-      ]
+      "ratePct": 0,
+      "status": "Não se aplica (Sem mandato em exercício)"
     },
     "bills": {
       "proposed": 51,
@@ -44201,7 +44198,8 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
-    }
+    },
+    "isIncumbent": false
   },
   {
     "id": "cand-eduardo-girao",
@@ -45067,7 +45065,7 @@ var candidatesData = _root.candidatesData = [
     "ballotName": "Roberto Cláudio",
     "party": "PDT",
     "number": "12",
-    "position": "Governador",
+    "position": "Pré-candidato ao Governo do Estado",
     "state": "CE",
     "city": "Fortaleza",
     "age": 50,
@@ -45084,39 +45082,36 @@ var candidatesData = _root.candidatesData = [
       "transparencia": 78,
       "coerencia": 72,
       "viabilidade": 66,
-      "presenca": 84,
-      "assiduidade": 84,
+      "presenca": 0,
+      "assiduidade": 0,
       "gestaoFiscal": 67,
       "entregasObras": 66,
       "indicadoresSociais": 84,
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 94574.00",
+      "spendingCeapMonthly": "R$ 0,00 (Sem Mandato Ativo)",
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,56/min",
         "costPerCitizenYear": "R$ 0,09/ano",
         "salariosMinimos": "188 salários/ano",
         "roiText": "R$ 32,50 entregues por R$ 1 gasto"
-      }
+      },
+      "spendingCeapMonthlyNum": 0,
+      "limitCeapMonthly": "Não se aplica",
+      "limitCeapMonthlyNum": 0,
+      "spendingPercentage": 0,
+      "custoMinuto": "R$ 0,00 / min",
+      "iprJustification": "Candidato sem mandato eletivo ativo no período auditado; custo parlamentar nulo ao erário."
     },
     "attendance": {
-      "ratePct": 93,
-      "totalSessions": 120,
-      "presentCount": 114,
-      "justifiedAbsences": 3,
+      "totalSessions": 0,
+      "presentCount": 0,
+      "justifiedAbsences": 0,
       "unjustifiedAbsences": 0,
-      "committees": [
-        {
-          "name": "Comissão de Constituição, Justiça e Cidadania",
-          "presences": "96%"
-        },
-        {
-          "name": "Comissão de Finanças e Orçamento",
-          "presences": "94%"
-        }
-      ]
+      "ratePct": 0,
+      "status": "Não se aplica (Sem mandato em exercício)"
     },
     "bills": {
       "proposed": 35,
@@ -45464,7 +45459,8 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
-    }
+    },
+    "isIncumbent": false
   },
   {
     "id": "cand-evandro-leitao",
@@ -52288,7 +52284,7 @@ var candidatesData = _root.candidatesData = [
     "ballotName": "Edegar Pretto",
     "party": "PT",
     "number": "13",
-    "position": "Governador",
+    "position": "Pré-candidato ao Governo do Estado",
     "state": "RS",
     "city": "Miraguaí",
     "age": 54,
@@ -52305,39 +52301,36 @@ var candidatesData = _root.candidatesData = [
       "transparencia": 78,
       "coerencia": 72,
       "viabilidade": 66,
-      "presenca": 85,
-      "assiduidade": 85,
+      "presenca": 0,
+      "assiduidade": 0,
       "gestaoFiscal": 67,
       "entregasObras": 66,
       "indicadoresSociais": 85,
       "eficaciaPragmatica": 86
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 157929.00",
+      "spendingCeapMonthly": "R$ 0,00 (Sem Mandato Ativo)",
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,57/min",
         "costPerCitizenYear": "R$ 0,06/ano",
         "salariosMinimos": "177 salários/ano",
         "roiText": "R$ 29,50 entregues por R$ 1 gasto"
-      }
+      },
+      "spendingCeapMonthlyNum": 0,
+      "limitCeapMonthly": "Não se aplica",
+      "limitCeapMonthlyNum": 0,
+      "spendingPercentage": 0,
+      "custoMinuto": "R$ 0,00 / min",
+      "iprJustification": "Candidato sem mandato eletivo ativo no período auditado; custo parlamentar nulo ao erário."
     },
     "attendance": {
-      "ratePct": 94,
-      "totalSessions": 120,
-      "presentCount": 112,
-      "justifiedAbsences": 2,
+      "totalSessions": 0,
+      "presentCount": 0,
+      "justifiedAbsences": 0,
       "unjustifiedAbsences": 0,
-      "committees": [
-        {
-          "name": "Comissão de Constituição, Justiça e Cidadania",
-          "presences": "96%"
-        },
-        {
-          "name": "Comissão de Finanças e Orçamento",
-          "presences": "94%"
-        }
-      ]
+      "ratePct": 0,
+      "status": "Não se aplica (Sem mandato em exercício)"
     },
     "bills": {
       "proposed": 32,
@@ -52685,7 +52678,8 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
-    }
+    },
+    "isIncumbent": false
   },
   {
     "id": "cand-manuela-davila",
@@ -57817,7 +57811,7 @@ var candidatesData = _root.candidatesData = [
     "ballotName": "Washington Reis",
     "party": "MDB",
     "number": "15",
-    "position": "Governador",
+    "position": "Pré-candidato ao Governo do Estado",
     "state": "RJ",
     "city": "Duque de Caxias",
     "age": 58,
@@ -57834,39 +57828,36 @@ var candidatesData = _root.candidatesData = [
       "transparencia": 78,
       "coerencia": 72,
       "viabilidade": 70,
-      "presenca": 87,
-      "assiduidade": 87,
+      "presenca": 0,
+      "assiduidade": 0,
       "gestaoFiscal": 68,
       "entregasObras": 70,
       "indicadoresSociais": 86,
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 114264.00",
+      "spendingCeapMonthly": "R$ 0,00 (Sem Mandato Ativo)",
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,43/min",
         "costPerCitizenYear": "R$ 0,09/ano",
         "salariosMinimos": "188 salários/ano",
         "roiText": "R$ 40,50 entregues por R$ 1 gasto"
-      }
+      },
+      "spendingCeapMonthlyNum": 0,
+      "limitCeapMonthly": "Não se aplica",
+      "limitCeapMonthlyNum": 0,
+      "spendingPercentage": 0,
+      "custoMinuto": "R$ 0,00 / min",
+      "iprJustification": "Candidato sem mandato eletivo ativo no período auditado; custo parlamentar nulo ao erário."
     },
     "attendance": {
-      "ratePct": 97,
-      "totalSessions": 120,
-      "presentCount": 115,
-      "justifiedAbsences": 5,
+      "totalSessions": 0,
+      "presentCount": 0,
+      "justifiedAbsences": 0,
       "unjustifiedAbsences": 0,
-      "committees": [
-        {
-          "name": "Comissão de Constituição, Justiça e Cidadania",
-          "presences": "96%"
-        },
-        {
-          "name": "Comissão de Finanças e Orçamento",
-          "presences": "94%"
-        }
-      ]
+      "ratePct": 0,
+      "status": "Não se aplica (Sem mandato em exercício)"
     },
     "bills": {
       "proposed": 40,
@@ -58214,7 +58205,8 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
-    }
+    },
+    "isIncumbent": false
   },
   {
     "id": "cand-taliria-petrone",
@@ -65062,7 +65054,7 @@ var candidatesData = _root.candidatesData = [
     "ballotName": "Décio Lima",
     "party": "PT",
     "number": "13",
-    "position": "Governador",
+    "position": "Pré-candidato ao Governo do Estado",
     "state": "SC",
     "city": "Itajaí",
     "age": 65,
@@ -65079,39 +65071,36 @@ var candidatesData = _root.candidatesData = [
       "transparencia": 78,
       "coerencia": 72,
       "viabilidade": 66,
-      "presenca": 88,
-      "assiduidade": 88,
+      "presenca": 0,
+      "assiduidade": 0,
       "gestaoFiscal": 67,
       "entregasObras": 66,
       "indicadoresSociais": 86,
       "eficaciaPragmatica": 86
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 214237.00",
+      "spendingCeapMonthly": "R$ 0,00 (Sem Mandato Ativo)",
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,41/min",
         "costPerCitizenYear": "R$ 0,08/ano",
         "salariosMinimos": "175 salários/ano",
         "roiText": "R$ 27,50 entregues por R$ 1 gasto"
-      }
+      },
+      "spendingCeapMonthlyNum": 0,
+      "limitCeapMonthly": "Não se aplica",
+      "limitCeapMonthlyNum": 0,
+      "spendingPercentage": 0,
+      "custoMinuto": "R$ 0,00 / min",
+      "iprJustification": "Candidato sem mandato eletivo ativo no período auditado; custo parlamentar nulo ao erário."
     },
     "attendance": {
-      "ratePct": 98,
-      "totalSessions": 120,
-      "presentCount": 113,
-      "justifiedAbsences": 5,
+      "totalSessions": 0,
+      "presentCount": 0,
+      "justifiedAbsences": 0,
       "unjustifiedAbsences": 0,
-      "committees": [
-        {
-          "name": "Comissão de Constituição, Justiça e Cidadania",
-          "presences": "96%"
-        },
-        {
-          "name": "Comissão de Finanças e Orçamento",
-          "presences": "94%"
-        }
-      ]
+      "ratePct": 0,
+      "status": "Não se aplica (Sem mandato em exercício)"
     },
     "bills": {
       "proposed": 55,
@@ -65459,7 +65448,8 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
-    }
+    },
+    "isIncumbent": false
   },
   {
     "id": "cand-gean-loureiro",
@@ -65467,7 +65457,7 @@ var candidatesData = _root.candidatesData = [
     "ballotName": "Gean Loureiro",
     "party": "UNIÃO",
     "number": "44",
-    "position": "Governador",
+    "position": "Pré-candidato ao Governo do Estado",
     "state": "SC",
     "city": "Florianópolis",
     "age": 53,
@@ -65484,39 +65474,36 @@ var candidatesData = _root.candidatesData = [
       "transparencia": 78,
       "coerencia": 72,
       "viabilidade": 70,
-      "presenca": 85,
-      "assiduidade": 85,
+      "presenca": 0,
+      "assiduidade": 0,
       "gestaoFiscal": 69,
       "entregasObras": 70,
       "indicadoresSociais": 85,
       "eficaciaPragmatica": 74
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 197482.00",
+      "spendingCeapMonthly": "R$ 0,00 (Sem Mandato Ativo)",
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,48/min",
         "costPerCitizenYear": "R$ 0,05/ano",
         "salariosMinimos": "171 salários/ano",
         "roiText": "R$ 36,50 entregues por R$ 1 gasto"
-      }
+      },
+      "spendingCeapMonthlyNum": 0,
+      "limitCeapMonthly": "Não se aplica",
+      "limitCeapMonthlyNum": 0,
+      "spendingPercentage": 0,
+      "custoMinuto": "R$ 0,00 / min",
+      "iprJustification": "Candidato sem mandato eletivo ativo no período auditado; custo parlamentar nulo ao erário."
     },
     "attendance": {
-      "ratePct": 94,
-      "totalSessions": 120,
-      "presentCount": 118,
-      "justifiedAbsences": 2,
+      "totalSessions": 0,
+      "presentCount": 0,
+      "justifiedAbsences": 0,
       "unjustifiedAbsences": 0,
-      "committees": [
-        {
-          "name": "Comissão de Constituição, Justiça e Cidadania",
-          "presences": "96%"
-        },
-        {
-          "name": "Comissão de Finanças e Orçamento",
-          "presences": "94%"
-        }
-      ]
+      "ratePct": 0,
+      "status": "Não se aplica (Sem mandato em exercício)"
     },
     "bills": {
       "proposed": 35,
@@ -65864,7 +65851,8 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
-    }
+    },
+    "isIncumbent": false
   },
   {
     "id": "cand-topazio-neto",
@@ -70972,7 +70960,7 @@ var candidatesData = _root.candidatesData = [
     "ballotName": "Reguffe",
     "party": "UNIÃO",
     "number": "44",
-    "position": "Governador",
+    "position": "Pré-candidato ao Governo do Estado",
     "state": "DF",
     "city": "Rio de Janeiro",
     "age": 53,
@@ -70989,39 +70977,36 @@ var candidatesData = _root.candidatesData = [
       "transparencia": 78,
       "coerencia": 72,
       "viabilidade": 70,
-      "presenca": 84,
-      "assiduidade": 84,
+      "presenca": 0,
+      "assiduidade": 0,
       "gestaoFiscal": 70,
       "entregasObras": 70,
       "indicadoresSociais": 84,
       "eficaciaPragmatica": 83
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 147201.00",
+      "spendingCeapMonthly": "R$ 0,00 (Sem Mandato Ativo)",
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,52/min",
         "costPerCitizenYear": "R$ 0,08/ano",
         "salariosMinimos": "174 salários/ano",
         "roiText": "R$ 37,50 entregues por R$ 1 gasto"
-      }
+      },
+      "spendingCeapMonthlyNum": 0,
+      "limitCeapMonthly": "Não se aplica",
+      "limitCeapMonthlyNum": 0,
+      "spendingPercentage": 0,
+      "custoMinuto": "R$ 0,00 / min",
+      "iprJustification": "Candidato sem mandato eletivo ativo no período auditado; custo parlamentar nulo ao erário."
     },
     "attendance": {
-      "ratePct": 93,
-      "totalSessions": 120,
-      "presentCount": 115,
-      "justifiedAbsences": 1,
+      "totalSessions": 0,
+      "presentCount": 0,
+      "justifiedAbsences": 0,
       "unjustifiedAbsences": 0,
-      "committees": [
-        {
-          "name": "Comissão de Constituição, Justiça e Cidadania",
-          "presences": "96%"
-        },
-        {
-          "name": "Comissão de Finanças e Orçamento",
-          "presences": "94%"
-        }
-      ]
+      "ratePct": 0,
+      "status": "Não se aplica (Sem mandato em exercício)"
     },
     "bills": {
       "proposed": 50,
@@ -71369,7 +71354,8 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
-    }
+    },
+    "isIncumbent": false
   },
   {
     "id": "cand-rafael-prudente",
@@ -75190,7 +75176,7 @@ var candidatesData = _root.candidatesData = [
     "ballotName": "Marconi Perillo",
     "party": "PSDB",
     "number": "45",
-    "position": "Governador",
+    "position": "Pré-candidato ao Governo do Estado",
     "state": "GO",
     "city": "Palmeiras de Goiás",
     "age": 62,
@@ -75207,39 +75193,36 @@ var candidatesData = _root.candidatesData = [
       "transparencia": 78,
       "coerencia": 72,
       "viabilidade": 70,
-      "presenca": 88,
-      "assiduidade": 88,
+      "presenca": 0,
+      "assiduidade": 0,
       "gestaoFiscal": 69,
       "entregasObras": 70,
       "indicadoresSociais": 86,
       "eficaciaPragmatica": 83
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 92890.00",
+      "spendingCeapMonthly": "R$ 0,00 (Sem Mandato Ativo)",
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,56/min",
         "costPerCitizenYear": "R$ 0,05/ano",
         "salariosMinimos": "191 salários/ano",
         "roiText": "R$ 32,50 entregues por R$ 1 gasto"
-      }
+      },
+      "spendingCeapMonthlyNum": 0,
+      "limitCeapMonthly": "Não se aplica",
+      "limitCeapMonthlyNum": 0,
+      "spendingPercentage": 0,
+      "custoMinuto": "R$ 0,00 / min",
+      "iprJustification": "Candidato sem mandato eletivo ativo no período auditado; custo parlamentar nulo ao erário."
     },
     "attendance": {
-      "ratePct": 98,
-      "totalSessions": 120,
-      "presentCount": 115,
-      "justifiedAbsences": 5,
+      "totalSessions": 0,
+      "presentCount": 0,
+      "justifiedAbsences": 0,
       "unjustifiedAbsences": 0,
-      "committees": [
-        {
-          "name": "Comissão de Constituição, Justiça e Cidadania",
-          "presences": "96%"
-        },
-        {
-          "name": "Comissão de Finanças e Orçamento",
-          "presences": "94%"
-        }
-      ]
+      "ratePct": 0,
+      "status": "Não se aplica (Sem mandato em exercício)"
     },
     "bills": {
       "proposed": 39,
@@ -75587,7 +75570,8 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
-    }
+    },
+    "isIncumbent": false
   },
   {
     "id": "cand-silvye-alves",
@@ -83143,20 +83127,22 @@ var candidatesData = _root.candidatesData = [
       "visaoSistemica": 77,
       "eficaciaPragmatica": 77
     },
+    "isIncumbent": false,
     "attendance": {
-      "totalSessions": 140,
-      "presentCount": 132,
-      "justifiedAbsences": 6,
-      "unjustifiedAbsences": 2,
-      "ratePct": 94
+      "totalSessions": 0,
+      "presentCount": 0,
+      "justifiedAbsences": 0,
+      "unjustifiedAbsences": 0,
+      "ratePct": 0,
+      "status": "Não se aplica (Sem mandato federal em exercício)"
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 16.800,00",
-      "spendingCeapMonthlyNum": 16800,
-      "limitCeapMonthly": "R$ 38.000,00",
-      "limitCeapMonthlyNum": 38000,
-      "spendingPercentage": 44,
-      "savedCeapTotal": "R$ 254.400,00",
+      "spendingCeapMonthly": "R$ 0,00 (Sem Mandato Federal)",
+      "spendingCeapMonthlyNum": 0,
+      "limitCeapMonthly": "Não se aplica",
+      "limitCeapMonthlyNum": 0,
+      "spendingPercentage": 0,
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,21 / min",
         "costPerCitizen": "R$ 0,002 / ano",
@@ -102457,42 +102443,44 @@ var candidatesData = _root.candidatesData = [
     "ballotName": "Eduarda Campopiano",
     "party": "PL",
     "number": "22123",
-    "position": "Deputado Estadual",
+    "position": "Pré-candidata a Deputada Estadual",
     "state": "SP",
     "city": "Praia Grande, SP",
     "age": 24,
     "avatar": "img/candidates/cand-eduarda-campopiano.jpg",
     "education": "Comunicação Social e Ciências Políticas",
-    "careerHistory": "Vereadora em Praia Grande (SP) eleita em 2024, eleita Deputada Estadual por São Paulo com quase 2 milhões de votos. Atuação digital conservadora focada em pautas de família, juventude e transparência.",
-    "aiSummary": "Deputada Estadual eleita pelo PL em São Paulo com expressiva votação popular. Atua com ênfase em fiscalização de gastos estaduais na ALESP, transparência em contratos públicos e defesa de valores da infância e juventude.",
+    "careerHistory": "Vereadora em Praia Grande (SP) eleita em 2024. Pré-candidata a Deputada Estadual por São Paulo para 2026. Atuação digital conservadora focada em juventude, fiscalização e transparência municipal.",
+    "aiSummary": "Vereadora atuante em Praia Grande (SP) eleita em 2024 e pré-candidata a Deputada Estadual por São Paulo em 2026. Pauta de atuação centrada em fiscalização, transparência no setor público e políticas para a juventude.",
     "overallScore": 75,
     "officePower": "legislativo",
+    "isIncumbent": false,
     "radar": {
       "integridade": 82,
       "eficiencia": 74,
       "transparencia": 80,
       "coerencia": 84,
       "viabilidade": 72,
-      "presenca": 95,
-      "assiduidade": 95
+      "presenca": 0,
+      "assiduidade": 0
     },
     "attendance": {
-      "totalSessions": 110,
-      "presentCount": 106,
-      "justifiedAbsences": 4,
+      "totalSessions": 0,
+      "presentCount": 0,
+      "justifiedAbsences": 0,
       "unjustifiedAbsences": 0,
-      "ratePct": 96
+      "ratePct": 0,
+      "status": "Não se aplica (Mandato municipal de Vereadora em Praia Grande / Pré-candidata estadual)"
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 18.500,00",
-      "spendingCeapMonthlyNum": 18500,
-      "limitCeapMonthly": "R$ 38.000,00",
-      "limitCeapMonthlyNum": 38000,
-      "spendingPercentage": 48.7,
-      "savedCeapTotal": "R$ 156.000,00",
+      "spendingCeapMonthly": "R$ 0,00 (Sem Mandato Ativo na ALESP)",
+      "spendingCeapMonthlyNum": 0,
+      "limitCeapMonthly": "Não se aplica",
+      "limitCeapMonthlyNum": 0,
+      "spendingPercentage": 0,
+      "savedCeapTotal": "R$ 0,00",
       "iprSevero": 76,
-      "custoMinuto": "R$ 0,08 / min",
-      "iprJustification": "Alta assiduidade parlamentar na ALESP e economia voluntária de mais de 50% da verba de gabinete destinada ao mandato."
+      "custoMinuto": "R$ 0,00 / min",
+      "iprJustification": "Atuação legislativa municipal em Praia Grande sem consumo de cota parlamentar estadual da ALESP."
     },
     "parliamentaryAmendments": {
       "totalAllocated": "R$ 12.500.000,00",
@@ -103440,37 +103428,39 @@ var candidatesData = _root.candidatesData = [
     "ballotName": "Pablo Marçal",
     "party": "PRTB",
     "number": "28",
-    "position": "Governador",
+    "position": "Pré-candidato a Governador",
     "state": "SP",
     "city": "São Paulo, SP",
     "age": 39,
     "avatar": "img/candidates/cand-pablo-marcal.jpg",
     "education": "Direito e Empreendedorismo Digital",
-    "careerHistory": "Empresário, influenciador digital, autor e palestrante. Candidato à Presidência em 2022 e candidato à Prefeitura de São Paulo em 2024, obtendo mais de 1,7 milhão de votos com forte engajamento digital.",
+    "careerHistory": "Empresário, influenciador digital, autor e palestrante. Candidato à Presidência da República em 2022 e à Prefeitura de São Paulo em 2024. Pré-candidato ao Governo do Estado em 2026.",
     "aiSummary": "Empresário e comunicador de grande alcance nas redes sociais. Defende pautas de empreendedorismo de massa, digitalização de serviços públicos, corte drástico de burocracia e modernização da gestão estatal.",
     "overallScore": 71,
     "officePower": "executivo",
+    "isIncumbent": false,
     "radar": {
       "integridade": 68,
       "eficiencia": 76,
       "transparencia": 72,
       "coerencia": 70,
       "viabilidade": 71,
-      "presenca": 88,
-      "assiduidade": 88
+      "presenca": 0,
+      "assiduidade": 0
     },
     "attendance": {
-      "totalSessions": 100,
-      "presentCount": 92,
-      "justifiedAbsences": 8,
+      "totalSessions": 0,
+      "presentCount": 0,
+      "justifiedAbsences": 0,
       "unjustifiedAbsences": 0,
-      "ratePct": 92
+      "ratePct": 0,
+      "status": "Não se aplica (Sem mandato em exercício)"
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
+      "spendingCeapMonthly": "R$ 0,00 (Sem Mandato Ativo)",
       "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 35.000,00",
-      "limitCeapMonthlyNum": 35000,
+      "limitCeapMonthly": "Não se aplica",
+      "limitCeapMonthlyNum": 0,
       "spendingPercentage": 0,
       "savedCeapTotal": "R$ 0,00",
       "iprSevero": 70,
@@ -105910,7 +105900,7 @@ var candidatesData = _root.candidatesData = [
     "ballotName": "Marcelo Freixo",
     "party": "PT",
     "number": "1350",
-    "position": "Governador",
+    "position": "Pré-candidato ao Governo do Estado",
     "state": "RJ",
     "city": "Niterói / Rio de Janeiro, RJ",
     "age": 59,
@@ -105926,26 +105916,27 @@ var candidatesData = _root.candidatesData = [
       "transparencia": 82,
       "coerencia": 82,
       "viabilidade": 78,
-      "presenca": 91,
-      "assiduidade": 91
+      "presenca": 0,
+      "assiduidade": 0
     },
     "attendance": {
-      "totalSessions": 250,
-      "presentCount": 228,
-      "justifiedAbsences": 22,
+      "totalSessions": 0,
+      "presentCount": 0,
+      "justifiedAbsences": 0,
       "unjustifiedAbsences": 0,
-      "ratePct": 91
+      "ratePct": 0,
+      "status": "Não se aplica (Sem mandato em exercício)"
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
+      "spendingCeapMonthly": "R$ 0,00 (Sem Mandato Ativo)",
       "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 35.000,00",
-      "limitCeapMonthlyNum": 35000,
+      "limitCeapMonthly": "Não se aplica",
+      "limitCeapMonthlyNum": 0,
       "spendingPercentage": 0,
       "savedCeapTotal": "R$ 0,00",
       "iprSevero": 82,
-      "custoMinuto": "R$ 0,06 / min",
-      "iprJustification": "Gestão executiva federal à frente da Embratur com corte de desperdícios e auditorias regulares."
+      "custoMinuto": "R$ 0,00 / min",
+      "iprJustification": "Candidato sem mandato eletivo ativo no período auditado; custo parlamentar nulo ao erário."
     },
     "parliamentaryAmendments": {
       "totalAllocated": "R$ 0,00",
@@ -106145,9 +106136,11 @@ var candidatesData = _root.candidatesData = [
           "responsibility": "Competência constitucional compartilhada."
         }
       ]
-    }
+    },
+    "isIncumbent": false
   }
 ];
+
 var incumbentsData = _root.incumbentsData = [
   {
     "id": "inc-cand-joao-campos",
@@ -106265,23 +106258,6 @@ var incumbentsData = _root.incumbentsData = [
     "highlights": "Candidato ao Governo do Estado do Rio de Janeiro em 2026 pelo PSD, tendo Jane Reis (MDB) como vice. Quatro vezes prefeito da capital fluminense, lidera as pesquisas para o Palácio ...",
     "attendance": "98.4% no Mandato",
     "ceapMonthly": "R$ 35.200,00",
-    "productivityScore": 80,
-    "legalStatus": "Ficha Limpa Plena"
-  },
-  {
-    "id": "inc-cand-ciro-gomes",
-    "candidateId": "cand-ciro-gomes",
-    "name": "Ciro Gomes",
-    "fullName": "Ciro Ferreira Gomes",
-    "office": "Governador do Estado (CE) - Mandato 2023-2026",
-    "cargoCategory": "governador",
-    "party": "PSDB - CE",
-    "state": "CE",
-    "status": "Em Exercício",
-    "avatar": "img/candidates/cand-ciro-gomes.jpg",
-    "highlights": "Candidato ao Governo do Ceará em 2026 pelo PSDB. Ex-governador do Ceará (1991-1994), ex-ministro da Fazenda e da Integração Nacional. Lidera a oposição no estado com foco em combat...",
-    "attendance": "95% no Mandato",
-    "ceapMonthly": "R$ 0,00 (Sem Mandato Ativo)",
     "productivityScore": 80,
     "legalStatus": "Ficha Limpa Plena"
   },
@@ -106983,23 +106959,6 @@ var incumbentsData = _root.incumbentsData = [
     "legalStatus": "Ficha Limpa Plena"
   },
   {
-    "id": "inc-cand-acm-neto",
-    "candidateId": "cand-acm-neto",
-    "name": "ACM Neto",
-    "fullName": "Antônio Carlos Magalhães Neto",
-    "office": "Governador do Estado (BA) - Mandato 2023-2026",
-    "cargoCategory": "governador",
-    "party": "UNIÃO - BA",
-    "state": "BA",
-    "status": "Em Exercício",
-    "avatar": "img/candidates/cand-acm-neto.jpg",
-    "highlights": "Liderança política representativa de Salvador (BA). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição....",
-    "attendance": "95% no Mandato",
-    "ceapMonthly": "R$ 0,00",
-    "productivityScore": 80,
-    "legalStatus": "Ficha Limpa Plena"
-  },
-  {
     "id": "inc-cand-jeronimo-rodrigues",
     "candidateId": "cand-jeronimo-rodrigues",
     "name": "Jerônimo Rodrigues",
@@ -107187,23 +107146,6 @@ var incumbentsData = _root.incumbentsData = [
     "legalStatus": "Ficha Limpa Plena"
   },
   {
-    "id": "inc-cand-marilia-arraes",
-    "candidateId": "cand-marilia-arraes",
-    "name": "Marília Arraes",
-    "fullName": "Marília Valença Rocha Arraes de Alencar",
-    "office": "Governador do Estado (PE) - Mandato 2023-2026",
-    "cargoCategory": "governador",
-    "party": "SOLIDARIEDADE - PE",
-    "state": "PE",
-    "status": "Em Exercício",
-    "avatar": "img/candidates/cand-marilia-arraes.jpg",
-    "highlights": "Liderança política representativa de Recife (PE). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição....",
-    "attendance": "96% no Mandato",
-    "ceapMonthly": "R$ 0,00",
-    "productivityScore": 80,
-    "legalStatus": "Ficha Limpa Plena"
-  },
-  {
     "id": "inc-cand-gilson-machado",
     "candidateId": "cand-gilson-machado",
     "name": "Gilson Machado",
@@ -107217,23 +107159,6 @@ var incumbentsData = _root.incumbentsData = [
     "highlights": "Liderança política representativa de Recife (PE). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição....",
     "attendance": "93% no Mandato",
     "ceapMonthly": "R$ 18533.00",
-    "productivityScore": 80,
-    "legalStatus": "Ficha Limpa Plena"
-  },
-  {
-    "id": "inc-cand-miguel-coelho",
-    "candidateId": "cand-miguel-coelho",
-    "name": "Miguel Coelho",
-    "fullName": "Miguel de Souza Leão Coelho",
-    "office": "Governador do Estado (PE) - Mandato 2023-2026",
-    "cargoCategory": "governador",
-    "party": "UNIÃO - PE",
-    "state": "PE",
-    "status": "Em Exercício",
-    "avatar": "img/candidates/cand-miguel-coelho.jpg",
-    "highlights": "Liderança política representativa de Petrolina (PE). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição....",
-    "attendance": "96% no Mandato",
-    "ceapMonthly": "R$ 0,00",
     "productivityScore": 80,
     "legalStatus": "Ficha Limpa Plena"
   },
@@ -107323,23 +107248,6 @@ var incumbentsData = _root.incumbentsData = [
     "legalStatus": "Ficha Limpa Plena"
   },
   {
-    "id": "inc-cand-capitao-wagner",
-    "candidateId": "cand-capitao-wagner",
-    "name": "Capitão Wagner",
-    "fullName": "Wagner Sousa Gomes",
-    "office": "Governador do Estado (CE) - Mandato 2023-2026",
-    "cargoCategory": "governador",
-    "party": "UNIÃO - CE",
-    "state": "CE",
-    "status": "Em Exercício",
-    "avatar": "img/candidates/cand-capitao-wagner.jpg",
-    "highlights": "Liderança política representativa de Fortaleza (CE). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição....",
-    "attendance": "93% no Mandato",
-    "ceapMonthly": "R$ 0,00",
-    "productivityScore": 80,
-    "legalStatus": "Ficha Limpa Plena"
-  },
-  {
     "id": "inc-cand-eduardo-girao",
     "candidateId": "cand-eduardo-girao",
     "name": "Eduardo Girão",
@@ -107370,23 +107278,6 @@ var incumbentsData = _root.incumbentsData = [
     "highlights": "Liderança política representativa de Sobral (CE). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição....",
     "attendance": "93% no Mandato",
     "ceapMonthly": "R$ 22317.00",
-    "productivityScore": 80,
-    "legalStatus": "Ficha Limpa Plena"
-  },
-  {
-    "id": "inc-cand-roberto-claudio",
-    "candidateId": "cand-roberto-claudio",
-    "name": "Roberto Cláudio",
-    "fullName": "Roberto Cláudio Rodrigues Bezerra",
-    "office": "Governador do Estado (CE) - Mandato 2023-2026",
-    "cargoCategory": "governador",
-    "party": "PDT - CE",
-    "state": "CE",
-    "status": "Em Exercício",
-    "avatar": "img/candidates/cand-roberto-claudio.jpg",
-    "highlights": "Liderança política representativa de Fortaleza (CE). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição....",
-    "attendance": "93% no Mandato",
-    "ceapMonthly": "R$ 0,00",
     "productivityScore": 80,
     "legalStatus": "Ficha Limpa Plena"
   },
@@ -107663,23 +107554,6 @@ var incumbentsData = _root.incumbentsData = [
     "legalStatus": "Ficha Limpa Plena"
   },
   {
-    "id": "inc-cand-edegar-pretto",
-    "candidateId": "cand-edegar-pretto",
-    "name": "Edegar Pretto",
-    "fullName": "Edegar Pretto",
-    "office": "Governador do Estado (RS) - Mandato 2023-2026",
-    "cargoCategory": "governador",
-    "party": "PT - RS",
-    "state": "RS",
-    "status": "Em Exercício",
-    "avatar": "img/candidates/cand-edegar-pretto.jpg",
-    "highlights": "Liderança política representativa de Miraguaí (RS). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição....",
-    "attendance": "94% no Mandato",
-    "ceapMonthly": "R$ 0,00",
-    "productivityScore": 80,
-    "legalStatus": "Ficha Limpa Plena"
-  },
-  {
     "id": "inc-cand-manuela-davila",
     "candidateId": "cand-manuela-davila",
     "name": "Manuela d Avila",
@@ -107880,23 +107754,6 @@ var incumbentsData = _root.incumbentsData = [
     "highlights": "Liderança política representativa de João Pessoa (RJ). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição....",
     "attendance": "98% no Mandato",
     "ceapMonthly": "R$ 27625.00",
-    "productivityScore": 80,
-    "legalStatus": "Ficha Limpa Plena"
-  },
-  {
-    "id": "inc-cand-washington-reis",
-    "candidateId": "cand-washington-reis",
-    "name": "Washington Reis",
-    "fullName": "Washington Reis de Oliveira",
-    "office": "Governador do Estado (RJ) - Mandato 2023-2026",
-    "cargoCategory": "governador",
-    "party": "MDB - RJ",
-    "state": "RJ",
-    "status": "Em Exercício",
-    "avatar": "img/candidates/cand-washington-reis.jpg",
-    "highlights": "Liderança política representativa de Duque de Caxias (RJ). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição....",
-    "attendance": "97% no Mandato",
-    "ceapMonthly": "R$ 0,00",
     "productivityScore": 80,
     "legalStatus": "Ficha Limpa Plena"
   },
@@ -108173,40 +108030,6 @@ var incumbentsData = _root.incumbentsData = [
     "legalStatus": "Ficha Limpa Plena"
   },
   {
-    "id": "inc-cand-decio-lima",
-    "candidateId": "cand-decio-lima",
-    "name": "Décio Lima",
-    "fullName": "Décio Nery de Lima",
-    "office": "Governador do Estado (SC) - Mandato 2023-2026",
-    "cargoCategory": "governador",
-    "party": "PT - SC",
-    "state": "SC",
-    "status": "Em Exercício",
-    "avatar": "img/candidates/cand-decio-lima.jpg",
-    "highlights": "Liderança política representativa de Itajaí (SC). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição....",
-    "attendance": "98% no Mandato",
-    "ceapMonthly": "R$ 0,00",
-    "productivityScore": 80,
-    "legalStatus": "Ficha Limpa Plena"
-  },
-  {
-    "id": "inc-cand-gean-loureiro",
-    "candidateId": "cand-gean-loureiro",
-    "name": "Gean Loureiro",
-    "fullName": "Gean Marques Loureiro",
-    "office": "Governador do Estado (SC) - Mandato 2023-2026",
-    "cargoCategory": "governador",
-    "party": "UNIÃO - SC",
-    "state": "SC",
-    "status": "Em Exercício",
-    "avatar": "img/candidates/cand-gean-loureiro.jpg",
-    "highlights": "Liderança política representativa de Florianópolis (SC). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição....",
-    "attendance": "94% no Mandato",
-    "ceapMonthly": "R$ 0,00",
-    "productivityScore": 80,
-    "legalStatus": "Ficha Limpa Plena"
-  },
-  {
     "id": "inc-cand-topazio-neto",
     "candidateId": "cand-topazio-neto",
     "name": "Topázio Neto",
@@ -108411,23 +108234,6 @@ var incumbentsData = _root.incumbentsData = [
     "legalStatus": "Ficha Limpa Plena"
   },
   {
-    "id": "inc-cand-antonio-reguffe",
-    "candidateId": "cand-antonio-reguffe",
-    "name": "Reguffe",
-    "fullName": "José Antônio Machado Reguffe",
-    "office": "Governador do Estado (DF) - Mandato 2023-2026",
-    "cargoCategory": "governador",
-    "party": "UNIÃO - DF",
-    "state": "DF",
-    "status": "Em Exercício",
-    "avatar": "img/candidates/cand-antonio-reguffe.jpg",
-    "highlights": "Liderança política representativa de Rio de Janeiro (DF). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição....",
-    "attendance": "93% no Mandato",
-    "ceapMonthly": "R$ 0,00",
-    "productivityScore": 80,
-    "legalStatus": "Ficha Limpa Plena"
-  },
-  {
     "id": "inc-cand-rafael-prudente",
     "candidateId": "cand-rafael-prudente",
     "name": "Rafael Prudente",
@@ -108560,23 +108366,6 @@ var incumbentsData = _root.incumbentsData = [
     "highlights": "Liderança política representativa de Goiânia (GO). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição....",
     "attendance": "94% no Mandato",
     "ceapMonthly": "R$ 24856.00",
-    "productivityScore": 80,
-    "legalStatus": "Ficha Limpa Plena"
-  },
-  {
-    "id": "inc-cand-marconi-perillo",
-    "candidateId": "cand-marconi-perillo",
-    "name": "Marconi Perillo",
-    "fullName": "Marconi Ferreira Perillo Júnior",
-    "office": "Governador do Estado (GO) - Mandato 2023-2026",
-    "cargoCategory": "governador",
-    "party": "PSDB - GO",
-    "state": "GO",
-    "status": "Em Exercício",
-    "avatar": "img/candidates/cand-marconi-perillo.jpg",
-    "highlights": "Liderança política representativa de Palmeiras de Goiás (GO). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição...",
-    "attendance": "98% no Mandato",
-    "ceapMonthly": "R$ 0,00",
     "productivityScore": 80,
     "legalStatus": "Ficha Limpa Plena"
   },
@@ -109089,13 +108878,13 @@ function detectConflictOfInterest(cand) {
 }
 
 function calculatePredictiveMigration(cand) {
-  if (!cand || cand.officePower === 'judiciario') {
+  if (!cand || cand.officePower === 'judiciario' || cand.isIncumbent === false || (cand.salary && typeof cand.salary.spendingCeapMonthly === 'string' && cand.salary.spendingCeapMonthly.includes('Sem Mandato'))) {
     return {
       reelectionProbabilityPct: 0,
-      partyMigrationRisk: 'Isento',
+      partyMigrationRisk: 'Não se aplica',
       partyMigrationProbabilityPct: 0,
       governmentCoalitionAlignmentPct: 0,
-      analyticalVerdict: 'Cargo vitalício não submetido a eleições nem a janelas partidárias (Art. 95 da CF/88).'
+      analyticalVerdict: 'Autoridade sem mandato legislativo ativo ou em exercício de função distinta.'
     };
   }
 
@@ -109246,4 +109035,5 @@ if (typeof module !== 'undefined' && module.exports) {
     generateMetricAuditHash
   };
 }
+
 
