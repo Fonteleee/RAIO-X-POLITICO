@@ -37,14 +37,6 @@
       }
       lucide.createIcons();
 
-      // Refresh Radar Charts and Monthly Spending Chart with new theme colors if active
-      if (activeDossieCandidate && !document.getElementById('dossie-modal').classList.contains('hidden')) {
-        renderSingleRadar(activeDossieCandidate.radar);
-        const gastosSec = document.getElementById('dossie-sec-gastos-salarios');
-        if (gastosSec && !gastosSec.classList.contains('hidden')) {
-          renderDossieMonthlySpendingChart(activeDossieCandidate.salary.monthlyTimeline);
-        }
-      }
       if (currentTab === 'comparator') {
         updateComparator();
       }

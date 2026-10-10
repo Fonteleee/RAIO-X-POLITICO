@@ -148,7 +148,7 @@ function openBottleneckDetailsModal(bottleneckId) {
                   </span>
                 </div>
                 <div class="text-[11px] text-slate-500 dark:text-slate-400">
-                  Cargo: ${c.position} • IPR Severo: <strong class="font-mono text-purple-600 dark:text-purple-400">${c.careerProductivity?.productivityScore || 75}/100</strong>
+                  Cargo: ${c.position}
                 </div>
                 <div class="text-[10px] text-slate-600 dark:text-slate-300 pt-0.5">
                   <strong>Diretriz TSE:</strong> Solução estruturante cadastrada no plano de governo para 2026.

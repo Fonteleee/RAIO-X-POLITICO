@@ -2,78 +2,78 @@
 
 [![Licença: MIT](https://img.shields.io/badge/Licen%C3%A7a-MIT-blue.svg)](LICENSE)
 [![Compliance: Res. TSE 23.732/2024](https://img.shields.io/badge/TSE-Res.%2023.732%2F2024-emerald.svg)](https://www.tse.jus.br/)
-[![LGPD & LAI](https://img.shields.io/badge/LGPD%20%26%20LAI-100%25%20Auditado-cyan.svg)](https://www.gov.br/acessoainformacao/)
 [![Eleições](https://img.shields.io/badge/Elei%C3%A7%C3%B5es%20Gerais-04%2F10%2F2026-purple.svg)](https://raioxpolitico.org)
 
-> Plataforma independente de transparência pública, auditoria algorítmica e combate à desinformação eleitoral. O **Figuras Políticas** transforma bases de dados governamentais abertas em dossiês interativos, radares de competência e figurinhas cívicas colecionáveis para redes sociais e WhatsApp.
+> Plataforma independente de transparência pública. O **Figuras Políticas** exibe **indicadores oficiais** de políticos brasileiros — cada um com valor bruto, comparação entre pares da mesma Casa ou cargo, link da fonte e data de coleta. Não há nota geral nem ranking composto.
 
 ---
 
-## 🎯 Proposta de Valor & Diferenciais Cívicos
+## 🎯 Proposta
 
-O **Figuras Políticas** resolve a opacidade eleitoral ao cruzar dados de **4 fontes públicas oficiais** para responder com precisão matemática às três perguntas fundamentais do eleitor:
-1. **O que o político realmente faz?** (Assiduidade biométrica, relatorias e leis sancionadas).
-2. **Quanto ele custa à sociedade?** (Auditoria de notas da CEAP, evolução patrimonial e ROI cívico).
-3. **O discurso bate com os fatos?** (Ficha Limpa, processos do CNJ e fact-checking de debates).
-
----
-
-## ✨ Funcionalidades Principais
-
-### 1. 📊 Radar Multidimensional de Competência (6 Eixos)
-- Mapeamento vetorial de **Integridade**, **Eficiência**, **Transparência**, **Coerência**, **Propostas** e **Presença**.
-- Cálculo ponderado transparente sem qualquer viés ideológico ou partidário.
-
-### 2. 🗂️ Dossiê Completo do Candidato (Grid 2x4 sem Rolagem Lateral)
-Acesso instantâneo a 8 dimensões de auditoria pública:
-- **📊 Visão Geral & Resumo IA:** Síntese neutra, formação acadêmica e histórico político.
-- **🏛️ Presenças x Faltas:** Frequência biométrica em votações nominais e comissões.
-- **⚖️ Histórico Ético & Ficha Limpa:** Certidões negativas de tribunais superiores e processos no CNJ.
-- **💰 Gastos da Cota (CEAP) & Salários:** Auditoria de notas fiscais, top fornecedores e custo por minuto.
-- **📜 Propostas Oficiais do TSE:** Análise de viabilidade orçamentária e confronto com os 3 maiores gargalos reais do estado.
-- **📋 Projetos de Lei (PLs):** Taxa de conversão de proposições em leis vigentes.
-- **🔍 Checagem de Falas no Debate:** Módulo do último debate oficial (5 falas transcritas pelo motor NotebookLM com marcações de tempo e checagem).
-- **📈 Intenção de Voto:** Agregação de pesquisas eleitorais registradas no TSE (Datafolha, Quaest, IPEC, AtlasIntel).
-
-### 3. 🃏 Figurinhas Cívicas Colecionáveis (6 Modelos Visuais)
-Exportação de cards em alta resolução (1080p e 4K) em proporções **9:16 (Stories/Reels/TikTok)** e **1:1 (Feed/WhatsApp)**:
-- **📸 Instagram (Swiss Clean):** Estética minimalista suíça com Radar de Qualidade e Retorno Cívico.
-- **🎮 FIFA Ultimate:** Layout Dark Neon com 5 barras de atributos comparados e Pontuação de impacto.
-- **👤 Perfil (Bento Grid):** Estrutura modular 2026 com blocos de Ficha Limpa, Presença, Economia e Emendas.
-- **🇪 Executivo:** Layout editorial em papel creme para análise aprofundada de governança.
-- **🐦 X / Threads:** Formato de post com hook analítico e tabela de confronto.
-- **🍏 Facebook (Apple Clean):** Design limpo em tons suaves com métricas de impacto social.
-
-### 4. ⚔️ Comparador de Candidatos & Duelos Populares
-- Confronto direto 1v1 com Radar Comparativo duplo, índice de veracidade em debates e equivalência de salários mínimos.
-- Adaptação dinâmica dos 6 temas visuais também para o card de duelo.
+Responder com dados verificáveis a perguntas objetivas do eleitor:
+1. **Ele comparece?** Presença em sessões e participação em votações nominais (Câmara e Senado).
+2. **Quanto gasta da cota parlamentar?** Total anual da CEAP comparado ao teto oficial da UF.
+3. **O que produziu?** Projetos como primeiro autor e propostas transformadas em lei.
+4. **Está disputando 2026?** Cargo, número, partido e resultado oficial do TSE.
 
 ---
 
-## ⚖️ Marco Legal & Blindagem Jurídica
+## ✨ Funcionalidades
 
-O **Figuras Políticas** opera em estrita conformidade com a ordem jurídica brasileira:
+### 1. 📊 Indicadores oficiais (sem nota composta)
+- Cards por indicador: rótulo, valor, detalhe, barra de percentil ("melhor que X% dos deputados federais"), fonte com link e data.
+- Sem dado oficial verificável, o site mostra **"Dado indisponível — sem fonte oficial verificável"** — nunca um valor padrão.
+
+### 2. 🗂️ Dossiê do político
+- **Indicadores:** painel principal com todos os indicadores disponíveis.
+- **Situação do mandato** em destaque (em exercício, licenciado, sem mandato, falecido ou não verificado).
+- **Eleição 2026:** cargo disputado, número, partido e resultado do 1º turno (04/10/2026) segundo o TSE; 2º turno em 25/10/2026.
+- **Avisos de revisão** quando a verificação automática encontra divergências.
+- Abas de **Presença**, **Cota parlamentar (CEAP)**, **Projetos de lei** e **Emendas** aparecem apenas quando há dado oficial.
+
+### 3. 🏆 Ranking por indicador e por grupo
+- Escolha o grupo (Deputados, Senadores, Governadores, Prefeitos) e o indicador; a lista é ordenada pelo valor bruto.
+- Ficam fora do ranking quem não tem o indicador e os perfis **sem mandato, falecidos ou não verificados** (eles continuam na busca e no feed, com o selo de situação).
+
+### 4. ⚔️ Comparador
+- Indicadores lado a lado, com fonte e percentil. Cargos diferentes são exibidos sem declarar "vencedor".
+
+### 5. 🃏 Figurinhas
+- Até 3 indicadores oficiais com fonte. Sem indicador disponível, a figurinha mostra apenas cargo e situação.
+
+---
+
+## ⚖️ Marco Legal
 
 | Legislação | Dispositivo Aplicável | Aplicação na Plataforma |
 |---|---|---|
-| **Constituição Federal de 1988** | Art. 5º, XXXIII e LX; Art. 37 | Princípios de publicidade, moralidade e direito de acesso à informação pública. |
-| **Lei de Acesso à Informação (LAI)** | Lei nº 12.527/2011 | Consumo de dados abertos de órgãos dos poderes Executivo, Legislativo e Judiciário. |
-| **LGPD** | Lei nº 13.709/2018, Art. 7º, § 4º | Tratamento legítimo de dados tornados manifestamente públicos por agentes políticos. |
-| **Lei da Ficha Limpa** | Lei Complementar nº 135/2010 | Verificação de inelegibilidades e condenações em órgãos colegiados. |
-| **Resolução TSE nº 23.732/2024** | Artigos 9º-B e 9º-C da Res. 23.610/19 | Rotulagem explícita de IA e proibição estrita de conteúdos sintéticos adulterados (deepfakes). |
-| **Lei das Eleições** | Art. 33 da Lei nº 9.504/1997 | Declaração de não-pesquisa eleitoral nas ferramentas de engajamento popular. |
+| **Constituição Federal de 1988** | Art. 5º, XXXIII; Art. 37 | Publicidade e acesso à informação pública. |
+| **Lei de Acesso à Informação (LAI)** | Lei nº 12.527/2011 | Consumo de dados abertos dos três Poderes. |
+| **LGPD** | Lei nº 13.709/2018, Art. 7º, § 4º | Tratamento de dados tornados públicos por agentes políticos. |
+| **Lei das Eleições** | Art. 33 da Lei nº 9.504/1997 | O site não é pesquisa eleitoral. |
 
 ---
 
-## 📐 Metodologia Matemática do Score
+## 📐 Metodologia: indicadores oficiais e fontes
 
-A **Pontuação Geral (0 a 100)** de cada político é gerada pela média ponderada das 5 dimensões oficiais:
+O site **não calcula nota geral**. A antiga "pontuação" (e o radar de eixos como integridade, eficiência, coerência e viabilidade) foi removida porque eram valores fixos, sem fonte, que não diferenciavam ninguém (ver `docs/ESTUDO_SCORES_E_DADOS_REAIS.md`).
 
-$$\text{Pontuação} = 0.40 \times \text{Integridade} + 0.25 \times \text{Eficiência} + 0.15 \times \text{Transparência} + 0.10 \times \text{Coerência} + 0.10 \times \text{Presença}$$
+Cada indicador (`cand.indicators.<chave>`) traz `valor`, `unidade`, `rotulo`, `detalhe`, `percentil`, `grupoComparacao`, `fonte`, `url`, `consultadoEm` e `ano`.
 
-Onde o pilar de **Integridade** incorpora a consistência verificada em debates públicos:
+| Indicador | Chave | Fonte oficial | Leitura |
+|---|---|---|---|
+| Presença em sessões | `presenca` | Câmara dos Deputados (relatório de presença) | % de sessões deliberativas com presença |
+| Participação em votações | `participacaoVotacoes` | Senado Federal (votações nominais) | % de votações nominais com voto registrado |
+| Cota parlamentar (CEAP) | `cotaParlamentar` | Câmara dos Deputados (arquivo oficial da CEAP) | R$ gastos no ano; percentil maior = mais econômico |
+| Produção legislativa | `producaoLegislativa` | Câmara / Senado (proposições) | Projetos como primeiro autor e leis aprovadas |
+| Emendas parlamentares | `emendas` | Portal da Transparência (CGU) | Valores empenhados e pagos |
+| Gasto com pessoal | `gastoPessoal` | Tesouro Nacional (Siconfi) | % da receita corrente líquida (Executivo) |
 
-$$\text{Integridade} = 0.40 \times \text{Ficha Limpa} + 0.35 \times \text{Veracidade no Debate} + 0.25 \times \text{Checagens Gerais}$$
+**Percentil entre pares:** percentual de políticos do mesmo grupo (mesma Casa ou cargo) com resultado pior. Só se compara quem tem o mesmo cargo e o dado disponível. Para a cota parlamentar, maior percentil significa gasto menor.
+
+**Situação do mandato** (`cand.status.situacao`): `em_exercicio`, `licenciado`, `sem_mandato`, `falecido` ou `nao_verificado`. Apenas `em_exercicio` e `licenciado` entram no ranking.
+
+**O que foi removido por não ter fonte verificável:** nota geral, radar e eixos, "penalidade judicial", fórmulas de pesos, coerência, viabilidade, visão sistêmica, eficácia pragmática, índice de produtividade (IPR), "capacidade política", resumos e pareceres de IA com juízo de valor, checagens de falas e de debates.
 
 ---
 

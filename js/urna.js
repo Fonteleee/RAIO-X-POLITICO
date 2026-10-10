@@ -564,35 +564,12 @@
               <span class="text-[11px] text-slate-500 dark:text-slate-400 font-mono">Antes de votar em 2026, conheça o histórico oficial:</span>
             </div>
           </div>
-          <span class="px-3 py-1 rounded-full text-xs font-black bg-sky-100 dark:bg-sky-500/20 text-sky-800 dark:text-cyan-300 font-mono border border-sky-300 dark:border-sky-500/30">
-            Score: ${c.overallScore}/100
-          </span>
+          ${window.Indicadores ? Indicadores.statusBadgeHtml(c, { mostrarExercicio: true }) : ''}
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
-          <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-white/5 space-y-1">
-            <span class="text-slate-500 dark:text-slate-400 text-[11px] block font-bold">Situação Jurídica:</span>
-            <strong class="text-slate-900 dark:text-white block font-black">
-              ${c.legalIntegrity?.status === 'ineligible' ? '⚠️ Inelegível' : (c.legalIntegrity?.status === 'investigated' ? '⚖️ Em Investigação' : '✅ Ficha Limpa Plena')}
-            </strong>
-            <span class="text-[10px] text-slate-500 dark:text-slate-400">${c.legalIntegrity?.courtAuditNotes || 'Certidão limpa no STF e STJ'}</span>
-          </div>
-
-          <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-white/5 space-y-1">
-            <span class="text-slate-500 dark:text-slate-400 text-[11px] block font-bold">Custo ao Contribuinte:</span>
-            <strong class="text-amber-700 dark:text-amber-300 block font-black font-mono">
-              ${c.salary?.civicConversion?.costPerMinute || 'R$ 0,51 / min'}
-            </strong>
-            <span class="text-[10px] text-slate-500 dark:text-slate-400">${c.salary?.spendingCeapMonthly || 'Cota de gabinete'}</span>
-          </div>
-
-          <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-white/5 space-y-1">
-            <span class="text-slate-500 dark:text-slate-400 text-[11px] block font-bold">Custo por Voto TSE:</span>
-            <strong class="text-purple-700 dark:text-purple-300 block font-black font-mono">
-              ${cf ? cf.costPerVote : 'R$ 8,50 por voto'}
-            </strong>
-            <span class="text-[10px] text-slate-500 dark:text-slate-400">${cf ? cf.publicFundPct + '% Fundo Eleitoral' : 'Prestação TSE'}</span>
-          </div>
+        <div class="space-y-2 text-xs">
+          <span class="text-slate-500 dark:text-slate-400 text-[11px] block font-bold">Indicadores oficiais (com fonte):</span>
+          ${window.Indicadores ? Indicadores.painelHtml(c) : 'Dado indisponível — sem fonte oficial verificável'}
         </div>
 
         <div class="flex flex-wrap items-center justify-between gap-3 pt-2">

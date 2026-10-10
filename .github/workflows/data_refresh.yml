@@ -1,0 +1,73 @@
+name: "Figuras Políticas - Atualização semanal de dados oficiais"
+
+# Roda o pipeline completo (TSE, Câmara, Senado, Portal da Transparência, Siconfi) e abre um PR
+# com as mudanças em data/ — nunca faz push direto na main.
+on:
+  schedule:
+    # Domingo às 05:00 no Brasil (08:00 UTC)
+    - cron: '0 8 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: data-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    name: Atualizar dados oficiais e abrir PR
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Dependências
+        run: npm ci
+
+      - name: Pipeline de dados oficiais
+        env:
+          DATA_TMP: ${{ runner.temp }}/dados-oficiais
+        run: node scripts/update_all_data.js
+
+      - name: Testes
+        run: |
+          node src/db/seed.js
+          npm test
+
+      - name: Resumo do relatório
+        id: resumo
+        run: |
+          {
+            echo 'texto<<EOF'
+            node -e "const r=require('./data/verification_report.json');console.log('Resumo: '+JSON.stringify(r.resumoGeral,null,2));console.log('\nPerfis para revisar: '+(r.revisar||[]).length);(r.revisar||[]).slice(0,40).forEach(x=>console.log('- '+x.nome+' ('+x.status+'): '+x.alertas.map(a=>a.mensagem).join(' | ')))"
+            echo EOF
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Abrir PR
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: chore/data-refresh
+          delete-branch: true
+          add-paths: |
+            data/
+            img/candidates/
+          commit-message: "chore(dados): atualização semanal de dados oficiais"
+          title: "chore(dados): atualização semanal de dados oficiais"
+          body: |
+            Atualização automática gerada por `scripts/update_all_data.js` (TSE, Câmara, Senado, Portal da Transparência e Siconfi).
+            Revise `data/verification_report.json` (seção `revisar`) antes de aprovar.
+
+            ```
+            ${{ steps.resumo.outputs.texto }}
+            ```
+          labels: dados

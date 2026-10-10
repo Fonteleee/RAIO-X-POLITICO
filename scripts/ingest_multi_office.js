@@ -147,10 +147,11 @@ function ingestMultiOffice() {
         p.id,
         p.name,
         p.ballotName || p.name,
-        p.party,
-        p.number || '00',
-        p.position,
-        p.state,
+        // identidade verificada (TSE/Câmara/Senado em data/candidates.js) prevalece sobre o cadastro estático
+        candMatch.party || p.party,
+        candMatch.number || p.number || '00',
+        candMatch.position || p.position,
+        candMatch.state || p.state,
         p.city || '',
         p.age || 50,
         p.avatar || candMatch.avatar,
@@ -318,7 +319,7 @@ function ingestMultiOffice() {
         }
       }
 
-      console.log(`  [${count}/${EXECUTIVE_AND_SENATE_POLITICIANS.length}] ✔ Inserido: ${p.name} (${p.party}-${p.state}) - Cargo: ${p.position}`);
+      console.log(`  [${count}/${EXECUTIVE_AND_SENATE_POLITICIANS.length}] ✔ Inserido: ${p.name} (${p.party}-${p.state}) - Cargo: ${candMatch.position || p.position}`);
     }
 
     rawDb.exec('COMMIT');

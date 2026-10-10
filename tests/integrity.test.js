@@ -5,6 +5,9 @@ const { test, describe } = require('node:test');
 const assert = require('node:assert');
 const { verifyIntegrity, VERIFIED_SENATE_CODES, VERIFIED_2026_OFFICES } = require('../scripts/verify_data_integrity');
 const { AppDatabase } = require('../src/db/database');
+const { loadCandidates } = require('../scripts/lib/data_io');
+// position = mandato atual; cargo disputado em 2026 vem do TSE (tse2026.cargo)
+const tse = id => (loadCandidates().list.find(c => c.id === id) || {}).tse2026 || {};
 
 describe('Garantia de Integridade de Dados, Fotos Oficiais e Cenário 2026', () => {
   const db = new AppDatabase();
@@ -34,18 +37,18 @@ describe('Garantia de Integridade de Dados, Fotos Oficiais e Cenário 2026', () 
 
   test('Executivo 2026: Ciro Gomes, Caiado e Zema estão registrados com cargos e partidos atualizados', () => {
     const ciro = db.getCandidateById('cand-ciro-gomes');
-    assert.strictEqual(ciro.position, 'Governador');
+    assert.strictEqual(tse('cand-ciro-gomes').cargo, 'Governador');
     assert.strictEqual(ciro.party, 'PSDB');
     assert.strictEqual(ciro.number, '45');
     assert.strictEqual(ciro.state, 'CE');
 
     const caiado = db.getCandidateById('cand-ronaldo-caiado');
-    assert.strictEqual(caiado.position, 'Presidente da República');
+    assert.strictEqual(tse('cand-ronaldo-caiado').cargo, 'Presidente da República');
     assert.strictEqual(caiado.party, 'PSD');
     assert.strictEqual(caiado.number, '55');
 
     const zema = db.getCandidateById('cand-romeu-zema');
-    assert.strictEqual(zema.position, 'Presidente da República');
+    assert.strictEqual(tse('cand-romeu-zema').cargo, 'Presidente da República');
     assert.strictEqual(zema.party, 'NOVO');
     assert.strictEqual(zema.number, '30');
   });

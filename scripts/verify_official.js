@@ -110,6 +110,7 @@ async function pool(items, size, fn) {
   console.log(`Baixando CEAP ${CEAP_YEAR} (arquivo em lote da Câmara)...`);
   const ceap = await loadCeapByDeputy(CEAP_YEAR);
   console.log(`CEAP: ${ceap.rows} notas, ${ceap.byId.size} parlamentares`);
+  if (ceap.byId.size < 400) throw new Error(`CEAP ${CEAP_YEAR}: arquivo em lote incompleto (${ceap.byId.size} deputados); abortando sem gravar.`);
   const limits = CEAP_LIMITS[String(CEAP_YEAR)];
   if (!limits) throw new Error(`Sem tabela de teto CEAP para ${CEAP_YEAR} em data/ceap_limits.json`);
 
@@ -118,8 +119,8 @@ async function pool(items, size, fn) {
   console.log(`Câmara: ${deputies.length} deputados | Senado: ${senators.length} senadores`);
   if (deputies.length < 500 || senators.length < 60) throw new Error('Listas oficiais incompletas; abortando.');
 
-  let previous = {};
-  try { JSON.parse(fs.readFileSync(REPORT_FILE, 'utf8')).entries.forEach(e => { previous[e.id] = e; }); } catch { /* primeira execução */ }
+  let previous = {}, previousFases = undefined;
+  try { const old = JSON.parse(fs.readFileSync(REPORT_FILE, 'utf8')); previousFases = old.fases; (old.entries || []).forEach(e => { previous[e.id] = e; }); } catch { /* primeira execução */ }
   const report = { generatedAt: new Date().toISOString(), ceapYear: CEAP_YEAR, sources: { camara: CAMARA, senado: SENADO }, entries: [] };
   const fetchedAt = new Date().toISOString().slice(0, 10);
 
@@ -236,7 +237,7 @@ async function pool(items, size, fn) {
       };
       if (monthsActive && monthsActive < 12) entry.note = (entry.note ? entry.note + ' ' : '') + `CEAP com despesas em apenas ${monthsActive} meses de ${CEAP_YEAR} (licença/suplência).`;
     }
-    cand.dataVerification = { fonte: house === 'camara' ? 'Câmara dos Deputados' : 'Senado Federal', idOficial: String(hit.id), verificadoEm: fetchedAt, situacao: entry.situacao || null, campos: ['identidade', 'foto'].concat(house === 'camara' ? ['ceap'] : []) };
+    cand.dataVerification = { fonte: house === 'camara' ? 'Câmara dos Deputados' : 'Senado Federal', idOficial: String(hit.id), nomeParlamentar: hit.nome, verificadoEm: fetchedAt, situacao: entry.situacao || null, campos: ['identidade', 'foto'].concat(house === 'camara' ? ['ceap'] : []) };
     report.entries.push(entry);
   });
 
@@ -255,6 +256,7 @@ async function pool(items, size, fn) {
   console.log(report.summary);
   if (dry) return;
 
+  if (previousFases) report.fases = previousFases; // seções das outras fases (update_all_data.js)
   fs.writeFileSync(REPORT_FILE, JSON.stringify(report, null, 2));
   let out = src.slice(0, arrStart) + JSON.stringify(list, null, 2) + src.slice(arrEnd);
   if (crlf) out = out.replace(/\n/g, '\r\n');

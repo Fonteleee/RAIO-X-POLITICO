@@ -134,7 +134,8 @@ describe('Extratores de Dados Oficiais (Custo Zero)', () => {
 
     const campos = appDb.getCandidateById('cand-joao-campos');
     assert.ok(campos, 'João Campos must exist in database');
-    assert.strictEqual(campos.position, 'Governador');
+    // João Campos deixou a Prefeitura do Recife para disputar o Governo de PE (TSE 2026)
+    assert.match(campos.position, /Governador/);
 
     const nunes = appDb.getCandidateById('cand-ricardo-nunes');
     assert.ok(nunes, 'Ricardo Nunes must exist in database');

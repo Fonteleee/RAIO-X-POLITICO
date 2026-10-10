@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T15:12:10.716Z",
+  "generatedAt": "2026-10-10T16:23:18.792Z",
   "ceapYear": 2025,
   "sources": {
     "camara": "https://dadosabertos.camara.leg.br/api/v2",
@@ -3277,5 +3277,2821 @@
     "naoEncontradosNaCasa": 34,
     "semFonteApi": 53,
     "comAlteracoes": 29
+  },
+  "fases": {
+    "presenca": {
+      "geradoEm": "2026-10-10T16:53:32.909Z",
+      "ano": 2025,
+      "camara": {
+        "consultados": 105,
+        "comDado": 101,
+        "falhas": [
+          {
+            "id": "cand-deltan-dallagnol",
+            "motivo": "sem quadro-resumo (sem sessões no ano?)"
+          },
+          {
+            "id": "cand-carmen-zanotto",
+            "motivo": "sem quadro-resumo (sem sessões no ano?)"
+          },
+          {
+            "id": "cand-priscila-costa",
+            "motivo": "sem quadro-resumo (sem sessões no ano?)"
+          },
+          {
+            "id": "cand-marina-silva",
+            "motivo": "sem quadro-resumo (sem sessões no ano?)"
+          }
+        ]
+      },
+      "senado": {
+        "consultados": 22,
+        "comDado": 22,
+        "votacoesNoAno": 93
+      },
+      "validacao": {
+        "id": "cand-carlos-jordy",
+        "esperado": "120/121 (99,17%)",
+        "obtido": "120/121 (99,17%)",
+        "ok": true
+      }
+    },
+    "producaoEmendas": {
+      "geradoEm": "2026-10-10T16:26:29.301Z",
+      "camara": {
+        "arquivos": [
+          {
+            "ano": 2023,
+            "proposicoes": 62437,
+            "autores": 164953
+          },
+          {
+            "ano": 2024,
+            "proposicoes": 61536,
+            "autores": 97124
+          },
+          {
+            "ano": 2025,
+            "proposicoes": 107587,
+            "autores": 154579
+          },
+          {
+            "ano": 2026,
+            "proposicoes": 45445,
+            "autores": 56828
+          }
+        ],
+        "comDado": 105
+      },
+      "senado": {
+        "comDado": 22,
+        "falhas": []
+      },
+      "emendas": {
+        "ano": 2025,
+        "comDado": 119,
+        "semCorrespondencia": [
+          "cand-andre-fernandes",
+          "cand-camilo-santana",
+          "cand-deltan-dallagnol",
+          "cand-paulo-pimenta",
+          "cand-carmen-zanotto",
+          "cand-gustavo-gayer",
+          "cand-priscila-costa",
+          "cand-marina-silva"
+        ],
+        "linhas": 94663,
+        "autoresNoAno": 628
+      }
+    },
+    "executivo": {
+      "geradoEm": "2026-10-10T16:26:54.338Z",
+      "ano": 2025,
+      "consultados": 16,
+      "comDado": 16,
+      "semDado": [],
+      "validacao": {
+        "ente": "SP",
+        "esperado": 41.29,
+        "obtido": 41.29,
+        "ok": true
+      }
+    },
+    "indicadores": {
+      "geradoEm": "2026-10-10T16:53:33.746Z",
+      "contagem": {
+        "presenca": 101,
+        "participacaoVotacoes": 22,
+        "cotaParlamentar": 105,
+        "producaoLegislativa": 127,
+        "emendas": 119,
+        "gastoPessoal": 16
+      },
+      "problemas": []
+    },
+    "identidade": {
+      "geradoEm": "2026-10-10T16:28:15.094Z",
+      "fontes": {
+        "tse2026": "https://cdn.tse.jus.br/estatistica/sead/odsele/consulta_cand/consulta_cand_2026.zip",
+        "tse2022": "https://cdn.tse.jus.br/estatistica/sead/odsele/consulta_cand/consulta_cand_2022.zip",
+        "tse2024": "https://cdn.tse.jus.br/estatistica/sead/odsele/consulta_cand/consulta_cand_2024.zip",
+        "wikidata": "https://query.wikidata.org/sparql"
+      },
+      "correcoes": [
+        {
+          "id": "cand-joao-campos",
+          "nome": "João Campos",
+          "changes": [
+            {
+              "field": "position",
+              "from": "Governador",
+              "to": "Candidato a Governador em 2026",
+              "fonte": "TSE 2024 + TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-ronaldo-caiado",
+          "nome": "Ronaldo Caiado",
+          "changes": [
+            {
+              "field": "position",
+              "from": "Presidente da República",
+              "to": "Candidato a Presidente da República em 2026",
+              "fonte": "TSE 2022 + TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-simone-tebet",
+          "nome": "Simone Tebet",
+          "changes": [
+            {
+              "field": "position",
+              "from": "Senadora",
+              "to": "Candidata a Senadora em 2026",
+              "fonte": "TSE 2022/2024/2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-helder-barbalho",
+          "nome": "Helder Barbalho",
+          "changes": [
+            {
+              "field": "number",
+              "from": "150",
+              "to": "151",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "position",
+              "from": "Senador",
+              "to": "Candidato a Senador em 2026",
+              "fonte": "TSE 2022 + TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-eduardo-paes",
+          "nome": "Eduardo Paes",
+          "changes": [
+            {
+              "field": "position",
+              "from": "Governador",
+              "to": "Candidato a Governador em 2026",
+              "fonte": "TSE 2024 + TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-ciro-gomes",
+          "nome": "Ciro Gomes",
+          "changes": [
+            {
+              "field": "position",
+              "from": "Governador",
+              "to": "Candidato a Governador em 2026",
+              "fonte": "TSE 2022/2024/2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-romeu-zema",
+          "nome": "Romeu Zema",
+          "changes": [
+            {
+              "field": "position",
+              "from": "Presidente da República",
+              "to": "Candidato a Presidente da República em 2026",
+              "fonte": "TSE 2022 + TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-fuad-noman",
+          "nome": "Fuad Noman",
+          "changes": [
+            {
+              "field": "position",
+              "from": "Prefeito",
+              "to": "Ex-Prefeito (falecido)",
+              "fonte": "Wikidata (secundária, P570)"
+            }
+          ]
+        },
+        {
+          "id": "cand-claudio-castro",
+          "nome": "Cláudio Castro",
+          "changes": [
+            {
+              "field": "position",
+              "from": "Ex-Governador",
+              "to": "Governador",
+              "fonte": "TSE — Eleições 2022 (eleito)"
+            }
+          ]
+        },
+        {
+          "id": "cand-flavio-bolsonaro",
+          "nome": "Flávio Bolsonaro",
+          "changes": [
+            {
+              "field": "position",
+              "from": "Presidente da República",
+              "to": "Candidato a Presidente da República em 2026",
+              "fonte": "TSE 2022/2024/2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-tabata-amaral",
+          "nome": "Tabata Amaral",
+          "changes": [
+            {
+              "field": "number",
+              "from": "4000",
+              "to": "4040",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-kim-kataguiri",
+          "nome": "Kim Kataguiri",
+          "changes": [
+            {
+              "field": "number",
+              "from": "4433",
+              "to": "1414",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-erika-hilton",
+          "nome": "Erika Hilton",
+          "changes": [
+            {
+              "field": "number",
+              "from": "5000",
+              "to": "5070",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-samia-bomfim",
+          "nome": "Sâmia Bomfim",
+          "changes": [
+            {
+              "field": "number",
+              "from": "5050",
+              "to": "5000",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-marcel-van-hattem",
+          "nome": "Marcel van Hattem",
+          "changes": [
+            {
+              "field": "number",
+              "from": "3030",
+              "to": "300",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-luiza-erundina",
+          "nome": "Luiza Erundina",
+          "changes": [
+            {
+              "field": "number",
+              "from": "5010",
+              "to": "50555",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-duda-salabert",
+          "nome": "Duda Salabert",
+          "changes": [
+            {
+              "field": "number",
+              "from": "1212",
+              "to": "5050",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-mario-frias",
+          "nome": "Mario Frias",
+          "changes": [
+            {
+              "field": "number",
+              "from": "2200",
+              "to": "2208",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-celia-xakriaba",
+          "nome": "Célia Xakriabá",
+          "changes": [
+            {
+              "field": "number",
+              "from": "5005",
+              "to": "5088",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-chico-alencar",
+          "nome": "Chico Alencar",
+          "changes": [
+            {
+              "field": "number",
+              "from": "5022",
+              "to": "5050",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-aecio-neves",
+          "nome": "Aécio Neves",
+          "changes": [
+            {
+              "field": "number",
+              "from": "4545",
+              "to": "456",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-orlando-silva",
+          "nome": "Orlando Silva",
+          "changes": [
+            {
+              "field": "number",
+              "from": "6555",
+              "to": "6565",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-carla-zambelli",
+          "nome": "Carla Zambelli",
+          "changes": [
+            {
+              "field": "position",
+              "from": "Deputada Federal",
+              "to": "Sem mandato eletivo",
+              "fonte": "Câmara dos Deputados"
+            }
+          ]
+        },
+        {
+          "id": "cand-rodrigo-valadares",
+          "nome": "Rodrigo Valadares",
+          "changes": [
+            {
+              "field": "number",
+              "from": "4455",
+              "to": "222",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-eduardo-bolsonaro",
+          "nome": "Eduardo Bolsonaro",
+          "changes": [
+            {
+              "field": "position",
+              "from": "Deputado Federal",
+              "to": "Sem mandato eletivo",
+              "fonte": "Câmara dos Deputados"
+            }
+          ]
+        },
+        {
+          "id": "cand-cleitinho-azevedo",
+          "nome": "Cleitinho",
+          "changes": [
+            {
+              "field": "number",
+              "from": "101",
+              "to": "10",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-tulio-gadelha",
+          "nome": "Túlio Gadêlha",
+          "changes": [
+            {
+              "field": "number",
+              "from": "1818",
+              "to": "555",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-eder-mauro",
+          "nome": "Delegado Éder Mauro",
+          "changes": [
+            {
+              "field": "number",
+              "from": "2233",
+              "to": "222",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-jaques-wagner",
+          "nome": "Jaques Wagner",
+          "changes": [
+            {
+              "field": "number",
+              "from": "131",
+              "to": "130",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-alice-portugal",
+          "nome": "Alice Portugal",
+          "changes": [
+            {
+              "field": "number",
+              "from": "6565",
+              "to": "6522",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-joao-roma",
+          "nome": "João Roma",
+          "changes": [
+            {
+              "field": "number",
+              "from": "22",
+              "to": "222",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "position",
+              "from": "Senador",
+              "to": "Candidato a Senador em 2026",
+              "fonte": "TSE 2022/2024/2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-leandro-de-jesus",
+          "nome": "Leandro de Jesus",
+          "changes": [
+            {
+              "field": "number",
+              "from": "22000",
+              "to": "2233",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "position",
+              "from": "Deputado Federal",
+              "to": "Deputado Estadual",
+              "fonte": "TSE — Eleições 2022 (eleito)"
+            }
+          ]
+        },
+        {
+          "id": "cand-humberto-costa",
+          "nome": "Humberto Costa",
+          "changes": [
+            {
+              "field": "number",
+              "from": "133",
+              "to": "130",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-marilia-arraes",
+          "nome": "Marília Arraes",
+          "changes": [
+            {
+              "field": "number",
+              "from": "77",
+              "to": "123",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "party",
+              "from": "SOLIDARIEDADE",
+              "to": "PDT",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-gilson-machado",
+          "nome": "Gilson Machado",
+          "changes": [
+            {
+              "field": "number",
+              "from": "22",
+              "to": "2022",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "party",
+              "from": "PL",
+              "to": "PODE",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "position",
+              "from": "Senador",
+              "to": "Candidato a Deputado Federal em 2026",
+              "fonte": "TSE 2022/2024/2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-miguel-coelho",
+          "nome": "Miguel Coelho",
+          "changes": [
+            {
+              "field": "number",
+              "from": "44",
+              "to": "4400",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-mendonca-filho",
+          "nome": "Mendonça Filho",
+          "changes": [
+            {
+              "field": "number",
+              "from": "4422",
+              "to": "222",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-danilo-cabral",
+          "nome": "Danilo Cabral",
+          "changes": [
+            {
+              "field": "position",
+              "from": "Deputado Federal",
+              "to": "Sem mandato eletivo",
+              "fonte": "TSE 2022/2024/2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-anderson-ferreira",
+          "nome": "Anderson Ferreira",
+          "changes": [
+            {
+              "field": "number",
+              "from": "22",
+              "to": "2222",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "position",
+              "from": "Senador",
+              "to": "Vereador",
+              "fonte": "TSE — Eleições 2024 (eleito)"
+            }
+          ]
+        },
+        {
+          "id": "cand-daniel-coelho",
+          "nome": "Daniel Coelho",
+          "changes": [
+            {
+              "field": "number",
+              "from": "55",
+              "to": "5555",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "position",
+              "from": "Deputado Federal",
+              "to": "Candidato a Deputado Federal em 2026",
+              "fonte": "TSE 2022/2024/2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-capitao-wagner",
+          "nome": "Capitão Wagner",
+          "changes": [
+            {
+              "field": "number",
+              "from": "44",
+              "to": "445",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-eduardo-girao",
+          "nome": "Eduardo Girão",
+          "changes": [
+            {
+              "field": "position",
+              "from": "Senador",
+              "to": "Sem mandato eletivo",
+              "fonte": "TSE 2022/2024/2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-luizianne-lins",
+          "nome": "Luizianne Lins",
+          "changes": [
+            {
+              "field": "number",
+              "from": "1313",
+              "to": "180",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-fernanda-pessoa",
+          "nome": "Fernanda Pessoa",
+          "changes": [
+            {
+              "field": "number",
+              "from": "4411",
+              "to": "5588",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-mauro-filho",
+          "nome": "Mauro Filho",
+          "changes": [
+            {
+              "field": "number",
+              "from": "1234",
+              "to": "4455",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-goura-nataraj",
+          "nome": "Goura Nataraj",
+          "changes": [
+            {
+              "field": "number",
+              "from": "12012",
+              "to": "12108",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "position",
+              "from": "Deputado Federal",
+              "to": "Deputado Estadual",
+              "fonte": "TSE — Eleições 2022 (eleito)"
+            }
+          ]
+        },
+        {
+          "id": "cand-paulo-martins",
+          "nome": "Paulo Martins",
+          "changes": [
+            {
+              "field": "number",
+              "from": "222",
+              "to": "3020",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "party",
+              "from": "PL",
+              "to": "NOVO",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "position",
+              "from": "Senador",
+              "to": "Vice-Prefeito",
+              "fonte": "TSE — Eleições 2024 (eleito)"
+            }
+          ]
+        },
+        {
+          "id": "cand-sergio-souza",
+          "nome": "Sergio Souza",
+          "changes": [
+            {
+              "field": "number",
+              "from": "1515",
+              "to": "1512",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-carol-dartora",
+          "nome": "Carol Dartora",
+          "changes": [
+            {
+              "field": "number",
+              "from": "1310",
+              "to": "1363",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-zeca-dirceu",
+          "nome": "Zeca Dirceu",
+          "changes": [
+            {
+              "field": "number",
+              "from": "1344",
+              "to": "1310",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-deltan-dallagnol",
+          "nome": "Deltan Dallagnol",
+          "changes": [
+            {
+              "field": "number",
+              "from": "3030",
+              "to": "300",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "party",
+              "from": "PODE",
+              "to": "NOVO",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "position",
+              "from": "Deputado Federal",
+              "to": "Candidato a Senador em 2026",
+              "fonte": "Câmara dos Deputados"
+            }
+          ]
+        },
+        {
+          "id": "cand-cristina-graeml",
+          "nome": "Cristina Graeml",
+          "changes": [
+            {
+              "field": "number",
+              "from": "35",
+              "to": "555",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "party",
+              "from": "PMB",
+              "to": "PSD",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "position",
+              "from": "Deputada Federal",
+              "to": "Candidata a Senadora em 2026",
+              "fonte": "TSE 2022/2024/2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-manuela-davila",
+          "nome": "Manuela d Avila",
+          "changes": [
+            {
+              "field": "number",
+              "from": "65",
+              "to": "500",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "party",
+              "from": "PCdoB",
+              "to": "PSOL",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "position",
+              "from": "Senadora",
+              "to": "Candidata a Senadora em 2026",
+              "fonte": "TSE 2022/2024/2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-juliana-brizola",
+          "nome": "Juliana Brizola",
+          "changes": [
+            {
+              "field": "position",
+              "from": "Deputada Federal",
+              "to": "Candidata a Governadora em 2026",
+              "fonte": "TSE 2022/2024/2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-paulo-pimenta",
+          "nome": "Paulo Pimenta",
+          "changes": [
+            {
+              "field": "number",
+              "from": "1307",
+              "to": "131",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-giovani-cherini",
+          "nome": "Giovani Cherini",
+          "changes": [
+            {
+              "field": "number",
+              "from": "2211",
+              "to": "2222",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-any-ortiz",
+          "nome": "Any Ortiz",
+          "changes": [
+            {
+              "field": "number",
+              "from": "2323",
+              "to": "1123",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-mauricio-dziedricki",
+          "nome": "Maurício Dziedricki",
+          "changes": [
+            {
+              "field": "position",
+              "from": "Deputado Federal",
+              "to": "Candidato a Deputado Federal em 2026",
+              "fonte": "TSE 2022/2024/2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-tarcisio-motta",
+          "nome": "Tarcísio Motta",
+          "changes": [
+            {
+              "field": "number",
+              "from": "5010",
+              "to": "5000",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-taliria-petrone",
+          "nome": "Talíria Petrone",
+          "changes": [
+            {
+              "field": "number",
+              "from": "5000",
+              "to": "5077",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-otoni-de-paula",
+          "nome": "Otoni de Paula",
+          "changes": [
+            {
+              "field": "number",
+              "from": "1520",
+              "to": "5550",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-marcelo-crivella",
+          "nome": "Marcelo Crivella",
+          "changes": [
+            {
+              "field": "number",
+              "from": "1010",
+              "to": "100",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-benedita-da-silva",
+          "nome": "Benedita da Silva",
+          "changes": [
+            {
+              "field": "number",
+              "from": "1311",
+              "to": "131",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-helio-lopes",
+          "nome": "Hélio Lopes",
+          "changes": [
+            {
+              "field": "number",
+              "from": "2200",
+              "to": "222",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-alexandre-silveira",
+          "nome": "Alexandre Silveira",
+          "changes": [
+            {
+              "field": "position",
+              "from": "Senador",
+              "to": "Sem mandato eletivo",
+              "fonte": "TSE 2022/2024/2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-reginaldo-lopes",
+          "nome": "Reginaldo Lopes",
+          "changes": [
+            {
+              "field": "number",
+              "from": "1300",
+              "to": "1312",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-carlos-viana",
+          "nome": "Carlos Viana",
+          "changes": [
+            {
+              "field": "number",
+              "from": "200",
+              "to": "555",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-rogerio-correia",
+          "nome": "Rogério Correia",
+          "changes": [
+            {
+              "field": "number",
+              "from": "1312",
+              "to": "1313",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-marcelo-alvaro-antonio",
+          "nome": "Marcelo Álvaro Antônio",
+          "changes": [
+            {
+              "field": "number",
+              "from": "2222",
+              "to": "2244",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-gabriel-azevedo",
+          "nome": "Gabriel Azevedo",
+          "changes": [
+            {
+              "field": "position",
+              "from": "Deputado Federal",
+              "to": "Candidato a Governador em 2026",
+              "fonte": "TSE 2022/2024/2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-mauro-tramonte",
+          "nome": "Mauro Tramonte",
+          "changes": [
+            {
+              "field": "number",
+              "from": "10",
+              "to": "10800",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "position",
+              "from": "Deputado Federal",
+              "to": "Deputado Estadual",
+              "fonte": "TSE — Eleições 2022 (eleito)"
+            }
+          ]
+        },
+        {
+          "id": "cand-dandara-tonantzin",
+          "nome": "Dandara Tonantzin",
+          "changes": [
+            {
+              "field": "number",
+              "from": "1314",
+              "to": "1334",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-newton-cardoso-jr",
+          "nome": "Newton Cardoso Jr",
+          "changes": [
+            {
+              "field": "number",
+              "from": "1555",
+              "to": "1510",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-bruno-engler",
+          "nome": "Bruno Engler",
+          "changes": [
+            {
+              "field": "number",
+              "from": "22",
+              "to": "22222",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "position",
+              "from": "Governador",
+              "to": "Deputado Estadual",
+              "fonte": "TSE — Eleições 2022 (eleito)"
+            }
+          ]
+        },
+        {
+          "id": "cand-decio-lima",
+          "nome": "Décio Lima",
+          "changes": [
+            {
+              "field": "number",
+              "from": "13",
+              "to": "133",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-gean-loureiro",
+          "nome": "Gean Loureiro",
+          "changes": [
+            {
+              "field": "number",
+              "from": "44",
+              "to": "44123",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-jorge-goetten",
+          "nome": "Jorge Goetten",
+          "changes": [
+            {
+              "field": "number",
+              "from": "1010",
+              "to": "1001",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-carmen-zanotto",
+          "nome": "Carmen Zanotto",
+          "changes": [
+            {
+              "field": "position",
+              "from": "Deputada Federal",
+              "to": "Sem mandato eletivo",
+              "fonte": "Câmara dos Deputados"
+            }
+          ]
+        },
+        {
+          "id": "cand-antidio-lunelli",
+          "nome": "Antídio Lunelli",
+          "changes": [
+            {
+              "field": "number",
+              "from": "15000",
+              "to": "155",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "position",
+              "from": "Deputado Federal",
+              "to": "Deputado Estadual",
+              "fonte": "TSE — Eleições 2022 (eleito)"
+            }
+          ]
+        },
+        {
+          "id": "cand-daniel-freitas",
+          "nome": "Daniel Freitas",
+          "changes": [
+            {
+              "field": "number",
+              "from": "2200",
+              "to": "2211",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-leila-do-volei",
+          "nome": "Leila do Vôlei",
+          "changes": [
+            {
+              "field": "position",
+              "from": "Senadora",
+              "to": "Candidata a Senadora em 2026",
+              "fonte": "TSE 2022/2024/2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-paula-belmonte",
+          "nome": "Paula Belmonte",
+          "changes": [
+            {
+              "field": "number",
+              "from": "2323",
+              "to": "45",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "party",
+              "from": "CIDADANIA",
+              "to": "PSDB",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "position",
+              "from": "Governadora",
+              "to": "Deputada Distrital",
+              "fonte": "TSE — Eleições 2022 (eleito)"
+            }
+          ]
+        },
+        {
+          "id": "cand-erika-kokay",
+          "nome": "Erika Kokay",
+          "changes": [
+            {
+              "field": "number",
+              "from": "1313",
+              "to": "131",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-bia-kicis",
+          "nome": "Bia Kicis",
+          "changes": [
+            {
+              "field": "number",
+              "from": "2222",
+              "to": "223",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-fred-linhares",
+          "nome": "Fred Linhares",
+          "changes": [
+            {
+              "field": "number",
+              "from": "1010",
+              "to": "1020",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-alberto-fraga",
+          "nome": "Alberto Fraga",
+          "changes": [
+            {
+              "field": "number",
+              "from": "2255",
+              "to": "2222",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-izalci-lucas",
+          "nome": "Izalci Lucas",
+          "changes": [
+            {
+              "field": "number",
+              "from": "22",
+              "to": "2200",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-wilder-morais",
+          "nome": "Wilder Morais",
+          "changes": [
+            {
+              "field": "number",
+              "from": "222",
+              "to": "22",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-adriana-accorsi",
+          "nome": "Adriana Accorsi",
+          "changes": [
+            {
+              "field": "number",
+              "from": "1313",
+              "to": "1331",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-gustavo-gayer",
+          "nome": "Gustavo Gayer",
+          "changes": [
+            {
+              "field": "number",
+              "from": "2222",
+              "to": "222",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-zacharias-calil",
+          "nome": "Dr. Zacharias Calil",
+          "changes": [
+            {
+              "field": "number",
+              "from": "4400",
+              "to": "155",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-flavia-morais",
+          "nome": "Flávia Morais",
+          "changes": [
+            {
+              "field": "number",
+              "from": "1212",
+              "to": "1515",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-rubens-otoni",
+          "nome": "Rubens Otoni",
+          "changes": [
+            {
+              "field": "number",
+              "from": "1370",
+              "to": "1313",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-renilce-nicodemos",
+          "nome": "Renilce Nicodemos",
+          "changes": [
+            {
+              "field": "number",
+              "from": "1555",
+              "to": "1577",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-jose-priante",
+          "nome": "Priante",
+          "changes": [
+            {
+              "field": "number",
+              "from": "1515",
+              "to": "1555",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-olival-marques",
+          "nome": "Olival Marques",
+          "changes": [
+            {
+              "field": "number",
+              "from": "1500",
+              "to": "2000",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-airton-faleiro",
+          "nome": "Airton Faleiro",
+          "changes": [
+            {
+              "field": "number",
+              "from": "1313",
+              "to": "1321",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-keniston-braga",
+          "nome": "Keniston Braga",
+          "changes": [
+            {
+              "field": "number",
+              "from": "1588",
+              "to": "1512",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-edmilson-rodrigues",
+          "nome": "Edmilson Rodrigues",
+          "changes": [
+            {
+              "field": "position",
+              "from": "Deputado Federal",
+              "to": "Sem mandato eletivo",
+              "fonte": "TSE 2022/2024/2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-marina-helena",
+          "nome": "Marina Helena",
+          "changes": [
+            {
+              "field": "number",
+              "from": "30",
+              "to": "3007",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "position",
+              "from": "Deputada Federal",
+              "to": "Candidata a Deputada Federal em 2026",
+              "fonte": "TSE 2022/2024/2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-lucas-pavanato",
+          "nome": "Lucas Pavanato",
+          "changes": [
+            {
+              "field": "number",
+              "from": "22000",
+              "to": "2211",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "position",
+              "from": "Deputado Federal",
+              "to": "Vereador",
+              "fonte": "TSE — Eleições 2024 (eleito)"
+            }
+          ]
+        },
+        {
+          "id": "cand-amanda-vettorazzo",
+          "nome": "Amanda Vettorazzo",
+          "changes": [
+            {
+              "field": "position",
+              "from": "Deputada Federal",
+              "to": "Vereadora",
+              "fonte": "TSE — Eleições 2024 (eleito)"
+            }
+          ]
+        },
+        {
+          "id": "cand-celso-russomanno",
+          "nome": "Celso Russomanno",
+          "changes": [
+            {
+              "field": "number",
+              "from": "1010",
+              "to": "1000",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-carlos-zarattini",
+          "nome": "Carlos Zarattini",
+          "changes": [
+            {
+              "field": "number",
+              "from": "1313",
+              "to": "1370",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-alexandre-ramagem",
+          "nome": "Alexandre Ramagem",
+          "changes": [
+            {
+              "field": "position",
+              "from": "Deputado Federal",
+              "to": "Sem mandato eletivo",
+              "fonte": "Câmara dos Deputados"
+            }
+          ]
+        },
+        {
+          "id": "cand-pedro-paulo",
+          "nome": "Pedro Paulo",
+          "changes": [
+            {
+              "field": "number",
+              "from": "5555",
+              "to": "555",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-carlos-jordy",
+          "nome": "Carlos Jordy",
+          "changes": [
+            {
+              "field": "number",
+              "from": "2200",
+              "to": "221",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-dani-cunha",
+          "nome": "Dani Cunha",
+          "changes": [
+            {
+              "field": "number",
+              "from": "4422",
+              "to": "2233",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-bella-goncalves",
+          "nome": "Bella Gonçalves",
+          "changes": [
+            {
+              "field": "number",
+              "from": "50",
+              "to": "1390",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "party",
+              "from": "PSOL",
+              "to": "PT",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-eros-biondini",
+          "nome": "Eros Biondini",
+          "changes": [
+            {
+              "field": "number",
+              "from": "2200",
+              "to": "2277",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-leo-prates",
+          "nome": "Leo Prates",
+          "changes": [
+            {
+              "field": "number",
+              "from": "1234",
+              "to": "1044",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-pastor-sargento-isidorio",
+          "nome": "Sargento Isidório",
+          "changes": [
+            {
+              "field": "number",
+              "from": "7070",
+              "to": "7000",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-katia-oliveira",
+          "nome": "Kátia Oliveira",
+          "changes": [
+            {
+              "field": "number",
+              "from": "44123",
+              "to": "44686",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-carmelo-neto",
+          "nome": "Carmelo Neto",
+          "changes": [
+            {
+              "field": "number",
+              "from": "22000",
+              "to": "2200",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "position",
+              "from": "Deputado Federal",
+              "to": "Deputado Estadual",
+              "fonte": "TSE — Eleições 2022 (eleito)"
+            }
+          ]
+        },
+        {
+          "id": "cand-priscila-costa",
+          "nome": "Priscila Costa",
+          "changes": [
+            {
+              "field": "number",
+              "from": "22123",
+              "to": "2288",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-celio-studart",
+          "nome": "Célio Studart",
+          "changes": [
+            {
+              "field": "number",
+              "from": "5555",
+              "to": "5511",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-ney-leprevost",
+          "nome": "Ney Leprevost",
+          "changes": [
+            {
+              "field": "number",
+              "from": "44",
+              "to": "10669",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "party",
+              "from": "UNIÃO",
+              "to": "REPUBLICANOS",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "position",
+              "from": "Deputado Federal",
+              "to": "Deputado Estadual",
+              "fonte": "TSE — Eleições 2022 (eleito)"
+            }
+          ]
+        },
+        {
+          "id": "cand-maria-victoria",
+          "nome": "Maria Victoria",
+          "changes": [
+            {
+              "field": "number",
+              "from": "11",
+              "to": "11511",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "position",
+              "from": "Deputada Federal",
+              "to": "Deputada Estadual",
+              "fonte": "TSE — Eleições 2022 (eleito)"
+            }
+          ]
+        },
+        {
+          "id": "cand-guilherme-kilter",
+          "nome": "Guilherme Kilter",
+          "changes": [
+            {
+              "field": "number",
+              "from": "30000",
+              "to": "3030",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "position",
+              "from": "Deputado Estadual",
+              "to": "Vereador",
+              "fonte": "TSE — Eleições 2024 (eleito)"
+            }
+          ]
+        },
+        {
+          "id": "cand-dani-portela",
+          "nome": "Dani Portela",
+          "changes": [
+            {
+              "field": "number",
+              "from": "50",
+              "to": "13000",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "party",
+              "from": "PSOL",
+              "to": "PT",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "position",
+              "from": "Deputada Federal",
+              "to": "Deputada Estadual",
+              "fonte": "TSE — Eleições 2022 (eleito)"
+            }
+          ]
+        },
+        {
+          "id": "cand-maria-arraes",
+          "nome": "Maria Arraes",
+          "changes": [
+            {
+              "field": "number",
+              "from": "7777",
+              "to": "40140",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-felipe-camozzato",
+          "nome": "Felipe Camozzato",
+          "changes": [
+            {
+              "field": "number",
+              "from": "30",
+              "to": "3030",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "position",
+              "from": "Deputado Federal",
+              "to": "Deputado Estadual",
+              "fonte": "TSE — Eleições 2022 (eleito)"
+            }
+          ]
+        },
+        {
+          "id": "cand-comandante-nadia",
+          "nome": "Comandante Nádia",
+          "changes": [
+            {
+              "field": "number",
+              "from": "22000",
+              "to": "22190",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "position",
+              "from": "Deputada Estadual",
+              "to": "Vereadora",
+              "fonte": "TSE — Eleições 2024 (eleito)"
+            }
+          ]
+        },
+        {
+          "id": "cand-jesse-sangalli",
+          "nome": "Jessé Sangalli",
+          "changes": [
+            {
+              "field": "number",
+              "from": "22222",
+              "to": "2230",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "position",
+              "from": "Deputado Estadual",
+              "to": "Vereador",
+              "fonte": "TSE — Eleições 2024 (eleito)"
+            }
+          ]
+        },
+        {
+          "id": "cand-david-almeida",
+          "nome": "David Almeida",
+          "changes": [
+            {
+              "field": "position",
+              "from": "Governador",
+              "to": "Candidato a Governador em 2026",
+              "fonte": "TSE 2024 + TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-amom-mandel",
+          "nome": "Amom Mandel",
+          "changes": [
+            {
+              "field": "number",
+              "from": "2323",
+              "to": "1000",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-capitao-alberto-neto",
+          "nome": "Capitão Alberto Neto",
+          "changes": [
+            {
+              "field": "number",
+              "from": "2222",
+              "to": "222",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-eduardo-braga",
+          "nome": "Eduardo Braga",
+          "changes": [
+            {
+              "field": "number",
+              "from": "151",
+              "to": "155",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-fred-rodrigues",
+          "nome": "Fred Rodrigues",
+          "changes": [
+            {
+              "field": "number",
+              "from": "22",
+              "to": "2220",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "position",
+              "from": "Deputado Federal",
+              "to": "Candidato a Deputado Federal em 2026",
+              "fonte": "TSE 2022/2024/2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-major-vitor-hugo",
+          "nome": "Major Vitor Hugo",
+          "changes": [
+            {
+              "field": "number",
+              "from": "22111",
+              "to": "2201",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "position",
+              "from": "Deputado Federal",
+              "to": "Vereador",
+              "fonte": "TSE — Eleições 2024 (eleito)"
+            }
+          ]
+        },
+        {
+          "id": "cand-eduarda-campopiano",
+          "nome": "Eduarda Campopiano",
+          "changes": [
+            {
+              "field": "number",
+              "from": "22123",
+              "to": "22011",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "position",
+              "from": "Pré-candidata a Deputada Estadual",
+              "to": "Vereadora",
+              "fonte": "TSE — Eleições 2024 (eleito)"
+            }
+          ]
+        },
+        {
+          "id": "cand-arthur-lira",
+          "nome": "Arthur Lira",
+          "changes": [
+            {
+              "field": "number",
+              "from": "1111",
+              "to": "111",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-fernando-haddad",
+          "nome": "Fernando Haddad",
+          "changes": [
+            {
+              "field": "number",
+              "from": "1313",
+              "to": "13",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "position",
+              "from": "Governador",
+              "to": "Candidato a Governador em 2026",
+              "fonte": "TSE 2022/2024/2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-geraldo-alckmin",
+          "nome": "Geraldo Alckmin",
+          "changes": [
+            {
+              "field": "position",
+              "from": "Governador",
+              "to": "Vice-Presidente da República",
+              "fonte": "TSE — Eleições 2022 (eleito)"
+            }
+          ]
+        },
+        {
+          "id": "cand-marina-silva",
+          "nome": "Marina Silva",
+          "changes": [
+            {
+              "field": "number",
+              "from": "1818",
+              "to": "180",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-raquel-lyra",
+          "nome": "Raquel Lyra",
+          "changes": [
+            {
+              "field": "number",
+              "from": "45",
+              "to": "55",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "party",
+              "from": "PSDB",
+              "to": "PSD",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-caroline-de-toni",
+          "nome": "Caroline de Toni",
+          "changes": [
+            {
+              "field": "number",
+              "from": "2200",
+              "to": "221",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-julia-zanatta",
+          "nome": "Julia Zanatta",
+          "changes": [
+            {
+              "field": "number",
+              "from": "2222",
+              "to": "2233",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-guto-zacarias",
+          "nome": "Guto Zacarias",
+          "changes": [
+            {
+              "field": "number",
+              "from": "44000",
+              "to": "1477",
+              "fonte": "TSE 2026"
+            },
+            {
+              "field": "party",
+              "from": "UNIÃO",
+              "to": "MISSÃO",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-glauber-braga",
+          "nome": "Glauber Braga",
+          "changes": [
+            {
+              "field": "number",
+              "from": "5050",
+              "to": "5080",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-andre-janones",
+          "nome": "André Janones",
+          "changes": [
+            {
+              "field": "number",
+              "from": "7070",
+              "to": "1813",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-carlos-bolsonaro",
+          "nome": "Carlos Bolsonaro",
+          "changes": [
+            {
+              "field": "number",
+              "from": "22000",
+              "to": "222",
+              "fonte": "TSE 2026"
+            }
+          ]
+        },
+        {
+          "id": "cand-marcelo-freixo",
+          "nome": "Marcelo Freixo",
+          "changes": [
+            {
+              "field": "number",
+              "from": "1350",
+              "to": "1331",
+              "fonte": "TSE 2026"
+            }
+          ]
+        }
+      ],
+      "revisar": [
+        {
+          "id": "cand-joao-campos",
+          "nome": "João Campos",
+          "alertas": [
+            {
+              "tipo": "cargo_atual",
+              "mensagem": "Sem mandato pelas fontes primárias, mas Wikidata indica \"prefeito de Recife\".",
+              "fonte": "https://www.wikidata.org/wiki/Q59284454"
+            }
+          ]
+        },
+        {
+          "id": "cand-ronaldo-caiado",
+          "nome": "Ronaldo Caiado",
+          "alertas": [
+            {
+              "tipo": "cargo_atual",
+              "mensagem": "Sem mandato pelas fontes primárias, mas Wikidata indica \"Governador de Goiás\".",
+              "fonte": "https://www.wikidata.org/wiki/Q10364348"
+            }
+          ]
+        },
+        {
+          "id": "cand-simone-tebet",
+          "nome": "Simone Tebet",
+          "alertas": [
+            {
+              "tipo": "cargo_atual",
+              "mensagem": "Wikidata indica cargo não eletivo em curso: ministro do Planejamento e Orçamento (desde 2023-01-01).",
+              "fonte": "https://www.wikidata.org/wiki/Q10371678"
+            }
+          ]
+        },
+        {
+          "id": "cand-helder-barbalho",
+          "nome": "Helder Barbalho",
+          "alertas": [
+            {
+              "tipo": "cargo_atual",
+              "mensagem": "Sem mandato pelas fontes primárias, mas Wikidata indica \"governador do Pará\".",
+              "fonte": "https://www.wikidata.org/wiki/Q3784499"
+            }
+          ]
+        },
+        {
+          "id": "cand-eduardo-paes",
+          "nome": "Eduardo Paes",
+          "alertas": [
+            {
+              "tipo": "cargo_atual",
+              "mensagem": "Sem mandato pelas fontes primárias, mas Wikidata indica \"prefeito do Rio de Janeiro\".",
+              "fonte": "https://www.wikidata.org/wiki/Q972007"
+            }
+          ]
+        },
+        {
+          "id": "cand-romeu-zema",
+          "nome": "Romeu Zema",
+          "alertas": [
+            {
+              "tipo": "cargo_atual",
+              "mensagem": "Sem mandato pelas fontes primárias, mas Wikidata indica \"governador de Minas Gerais\".",
+              "fonte": "https://www.wikidata.org/wiki/Q57092113"
+            }
+          ]
+        },
+        {
+          "id": "cand-rodrigo-pacheco",
+          "nome": "Rodrigo Pacheco",
+          "alertas": [
+            {
+              "tipo": "cargo_atual",
+              "mensagem": "Wikidata indica cargo atual \"senador de Minas Gerais\", diferente de \"não verificado\".",
+              "fonte": "https://www.wikidata.org/wiki/Q29696179"
+            },
+            {
+              "tipo": "sem_fonte",
+              "mensagem": "Perfil não encontrado no TSE (2022/2024/2026), nas Casas nem no Wikidata; revisar manualmente.",
+              "fonte": null
+            }
+          ]
+        },
+        {
+          "id": "cand-fuad-noman",
+          "nome": "Fuad Noman",
+          "alertas": [
+            {
+              "tipo": "obito",
+              "mensagem": "Wikidata registra óbito em 2025-03-26. Perfil marcado como falecido; confirmar.",
+              "fonte": "https://www.wikidata.org/wiki/Q107123065"
+            }
+          ]
+        },
+        {
+          "id": "cand-flavio-bolsonaro",
+          "nome": "Flávio Bolsonaro",
+          "alertas": [
+            {
+              "tipo": "cargo_atual",
+              "mensagem": "Sem mandato pelas fontes primárias, mas Wikidata indica \"senador do Brasil\".",
+              "fonte": "https://www.wikidata.org/wiki/Q10283057"
+            }
+          ]
+        },
+        {
+          "id": "cand-carla-zambelli",
+          "nome": "Carla Zambelli",
+          "alertas": [
+            {
+              "tipo": "cargo_atual",
+              "mensagem": "Sem mandato pelas fontes primárias, mas Wikidata indica \"deputado federal por São Paulo\".",
+              "fonte": "https://www.wikidata.org/wiki/Q59205152"
+            }
+          ]
+        },
+        {
+          "id": "cand-eduardo-bolsonaro",
+          "nome": "Eduardo Bolsonaro",
+          "alertas": [
+            {
+              "tipo": "cargo_atual",
+              "mensagem": "Sem mandato pelas fontes primárias, mas Wikidata indica \"deputado federal por São Paulo\".",
+              "fonte": "https://www.wikidata.org/wiki/Q18246320"
+            }
+          ]
+        },
+        {
+          "id": "cand-daniel-coelho",
+          "nome": "Daniel Coelho",
+          "alertas": [
+            {
+              "tipo": "cargo_atual",
+              "mensagem": "Sem mandato pelas fontes primárias, mas Wikidata indica \"deputado federal por Pernambuco\".",
+              "fonte": "https://www.wikidata.org/wiki/Q10263927"
+            }
+          ]
+        },
+        {
+          "id": "cand-capitao-wagner",
+          "nome": "Capitão Wagner",
+          "alertas": [
+            {
+              "tipo": "cargo_atual",
+              "mensagem": "Sem mandato pelas fontes primárias, mas Wikidata indica \"deputado federal pelo Ceará\".",
+              "fonte": "https://www.wikidata.org/wiki/Q25176027"
+            }
+          ]
+        },
+        {
+          "id": "cand-eduardo-girao",
+          "nome": "Eduardo Girão",
+          "alertas": [
+            {
+              "tipo": "cargo_atual",
+              "mensagem": "Sem mandato pelas fontes primárias, mas Wikidata indica \"senador do Brasil\".",
+              "fonte": "https://www.wikidata.org/wiki/Q57699261"
+            }
+          ]
+        },
+        {
+          "id": "cand-camilo-santana",
+          "nome": "Camilo Santana",
+          "alertas": [
+            {
+              "tipo": "cargo_atual",
+              "mensagem": "Wikidata indica cargo atual \"ministra(o) da educação do Brasil\", diferente de \"Senador (CE)\".",
+              "fonte": "https://www.wikidata.org/wiki/Q18242106"
+            }
+          ]
+        },
+        {
+          "id": "cand-paulo-pimenta",
+          "nome": "Paulo Pimenta",
+          "alertas": [
+            {
+              "tipo": "cargo_atual",
+              "mensagem": "Wikidata indica cargo atual \"ministro-chefe da secretaria de comunicação social da presidência da república\", diferente de \"Deputado Federal (RS)\".",
+              "fonte": "https://www.wikidata.org/wiki/Q10346742"
+            }
+          ]
+        },
+        {
+          "id": "cand-mauricio-dziedricki",
+          "nome": "Maurício Dziedricki",
+          "alertas": [
+            {
+              "tipo": "cargo_atual",
+              "mensagem": "Sem mandato pelas fontes primárias, mas Wikidata indica \"deputado federal pelo Rio Grande do Sul\".",
+              "fonte": "https://www.wikidata.org/wiki/Q20046033"
+            }
+          ]
+        },
+        {
+          "id": "cand-alexandre-silveira",
+          "nome": "Alexandre Silveira",
+          "alertas": [
+            {
+              "tipo": "cargo_atual",
+              "mensagem": "Wikidata indica cargo não eletivo em curso: ministro de Minas e Energia (desde 2023-01-01).",
+              "fonte": "https://www.wikidata.org/wiki/Q16336362"
+            }
+          ]
+        },
+        {
+          "id": "cand-dandara-tonantzin",
+          "nome": "Dandara Tonantzin",
+          "alertas": [
+            {
+              "tipo": "exercicio_nao_confirmado",
+              "mensagem": "Eleito Deputada Federal (MG) em 2022, mas o exercício não foi confirmado pela API da Casa (pode estar licenciado, p.ex. como ministro).",
+              "fonte": "https://cdn.tse.jus.br/estatistica/sead/odsele/consulta_cand/consulta_cand_2022.zip"
+            }
+          ]
+        },
+        {
+          "id": "cand-antonio-reguffe",
+          "nome": "Reguffe",
+          "alertas": [
+            {
+              "tipo": "sem_fonte",
+              "mensagem": "Perfil não encontrado no TSE (2022/2024/2026), nas Casas nem no Wikidata; revisar manualmente.",
+              "fonte": null
+            }
+          ]
+        },
+        {
+          "id": "cand-reginaldo-veras",
+          "nome": "Professor Reginaldo Veras",
+          "alertas": [
+            {
+              "tipo": "exercicio_nao_confirmado",
+              "mensagem": "Eleito Deputado Federal (DF) em 2022, mas o exercício não foi confirmado pela API da Casa (pode estar licenciado, p.ex. como ministro).",
+              "fonte": "https://cdn.tse.jus.br/estatistica/sead/odsele/consulta_cand/consulta_cand_2022.zip"
+            }
+          ]
+        },
+        {
+          "id": "cand-beto-faro",
+          "nome": "Beto Faro",
+          "alertas": [
+            {
+              "tipo": "cargo_atual",
+              "mensagem": "Wikidata indica cargo atual \"deputado federal do Pará\", diferente de \"Senador (PA)\".",
+              "fonte": "https://www.wikidata.org/wiki/Q48871854"
+            }
+          ]
+        },
+        {
+          "id": "cand-edmilson-rodrigues",
+          "nome": "Edmilson Rodrigues",
+          "alertas": [
+            {
+              "tipo": "cargo_atual",
+              "mensagem": "Sem mandato pelas fontes primárias, mas Wikidata indica \"deputado federal do Pará\".",
+              "fonte": "https://www.wikidata.org/wiki/Q5338816"
+            }
+          ]
+        },
+        {
+          "id": "cand-ney-leprevost",
+          "nome": "Ney Leprevost",
+          "alertas": [
+            {
+              "tipo": "cargo_atual",
+              "mensagem": "Wikidata indica cargo atual \"deputado federal pelo Paraná\", diferente de \"Deputado Estadual (PR), mandato 2023–2026\".",
+              "fonte": "https://www.wikidata.org/wiki/Q18708076"
+            }
+          ]
+        },
+        {
+          "id": "cand-david-almeida",
+          "nome": "David Almeida",
+          "alertas": [
+            {
+              "tipo": "cargo_atual",
+              "mensagem": "Sem mandato pelas fontes primárias, mas Wikidata indica \"prefeito de Manaus\".",
+              "fonte": "https://www.wikidata.org/wiki/Q10264374"
+            }
+          ]
+        },
+        {
+          "id": "cand-amom-mandel",
+          "nome": "Amom Mandel",
+          "alertas": [
+            {
+              "tipo": "cargo_atual",
+              "mensagem": "Wikidata indica cargo atual \"vereador\", diferente de \"Deputado Federal (AM)\".",
+              "fonte": "https://www.wikidata.org/wiki/Q102260263"
+            }
+          ]
+        },
+        {
+          "id": "cand-geraldo-alckmin",
+          "nome": "Geraldo Alckmin",
+          "alertas": [
+            {
+              "tipo": "cargo_atual",
+              "mensagem": "Wikidata indica cargo não eletivo em curso: ministro do desenvolvimento, indústria, comércio e serviços do Brasil (desde 2023-01-01).",
+              "fonte": "https://www.wikidata.org/wiki/Q964493"
+            }
+          ]
+        },
+        {
+          "id": "cand-marina-silva",
+          "nome": "Marina Silva",
+          "alertas": [
+            {
+              "tipo": "cargo_atual",
+              "mensagem": "Wikidata indica cargo atual \"Ministro do Meio Ambiente do Brasil\", diferente de \"Deputada Federal (SP)\".",
+              "fonte": "https://www.wikidata.org/wiki/Q237693"
+            }
+          ]
+        },
+        {
+          "id": "cand-marcelo-freixo",
+          "nome": "Marcelo Freixo",
+          "alertas": [
+            {
+              "tipo": "cargo_atual",
+              "mensagem": "Sem mandato pelas fontes primárias, mas Wikidata indica \"deputado federal pelo Rio de Janeiro\".",
+              "fonte": "https://www.wikidata.org/wiki/Q6428425"
+            }
+          ]
+        }
+      ],
+      "resumo": {
+        "tse2026": 162,
+        "numero": 0,
+        "partido": 0,
+        "cargo": 1,
+        "status": {
+          "sem_mandato": 43,
+          "em_exercicio": 164,
+          "nao_verificado": 2,
+          "falecido": 1,
+          "licenciado": 4
+        },
+        "alertas": 30,
+        "correcoesAcumuladas": {
+          "number": 119,
+          "party": 12,
+          "position": 53
+        }
+      }
+    }
+  },
+  "revisar": [
+    {
+      "id": "cand-joao-campos",
+      "nome": "João Campos",
+      "status": "sem_mandato",
+      "alertas": [
+        {
+          "tipo": "cargo_atual",
+          "mensagem": "Sem mandato pelas fontes primárias, mas Wikidata indica \"prefeito de Recife\".",
+          "fonte": "https://www.wikidata.org/wiki/Q59284454"
+        }
+      ]
+    },
+    {
+      "id": "cand-ronaldo-caiado",
+      "nome": "Ronaldo Caiado",
+      "status": "sem_mandato",
+      "alertas": [
+        {
+          "tipo": "cargo_atual",
+          "mensagem": "Sem mandato pelas fontes primárias, mas Wikidata indica \"Governador de Goiás\".",
+          "fonte": "https://www.wikidata.org/wiki/Q10364348"
+        }
+      ]
+    },
+    {
+      "id": "cand-simone-tebet",
+      "nome": "Simone Tebet",
+      "status": "sem_mandato",
+      "alertas": [
+        {
+          "tipo": "cargo_atual",
+          "mensagem": "Wikidata indica cargo não eletivo em curso: ministro do Planejamento e Orçamento (desde 2023-01-01).",
+          "fonte": "https://www.wikidata.org/wiki/Q10371678"
+        }
+      ]
+    },
+    {
+      "id": "cand-helder-barbalho",
+      "nome": "Helder Barbalho",
+      "status": "sem_mandato",
+      "alertas": [
+        {
+          "tipo": "cargo_atual",
+          "mensagem": "Sem mandato pelas fontes primárias, mas Wikidata indica \"governador do Pará\".",
+          "fonte": "https://www.wikidata.org/wiki/Q3784499"
+        }
+      ]
+    },
+    {
+      "id": "cand-eduardo-paes",
+      "nome": "Eduardo Paes",
+      "status": "sem_mandato",
+      "alertas": [
+        {
+          "tipo": "cargo_atual",
+          "mensagem": "Sem mandato pelas fontes primárias, mas Wikidata indica \"prefeito do Rio de Janeiro\".",
+          "fonte": "https://www.wikidata.org/wiki/Q972007"
+        }
+      ]
+    },
+    {
+      "id": "cand-romeu-zema",
+      "nome": "Romeu Zema",
+      "status": "sem_mandato",
+      "alertas": [
+        {
+          "tipo": "cargo_atual",
+          "mensagem": "Sem mandato pelas fontes primárias, mas Wikidata indica \"governador de Minas Gerais\".",
+          "fonte": "https://www.wikidata.org/wiki/Q57092113"
+        }
+      ]
+    },
+    {
+      "id": "cand-rodrigo-pacheco",
+      "nome": "Rodrigo Pacheco",
+      "status": "nao_verificado",
+      "alertas": [
+        {
+          "tipo": "cargo_atual",
+          "mensagem": "Wikidata indica cargo atual \"senador de Minas Gerais\", diferente de \"não verificado\".",
+          "fonte": "https://www.wikidata.org/wiki/Q29696179"
+        },
+        {
+          "tipo": "sem_fonte",
+          "mensagem": "Perfil não encontrado no TSE (2022/2024/2026), nas Casas nem no Wikidata; revisar manualmente.",
+          "fonte": null
+        }
+      ]
+    },
+    {
+      "id": "cand-fuad-noman",
+      "nome": "Fuad Noman",
+      "status": "falecido",
+      "alertas": [
+        {
+          "tipo": "obito",
+          "mensagem": "Wikidata registra óbito em 2025-03-26. Perfil marcado como falecido; confirmar.",
+          "fonte": "https://www.wikidata.org/wiki/Q107123065"
+        }
+      ]
+    },
+    {
+      "id": "cand-flavio-bolsonaro",
+      "nome": "Flávio Bolsonaro",
+      "status": "sem_mandato",
+      "alertas": [
+        {
+          "tipo": "cargo_atual",
+          "mensagem": "Sem mandato pelas fontes primárias, mas Wikidata indica \"senador do Brasil\".",
+          "fonte": "https://www.wikidata.org/wiki/Q10283057"
+        }
+      ]
+    },
+    {
+      "id": "cand-carla-zambelli",
+      "nome": "Carla Zambelli",
+      "status": "sem_mandato",
+      "alertas": [
+        {
+          "tipo": "cargo_atual",
+          "mensagem": "Sem mandato pelas fontes primárias, mas Wikidata indica \"deputado federal por São Paulo\".",
+          "fonte": "https://www.wikidata.org/wiki/Q59205152"
+        }
+      ]
+    },
+    {
+      "id": "cand-eduardo-bolsonaro",
+      "nome": "Eduardo Bolsonaro",
+      "status": "sem_mandato",
+      "alertas": [
+        {
+          "tipo": "cargo_atual",
+          "mensagem": "Sem mandato pelas fontes primárias, mas Wikidata indica \"deputado federal por São Paulo\".",
+          "fonte": "https://www.wikidata.org/wiki/Q18246320"
+        }
+      ]
+    },
+    {
+      "id": "cand-daniel-coelho",
+      "nome": "Daniel Coelho",
+      "status": "sem_mandato",
+      "alertas": [
+        {
+          "tipo": "cargo_atual",
+          "mensagem": "Sem mandato pelas fontes primárias, mas Wikidata indica \"deputado federal por Pernambuco\".",
+          "fonte": "https://www.wikidata.org/wiki/Q10263927"
+        }
+      ]
+    },
+    {
+      "id": "cand-capitao-wagner",
+      "nome": "Capitão Wagner",
+      "status": "sem_mandato",
+      "alertas": [
+        {
+          "tipo": "cargo_atual",
+          "mensagem": "Sem mandato pelas fontes primárias, mas Wikidata indica \"deputado federal pelo Ceará\".",
+          "fonte": "https://www.wikidata.org/wiki/Q25176027"
+        }
+      ]
+    },
+    {
+      "id": "cand-eduardo-girao",
+      "nome": "Eduardo Girão",
+      "status": "sem_mandato",
+      "alertas": [
+        {
+          "tipo": "cargo_atual",
+          "mensagem": "Sem mandato pelas fontes primárias, mas Wikidata indica \"senador do Brasil\".",
+          "fonte": "https://www.wikidata.org/wiki/Q57699261"
+        }
+      ]
+    },
+    {
+      "id": "cand-camilo-santana",
+      "nome": "Camilo Santana",
+      "status": "em_exercicio",
+      "alertas": [
+        {
+          "tipo": "cargo_atual",
+          "mensagem": "Wikidata indica cargo atual \"ministra(o) da educação do Brasil\", diferente de \"Senador (CE)\".",
+          "fonte": "https://www.wikidata.org/wiki/Q18242106"
+        }
+      ]
+    },
+    {
+      "id": "cand-paulo-pimenta",
+      "nome": "Paulo Pimenta",
+      "status": "em_exercicio",
+      "alertas": [
+        {
+          "tipo": "cargo_atual",
+          "mensagem": "Wikidata indica cargo atual \"ministro-chefe da secretaria de comunicação social da presidência da república\", diferente de \"Deputado Federal (RS)\".",
+          "fonte": "https://www.wikidata.org/wiki/Q10346742"
+        }
+      ]
+    },
+    {
+      "id": "cand-mauricio-dziedricki",
+      "nome": "Maurício Dziedricki",
+      "status": "sem_mandato",
+      "alertas": [
+        {
+          "tipo": "cargo_atual",
+          "mensagem": "Sem mandato pelas fontes primárias, mas Wikidata indica \"deputado federal pelo Rio Grande do Sul\".",
+          "fonte": "https://www.wikidata.org/wiki/Q20046033"
+        }
+      ]
+    },
+    {
+      "id": "cand-alexandre-silveira",
+      "nome": "Alexandre Silveira",
+      "status": "sem_mandato",
+      "alertas": [
+        {
+          "tipo": "cargo_atual",
+          "mensagem": "Wikidata indica cargo não eletivo em curso: ministro de Minas e Energia (desde 2023-01-01).",
+          "fonte": "https://www.wikidata.org/wiki/Q16336362"
+        }
+      ]
+    },
+    {
+      "id": "cand-dandara-tonantzin",
+      "nome": "Dandara Tonantzin",
+      "status": "em_exercicio",
+      "alertas": [
+        {
+          "tipo": "exercicio_nao_confirmado",
+          "mensagem": "Eleito Deputada Federal (MG) em 2022, mas o exercício não foi confirmado pela API da Casa (pode estar licenciado, p.ex. como ministro).",
+          "fonte": "https://cdn.tse.jus.br/estatistica/sead/odsele/consulta_cand/consulta_cand_2022.zip"
+        }
+      ]
+    },
+    {
+      "id": "cand-antonio-reguffe",
+      "nome": "Reguffe",
+      "status": "nao_verificado",
+      "alertas": [
+        {
+          "tipo": "sem_fonte",
+          "mensagem": "Perfil não encontrado no TSE (2022/2024/2026), nas Casas nem no Wikidata; revisar manualmente.",
+          "fonte": null
+        }
+      ]
+    },
+    {
+      "id": "cand-reginaldo-veras",
+      "nome": "Professor Reginaldo Veras",
+      "status": "em_exercicio",
+      "alertas": [
+        {
+          "tipo": "exercicio_nao_confirmado",
+          "mensagem": "Eleito Deputado Federal (DF) em 2022, mas o exercício não foi confirmado pela API da Casa (pode estar licenciado, p.ex. como ministro).",
+          "fonte": "https://cdn.tse.jus.br/estatistica/sead/odsele/consulta_cand/consulta_cand_2022.zip"
+        }
+      ]
+    },
+    {
+      "id": "cand-beto-faro",
+      "nome": "Beto Faro",
+      "status": "em_exercicio",
+      "alertas": [
+        {
+          "tipo": "cargo_atual",
+          "mensagem": "Wikidata indica cargo atual \"deputado federal do Pará\", diferente de \"Senador (PA)\".",
+          "fonte": "https://www.wikidata.org/wiki/Q48871854"
+        }
+      ]
+    },
+    {
+      "id": "cand-edmilson-rodrigues",
+      "nome": "Edmilson Rodrigues",
+      "status": "sem_mandato",
+      "alertas": [
+        {
+          "tipo": "cargo_atual",
+          "mensagem": "Sem mandato pelas fontes primárias, mas Wikidata indica \"deputado federal do Pará\".",
+          "fonte": "https://www.wikidata.org/wiki/Q5338816"
+        }
+      ]
+    },
+    {
+      "id": "cand-ney-leprevost",
+      "nome": "Ney Leprevost",
+      "status": "em_exercicio",
+      "alertas": [
+        {
+          "tipo": "cargo_atual",
+          "mensagem": "Wikidata indica cargo atual \"deputado federal pelo Paraná\", diferente de \"Deputado Estadual (PR), mandato 2023–2026\".",
+          "fonte": "https://www.wikidata.org/wiki/Q18708076"
+        }
+      ]
+    },
+    {
+      "id": "cand-david-almeida",
+      "nome": "David Almeida",
+      "status": "sem_mandato",
+      "alertas": [
+        {
+          "tipo": "cargo_atual",
+          "mensagem": "Sem mandato pelas fontes primárias, mas Wikidata indica \"prefeito de Manaus\".",
+          "fonte": "https://www.wikidata.org/wiki/Q10264374"
+        }
+      ]
+    },
+    {
+      "id": "cand-amom-mandel",
+      "nome": "Amom Mandel",
+      "status": "em_exercicio",
+      "alertas": [
+        {
+          "tipo": "cargo_atual",
+          "mensagem": "Wikidata indica cargo atual \"vereador\", diferente de \"Deputado Federal (AM)\".",
+          "fonte": "https://www.wikidata.org/wiki/Q102260263"
+        }
+      ]
+    },
+    {
+      "id": "cand-geraldo-alckmin",
+      "nome": "Geraldo Alckmin",
+      "status": "em_exercicio",
+      "alertas": [
+        {
+          "tipo": "cargo_atual",
+          "mensagem": "Wikidata indica cargo não eletivo em curso: ministro do desenvolvimento, indústria, comércio e serviços do Brasil (desde 2023-01-01).",
+          "fonte": "https://www.wikidata.org/wiki/Q964493"
+        }
+      ]
+    },
+    {
+      "id": "cand-marina-silva",
+      "nome": "Marina Silva",
+      "status": "em_exercicio",
+      "alertas": [
+        {
+          "tipo": "cargo_atual",
+          "mensagem": "Wikidata indica cargo atual \"Ministro do Meio Ambiente do Brasil\", diferente de \"Deputada Federal (SP)\".",
+          "fonte": "https://www.wikidata.org/wiki/Q237693"
+        }
+      ]
+    },
+    {
+      "id": "cand-marcelo-freixo",
+      "nome": "Marcelo Freixo",
+      "status": "sem_mandato",
+      "alertas": [
+        {
+          "tipo": "cargo_atual",
+          "mensagem": "Sem mandato pelas fontes primárias, mas Wikidata indica \"deputado federal pelo Rio de Janeiro\".",
+          "fonte": "https://www.wikidata.org/wiki/Q6428425"
+        }
+      ]
+    }
+  ],
+  "resumoGeral": {
+    "perfis": 214,
+    "indicadores": {
+      "presenca": 101,
+      "participacaoVotacoes": 22,
+      "cotaParlamentar": 105,
+      "producaoLegislativa": 127,
+      "emendas": 119,
+      "gastoPessoal": 16
+    },
+    "status": {
+      "sem_mandato": 43,
+      "em_exercicio": 164,
+      "nao_verificado": 2,
+      "falecido": 1,
+      "licenciado": 4
+    },
+    "revisar": 29
+  },
+  "pipeline": {
+    "concluidoEm": "2026-10-10T16:26:55.306Z",
+    "duracaoSeg": 239,
+    "etapas": [
+      "sanitize_data.js",
+      "verify_official.js",
+      "verify_tse.js",
+      "collect_producao.js",
+      "collect_siconfi.js",
+      "compute_indicators.js"
+    ]
   }
 }

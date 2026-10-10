@@ -109,8 +109,8 @@ window.candidatesData = window.candidatesData || [];
       setTxt('feed-pill-count-all', candCount);
       setTxt('feed-pill-count-jud', judCount);
       setTxt('rank-power-count-all', candCount);
-      setTxt('rank-power-count-exec', execCount || 41);
-      setTxt('rank-power-count-leg', legCount || 159);
+      setTxt('rank-power-count-exec', execCount);
+      setTxt('rank-power-count-leg', legCount);
       setTxt('rank-power-count-jud', judCount);
       setTxt('rank-total-search-count', candCount);
       setTxt('inc-cargo-count-all', incCount);
@@ -187,7 +187,7 @@ window.candidatesData = window.candidatesData || [];
             </div>
             <div class="text-right">
               <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300">
-                Score: ${c.radar.integridade}
+                ${c.state || ''}
               </span>
             </div>
           </div>
@@ -321,16 +321,16 @@ window.candidatesData = window.candidatesData || [];
         tip: 'Investigações em andamento sem condenação em 2ª instância não tornam o político inelegível.'
       },
       ipr: {
-        title: 'Índice de Produtividade',
-        tag: 'Desempenho Parlamentar',
-        text: 'Métrica técnica de 0 a 100 que cruza frequência biométrica em sessões, projetos de lei relatados, atuação em comissões e economia de verba.',
-        tip: 'Políticos que apenas batem ponto sem relatar projetos têm nota menor.'
+        title: 'Indicador oficial',
+        tag: 'Metodologia',
+        text: 'Cada indicador (presença, cota parlamentar, produção legislativa, emendas, gasto com pessoal) vem de uma fonte oficial e é exibido com valor bruto, link da fonte e data de coleta.',
+        tip: 'Não há nota geral: indicadores diferentes não são somados.'
       },
       score: {
-        title: 'Score Geral Cívico',
-        tag: 'Avaliação 360°',
-        text: 'Nota geral e matemática de 0 a 100 do observatório. Pondera Integridade, Transparência, Eficiência de Gastos, Assiduidade, Veracidade e Coerência.',
-        tip: 'Critérios 100% públicos e neutros aplicados identicamente a todos os candidatos.'
+        title: 'Percentil entre pares',
+        tag: 'Comparação justa',
+        text: 'Mostra a posição do político entre os pares da mesma Casa ou cargo: "melhor que X% dos deputados federais", por exemplo. Para a cota parlamentar, maior percentil = mais econômico.',
+        tip: 'Só compara quem tem o mesmo cargo e o dado oficial disponível.'
       },
       custovoto: {
         title: 'Custo por Voto TSE',
@@ -423,7 +423,7 @@ window.candidatesData = window.candidatesData || [];
         statusBadge.className = 'px-2.5 py-0.5 rounded-full text-xs font-bold bg-sky-100 dark:bg-cyan-500/20 text-sky-800 dark:text-cyan-300 border border-sky-300 dark:border-cyan-500/30';
       }
 
-      document.getElementById('prop-detail-score').innerText = `Viabilidade IA: ${prop.score} / 10`;
+      { const el = document.getElementById('prop-detail-score'); if (el) el.innerText = ''; }
       document.getElementById('prop-detail-title').innerText = prop.title;
       document.getElementById('prop-detail-author').innerText = `Proposta oficial apresentada por ${cand.name} (${cand.party} • ${cand.position})`;
       
@@ -493,7 +493,7 @@ window.candidatesData = window.candidatesData || [];
         return `
           <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/90 border border-slate-200 dark:border-white/5 space-y-3.5 hover:border-sky-400/50 transition">
             
-            <!-- Category, Status and Score Bar -->
+            <!-- Categoria e status -->
             <div class="flex flex-wrap items-center justify-between gap-2">
               <div class="flex items-center gap-2">
                 <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-white/10">
@@ -503,9 +503,6 @@ window.candidatesData = window.candidatesData || [];
                   ${p.statusLabel || 'Plano de Governo'}
                 </span>
               </div>
-              <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 text-xs font-mono font-bold text-sky-700 dark:text-cyan-400">
-                Viabilidade IA: ${p.score} / 10
-              </span>
             </div>
 
             <!-- Title & Simple Plain-Language Summary -->
@@ -738,14 +735,11 @@ window.candidatesData = window.candidatesData || [];
           if (json.success && Array.isArray(json.data) && json.data.length > 0) {
             console.log(`[Figuras Políticas] Sincronizado com API SQLite: ${json.data.length} candidatos ativos.`);
             
-            // Garante purga completa de qualquer candidato fictício
-            candidatesData = json.data.map(apiCand => {
-              const existing = candidatesData.find(c => c.id === apiCand.id);
-              const radar = apiCand.radar || (existing ? existing.radar : { integridade: 94, eficiencia: 90, transparencia: 92, coerencia: 88, viabilidade: 86, presenca: 94 });
-              if (existing?.radar?.integridade) radar.integridade = existing.radar.integridade;
-              if (existing?.radar?.viabilidade) radar.viabilidade = existing.radar.viabilidade;
-
-              return {
+            // A base estática (data/candidates.js) é a fonte de verdade: traz indicadores oficiais,
+            // situação do mandato e candidatura TSE. A API só acrescenta perfis ausentes, sem valores padrão.
+            const known = new Set(candidatesData.map(c => c.id));
+            json.data.filter(apiCand => apiCand && apiCand.id && !known.has(apiCand.id)).forEach(apiCand => {
+              candidatesData.push({
                 id: apiCand.id,
                 name: apiCand.name,
                 ballotName: apiCand.ballotName || apiCand.name,
@@ -753,64 +747,9 @@ window.candidatesData = window.candidatesData || [];
                 number: apiCand.number,
                 position: apiCand.position,
                 state: apiCand.state,
-                city: apiCand.city || (existing ? existing.city : 'São Paulo'),
-                age: apiCand.age || (existing ? existing.age : 35),
-                politicalLifeYears: existing ? (existing.politicalLifeYears || 8) : 8,
-                timesElected: (apiCand.timesElected !== undefined && apiCand.timesElected !== null) ? apiCand.timesElected : (existing ? existing.timesElected : 2),
-                avatar: apiCand.avatar,
-                education: apiCand.education || (existing ? existing.education : 'Ensino Superior Completo'),
-                careerHistory: apiCand.careerHistory || (existing ? existing.careerHistory : 'Atuação Parlamentar'),
-                aiSummary: apiCand.aiSummary || (existing ? existing.aiSummary : ''),
-                overallScore: existing ? (existing.overallScore || apiCand.overallScore || 90) : (apiCand.overallScore || 90),
-                integrityScore: existing ? existing.integrityScore : null,
-                affiliation: existing ? existing.affiliation : { party: apiCand.party, sinceDate: '15/03/2022', yearsText: '4 anos de filiação', history: apiCand.party, certCode: 'TSE-FIL-2026' },
-                electionSchedule: existing ? existing.electionSchedule : { office: apiCand.position, firstRoundDate: '04/10/2026', firstRoundText: '04/10/2026 (1º Turno)', daysRemaining: Math.max(0, Math.ceil((new Date('2026-10-04T08:00:00') - new Date()) / (1000 * 60 * 60 * 24))), hasSecondRound: false, votingSummary: '1º Turno: 04/10/2026' },
-                radar: radar,
-                attendance: apiCand.attendance || (existing ? existing.attendance : { ratePct: 94, presentCount: 111, totalSessions: 118, justifiedAbsences: 5, unjustifiedAbsences: 2, committees: [] }),
-                salary: apiCand.salary || (existing ? existing.salary : { spendingCeapMonthly: 'R$ 28.500,00', spendingCeapSavings: 'R$ 164.600,00', spendingPercentage: 78, civicConversion: { costPerMinute: 'R$ 0,54 / min', costPerCitizen: 'R$ 0,004 / ano', salariosMinimos: 190, roiText: 'R$ 28,50 por R$ 1 gasto' } }),
-                bills: existing ? existing.bills : { proposed: 42, approved: 8, successRate: '19%' },
-                parliamentaryAmendments: apiCand.amendmentsExecuted ? {
-                  totalExecuted: apiCand.amendmentsExecuted,
-                  openBidPct: apiCand.openBidPct,
-                  integritySeal: {
-                    badgeClass: 'bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300',
-                    shortBadge: apiCand.amendmentsSeal || '🟢 100% Edital Aberto'
-                  }
-                } : (existing ? existing.parliamentaryAmendments : null),
-                ethics: { condemned: 0, investigations: 0, processes: 0, status: 'Ficha Limpa' },
-                partyIntegrity: apiCand.partyIntegrity || (existing ? existing.partyIntegrity : null),
-                ethicsDetailed: apiCand.ethicsDetailed || (existing ? existing.ethicsDetailed : null),
-                constitutionalEffectiveness: apiCand.constitutionalEffectiveness || (existing ? existing.constitutionalEffectiveness : null),
-                politicalCapacity: apiCand.politicalCapacity || (existing ? existing.politicalCapacity : null),
-                recentStatements: (apiCand.recentStatements && apiCand.recentStatements.length > 0) ? apiCand.recentStatements : (existing ? (existing.recentStatements || []) : []),
-                recentDebate: (apiCand.recentDebate && apiCand.recentDebate.truthfulnessPct !== undefined) 
-                  ? apiCand.recentDebate 
-                  : (existing?.recentDebate || { event: 'Debate Oficial 2026', broadcaster: 'Band TV', date: '18/08/2026', truthfulnessPct: 86, statements: [] }),
-                campaignFinance: apiCand.campaignFinance ? {
-                  ...apiCand.campaignFinance,
-                  totalSpent: apiCand.campaignFinance.totalSpent || apiCand.campaignFinance.totalSpentFormatted || (existing?.campaignFinance?.totalSpent || 'R$ 16.500.000,00'),
-                  totalSpentFormatted: apiCand.campaignFinance.totalSpentFormatted || apiCand.campaignFinance.totalSpent || (existing?.campaignFinance?.totalSpentFormatted || existing?.campaignFinance?.totalSpent || 'R$ 16,5M'),
-                  costPerVote: apiCand.campaignFinance.costPerVote || (existing?.campaignFinance?.costPerVote || 'R$ 6,88 por voto'),
-                  civicEquivalences: (apiCand.campaignFinance.civicEquivalences && apiCand.campaignFinance.civicEquivalences.length > 0)
-                    ? apiCand.campaignFinance.civicEquivalences
-                    : (existing?.campaignFinance?.civicEquivalences || []),
-                  partyNationalFefc: apiCand.campaignFinance.partyNationalFefc || (existing?.campaignFinance?.partyNationalFefc || 'N/D')
-                } : (existing ? existing.campaignFinance : null),
-                jurisdictionProblemsMatch: (apiCand.jurisdictionProblemsMatch && !Array.isArray(apiCand.jurisdictionProblemsMatch) && apiCand.jurisdictionProblemsMatch.constitutionalDuties)
-                  ? apiCand.jurisdictionProblemsMatch
-                  : (existing?.jurisdictionProblemsMatch || apiCand.jurisdictionProblemsMatch),
-                careerProductivity: apiCand.careerProductivity || (existing ? existing.careerProductivity : null),
-                legalIntegrity: apiCand.legalIntegrity || (existing ? existing.legalIntegrity : null),
-                aiAnalysis: apiCand.aiAnalysis || (existing ? existing.aiAnalysis : null),
-                scoreFormulaBreakdown: existing ? existing.scoreFormulaBreakdown : null,
-                proposals: (apiCand.proposals && apiCand.proposals.length > 0) ? apiCand.proposals : (existing ? existing.proposals : []),
-                officePower: apiCand.officePower || (existing ? existing.officePower : 'legislativo'),
-                executiveMetrics: apiCand.executiveMetrics || (existing ? existing.executiveMetrics : null),
-                authoredBillsDetailed: apiCand.authoredBillsDetailed || (existing ? existing.authoredBillsDetailed : []),
-                nationalBottlenecksCoverage: apiCand.nationalBottlenecksCoverage || (existing ? existing.nationalBottlenecksCoverage : []),
-                systemicVisionScore: (apiCand.systemicVisionScore !== undefined) ? apiCand.systemicVisionScore : (existing ? existing.systemicVisionScore : 75),
-                pragmaticImpactScore: (apiCand.pragmaticImpactScore !== undefined) ? apiCand.pragmaticImpactScore : (existing ? existing.pragmaticImpactScore : 75)
-              };
+                city: apiCand.city,
+                avatar: apiCand.avatar
+              });
             });
 
             // Mescla autoridades do Poder Judiciário e Ministério Público

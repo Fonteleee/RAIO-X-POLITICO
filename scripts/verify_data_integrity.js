@@ -42,7 +42,7 @@ const VERIFIED_2026_OFFICES = {
   'cand-ronaldo-caiado': { position: 'Presidente da República', party: 'PSD', number: '55', state: 'BR' },
   'cand-romeu-zema': { position: 'Presidente da República', party: 'NOVO', number: '30', state: 'BR' },
   'cand-simone-tebet': { position: 'Senadora', party: 'PSB', number: '400', state: 'SP' },
-  'cand-helder-barbalho': { position: 'Senador', party: 'MDB', number: '150', state: 'PA' },
+  'cand-helder-barbalho': { position: 'Senador', party: 'MDB', number: '151', state: 'PA' },
   'cand-eduardo-paes': { position: 'Governador', party: 'PSD', number: '55', state: 'RJ' },
   'cand-joao-campos': { position: 'Governador', party: 'PSB', number: '40', state: 'PE' },
   'cand-tarcisio-de-freitas': { position: 'Governador', party: 'REPUBLICANOS', number: '10', state: 'SP' },
@@ -57,6 +57,10 @@ function verifyIntegrity(options = { checkNetwork: false }) {
 
   const db = new AppDatabase();
   const candidates = db.getAllCandidates();
+  // "position" agora reflete o MANDATO ATUAL; o cargo disputado em 2026 fica em tse2026.cargo (scripts/verify_tse.js)
+  let tseById = new Map();
+  try { tseById = new Map(require('./lib/data_io').loadCandidates().list.map(x => [x.id, x.tse2026])); } catch { /* sem dados TSE */ }
+  const cargoOk = (c, esperado) => c.position === esperado || ((tseById.get(c.id) || {}).cargo === esperado);
   const errors = [];
   const warnings = [];
 
@@ -106,7 +110,7 @@ function verifyIntegrity(options = { checkNetwork: false }) {
       if (spec.expectedParty && c.party !== spec.expectedParty) {
         errors.push(`[${c.id}] Partido divergente: encontrado ${c.party}, esperado ${spec.expectedParty}`);
       }
-      if (spec.expectedPosition && c.position !== spec.expectedPosition) {
+      if (spec.expectedPosition && !cargoOk(c, spec.expectedPosition)) {
         errors.push(`[${c.id}] Cargo divergente: encontrado ${c.position}, esperado ${spec.expectedPosition}`);
       }
     }
@@ -114,7 +118,7 @@ function verifyIntegrity(options = { checkNetwork: false }) {
     // 4. Auditoria de cargos do Executivo e Eleições 2026
     if (VERIFIED_2026_OFFICES[c.id]) {
       const spec = VERIFIED_2026_OFFICES[c.id];
-      if (spec.position && c.position !== spec.position) {
+      if (spec.position && !cargoOk(c, spec.position)) {
         errors.push(`[${c.id}] Cargo 2026 incorreto: encontrado '${c.position}', esperado '${spec.position}'`);
       }
       if (spec.party && c.party !== spec.party) {

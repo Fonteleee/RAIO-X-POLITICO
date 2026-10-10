@@ -279,276 +279,62 @@
         }
       };
 
-      const isNoMandate = (cand.salary && typeof cand.salary.spendingCeapMonthly === 'string' && cand.salary.spendingCeapMonthly.includes('Sem Mandato')) || cand.isIncumbent === false || (cand.position && (cand.position.includes('Ex-') || cand.careerHistory?.includes('Inelegível')));
-      const isExec = !isNoMandate && cand.position && (cand.position.includes('Presidente') || cand.position.includes('Governador') || cand.position.includes('Prefeito')) && cand.officePower !== 'judiciario';
-      const isPresident = isExec && cand.position.includes('Presidente');
-      const isJud = cand.officePower === 'judiciario' || Boolean(cand.court);
-
-      let powerBadge;
-      if (cand.position && (cand.position.includes('Ex-') || cand.careerHistory?.includes('Inelegível'))) {
-        powerBadge = `<span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-rose-500/10 text-rose-700 dark:text-rose-400 border border-rose-500/20 inline-flex items-center gap-1"><i data-lucide="shield-alert" class="w-3 h-3"></i> ${cand.position}</span>`;
-      } else if (isJud) {
-        powerBadge = `<span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-purple-500/10 text-purple-700 dark:text-purple-400 border border-purple-500/20 inline-flex items-center gap-1"><i data-lucide="scale" class="w-3 h-3 text-purple-500"></i> Judiciário (${cand.court || 'STF'})</span>`;
-      } else if (isExec) {
-        powerBadge = `<span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/10 text-amber-700 dark:text-amber-400 border border-amber-500/20 inline-flex items-center gap-1"><i data-lucide="landmark" class="w-3 h-3"></i> Executivo</span>`;
-      } else if (isNoMandate) {
-        powerBadge = `<span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-slate-500/10 text-slate-700 dark:text-slate-300 border border-slate-500/20 inline-flex items-center gap-1"><i data-lucide="user-check" class="w-3 h-3"></i> Postulante • Sem Mandato</span>`;
-      } else {
-        powerBadge = `<span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-blue-500/10 text-blue-700 dark:text-blue-400 border border-blue-500/20 inline-flex items-center gap-1"><i data-lucide="scale" class="w-3 h-3"></i> Legislativo</span>`;
-      }
-
-      const fiscalLabel = isJud ? 'Subsídio CNJ' : (isExec ? 'Meta Fiscal' : (isNoMandate ? 'Custo Atual' : 'Cota Parlamentar'));
-      const fiscalValue = isJud ? (cand.salary?.baseSalary || 'R$ 44.008') : (isExec ? (isPresident ? '100% TCU' : '100% TCE') : (isNoMandate ? 'R$ 0,00' : `${cand.salary?.spendingPercentage || 75}% teto`));
-      const attendanceLabel = isJud ? 'Prazos ER 58' : (isExec ? 'Gestão' : (isNoMandate ? 'Exercício' : 'Presença'));
-      const attendanceValue = isJud ? (cand.judiciaryMetrics?.complianceER58 || '100% no Prazo') : (isExec ? `${cand.attendance?.ratePct || 98}% Metas` : (isNoMandate ? 'Sem Mandato' : `${cand.attendance?.ratePct || 94}%`));
-
+      // Card sem nota: identidade, situação real e até 2 indicadores oficiais com fonte.
+      const I = window.Indicadores;
+      const E = I ? I.esc : (v => String(v == null ? '' : v));
       const displayName = cand.ballotName || cand.name;
-      const subtitleName = (cand.ballotName && cand.ballotName !== cand.name)
-        ? `<p class="text-[11.5px] text-slate-700 dark:text-slate-200 font-semibold truncate leading-tight mt-0.5">${cand.name}</p>`
+      const inds = I ? I.lista(cand).slice(0, 2) : [];
+      const indHtml = inds.length
+        ? inds.map(x => `
+            <div class="flex items-center justify-between text-xs">
+              <span class="text-neutral-600 dark:text-neutral-400">${E(x.ind.rotulo || I.DEFS[x.key].rotulo)}</span>
+              <strong class="font-mono text-neutral-900 dark:text-white">${E(I.formatValor(x.ind))}</strong>
+            </div>
+            <p class="text-[10px] text-neutral-500 dark:text-neutral-400 text-right">Fonte: ${E(x.ind.fonte || '')}${x.ind.consultadoEm ? ` · ${E(I.dataBR(x.ind.consultadoEm))}` : ''}</p>`).join('')
+        : `<p class="text-xs text-neutral-500 dark:text-neutral-400">${E(I ? I.SEM_FONTE : 'Dado indisponível')}</p>`;
+      const t = cand.tse2026;
+      const tseHtml = (t && t.cargo)
+        ? `<span class="inline-flex items-center gap-1 font-semibold text-emerald-700 dark:text-emerald-300 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20"><i data-lucide="vote" class="w-3 h-3"></i> 2026: ${E(t.cargo)}${t.numero ? ` nº ${E(t.numero)}` : ''}${t.situacaoTurno ? ` · ${E(t.situacaoTurno)}` : ''}</span>`
         : '';
 
-      // Removido destaque de cargo/votação conforme solicitação do usuário
-      const officeBadge = '';
-
-      const mandateSalaryLabel = isJud ? 'Acervo no Gabinete:' : (isExec ? 'Subsídio Mensal do Cargo:' : (isNoMandate ? 'Custo do Mandato:' : 'Cota Parlamentar Média / mês:'));
-      const mandateSalaryValue = isJud ? `${cand.judiciaryMetrics?.cabinetCases || 890} processos (DataJud)` : (isNoMandate ? 'R$ 0,00 (Sem Mandato Ativo)' : (cand.salary?.spendingCeapMonthly || (isExec ? 'R$ 35.800,00' : 'R$ 34.200,00')));
-      const roiBudgetSnippet = (isExec && cand.salary?.civicConversion?.roiText) ? `
-        <div class="text-[10px] text-slate-700 dark:text-slate-300 font-medium flex items-center justify-between border-t border-amber-500/15 dark:border-amber-500/20 pt-1">
-          <span class="flex items-center gap-1 font-semibold"><i data-lucide="landmark" class="w-3 h-3 text-blue-600 dark:text-blue-400"></i> Orçamento Sob Gestão:</span>
-          <span class="font-bold text-slate-900 dark:text-white truncate max-w-[190px]">${cand.salary.civicConversion.roiText.replace('Gestão de ', '')}</span>
-        </div>
-      ` : (isJud ? `
-        <div class="text-[10px] text-slate-700 dark:text-slate-300 font-medium flex items-center justify-between border-t border-purple-500/15 dark:border-purple-500/20 pt-1">
-          <span class="flex items-center gap-1 font-semibold"><i data-lucide="scale" class="w-3 h-3 text-purple-600 dark:text-purple-400"></i> Regime Remuneratório:</span>
-          <span class="font-bold text-slate-900 dark:text-white truncate max-w-[190px]">Teto Constitucional • Vistas 90d</span>
-        </div>
-      ` : '');
-
-      // Integrity Badge
-      let legBadge = '';
-      if (cand.legalIntegrity) {
-        const st = cand.legalIntegrity.status;
-        if (st === 'ineligible') {
-          legBadge = `<span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-rose-500/10 text-rose-700 dark:text-rose-400 border border-rose-500/20 inline-flex items-center gap-1"><i data-lucide="alert-triangle" class="w-3 h-3 text-rose-500"></i> Inelegível (LC 135)</span>`;
-        } else if (st === 'investigated') {
-          legBadge = `<span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/10 text-amber-700 dark:text-amber-400 border border-amber-500/20 inline-flex items-center gap-1"><i data-lucide="scale" class="w-3 h-3 text-amber-500"></i> Em Investigação</span>`;
-        } else {
-          legBadge = `<span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20 inline-flex items-center gap-1"><i data-lucide="shield-check" class="w-3 h-3 text-emerald-500"></i> Ficha Limpa Plena</span>`;
-        }
-      }
-
-      // Índice Produtividade Badge (antigo IPR Severo)
-      const prodScore = cand.careerProductivity?.productivityScore || cand.overallScore || 80;
-      const iprBadge = `<span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-purple-500/10 text-purple-700 dark:text-purple-400 border border-purple-500/20 inline-flex items-center gap-1"><i data-lucide="activity" class="w-3 h-3 text-purple-500"></i> Produtividade: ${prodScore}/100</span>`;
-
-      // Módulos de Inteligência Cívica e Auditoria
-      const conflict = (!isJud && typeof window.detectConflictOfInterest === 'function')
-        ? window.detectConflictOfInterest(cand)
-        : null;
-      const audit = (typeof window.generateMetricAuditHash === 'function')
-        ? window.generateMetricAuditHash(cand)
-        : null;
-
-      let conflictBadge = '';
-      if (conflict) {
-        if (conflict.hasConflictRisk) {
-          conflictBadge = `<span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/15 text-amber-800 dark:text-amber-300 border border-amber-500/30 inline-flex items-center gap-1" title="${conflict.alertMessage}"><i data-lucide="alert-triangle" class="w-3 h-3 text-amber-600 dark:text-amber-400"></i> Alerta Conflito (${conflict.financingPercentage}%)</span>`;
-        } else {
-          conflictBadge = `<span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/10 text-emerald-800 dark:text-emerald-300 border border-emerald-500/20 inline-flex items-center gap-1" title="Sem conflito detectado: financiamento eleitoral difuso"><i data-lucide="shield-check" class="w-3 h-3 text-emerald-500"></i> Isento de Conflito</span>`;
-        }
-      }
-
-      let auditBadge = '';
-      if (audit && audit.radarHash) {
-        const shortHash = audit.radarHash.replace('sha256:', '').substring(0, 10);
-        auditBadge = `<span class="px-2 py-0.5 rounded-full text-[9.5px] font-mono font-bold bg-neutral-100 dark:bg-white/10 text-neutral-700 dark:text-neutral-300 border border-black/10 dark:border-white/10 inline-flex items-center gap-1" title="Cálculo auditável e reproduzível com SLA de 5 dias úteis (Resolução TSE nº 23.610/2019)."><i data-lucide="hash" class="w-3 h-3 text-blue-500"></i> SHA-256:${shortHash}…</span>`;
-      }
-
-      // Proposals snippet (3 items)
-      const proposalsSnippet = (cand.proposals || []).slice(0, 3).map((p, idx) => `
-        <div class="flex items-start gap-2 text-xs text-neutral-800 dark:text-neutral-200 font-medium">
-          <span class="w-4 h-4 rounded-full bg-blue-100 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300 font-bold text-[10px] flex items-center justify-center flex-shrink-0 mt-0.5">${idx + 1}</span>
-          <span class="line-clamp-1">${p.title}</span>
-        </div>
-      `).join('');
-
-      // Campaign Finance snippet (TSE) & Civic Relativization
-      const cf = cand.campaignFinance;
-      const relat = (!isJud && typeof calculateCivicRelativization === 'function') 
-        ? calculateCivicRelativization(cand) 
-        : (!isJud && window.calculateCivicRelativization ? window.calculateCivicRelativization(cand) : null);
-
-      let campaignSnippet = '';
-      if (isJud) {
-        campaignSnippet = `
-          <div class="p-2.5 rounded-2xl bg-purple-500/5 dark:bg-purple-950/20 border border-purple-500/20 space-y-1.5 my-2 text-xs">
-            <div class="flex items-center justify-between text-[11px]">
-              <div class="flex items-center gap-1.5 font-bold text-purple-900 dark:text-purple-300">
-                <i data-lucide="scale" class="w-3.5 h-3.5 text-purple-600 dark:text-purple-400"></i>
-                <span>Acervo no Gabinete:</span>
-                <strong class="font-mono text-neutral-900 dark:text-white font-bold">${cand.judiciaryMetrics?.cabinetCases || 950} processos</strong>
-              </div>
-              <div class="flex items-center gap-1 text-[10px] text-purple-700 dark:text-purple-300">
-                <span class="font-semibold">${cand.judiciaryMetrics?.activeThesesCount || 15} teses</span>
-                <span class="text-neutral-300 dark:text-neutral-600">•</span>
-                <span class="text-emerald-600 dark:text-emerald-400 font-bold">ER 58: 100% no prazo</span>
-              </div>
-            </div>
-            <div class="pt-1.5 border-t border-purple-300/40 dark:border-purple-500/25 flex items-start gap-1.5 text-[10.5px] leading-tight text-purple-950 dark:text-purple-200">
-              <i data-lucide="award" class="w-3.5 h-3.5 text-purple-600 dark:text-purple-400 flex-shrink-0 mt-0.5"></i>
-              <span><strong class="font-bold text-purple-900 dark:text-purple-300">Indicação:</strong> ${cand.indicatedBy || cand.institutionalOrigin || 'Indicação Presidencial e Sabatina no Senado'}.</span>
-            </div>
-          </div>
-        `;
-      } else if (cf || relat) {
-        const totalSpentText = cf?.totalSpentFormatted || relat?.totalSpent || 'R$ 2,4 mi';
-        const costVote = cf?.costPerVote ? (cf.costPerVote.includes('voto') ? cf.costPerVote : cf.costPerVote + ' por voto') : '';
-        const fefcPct = cf?.publicFundPct !== undefined ? `${cf.publicFundPct}% FEFC` : 'Fundo Eleitoral';
-        const relatText = relat?.shortSummary || '';
-
-        campaignSnippet = `
-          <div class="p-2.5 rounded-2xl bg-purple-500/5 dark:bg-purple-950/20 border border-purple-500/20 space-y-1.5 my-2 text-xs">
-            <div class="flex items-center justify-between text-[11px]">
-              <div class="flex items-center gap-1.5 font-bold text-purple-900 dark:text-purple-300">
-                <i data-lucide="vote" class="w-3.5 h-3.5 text-purple-600 dark:text-purple-400"></i>
-                <span>Campanha TSE:</span>
-                <strong class="font-mono text-neutral-900 dark:text-white font-bold">${totalSpentText}</strong>
-              </div>
-              <div class="flex items-center gap-1 text-[10px] text-purple-700 dark:text-purple-300">
-                ${costVote ? `<span class="font-semibold">${costVote}</span><span class="text-neutral-300 dark:text-neutral-600">•</span>` : ''}
-                <span class="text-emerald-600 dark:text-emerald-400 font-bold">${fefcPct}</span>
-              </div>
-            </div>
-            ${relatText ? `
-              <div class="pt-1.5 border-t border-purple-300/40 dark:border-purple-500/25 flex items-start gap-1.5 text-[10.5px] leading-tight text-purple-950 dark:text-purple-200">
-                <i data-lucide="sparkles" class="w-3.5 h-3.5 text-purple-600 dark:text-purple-400 flex-shrink-0 mt-0.5"></i>
-                <span><strong class="font-bold text-purple-900 dark:text-purple-300">O que este valor compraria:</strong> ${relatText}.</span>
-              </div>
-            ` : ''}
-          </div>
-        `;
-      }
-
-      // Circular Ring Progress calculation (Radius 15, Circ = 94.25)
-      const ringRadius = 15;
-      const ringCircumference = 2 * Math.PI * ringRadius;
-      const scorePct = Math.min(100, Math.max(0, cand.overallScore || 0));
-      const ringDashoffset = ringCircumference - (scorePct / 100) * ringCircumference;
-
       card.innerHTML = `
-        <!-- Dynamic Glare Layer -->
         <div class="apple-card-glare pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 rounded-3xl" style="background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.2) 0%, transparent 60%);"></div>
-
         <div>
-          <!-- Header: Photo + Core Info -->
           <div class="flex items-start gap-3.5">
             <div class="relative w-16 h-16 rounded-2xl overflow-hidden shadow-md flex-shrink-0 bg-neutral-100 dark:bg-neutral-800 border border-black/10 dark:border-white/10">
-              <img 
-                src="${(window.getSafeAvatarUrl ? window.getSafeAvatarUrl(cand, displayName) : (cand.avatar || 'img/candidates/' + cand.id + '.jpg'))}" 
-                alt="${displayName}" 
-                loading="lazy"
-                decoding="async"
-                onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(displayName)}&background=0071e3&color=fff&bold=true&size=128';"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              >
+              <img src="${E(cand.avatar || 'favicon.svg')}" alt="${E(displayName)}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='favicon.svg';" class="w-full h-full object-cover">
             </div>
             <div class="flex-1 min-w-0">
               <div class="flex items-center justify-between gap-1 flex-wrap">
-                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-neutral-100 dark:bg-white/10 text-neutral-800 dark:text-neutral-200 border border-black/5 dark:border-white/10">
-                  ${cand.party} • Nº ${cand.number}
-                </span>
-                ${powerBadge}
+                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-neutral-100 dark:bg-white/10 text-neutral-800 dark:text-neutral-200 border border-black/5 dark:border-white/10">${E(cand.party || '')}</span>
+                ${I ? I.statusBadgeHtml(cand) : ''}
               </div>
-              <h3 class="font-bold text-base text-neutral-900 dark:text-white mt-1 leading-snug truncate group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors" title="${cand.name}">${displayName}</h3>
-              ${subtitleName}
-              <p class="text-xs text-slate-700 dark:text-slate-200 truncate mt-0.5 font-semibold">${cand.position} • ${cand.state} • ${cand.age} anos</p>
-              
-              <!-- Score Geral com Anel de Atividade Apple posicionado logo abaixo do Cargo -->
-              <div class="flex items-center gap-2 mt-1.5 flex-wrap">
-                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-blue-500/10 text-blue-700 dark:text-blue-300 border border-blue-500/20 shadow-xs">
-                  <span class="relative flex items-center justify-center w-4 h-4 flex-shrink-0">
-                    <svg class="w-4 h-4 -rotate-90" viewBox="0 0 38 38">
-                      <circle cx="19" cy="19" r="${ringRadius}" class="stroke-neutral-300 dark:stroke-neutral-700" stroke-width="4.5" fill="none" />
-                      <circle cx="19" cy="19" r="${ringRadius}" class="stroke-blue-600 dark:stroke-blue-400" stroke-width="4.5" stroke-dasharray="${ringCircumference}" stroke-dashoffset="${ringDashoffset}" stroke-linecap="round" fill="none" />
-                    </svg>
-                  </span>
-                  <span>Score Geral: <strong class="font-mono text-neutral-900 dark:text-white font-extrabold">${cand.overallScore}</strong></span>
-                </span>
-              </div>
-
-              <!-- Location + Election Date or Institutional Term Pills -->
-              <div class="flex flex-wrap items-center gap-1.5 mt-1.5 text-[10px]">
-                <span class="inline-flex items-center gap-1 font-semibold text-blue-700 dark:text-blue-300 bg-blue-500/10 px-2.5 py-0.5 rounded-full border border-blue-500/20">
-                  <i data-lucide="map-pin" class="w-3 h-3 text-blue-600 dark:text-blue-400"></i> ${cand.city || cand.state}
-                </span>
-                ${isJud ? `
-                  <span class="inline-flex items-center gap-1 font-semibold text-purple-700 dark:text-purple-300 bg-purple-500/10 px-2.5 py-0.5 rounded-full border border-purple-500/20" title="Posse no cargo e ano da aposentadoria compulsória aos 75 anos (EC 88/2015)">
-                    <i data-lucide="landmark" class="w-3 h-3 text-purple-600 dark:text-purple-400"></i> Posse ${cand.appointmentYear || 2018} • Compulsória ${cand.retirementYear || 2035}
-                  </span>
-                ` : `
-                  <span class="inline-flex items-center gap-1 font-semibold text-emerald-700 dark:text-emerald-300 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20">
-                    <i data-lucide="calendar" class="w-3 h-3 text-emerald-600 dark:text-emerald-400"></i> 04/10/2026
-                  </span>
-                `}
-              </div>
+              <h3 class="font-bold text-base text-neutral-900 dark:text-white mt-1 leading-snug truncate" title="${E(cand.name)}">${E(displayName)}</h3>
+              <p class="text-xs text-slate-700 dark:text-slate-200 truncate mt-0.5 font-semibold">${E(cand.position || '')} • ${E(cand.state || '')}</p>
+              <div class="flex flex-wrap items-center gap-1.5 mt-1.5 text-[10px]">${tseHtml}</div>
             </div>
           </div>
-
-          <!-- Badges de Integridade Legal, Produtividade, Conflito & Auditoria -->
-          <div class="flex flex-wrap items-center gap-1.5 mt-2 pt-2 border-t border-black/5 dark:border-white/10">
-            ${legBadge}
-            ${iprBadge}
-            ${conflictBadge}
-            ${auditBadge}
-          </div>
-
-          <!-- Civic Mandate Cost / Remuneration Highlight -->
-          <div class="p-2.5 rounded-2xl ${isJud ? 'bg-purple-500/5 dark:bg-purple-950/20 border-purple-500/20' : 'bg-amber-500/5 dark:bg-amber-950/20 border-amber-500/20'} border space-y-1.5 my-2 text-xs">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-1.5 font-bold ${isJud ? 'text-purple-900 dark:text-purple-300' : 'text-amber-900 dark:text-amber-300'} text-[11px]">
-                <i data-lucide="${isJud ? 'scale' : 'timer'}" class="w-3.5 h-3.5 ${isJud ? 'text-purple-600 dark:text-purple-400' : 'text-amber-600 dark:text-amber-400'}"></i>
-                <span>${isJud ? 'Remuneração Constitucional:' : 'Custo aos Cofres Públicos:'}</span>
-              </div>
-              <span class="font-bold ${isJud ? 'text-purple-800 dark:text-purple-300' : 'text-amber-800 dark:text-amber-300'} font-mono text-[11px]">${isJud ? 'R$ 44.008,52 / mês' : (cand.salary?.civicConversion?.costPerMinute || cand.salary?.costPerMinute || 'R$ 0,51 / min')}</span>
-            </div>
-            <div class="text-[10px] text-neutral-600 dark:text-neutral-300 flex items-center justify-between border-t ${isJud ? 'border-purple-500/15 dark:border-purple-500/20' : 'border-amber-500/15 dark:border-amber-500/20'} pt-1">
-              <span class="flex items-center gap-1 font-medium"><i data-lucide="${isJud ? 'file-text' : 'wallet'}" class="w-3 h-3 text-emerald-600 dark:text-emerald-400"></i> ${mandateSalaryLabel}</span>
-              <strong class="text-emerald-700 dark:text-emerald-300 font-bold">${mandateSalaryValue}</strong>
-            </div>
-            ${roiBudgetSnippet}
-          </div>
-
-          <!-- Campaign Finance or Judiciary Institution Highlight -->
-          ${campaignSnippet}
-
-          <!-- 3 Main Proposals / Theses Card -->
-          <div class="p-2.5 bg-black/[0.02] dark:bg-white/[0.03] rounded-2xl border border-black/5 dark:border-white/5 space-y-1.5 mt-2">
-            <div class="flex items-center justify-between text-[11px] font-bold text-neutral-900 dark:text-white">
-              <span class="flex items-center gap-1.5"><i data-lucide="${isJud ? 'scale' : 'scroll-text'}" class="w-3.5 h-3.5 ${isJud ? 'text-purple-600 dark:text-purple-400' : 'text-blue-600 dark:text-blue-400'}"></i> ${isJud ? '3 Principais Teses & Atuações' : '3 Principais Propostas'}</span>
-              <button onclick="event.stopPropagation(); if(typeof openDossie === 'function') openDossie('${cand.id}', 'propostas-tse');" class="text-blue-600 dark:text-blue-400 hover:underline font-semibold text-[10px] cursor-pointer">Ver todas (${cand.proposals ? cand.proposals.length : 3})</button>
-            </div>
-            <div class="space-y-1">
-              ${proposalsSnippet}
-            </div>
+          <div class="p-2.5 bg-black/[0.02] dark:bg-white/[0.03] rounded-2xl border border-black/5 dark:border-white/5 space-y-1 mt-2">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-neutral-500 dark:text-neutral-400">Indicadores oficiais</span>
+            ${indHtml}
           </div>
         </div>
-
-        <!-- Card Bottom Actions: posicionamento elevado e sem distanciamento vazio -->
         <div class="pt-2 border-t border-black/5 dark:border-white/10 flex items-center gap-1.5 mt-1.5">
-          <button onclick="event.stopPropagation(); if(typeof openDossie === 'function') openDossie('${cand.id}'); else window.location.href='dossie.html?id=${cand.id}';" class="flex-1 py-1.5 px-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs flex items-center justify-center gap-1.5 shadow-md shadow-blue-600/20 transition cursor-pointer">
+          <button onclick="event.stopPropagation(); if(typeof openDossie === 'function') openDossie('${E(cand.id)}');" class="flex-1 py-1.5 px-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs flex items-center justify-center gap-1.5 shadow-md transition cursor-pointer">
             <i data-lucide="folder-search" class="w-3.5 h-3.5"></i> Dossiê
           </button>
-          <button onclick="event.stopPropagation(); if(typeof openExportModalFor === 'function') openExportModalFor('${cand.id}');" class="px-3 py-1.5 rounded-xl bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:opacity-95 text-white font-semibold text-xs shadow-md shadow-indigo-500/20 transition flex items-center justify-center gap-1.5 cursor-pointer" title="Gerar Figurinha Colecionável (17 Temas)">
+          <button onclick="event.stopPropagation(); if(typeof openExportModalFor === 'function') openExportModalFor('${E(cand.id)}');" class="px-3 py-1.5 rounded-xl bg-indigo-600 hover:opacity-95 text-white font-semibold text-xs shadow-md transition flex items-center justify-center gap-1.5 cursor-pointer" title="Gerar figurinha com indicadores oficiais">
             <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Figurinha
           </button>
-          <button onclick="event.stopPropagation(); if(typeof toggleCompare === 'function') toggleCompare('${cand.id}');" class="p-1.5 rounded-xl bg-black/5 dark:bg-white/5 hover:bg-black/10 dark:hover:bg-white/10 border border-black/5 dark:border-white/10 text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white transition cursor-pointer" title="Comparar no Duelo 1v1">
+          <button onclick="event.stopPropagation(); if(typeof toggleCompare === 'function') toggleCompare('${E(cand.id)}');" class="p-1.5 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/10 text-neutral-700 dark:text-neutral-300 transition cursor-pointer" title="Comparar indicadores">
             <i data-lucide="scale" class="w-4 h-4 text-purple-600 dark:text-purple-400"></i>
           </button>
-          <button onclick="event.stopPropagation(); if(typeof shareCandidateWhatsApp === 'function') shareCandidateWhatsApp('${cand.id}');" class="p-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs shadow-md shadow-emerald-600/20 transition flex items-center justify-center cursor-pointer" title="Compartilhar no WhatsApp">
+          <button onclick="event.stopPropagation(); if(typeof shareCandidateWhatsApp === 'function') shareCandidateWhatsApp('${E(cand.id)}');" class="p-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs shadow-md transition flex items-center justify-center cursor-pointer" title="Compartilhar no WhatsApp">
             <i data-lucide="message-circle" class="w-4 h-4"></i>
           </button>
         </div>
       `;
+
 
       grid.appendChild(card);
     });
