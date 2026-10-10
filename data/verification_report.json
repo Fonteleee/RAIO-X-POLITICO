@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T14:55:47.133Z",
+  "generatedAt": "2026-10-10T15:12:10.716Z",
   "ceapYear": 2025,
   "sources": {
     "camara": "https://dadosabertos.camara.leg.br/api/v2",
@@ -59,10 +59,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 427978.2,
-        "notas": 351,
+        "totalYear": 500228.85,
+        "notas": 400,
         "mesesComDespesa": 12,
-        "monthlyAvg": 35664.85,
+        "monthlyAvg": 41685.74,
         "tetoMensalUF": 41886.51
       }
     },
@@ -80,10 +80,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 472216.82,
-        "notas": 223,
+        "totalYear": 561746.31,
+        "notas": 318,
         "mesesComDespesa": 12,
-        "monthlyAvg": 39351.4,
+        "monthlyAvg": 46812.19,
         "tetoMensalUF": 48021.25
       }
     },
@@ -101,10 +101,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 427536.28,
-        "notas": 71,
+        "totalYear": 443898.31,
+        "notas": 83,
         "mesesComDespesa": 12,
-        "monthlyAvg": 35628.02,
+        "monthlyAvg": 36991.53,
         "tetoMensalUF": 36582.46
       }
     },
@@ -134,10 +134,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 326889.58,
-        "notas": 285,
+        "totalYear": 390856.62,
+        "notas": 324,
         "mesesComDespesa": 11,
-        "monthlyAvg": 27240.8,
+        "monthlyAvg": 32571.39,
         "tetoMensalUF": 41553.77
       }
     },
@@ -162,10 +162,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 463401.99,
-        "notas": 240,
+        "totalYear": 522461.02,
+        "notas": 284,
         "mesesComDespesa": 12,
-        "monthlyAvg": 38616.83,
+        "monthlyAvg": 43538.42,
         "tetoMensalUF": 44804.65
       }
     },
@@ -208,13 +208,12 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 40480.83,
-        "notas": 70,
-        "mesesComDespesa": 9,
-        "monthlyAvg": 3373.4,
+        "totalYear": 101745.77,
+        "notas": 170,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 8478.81,
         "tetoMensalUF": 49363.92
-      },
-      "note": "CEAP com despesas em apenas 9 meses de 2025 (licença/suplência)."
+      }
     },
     {
       "id": "cand-ana-paula-lima",
@@ -230,10 +229,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 503228.85,
-        "notas": 525,
+        "totalYear": 551553.71,
+        "notas": 570,
         "mesesComDespesa": 12,
-        "monthlyAvg": 41935.74,
+        "monthlyAvg": 45962.81,
         "tetoMensalUF": 45671.58
       }
     },
@@ -258,10 +257,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 371773.34,
-        "notas": 178,
+        "totalYear": 436647.58,
+        "notas": 285,
         "mesesComDespesa": 12,
-        "monthlyAvg": 30981.11,
+        "monthlyAvg": 36387.3,
         "tetoMensalUF": 48245.57
       }
     },
@@ -327,10 +326,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 302792.22,
-        "notas": 451,
+        "totalYear": 343212.5,
+        "notas": 505,
         "mesesComDespesa": 12,
-        "monthlyAvg": 25232.69,
+        "monthlyAvg": 28601.04,
         "tetoMensalUF": 46669.7
       }
     },
@@ -348,10 +347,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 312598.93,
-        "notas": 220,
+        "totalYear": 373470.31,
+        "notas": 261,
         "mesesComDespesa": 12,
-        "monthlyAvg": 26049.91,
+        "monthlyAvg": 31122.53,
         "tetoMensalUF": 46737.9
       }
     },
@@ -369,10 +368,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 354348.22,
-        "notas": 294,
+        "totalYear": 377205.06,
+        "notas": 350,
         "mesesComDespesa": 12,
-        "monthlyAvg": 29529.02,
+        "monthlyAvg": 31433.76,
         "tetoMensalUF": 42837.33
       }
     },
@@ -397,10 +396,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 425039.26,
-        "notas": 317,
+        "totalYear": 498640.06,
+        "notas": 382,
         "mesesComDespesa": 12,
-        "monthlyAvg": 35419.94,
+        "monthlyAvg": 41553.34,
         "tetoMensalUF": 41553.77
       }
     },
@@ -429,10 +428,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 488461.47,
-        "notas": 765,
+        "totalYear": 522223.19,
+        "notas": 812,
         "mesesComDespesa": 12,
-        "monthlyAvg": 40705.12,
+        "monthlyAvg": 43518.6,
         "tetoMensalUF": 44665.66
       }
     },
@@ -456,10 +455,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 413377.26,
-        "notas": 321,
+        "totalYear": 416001.23,
+        "notas": 324,
         "mesesComDespesa": 12,
-        "monthlyAvg": 34448.11,
+        "monthlyAvg": 34666.77,
         "tetoMensalUF": 36582.46
       }
     },
@@ -508,10 +507,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 410154.58,
-        "notas": 204,
+        "totalYear": 580022.32,
+        "notas": 301,
         "mesesComDespesa": 12,
-        "monthlyAvg": 34179.55,
+        "monthlyAvg": 48335.19,
         "tetoMensalUF": 49363.92
       }
     },
@@ -538,7 +537,7 @@
       "ceap": {
         "year": 2025,
         "totalYear": 227775.02,
-        "notas": 266,
+        "notas": 268,
         "mesesComDespesa": 7,
         "monthlyAvg": 18981.25,
         "tetoMensalUF": 42837.33
@@ -571,10 +570,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 498480.65,
-        "notas": 503,
+        "totalYear": 524534.61,
+        "notas": 544,
         "mesesComDespesa": 12,
-        "monthlyAvg": 41540.05,
+        "monthlyAvg": 43711.22,
         "tetoMensalUF": 41553.77
       }
     },
@@ -620,10 +619,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 517717.63,
-        "notas": 895,
+        "totalYear": 545896.96,
+        "notas": 955,
         "mesesComDespesa": 12,
-        "monthlyAvg": 43143.14,
+        "monthlyAvg": 45491.41,
         "tetoMensalUF": 42837.33
       }
     },
@@ -670,10 +669,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 483957.01,
-        "notas": 809,
+        "totalYear": 528913.49,
+        "notas": 865,
         "mesesComDespesa": 12,
-        "monthlyAvg": 40329.75,
+        "monthlyAvg": 44076.12,
         "tetoMensalUF": 44665.66
       }
     },
@@ -691,10 +690,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 319215.5,
-        "notas": 427,
+        "totalYear": 370221.1,
+        "notas": 502,
         "mesesComDespesa": 12,
-        "monthlyAvg": 26601.29,
+        "monthlyAvg": 30851.76,
         "tetoMensalUF": 45671.58
       }
     },
@@ -712,10 +711,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 442250.17,
-        "notas": 1017,
+        "totalYear": 491539.49,
+        "notas": 1047,
         "mesesComDespesa": 12,
-        "monthlyAvg": 36854.18,
+        "monthlyAvg": 40961.62,
         "tetoMensalUF": 41886.51
       }
     },
@@ -733,10 +732,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 542162.09,
-        "notas": 181,
+        "totalYear": 589702.81,
+        "notas": 252,
         "mesesComDespesa": 12,
-        "monthlyAvg": 45180.17,
+        "monthlyAvg": 49141.9,
         "tetoMensalUF": 48245.57
       }
     },
@@ -754,10 +753,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 264051.95,
-        "notas": 653,
+        "totalYear": 316900.37,
+        "notas": 827,
         "mesesComDespesa": 12,
-        "monthlyAvg": 22004.33,
+        "monthlyAvg": 26408.36,
         "tetoMensalUF": 42837.33
       }
     },
@@ -775,10 +774,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 493681.82,
-        "notas": 511,
+        "totalYear": 504842.38,
+        "notas": 554,
         "mesesComDespesa": 12,
-        "monthlyAvg": 41140.15,
+        "monthlyAvg": 42070.2,
         "tetoMensalUF": 41553.77
       }
     },
@@ -820,10 +819,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 518589.72,
-        "notas": 333,
+        "totalYear": 535644.97,
+        "notas": 377,
         "mesesComDespesa": 12,
-        "monthlyAvg": 43215.81,
+        "monthlyAvg": 44637.08,
         "tetoMensalUF": 47470.6
       }
     },
@@ -897,10 +896,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 492101.33,
-        "notas": 678,
+        "totalYear": 509278.35,
+        "notas": 719,
         "mesesComDespesa": 12,
-        "monthlyAvg": 41008.44,
+        "monthlyAvg": 42439.86,
         "tetoMensalUF": 41553.77
       }
     },
@@ -932,10 +931,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 479421.33,
-        "notas": 578,
+        "totalYear": 564905.98,
+        "notas": 659,
         "mesesComDespesa": 12,
-        "monthlyAvg": 39951.78,
+        "monthlyAvg": 47075.5,
         "tetoMensalUF": 45671.58
       }
     },
@@ -974,10 +973,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 266149.23,
-        "notas": 165,
+        "totalYear": 271854.72,
+        "notas": 170,
         "mesesComDespesa": 12,
-        "monthlyAvg": 22179.1,
+        "monthlyAvg": 22654.56,
         "tetoMensalUF": 48021.25
       }
     },
@@ -1034,10 +1033,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 381166.19,
-        "notas": 326,
+        "totalYear": 470199.9,
+        "notas": 413,
         "mesesComDespesa": 12,
-        "monthlyAvg": 31763.85,
+        "monthlyAvg": 39183.33,
         "tetoMensalUF": 41886.51
       }
     },
@@ -1062,10 +1061,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 556721.72,
-        "notas": 119,
+        "totalYear": 573060.98,
+        "notas": 137,
         "mesesComDespesa": 12,
-        "monthlyAvg": 46393.48,
+        "monthlyAvg": 47755.08,
         "tetoMensalUF": 48021.25
       }
     },
@@ -1158,10 +1157,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 348043.84,
-        "notas": 189,
+        "totalYear": 472204.7,
+        "notas": 256,
         "mesesComDespesa": 12,
-        "monthlyAvg": 29003.65,
+        "monthlyAvg": 39350.39,
         "tetoMensalUF": 44804.65
       }
     },
@@ -1179,10 +1178,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 331563.35,
-        "notas": 460,
+        "totalYear": 446541.39,
+        "notas": 550,
         "mesesComDespesa": 12,
-        "monthlyAvg": 27630.28,
+        "monthlyAvg": 37211.78,
         "tetoMensalUF": 42837.33
       }
     },
@@ -1221,10 +1220,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 421252.92,
-        "notas": 466,
+        "totalYear": 474819.56,
+        "notas": 549,
         "mesesComDespesa": 12,
-        "monthlyAvg": 35104.41,
+        "monthlyAvg": 39568.3,
         "tetoMensalUF": 41886.51
       }
     },
@@ -1254,7 +1253,7 @@
       "ceap": {
         "year": 2025,
         "totalYear": 387830.25,
-        "notas": 59,
+        "notas": 61,
         "mesesComDespesa": 9,
         "monthlyAvg": 32319.19,
         "tetoMensalUF": 48245.57
@@ -1289,10 +1288,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 449263.56,
-        "notas": 483,
+        "totalYear": 519951.17,
+        "notas": 540,
         "mesesComDespesa": 12,
-        "monthlyAvg": 37438.63,
+        "monthlyAvg": 43329.26,
         "tetoMensalUF": 46669.7
       }
     },
@@ -1316,13 +1315,12 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 502528.87,
-        "notas": 703,
-        "mesesComDespesa": 11,
-        "monthlyAvg": 41877.41,
+        "totalYear": 550345.97,
+        "notas": 735,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 45862.16,
         "tetoMensalUF": 48245.57
-      },
-      "note": "CEAP com despesas em apenas 11 meses de 2025 (licença/suplência)."
+      }
     },
     {
       "id": "cand-fernando-haddad",
@@ -1443,10 +1441,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 552099.05,
-        "notas": 724,
+        "totalYear": 562669.97,
+        "notas": 746,
         "mesesComDespesa": 12,
-        "monthlyAvg": 46008.25,
+        "monthlyAvg": 46889.16,
         "tetoMensalUF": 46669.7
       }
     },
@@ -1464,10 +1462,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 377953.7,
-        "notas": 635,
+        "totalYear": 409753.72,
+        "notas": 661,
         "mesesComDespesa": 12,
-        "monthlyAvg": 31496.14,
+        "monthlyAvg": 34146.14,
         "tetoMensalUF": 41553.77
       }
     },
@@ -1515,10 +1513,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 374273.91,
-        "notas": 163,
+        "totalYear": 426092.31,
+        "notas": 195,
         "mesesComDespesa": 10,
-        "monthlyAvg": 31189.49,
+        "monthlyAvg": 35507.69,
         "tetoMensalUF": 42837.33
       }
     },
@@ -1595,10 +1593,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 329036.38,
-        "notas": 335,
+        "totalYear": 432708.51,
+        "notas": 419,
         "mesesComDespesa": 12,
-        "monthlyAvg": 27419.7,
+        "monthlyAvg": 36059.04,
         "tetoMensalUF": 41553.77
       }
     },
@@ -1665,10 +1663,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 462591.56,
-        "notas": 367,
+        "totalYear": 493951.95,
+        "notas": 415,
         "mesesComDespesa": 12,
-        "monthlyAvg": 38549.3,
+        "monthlyAvg": 41162.66,
         "tetoMensalUF": 41553.77
       }
     },
@@ -1719,10 +1717,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 504224.39,
-        "notas": 430,
+        "totalYear": 537246.73,
+        "notas": 475,
         "mesesComDespesa": 12,
-        "monthlyAvg": 42018.7,
+        "monthlyAvg": 44770.56,
         "tetoMensalUF": 44804.65
       }
     },
@@ -1747,10 +1745,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 302446.79,
-        "notas": 284,
+        "totalYear": 355786.18,
+        "notas": 341,
         "mesesComDespesa": 9,
-        "monthlyAvg": 25203.9,
+        "monthlyAvg": 29648.85,
         "tetoMensalUF": 45671.58
       },
       "note": "CEAP com despesas em apenas 9 meses de 2025 (licença/suplência)."
@@ -1777,10 +1775,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 497341.81,
-        "notas": 582,
+        "totalYear": 594733.58,
+        "notas": 715,
         "mesesComDespesa": 12,
-        "monthlyAvg": 41445.15,
+        "monthlyAvg": 49561.13,
         "tetoMensalUF": 48245.57
       }
     },
@@ -1798,13 +1796,12 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 285523.56,
-        "notas": 204,
-        "mesesComDespesa": 11,
-        "monthlyAvg": 23793.63,
+        "totalYear": 418642.82,
+        "notas": 282,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 34886.9,
         "tetoMensalUF": 48021.25
-      },
-      "note": "CEAP com despesas em apenas 11 meses de 2025 (licença/suplência)."
+      }
     },
     {
       "id": "cand-julia-zanatta",
@@ -1820,10 +1817,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 486840.49,
-        "notas": 397,
+        "totalYear": 522438.96,
+        "notas": 492,
         "mesesComDespesa": 12,
-        "monthlyAvg": 40570.04,
+        "monthlyAvg": 43536.58,
         "tetoMensalUF": 45671.58
       }
     },
@@ -1848,10 +1845,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 385920.82,
-        "notas": 677,
+        "totalYear": 416922.79,
+        "notas": 801,
         "mesesComDespesa": 12,
-        "monthlyAvg": 32160.07,
+        "monthlyAvg": 34743.57,
         "tetoMensalUF": 41886.51
       }
     },
@@ -1882,10 +1879,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 536829.56,
-        "notas": 179,
+        "totalYear": 562245.35,
+        "notas": 205,
         "mesesComDespesa": 12,
-        "monthlyAvg": 44735.8,
+        "monthlyAvg": 46853.78,
         "tetoMensalUF": 48021.25
       }
     },
@@ -1903,10 +1900,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 95689.76,
-        "notas": 113,
+        "totalYear": 153657.78,
+        "notas": 185,
         "mesesComDespesa": 12,
-        "monthlyAvg": 7974.15,
+        "monthlyAvg": 12804.82,
         "tetoMensalUF": 42837.33
       }
     },
@@ -1945,10 +1942,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 480646.19,
-        "notas": 278,
+        "totalYear": 552298.55,
+        "notas": 361,
         "mesesComDespesa": 12,
-        "monthlyAvg": 40053.85,
+        "monthlyAvg": 46024.88,
         "tetoMensalUF": 44804.65
       }
     },
@@ -1966,10 +1963,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 517252.03,
-        "notas": 837,
+        "totalYear": 561582.94,
+        "notas": 893,
         "mesesComDespesa": 12,
-        "monthlyAvg": 43104.34,
+        "monthlyAvg": 46798.58,
         "tetoMensalUF": 44804.65
       }
     },
@@ -1987,10 +1984,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 292651.25,
-        "notas": 210,
+        "totalYear": 457875.49,
+        "notas": 349,
         "mesesComDespesa": 12,
-        "monthlyAvg": 24387.6,
+        "monthlyAvg": 38156.29,
         "tetoMensalUF": 41553.77
       }
     },
@@ -2015,10 +2012,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 477488.05,
-        "notas": 681,
+        "totalYear": 538230.4,
+        "notas": 758,
         "mesesComDespesa": 12,
-        "monthlyAvg": 39790.67,
+        "monthlyAvg": 44852.53,
         "tetoMensalUF": 44665.66
       }
     },
@@ -2036,10 +2033,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 476591.98,
-        "notas": 614,
+        "totalYear": 517874.96,
+        "notas": 692,
         "mesesComDespesa": 12,
-        "monthlyAvg": 39716,
+        "monthlyAvg": 43156.25,
         "tetoMensalUF": 42837.33
       }
     },
@@ -2057,10 +2054,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 430336.13,
-        "notas": 555,
+        "totalYear": 480299.12,
+        "notas": 643,
         "mesesComDespesa": 12,
-        "monthlyAvg": 35861.34,
+        "monthlyAvg": 40024.93,
         "tetoMensalUF": 42837.33
       }
     },
@@ -2084,10 +2081,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 499918.57,
-        "notas": 361,
+        "totalYear": 576142.14,
+        "notas": 416,
         "mesesComDespesa": 12,
-        "monthlyAvg": 41659.88,
+        "monthlyAvg": 48011.85,
         "tetoMensalUF": 48245.57
       }
     },
@@ -2126,10 +2123,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 258139.73,
-        "notas": 582,
+        "totalYear": 275729.25,
+        "notas": 658,
         "mesesComDespesa": 12,
-        "monthlyAvg": 21511.64,
+        "monthlyAvg": 22977.44,
         "tetoMensalUF": 46669.7
       }
     },
@@ -2147,10 +2144,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 475196.05,
-        "notas": 522,
+        "totalYear": 504650.24,
+        "notas": 611,
         "mesesComDespesa": 12,
-        "monthlyAvg": 39599.67,
+        "monthlyAvg": 42054.19,
         "tetoMensalUF": 41886.51
       }
     },
@@ -2168,10 +2165,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 487176.91,
-        "notas": 434,
+        "totalYear": 497650.77,
+        "notas": 445,
         "mesesComDespesa": 12,
-        "monthlyAvg": 40598.08,
+        "monthlyAvg": 41470.9,
         "tetoMensalUF": 41553.77
       }
     },
@@ -2196,10 +2193,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 470699.62,
-        "notas": 154,
+        "totalYear": 508248.34,
+        "notas": 196,
         "mesesComDespesa": 12,
-        "monthlyAvg": 39224.97,
+        "monthlyAvg": 42354.03,
         "tetoMensalUF": 42837.33
       }
     },
@@ -2241,10 +2238,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 505307.97,
-        "notas": 480,
+        "totalYear": 527635.37,
+        "notas": 508,
         "mesesComDespesa": 12,
-        "monthlyAvg": 42109,
+        "monthlyAvg": 43969.61,
         "tetoMensalUF": 47470.6
       }
     },
@@ -2262,10 +2259,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 534274.69,
-        "notas": 932,
+        "totalYear": 562536.13,
+        "notas": 959,
         "mesesComDespesa": 12,
-        "monthlyAvg": 44522.89,
+        "monthlyAvg": 46878.01,
         "tetoMensalUF": 46669.7
       }
     },
@@ -2331,10 +2328,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 408734.34,
-        "notas": 290,
+        "totalYear": 423299.42,
+        "notas": 331,
         "mesesComDespesa": 12,
-        "monthlyAvg": 34061.2,
+        "monthlyAvg": 35274.95,
         "tetoMensalUF": 42837.33
       }
     },
@@ -2365,10 +2362,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 461767.67,
-        "notas": 194,
+        "totalYear": 517146.97,
+        "notas": 259,
         "mesesComDespesa": 12,
-        "monthlyAvg": 38480.64,
+        "monthlyAvg": 43095.58,
         "tetoMensalUF": 48245.57
       }
     },
@@ -2399,10 +2396,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 491042.23,
-        "notas": 267,
+        "totalYear": 549883.78,
+        "notas": 339,
         "mesesComDespesa": 12,
-        "monthlyAvg": 40920.19,
+        "monthlyAvg": 45823.65,
         "tetoMensalUF": 47470.6
       }
     },
@@ -2427,10 +2424,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 477901,
-        "notas": 228,
+        "totalYear": 499274.71,
+        "notas": 243,
         "mesesComDespesa": 12,
-        "monthlyAvg": 39825.08,
+        "monthlyAvg": 41606.23,
         "tetoMensalUF": 41886.51
       }
     },
@@ -2455,10 +2452,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 389263.25,
-        "notas": 339,
+        "totalYear": 463434.69,
+        "notas": 450,
         "mesesComDespesa": 12,
-        "monthlyAvg": 32438.6,
+        "monthlyAvg": 38619.56,
         "tetoMensalUF": 41886.51
       }
     },
@@ -2482,10 +2479,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 525034.07,
-        "notas": 170,
+        "totalYear": 564948.22,
+        "notas": 214,
         "mesesComDespesa": 12,
-        "monthlyAvg": 43752.84,
+        "monthlyAvg": 47079.02,
         "tetoMensalUF": 48021.25
       }
     },
@@ -2510,10 +2507,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 438143.71,
-        "notas": 206,
+        "totalYear": 501042.37,
+        "notas": 283,
         "mesesComDespesa": 12,
-        "monthlyAvg": 36511.98,
+        "monthlyAvg": 41753.53,
         "tetoMensalUF": 42837.33
       }
     },
@@ -2537,10 +2534,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 435733.65,
-        "notas": 291,
+        "totalYear": 475124.38,
+        "notas": 366,
         "mesesComDespesa": 12,
-        "monthlyAvg": 36311.14,
+        "monthlyAvg": 39593.7,
         "tetoMensalUF": 41553.77
       }
     },
@@ -2576,10 +2573,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 114089.65,
-        "notas": 211,
+        "totalYear": 129519.91,
+        "notas": 271,
         "mesesComDespesa": 12,
-        "monthlyAvg": 9507.47,
+        "monthlyAvg": 10793.33,
         "tetoMensalUF": 44804.65
       }
     },
@@ -2611,10 +2608,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 514890.6,
-        "notas": 165,
+        "totalYear": 534113.64,
+        "notas": 175,
         "mesesComDespesa": 12,
-        "monthlyAvg": 42907.55,
+        "monthlyAvg": 44509.47,
         "tetoMensalUF": 46669.7
       }
     },
@@ -2632,10 +2629,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 528305.21,
-        "notas": 573,
+        "totalYear": 565742.72,
+        "notas": 645,
         "mesesComDespesa": 12,
-        "monthlyAvg": 44025.43,
+        "monthlyAvg": 47145.23,
         "tetoMensalUF": 47470.6
       }
     },
@@ -2653,10 +2650,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 395835.77,
-        "notas": 124,
+        "totalYear": 477630.8,
+        "notas": 185,
         "mesesComDespesa": 12,
-        "monthlyAvg": 32986.31,
+        "monthlyAvg": 39802.57,
         "tetoMensalUF": 41553.77
       }
     },
@@ -2674,10 +2671,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 495995.1,
-        "notas": 1135,
+        "totalYear": 548280.38,
+        "notas": 1188,
         "mesesComDespesa": 12,
-        "monthlyAvg": 41332.92,
+        "monthlyAvg": 45690.03,
         "tetoMensalUF": 45671.58
       }
     },
@@ -2695,10 +2692,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 538193.16,
-        "notas": 745,
+        "totalYear": 579517.34,
+        "notas": 812,
         "mesesComDespesa": 12,
-        "monthlyAvg": 44849.43,
+        "monthlyAvg": 48293.11,
         "tetoMensalUF": 46669.7
       }
     },
@@ -2789,10 +2786,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 387390.18,
-        "notas": 380,
+        "totalYear": 493788.89,
+        "notas": 483,
         "mesesComDespesa": 12,
-        "monthlyAvg": 32282.52,
+        "monthlyAvg": 41149.07,
         "tetoMensalUF": 41886.51
       }
     },
@@ -2817,10 +2814,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 456440.36,
-        "notas": 124,
+        "totalYear": 565059.79,
+        "notas": 211,
         "mesesComDespesa": 12,
-        "monthlyAvg": 38036.7,
+        "monthlyAvg": 47088.32,
         "tetoMensalUF": 48021.25
       }
     },
@@ -2845,10 +2842,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 501509.43,
-        "notas": 367,
+        "totalYear": 522678.85,
+        "notas": 410,
         "mesesComDespesa": 12,
-        "monthlyAvg": 41792.45,
+        "monthlyAvg": 43556.57,
         "tetoMensalUF": 42837.33
       }
     },
@@ -2880,10 +2877,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 359572.61,
-        "notas": 266,
+        "totalYear": 459954.52,
+        "notas": 397,
         "mesesComDespesa": 12,
-        "monthlyAvg": 29964.38,
+        "monthlyAvg": 38329.54,
         "tetoMensalUF": 45933.06
       }
     },
@@ -2901,10 +2898,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 481062.14,
-        "notas": 770,
+        "totalYear": 513485.19,
+        "notas": 810,
         "mesesComDespesa": 12,
-        "monthlyAvg": 40088.51,
+        "monthlyAvg": 42790.43,
         "tetoMensalUF": 41886.51
       }
     },
@@ -2968,10 +2965,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 433871.32,
-        "notas": 227,
+        "totalYear": 517101.9,
+        "notas": 289,
         "mesesComDespesa": 12,
-        "monthlyAvg": 36155.94,
+        "monthlyAvg": 43091.83,
         "tetoMensalUF": 42837.33
       }
     },
@@ -3014,10 +3011,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 494644.6,
-        "notas": 618,
+        "totalYear": 512113.68,
+        "notas": 677,
         "mesesComDespesa": 12,
-        "monthlyAvg": 41220.38,
+        "monthlyAvg": 42676.14,
         "tetoMensalUF": 44665.66
       }
     },
@@ -3035,10 +3032,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 416924.36,
-        "notas": 278,
+        "totalYear": 448735.78,
+        "notas": 294,
         "mesesComDespesa": 12,
-        "monthlyAvg": 34743.7,
+        "monthlyAvg": 37394.65,
         "tetoMensalUF": 41300.86
       }
     },
@@ -3063,10 +3060,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 504994.08,
-        "notas": 487,
+        "totalYear": 531518.93,
+        "notas": 517,
         "mesesComDespesa": 12,
-        "monthlyAvg": 42082.84,
+        "monthlyAvg": 44293.24,
         "tetoMensalUF": 42837.33
       }
     },
@@ -3084,10 +3081,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 370759.42,
-        "notas": 391,
+        "totalYear": 507347.22,
+        "notas": 512,
         "mesesComDespesa": 12,
-        "monthlyAvg": 30896.62,
+        "monthlyAvg": 42278.94,
         "tetoMensalUF": 41553.77
       }
     },
@@ -3112,10 +3109,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 441384.85,
-        "notas": 711,
+        "totalYear": 525457.2,
+        "notas": 813,
         "mesesComDespesa": 12,
-        "monthlyAvg": 36782.07,
+        "monthlyAvg": 43788.1,
         "tetoMensalUF": 41553.77
       }
     },
@@ -3144,10 +3141,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 376091.86,
-        "notas": 151,
+        "totalYear": 482667.29,
+        "notas": 207,
         "mesesComDespesa": 12,
-        "monthlyAvg": 31340.99,
+        "monthlyAvg": 40222.27,
         "tetoMensalUF": 42837.33
       }
     },
@@ -3178,10 +3175,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 510122.34,
-        "notas": 532,
+        "totalYear": 542228.32,
+        "notas": 558,
         "mesesComDespesa": 12,
-        "monthlyAvg": 42510.2,
+        "monthlyAvg": 45185.69,
         "tetoMensalUF": 47470.6
       }
     },
@@ -3234,10 +3231,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 469066.04,
-        "notas": 497,
+        "totalYear": 476473.32,
+        "notas": 501,
         "mesesComDespesa": 12,
-        "monthlyAvg": 39088.84,
+        "monthlyAvg": 39706.11,
         "tetoMensalUF": 41300.86
       }
     },
@@ -3255,10 +3252,10 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 448879.76,
-        "notas": 648,
+        "totalYear": 500885.24,
+        "notas": 699,
         "mesesComDespesa": 12,
-        "monthlyAvg": 37406.65,
+        "monthlyAvg": 41740.44,
         "tetoMensalUF": 44665.66
       }
     },

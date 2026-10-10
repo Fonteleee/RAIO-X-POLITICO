@@ -58,7 +58,8 @@ async function loadCeapByDeputy(year) {
   const byId = new Map();
   for (const r of rows) {
     if (!r.ideCadastro) continue; // lideranças/partidos
-    const e = byId.get(r.ideCadastro) || { total: 0, notas: 0, meses: new Set(), uf: r.sgUF, porTipo: {} };
+    const e = byId.get(r.ideCadastro) || { total: 0, notas: 0, meses: new Set(), uf: r.sgUF, porTipo: {}, docs: new Set() };
+    e.docs.add(r.ideDocumento);
     const v = Number(String(r.vlrLiquido).replace(',', '.')) || 0;
     e.total += v;
     e.notas++;
@@ -70,4 +71,49 @@ async function loadCeapByDeputy(year) {
   return { byId, rows: rows.length };
 }
 
-module.exports = { download, unzipFirst, parseCsv, loadCeapByDeputy };
+// O arquivo em lote deixou de trazer "PASSAGEM AÉREA - SIGEPA" a partir de ago/2025, mas a API
+// (com idLegislatura) traz. Soma os documentos da API ausentes no lote; validado contra o portal
+// da Câmara (ex.: Carlos Jordy 2025 = R$ 524.534,61; Kim Kataguiri = R$ 153.657,78).
+async function addCeapApiExtras(entry, deputyId, year, legislatura = 57) {
+  // consulta mês a mês: a paginação da API não tem ordenação estável e perde documentos
+  // codDocumento se repete entre linhas distintas (ex.: trechos de um mesmo bilhete), então só se
+  // excluem linhas cujo código já está no lote. Linhas idênticas na mesma página são legítimas
+  // (ex.: dois recibos iguais); só se descartam repetições entre páginas de um mesmo mês.
+  const bulkDocs = new Set(entry.docs);
+  let added = 0;
+  for (let mes = 1; mes <= 12; mes++) {
+    const seenPrevPages = new Set();
+    for (let page = 1; page < 20; page++) {
+      const seenThisPage = new Set();
+      const url = `https://dadosabertos.camara.leg.br/api/v2/deputados/${deputyId}/despesas?idLegislatura=${legislatura}&ano=${year}&mes=${mes}&itens=100&pagina=${page}`;
+      let j = null;
+      for (let t = 0; t < 3 && !j; t++) {
+        try {
+          const r = await fetch(url, { headers: { Accept: 'application/json' }, signal: AbortSignal.timeout(30000) });
+          if (r.ok) j = await r.json();
+        } catch { /* nova tentativa */ }
+        if (!j) await new Promise(res => setTimeout(res, 1000 * (t + 1)));
+      }
+      if (!j) throw new Error(`API despesas indisponível (${year}-${mes})`);
+      for (const d of j.dados) {
+        const cod = String(d.codDocumento);
+        if (bulkDocs.has(cod)) continue;
+        const key = [cod, d.dataDocumento, d.numDocumento, d.valorDocumento, d.valorLiquido, d.parcela, d.cnpjCpfFornecedor, d.tipoDespesa].join('|');
+        if (seenPrevPages.has(key)) continue;
+        seenThisPage.add(key);
+        entry.docs.add(cod);
+        entry.total += Number(d.valorLiquido) || 0;
+        entry.notas++;
+        entry.meses.add(Number(d.mes));
+        entry.porTipo[d.tipoDespesa] = (entry.porTipo[d.tipoDespesa] || 0) + (Number(d.valorLiquido) || 0);
+        added++;
+      }
+      seenThisPage.forEach(k => seenPrevPages.add(k));
+      if (j.dados.length < 100) break;
+    }
+  }
+  entry.total = Math.round(entry.total * 100) / 100;
+  return added;
+}
+
+module.exports = { download, unzipFirst, parseCsv, loadCeapByDeputy, addCeapApiExtras };

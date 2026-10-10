@@ -9,7 +9,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const sharp = require('sharp');
-const { loadCeapByDeputy } = require('./lib/camara_bulk');
+const { loadCeapByDeputy, addCeapApiExtras } = require('./lib/camara_bulk');
 const CEAP_LIMITS = require('../data/ceap_limits.json');
 
 const ROOT = path.join(__dirname, '..');
@@ -208,7 +208,9 @@ async function pool(items, size, fn) {
 
     // Cota parlamentar real (somente Câmara): arquivo em lote oficial + teto oficial da UF
     if (house === 'camara') {
-      const c = ceap.byId.get(String(hit.id));
+      let c = ceap.byId.get(String(hit.id));
+      if (!c) { c = { total: 0, notas: 0, meses: new Set(), uf: hit.siglaUf, porTipo: {}, docs: new Set() }; ceap.byId.set(String(hit.id), c); }
+      try { await addCeapApiExtras(c, hit.id, CEAP_YEAR); } catch (e) { entry.note = (entry.note ? entry.note + ' ' : '') + 'CEAP sem complemento da API: ' + e.message; }
       const total = c ? c.total : 0;
       const monthsActive = c ? c.meses.size : 0;
       const uf = (c && c.uf) || hit.siglaUf;
@@ -220,13 +222,13 @@ async function pool(items, size, fn) {
       if (limit) {
         cand.salary.limitCeapMonthlyNum = limit;
         cand.salary.limitCeapMonthly = brl(limit);
-        cand.salary.spendingPercentage = Math.round((total / (limit * 12)) * 100);
+        cand.salary.spendingPercentage = Math.min(100, Math.round((total / (limit * 12)) * 100)); // o portal da Câmara também limita a 100%
         cand.salary.savedCeapTotal = brl(Math.max(0, Math.round((limit * 12 - total) * 100) / 100));
       }
       const topTipos = c ? Object.entries(c.porTipo).sort((x, y) => y[1] - x[1]).slice(0, 3).map(([tipo, v]) => ({ tipo, valor: Math.round(v * 100) / 100 })) : [];
       entry.ceap = { year: CEAP_YEAR, totalYear: total, notas: c ? c.notas : 0, mesesComDespesa: monthsActive, monthlyAvg: monthly, tetoMensalUF: limit || null };
       cand.salary.ceapSource = {
-        fonte: 'Câmara dos Deputados — arquivo oficial de despesas da CEAP',
+        fonte: 'Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)',
         ano: CEAP_YEAR, totalAno: total, notasFiscais: c ? c.notas : 0, mesesComDespesa: monthsActive,
         tetoMensalUF: limit || null, maioresDespesas: topTipos, consultadoEm: fetchedAt,
         url: `https://www.camara.leg.br/cotas/Ano-${CEAP_YEAR}.csv.zip`,

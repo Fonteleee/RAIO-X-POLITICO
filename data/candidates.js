@@ -9664,12 +9664,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 94.4
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 42.082,84",
-      "spendingCeapMonthlyNum": 42082.84,
+      "spendingCeapMonthly": "R$ 44.293,24",
+      "spendingCeapMonthlyNum": 44293.24,
       "limitCeapMonthly": "R$ 42.837,33",
       "limitCeapMonthlyNum": 42837.33,
-      "spendingPercentage": 98,
-      "savedCeapTotal": "R$ 9.053,88",
+      "spendingPercentage": 100,
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -9677,10 +9677,10 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 504994.08,
-        "notasFiscais": 487,
+        "totalAno": 531518.93,
+        "notasFiscais": 517,
         "mesesComDespesa": 12,
         "tetoMensalUF": 42837.33,
         "maioresDespesas": [
@@ -10207,12 +10207,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 96.8
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 7.974,15",
-      "spendingCeapMonthlyNum": 7974.15,
+      "spendingCeapMonthly": "R$ 12.804,82",
+      "spendingCeapMonthlyNum": 12804.82,
       "limitCeapMonthly": "R$ 42.837,33",
       "limitCeapMonthlyNum": 42837.33,
-      "spendingPercentage": 19,
-      "savedCeapTotal": "R$ 418.358,20",
+      "spendingPercentage": 30,
+      "savedCeapTotal": "R$ 360.390,18",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -10220,16 +10220,16 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 95689.76,
-        "notasFiscais": 113,
+        "totalAno": 153657.78,
+        "notasFiscais": 185,
         "mesesComDespesa": 12,
         "tetoMensalUF": 42837.33,
         "maioresDespesas": [
           {
             "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 60646.63
+            "valor": 118614.65
           },
           {
             "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
@@ -10732,12 +10732,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 91.2
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 32.438,60",
-      "spendingCeapMonthlyNum": 32438.6,
+      "spendingCeapMonthly": "R$ 38.619,56",
+      "spendingCeapMonthlyNum": 38619.56,
       "limitCeapMonthly": "R$ 41.886,51",
       "limitCeapMonthlyNum": 41886.51,
-      "spendingPercentage": 77,
-      "savedCeapTotal": "R$ 113.374,87",
+      "spendingPercentage": 92,
+      "savedCeapTotal": "R$ 39.203,43",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -10745,13 +10745,17 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 389263.25,
-        "notasFiscais": 339,
+        "totalAno": 463434.69,
+        "notasFiscais": 450,
         "mesesComDespesa": 12,
         "tetoMensalUF": 41886.51,
         "maioresDespesas": [
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 158590.29
+          },
           {
             "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
             "valor": 150349.17
@@ -10759,10 +10763,6 @@ var candidatesData = _root.candidatesData = [
           {
             "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
             "valor": 119585.12
-          },
-          {
-            "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 84418.85
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -11239,12 +11239,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 93.6
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 27.630,28",
-      "spendingCeapMonthlyNum": 27630.28,
+      "spendingCeapMonthly": "R$ 37.211,78",
+      "spendingCeapMonthlyNum": 37211.78,
       "limitCeapMonthly": "R$ 42.837,33",
       "limitCeapMonthlyNum": 42837.33,
-      "spendingPercentage": 65,
-      "savedCeapTotal": "R$ 182.484,61",
+      "spendingPercentage": 87,
+      "savedCeapTotal": "R$ 67.506,57",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -11252,16 +11252,16 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 331563.35,
-        "notasFiscais": 460,
+        "totalAno": 446541.39,
+        "notasFiscais": 550,
         "mesesComDespesa": 12,
         "tetoMensalUF": 42837.33,
         "maioresDespesas": [
           {
             "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 150391.68
+            "valor": 265369.72
           },
           {
             "tipo": "SERVIÇO DE SEGURANÇA PRESTADO POR EMPRESA ESPECIALIZADA.",
@@ -11755,12 +11755,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 92.8
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 36.155,94",
-      "spendingCeapMonthlyNum": 36155.94,
+      "spendingCeapMonthly": "R$ 43.091,83",
+      "spendingCeapMonthlyNum": 43091.83,
       "limitCeapMonthly": "R$ 42.837,33",
       "limitCeapMonthlyNum": 42837.33,
-      "spendingPercentage": 84,
-      "savedCeapTotal": "R$ 80.176,64",
+      "spendingPercentage": 100,
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -11768,20 +11768,20 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 433871.32,
-        "notasFiscais": 227,
+        "totalAno": 517101.9,
+        "notasFiscais": 289,
         "mesesComDespesa": 12,
         "tetoMensalUF": 42837.33,
         "maioresDespesas": [
           {
-            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
-            "valor": 138400
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 207803.65
           },
           {
-            "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 124573.07
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 138400
           },
           {
             "tipo": "SERVIÇO DE SEGURANÇA PRESTADO POR EMPRESA ESPECIALIZADA.",
@@ -12271,12 +12271,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 96
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 21.511,64",
-      "spendingCeapMonthlyNum": 21511.64,
+      "spendingCeapMonthly": "R$ 22.977,44",
+      "spendingCeapMonthlyNum": 22977.44,
       "limitCeapMonthly": "R$ 46.669,70",
       "limitCeapMonthlyNum": 46669.7,
-      "spendingPercentage": 46,
-      "savedCeapTotal": "R$ 301.896,67",
+      "spendingPercentage": 49,
+      "savedCeapTotal": "R$ 284.307,15",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -12284,10 +12284,10 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 258139.73,
-        "notasFiscais": 582,
+        "totalAno": 275729.25,
+        "notasFiscais": 658,
         "mesesComDespesa": 12,
         "tetoMensalUF": 46669.7,
         "maioresDespesas": [
@@ -12297,7 +12297,7 @@ var candidatesData = _root.candidatesData = [
           },
           {
             "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 46737.33
+            "valor": 64326.85
           },
           {
             "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
@@ -12787,12 +12787,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 92
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 29.529,02",
-      "spendingCeapMonthlyNum": 29529.02,
+      "spendingCeapMonthly": "R$ 31.433,76",
+      "spendingCeapMonthlyNum": 31433.76,
       "limitCeapMonthly": "R$ 42.837,33",
       "limitCeapMonthlyNum": 42837.33,
-      "spendingPercentage": 69,
-      "savedCeapTotal": "R$ 159.699,74",
+      "spendingPercentage": 73,
+      "savedCeapTotal": "R$ 136.842,90",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -12800,10 +12800,10 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 354348.22,
-        "notasFiscais": 294,
+        "totalAno": 377205.06,
+        "notasFiscais": 350,
         "mesesComDespesa": 12,
         "tetoMensalUF": 42837.33,
         "maioresDespesas": [
@@ -12812,12 +12812,12 @@ var candidatesData = _root.candidatesData = [
             "valor": 180047.13
           },
           {
-            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
-            "valor": 58350.55
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 62472.34
           },
           {
-            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
-            "valor": 39999.99
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 58350.55
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -13316,7 +13316,7 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
         "totalAno": 91691.78,
         "notasFiscais": 106,
@@ -13819,12 +13819,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 92
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 35.861,34",
-      "spendingCeapMonthlyNum": 35861.34,
+      "spendingCeapMonthly": "R$ 40.024,93",
+      "spendingCeapMonthlyNum": 40024.93,
       "limitCeapMonthly": "R$ 42.837,33",
       "limitCeapMonthlyNum": 42837.33,
-      "spendingPercentage": 84,
-      "savedCeapTotal": "R$ 83.711,83",
+      "spendingPercentage": 93,
+      "savedCeapTotal": "R$ 33.748,84",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -13832,13 +13832,17 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 430336.13,
-        "notasFiscais": 555,
+        "totalAno": 480299.12,
+        "notasFiscais": 643,
         "mesesComDespesa": 12,
         "tetoMensalUF": 42837.33,
         "maioresDespesas": [
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 120387.71
+          },
           {
             "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
             "valor": 115664.55
@@ -13846,10 +13850,6 @@ var candidatesData = _root.candidatesData = [
           {
             "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
             "valor": 104015.91
-          },
-          {
-            "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 70424.72
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -14326,12 +14326,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 94.4
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 31.763,85",
-      "spendingCeapMonthlyNum": 31763.85,
+      "spendingCeapMonthly": "R$ 39.183,33",
+      "spendingCeapMonthlyNum": 39183.33,
       "limitCeapMonthly": "R$ 41.886,51",
       "limitCeapMonthlyNum": 41886.51,
-      "spendingPercentage": 76,
-      "savedCeapTotal": "R$ 121.471,93",
+      "spendingPercentage": 94,
+      "savedCeapTotal": "R$ 32.438,22",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -14339,16 +14339,16 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 381166.19,
-        "notasFiscais": 326,
+        "totalAno": 470199.9,
+        "notasFiscais": 413,
         "mesesComDespesa": 12,
         "tetoMensalUF": 41886.51,
         "maioresDespesas": [
           {
             "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 95192.92
+            "valor": 184226.63
           },
           {
             "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
@@ -14842,12 +14842,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 88.8
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 39.224,97",
-      "spendingCeapMonthlyNum": 39224.97,
+      "spendingCeapMonthly": "R$ 42.354,03",
+      "spendingCeapMonthlyNum": 42354.03,
       "limitCeapMonthly": "R$ 42.837,33",
       "limitCeapMonthlyNum": 42837.33,
-      "spendingPercentage": 92,
-      "savedCeapTotal": "R$ 43.348,34",
+      "spendingPercentage": 99,
+      "savedCeapTotal": "R$ 5.799,62",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -14855,10 +14855,10 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 470699.62,
-        "notasFiscais": 154,
+        "totalAno": 508248.34,
+        "notasFiscais": 196,
         "mesesComDespesa": 12,
         "tetoMensalUF": 42837.33,
         "maioresDespesas": [
@@ -14872,7 +14872,7 @@ var candidatesData = _root.candidatesData = [
           },
           {
             "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 43094.58
+            "valor": 80643.3
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -15358,12 +15358,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 87.2
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 34.061,20",
-      "spendingCeapMonthlyNum": 34061.2,
+      "spendingCeapMonthly": "R$ 35.274,95",
+      "spendingCeapMonthlyNum": 35274.95,
       "limitCeapMonthly": "R$ 42.837,33",
       "limitCeapMonthlyNum": 42837.33,
-      "spendingPercentage": 80,
-      "savedCeapTotal": "R$ 105.313,62",
+      "spendingPercentage": 82,
+      "savedCeapTotal": "R$ 90.748,54",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -15371,10 +15371,10 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 408734.34,
-        "notasFiscais": 290,
+        "totalAno": 423299.42,
+        "notasFiscais": 331,
         "mesesComDespesa": 12,
         "tetoMensalUF": 42837.33,
         "maioresDespesas": [
@@ -15874,12 +15874,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 93.6
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 39.716,00",
-      "spendingCeapMonthlyNum": 39716,
+      "spendingCeapMonthly": "R$ 43.156,25",
+      "spendingCeapMonthlyNum": 43156.25,
       "limitCeapMonthly": "R$ 42.837,33",
       "limitCeapMonthlyNum": 42837.33,
-      "spendingPercentage": 93,
-      "savedCeapTotal": "R$ 37.455,98",
+      "spendingPercentage": 100,
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -15887,10 +15887,10 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 476591.98,
-        "notasFiscais": 614,
+        "totalAno": 517874.96,
+        "notasFiscais": 692,
         "mesesComDespesa": 12,
         "tetoMensalUF": 42837.33,
         "maioresDespesas": [
@@ -15904,7 +15904,7 @@ var candidatesData = _root.candidatesData = [
           },
           {
             "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 43468.56
+            "valor": 84751.54
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -16390,12 +16390,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 94.4
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 36.854,18",
-      "spendingCeapMonthlyNum": 36854.18,
+      "spendingCeapMonthly": "R$ 40.961,62",
+      "spendingCeapMonthlyNum": 40961.62,
       "limitCeapMonthly": "R$ 41.886,51",
       "limitCeapMonthlyNum": 41886.51,
-      "spendingPercentage": 88,
-      "savedCeapTotal": "R$ 60.387,95",
+      "spendingPercentage": 98,
+      "savedCeapTotal": "R$ 11.098,63",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -16403,10 +16403,10 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 442250.17,
-        "notasFiscais": 1017,
+        "totalAno": 491539.49,
+        "notasFiscais": 1047,
         "mesesComDespesa": 12,
         "tetoMensalUF": 41886.51,
         "maioresDespesas": [
@@ -16415,12 +16415,12 @@ var candidatesData = _root.candidatesData = [
             "valor": 130892.37
           },
           {
-            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
-            "valor": 105916.61
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 118930.33
           },
           {
-            "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 69641.01
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 105916.61
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -16906,12 +16906,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 95.2
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 41.140,15",
-      "spendingCeapMonthlyNum": 41140.15,
+      "spendingCeapMonthly": "R$ 42.070,20",
+      "spendingCeapMonthlyNum": 42070.2,
       "limitCeapMonthly": "R$ 41.553,77",
       "limitCeapMonthlyNum": 41553.77,
-      "spendingPercentage": 99,
-      "savedCeapTotal": "R$ 4.963,42",
+      "spendingPercentage": 100,
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -16919,10 +16919,10 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 493681.82,
-        "notasFiscais": 511,
+        "totalAno": 504842.38,
+        "notasFiscais": 554,
         "mesesComDespesa": 12,
         "tetoMensalUF": 41553.77,
         "maioresDespesas": [
@@ -16936,7 +16936,7 @@ var candidatesData = _root.candidatesData = [
           },
           {
             "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 20508.94
+            "valor": 31669.5
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -17422,12 +17422,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 89.6
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 31.189,49",
-      "spendingCeapMonthlyNum": 31189.49,
+      "spendingCeapMonthly": "R$ 35.507,69",
+      "spendingCeapMonthlyNum": 35507.69,
       "limitCeapMonthly": "R$ 42.837,33",
       "limitCeapMonthlyNum": 42837.33,
-      "spendingPercentage": 73,
-      "savedCeapTotal": "R$ 139.774,05",
+      "spendingPercentage": 83,
+      "savedCeapTotal": "R$ 87.955,65",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -17435,13 +17435,17 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 374273.91,
-        "notasFiscais": 163,
+        "totalAno": 426092.31,
+        "notasFiscais": 195,
         "mesesComDespesa": 10,
         "tetoMensalUF": 42837.33,
         "maioresDespesas": [
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 151702.26
+          },
           {
             "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
             "valor": 134740
@@ -17449,10 +17453,6 @@ var candidatesData = _root.candidatesData = [
           {
             "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
             "valor": 103219.97
-          },
-          {
-            "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 99883.86
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -17929,12 +17929,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 86.4
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 35.664,85",
-      "spendingCeapMonthlyNum": 35664.85,
+      "spendingCeapMonthly": "R$ 41.685,74",
+      "spendingCeapMonthlyNum": 41685.74,
       "limitCeapMonthly": "R$ 41.886,51",
       "limitCeapMonthlyNum": 41886.51,
-      "spendingPercentage": 85,
-      "savedCeapTotal": "R$ 74.659,92",
+      "spendingPercentage": 100,
+      "savedCeapTotal": "R$ 2.409,27",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -17942,10 +17942,10 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 427978.2,
-        "notasFiscais": 351,
+        "totalAno": 500228.85,
+        "notasFiscais": 400,
         "mesesComDespesa": 12,
         "tetoMensalUF": 41886.51,
         "maioresDespesas": [
@@ -17954,12 +17954,12 @@ var candidatesData = _root.candidatesData = [
             "valor": 182385.31
           },
           {
-            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
-            "valor": 137645.9
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 164341.47
           },
           {
-            "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 92090.82
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 137645.9
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -18445,12 +18445,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 95.2
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 38.549,30",
-      "spendingCeapMonthlyNum": 38549.3,
+      "spendingCeapMonthly": "R$ 41.162,66",
+      "spendingCeapMonthlyNum": 41162.66,
       "limitCeapMonthly": "R$ 41.553,77",
       "limitCeapMonthlyNum": 41553.77,
-      "spendingPercentage": 93,
-      "savedCeapTotal": "R$ 36.053,68",
+      "spendingPercentage": 99,
+      "savedCeapTotal": "R$ 4.693,29",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -18458,10 +18458,10 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 462591.56,
-        "notasFiscais": 367,
+        "totalAno": 493951.95,
+        "notasFiscais": 415,
         "mesesComDespesa": 12,
         "tetoMensalUF": 41553.77,
         "maioresDespesas": [
@@ -18475,7 +18475,7 @@ var candidatesData = _root.candidatesData = [
           },
           {
             "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 84316.58
+            "valor": 115676.97
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -18961,12 +18961,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 88
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 41.792,45",
-      "spendingCeapMonthlyNum": 41792.45,
+      "spendingCeapMonthly": "R$ 43.556,57",
+      "spendingCeapMonthlyNum": 43556.57,
       "limitCeapMonthly": "R$ 42.837,33",
       "limitCeapMonthlyNum": 42837.33,
-      "spendingPercentage": 98,
-      "savedCeapTotal": "R$ 12.538,53",
+      "spendingPercentage": 100,
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -18974,10 +18974,10 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 501509.43,
-        "notasFiscais": 367,
+        "totalAno": 522678.85,
+        "notasFiscais": 410,
         "mesesComDespesa": 12,
         "tetoMensalUF": 42837.33,
         "maioresDespesas": [
@@ -18990,8 +18990,8 @@ var candidatesData = _root.candidatesData = [
             "valor": 103049.76
           },
           {
-            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
-            "valor": 41783.15
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 52050.9
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -19477,12 +19477,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 94.4
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 36.511,98",
-      "spendingCeapMonthlyNum": 36511.98,
+      "spendingCeapMonthly": "R$ 41.753,53",
+      "spendingCeapMonthlyNum": 41753.53,
       "limitCeapMonthly": "R$ 42.837,33",
       "limitCeapMonthlyNum": 42837.33,
-      "spendingPercentage": 85,
-      "savedCeapTotal": "R$ 75.904,25",
+      "spendingPercentage": 97,
+      "savedCeapTotal": "R$ 13.005,59",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -19490,10 +19490,10 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 438143.71,
-        "notasFiscais": 206,
+        "totalAno": 501042.37,
+        "notasFiscais": 283,
         "mesesComDespesa": 12,
         "tetoMensalUF": 42837.33,
         "maioresDespesas": [
@@ -19503,7 +19503,7 @@ var candidatesData = _root.candidatesData = [
           },
           {
             "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 55941.34
+            "valor": 118840
           },
           {
             "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
@@ -20006,10 +20006,10 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
         "totalAno": 227775.02,
-        "notasFiscais": 266,
+        "notasFiscais": 268,
         "mesesComDespesa": 7,
         "tetoMensalUF": 42837.33,
         "maioresDespesas": [
@@ -20509,12 +20509,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 94.4
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 44.522,89",
-      "spendingCeapMonthlyNum": 44522.89,
+      "spendingCeapMonthly": "R$ 46.878,01",
+      "spendingCeapMonthlyNum": 46878.01,
       "limitCeapMonthly": "R$ 46.669,70",
       "limitCeapMonthlyNum": 46669.7,
-      "spendingPercentage": 95,
-      "savedCeapTotal": "R$ 25.761,71",
+      "spendingPercentage": 100,
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -20522,10 +20522,10 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 534274.69,
-        "notasFiscais": 932,
+        "totalAno": 562536.13,
+        "notasFiscais": 959,
         "mesesComDespesa": 12,
         "tetoMensalUF": 46669.7,
         "maioresDespesas": [
@@ -21025,12 +21025,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 98.4
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 31.340,99",
-      "spendingCeapMonthlyNum": 31340.99,
+      "spendingCeapMonthly": "R$ 40.222,27",
+      "spendingCeapMonthlyNum": 40222.27,
       "limitCeapMonthly": "R$ 42.837,33",
       "limitCeapMonthlyNum": 42837.33,
-      "spendingPercentage": 73,
-      "savedCeapTotal": "R$ 137.956,10",
+      "spendingPercentage": 94,
+      "savedCeapTotal": "R$ 31.380,67",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -21038,20 +21038,20 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 376091.86,
-        "notasFiscais": 151,
+        "totalAno": 482667.29,
+        "notasFiscais": 207,
         "mesesComDespesa": 12,
         "tetoMensalUF": 42837.33,
         "maioresDespesas": [
           {
-            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
-            "valor": 187543.7
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 212247.32
           },
           {
-            "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 105671.89
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 187543.7
           },
           {
             "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
@@ -21541,12 +21541,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 92
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 29.964,38",
-      "spendingCeapMonthlyNum": 29964.38,
+      "spendingCeapMonthly": "R$ 38.329,54",
+      "spendingCeapMonthlyNum": 38329.54,
       "limitCeapMonthly": "R$ 45.933,06",
       "limitCeapMonthlyNum": 45933.06,
-      "spendingPercentage": 65,
-      "savedCeapTotal": "R$ 191.624,11",
+      "spendingPercentage": 83,
+      "savedCeapTotal": "R$ 91.242,20",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -21554,10 +21554,10 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 359572.61,
-        "notasFiscais": 266,
+        "totalAno": 459954.52,
+        "notasFiscais": 397,
         "mesesComDespesa": 12,
         "tetoMensalUF": 45933.06,
         "maioresDespesas": [
@@ -21567,7 +21567,7 @@ var candidatesData = _root.candidatesData = [
           },
           {
             "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 61667.35
+            "valor": 162049.26
           },
           {
             "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
@@ -22070,7 +22070,7 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
         "totalAno": 55549.81,
         "notasFiscais": 70,
@@ -24858,20 +24858,20 @@ var candidatesData = _root.candidatesData = [
       ]
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 42.510,20",
-      "spendingPercentage": 90,
+      "spendingCeapMonthly": "R$ 45.185,69",
+      "spendingPercentage": 95,
       "civicConversion": {
         "costPerMinute": "R$ 0,52 / min",
         "costPerCitizenYear": "R$ 0,005 / ano",
         "salariosMinimos": 180,
         "roiText": "R$ 28,50 por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 42510.2,
+      "spendingCeapMonthlyNum": 45185.69,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 510122.34,
-        "notasFiscais": 532,
+        "totalAno": 542228.32,
+        "notasFiscais": 558,
         "mesesComDespesa": 12,
         "tetoMensalUF": 47470.6,
         "maioresDespesas": [
@@ -24880,12 +24880,12 @@ var candidatesData = _root.candidatesData = [
             "valor": 187985.29
           },
           {
-            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
-            "valor": 108554.35
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 118197.06
           },
           {
-            "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 86091.08
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 108554.35
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -24894,7 +24894,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 47470.6,
       "limitCeapMonthly": "R$ 47.470,60",
-      "savedCeapTotal": "R$ 59.524,86"
+      "savedCeapTotal": "R$ 27.418,88"
     },
     "campaignFinance": {
       "electionYear": 2022,
@@ -25342,20 +25342,20 @@ var candidatesData = _root.candidatesData = [
       ]
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 30.981,11",
-      "spendingPercentage": 64,
+      "spendingCeapMonthly": "R$ 36.387,30",
+      "spendingPercentage": 75,
       "civicConversion": {
         "costPerMinute": "R$ 0,52 / min",
         "costPerCitizenYear": "R$ 0,005 / ano",
         "salariosMinimos": 180,
         "roiText": "R$ 28,50 por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 30981.11,
+      "spendingCeapMonthlyNum": 36387.3,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 371773.34,
-        "notasFiscais": 178,
+        "totalAno": 436647.58,
+        "notasFiscais": 285,
         "mesesComDespesa": 12,
         "tetoMensalUF": 48245.57,
         "maioresDespesas": [
@@ -25365,7 +25365,7 @@ var candidatesData = _root.candidatesData = [
           },
           {
             "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 105492.93
+            "valor": 170367.17
           },
           {
             "tipo": "SERVIÇO DE SEGURANÇA PRESTADO POR EMPRESA ESPECIALIZADA.",
@@ -25378,7 +25378,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 48245.57,
       "limitCeapMonthly": "R$ 48.245,57",
-      "savedCeapTotal": "R$ 207.173,50"
+      "savedCeapTotal": "R$ 142.299,26"
     },
     "campaignFinance": {
       "electionYear": 2022,
@@ -25817,20 +25817,20 @@ var candidatesData = _root.candidatesData = [
       ]
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 46.393,48",
-      "spendingPercentage": 97,
+      "spendingCeapMonthly": "R$ 47.755,08",
+      "spendingPercentage": 99,
       "civicConversion": {
         "costPerMinute": "R$ 0,52 / min",
         "costPerCitizenYear": "R$ 0,005 / ano",
         "salariosMinimos": 180,
         "roiText": "R$ 28,50 por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 46393.48,
+      "spendingCeapMonthlyNum": 47755.08,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 556721.72,
-        "notasFiscais": 119,
+        "totalAno": 573060.98,
+        "notasFiscais": 137,
         "mesesComDespesa": 12,
         "tetoMensalUF": 48021.25,
         "maioresDespesas": [
@@ -25853,7 +25853,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 48021.25,
       "limitCeapMonthly": "R$ 48.021,25",
-      "savedCeapTotal": "R$ 19.533,28"
+      "savedCeapTotal": "R$ 3.194,02"
     },
     "campaignFinance": {
       "electionYear": 2022,
@@ -27530,23 +27530,27 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 83
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 29.003,65",
-      "savedCeapTotal": "R$ 189.611,96",
+      "spendingCeapMonthly": "R$ 39.350,39",
+      "savedCeapTotal": "R$ 65.451,10",
       "civicConversion": {
         "costPerMinute": "R$ 0,44/min",
         "costPerCitizenYear": "R$ 0,08/ano",
         "salariosMinimos": "161 salários/ano",
         "roiText": "R$ 40,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 29003.65,
+      "spendingCeapMonthlyNum": 39350.39,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 348043.84,
-        "notasFiscais": 189,
+        "totalAno": 472204.7,
+        "notasFiscais": 256,
         "mesesComDespesa": 12,
         "tetoMensalUF": 44804.65,
         "maioresDespesas": [
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 200980.51
+          },
           {
             "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
             "valor": 133166.8
@@ -27554,10 +27558,6 @@ var candidatesData = _root.candidatesData = [
           {
             "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
             "valor": 82600.93
-          },
-          {
-            "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 76819.65
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -27566,7 +27566,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 44804.65,
       "limitCeapMonthly": "R$ 44.804,65",
-      "spendingPercentage": 65
+      "spendingPercentage": 88
     },
     "attendance": {
       "ratePct": 98,
@@ -27892,20 +27892,20 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 86
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 43.104,34",
-      "savedCeapTotal": "R$ 20.403,77",
+      "spendingCeapMonthly": "R$ 46.798,58",
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,54/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "171 salários/ano",
         "roiText": "R$ 26,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 43104.34,
+      "spendingCeapMonthlyNum": 46798.58,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 517252.03,
-        "notasFiscais": 837,
+        "totalAno": 561582.94,
+        "notasFiscais": 893,
         "mesesComDespesa": 12,
         "tetoMensalUF": 44804.65,
         "maioresDespesas": [
@@ -27918,8 +27918,8 @@ var candidatesData = _root.candidatesData = [
             "valor": 124649.88
           },
           {
-            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
-            "valor": 64514.18
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 107915.31
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -27928,7 +27928,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 44804.65,
       "limitCeapMonthly": "R$ 44.804,65",
-      "spendingPercentage": 96
+      "spendingPercentage": 100
     },
     "attendance": {
       "ratePct": 96,
@@ -28254,20 +28254,20 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 74
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 42.018,70",
-      "savedCeapTotal": "R$ 33.431,41",
+      "spendingCeapMonthly": "R$ 44.770,56",
+      "savedCeapTotal": "R$ 409,07",
       "civicConversion": {
         "costPerMinute": "R$ 0,59/min",
         "costPerCitizenYear": "R$ 0,09/ano",
         "salariosMinimos": "165 salários/ano",
         "roiText": "R$ 37,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 42018.7,
+      "spendingCeapMonthlyNum": 44770.56,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 504224.39,
-        "notasFiscais": 430,
+        "totalAno": 537246.73,
+        "notasFiscais": 475,
         "mesesComDespesa": 12,
         "tetoMensalUF": 44804.65,
         "maioresDespesas": [
@@ -28290,7 +28290,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 44804.65,
       "limitCeapMonthly": "R$ 44.804,65",
-      "spendingPercentage": 94
+      "spendingPercentage": 100
     },
     "attendance": {
       "ratePct": 95,
@@ -28616,20 +28616,20 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 77
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 38.616,83",
-      "savedCeapTotal": "R$ 74.253,81",
+      "spendingCeapMonthly": "R$ 43.538,42",
+      "savedCeapTotal": "R$ 15.194,78",
       "civicConversion": {
         "costPerMinute": "R$ 0,58/min",
         "costPerCitizenYear": "R$ 0,09/ano",
         "salariosMinimos": "174 salários/ano",
         "roiText": "R$ 31,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 38616.83,
+      "spendingCeapMonthlyNum": 43538.42,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 463401.99,
-        "notasFiscais": 240,
+        "totalAno": 522461.02,
+        "notasFiscais": 284,
         "mesesComDespesa": 12,
         "tetoMensalUF": 44804.65,
         "maioresDespesas": [
@@ -28639,7 +28639,7 @@ var candidatesData = _root.candidatesData = [
           },
           {
             "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 84849.8
+            "valor": 143908.83
           },
           {
             "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
@@ -28652,7 +28652,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 44804.65,
       "limitCeapMonthly": "R$ 44.804,65",
-      "spendingPercentage": 86
+      "spendingPercentage": 97
     },
     "attendance": {
       "ratePct": 96,
@@ -31200,20 +31200,20 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 86
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 40.920,19",
-      "savedCeapTotal": "R$ 78.604,97",
+      "spendingCeapMonthly": "R$ 45.823,65",
+      "savedCeapTotal": "R$ 19.763,42",
       "civicConversion": {
         "costPerMinute": "R$ 0,55/min",
         "costPerCitizenYear": "R$ 0,08/ano",
         "salariosMinimos": "185 salários/ano",
         "roiText": "R$ 40,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 40920.19,
+      "spendingCeapMonthlyNum": 45823.65,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 491042.23,
-        "notasFiscais": 267,
+        "totalAno": 549883.78,
+        "notasFiscais": 339,
         "mesesComDespesa": 12,
         "tetoMensalUF": 47470.6,
         "maioresDespesas": [
@@ -31226,8 +31226,8 @@ var candidatesData = _root.candidatesData = [
             "valor": 140101.89
           },
           {
-            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
-            "valor": 76180
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 119824.47
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -31236,7 +31236,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 47470.6,
       "limitCeapMonthly": "R$ 47.470,60",
-      "spendingPercentage": 86
+      "spendingPercentage": 97
     },
     "attendance": {
       "ratePct": 93,
@@ -32528,20 +32528,20 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 83
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 43.215,81",
-      "savedCeapTotal": "R$ 51.057,48",
+      "spendingCeapMonthly": "R$ 44.637,08",
+      "savedCeapTotal": "R$ 34.002,23",
       "civicConversion": {
         "costPerMinute": "R$ 0,41/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "179 salários/ano",
         "roiText": "R$ 27,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 43215.81,
+      "spendingCeapMonthlyNum": 44637.08,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 518589.72,
-        "notasFiscais": 333,
+        "totalAno": 535644.97,
+        "notasFiscais": 377,
         "mesesComDespesa": 12,
         "tetoMensalUF": 47470.6,
         "maioresDespesas": [
@@ -32564,7 +32564,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 47470.6,
       "limitCeapMonthly": "R$ 47.470,60",
-      "spendingPercentage": 91
+      "spendingPercentage": 94
     },
     "attendance": {
       "ratePct": 94,
@@ -34434,20 +34434,20 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 86
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 41.659,88",
-      "savedCeapTotal": "R$ 79.028,27",
+      "spendingCeapMonthly": "R$ 48.011,85",
+      "savedCeapTotal": "R$ 2.804,70",
       "civicConversion": {
         "costPerMinute": "R$ 0,59/min",
         "costPerCitizenYear": "R$ 0,05/ano",
         "salariosMinimos": "162 salários/ano",
         "roiText": "R$ 39,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 41659.88,
+      "spendingCeapMonthlyNum": 48011.85,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 499918.57,
-        "notasFiscais": 361,
+        "totalAno": 576142.14,
+        "notasFiscais": 416,
         "mesesComDespesa": 12,
         "tetoMensalUF": 48245.57,
         "maioresDespesas": [
@@ -34456,12 +34456,12 @@ var candidatesData = _root.candidatesData = [
             "valor": 207025.9
           },
           {
-            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
-            "valor": 87181.33
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 136710.91
           },
           {
-            "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 60487.34
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 87181.33
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -34470,7 +34470,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 48245.57,
       "limitCeapMonthly": "R$ 48.245,57",
-      "spendingPercentage": 86
+      "spendingPercentage": 100
     },
     "attendance": {
       "ratePct": 93,
@@ -34796,23 +34796,27 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 74
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 41.445,15",
-      "savedCeapTotal": "R$ 81.605,03",
+      "spendingCeapMonthly": "R$ 49.561,13",
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,39/min",
         "costPerCitizenYear": "R$ 0,09/ano",
         "salariosMinimos": "176 salários/ano",
         "roiText": "R$ 31,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 41445.15,
+      "spendingCeapMonthlyNum": 49561.13,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 497341.81,
-        "notasFiscais": 582,
+        "totalAno": 594733.58,
+        "notasFiscais": 715,
         "mesesComDespesa": 12,
         "tetoMensalUF": 48245.57,
         "maioresDespesas": [
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 199722.11
+          },
           {
             "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
             "valor": 161789.01
@@ -34820,10 +34824,6 @@ var candidatesData = _root.candidatesData = [
           {
             "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
             "valor": 139196.34
-          },
-          {
-            "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 102330.34
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -34832,7 +34832,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 48245.57,
       "limitCeapMonthly": "R$ 48.245,57",
-      "spendingPercentage": 86
+      "spendingPercentage": 100
     },
     "attendance": {
       "ratePct": 94,
@@ -35158,21 +35158,21 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 77
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 41.877,41",
-      "savedCeapTotal": "R$ 76.417,97",
+      "spendingCeapMonthly": "R$ 45.862,16",
+      "savedCeapTotal": "R$ 28.600,87",
       "civicConversion": {
         "costPerMinute": "R$ 0,49/min",
         "costPerCitizenYear": "R$ 0,09/ano",
         "salariosMinimos": "192 salários/ano",
         "roiText": "R$ 36,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 41877.41,
+      "spendingCeapMonthlyNum": 45862.16,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 502528.87,
-        "notasFiscais": 703,
-        "mesesComDespesa": 11,
+        "totalAno": 550345.97,
+        "notasFiscais": 735,
+        "mesesComDespesa": 12,
         "tetoMensalUF": 48245.57,
         "maioresDespesas": [
           {
@@ -35180,12 +35180,12 @@ var candidatesData = _root.candidatesData = [
             "valor": 175050
           },
           {
-            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
-            "valor": 98132.5
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 109608.77
           },
           {
-            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
-            "valor": 82886.32
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 98132.5
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -35194,7 +35194,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 48245.57,
       "limitCeapMonthly": "R$ 48.245,57",
-      "spendingPercentage": 87
+      "spendingPercentage": 95
     },
     "attendance": {
       "ratePct": 97,
@@ -35520,20 +35520,20 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 38.480,64",
-      "savedCeapTotal": "R$ 117.179,17",
+      "spendingCeapMonthly": "R$ 43.095,58",
+      "savedCeapTotal": "R$ 61.799,87",
       "civicConversion": {
         "costPerMinute": "R$ 0,51/min",
         "costPerCitizenYear": "R$ 0,08/ano",
         "salariosMinimos": "171 salários/ano",
         "roiText": "R$ 29,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 38480.64,
+      "spendingCeapMonthlyNum": 43095.58,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 461767.67,
-        "notasFiscais": 194,
+        "totalAno": 517146.97,
+        "notasFiscais": 259,
         "mesesComDespesa": 12,
         "tetoMensalUF": 48245.57,
         "maioresDespesas": [
@@ -35542,12 +35542,12 @@ var candidatesData = _root.candidatesData = [
             "valor": 261400
           },
           {
-            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
-            "valor": 117800
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 119750.34
           },
           {
-            "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 64371.04
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 117800
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -35556,7 +35556,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 48245.57,
       "limitCeapMonthly": "R$ 48.245,57",
-      "spendingPercentage": 80
+      "spendingPercentage": 89
     },
     "attendance": {
       "ratePct": 95,
@@ -36214,20 +36214,20 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 86
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 40.705,12",
-      "savedCeapTotal": "R$ 47.526,45",
+      "spendingCeapMonthly": "R$ 43.518,60",
+      "savedCeapTotal": "R$ 13.764,73",
       "civicConversion": {
         "costPerMinute": "R$ 0,59/min",
         "costPerCitizenYear": "R$ 0,05/ano",
         "salariosMinimos": "190 salários/ano",
         "roiText": "R$ 36,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 40705.12,
+      "spendingCeapMonthlyNum": 43518.6,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 488461.47,
-        "notasFiscais": 765,
+        "totalAno": 522223.19,
+        "notasFiscais": 812,
         "mesesComDespesa": 12,
         "tetoMensalUF": 44665.66,
         "maioresDespesas": [
@@ -36240,8 +36240,8 @@ var candidatesData = _root.candidatesData = [
             "valor": 114942.87
           },
           {
-            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
-            "valor": 74580.29
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 94593.09
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -36250,7 +36250,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 44665.66,
       "limitCeapMonthly": "R$ 44.665,66",
-      "spendingPercentage": 91
+      "spendingPercentage": 97
     },
     "attendance": {
       "ratePct": 96,
@@ -37220,20 +37220,20 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 41.220,38",
-      "savedCeapTotal": "R$ 41.343,32",
+      "spendingCeapMonthly": "R$ 42.676,14",
+      "savedCeapTotal": "R$ 23.874,24",
       "civicConversion": {
         "costPerMinute": "R$ 0,36/min",
         "costPerCitizenYear": "R$ 0,08/ano",
         "salariosMinimos": "180 salários/ano",
         "roiText": "R$ 30,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 41220.38,
+      "spendingCeapMonthlyNum": 42676.14,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 494644.6,
-        "notasFiscais": 618,
+        "totalAno": 512113.68,
+        "notasFiscais": 677,
         "mesesComDespesa": 12,
         "tetoMensalUF": 44665.66,
         "maioresDespesas": [
@@ -37256,7 +37256,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 44665.66,
       "limitCeapMonthly": "R$ 44.665,66",
-      "spendingPercentage": 92
+      "spendingPercentage": 96
     },
     "attendance": {
       "ratePct": 95,
@@ -37880,23 +37880,27 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 86
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 39.790,67",
-      "savedCeapTotal": "R$ 58.499,87",
+      "spendingCeapMonthly": "R$ 44.852,53",
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,58/min",
         "costPerCitizenYear": "R$ 0,05/ano",
         "salariosMinimos": "167 salários/ano",
         "roiText": "R$ 27,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 39790.67,
+      "spendingCeapMonthlyNum": 44852.53,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 477488.05,
-        "notasFiscais": 681,
+        "totalAno": 538230.4,
+        "notasFiscais": 758,
         "mesesComDespesa": 12,
         "tetoMensalUF": 44665.66,
         "maioresDespesas": [
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 141404.4
+          },
           {
             "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
             "valor": 133075.54
@@ -37904,10 +37908,6 @@ var candidatesData = _root.candidatesData = [
           {
             "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
             "valor": 82668.19
-          },
-          {
-            "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 80662.05
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -37916,7 +37916,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 44665.66,
       "limitCeapMonthly": "R$ 44.665,66",
-      "spendingPercentage": 89
+      "spendingPercentage": 100
     },
     "attendance": {
       "ratePct": 96,
@@ -38242,20 +38242,20 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 74
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 40.329,75",
-      "savedCeapTotal": "R$ 52.030,91",
+      "spendingCeapMonthly": "R$ 44.076,12",
+      "savedCeapTotal": "R$ 7.074,43",
       "civicConversion": {
         "costPerMinute": "R$ 0,52/min",
         "costPerCitizenYear": "R$ 0,05/ano",
         "salariosMinimos": "163 salários/ano",
         "roiText": "R$ 39,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 40329.75,
+      "spendingCeapMonthlyNum": 44076.12,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 483957.01,
-        "notasFiscais": 809,
+        "totalAno": 528913.49,
+        "notasFiscais": 865,
         "mesesComDespesa": 12,
         "tetoMensalUF": 44665.66,
         "maioresDespesas": [
@@ -38278,7 +38278,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 44665.66,
       "limitCeapMonthly": "R$ 44.665,66",
-      "spendingPercentage": 90
+      "spendingPercentage": 99
     },
     "attendance": {
       "ratePct": 95,
@@ -38604,20 +38604,20 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 77
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 37.406,65",
-      "savedCeapTotal": "R$ 87.108,16",
+      "spendingCeapMonthly": "R$ 41.740,44",
+      "savedCeapTotal": "R$ 35.102,68",
       "civicConversion": {
         "costPerMinute": "R$ 0,51/min",
         "costPerCitizenYear": "R$ 0,05/ano",
         "salariosMinimos": "164 salários/ano",
         "roiText": "R$ 28,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 37406.65,
+      "spendingCeapMonthlyNum": 41740.44,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 448879.76,
-        "notasFiscais": 648,
+        "totalAno": 500885.24,
+        "notasFiscais": 699,
         "mesesComDespesa": 12,
         "tetoMensalUF": 44665.66,
         "maioresDespesas": [
@@ -38627,7 +38627,7 @@ var candidatesData = _root.candidatesData = [
           },
           {
             "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 90861.48
+            "valor": 142866.96
           },
           {
             "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
@@ -38640,7 +38640,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 44665.66,
       "limitCeapMonthly": "R$ 44.665,66",
-      "spendingPercentage": 84
+      "spendingPercentage": 93
     },
     "attendance": {
       "ratePct": 94,
@@ -38976,7 +38976,7 @@ var candidatesData = _root.candidatesData = [
       },
       "spendingCeapMonthlyNum": 0,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
         "totalAno": 0,
         "notasFiscais": 0,
@@ -40875,20 +40875,20 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 83
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 42.907,55",
-      "savedCeapTotal": "R$ 45.145,80",
+      "spendingCeapMonthly": "R$ 44.509,47",
+      "savedCeapTotal": "R$ 25.922,76",
       "civicConversion": {
         "costPerMinute": "R$ 0,50/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "176 salários/ano",
         "roiText": "R$ 29,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 42907.55,
+      "spendingCeapMonthlyNum": 44509.47,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 514890.6,
-        "notasFiscais": 165,
+        "totalAno": 534113.64,
+        "notasFiscais": 175,
         "mesesComDespesa": 12,
         "tetoMensalUF": 46669.7,
         "maioresDespesas": [
@@ -40901,8 +40901,8 @@ var candidatesData = _root.candidatesData = [
             "valor": 52793.04
           },
           {
-            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
-            "valor": 28935.18
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 35047.12
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -40911,7 +40911,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 46669.7,
       "limitCeapMonthly": "R$ 46.669,70",
-      "spendingPercentage": 92
+      "spendingPercentage": 95
     },
     "attendance": {
       "ratePct": 95,
@@ -41237,20 +41237,20 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 86
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 44.849,43",
-      "savedCeapTotal": "R$ 21.843,24",
+      "spendingCeapMonthly": "R$ 48.293,11",
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,54/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "180 salários/ano",
         "roiText": "R$ 36,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 44849.43,
+      "spendingCeapMonthlyNum": 48293.11,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 538193.16,
-        "notasFiscais": 745,
+        "totalAno": 579517.34,
+        "notasFiscais": 812,
         "mesesComDespesa": 12,
         "tetoMensalUF": 46669.7,
         "maioresDespesas": [
@@ -41273,7 +41273,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 46669.7,
       "limitCeapMonthly": "R$ 46.669,70",
-      "spendingPercentage": 96
+      "spendingPercentage": 100
     },
     "attendance": {
       "ratePct": 97,
@@ -41599,20 +41599,20 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 74
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 37.438,63",
-      "savedCeapTotal": "R$ 110.772,84",
+      "spendingCeapMonthly": "R$ 43.329,26",
+      "savedCeapTotal": "R$ 40.085,23",
       "civicConversion": {
         "costPerMinute": "R$ 0,53/min",
         "costPerCitizenYear": "R$ 0,06/ano",
         "salariosMinimos": "191 salários/ano",
         "roiText": "R$ 29,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 37438.63,
+      "spendingCeapMonthlyNum": 43329.26,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 449263.56,
-        "notasFiscais": 483,
+        "totalAno": 519951.17,
+        "notasFiscais": 540,
         "mesesComDespesa": 12,
         "tetoMensalUF": 46669.7,
         "maioresDespesas": [
@@ -41621,12 +41621,12 @@ var candidatesData = _root.candidatesData = [
             "valor": 218037
           },
           {
-            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
-            "valor": 89702.56
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 117452.99
           },
           {
-            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
-            "valor": 49006.4
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 89702.56
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -41635,7 +41635,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 46669.7,
       "limitCeapMonthly": "R$ 46.669,70",
-      "spendingPercentage": 80
+      "spendingPercentage": 93
     },
     "attendance": {
       "ratePct": 95,
@@ -41961,20 +41961,20 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 77
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 46.008,25",
-      "savedCeapTotal": "R$ 7.937,35",
+      "spendingCeapMonthly": "R$ 46.889,16",
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,53/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "160 salários/ano",
         "roiText": "R$ 35,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 46008.25,
+      "spendingCeapMonthlyNum": 46889.16,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 552099.05,
-        "notasFiscais": 724,
+        "totalAno": 562669.97,
+        "notasFiscais": 746,
         "mesesComDespesa": 12,
         "tetoMensalUF": 46669.7,
         "maioresDespesas": [
@@ -41997,7 +41997,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 46669.7,
       "limitCeapMonthly": "R$ 46.669,70",
-      "spendingPercentage": 99
+      "spendingPercentage": 100
     },
     "attendance": {
       "ratePct": 96,
@@ -42323,30 +42323,30 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 25.232,69",
-      "savedCeapTotal": "R$ 257.244,18",
+      "spendingCeapMonthly": "R$ 28.601,04",
+      "savedCeapTotal": "R$ 216.823,90",
       "civicConversion": {
         "costPerMinute": "R$ 0,37/min",
         "costPerCitizenYear": "R$ 0,06/ano",
         "salariosMinimos": "189 salários/ano",
         "roiText": "R$ 35,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 25232.69,
+      "spendingCeapMonthlyNum": 28601.04,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 302792.22,
-        "notasFiscais": 451,
+        "totalAno": 343212.5,
+        "notasFiscais": 505,
         "mesesComDespesa": 12,
         "tetoMensalUF": 46669.7,
         "maioresDespesas": [
           {
-            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
-            "valor": 93790.92
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 129601.38
           },
           {
-            "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 89181.1
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 93790.92
           },
           {
             "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
@@ -42359,7 +42359,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 46669.7,
       "limitCeapMonthly": "R$ 46.669,70",
-      "spendingPercentage": 54
+      "spendingPercentage": 61
     },
     "attendance": {
       "ratePct": 95,
@@ -43007,26 +43007,26 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 86
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 36.782,07",
-      "savedCeapTotal": "R$ 57.260,39",
+      "spendingCeapMonthly": "R$ 43.788,10",
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,35/min",
         "costPerCitizenYear": "R$ 0,09/ano",
         "salariosMinimos": "160 salários/ano",
         "roiText": "R$ 33,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 36782.07,
+      "spendingCeapMonthlyNum": 43788.1,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 441384.85,
-        "notasFiscais": 711,
+        "totalAno": 525457.2,
+        "notasFiscais": 813,
         "mesesComDespesa": 12,
         "tetoMensalUF": 41553.77,
         "maioresDespesas": [
           {
             "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 111601.4
+            "valor": 195673.75
           },
           {
             "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
@@ -43043,7 +43043,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 41553.77,
       "limitCeapMonthly": "R$ 41.553,77",
-      "spendingPercentage": 89
+      "spendingPercentage": 100
     },
     "attendance": {
       "ratePct": 96,
@@ -43701,30 +43701,30 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 77
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 24.387,60",
-      "savedCeapTotal": "R$ 205.993,99",
+      "spendingCeapMonthly": "R$ 38.156,29",
+      "savedCeapTotal": "R$ 40.769,75",
       "civicConversion": {
         "costPerMinute": "R$ 0,48/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "192 salários/ano",
         "roiText": "R$ 29,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 24387.6,
+      "spendingCeapMonthlyNum": 38156.29,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 292651.25,
-        "notasFiscais": 210,
+        "totalAno": 457875.49,
+        "notasFiscais": 349,
         "mesesComDespesa": 12,
         "tetoMensalUF": 41553.77,
         "maioresDespesas": [
           {
-            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
-            "valor": 117000
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 274537.32
           },
           {
-            "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 109313.08
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 117000
           },
           {
             "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
@@ -43737,7 +43737,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 41553.77,
       "limitCeapMonthly": "R$ 41.553,77",
-      "spendingPercentage": 59
+      "spendingPercentage": 92
     },
     "attendance": {
       "ratePct": 98,
@@ -44359,30 +44359,30 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 83
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 30.896,62",
-      "savedCeapTotal": "R$ 127.885,82",
+      "spendingCeapMonthly": "R$ 42.278,94",
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,47/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "180 salários/ano",
         "roiText": "R$ 28,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 30896.62,
+      "spendingCeapMonthlyNum": 42278.94,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 370759.42,
-        "notasFiscais": 391,
+        "totalAno": 507347.22,
+        "notasFiscais": 512,
         "mesesComDespesa": 12,
         "tetoMensalUF": 41553.77,
         "maioresDespesas": [
           {
-            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
-            "valor": 159330
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 231936.79
           },
           {
-            "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 95348.99
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 159330
           },
           {
             "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
@@ -44395,7 +44395,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 41553.77,
       "limitCeapMonthly": "R$ 41.553,77",
-      "spendingPercentage": 74
+      "spendingPercentage": 100
     },
     "attendance": {
       "ratePct": 94,
@@ -45053,20 +45053,20 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 74
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 36.311,14",
-      "savedCeapTotal": "R$ 62.911,59",
+      "spendingCeapMonthly": "R$ 39.593,70",
+      "savedCeapTotal": "R$ 23.520,86",
       "civicConversion": {
         "costPerMinute": "R$ 0,39/min",
         "costPerCitizenYear": "R$ 0,08/ano",
         "salariosMinimos": "194 salários/ano",
         "roiText": "R$ 29,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 36311.14,
+      "spendingCeapMonthlyNum": 39593.7,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 435733.65,
-        "notasFiscais": 291,
+        "totalAno": 475124.38,
+        "notasFiscais": 366,
         "mesesComDespesa": 12,
         "tetoMensalUF": 41553.77,
         "maioresDespesas": [
@@ -45076,7 +45076,7 @@ var candidatesData = _root.candidatesData = [
           },
           {
             "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 44549.08
+            "valor": 83939.81
           },
           {
             "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
@@ -45089,7 +45089,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 41553.77,
       "limitCeapMonthly": "R$ 41.553,77",
-      "spendingPercentage": 87
+      "spendingPercentage": 95
     },
     "attendance": {
       "ratePct": 93,
@@ -45415,20 +45415,20 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 77
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 40.598,08",
-      "savedCeapTotal": "R$ 11.468,33",
+      "spendingCeapMonthly": "R$ 41.470,90",
+      "savedCeapTotal": "R$ 994,47",
       "civicConversion": {
         "costPerMinute": "R$ 0,58/min",
         "costPerCitizenYear": "R$ 0,06/ano",
         "salariosMinimos": "176 salários/ano",
         "roiText": "R$ 34,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 40598.08,
+      "spendingCeapMonthlyNum": 41470.9,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 487176.91,
-        "notasFiscais": 434,
+        "totalAno": 497650.77,
+        "notasFiscais": 445,
         "mesesComDespesa": 12,
         "tetoMensalUF": 41553.77,
         "maioresDespesas": [
@@ -45451,7 +45451,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 41553.77,
       "limitCeapMonthly": "R$ 41.553,77",
-      "spendingPercentage": 98
+      "spendingPercentage": 100
     },
     "attendance": {
       "ratePct": 93,
@@ -45777,20 +45777,20 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 35.419,94",
-      "savedCeapTotal": "R$ 73.605,98",
+      "spendingCeapMonthly": "R$ 41.553,34",
+      "savedCeapTotal": "R$ 5,18",
       "civicConversion": {
         "costPerMinute": "R$ 0,40/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "168 salários/ano",
         "roiText": "R$ 26,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 35419.94,
+      "spendingCeapMonthlyNum": 41553.34,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 425039.26,
-        "notasFiscais": 317,
+        "totalAno": 498640.06,
+        "notasFiscais": 382,
         "mesesComDespesa": 12,
         "tetoMensalUF": 41553.77,
         "maioresDespesas": [
@@ -45803,8 +45803,8 @@ var candidatesData = _root.candidatesData = [
             "valor": 110065.88
           },
           {
-            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
-            "valor": 42146.54
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 109351.47
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -45813,7 +45813,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 41553.77,
       "limitCeapMonthly": "R$ 41.553,77",
-      "spendingPercentage": 85
+      "spendingPercentage": 100
     },
     "attendance": {
       "ratePct": 97,
@@ -46139,30 +46139,30 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 83
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 27.419,70",
-      "savedCeapTotal": "R$ 169.608,86",
+      "spendingCeapMonthly": "R$ 36.059,04",
+      "savedCeapTotal": "R$ 65.936,73",
       "civicConversion": {
         "costPerMinute": "R$ 0,55/min",
         "costPerCitizenYear": "R$ 0,08/ano",
         "salariosMinimos": "169 salários/ano",
         "roiText": "R$ 31,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 27419.7,
+      "spendingCeapMonthlyNum": 36059.04,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 329036.38,
-        "notasFiscais": 335,
+        "totalAno": 432708.51,
+        "notasFiscais": 419,
         "mesesComDespesa": 12,
         "tetoMensalUF": 41553.77,
         "maioresDespesas": [
           {
-            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
-            "valor": 146852
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 193053.46
           },
           {
-            "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 89381.33
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 146852
           },
           {
             "tipo": "HOSPEDAGEM ,EXCETO DO PARLAMENTAR NO DISTRITO FEDERAL.",
@@ -46175,7 +46175,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 41553.77,
       "limitCeapMonthly": "R$ 41.553,77",
-      "spendingPercentage": 66
+      "spendingPercentage": 87
     },
     "attendance": {
       "ratePct": 95,
@@ -46823,26 +46823,26 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 74
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 32.282,52",
-      "savedCeapTotal": "R$ 115.247,94",
+      "spendingCeapMonthly": "R$ 41.149,07",
+      "savedCeapTotal": "R$ 8.849,23",
       "civicConversion": {
         "costPerMinute": "R$ 0,50/min",
         "costPerCitizenYear": "R$ 0,05/ano",
         "salariosMinimos": "161 salários/ano",
         "roiText": "R$ 34,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 32282.52,
+      "spendingCeapMonthlyNum": 41149.07,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 387390.18,
-        "notasFiscais": 380,
+        "totalAno": 493788.89,
+        "notasFiscais": 483,
         "mesesComDespesa": 12,
         "tetoMensalUF": 41886.51,
         "maioresDespesas": [
           {
             "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 207787.26
+            "valor": 314185.97
           },
           {
             "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
@@ -46859,7 +46859,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 41886.51,
       "limitCeapMonthly": "R$ 41.886,51",
-      "spendingPercentage": 77
+      "spendingPercentage": 98
     },
     "attendance": {
       "ratePct": 96,
@@ -47517,20 +47517,20 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 40.088,51",
-      "savedCeapTotal": "R$ 21.575,98",
+      "spendingCeapMonthly": "R$ 42.790,43",
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,59/min",
         "costPerCitizenYear": "R$ 0,08/ano",
         "salariosMinimos": "162 salários/ano",
         "roiText": "R$ 27,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 40088.51,
+      "spendingCeapMonthlyNum": 42790.43,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 481062.14,
-        "notasFiscais": 770,
+        "totalAno": 513485.19,
+        "notasFiscais": 810,
         "mesesComDespesa": 12,
         "tetoMensalUF": 41886.51,
         "maioresDespesas": [
@@ -47543,8 +47543,8 @@ var candidatesData = _root.candidatesData = [
             "valor": 116419.22
           },
           {
-            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
-            "valor": 81565.12
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 90763.1
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -47553,7 +47553,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 41886.51,
       "limitCeapMonthly": "R$ 41.886,51",
-      "spendingPercentage": 96
+      "spendingPercentage": 100
     },
     "attendance": {
       "ratePct": 98,
@@ -47879,20 +47879,20 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 83
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 39.599,67",
-      "savedCeapTotal": "R$ 27.442,07",
+      "spendingCeapMonthly": "R$ 42.054,19",
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,48/min",
         "costPerCitizenYear": "R$ 0,05/ano",
         "salariosMinimos": "171 salários/ano",
         "roiText": "R$ 37,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 39599.67,
+      "spendingCeapMonthlyNum": 42054.19,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 475196.05,
-        "notasFiscais": 522,
+        "totalAno": 504650.24,
+        "notasFiscais": 611,
         "mesesComDespesa": 12,
         "tetoMensalUF": 41886.51,
         "maioresDespesas": [
@@ -47915,7 +47915,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 41886.51,
       "limitCeapMonthly": "R$ 41.886,51",
-      "spendingPercentage": 95
+      "spendingPercentage": 100
     },
     "attendance": {
       "ratePct": 98,
@@ -49207,20 +49207,20 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 39.825,08",
-      "savedCeapTotal": "R$ 24.737,12",
+      "spendingCeapMonthly": "R$ 41.606,23",
+      "savedCeapTotal": "R$ 3.363,41",
       "civicConversion": {
         "costPerMinute": "R$ 0,42/min",
         "costPerCitizenYear": "R$ 0,05/ano",
         "salariosMinimos": "185 salários/ano",
         "roiText": "R$ 36,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 39825.08,
+      "spendingCeapMonthlyNum": 41606.23,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 477901,
-        "notasFiscais": 228,
+        "totalAno": 499274.71,
+        "notasFiscais": 243,
         "mesesComDespesa": 12,
         "tetoMensalUF": 41886.51,
         "maioresDespesas": [
@@ -49233,8 +49233,8 @@ var candidatesData = _root.candidatesData = [
             "valor": 75615.87
           },
           {
-            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
-            "valor": 69193.61
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 71857.16
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -49243,7 +49243,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 41886.51,
       "limitCeapMonthly": "R$ 41.886,51",
-      "spendingPercentage": 95
+      "spendingPercentage": 99
     },
     "attendance": {
       "ratePct": 97,
@@ -50757,20 +50757,20 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 25.203,90",
-      "savedCeapTotal": "R$ 245.612,17",
+      "spendingCeapMonthly": "R$ 29.648,85",
+      "savedCeapTotal": "R$ 192.272,78",
       "civicConversion": {
         "costPerMinute": "R$ 0,58/min",
         "costPerCitizenYear": "R$ 0,09/ano",
         "salariosMinimos": "161 salários/ano",
         "roiText": "R$ 26,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 25203.9,
+      "spendingCeapMonthlyNum": 29648.85,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 302446.79,
-        "notasFiscais": 284,
+        "totalAno": 355786.18,
+        "notasFiscais": 341,
         "mesesComDespesa": 9,
         "tetoMensalUF": 45671.58,
         "maioresDespesas": [
@@ -50779,12 +50779,12 @@ var candidatesData = _root.candidatesData = [
             "valor": 111856.67
           },
           {
-            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
-            "valor": 57160.98
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 79229.29
           },
           {
-            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
-            "valor": 47933.1
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 57160.98
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -50793,7 +50793,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 45671.58,
       "limitCeapMonthly": "R$ 45.671,58",
-      "spendingPercentage": 55
+      "spendingPercentage": 65
     },
     "attendance": {
       "ratePct": 93,
@@ -51119,23 +51119,27 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 83
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 41.332,92",
-      "savedCeapTotal": "R$ 52.063,86",
+      "spendingCeapMonthly": "R$ 45.690,03",
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,51/min",
         "costPerCitizenYear": "R$ 0,08/ano",
         "salariosMinimos": "172 salários/ano",
         "roiText": "R$ 37,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 41332.92,
+      "spendingCeapMonthlyNum": 45690.03,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 495995.1,
-        "notasFiscais": 1135,
+        "totalAno": 548280.38,
+        "notasFiscais": 1188,
         "mesesComDespesa": 12,
         "tetoMensalUF": 45671.58,
         "maioresDespesas": [
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 133900.61
+          },
           {
             "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
             "valor": 87643.6
@@ -51143,10 +51147,6 @@ var candidatesData = _root.candidatesData = [
           {
             "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
             "valor": 82344.24
-          },
-          {
-            "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 81615.33
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -51155,7 +51155,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 45671.58,
       "limitCeapMonthly": "R$ 45.671,58",
-      "spendingPercentage": 91
+      "spendingPercentage": 100
     },
     "attendance": {
       "ratePct": 94,
@@ -51491,7 +51491,7 @@ var candidatesData = _root.candidatesData = [
       },
       "spendingCeapMonthlyNum": 0,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
         "totalAno": 0,
         "notasFiscais": 0,
@@ -52152,20 +52152,20 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 77
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 41.935,74",
-      "savedCeapTotal": "R$ 44.830,11",
+      "spendingCeapMonthly": "R$ 45.962,81",
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,36/min",
         "costPerCitizenYear": "R$ 0,05/ano",
         "salariosMinimos": "180 salários/ano",
         "roiText": "R$ 29,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 41935.74,
+      "spendingCeapMonthlyNum": 45962.81,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 503228.85,
-        "notasFiscais": 525,
+        "totalAno": 551553.71,
+        "notasFiscais": 570,
         "mesesComDespesa": 12,
         "tetoMensalUF": 45671.58,
         "maioresDespesas": [
@@ -52175,7 +52175,7 @@ var candidatesData = _root.candidatesData = [
           },
           {
             "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 52770.95
+            "valor": 101095.81
           },
           {
             "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
@@ -52188,7 +52188,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 45671.58,
       "limitCeapMonthly": "R$ 45.671,58",
-      "spendingPercentage": 92
+      "spendingPercentage": 100
     },
     "attendance": {
       "ratePct": 93,
@@ -52514,30 +52514,30 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 39.951,78",
-      "savedCeapTotal": "R$ 68.637,63",
+      "spendingCeapMonthly": "R$ 47.075,50",
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,49/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "169 salários/ano",
         "roiText": "R$ 28,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 39951.78,
+      "spendingCeapMonthlyNum": 47075.5,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 479421.33,
-        "notasFiscais": 578,
+        "totalAno": 564905.98,
+        "notasFiscais": 659,
         "mesesComDespesa": 12,
         "tetoMensalUF": 45671.58,
         "maioresDespesas": [
           {
-            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
-            "valor": 186229.07
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 193315.43
           },
           {
-            "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 107830.78
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 186229.07
           },
           {
             "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
@@ -52550,7 +52550,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 45671.58,
       "limitCeapMonthly": "R$ 45.671,58",
-      "spendingPercentage": 87
+      "spendingPercentage": 100
     },
     "attendance": {
       "ratePct": 94,
@@ -53838,7 +53838,7 @@ var candidatesData = _root.candidatesData = [
       },
       "spendingCeapMonthlyNum": 36349.79,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
         "totalAno": 436197.51,
         "notasFiscais": 724,
@@ -54190,20 +54190,20 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 34.448,11",
-      "savedCeapTotal": "R$ 25.612,26",
+      "spendingCeapMonthly": "R$ 34.666,77",
+      "savedCeapTotal": "R$ 22.988,29",
       "civicConversion": {
         "costPerMinute": "R$ 0,48/min",
         "costPerCitizenYear": "R$ 0,09/ano",
         "salariosMinimos": "164 salários/ano",
         "roiText": "R$ 39,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 34448.11,
+      "spendingCeapMonthlyNum": 34666.77,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 413377.26,
-        "notasFiscais": 321,
+        "totalAno": 416001.23,
+        "notasFiscais": 324,
         "mesesComDespesa": 12,
         "tetoMensalUF": 36582.46,
         "maioresDespesas": [
@@ -54226,7 +54226,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 36582.46,
       "limitCeapMonthly": "R$ 36.582,46",
-      "spendingPercentage": 94
+      "spendingPercentage": 95
     },
     "attendance": {
       "ratePct": 96,
@@ -54858,7 +54858,7 @@ var candidatesData = _root.candidatesData = [
       },
       "spendingCeapMonthlyNum": 31108.88,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
         "totalAno": 373306.5,
         "notasFiscais": 212,
@@ -55220,7 +55220,7 @@ var candidatesData = _root.candidatesData = [
       },
       "spendingCeapMonthlyNum": 36869.8,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
         "totalAno": 442437.59,
         "notasFiscais": 387,
@@ -55246,7 +55246,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 36582.46,
       "limitCeapMonthly": "R$ 36.582,46",
-      "spendingPercentage": 101
+      "spendingPercentage": 100
     },
     "attendance": {
       "ratePct": 93,
@@ -55894,20 +55894,20 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 35.628,02",
-      "savedCeapTotal": "R$ 11.453,24",
+      "spendingCeapMonthly": "R$ 36.991,53",
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,46/min",
         "costPerCitizenYear": "R$ 0,09/ano",
         "salariosMinimos": "190 salários/ano",
         "roiText": "R$ 35,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 35628.02,
+      "spendingCeapMonthlyNum": 36991.53,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 427536.28,
-        "notasFiscais": 71,
+        "totalAno": 443898.31,
+        "notasFiscais": 83,
         "mesesComDespesa": 12,
         "tetoMensalUF": 36582.46,
         "maioresDespesas": [
@@ -55921,7 +55921,7 @@ var candidatesData = _root.candidatesData = [
           },
           {
             "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 26090.67
+            "valor": 42452.7
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -55930,7 +55930,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 36582.46,
       "limitCeapMonthly": "R$ 36.582,46",
-      "spendingPercentage": 97
+      "spendingPercentage": 100
     },
     "attendance": {
       "ratePct": 95,
@@ -57240,7 +57240,7 @@ var candidatesData = _root.candidatesData = [
       },
       "spendingCeapMonthlyNum": 35288.95,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
         "totalAno": 423467.39,
         "notasFiscais": 123,
@@ -57578,7 +57578,7 @@ var candidatesData = _root.candidatesData = [
       },
       "spendingCeapMonthlyNum": 18794.8,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
         "totalAno": 225537.64,
         "notasFiscais": 130,
@@ -58226,20 +58226,20 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 86
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 34.743,70",
-      "savedCeapTotal": "R$ 78.685,96",
+      "spendingCeapMonthly": "R$ 37.394,65",
+      "savedCeapTotal": "R$ 46.874,54",
       "civicConversion": {
         "costPerMinute": "R$ 0,40/min",
         "costPerCitizenYear": "R$ 0,09/ano",
         "salariosMinimos": "179 salários/ano",
         "roiText": "R$ 37,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 34743.7,
+      "spendingCeapMonthlyNum": 37394.65,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 416924.36,
-        "notasFiscais": 278,
+        "totalAno": 448735.78,
+        "notasFiscais": 294,
         "mesesComDespesa": 12,
         "tetoMensalUF": 41300.86,
         "maioresDespesas": [
@@ -58262,7 +58262,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 41300.86,
       "limitCeapMonthly": "R$ 41.300,86",
-      "spendingPercentage": 84
+      "spendingPercentage": 91
     },
     "attendance": {
       "ratePct": 98,
@@ -58886,20 +58886,20 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 77
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 39.088,84",
-      "savedCeapTotal": "R$ 26.544,28",
+      "spendingCeapMonthly": "R$ 39.706,11",
+      "savedCeapTotal": "R$ 19.137,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,38/min",
         "costPerCitizenYear": "R$ 0,05/ano",
         "salariosMinimos": "194 salários/ano",
         "roiText": "R$ 29,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 39088.84,
+      "spendingCeapMonthlyNum": 39706.11,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 469066.04,
-        "notasFiscais": 497,
+        "totalAno": 476473.32,
+        "notasFiscais": 501,
         "mesesComDespesa": 12,
         "tetoMensalUF": 41300.86,
         "maioresDespesas": [
@@ -58922,7 +58922,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 41300.86,
       "limitCeapMonthly": "R$ 41.300,86",
-      "spendingPercentage": 95
+      "spendingPercentage": 96
     },
     "attendance": {
       "ratePct": 94,
@@ -59258,7 +59258,7 @@ var candidatesData = _root.candidatesData = [
       },
       "spendingCeapMonthlyNum": 41479.08,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
         "totalAno": 497749,
         "notasFiscais": 181,
@@ -59620,7 +59620,7 @@ var candidatesData = _root.candidatesData = [
       },
       "spendingCeapMonthlyNum": 41300.86,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
         "totalAno": 495610.32,
         "notasFiscais": 250,
@@ -60934,20 +60934,20 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 38.036,70",
-      "savedCeapTotal": "R$ 119.814,64",
+      "spendingCeapMonthly": "R$ 47.088,32",
+      "savedCeapTotal": "R$ 11.195,21",
       "civicConversion": {
         "costPerMinute": "R$ 0,45/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "164 salários/ano",
         "roiText": "R$ 36,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 38036.7,
+      "spendingCeapMonthlyNum": 47088.32,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 456440.36,
-        "notasFiscais": 124,
+        "totalAno": 565059.79,
+        "notasFiscais": 211,
         "mesesComDespesa": 12,
         "tetoMensalUF": 48021.25,
         "maioresDespesas": [
@@ -60957,7 +60957,7 @@ var candidatesData = _root.candidatesData = [
           },
           {
             "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 89421.26
+            "valor": 198040.69
           },
           {
             "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
@@ -60970,7 +60970,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 48021.25,
       "limitCeapMonthly": "R$ 48.021,25",
-      "spendingPercentage": 79
+      "spendingPercentage": 98
     },
     "attendance": {
       "ratePct": 96,
@@ -61296,30 +61296,30 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 83
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 23.793,63",
-      "savedCeapTotal": "R$ 290.731,44",
+      "spendingCeapMonthly": "R$ 34.886,90",
+      "savedCeapTotal": "R$ 157.612,18",
       "civicConversion": {
         "costPerMinute": "R$ 0,50/min",
         "costPerCitizenYear": "R$ 0,05/ano",
         "salariosMinimos": "178 salários/ano",
         "roiText": "R$ 39,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 23793.63,
+      "spendingCeapMonthlyNum": 34886.9,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 285523.56,
-        "notasFiscais": 204,
-        "mesesComDespesa": 11,
+        "totalAno": 418642.82,
+        "notasFiscais": 282,
+        "mesesComDespesa": 12,
         "tetoMensalUF": 48021.25,
         "maioresDespesas": [
           {
-            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
-            "valor": 121000
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 247483.47
           },
           {
-            "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 114364.21
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 121000
           },
           {
             "tipo": "PASSAGEM AÉREA - RPA",
@@ -61332,7 +61332,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 48021.25,
       "limitCeapMonthly": "R$ 48.021,25",
-      "spendingPercentage": 50
+      "spendingPercentage": 73
     },
     "attendance": {
       "ratePct": 96,
@@ -61658,20 +61658,20 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 86
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 43.752,84",
-      "savedCeapTotal": "R$ 51.220,93",
+      "spendingCeapMonthly": "R$ 47.079,02",
+      "savedCeapTotal": "R$ 11.306,78",
       "civicConversion": {
         "costPerMinute": "R$ 0,38/min",
         "costPerCitizenYear": "R$ 0,05/ano",
         "salariosMinimos": "188 salários/ano",
         "roiText": "R$ 28,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 43752.84,
+      "spendingCeapMonthlyNum": 47079.02,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 525034.07,
-        "notasFiscais": 170,
+        "totalAno": 564948.22,
+        "notasFiscais": 214,
         "mesesComDespesa": 12,
         "tetoMensalUF": 48021.25,
         "maioresDespesas": [
@@ -61681,7 +61681,7 @@ var candidatesData = _root.candidatesData = [
           },
           {
             "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 114511.88
+            "valor": 154426.03
           },
           {
             "tipo": "TELEFONIA",
@@ -61694,7 +61694,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 48021.25,
       "limitCeapMonthly": "R$ 48.021,25",
-      "spendingPercentage": 91
+      "spendingPercentage": 98
     },
     "attendance": {
       "ratePct": 94,
@@ -62020,20 +62020,20 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 74
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 22.179,10",
-      "savedCeapTotal": "R$ 310.105,77",
+      "spendingCeapMonthly": "R$ 22.654,56",
+      "savedCeapTotal": "R$ 304.400,28",
       "civicConversion": {
         "costPerMinute": "R$ 0,59/min",
         "costPerCitizenYear": "R$ 0,08/ano",
         "salariosMinimos": "174 salários/ano",
         "roiText": "R$ 32,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 22179.1,
+      "spendingCeapMonthlyNum": 22654.56,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 266149.23,
-        "notasFiscais": 165,
+        "totalAno": 271854.72,
+        "notasFiscais": 170,
         "mesesComDespesa": 12,
         "tetoMensalUF": 48021.25,
         "maioresDespesas": [
@@ -62056,7 +62056,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 48021.25,
       "limitCeapMonthly": "R$ 48.021,25",
-      "spendingPercentage": 46
+      "spendingPercentage": 47
     },
     "attendance": {
       "ratePct": 98,
@@ -62382,20 +62382,20 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 77
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 39.351,40",
-      "savedCeapTotal": "R$ 104.038,18",
+      "spendingCeapMonthly": "R$ 46.812,19",
+      "savedCeapTotal": "R$ 14.508,69",
       "civicConversion": {
         "costPerMinute": "R$ 0,48/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "183 salários/ano",
         "roiText": "R$ 38,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 39351.4,
+      "spendingCeapMonthlyNum": 46812.19,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 472216.82,
-        "notasFiscais": 223,
+        "totalAno": 561746.31,
+        "notasFiscais": 318,
         "mesesComDespesa": 12,
         "tetoMensalUF": 48021.25,
         "maioresDespesas": [
@@ -62405,7 +62405,7 @@ var candidatesData = _root.candidatesData = [
           },
           {
             "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 130092.26
+            "valor": 219621.75
           },
           {
             "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
@@ -62418,7 +62418,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 48021.25,
       "limitCeapMonthly": "R$ 48.021,25",
-      "spendingPercentage": 82
+      "spendingPercentage": 97
     },
     "attendance": {
       "ratePct": 94,
@@ -62744,20 +62744,20 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 44.735,80",
-      "savedCeapTotal": "R$ 39.425,44",
+      "spendingCeapMonthly": "R$ 46.853,78",
+      "savedCeapTotal": "R$ 14.009,65",
       "civicConversion": {
         "costPerMinute": "R$ 0,42/min",
         "costPerCitizenYear": "R$ 0,09/ano",
         "salariosMinimos": "168 salários/ano",
         "roiText": "R$ 33,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 44735.8,
+      "spendingCeapMonthlyNum": 46853.78,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 536829.56,
-        "notasFiscais": 179,
+        "totalAno": 562245.35,
+        "notasFiscais": 205,
         "mesesComDespesa": 12,
         "tetoMensalUF": 48021.25,
         "maioresDespesas": [
@@ -62771,7 +62771,7 @@ var candidatesData = _root.candidatesData = [
           },
           {
             "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 48280.58
+            "valor": 73696.37
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -62780,7 +62780,7 @@ var candidatesData = _root.candidatesData = [
       },
       "limitCeapMonthlyNum": 48021.25,
       "limitCeapMonthly": "R$ 48.021,25",
-      "spendingPercentage": 93
+      "spendingPercentage": 98
     },
     "attendance": {
       "ratePct": 93,
@@ -64635,12 +64635,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 91
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 22.004,33",
-      "spendingCeapMonthlyNum": 22004.33,
+      "spendingCeapMonthly": "R$ 26.408,36",
+      "spendingCeapMonthlyNum": 26408.36,
       "limitCeapMonthly": "R$ 42.837,33",
       "limitCeapMonthlyNum": 42837.33,
-      "spendingPercentage": 51,
-      "savedCeapTotal": "R$ 249.996,01",
+      "spendingPercentage": 62,
+      "savedCeapTotal": "R$ 197.147,59",
       "civicConversion": {
         "costPerMinute": "R$ 0,39 / min",
         "costPerCitizen": "R$ 0,004 / ano",
@@ -64648,16 +64648,16 @@ var candidatesData = _root.candidatesData = [
         "roiText": "R$ 18,10 por R$ 1 gasto"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 264051.95,
-        "notasFiscais": 653,
+        "totalAno": 316900.37,
+        "notasFiscais": 827,
         "mesesComDespesa": 12,
         "tetoMensalUF": 42837.33,
         "maioresDespesas": [
           {
             "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 86835.96
+            "valor": 139684.38
           },
           {
             "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
@@ -65071,11 +65071,11 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 95
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 43.143,14",
-      "spendingCeapMonthlyNum": 43143.14,
+      "spendingCeapMonthly": "R$ 45.491,41",
+      "spendingCeapMonthlyNum": 45491.41,
       "limitCeapMonthly": "R$ 42.837,33",
       "limitCeapMonthlyNum": 42837.33,
-      "spendingPercentage": 101,
+      "spendingPercentage": 100,
       "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,37 / min",
@@ -65084,10 +65084,10 @@ var candidatesData = _root.candidatesData = [
         "roiText": "R$ 20,50 por R$ 1 gasto"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 517717.63,
-        "notasFiscais": 895,
+        "totalAno": 545896.96,
+        "notasFiscais": 955,
         "mesesComDespesa": 12,
         "tetoMensalUF": 42837.33,
         "maioresDespesas": [
@@ -65507,12 +65507,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 93
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 27.240,80",
-      "spendingCeapMonthlyNum": 27240.8,
+      "spendingCeapMonthly": "R$ 32.571,39",
+      "spendingCeapMonthlyNum": 32571.39,
       "limitCeapMonthly": "R$ 41.553,77",
       "limitCeapMonthlyNum": 41553.77,
-      "spendingPercentage": 66,
-      "savedCeapTotal": "R$ 171.755,66",
+      "spendingPercentage": 78,
+      "savedCeapTotal": "R$ 107.788,62",
       "civicConversion": {
         "costPerMinute": "R$ 0,35 / min",
         "costPerCitizen": "R$ 0,003 / ano",
@@ -65520,13 +65520,17 @@ var candidatesData = _root.candidatesData = [
         "roiText": "R$ 22,00 por R$ 1 gasto"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 326889.58,
-        "notasFiscais": 285,
+        "totalAno": 390856.62,
+        "notasFiscais": 324,
         "mesesComDespesa": 11,
         "tetoMensalUF": 41553.77,
         "maioresDespesas": [
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 128759.76
+          },
           {
             "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
             "valor": 109296.42
@@ -65534,10 +65538,6 @@ var candidatesData = _root.candidatesData = [
           {
             "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
             "valor": 94310.5
-          },
-          {
-            "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 64792.72
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -65945,12 +65945,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 94
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 32.986,31",
-      "spendingCeapMonthlyNum": 32986.31,
+      "spendingCeapMonthly": "R$ 39.802,57",
+      "spendingCeapMonthlyNum": 39802.57,
       "limitCeapMonthly": "R$ 41.553,77",
       "limitCeapMonthlyNum": 41553.77,
-      "spendingPercentage": 79,
-      "savedCeapTotal": "R$ 102.809,47",
+      "spendingPercentage": 96,
+      "savedCeapTotal": "R$ 21.014,44",
       "civicConversion": {
         "costPerMinute": "R$ 0,36 / min",
         "costPerCitizen": "R$ 0,004 / ano",
@@ -65958,10 +65958,10 @@ var candidatesData = _root.candidatesData = [
         "roiText": "R$ 21,30 por R$ 1 gasto"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 395835.77,
-        "notasFiscais": 124,
+        "totalAno": 477630.8,
+        "notasFiscais": 185,
         "mesesComDespesa": 12,
         "tetoMensalUF": 41553.77,
         "maioresDespesas": [
@@ -65970,12 +65970,12 @@ var candidatesData = _root.candidatesData = [
             "valor": 201798.19
           },
           {
-            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
-            "valor": 115030
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 147546.59
           },
           {
-            "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 65751.56
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 115030
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -66381,12 +66381,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 92
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 41.540,05",
-      "spendingCeapMonthlyNum": 41540.05,
+      "spendingCeapMonthly": "R$ 43.711,22",
+      "spendingCeapMonthlyNum": 43711.22,
       "limitCeapMonthly": "R$ 41.553,77",
       "limitCeapMonthlyNum": 41553.77,
       "spendingPercentage": 100,
-      "savedCeapTotal": "R$ 164,59",
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,34 / min",
         "costPerCitizen": "R$ 0,003 / ano",
@@ -66394,10 +66394,10 @@ var candidatesData = _root.candidatesData = [
         "roiText": "R$ 22,80 por R$ 1 gasto"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 498480.65,
-        "notasFiscais": 503,
+        "totalAno": 524534.61,
+        "notasFiscais": 544,
         "mesesComDespesa": 12,
         "tetoMensalUF": 41553.77,
         "maioresDespesas": [
@@ -66410,8 +66410,8 @@ var candidatesData = _root.candidatesData = [
             "valor": 129900
           },
           {
-            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
-            "valor": 71001.5
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 92534.13
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -66845,12 +66845,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 93
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 41.008,44",
-      "spendingCeapMonthlyNum": 41008.44,
+      "spendingCeapMonthly": "R$ 42.439,86",
+      "spendingCeapMonthlyNum": 42439.86,
       "limitCeapMonthly": "R$ 41.553,77",
       "limitCeapMonthlyNum": 41553.77,
-      "spendingPercentage": 99,
-      "savedCeapTotal": "R$ 6.543,91",
+      "spendingPercentage": 100,
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,33 / min",
         "costPerCitizen": "R$ 0,003 / ano",
@@ -66858,10 +66858,10 @@ var candidatesData = _root.candidatesData = [
         "roiText": "R$ 23,50 por R$ 1 gasto"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 492101.33,
-        "notasFiscais": 678,
+        "totalAno": 509278.35,
+        "notasFiscais": 719,
         "mesesComDespesa": 12,
         "tetoMensalUF": 41553.77,
         "maioresDespesas": [
@@ -68057,12 +68057,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 94
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 32.160,07",
-      "spendingCeapMonthlyNum": 32160.07,
+      "spendingCeapMonthly": "R$ 34.743,57",
+      "spendingCeapMonthlyNum": 34743.57,
       "limitCeapMonthly": "R$ 41.886,51",
       "limitCeapMonthlyNum": 41886.51,
-      "spendingPercentage": 77,
-      "savedCeapTotal": "R$ 116.717,30",
+      "spendingPercentage": 83,
+      "savedCeapTotal": "R$ 85.715,33",
       "civicConversion": {
         "costPerMinute": "R$ 0,34 / min",
         "costPerCitizen": "R$ 0,003 / ano",
@@ -68070,10 +68070,10 @@ var candidatesData = _root.candidatesData = [
         "roiText": "R$ 23,10 por R$ 1 gasto"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 385920.82,
-        "notasFiscais": 677,
+        "totalAno": 416922.79,
+        "notasFiscais": 801,
         "mesesComDespesa": 12,
         "tetoMensalUF": 41886.51,
         "maioresDespesas": [
@@ -68082,12 +68082,12 @@ var candidatesData = _root.candidatesData = [
             "valor": 155413
           },
           {
-            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
-            "valor": 61656.04
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 76135.75
           },
           {
-            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
-            "valor": 54441.38
+            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
+            "valor": 61656.04
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -68493,12 +68493,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 95
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 35.104,41",
-      "spendingCeapMonthlyNum": 35104.41,
+      "spendingCeapMonthly": "R$ 39.568,30",
+      "spendingCeapMonthlyNum": 39568.3,
       "limitCeapMonthly": "R$ 41.886,51",
       "limitCeapMonthlyNum": 41886.51,
-      "spendingPercentage": 84,
-      "savedCeapTotal": "R$ 81.385,20",
+      "spendingPercentage": 94,
+      "savedCeapTotal": "R$ 27.818,56",
       "civicConversion": {
         "costPerMinute": "R$ 0,35 / min",
         "costPerCitizen": "R$ 0,003 / ano",
@@ -68506,16 +68506,16 @@ var candidatesData = _root.candidatesData = [
         "roiText": "R$ 21,90 por R$ 1 gasto"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 421252.92,
-        "notasFiscais": 466,
+        "totalAno": 474819.56,
+        "notasFiscais": 549,
         "mesesComDespesa": 12,
         "tetoMensalUF": 41886.51,
         "maioresDespesas": [
           {
             "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 136891.23
+            "valor": 190457.87
           },
           {
             "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
@@ -69329,12 +69329,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 95
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 40.053,85",
-      "spendingCeapMonthlyNum": 40053.85,
+      "spendingCeapMonthly": "R$ 46.024,88",
+      "spendingCeapMonthlyNum": 46024.88,
       "limitCeapMonthly": "R$ 44.804,65",
       "limitCeapMonthlyNum": 44804.65,
-      "spendingPercentage": 89,
-      "savedCeapTotal": "R$ 57.009,61",
+      "spendingPercentage": 100,
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,36 / min",
         "costPerCitizen": "R$ 0,003 / ano",
@@ -69342,10 +69342,10 @@ var candidatesData = _root.candidatesData = [
         "roiText": "R$ 22,10 por R$ 1 gasto"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 480646.19,
-        "notasFiscais": 278,
+        "totalAno": 552298.55,
+        "notasFiscais": 361,
         "mesesComDespesa": 12,
         "tetoMensalUF": 44804.65,
         "maioresDespesas": [
@@ -69358,8 +69358,8 @@ var candidatesData = _root.candidatesData = [
             "valor": 129600
           },
           {
-            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
-            "valor": 104919.57
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 105187.33
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -69765,12 +69765,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 92
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 9.507,47",
-      "spendingCeapMonthlyNum": 9507.47,
+      "spendingCeapMonthly": "R$ 10.793,33",
+      "spendingCeapMonthlyNum": 10793.33,
       "limitCeapMonthly": "R$ 44.804,65",
       "limitCeapMonthlyNum": 44804.65,
-      "spendingPercentage": 21,
-      "savedCeapTotal": "R$ 423.566,15",
+      "spendingPercentage": 24,
+      "savedCeapTotal": "R$ 408.135,89",
       "civicConversion": {
         "costPerMinute": "R$ 0,36 / min",
         "costPerCitizen": "R$ 0,003 / ano",
@@ -69778,10 +69778,10 @@ var candidatesData = _root.candidatesData = [
         "roiText": "R$ 20,80 por R$ 1 gasto"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 114089.65,
-        "notasFiscais": 211,
+        "totalAno": 129519.91,
+        "notasFiscais": 271,
         "mesesComDespesa": 12,
         "tetoMensalUF": 44804.65,
         "maioresDespesas": [
@@ -69790,12 +69790,12 @@ var candidatesData = _root.candidatesData = [
             "valor": 53547.93
           },
           {
-            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
-            "valor": 32926
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 35948.49
           },
           {
-            "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 20518.23
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 32926
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -71014,7 +71014,7 @@ var candidatesData = _root.candidatesData = [
         "roiText": "R$ 25,20 por R$ 1 gasto"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
         "totalAno": 0,
         "notasFiscais": 0,
@@ -71424,12 +71424,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 95
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 45.180,17",
-      "spendingCeapMonthlyNum": 45180.17,
+      "spendingCeapMonthly": "R$ 49.141,90",
+      "spendingCeapMonthlyNum": 49141.9,
       "limitCeapMonthly": "R$ 48.245,57",
       "limitCeapMonthlyNum": 48245.57,
-      "spendingPercentage": 94,
-      "savedCeapTotal": "R$ 36.784,75",
+      "spendingPercentage": 100,
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,34 / min",
         "costPerCitizen": "R$ 0,003 / ano",
@@ -71437,10 +71437,10 @@ var candidatesData = _root.candidatesData = [
         "roiText": "R$ 23,20 por R$ 1 gasto"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 542162.09,
-        "notasFiscais": 181,
+        "totalAno": 589702.81,
+        "notasFiscais": 252,
         "mesesComDespesa": 12,
         "tetoMensalUF": 48245.57,
         "maioresDespesas": [
@@ -71449,12 +71449,12 @@ var candidatesData = _root.candidatesData = [
             "valor": 357649.99
           },
           {
-            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
-            "valor": 65642.39
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 92362.68
           },
           {
-            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
-            "valor": 60866.3
+            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
+            "valor": 65642.39
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -71926,10 +71926,10 @@ var candidatesData = _root.candidatesData = [
         "roiText": "R$ 19,80 por R$ 1 gasto"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
         "totalAno": 387830.25,
-        "notasFiscais": 59,
+        "notasFiscais": 61,
         "mesesComDespesa": 9,
         "tetoMensalUF": 48245.57,
         "maioresDespesas": [
@@ -73949,12 +73949,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 96
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 44.025,43",
-      "spendingCeapMonthlyNum": 44025.43,
+      "spendingCeapMonthly": "R$ 47.145,23",
+      "spendingCeapMonthlyNum": 47145.23,
       "limitCeapMonthly": "R$ 47.470,60",
       "limitCeapMonthlyNum": 47470.6,
-      "spendingPercentage": 93,
-      "savedCeapTotal": "R$ 41.341,99",
+      "spendingPercentage": 99,
+      "savedCeapTotal": "R$ 3.904,48",
       "civicConversion": {
         "costPerMinute": "R$ 0,34 / min",
         "costPerCitizen": "R$ 0,003 / ano",
@@ -73962,10 +73962,10 @@ var candidatesData = _root.candidatesData = [
         "roiText": "R$ 23,40 por R$ 1 gasto"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 528305.21,
-        "notasFiscais": 573,
+        "totalAno": 565742.72,
+        "notasFiscais": 645,
         "mesesComDespesa": 12,
         "tetoMensalUF": 47470.6,
         "maioresDespesas": [
@@ -73978,8 +73978,8 @@ var candidatesData = _root.candidatesData = [
             "valor": 148397
           },
           {
-            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
-            "valor": 84773.47
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 116559.18
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -74385,12 +74385,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 94
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 42.109,00",
-      "spendingCeapMonthlyNum": 42109,
+      "spendingCeapMonthly": "R$ 43.969,61",
+      "spendingCeapMonthlyNum": 43969.61,
       "limitCeapMonthly": "R$ 47.470,60",
       "limitCeapMonthlyNum": 47470.6,
-      "spendingPercentage": 89,
-      "savedCeapTotal": "R$ 64.339,23",
+      "spendingPercentage": 93,
+      "savedCeapTotal": "R$ 42.011,83",
       "civicConversion": {
         "costPerMinute": "R$ 0,35 / min",
         "costPerCitizen": "R$ 0,003 / ano",
@@ -74398,10 +74398,10 @@ var candidatesData = _root.candidatesData = [
         "roiText": "R$ 22,60 por R$ 1 gasto"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 505307.97,
-        "notasFiscais": 480,
+        "totalAno": 527635.37,
+        "notasFiscais": 508,
         "mesesComDespesa": 12,
         "tetoMensalUF": 47470.6,
         "maioresDespesas": [
@@ -76424,12 +76424,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 97
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 3.373,40",
-      "spendingCeapMonthlyNum": 3373.4,
+      "spendingCeapMonthly": "R$ 8.478,81",
+      "spendingCeapMonthlyNum": 8478.81,
       "limitCeapMonthly": "R$ 49.363,92",
       "limitCeapMonthlyNum": 49363.92,
-      "spendingPercentage": 7,
-      "savedCeapTotal": "R$ 551.886,21",
+      "spendingPercentage": 17,
+      "savedCeapTotal": "R$ 490.621,27",
       "civicConversion": {
         "costPerMinute": "R$ 0,19 / min",
         "costPerCitizen": "R$ 0,002 / ano",
@@ -76437,16 +76437,16 @@ var candidatesData = _root.candidatesData = [
         "roiText": "R$ 39,20 por R$ 1 gasto"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 40480.83,
-        "notasFiscais": 70,
-        "mesesComDespesa": 9,
+        "totalAno": 101745.77,
+        "notasFiscais": 170,
+        "mesesComDespesa": 12,
         "tetoMensalUF": 49363.92,
         "maioresDespesas": [
           {
             "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 40473.98
+            "valor": 101738.92
           },
           {
             "tipo": "TELEFONIA",
@@ -76909,12 +76909,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 94
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 34.179,55",
-      "spendingCeapMonthlyNum": 34179.55,
+      "spendingCeapMonthly": "R$ 48.335,19",
+      "spendingCeapMonthlyNum": 48335.19,
       "limitCeapMonthly": "R$ 49.363,92",
       "limitCeapMonthlyNum": 49363.92,
-      "spendingPercentage": 69,
-      "savedCeapTotal": "R$ 182.212,46",
+      "spendingPercentage": 98,
+      "savedCeapTotal": "R$ 12.344,72",
       "civicConversion": {
         "costPerMinute": "R$ 0,35 / min",
         "costPerCitizen": "R$ 0,003 / ano",
@@ -76922,16 +76922,16 @@ var candidatesData = _root.candidatesData = [
         "roiText": "R$ 22,50 por R$ 1 gasto"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 410154.58,
-        "notasFiscais": 204,
+        "totalAno": 580022.32,
+        "notasFiscais": 301,
         "mesesComDespesa": 12,
         "tetoMensalUF": 49363.92,
         "maioresDespesas": [
           {
             "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 124438.02
+            "valor": 294305.76
           },
           {
             "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
@@ -78816,20 +78816,20 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 94
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 26.049,91",
-      "spendingCeapMonthlyNum": 26049.91,
+      "spendingCeapMonthly": "R$ 31.122,53",
+      "spendingCeapMonthlyNum": 31122.53,
       "limitCeapMonthly": "R$ 46.737,90",
       "limitCeapMonthlyNum": 46737.9,
-      "spendingPercentage": 56,
-      "savedCeapTotal": "R$ 248.255,87",
+      "spendingPercentage": 67,
+      "savedCeapTotal": "R$ 187.384,49",
       "iprSevero": 72,
       "custoMinuto": "R$ 0,16 / min",
       "iprJustification": "Mandato parlamentar de alta intensidade executiva na Mesa Diretora da Câmara dos Deputados.",
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 312598.93,
-        "notasFiscais": 220,
+        "totalAno": 373470.31,
+        "notasFiscais": 261,
         "mesesComDespesa": 12,
         "tetoMensalUF": 46737.9,
         "maioresDespesas": [
@@ -78842,8 +78842,8 @@ var candidatesData = _root.candidatesData = [
             "valor": 81639.7
           },
           {
-            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
-            "valor": 46835.63
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 80170.78
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -79682,7 +79682,7 @@ var candidatesData = _root.candidatesData = [
       "custoMinuto": "R$ 0,08 / min",
       "iprJustification": "Economia contínua de verbas indenizatórias e assiduidade destacada em plenário e comissões.",
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
         "totalAno": 0,
         "notasFiscais": 0,
@@ -80324,30 +80324,30 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 96
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 26.601,29",
-      "spendingCeapMonthlyNum": 26601.29,
+      "spendingCeapMonthly": "R$ 30.851,76",
+      "spendingCeapMonthlyNum": 30851.76,
       "limitCeapMonthly": "R$ 45.671,58",
       "limitCeapMonthlyNum": 45671.58,
-      "spendingPercentage": 58,
-      "savedCeapTotal": "R$ 228.843,46",
+      "spendingPercentage": 68,
+      "savedCeapTotal": "R$ 177.837,86",
       "iprSevero": 80,
       "custoMinuto": "R$ 0,09 / min",
       "iprJustification": "Assiduidade exemplar de 96% e moderação no uso de recursos públicos em viagens oficiais.",
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 319215.5,
-        "notasFiscais": 427,
+        "totalAno": 370221.1,
+        "notasFiscais": 502,
         "mesesComDespesa": 12,
         "tetoMensalUF": 45671.58,
         "maioresDespesas": [
           {
-            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
-            "valor": 116700
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 165090.91
           },
           {
-            "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 114085.31
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 116700
           },
           {
             "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
@@ -80568,20 +80568,20 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 93
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 40.570,04",
-      "spendingCeapMonthlyNum": 40570.04,
+      "spendingCeapMonthly": "R$ 43.536,58",
+      "spendingCeapMonthlyNum": 43536.58,
       "limitCeapMonthly": "R$ 45.671,58",
       "limitCeapMonthlyNum": 45671.58,
-      "spendingPercentage": 89,
-      "savedCeapTotal": "R$ 61.218,47",
+      "spendingPercentage": 95,
+      "savedCeapTotal": "R$ 25.620,00",
       "iprSevero": 76,
       "custoMinuto": "R$ 0,10 / min",
       "iprJustification": "Boa taxa de assiduidade em plenário e atuação expressiva nas redes e em comissões temáticas.",
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 486840.49,
-        "notasFiscais": 397,
+        "totalAno": 522438.96,
+        "notasFiscais": 492,
         "mesesComDespesa": 12,
         "tetoMensalUF": 45671.58,
         "maioresDespesas": [
@@ -80594,8 +80594,8 @@ var candidatesData = _root.candidatesData = [
             "valor": 99161
           },
           {
-            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
-            "valor": 38552.36
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 47833.94
           }
         ],
         "consultadoEm": "2026-10-10",
@@ -81020,20 +81020,20 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 95
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 31.496,14",
-      "spendingCeapMonthlyNum": 31496.14,
+      "spendingCeapMonthly": "R$ 34.146,14",
+      "spendingCeapMonthlyNum": 34146.14,
       "limitCeapMonthly": "R$ 41.553,77",
       "limitCeapMonthlyNum": 41553.77,
-      "spendingPercentage": 76,
-      "savedCeapTotal": "R$ 120.691,54",
+      "spendingPercentage": 82,
+      "savedCeapTotal": "R$ 88.891,52",
       "iprSevero": 82,
       "custoMinuto": "R$ 0,11 / min",
       "iprJustification": "Frequência exemplar em votações nominais e recusa a fundos corporativos de financiamento.",
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
-        "totalAno": 377953.7,
-        "notasFiscais": 635,
+        "totalAno": 409753.72,
+        "notasFiscais": 661,
         "mesesComDespesa": 12,
         "tetoMensalUF": 41553.77,
         "maioresDespesas": [
@@ -81043,7 +81043,7 @@ var candidatesData = _root.candidatesData = [
           },
           {
             "tipo": "PASSAGEM AÉREA - SIGEPA",
-            "valor": 67498.55
+            "valor": 99298.57
           },
           {
             "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
@@ -81274,7 +81274,7 @@ var candidatesData = _root.candidatesData = [
       "custoMinuto": "R$ 0,13 / min",
       "iprJustification": "Atuação focada em comunicação e mobilização de base com frequência parlamentar regular.",
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP + API de dados abertos (passagens SIGEPA)",
         "ano": 2025,
         "totalAno": 369873.35,
         "notasFiscais": 202,
