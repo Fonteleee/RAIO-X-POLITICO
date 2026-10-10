@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T02:56:31.505Z",
+  "generatedAt": "2026-10-10T14:55:47.133Z",
   "ceapYear": 2025,
   "sources": {
     "camara": "https://dadosabertos.camara.leg.br/api/v2",
@@ -11,8 +11,7 @@
       "name": "ACM Neto",
       "positionInData": "Pré-candidato ao Governo do Estado",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-adriana-accorsi",
@@ -39,9 +38,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 423467.39,
+        "notas": 123,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 35288.95,
+        "tetoMensalUF": 41300.86
       }
     },
     {
@@ -58,9 +59,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 427978.2,
+        "notas": 351,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 35664.85,
+        "tetoMensalUF": 41886.51
       }
     },
     {
@@ -77,9 +80,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 472216.82,
+        "notas": 223,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 39351.4,
+        "tetoMensalUF": 48021.25
       }
     },
     {
@@ -96,9 +101,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 427536.28,
+        "notas": 71,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 35628.02,
+        "tetoMensalUF": 36582.46
       }
     },
     {
@@ -123,13 +130,15 @@
       ],
       "situacao": "Vacância",
       "condicaoEleitoral": "Titular",
-      "note": "Situação oficial atual: Vacância — cargo exibido pode estar desatualizado.",
+      "note": "Situação oficial atual: Vacância — cargo exibido pode estar desatualizado. CEAP com despesas em apenas 11 meses de 2025 (licença/suplência).",
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 326889.58,
+        "notas": 285,
+        "mesesComDespesa": 11,
+        "monthlyAvg": 27240.8,
+        "tetoMensalUF": 41553.77
       }
     },
     {
@@ -137,8 +146,7 @@
       "name": "Alexandre Silveira",
       "positionInData": "Senador",
       "status": "NAO_ENCONTRADO_NA_CASA",
-      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
-      "changes": []
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status."
     },
     {
       "id": "cand-alice-portugal",
@@ -154,9 +162,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 463401.99,
+        "notas": 240,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 38616.83,
+        "tetoMensalUF": 44804.65
       }
     },
     {
@@ -164,16 +174,14 @@
       "name": "Álvaro Damião",
       "positionInData": "Vice-Prefeito",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-amanda-vettorazzo",
       "name": "Amanda Vettorazzo",
       "positionInData": "Deputada Federal",
       "status": "NAO_ENCONTRADO_NA_CASA",
-      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
-      "changes": []
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status."
     },
     {
       "id": "cand-amom-mandel",
@@ -200,10 +208,13 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
-      }
+        "totalYear": 40480.83,
+        "notas": 70,
+        "mesesComDespesa": 9,
+        "monthlyAvg": 3373.4,
+        "tetoMensalUF": 49363.92
+      },
+      "note": "CEAP com despesas em apenas 9 meses de 2025 (licença/suplência)."
     },
     {
       "id": "cand-ana-paula-lima",
@@ -219,9 +230,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 503228.85,
+        "notas": 525,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 41935.74,
+        "tetoMensalUF": 45671.58
       }
     },
     {
@@ -229,8 +242,7 @@
       "name": "Anderson Ferreira",
       "positionInData": "Senador",
       "status": "NAO_ENCONTRADO_NA_CASA",
-      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
-      "changes": []
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status."
     },
     {
       "id": "cand-andre-fernandes",
@@ -246,9 +258,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 371773.34,
+        "notas": 178,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 30981.11,
+        "tetoMensalUF": 48245.57
       }
     },
     {
@@ -271,26 +285,27 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
-      }
+        "totalYear": 369873.35,
+        "notas": 202,
+        "mesesComDespesa": 10,
+        "monthlyAvg": 30822.78,
+        "tetoMensalUF": 41886.51
+      },
+      "note": "CEAP com despesas em apenas 10 meses de 2025 (licença/suplência)."
     },
     {
       "id": "cand-antidio-lunelli",
       "name": "Antídio Lunelli",
       "positionInData": "Deputado Federal",
       "status": "NAO_ENCONTRADO_NA_CASA",
-      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
-      "changes": []
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status."
     },
     {
       "id": "cand-antonio-reguffe",
       "name": "Reguffe",
       "positionInData": "Pré-candidato ao Governo do Estado",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-any-ortiz",
@@ -312,9 +327,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 302792.22,
+        "notas": 451,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 25232.69,
+        "tetoMensalUF": 46669.7
       }
     },
     {
@@ -331,9 +348,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 312598.93,
+        "notas": 220,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 26049.91,
+        "tetoMensalUF": 46737.9
       }
     },
     {
@@ -350,9 +369,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 354348.22,
+        "notas": 294,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 29529.02,
+        "tetoMensalUF": 42837.33
       }
     },
     {
@@ -360,8 +381,7 @@
       "name": "Bella Gonçalves",
       "positionInData": "Deputada Estadual",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-benedita-da-silva",
@@ -377,9 +397,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 425039.26,
+        "notas": 317,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 35419.94,
+        "tetoMensalUF": 41553.77
       }
     },
     {
@@ -407,9 +429,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 488461.47,
+        "notas": 765,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 40705.12,
+        "tetoMensalUF": 44665.66
       }
     },
     {
@@ -432,9 +456,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 413377.26,
+        "notas": 321,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 34448.11,
+        "tetoMensalUF": 36582.46
       }
     },
     {
@@ -442,16 +468,14 @@
       "name": "Bruno Engler",
       "positionInData": "Governador",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-bruno-reis",
       "name": "Bruno Reis",
       "positionInData": "Prefeito",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-camilo-santana",
@@ -484,9 +508,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 410154.58,
+        "notas": 204,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 34179.55,
+        "tetoMensalUF": 49363.92
       }
     },
     {
@@ -494,8 +520,7 @@
       "name": "Capitão Wagner",
       "positionInData": "Pré-candidato ao Governo do Estado",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-carla-zambelli",
@@ -508,13 +533,15 @@
       "changes": [],
       "situacao": "Vacância",
       "condicaoEleitoral": "Titular",
-      "note": "Situação oficial atual: Vacância — cargo exibido pode estar desatualizado.",
+      "note": "Situação oficial atual: Vacância — cargo exibido pode estar desatualizado. CEAP com despesas em apenas 7 meses de 2025 (licença/suplência).",
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 227775.02,
+        "notas": 266,
+        "mesesComDespesa": 7,
+        "monthlyAvg": 18981.25,
+        "tetoMensalUF": 42837.33
       }
     },
     {
@@ -522,8 +549,7 @@
       "name": "Carlos Bolsonaro",
       "positionInData": "Vereador",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-carlos-jordy",
@@ -545,9 +571,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 498480.65,
+        "notas": 503,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 41540.05,
+        "tetoMensalUF": 41553.77
       }
     },
     {
@@ -592,9 +620,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 517717.63,
+        "notas": 895,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 43143.14,
+        "tetoMensalUF": 42837.33
       }
     },
     {
@@ -602,8 +632,7 @@
       "name": "Carmelo Neto",
       "positionInData": "Deputado Federal",
       "status": "NAO_ENCONTRADO_NA_CASA",
-      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
-      "changes": []
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status."
     },
     {
       "id": "cand-carmen-zanotto",
@@ -622,7 +651,9 @@
         "year": 2025,
         "totalYear": 0,
         "notas": 0,
-        "monthlyAvg": 0
+        "mesesComDespesa": 0,
+        "monthlyAvg": 0,
+        "tetoMensalUF": 45671.58
       }
     },
     {
@@ -639,9 +670,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 483957.01,
+        "notas": 809,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 40329.75,
+        "tetoMensalUF": 44665.66
       }
     },
     {
@@ -658,9 +691,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 319215.5,
+        "notas": 427,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 26601.29,
+        "tetoMensalUF": 45671.58
       }
     },
     {
@@ -677,9 +712,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 442250.17,
+        "notas": 1017,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 36854.18,
+        "tetoMensalUF": 41886.51
       }
     },
     {
@@ -696,9 +733,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 542162.09,
+        "notas": 181,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 45180.17,
+        "tetoMensalUF": 48245.57
       }
     },
     {
@@ -715,9 +754,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 264051.95,
+        "notas": 653,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 22004.33,
+        "tetoMensalUF": 42837.33
       }
     },
     {
@@ -734,9 +775,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 493681.82,
+        "notas": 511,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 41140.15,
+        "tetoMensalUF": 41553.77
       }
     },
     {
@@ -755,8 +798,7 @@
       "name": "Ciro Gomes",
       "positionInData": "Governador",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-clarissa-tercio",
@@ -778,9 +820,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 518589.72,
+        "notas": 333,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 43215.81,
+        "tetoMensalUF": 47470.6
       }
     },
     {
@@ -788,8 +832,7 @@
       "name": "Cláudio Castro",
       "positionInData": "Ex-Governador",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-cleitinho-azevedo",
@@ -807,16 +850,14 @@
       "name": "Comandante Nádia",
       "positionInData": "Deputada Estadual",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-cristina-graeml",
       "name": "Cristina Graeml",
       "positionInData": "Deputada Federal",
       "status": "NAO_ENCONTRADO_NA_CASA",
-      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
-      "changes": []
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status."
     },
     {
       "id": "cand-damares-alves",
@@ -834,8 +875,7 @@
       "name": "Dandara Tonantzin",
       "positionInData": "Deputada Federal",
       "status": "NAO_ENCONTRADO_NA_CASA",
-      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
-      "changes": []
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status."
     },
     {
       "id": "cand-dani-cunha",
@@ -857,9 +897,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 492101.33,
+        "notas": 678,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 41008.44,
+        "tetoMensalUF": 41553.77
       }
     },
     {
@@ -867,16 +909,14 @@
       "name": "Dani Portela",
       "positionInData": "Deputada Federal",
       "status": "NAO_ENCONTRADO_NA_CASA",
-      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
-      "changes": []
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status."
     },
     {
       "id": "cand-daniel-coelho",
       "name": "Daniel Coelho",
       "positionInData": "Deputado Federal",
       "status": "NAO_ENCONTRADO_NA_CASA",
-      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
-      "changes": []
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status."
     },
     {
       "id": "cand-daniel-freitas",
@@ -892,9 +932,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 479421.33,
+        "notas": 578,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 39951.78,
+        "tetoMensalUF": 45671.58
       }
     },
     {
@@ -902,24 +944,21 @@
       "name": "Danilo Cabral",
       "positionInData": "Deputado Federal",
       "status": "NAO_ENCONTRADO_NA_CASA",
-      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
-      "changes": []
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status."
     },
     {
       "id": "cand-david-almeida",
       "name": "David Almeida",
       "positionInData": "Governador",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-decio-lima",
       "name": "Décio Lima",
       "positionInData": "Pré-candidato ao Governo do Estado",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-delegado-caveira",
@@ -935,9 +974,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 266149.23,
+        "notas": 165,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 22179.1,
+        "tetoMensalUF": 48021.25
       }
     },
     {
@@ -968,7 +1009,9 @@
         "year": 2025,
         "totalYear": 0,
         "notas": 0,
-        "monthlyAvg": 0
+        "mesesComDespesa": 0,
+        "monthlyAvg": 0,
+        "tetoMensalUF": 44665.66
       }
     },
     {
@@ -991,9 +1034,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 381166.19,
+        "notas": 326,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 31763.85,
+        "tetoMensalUF": 41886.51
       }
     },
     {
@@ -1001,8 +1046,7 @@
       "name": "Edegar Pretto",
       "positionInData": "Pré-candidato ao Governo do Estado",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-eder-mauro",
@@ -1018,9 +1062,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 556721.72,
+        "notas": 119,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 46393.48,
+        "tetoMensalUF": 48021.25
       }
     },
     {
@@ -1028,16 +1074,14 @@
       "name": "Edmilson Rodrigues",
       "positionInData": "Deputado Federal",
       "status": "NAO_ENCONTRADO_NA_CASA",
-      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
-      "changes": []
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status."
     },
     {
       "id": "cand-eduarda-campopiano",
       "name": "Eduarda Campopiano",
       "positionInData": "Pré-candidata a Deputada Estadual",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-eduardo-bolsonaro",
@@ -1050,13 +1094,15 @@
       "changes": [],
       "situacao": "Vacância",
       "condicaoEleitoral": "Titular",
-      "note": "Situação oficial atual: Vacância — cargo exibido pode estar desatualizado.",
+      "note": "Situação oficial atual: Vacância — cargo exibido pode estar desatualizado. CEAP com despesas em apenas 5 meses de 2025 (licença/suplência).",
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 55549.81,
+        "notas": 70,
+        "mesesComDespesa": 5,
+        "monthlyAvg": 4629.15,
+        "tetoMensalUF": 42837.33
       }
     },
     {
@@ -1075,32 +1121,28 @@
       "name": "Eduardo Girão",
       "positionInData": "Senador",
       "status": "NAO_ENCONTRADO_NA_CASA",
-      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
-      "changes": []
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status."
     },
     {
       "id": "cand-eduardo-leite",
       "name": "Eduardo Leite",
       "positionInData": "Governador",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-eduardo-paes",
       "name": "Eduardo Paes",
       "positionInData": "Governador",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-eduardo-pimentel",
       "name": "Eduardo Pimentel",
       "positionInData": "Prefeito",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-elmar-nascimento",
@@ -1116,9 +1158,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 348043.84,
+        "notas": 189,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 29003.65,
+        "tetoMensalUF": 44804.65
       }
     },
     {
@@ -1135,9 +1179,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 331563.35,
+        "notas": 460,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 27630.28,
+        "tetoMensalUF": 42837.33
       }
     },
     {
@@ -1154,9 +1200,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 436197.51,
+        "notas": 724,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 36349.79,
+        "tetoMensalUF": 36582.46
       }
     },
     {
@@ -1173,9 +1221,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 421252.92,
+        "notas": 466,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 35104.41,
+        "tetoMensalUF": 41886.51
       }
     },
     {
@@ -1203,26 +1253,27 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
-      }
+        "totalYear": 387830.25,
+        "notas": 59,
+        "mesesComDespesa": 9,
+        "monthlyAvg": 32319.19,
+        "tetoMensalUF": 48245.57
+      },
+      "note": "CEAP com despesas em apenas 9 meses de 2025 (licença/suplência)."
     },
     {
       "id": "cand-evandro-leitao",
       "name": "Evandro Leitão",
       "positionInData": "Prefeito",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-felipe-camozzato",
       "name": "Felipe Camozzato",
       "positionInData": "Deputado Federal",
       "status": "NAO_ENCONTRADO_NA_CASA",
-      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
-      "changes": []
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status."
     },
     {
       "id": "cand-fernanda-melchionna",
@@ -1238,9 +1289,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 449263.56,
+        "notas": 483,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 37438.63,
+        "tetoMensalUF": 46669.7
       }
     },
     {
@@ -1263,18 +1316,20 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
-      }
+        "totalYear": 502528.87,
+        "notas": 703,
+        "mesesComDespesa": 11,
+        "monthlyAvg": 41877.41,
+        "tetoMensalUF": 48245.57
+      },
+      "note": "CEAP com despesas em apenas 11 meses de 2025 (licença/suplência)."
     },
     {
       "id": "cand-fernando-haddad",
       "name": "Fernando Haddad",
       "positionInData": "Governador",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-flavia-morais",
@@ -1296,18 +1351,20 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
-      }
+        "totalYear": 497749,
+        "notas": 181,
+        "mesesComDespesa": 11,
+        "monthlyAvg": 41479.08,
+        "tetoMensalUF": 41300.86
+      },
+      "note": "CEAP com despesas em apenas 11 meses de 2025 (licença/suplência)."
     },
     {
       "id": "cand-flavio-bolsonaro",
       "name": "Flávio Bolsonaro",
       "positionInData": "Presidente da República",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-fred-linhares",
@@ -1323,9 +1380,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 442437.59,
+        "notas": 387,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 36869.8,
+        "tetoMensalUF": 36582.46
       }
     },
     {
@@ -1333,48 +1392,42 @@
       "name": "Fred Rodrigues",
       "positionInData": "Deputado Federal",
       "status": "NAO_ENCONTRADO_NA_CASA",
-      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
-      "changes": []
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status."
     },
     {
       "id": "cand-fuad-noman",
       "name": "Fuad Noman",
       "positionInData": "Prefeito",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-gabriel-azevedo",
       "name": "Gabriel Azevedo",
       "positionInData": "Deputado Federal",
       "status": "NAO_ENCONTRADO_NA_CASA",
-      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
-      "changes": []
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status."
     },
     {
       "id": "cand-gean-loureiro",
       "name": "Gean Loureiro",
       "positionInData": "Pré-candidato ao Governo do Estado",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-geraldo-alckmin",
       "name": "Geraldo Alckmin",
       "positionInData": "Governador",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-gilson-machado",
       "name": "Gilson Machado",
       "positionInData": "Senador",
       "status": "NAO_ENCONTRADO_NA_CASA",
-      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
-      "changes": []
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status."
     },
     {
       "id": "cand-giovani-cherini",
@@ -1390,9 +1443,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 552099.05,
+        "notas": 724,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 46008.25,
+        "tetoMensalUF": 46669.7
       }
     },
     {
@@ -1409,9 +1464,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 377953.7,
+        "notas": 635,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 31496.14,
+        "tetoMensalUF": 41553.77
       }
     },
     {
@@ -1428,18 +1485,20 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
-      }
+        "totalYear": 91691.78,
+        "notas": 106,
+        "mesesComDespesa": 3,
+        "monthlyAvg": 7640.98,
+        "tetoMensalUF": 44665.66
+      },
+      "note": "CEAP com despesas em apenas 3 meses de 2025 (licença/suplência)."
     },
     {
       "id": "cand-goura-nataraj",
       "name": "Goura Nataraj",
       "positionInData": "Deputado Federal",
       "status": "NAO_ENCONTRADO_NA_CASA",
-      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
-      "changes": []
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status."
     },
     {
       "id": "cand-guilherme-boulos",
@@ -1452,13 +1511,15 @@
       "changes": [],
       "situacao": "Licença",
       "condicaoEleitoral": "Titular",
-      "note": "Situação oficial atual: Licença — cargo exibido pode estar desatualizado.",
+      "note": "Situação oficial atual: Licença — cargo exibido pode estar desatualizado. CEAP com despesas em apenas 10 meses de 2025 (licença/suplência).",
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 374273.91,
+        "notas": 163,
+        "mesesComDespesa": 10,
+        "monthlyAvg": 31189.49,
+        "tetoMensalUF": 42837.33
       }
     },
     {
@@ -1466,8 +1527,7 @@
       "name": "Guilherme Kilter",
       "positionInData": "Deputado Estadual",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-gustavo-gayer",
@@ -1483,9 +1543,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 225537.64,
+        "notas": 130,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 18794.8,
+        "tetoMensalUF": 41300.86
       }
     },
     {
@@ -1493,8 +1555,7 @@
       "name": "Guto Zacarias",
       "positionInData": "Deputado Estadual",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-hamilton-mourao",
@@ -1512,8 +1573,7 @@
       "name": "Helder Barbalho",
       "positionInData": "Senador",
       "status": "NAO_ENCONTRADO_NA_CASA",
-      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
-      "changes": []
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status."
     },
     {
       "id": "cand-helio-lopes",
@@ -1535,9 +1595,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 329036.38,
+        "notas": 335,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 27419.7,
+        "tetoMensalUF": 41553.77
       }
     },
     {
@@ -1556,16 +1618,14 @@
       "name": "Ibaneis Rocha",
       "positionInData": "Governador",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-igor-normando",
       "name": "Igor Normando",
       "positionInData": "Prefeito",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-izalci-lucas",
@@ -1589,8 +1649,7 @@
       "name": "Jair Bolsonaro",
       "positionInData": "Ex-Presidente da República",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-jandira-feghali",
@@ -1606,9 +1665,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 462591.56,
+        "notas": 367,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 38549.3,
+        "tetoMensalUF": 41553.77
       }
     },
     {
@@ -1627,24 +1688,21 @@
       "name": "Jerônimo Rodrigues",
       "positionInData": "Governador",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-jesse-sangalli",
       "name": "Jessé Sangalli",
       "positionInData": "Deputado Estadual",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-joao-campos",
       "name": "João Campos",
       "positionInData": "Governador",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-joao-leao",
@@ -1661,9 +1719,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 504224.39,
+        "notas": 430,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 42018.7,
+        "tetoMensalUF": 44804.65
       }
     },
     {
@@ -1671,8 +1731,7 @@
       "name": "João Roma",
       "positionInData": "Senador",
       "status": "NAO_ENCONTRADO_NA_CASA",
-      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
-      "changes": []
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status."
     },
     {
       "id": "cand-jorge-goetten",
@@ -1688,18 +1747,20 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
-      }
+        "totalYear": 302446.79,
+        "notas": 284,
+        "mesesComDespesa": 9,
+        "monthlyAvg": 25203.9,
+        "tetoMensalUF": 45671.58
+      },
+      "note": "CEAP com despesas em apenas 9 meses de 2025 (licença/suplência)."
     },
     {
       "id": "cand-jorginho-mello",
       "name": "Jorginho Mello",
       "positionInData": "Governador",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-jose-guimaraes",
@@ -1716,9 +1777,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 497341.81,
+        "notas": 582,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 41445.15,
+        "tetoMensalUF": 48245.57
       }
     },
     {
@@ -1735,10 +1798,13 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
-      }
+        "totalYear": 285523.56,
+        "notas": 204,
+        "mesesComDespesa": 11,
+        "monthlyAvg": 23793.63,
+        "tetoMensalUF": 48021.25
+      },
+      "note": "CEAP com despesas em apenas 11 meses de 2025 (licença/suplência)."
     },
     {
       "id": "cand-julia-zanatta",
@@ -1754,9 +1820,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 486840.49,
+        "notas": 397,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 40570.04,
+        "tetoMensalUF": 45671.58
       }
     },
     {
@@ -1764,8 +1832,7 @@
       "name": "Juliana Brizola",
       "positionInData": "Deputada Federal",
       "status": "NAO_ENCONTRADO_NA_CASA",
-      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
-      "changes": []
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status."
     },
     {
       "id": "cand-junio-amaral",
@@ -1781,9 +1848,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 385920.82,
+        "notas": 677,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 32160.07,
+        "tetoMensalUF": 41886.51
       }
     },
     {
@@ -1791,8 +1860,7 @@
       "name": "Kátia Oliveira",
       "positionInData": "Deputada Estadual",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-keniston-braga",
@@ -1814,9 +1882,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 536829.56,
+        "notas": 179,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 44735.8,
+        "tetoMensalUF": 48021.25
       }
     },
     {
@@ -1833,9 +1903,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 95689.76,
+        "notas": 113,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 7974.15,
+        "tetoMensalUF": 42837.33
       }
     },
     {
@@ -1843,16 +1915,14 @@
       "name": "Leandro de Jesus",
       "positionInData": "Deputado Federal",
       "status": "NAO_ENCONTRADO_NA_CASA",
-      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
-      "changes": []
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status."
     },
     {
       "id": "cand-leila-do-volei",
       "name": "Leila do Vôlei",
       "positionInData": "Senadora",
       "status": "NAO_ENCONTRADO_NA_CASA",
-      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
-      "changes": []
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status."
     },
     {
       "id": "cand-leo-prates",
@@ -1875,9 +1945,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 480646.19,
+        "notas": 278,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 40053.85,
+        "tetoMensalUF": 44804.65
       }
     },
     {
@@ -1894,9 +1966,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 517252.03,
+        "notas": 837,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 43104.34,
+        "tetoMensalUF": 44804.65
       }
     },
     {
@@ -1913,9 +1987,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 292651.25,
+        "notas": 210,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 24387.6,
+        "tetoMensalUF": 41553.77
       }
     },
     {
@@ -1923,8 +1999,7 @@
       "name": "Lucas Pavanato",
       "positionInData": "Deputado Federal",
       "status": "NAO_ENCONTRADO_NA_CASA",
-      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
-      "changes": []
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status."
     },
     {
       "id": "cand-luciano-ducci",
@@ -1940,9 +2015,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 477488.05,
+        "notas": 681,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 39790.67,
+        "tetoMensalUF": 44665.66
       }
     },
     {
@@ -1959,9 +2036,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 476591.98,
+        "notas": 614,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 39716,
+        "tetoMensalUF": 42837.33
       }
     },
     {
@@ -1978,9 +2057,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 430336.13,
+        "notas": 555,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 35861.34,
+        "tetoMensalUF": 42837.33
       }
     },
     {
@@ -2003,9 +2084,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 499918.57,
+        "notas": 361,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 41659.88,
+        "tetoMensalUF": 48245.57
       }
     },
     {
@@ -2013,24 +2096,21 @@
       "name": "Lula",
       "positionInData": "Presidente da República",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-major-vitor-hugo",
       "name": "Major Vitor Hugo",
       "positionInData": "Deputado Federal",
       "status": "NAO_ENCONTRADO_NA_CASA",
-      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
-      "changes": []
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status."
     },
     {
       "id": "cand-manuela-davila",
       "name": "Manuela d Avila",
       "positionInData": "Senadora",
       "status": "NAO_ENCONTRADO_NA_CASA",
-      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
-      "changes": []
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status."
     },
     {
       "id": "cand-marcel-van-hattem",
@@ -2046,9 +2126,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 258139.73,
+        "notas": 582,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 21511.64,
+        "tetoMensalUF": 46669.7
       }
     },
     {
@@ -2065,9 +2147,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 475196.05,
+        "notas": 522,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 39599.67,
+        "tetoMensalUF": 41886.51
       }
     },
     {
@@ -2084,9 +2168,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 487176.91,
+        "notas": 434,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 40598.08,
+        "tetoMensalUF": 41553.77
       }
     },
     {
@@ -2094,8 +2180,7 @@
       "name": "Marcelo Freixo",
       "positionInData": "Pré-candidato ao Governo do Estado",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-marco-feliciano",
@@ -2111,9 +2196,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 470699.62,
+        "notas": 154,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 39224.97,
+        "tetoMensalUF": 42837.33
       }
     },
     {
@@ -2121,8 +2208,7 @@
       "name": "Marconi Perillo",
       "positionInData": "Pré-candidato ao Governo do Estado",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-marcos-pontes",
@@ -2155,9 +2241,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 505307.97,
+        "notas": 480,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 42109,
+        "tetoMensalUF": 47470.6
       }
     },
     {
@@ -2174,9 +2262,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 534274.69,
+        "notas": 932,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 44522.89,
+        "tetoMensalUF": 46669.7
       }
     },
     {
@@ -2184,24 +2274,21 @@
       "name": "Maria Victoria",
       "positionInData": "Deputada Federal",
       "status": "NAO_ENCONTRADO_NA_CASA",
-      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
-      "changes": []
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status."
     },
     {
       "id": "cand-marilia-arraes",
       "name": "Marília Arraes",
       "positionInData": "Pré-candidata ao Governo do Estado",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-marina-helena",
       "name": "Marina Helena",
       "positionInData": "Deputada Federal",
       "status": "NAO_ENCONTRADO_NA_CASA",
-      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
-      "changes": []
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status."
     },
     {
       "id": "cand-marina-silva",
@@ -2225,7 +2312,9 @@
         "year": 2025,
         "totalYear": 0,
         "notas": 0,
-        "monthlyAvg": 0
+        "mesesComDespesa": 0,
+        "monthlyAvg": 0,
+        "tetoMensalUF": 42837.33
       }
     },
     {
@@ -2242,9 +2331,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 408734.34,
+        "notas": 290,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 34061.2,
+        "tetoMensalUF": 42837.33
       }
     },
     {
@@ -2252,8 +2343,7 @@
       "name": "Maurício Dziedricki",
       "positionInData": "Deputado Federal",
       "status": "NAO_ENCONTRADO_NA_CASA",
-      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
-      "changes": []
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status."
     },
     {
       "id": "cand-mauro-filho",
@@ -2275,9 +2365,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 461767.67,
+        "notas": 194,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 38480.64,
+        "tetoMensalUF": 48245.57
       }
     },
     {
@@ -2285,8 +2377,7 @@
       "name": "Mauro Tramonte",
       "positionInData": "Deputado Federal",
       "status": "NAO_ENCONTRADO_NA_CASA",
-      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
-      "changes": []
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status."
     },
     {
       "id": "cand-mendonca-filho",
@@ -2308,9 +2399,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 491042.23,
+        "notas": 267,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 40920.19,
+        "tetoMensalUF": 47470.6
       }
     },
     {
@@ -2318,8 +2411,7 @@
       "name": "Miguel Coelho",
       "positionInData": "Pré-candidato ao Governo do Estado",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-newton-cardoso-jr",
@@ -2335,9 +2427,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 477901,
+        "notas": 228,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 39825.08,
+        "tetoMensalUF": 41886.51
       }
     },
     {
@@ -2345,8 +2439,7 @@
       "name": "Ney Leprevost",
       "positionInData": "Deputado Federal",
       "status": "NAO_ENCONTRADO_NA_CASA",
-      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
-      "changes": []
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status."
     },
     {
       "id": "cand-nikolas-ferreira",
@@ -2362,9 +2455,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 389263.25,
+        "notas": 339,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 32438.6,
+        "tetoMensalUF": 41886.51
       }
     },
     {
@@ -2387,9 +2482,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 525034.07,
+        "notas": 170,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 43752.84,
+        "tetoMensalUF": 48021.25
       }
     },
     {
@@ -2397,8 +2494,7 @@
       "name": "Olívia Santana",
       "positionInData": "Deputada Estadual",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-orlando-silva",
@@ -2414,9 +2510,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 438143.71,
+        "notas": 206,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 36511.98,
+        "tetoMensalUF": 42837.33
       }
     },
     {
@@ -2439,9 +2537,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 435733.65,
+        "notas": 291,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 36311.14,
+        "tetoMensalUF": 41553.77
       }
     },
     {
@@ -2460,8 +2560,7 @@
       "name": "Pablo Marçal",
       "positionInData": "Pré-candidato a Governador",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-pastor-sargento-isidorio",
@@ -2477,9 +2576,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 114089.65,
+        "notas": 211,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 9507.47,
+        "tetoMensalUF": 44804.65
       }
     },
     {
@@ -2487,16 +2588,14 @@
       "name": "Paula Belmonte",
       "positionInData": "Governadora",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-paulo-martins",
       "name": "Paulo Martins",
       "positionInData": "Senador",
       "status": "NAO_ENCONTRADO_NA_CASA",
-      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
-      "changes": []
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status."
     },
     {
       "id": "cand-paulo-pimenta",
@@ -2512,9 +2611,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 514890.6,
+        "notas": 165,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 42907.55,
+        "tetoMensalUF": 46669.7
       }
     },
     {
@@ -2531,9 +2632,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 528305.21,
+        "notas": 573,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 44025.43,
+        "tetoMensalUF": 47470.6
       }
     },
     {
@@ -2550,9 +2653,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 395835.77,
+        "notas": 124,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 32986.31,
+        "tetoMensalUF": 41553.77
       }
     },
     {
@@ -2569,9 +2674,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 495995.1,
+        "notas": 1135,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 41332.92,
+        "tetoMensalUF": 45671.58
       }
     },
     {
@@ -2588,9 +2695,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 538193.16,
+        "notas": 745,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 44849.43,
+        "tetoMensalUF": 46669.7
       }
     },
     {
@@ -2609,7 +2718,9 @@
         "year": 2025,
         "totalYear": 0,
         "notas": 0,
-        "monthlyAvg": 0
+        "mesesComDespesa": 0,
+        "monthlyAvg": 0,
+        "tetoMensalUF": 48245.57
       }
     },
     {
@@ -2626,9 +2737,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 373306.5,
+        "notas": 212,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 31108.88,
+        "tetoMensalUF": 36582.46
       }
     },
     {
@@ -2647,16 +2760,14 @@
       "name": "Raquel Lyra",
       "positionInData": "Governadora",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-ratinho-junior",
       "name": "Ratinho Junior",
       "positionInData": "Governador",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-reginaldo-lopes",
@@ -2678,9 +2789,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 387390.18,
+        "notas": 380,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 32282.52,
+        "tetoMensalUF": 41886.51
       }
     },
     {
@@ -2688,8 +2801,7 @@
       "name": "Professor Reginaldo Veras",
       "positionInData": "Deputado Federal",
       "status": "NAO_ENCONTRADO_NA_CASA",
-      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
-      "changes": []
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status."
     },
     {
       "id": "cand-renilce-nicodemos",
@@ -2705,9 +2817,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 456440.36,
+        "notas": 124,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 38036.7,
+        "tetoMensalUF": 48021.25
       }
     },
     {
@@ -2715,8 +2829,7 @@
       "name": "Ricardo Nunes",
       "positionInData": "Prefeito",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-ricardo-salles",
@@ -2732,9 +2845,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 501509.43,
+        "notas": 367,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 41792.45,
+        "tetoMensalUF": 42837.33
       }
     },
     {
@@ -2742,16 +2857,14 @@
       "name": "Roberto Cláudio",
       "positionInData": "Pré-candidato ao Governo do Estado",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-rodrigo-pacheco",
       "name": "Rodrigo Pacheco",
       "positionInData": "Senador",
       "status": "NAO_ENCONTRADO_NA_CASA",
-      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
-      "changes": []
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status."
     },
     {
       "id": "cand-rodrigo-valadares",
@@ -2767,9 +2880,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 359572.61,
+        "notas": 266,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 29964.38,
+        "tetoMensalUF": 45933.06
       }
     },
     {
@@ -2786,9 +2901,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 481062.14,
+        "notas": 770,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 40088.51,
+        "tetoMensalUF": 41886.51
       }
     },
     {
@@ -2807,16 +2924,14 @@
       "name": "Romeu Zema",
       "positionInData": "Presidente da República",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-ronaldo-caiado",
       "name": "Ronaldo Caiado",
       "positionInData": "Presidente da República",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-rubens-otoni",
@@ -2832,9 +2947,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 495610.32,
+        "notas": 250,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 41300.86,
+        "tetoMensalUF": 41300.86
       }
     },
     {
@@ -2851,9 +2968,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 433871.32,
+        "notas": 227,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 36155.94,
+        "tetoMensalUF": 42837.33
       }
     },
     {
@@ -2861,16 +2980,14 @@
       "name": "Sandro Mabel",
       "positionInData": "Prefeito",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-sebastiao-melo",
       "name": "Sebastião Melo",
       "positionInData": "Prefeito",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-sergio-moro",
@@ -2897,9 +3014,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 494644.6,
+        "notas": 618,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 41220.38,
+        "tetoMensalUF": 44665.66
       }
     },
     {
@@ -2916,9 +3035,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 416924.36,
+        "notas": 278,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 34743.7,
+        "tetoMensalUF": 41300.86
       }
     },
     {
@@ -2926,8 +3047,7 @@
       "name": "Simone Tebet",
       "positionInData": "Senadora",
       "status": "NAO_ENCONTRADO_NA_CASA",
-      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
-      "changes": []
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status."
     },
     {
       "id": "cand-tabata-amaral",
@@ -2943,9 +3063,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 504994.08,
+        "notas": 487,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 42082.84,
+        "tetoMensalUF": 42837.33
       }
     },
     {
@@ -2962,9 +3084,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 370759.42,
+        "notas": 391,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 30896.62,
+        "tetoMensalUF": 41553.77
       }
     },
     {
@@ -2972,8 +3096,7 @@
       "name": "Tarcísio de Freitas",
       "positionInData": "Governador",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-tarcisio-motta",
@@ -2989,9 +3112,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 441384.85,
+        "notas": 711,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 36782.07,
+        "tetoMensalUF": 41553.77
       }
     },
     {
@@ -3019,9 +3144,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 376091.86,
+        "notas": 151,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 31340.99,
+        "tetoMensalUF": 42837.33
       }
     },
     {
@@ -3029,8 +3156,7 @@
       "name": "Topázio Neto",
       "positionInData": "Prefeito",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-tulio-gadelha",
@@ -3052,9 +3178,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 510122.34,
+        "notas": 532,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 42510.2,
+        "tetoMensalUF": 47470.6
       }
     },
     {
@@ -3073,8 +3201,7 @@
       "name": "Washington Reis",
       "positionInData": "Pré-candidato ao Governo do Estado",
       "status": "SEM_FONTE_API",
-      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
-      "changes": []
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais)."
     },
     {
       "id": "cand-wilder-morais",
@@ -3107,9 +3234,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 469066.04,
+        "notas": 497,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 39088.84,
+        "tetoMensalUF": 41300.86
       }
     },
     {
@@ -3126,9 +3255,11 @@
       "photo": "oficial",
       "ceap": {
         "year": 2025,
-        "totalYear": 0,
-        "notas": 0,
-        "monthlyAvg": 0
+        "totalYear": 448879.76,
+        "notas": 648,
+        "mesesComDespesa": 12,
+        "monthlyAvg": 37406.65,
+        "tetoMensalUF": 44665.66
       }
     },
     {
@@ -3148,6 +3279,6 @@
     "verificados": 127,
     "naoEncontradosNaCasa": 34,
     "semFonteApi": 53,
-    "comAlteracoes": 25
+    "comAlteracoes": 29
   }
 }

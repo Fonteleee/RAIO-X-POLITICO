@@ -478,7 +478,7 @@
       document.getElementById('dossie-salary-future-desc').innerText = s.futureDesc;
 
       document.getElementById('dossie-spending-val').innerText = `${s.spendingCeapMonthly} / mês (${s.spendingPercentage}% do teto)`;
-      document.getElementById('dossie-spending-bar').style.width = `${s.spendingPercentage}%`;
+      document.getElementById('dossie-spending-bar').style.width = `${Math.min(100, s.spendingPercentage)}%`;
       document.getElementById('dossie-spending-limit-val').innerText = s.spendingCeapLimit;
       document.getElementById('dossie-spending-avg-val').innerText = s.spendingStateAverage;
       document.getElementById('dossie-spending-party-val').innerText = s.spendingPartyAverage;

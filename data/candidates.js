@@ -9664,12 +9664,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 94.4
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 450.000,00",
-      "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 450.000,00",
+      "spendingCeapMonthly": "R$ 42.082,84",
+      "spendingCeapMonthlyNum": 42082.84,
+      "limitCeapMonthly": "R$ 42.837,33",
+      "limitCeapMonthlyNum": 42837.33,
+      "spendingPercentage": 98,
+      "savedCeapTotal": "R$ 9.053,88",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -9677,12 +9677,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 504994.08,
+        "notasFiscais": 487,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 42837.33,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 288198.37
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 135849.71
+          },
+          {
+            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
+            "valor": 48808.83
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204534/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/204534"
       }
     },
     "parliamentaryAmendments": {
@@ -10190,12 +10207,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 96.8
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 450.000,00",
-      "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 450.000,00",
+      "spendingCeapMonthly": "R$ 7.974,15",
+      "spendingCeapMonthlyNum": 7974.15,
+      "limitCeapMonthly": "R$ 42.837,33",
+      "limitCeapMonthlyNum": 42837.33,
+      "spendingPercentage": 19,
+      "savedCeapTotal": "R$ 418.358,20",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -10203,12 +10220,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 95689.76,
+        "notasFiscais": 113,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 42837.33,
+        "maioresDespesas": [
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 60646.63
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 35036.97
+          },
+          {
+            "tipo": "TELEFONIA",
+            "valor": 6.16
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204536/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/204536"
       }
     },
     "parliamentaryAmendments": {
@@ -10698,12 +10732,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 91.2
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 450.000,00",
-      "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 450.000,00",
+      "spendingCeapMonthly": "R$ 32.438,60",
+      "spendingCeapMonthlyNum": 32438.6,
+      "limitCeapMonthly": "R$ 41.886,51",
+      "limitCeapMonthlyNum": 41886.51,
+      "spendingPercentage": 77,
+      "savedCeapTotal": "R$ 113.374,87",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -10711,12 +10745,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 389263.25,
+        "notasFiscais": 339,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 41886.51,
+        "maioresDespesas": [
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 150349.17
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 119585.12
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 84418.85
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/209787/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/209787"
       }
     },
     "parliamentaryAmendments": {
@@ -11188,12 +11239,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 93.6
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 450.000,00",
-      "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 450.000,00",
+      "spendingCeapMonthly": "R$ 27.630,28",
+      "spendingCeapMonthlyNum": 27630.28,
+      "limitCeapMonthly": "R$ 42.837,33",
+      "limitCeapMonthlyNum": 42837.33,
+      "spendingPercentage": 65,
+      "savedCeapTotal": "R$ 182.484,61",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -11201,12 +11252,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 331563.35,
+        "notasFiscais": 460,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 42837.33,
+        "maioresDespesas": [
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 150391.68
+          },
+          {
+            "tipo": "SERVIÇO DE SEGURANÇA PRESTADO POR EMPRESA ESPECIALIZADA.",
+            "valor": 104400
+          },
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 50688.45
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220645/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/220645"
       }
     },
     "parliamentaryAmendments": {
@@ -11687,12 +11755,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 92.8
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 450.000,00",
-      "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 450.000,00",
+      "spendingCeapMonthly": "R$ 36.155,94",
+      "spendingCeapMonthlyNum": 36155.94,
+      "limitCeapMonthly": "R$ 42.837,33",
+      "limitCeapMonthlyNum": 42837.33,
+      "spendingPercentage": 84,
+      "savedCeapTotal": "R$ 80.176,64",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -11700,12 +11768,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 433871.32,
+        "notasFiscais": 227,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 42837.33,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 138400
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 124573.07
+          },
+          {
+            "tipo": "SERVIÇO DE SEGURANÇA PRESTADO POR EMPRESA ESPECIALIZADA.",
+            "valor": 91317.49
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204535/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/204535"
       }
     },
     "parliamentaryAmendments": {
@@ -12186,12 +12271,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 96
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 450.000,00",
-      "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 450.000,00",
+      "spendingCeapMonthly": "R$ 21.511,64",
+      "spendingCeapMonthlyNum": 21511.64,
+      "limitCeapMonthly": "R$ 46.669,70",
+      "limitCeapMonthlyNum": 46669.7,
+      "spendingPercentage": 46,
+      "savedCeapTotal": "R$ 301.896,67",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -12199,12 +12284,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 258139.73,
+        "notasFiscais": 582,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 46669.7,
+        "maioresDespesas": [
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 111015.59
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 46737.33
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 37103.92
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/156190/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/156190"
       }
     },
     "parliamentaryAmendments": {
@@ -12685,12 +12787,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 92
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 450.000,00",
-      "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 450.000,00",
+      "spendingCeapMonthly": "R$ 29.529,02",
+      "spendingCeapMonthlyNum": 29529.02,
+      "limitCeapMonthly": "R$ 42.837,33",
+      "limitCeapMonthlyNum": 42837.33,
+      "spendingPercentage": 69,
+      "savedCeapTotal": "R$ 159.699,74",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -12698,12 +12800,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 354348.22,
+        "notasFiscais": 294,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 42837.33,
+        "maioresDespesas": [
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 180047.13
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 58350.55
+          },
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 39999.99
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/178975/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/178975"
       }
     },
     "parliamentaryAmendments": {
@@ -13184,12 +13303,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 93.6
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 450.000,00",
-      "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 450.000,00",
+      "spendingCeapMonthly": "R$ 7.640,98",
+      "spendingCeapMonthlyNum": 7640.98,
+      "limitCeapMonthly": "R$ 44.665,66",
+      "limitCeapMonthlyNum": 44665.66,
+      "spendingPercentage": 17,
+      "savedCeapTotal": "R$ 444.296,14",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -13197,12 +13316,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 91691.78,
+        "notasFiscais": 106,
+        "mesesComDespesa": 3,
+        "tetoMensalUF": 44665.66,
+        "maioresDespesas": [
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 32358.1
+          },
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 25208.92
+          },
+          {
+            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
+            "valor": 14928.75
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/107283/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/107283"
       }
     },
     "parliamentaryAmendments": {
@@ -13683,12 +13819,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 92
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 450.000,00",
-      "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 450.000,00",
+      "spendingCeapMonthly": "R$ 35.861,34",
+      "spendingCeapMonthlyNum": 35861.34,
+      "limitCeapMonthly": "R$ 42.837,33",
+      "limitCeapMonthlyNum": 42837.33,
+      "spendingPercentage": 84,
+      "savedCeapTotal": "R$ 83.711,83",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -13696,12 +13832,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 430336.13,
+        "notasFiscais": 555,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 42837.33,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 115664.55
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 104015.91
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 70424.72
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/74784/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/74784"
       }
     },
     "parliamentaryAmendments": {
@@ -14173,12 +14326,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 94.4
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 450.000,00",
-      "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 450.000,00",
+      "spendingCeapMonthly": "R$ 31.763,85",
+      "spendingCeapMonthlyNum": 31763.85,
+      "limitCeapMonthly": "R$ 41.886,51",
+      "limitCeapMonthlyNum": 41886.51,
+      "spendingPercentage": 76,
+      "savedCeapTotal": "R$ 121.471,93",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -14186,12 +14339,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 381166.19,
+        "notasFiscais": 326,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 41886.51,
+        "maioresDespesas": [
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 95192.92
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 90669.19
+          },
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 88974.88
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220623/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/220623"
       }
     },
     "parliamentaryAmendments": {
@@ -14672,12 +14842,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 88.8
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 450.000,00",
-      "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 450.000,00",
+      "spendingCeapMonthly": "R$ 39.224,97",
+      "spendingCeapMonthlyNum": 39224.97,
+      "limitCeapMonthly": "R$ 42.837,33",
+      "limitCeapMonthlyNum": 42837.33,
+      "spendingPercentage": 92,
+      "savedCeapTotal": "R$ 43.348,34",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -14685,12 +14855,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 470699.62,
+        "notasFiscais": 154,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 42837.33,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 264000
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 133995
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 43094.58
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160601/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/160601"
       }
     },
     "parliamentaryAmendments": {
@@ -15171,12 +15358,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 87.2
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 450.000,00",
-      "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 450.000,00",
+      "spendingCeapMonthly": "R$ 34.061,20",
+      "spendingCeapMonthlyNum": 34061.2,
+      "limitCeapMonthly": "R$ 42.837,33",
+      "limitCeapMonthlyNum": 42837.33,
+      "spendingPercentage": 80,
+      "savedCeapTotal": "R$ 105.313,62",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -15184,12 +15371,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 408734.34,
+        "notasFiscais": 290,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 42837.33,
+        "maioresDespesas": [
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 182428.59
+          },
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 125000
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 63925.86
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220655/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/220655"
       }
     },
     "parliamentaryAmendments": {
@@ -15670,12 +15874,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 93.6
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 450.000,00",
-      "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 450.000,00",
+      "spendingCeapMonthly": "R$ 39.716,00",
+      "spendingCeapMonthlyNum": 39716,
+      "limitCeapMonthly": "R$ 42.837,33",
+      "limitCeapMonthlyNum": 42837.33,
+      "spendingPercentage": 93,
+      "savedCeapTotal": "R$ 37.455,98",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -15683,12 +15887,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 476591.98,
+        "notasFiscais": 614,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 42837.33,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 252564.57
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 132000
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 43468.56
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204526/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/204526"
       }
     },
     "parliamentaryAmendments": {
@@ -16169,12 +16390,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 94.4
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 450.000,00",
-      "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 450.000,00",
+      "spendingCeapMonthly": "R$ 36.854,18",
+      "spendingCeapMonthlyNum": 36854.18,
+      "limitCeapMonthly": "R$ 41.886,51",
+      "limitCeapMonthlyNum": 41886.51,
+      "spendingPercentage": 88,
+      "savedCeapTotal": "R$ 60.387,95",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -16182,12 +16403,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 442250.17,
+        "notasFiscais": 1017,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 41886.51,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 130892.37
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 105916.61
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 69641.01
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/206018/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/206018"
       }
     },
     "parliamentaryAmendments": {
@@ -16668,12 +16906,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 95.2
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 450.000,00",
-      "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 450.000,00",
+      "spendingCeapMonthly": "R$ 41.140,15",
+      "spendingCeapMonthlyNum": 41140.15,
+      "limitCeapMonthly": "R$ 41.553,77",
+      "limitCeapMonthlyNum": 41553.77,
+      "spendingPercentage": 99,
+      "savedCeapTotal": "R$ 4.963,42",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -16681,12 +16919,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 493681.82,
+        "notasFiscais": 511,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 41553.77,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 340251.02
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 98238.79
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 20508.94
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/74171/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/74171"
       }
     },
     "parliamentaryAmendments": {
@@ -17167,12 +17422,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 89.6
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 450.000,00",
-      "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 450.000,00",
+      "spendingCeapMonthly": "R$ 31.189,49",
+      "spendingCeapMonthlyNum": 31189.49,
+      "limitCeapMonthly": "R$ 42.837,33",
+      "limitCeapMonthlyNum": 42837.33,
+      "spendingPercentage": 73,
+      "savedCeapTotal": "R$ 139.774,05",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -17180,12 +17435,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 374273.91,
+        "notasFiscais": 163,
+        "mesesComDespesa": 10,
+        "tetoMensalUF": 42837.33,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 134740
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 103219.97
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 99883.86
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220639/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/220639"
       }
     },
     "parliamentaryAmendments": {
@@ -17657,12 +17929,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 86.4
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 450.000,00",
-      "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 450.000,00",
+      "spendingCeapMonthly": "R$ 35.664,85",
+      "spendingCeapMonthlyNum": 35664.85,
+      "limitCeapMonthly": "R$ 41.886,51",
+      "limitCeapMonthlyNum": 41886.51,
+      "spendingPercentage": 85,
+      "savedCeapTotal": "R$ 74.659,92",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -17670,12 +17942,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 427978.2,
+        "notasFiscais": 351,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 41886.51,
+        "maioresDespesas": [
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 182385.31
+          },
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 137645.9
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 92090.82
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/74646/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/74646"
       }
     },
     "parliamentaryAmendments": {
@@ -18156,12 +18445,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 95.2
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 450.000,00",
-      "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 450.000,00",
+      "spendingCeapMonthly": "R$ 38.549,30",
+      "spendingCeapMonthlyNum": 38549.3,
+      "limitCeapMonthly": "R$ 41.553,77",
+      "limitCeapMonthlyNum": 41553.77,
+      "spendingPercentage": 93,
+      "savedCeapTotal": "R$ 36.053,68",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -18169,12 +18458,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 462591.56,
+        "notasFiscais": 367,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 41553.77,
+        "maioresDespesas": [
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 154835.98
+          },
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 134488
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 84316.58
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/74848/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/74848"
       }
     },
     "parliamentaryAmendments": {
@@ -18655,12 +18961,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 88
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 450.000,00",
-      "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 450.000,00",
+      "spendingCeapMonthly": "R$ 41.792,45",
+      "spendingCeapMonthlyNum": 41792.45,
+      "limitCeapMonthly": "R$ 42.837,33",
+      "limitCeapMonthlyNum": 42837.33,
+      "spendingPercentage": 98,
+      "savedCeapTotal": "R$ 12.538,53",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -18668,12 +18974,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 501509.43,
+        "notasFiscais": 367,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 42837.33,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 233450
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 103049.76
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 41783.15
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220633/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/220633"
       }
     },
     "parliamentaryAmendments": {
@@ -19154,12 +19477,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 94.4
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 450.000,00",
-      "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 450.000,00",
+      "spendingCeapMonthly": "R$ 36.511,98",
+      "spendingCeapMonthlyNum": 36511.98,
+      "limitCeapMonthly": "R$ 42.837,33",
+      "limitCeapMonthlyNum": 42837.33,
+      "spendingPercentage": 85,
+      "savedCeapTotal": "R$ 75.904,25",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -19167,12 +19490,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 438143.71,
+        "notasFiscais": 206,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 42837.33,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 235134.3
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 55941.34
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 53131.94
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/178987/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/178987"
       }
     },
     "parliamentaryAmendments": {
@@ -19653,12 +19993,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 83.2
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 450.000,00",
-      "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 450.000,00",
+      "spendingCeapMonthly": "R$ 18.981,25",
+      "spendingCeapMonthlyNum": 18981.25,
+      "limitCeapMonthly": "R$ 42.837,33",
+      "limitCeapMonthlyNum": 42837.33,
+      "spendingPercentage": 44,
+      "savedCeapTotal": "R$ 286.272,94",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -19666,12 +20006,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 227775.02,
+        "notasFiscais": 266,
+        "mesesComDespesa": 7,
+        "tetoMensalUF": 42837.33,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 84519.81
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 66402.84
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 26144
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204507/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/204507"
       }
     },
     "parliamentaryAmendments": {
@@ -20152,12 +20509,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 94.4
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 450.000,00",
-      "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 450.000,00",
+      "spendingCeapMonthly": "R$ 44.522,89",
+      "spendingCeapMonthlyNum": 44522.89,
+      "limitCeapMonthly": "R$ 46.669,70",
+      "limitCeapMonthlyNum": 46669.7,
+      "spendingPercentage": 95,
+      "savedCeapTotal": "R$ 25.761,71",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -20165,12 +20522,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 534274.69,
+        "notasFiscais": 932,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 46669.7,
+        "maioresDespesas": [
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 146086.26
+          },
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 106307.9
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 95854.43
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/74398/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/74398"
       }
     },
     "parliamentaryAmendments": {
@@ -20651,12 +21025,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 98.4
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 450.000,00",
-      "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 450.000,00",
+      "spendingCeapMonthly": "R$ 31.340,99",
+      "spendingCeapMonthlyNum": 31340.99,
+      "limitCeapMonthly": "R$ 42.837,33",
+      "limitCeapMonthlyNum": 42837.33,
+      "spendingPercentage": 73,
+      "savedCeapTotal": "R$ 137.956,10",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -20664,12 +21038,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 376091.86,
+        "notasFiscais": 151,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 42837.33,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 187543.7
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 105671.89
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 78000
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160976/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/160976"
       }
     },
     "parliamentaryAmendments": {
@@ -21150,12 +21541,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 92
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 450.000,00",
-      "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 450.000,00",
+      "spendingCeapMonthly": "R$ 29.964,38",
+      "spendingCeapMonthlyNum": 29964.38,
+      "limitCeapMonthly": "R$ 45.933,06",
+      "limitCeapMonthlyNum": 45933.06,
+      "spendingPercentage": 65,
+      "savedCeapTotal": "R$ 191.624,11",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -21163,12 +21554,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 359572.61,
+        "notasFiscais": 266,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 45933.06,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 174000
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 61667.35
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 58500
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/165470/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/165470"
       }
     },
     "parliamentaryAmendments": {
@@ -21649,12 +22057,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 84.8
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 450.000,00",
-      "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 450.000,00",
+      "spendingCeapMonthly": "R$ 4.629,15",
+      "spendingCeapMonthlyNum": 4629.15,
+      "limitCeapMonthly": "R$ 42.837,33",
+      "limitCeapMonthlyNum": 42837.33,
+      "spendingPercentage": 11,
+      "savedCeapTotal": "R$ 458.498,15",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
@@ -21662,12 +22070,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 55549.81,
+        "notasFiscais": 70,
+        "mesesComDespesa": 5,
+        "tetoMensalUF": 42837.33,
+        "maioresDespesas": [
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 33586.73
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 26046.34
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 3819.43
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/92346/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/92346"
       }
     },
     "parliamentaryAmendments": {
@@ -24433,23 +24858,43 @@ var candidatesData = _root.candidatesData = [
       ]
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingPercentage": 72,
+      "spendingCeapMonthly": "R$ 42.510,20",
+      "spendingPercentage": 90,
       "civicConversion": {
         "costPerMinute": "R$ 0,52 / min",
         "costPerCitizenYear": "R$ 0,005 / ano",
         "salariosMinimos": 180,
         "roiText": "R$ 28,50 por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 42510.2,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 510122.34,
+        "notasFiscais": 532,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 47470.6,
+        "maioresDespesas": [
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 187985.29
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 108554.35
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 86091.08
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/157130/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/157130"
+      },
+      "limitCeapMonthlyNum": 47470.6,
+      "limitCeapMonthly": "R$ 47.470,60",
+      "savedCeapTotal": "R$ 59.524,86"
     },
     "campaignFinance": {
       "electionYear": 2022,
@@ -24897,23 +25342,43 @@ var candidatesData = _root.candidatesData = [
       ]
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingPercentage": 72,
+      "spendingCeapMonthly": "R$ 30.981,11",
+      "spendingPercentage": 64,
       "civicConversion": {
         "costPerMinute": "R$ 0,52 / min",
         "costPerCitizenYear": "R$ 0,005 / ano",
         "salariosMinimos": 180,
         "roiText": "R$ 28,50 por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 30981.11,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 371773.34,
+        "notasFiscais": 178,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 48245.57,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 202700
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 105492.93
+          },
+          {
+            "tipo": "SERVIÇO DE SEGURANÇA PRESTADO POR EMPRESA ESPECIALIZADA.",
+            "valor": 43500
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220657/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/220657"
+      },
+      "limitCeapMonthlyNum": 48245.57,
+      "limitCeapMonthly": "R$ 48.245,57",
+      "savedCeapTotal": "R$ 207.173,50"
     },
     "campaignFinance": {
       "electionYear": 2022,
@@ -25352,23 +25817,43 @@ var candidatesData = _root.candidatesData = [
       ]
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingPercentage": 72,
+      "spendingCeapMonthly": "R$ 46.393,48",
+      "spendingPercentage": 97,
       "civicConversion": {
         "costPerMinute": "R$ 0,52 / min",
         "costPerCitizenYear": "R$ 0,005 / ano",
         "salariosMinimos": 180,
         "roiText": "R$ 28,50 por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 46393.48,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 556721.72,
+        "notasFiscais": 119,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 48021.25,
+        "maioresDespesas": [
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE EMBARCAÇÕES",
+            "valor": 180000
+          },
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 162400
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 120000
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/178908/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/178908"
+      },
+      "limitCeapMonthlyNum": 48021.25,
+      "limitCeapMonthly": "R$ 48.021,25",
+      "savedCeapTotal": "R$ 19.533,28"
     },
     "campaignFinance": {
       "electionYear": 2022,
@@ -27045,23 +27530,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 83
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 215807.00",
+      "spendingCeapMonthly": "R$ 29.003,65",
+      "savedCeapTotal": "R$ 189.611,96",
       "civicConversion": {
         "costPerMinute": "R$ 0,44/min",
         "costPerCitizenYear": "R$ 0,08/ano",
         "salariosMinimos": "161 salários/ano",
         "roiText": "R$ 40,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 29003.65,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 348043.84,
+        "notasFiscais": 189,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 44804.65,
+        "maioresDespesas": [
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 133166.8
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 82600.93
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 76819.65
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/178854/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/178854"
+      },
+      "limitCeapMonthlyNum": 44804.65,
+      "limitCeapMonthly": "R$ 44.804,65",
+      "spendingPercentage": 65
     },
     "attendance": {
       "ratePct": 98,
@@ -27387,23 +27892,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 86
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 167378.00",
+      "spendingCeapMonthly": "R$ 43.104,34",
+      "savedCeapTotal": "R$ 20.403,77",
       "civicConversion": {
         "costPerMinute": "R$ 0,54/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "171 salários/ano",
         "roiText": "R$ 26,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 43104.34,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 517252.03,
+        "notasFiscais": 837,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 44804.65,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 169500
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 124649.88
+          },
+          {
+            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
+            "valor": 64514.18
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/139285/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/139285"
+      },
+      "limitCeapMonthlyNum": 44804.65,
+      "limitCeapMonthly": "R$ 44.804,65",
+      "spendingPercentage": 96
     },
     "attendance": {
       "ratePct": 96,
@@ -27729,23 +28254,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 74
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 157771.00",
+      "spendingCeapMonthly": "R$ 42.018,70",
+      "savedCeapTotal": "R$ 33.431,41",
       "civicConversion": {
         "costPerMinute": "R$ 0,59/min",
         "costPerCitizenYear": "R$ 0,09/ano",
         "salariosMinimos": "165 salários/ano",
         "roiText": "R$ 37,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 42018.7,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 504224.39,
+        "notasFiscais": 430,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 44804.65,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 164500
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 144033.33
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 97005.4
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/74550/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/74550"
+      },
+      "limitCeapMonthlyNum": 44804.65,
+      "limitCeapMonthly": "R$ 44.804,65",
+      "spendingPercentage": 94
     },
     "attendance": {
       "ratePct": 95,
@@ -28071,23 +28616,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 77
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 158590.00",
+      "spendingCeapMonthly": "R$ 38.616,83",
+      "savedCeapTotal": "R$ 74.253,81",
       "civicConversion": {
         "costPerMinute": "R$ 0,58/min",
         "costPerCitizenYear": "R$ 0,09/ano",
         "salariosMinimos": "174 salários/ano",
         "roiText": "R$ 31,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 38616.83,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 463401.99,
+        "notasFiscais": 240,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 44804.65,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 348196
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 84849.8
+          },
+          {
+            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
+            "valor": 26504.82
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/74057/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/74057"
+      },
+      "limitCeapMonthlyNum": 44804.65,
+      "limitCeapMonthly": "R$ 44.804,65",
+      "spendingPercentage": 86
     },
     "attendance": {
       "ratePct": 96,
@@ -30635,23 +31200,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 86
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 128119.00",
+      "spendingCeapMonthly": "R$ 40.920,19",
+      "savedCeapTotal": "R$ 78.604,97",
       "civicConversion": {
         "costPerMinute": "R$ 0,55/min",
         "costPerCitizenYear": "R$ 0,08/ano",
         "salariosMinimos": "185 salários/ano",
         "roiText": "R$ 40,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 40920.19,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 491042.23,
+        "notasFiscais": 267,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 47470.6,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 173600
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 140101.89
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 76180
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/74428/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/74428"
+      },
+      "limitCeapMonthlyNum": 47470.6,
+      "limitCeapMonthly": "R$ 47.470,60",
+      "spendingPercentage": 86
     },
     "attendance": {
       "ratePct": 93,
@@ -31943,23 +32528,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 83
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 107175.00",
+      "spendingCeapMonthly": "R$ 43.215,81",
+      "savedCeapTotal": "R$ 51.057,48",
       "civicConversion": {
         "costPerMinute": "R$ 0,41/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "179 salários/ano",
         "roiText": "R$ 27,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 43215.81,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 518589.72,
+        "notasFiscais": 333,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 47470.6,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 215650.01
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 110380
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 108963.33
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220665/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/220665"
+      },
+      "limitCeapMonthlyNum": 47470.6,
+      "limitCeapMonthly": "R$ 47.470,60",
+      "spendingPercentage": 91
     },
     "attendance": {
       "ratePct": 94,
@@ -33829,23 +34434,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 86
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 98047.00",
+      "spendingCeapMonthly": "R$ 41.659,88",
+      "savedCeapTotal": "R$ 79.028,27",
       "civicConversion": {
         "costPerMinute": "R$ 0,59/min",
         "costPerCitizenYear": "R$ 0,05/ano",
         "salariosMinimos": "162 salários/ano",
         "roiText": "R$ 39,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 41659.88,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 499918.57,
+        "notasFiscais": 361,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 48245.57,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 207025.9
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 87181.33
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 60487.34
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/178866/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/178866"
+      },
+      "limitCeapMonthlyNum": 48245.57,
+      "limitCeapMonthly": "R$ 48.245,57",
+      "spendingPercentage": 86
     },
     "attendance": {
       "ratePct": 93,
@@ -34171,23 +34796,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 74
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 160878.00",
+      "spendingCeapMonthly": "R$ 41.445,15",
+      "savedCeapTotal": "R$ 81.605,03",
       "civicConversion": {
         "costPerMinute": "R$ 0,39/min",
         "costPerCitizenYear": "R$ 0,09/ano",
         "salariosMinimos": "176 salários/ano",
         "roiText": "R$ 31,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 41445.15,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 497341.81,
+        "notasFiscais": 582,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 48245.57,
+        "maioresDespesas": [
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 161789.01
+          },
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 139196.34
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 102330.34
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/141470/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/141470"
+      },
+      "limitCeapMonthlyNum": 48245.57,
+      "limitCeapMonthly": "R$ 48.245,57",
+      "spendingPercentage": 86
     },
     "attendance": {
       "ratePct": 94,
@@ -34513,23 +35158,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 77
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 204855.00",
+      "spendingCeapMonthly": "R$ 41.877,41",
+      "savedCeapTotal": "R$ 76.417,97",
       "civicConversion": {
         "costPerMinute": "R$ 0,49/min",
         "costPerCitizenYear": "R$ 0,09/ano",
         "salariosMinimos": "192 salários/ano",
         "roiText": "R$ 36,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 41877.41,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 502528.87,
+        "notasFiscais": 703,
+        "mesesComDespesa": 11,
+        "tetoMensalUF": 48245.57,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 175050
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 98132.5
+          },
+          {
+            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
+            "valor": 82886.32
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220656/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/220656"
+      },
+      "limitCeapMonthlyNum": 48245.57,
+      "limitCeapMonthly": "R$ 48.245,57",
+      "spendingPercentage": 87
     },
     "attendance": {
       "ratePct": 97,
@@ -34855,23 +35520,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 209753.00",
+      "spendingCeapMonthly": "R$ 38.480,64",
+      "savedCeapTotal": "R$ 117.179,17",
       "civicConversion": {
         "costPerMinute": "R$ 0,51/min",
         "costPerCitizenYear": "R$ 0,08/ano",
         "salariosMinimos": "171 salários/ano",
         "roiText": "R$ 29,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 38480.64,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 461767.67,
+        "notasFiscais": 194,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 48245.57,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 261400
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 117800
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 64371.04
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204486/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/204486"
+      },
+      "limitCeapMonthlyNum": 48245.57,
+      "limitCeapMonthly": "R$ 48.245,57",
+      "spendingPercentage": 80
     },
     "attendance": {
       "ratePct": 95,
@@ -35529,23 +36214,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 86
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 99310.00",
+      "spendingCeapMonthly": "R$ 40.705,12",
+      "savedCeapTotal": "R$ 47.526,45",
       "civicConversion": {
         "costPerMinute": "R$ 0,59/min",
         "costPerCitizenYear": "R$ 0,05/ano",
         "salariosMinimos": "190 salários/ano",
         "roiText": "R$ 36,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 40705.12,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 488461.47,
+        "notasFiscais": 765,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 44665.66,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 164147
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 114942.87
+          },
+          {
+            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
+            "valor": 74580.29
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220683/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/220683"
+      },
+      "limitCeapMonthlyNum": 44665.66,
+      "limitCeapMonthly": "R$ 44.665,66",
+      "spendingPercentage": 91
     },
     "attendance": {
       "ratePct": 96,
@@ -36515,23 +37220,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 214271.00",
+      "spendingCeapMonthly": "R$ 41.220,38",
+      "savedCeapTotal": "R$ 41.343,32",
       "civicConversion": {
         "costPerMinute": "R$ 0,36/min",
         "costPerCitizenYear": "R$ 0,08/ano",
         "salariosMinimos": "180 salários/ano",
         "roiText": "R$ 30,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 41220.38,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 494644.6,
+        "notasFiscais": 618,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 44665.66,
+        "maioresDespesas": [
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 150706
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 116298.06
+          },
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 115175.57
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/178933/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/178933"
+      },
+      "limitCeapMonthlyNum": 44665.66,
+      "limitCeapMonthly": "R$ 44.665,66",
+      "spendingPercentage": 92
     },
     "attendance": {
       "ratePct": 95,
@@ -37155,23 +37880,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 86
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 142707.00",
+      "spendingCeapMonthly": "R$ 39.790,67",
+      "savedCeapTotal": "R$ 58.499,87",
       "civicConversion": {
         "costPerMinute": "R$ 0,58/min",
         "costPerCitizenYear": "R$ 0,05/ano",
         "salariosMinimos": "167 salários/ano",
         "roiText": "R$ 27,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 39790.67,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 477488.05,
+        "notasFiscais": 681,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 44665.66,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 133075.54
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 82668.19
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 80662.05
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/178931/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/178931"
+      },
+      "limitCeapMonthlyNum": 44665.66,
+      "limitCeapMonthly": "R$ 44.665,66",
+      "spendingPercentage": 89
     },
     "attendance": {
       "ratePct": 96,
@@ -37497,23 +38242,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 74
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 200026.00",
+      "spendingCeapMonthly": "R$ 40.329,75",
+      "savedCeapTotal": "R$ 52.030,91",
       "civicConversion": {
         "costPerMinute": "R$ 0,52/min",
         "costPerCitizenYear": "R$ 0,05/ano",
         "salariosMinimos": "163 salários/ano",
         "roiText": "R$ 39,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 40329.75,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 483957.01,
+        "notasFiscais": 809,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 44665.66,
+        "maioresDespesas": [
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 144268.85
+          },
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 122940
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 98400
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220704/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/220704"
+      },
+      "limitCeapMonthlyNum": 44665.66,
+      "limitCeapMonthly": "R$ 44.665,66",
+      "spendingPercentage": 90
     },
     "attendance": {
       "ratePct": 95,
@@ -37839,23 +38604,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 77
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 159262.00",
+      "spendingCeapMonthly": "R$ 37.406,65",
+      "savedCeapTotal": "R$ 87.108,16",
       "civicConversion": {
         "costPerMinute": "R$ 0,51/min",
         "costPerCitizenYear": "R$ 0,05/ano",
         "salariosMinimos": "164 salários/ano",
         "roiText": "R$ 28,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 37406.65,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 448879.76,
+        "notasFiscais": 648,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 44665.66,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 207016.01
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 90861.48
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 57422.15
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160592/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/160592"
+      },
+      "limitCeapMonthlyNum": 44665.66,
+      "limitCeapMonthly": "R$ 44.665,66",
+      "spendingPercentage": 84
     },
     "attendance": {
       "ratePct": 94,
@@ -38182,7 +38967,7 @@ var candidatesData = _root.candidatesData = [
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 194596.00",
+      "savedCeapTotal": "R$ 535.987,92",
       "civicConversion": {
         "costPerMinute": "R$ 0,41/min",
         "costPerCitizenYear": "R$ 0,08/ano",
@@ -38191,13 +38976,20 @@ var candidatesData = _root.candidatesData = [
       },
       "spendingCeapMonthlyNum": 0,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
         "totalAno": 0,
         "notasFiscais": 0,
+        "mesesComDespesa": 0,
+        "tetoMensalUF": 44665.66,
+        "maioresDespesas": [],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220705/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/220705"
+      },
+      "limitCeapMonthlyNum": 44665.66,
+      "limitCeapMonthly": "R$ 44.665,66",
+      "spendingPercentage": 0
     },
     "attendance": {
       "ratePct": 97,
@@ -40083,23 +40875,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 83
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 124574.00",
+      "spendingCeapMonthly": "R$ 42.907,55",
+      "savedCeapTotal": "R$ 45.145,80",
       "civicConversion": {
         "costPerMinute": "R$ 0,50/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "176 salários/ano",
         "roiText": "R$ 29,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 42907.55,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 514890.6,
+        "notasFiscais": 165,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 46669.7,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 383600
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 52793.04
+          },
+          {
+            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
+            "valor": 28935.18
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/74400/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/74400"
+      },
+      "limitCeapMonthlyNum": 46669.7,
+      "limitCeapMonthly": "R$ 46.669,70",
+      "spendingPercentage": 92
     },
     "attendance": {
       "ratePct": 95,
@@ -40425,23 +41237,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 86
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 213791.00",
+      "spendingCeapMonthly": "R$ 44.849,43",
+      "savedCeapTotal": "R$ 21.843,24",
       "civicConversion": {
         "costPerMinute": "R$ 0,54/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "180 salários/ano",
         "roiText": "R$ 36,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 44849.43,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 538193.16,
+        "notasFiscais": 745,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 46669.7,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 154936.13
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 138269.35
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 105139.84
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204406/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/204406"
+      },
+      "limitCeapMonthlyNum": 46669.7,
+      "limitCeapMonthly": "R$ 46.669,70",
+      "spendingPercentage": 96
     },
     "attendance": {
       "ratePct": 97,
@@ -40767,23 +41599,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 74
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 141427.00",
+      "spendingCeapMonthly": "R$ 37.438,63",
+      "savedCeapTotal": "R$ 110.772,84",
       "civicConversion": {
         "costPerMinute": "R$ 0,53/min",
         "costPerCitizenYear": "R$ 0,06/ano",
         "salariosMinimos": "191 salários/ano",
         "roiText": "R$ 29,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 37438.63,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 449263.56,
+        "notasFiscais": 483,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 46669.7,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 218037
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 89702.56
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 49006.4
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204407/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/204407"
+      },
+      "limitCeapMonthlyNum": 46669.7,
+      "limitCeapMonthly": "R$ 46.669,70",
+      "spendingPercentage": 80
     },
     "attendance": {
       "ratePct": 95,
@@ -41109,23 +41961,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 77
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 117356.00",
+      "spendingCeapMonthly": "R$ 46.008,25",
+      "savedCeapTotal": "R$ 7.937,35",
       "civicConversion": {
         "costPerMinute": "R$ 0,53/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "160 salários/ano",
         "roiText": "R$ 35,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 46008.25,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 552099.05,
+        "notasFiscais": 724,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 46669.7,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 161910
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 129081.1
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 125113
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160673/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/160673"
+      },
+      "limitCeapMonthlyNum": 46669.7,
+      "limitCeapMonthly": "R$ 46.669,70",
+      "spendingPercentage": 99
     },
     "attendance": {
       "ratePct": 96,
@@ -41451,23 +42323,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 200314.00",
+      "spendingCeapMonthly": "R$ 25.232,69",
+      "savedCeapTotal": "R$ 257.244,18",
       "civicConversion": {
         "costPerMinute": "R$ 0,37/min",
         "costPerCitizenYear": "R$ 0,06/ano",
         "salariosMinimos": "189 salários/ano",
         "roiText": "R$ 35,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 25232.69,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 302792.22,
+        "notasFiscais": 451,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 46669.7,
+        "maioresDespesas": [
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 93790.92
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 89181.1
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 81768
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220549/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/220549"
+      },
+      "limitCeapMonthlyNum": 46669.7,
+      "limitCeapMonthly": "R$ 46.669,70",
+      "spendingPercentage": 54
     },
     "attendance": {
       "ratePct": 95,
@@ -42115,23 +43007,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 86
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 113826.00",
+      "spendingCeapMonthly": "R$ 36.782,07",
+      "savedCeapTotal": "R$ 57.260,39",
       "civicConversion": {
         "costPerMinute": "R$ 0,35/min",
         "costPerCitizenYear": "R$ 0,09/ano",
         "salariosMinimos": "160 salários/ano",
         "roiText": "R$ 33,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 36782.07,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 441384.85,
+        "notasFiscais": 711,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 41553.77,
+        "maioresDespesas": [
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 111601.4
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 108954.73
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 97098.47
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220598/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/220598"
+      },
+      "limitCeapMonthlyNum": 41553.77,
+      "limitCeapMonthly": "R$ 41.553,77",
+      "spendingPercentage": 89
     },
     "attendance": {
       "ratePct": 96,
@@ -42789,23 +43701,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 77
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 185354.00",
+      "spendingCeapMonthly": "R$ 24.387,60",
+      "savedCeapTotal": "R$ 205.993,99",
       "civicConversion": {
         "costPerMinute": "R$ 0,48/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "192 salários/ano",
         "roiText": "R$ 29,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 24387.6,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 292651.25,
+        "notasFiscais": 210,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 41553.77,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 117000
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 109313.08
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 58821.68
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/74858/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/74858"
+      },
+      "limitCeapMonthlyNum": 41553.77,
+      "limitCeapMonthly": "R$ 41.553,77",
+      "spendingPercentage": 59
     },
     "attendance": {
       "ratePct": 98,
@@ -43427,23 +44359,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 83
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 114617.00",
+      "spendingCeapMonthly": "R$ 30.896,62",
+      "savedCeapTotal": "R$ 127.885,82",
       "civicConversion": {
         "costPerMinute": "R$ 0,47/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "180 salários/ano",
         "roiText": "R$ 28,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 30896.62,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 370759.42,
+        "notasFiscais": 391,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 41553.77,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 159330
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 95348.99
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 67858.97
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204464/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/204464"
+      },
+      "limitCeapMonthlyNum": 41553.77,
+      "limitCeapMonthly": "R$ 41.553,77",
+      "spendingPercentage": 74
     },
     "attendance": {
       "ratePct": 94,
@@ -44101,23 +45053,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 74
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 200532.00",
+      "spendingCeapMonthly": "R$ 36.311,14",
+      "savedCeapTotal": "R$ 62.911,59",
       "civicConversion": {
         "costPerMinute": "R$ 0,39/min",
         "costPerCitizenYear": "R$ 0,08/ano",
         "salariosMinimos": "194 salários/ano",
         "roiText": "R$ 29,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 36311.14,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 435733.65,
+        "notasFiscais": 291,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 41553.77,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 349000
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 44549.08
+          },
+          {
+            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
+            "valor": 44061.08
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204441/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/204441"
+      },
+      "limitCeapMonthlyNum": 41553.77,
+      "limitCeapMonthly": "R$ 41.553,77",
+      "spendingPercentage": 87
     },
     "attendance": {
       "ratePct": 93,
@@ -44443,23 +45415,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 77
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 190580.00",
+      "spendingCeapMonthly": "R$ 40.598,08",
+      "savedCeapTotal": "R$ 11.468,33",
       "civicConversion": {
         "costPerMinute": "R$ 0,58/min",
         "costPerCitizenYear": "R$ 0,06/ano",
         "salariosMinimos": "176 salários/ano",
         "roiText": "R$ 34,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 40598.08,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 487176.91,
+        "notasFiscais": 434,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 41553.77,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 375400
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 49983.16
+          },
+          {
+            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
+            "valor": 27359.56
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220599/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/220599"
+      },
+      "limitCeapMonthlyNum": 41553.77,
+      "limitCeapMonthly": "R$ 41.553,77",
+      "spendingPercentage": 98
     },
     "attendance": {
       "ratePct": 93,
@@ -44785,23 +45777,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 140917.00",
+      "spendingCeapMonthly": "R$ 35.419,94",
+      "savedCeapTotal": "R$ 73.605,98",
       "civicConversion": {
         "costPerMinute": "R$ 0,40/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "168 salários/ano",
         "roiText": "R$ 26,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 35419.94,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 425039.26,
+        "notasFiscais": 317,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 41553.77,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 216000
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 110065.88
+          },
+          {
+            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
+            "valor": 42146.54
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/73701/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/73701"
+      },
+      "limitCeapMonthlyNum": 41553.77,
+      "limitCeapMonthly": "R$ 41.553,77",
+      "spendingPercentage": 85
     },
     "attendance": {
       "ratePct": 97,
@@ -45127,23 +46139,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 83
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 180430.00",
+      "spendingCeapMonthly": "R$ 27.419,70",
+      "savedCeapTotal": "R$ 169.608,86",
       "civicConversion": {
         "costPerMinute": "R$ 0,55/min",
         "costPerCitizenYear": "R$ 0,08/ano",
         "salariosMinimos": "169 salários/ano",
         "roiText": "R$ 31,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 27419.7,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 329036.38,
+        "notasFiscais": 335,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 41553.77,
+        "maioresDespesas": [
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 146852
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 89381.33
+          },
+          {
+            "tipo": "HOSPEDAGEM ,EXCETO DO PARLAMENTAR NO DISTRITO FEDERAL.",
+            "valor": 36721.39
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204444/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/204444"
+      },
+      "limitCeapMonthlyNum": 41553.77,
+      "limitCeapMonthly": "R$ 41.553,77",
+      "spendingPercentage": 66
     },
     "attendance": {
       "ratePct": 95,
@@ -45791,23 +46823,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 74
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 196744.00",
+      "spendingCeapMonthly": "R$ 32.282,52",
+      "savedCeapTotal": "R$ 115.247,94",
       "civicConversion": {
         "costPerMinute": "R$ 0,50/min",
         "costPerCitizenYear": "R$ 0,05/ano",
         "salariosMinimos": "161 salários/ano",
         "roiText": "R$ 34,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 32282.52,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 387390.18,
+        "notasFiscais": 380,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 41886.51,
+        "maioresDespesas": [
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 207787.26
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 106573.77
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 34850.57
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/74161/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/74161"
+      },
+      "limitCeapMonthlyNum": 41886.51,
+      "limitCeapMonthly": "R$ 41.886,51",
+      "spendingPercentage": 77
     },
     "attendance": {
       "ratePct": 96,
@@ -46465,23 +47517,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 165341.00",
+      "spendingCeapMonthly": "R$ 40.088,51",
+      "savedCeapTotal": "R$ 21.575,98",
       "civicConversion": {
         "costPerMinute": "R$ 0,59/min",
         "costPerCitizenYear": "R$ 0,08/ano",
         "salariosMinimos": "162 salários/ano",
         "roiText": "R$ 27,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 40088.51,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 481062.14,
+        "notasFiscais": 770,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 41886.51,
+        "maioresDespesas": [
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 122511.06
+          },
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 116419.22
+          },
+          {
+            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
+            "valor": 81565.12
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204480/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/204480"
+      },
+      "limitCeapMonthlyNum": 41886.51,
+      "limitCeapMonthly": "R$ 41.886,51",
+      "spendingPercentage": 96
     },
     "attendance": {
       "ratePct": 98,
@@ -46807,23 +47879,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 83
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 153837.00",
+      "spendingCeapMonthly": "R$ 39.599,67",
+      "savedCeapTotal": "R$ 27.442,07",
       "civicConversion": {
         "costPerMinute": "R$ 0,48/min",
         "costPerCitizenYear": "R$ 0,05/ano",
         "salariosMinimos": "171 salários/ano",
         "roiText": "R$ 37,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 39599.67,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 475196.05,
+        "notasFiscais": 522,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 41886.51,
+        "maioresDespesas": [
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 130000
+          },
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 120600
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 96047.53
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/179000/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/179000"
+      },
+      "limitCeapMonthlyNum": 41886.51,
+      "limitCeapMonthly": "R$ 41.886,51",
+      "spendingPercentage": 95
     },
     "attendance": {
       "ratePct": 98,
@@ -48115,23 +49207,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 187748.00",
+      "spendingCeapMonthly": "R$ 39.825,08",
+      "savedCeapTotal": "R$ 24.737,12",
       "civicConversion": {
         "costPerMinute": "R$ 0,42/min",
         "costPerCitizenYear": "R$ 0,05/ano",
         "salariosMinimos": "185 salários/ano",
         "roiText": "R$ 36,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 39825.08,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 477901,
+        "notasFiscais": 228,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 41886.51,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 246190
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 75615.87
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 69193.61
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/178896/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/178896"
+      },
+      "limitCeapMonthlyNum": 41886.51,
+      "limitCeapMonthly": "R$ 41.886,51",
+      "spendingPercentage": 95
     },
     "attendance": {
       "ratePct": 97,
@@ -49645,23 +50757,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 215589.00",
+      "spendingCeapMonthly": "R$ 25.203,90",
+      "savedCeapTotal": "R$ 245.612,17",
       "civicConversion": {
         "costPerMinute": "R$ 0,58/min",
         "costPerCitizenYear": "R$ 0,09/ano",
         "salariosMinimos": "161 salários/ano",
         "roiText": "R$ 26,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 25203.9,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 302446.79,
+        "notasFiscais": 284,
+        "mesesComDespesa": 9,
+        "tetoMensalUF": 45671.58,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 111856.67
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 57160.98
+          },
+          {
+            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
+            "valor": 47933.1
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/214694/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/214694"
+      },
+      "limitCeapMonthlyNum": 45671.58,
+      "limitCeapMonthly": "R$ 45.671,58",
+      "spendingPercentage": 55
     },
     "attendance": {
       "ratePct": 93,
@@ -49987,23 +51119,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 83
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 211619.00",
+      "spendingCeapMonthly": "R$ 41.332,92",
+      "savedCeapTotal": "R$ 52.063,86",
       "civicConversion": {
         "costPerMinute": "R$ 0,51/min",
         "costPerCitizenYear": "R$ 0,08/ano",
         "salariosMinimos": "172 salários/ano",
         "roiText": "R$ 37,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 41332.92,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 495995.1,
+        "notasFiscais": 1135,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 45671.58,
+        "maioresDespesas": [
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 87643.6
+          },
+          {
+            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
+            "valor": 82344.24
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 81615.33
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160604/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/160604"
+      },
+      "limitCeapMonthlyNum": 45671.58,
+      "limitCeapMonthly": "R$ 45.671,58",
+      "spendingPercentage": 91
     },
     "attendance": {
       "ratePct": 94,
@@ -50330,7 +51482,7 @@ var candidatesData = _root.candidatesData = [
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 181699.00",
+      "savedCeapTotal": "R$ 548.058,96",
       "civicConversion": {
         "costPerMinute": "R$ 0,50/min",
         "costPerCitizenYear": "R$ 0,06/ano",
@@ -50339,13 +51491,20 @@ var candidatesData = _root.candidatesData = [
       },
       "spendingCeapMonthlyNum": 0,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
         "totalAno": 0,
         "notasFiscais": 0,
+        "mesesComDespesa": 0,
+        "tetoMensalUF": 45671.58,
+        "maioresDespesas": [],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/164360/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/164360"
+      },
+      "limitCeapMonthlyNum": 45671.58,
+      "limitCeapMonthly": "R$ 45.671,58",
+      "spendingPercentage": 0
     },
     "attendance": {
       "ratePct": 95,
@@ -50993,23 +52152,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 77
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 184027.00",
+      "spendingCeapMonthly": "R$ 41.935,74",
+      "savedCeapTotal": "R$ 44.830,11",
       "civicConversion": {
         "costPerMinute": "R$ 0,36/min",
         "costPerCitizenYear": "R$ 0,05/ano",
         "salariosMinimos": "180 salários/ano",
         "roiText": "R$ 29,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 41935.74,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 503228.85,
+        "notasFiscais": 525,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 45671.58,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 311053.44
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 52770.95
+          },
+          {
+            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
+            "valor": 36901.65
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220556/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/220556"
+      },
+      "limitCeapMonthlyNum": 45671.58,
+      "limitCeapMonthly": "R$ 45.671,58",
+      "spendingPercentage": 92
     },
     "attendance": {
       "ratePct": 93,
@@ -51335,23 +52514,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 175640.00",
+      "spendingCeapMonthly": "R$ 39.951,78",
+      "savedCeapTotal": "R$ 68.637,63",
       "civicConversion": {
         "costPerMinute": "R$ 0,49/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "169 salários/ano",
         "roiText": "R$ 28,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 39951.78,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 479421.33,
+        "notasFiscais": 578,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 45671.58,
+        "maioresDespesas": [
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 186229.07
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 107830.78
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 78708
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204367/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/204367"
+      },
+      "limitCeapMonthlyNum": 45671.58,
+      "limitCeapMonthly": "R$ 45.671,58",
+      "spendingPercentage": 87
     },
     "attendance": {
       "ratePct": 94,
@@ -52629,23 +53828,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 77
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 127986.00",
+      "spendingCeapMonthly": "R$ 36.349,79",
+      "savedCeapTotal": "R$ 2.792,01",
       "civicConversion": {
         "costPerMinute": "R$ 0,44/min",
         "costPerCitizenYear": "R$ 0,06/ano",
         "salariosMinimos": "174 salários/ano",
         "roiText": "R$ 31,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 36349.79,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 436197.51,
+        "notasFiscais": 724,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 36582.46,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 384930
+          },
+          {
+            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
+            "valor": 31793.14
+          },
+          {
+            "tipo": "SERVIÇO DE TÁXI, PEDÁGIO E ESTACIONAMENTO",
+            "valor": 12646.13
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160575/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/160575"
+      },
+      "limitCeapMonthlyNum": 36582.46,
+      "limitCeapMonthly": "R$ 36.582,46",
+      "spendingPercentage": 99
     },
     "attendance": {
       "ratePct": 98,
@@ -52971,23 +54190,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 152344.00",
+      "spendingCeapMonthly": "R$ 34.448,11",
+      "savedCeapTotal": "R$ 25.612,26",
       "civicConversion": {
         "costPerMinute": "R$ 0,48/min",
         "costPerCitizenYear": "R$ 0,09/ano",
         "salariosMinimos": "164 salários/ano",
         "roiText": "R$ 39,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 34448.11,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 413377.26,
+        "notasFiscais": 321,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 36582.46,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 182000
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 129298.58
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 60000
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204374/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/204374"
+      },
+      "limitCeapMonthlyNum": 36582.46,
+      "limitCeapMonthly": "R$ 36.582,46",
+      "spendingPercentage": 94
     },
     "attendance": {
       "ratePct": 96,
@@ -53609,23 +54848,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 86
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 156577.00",
+      "spendingCeapMonthly": "R$ 31.108,88",
+      "savedCeapTotal": "R$ 65.683,02",
       "civicConversion": {
         "costPerMinute": "R$ 0,41/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "181 salários/ano",
         "roiText": "R$ 38,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 31108.88,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 373306.5,
+        "notasFiscais": 212,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 36582.46,
+        "maioresDespesas": [
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 177931.22
+          },
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 108000
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 64200
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220532/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/220532"
+      },
+      "limitCeapMonthlyNum": 36582.46,
+      "limitCeapMonthly": "R$ 36.582,46",
+      "spendingPercentage": 85
     },
     "attendance": {
       "ratePct": 95,
@@ -53951,23 +55210,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 74
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 135076.00",
+      "spendingCeapMonthly": "R$ 36.869,80",
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,49/min",
         "costPerCitizenYear": "R$ 0,08/ano",
         "salariosMinimos": "183 salários/ano",
         "roiText": "R$ 34,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 36869.8,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 442437.59,
+        "notasFiscais": 387,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 36582.46,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 290384.33
+          },
+          {
+            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
+            "valor": 97515.53
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 28800
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220534/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/220534"
+      },
+      "limitCeapMonthlyNum": 36582.46,
+      "limitCeapMonthly": "R$ 36.582,46",
+      "spendingPercentage": 101
     },
     "attendance": {
       "ratePct": 93,
@@ -54615,23 +55894,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 178392.00",
+      "spendingCeapMonthly": "R$ 35.628,02",
+      "savedCeapTotal": "R$ 11.453,24",
       "civicConversion": {
         "costPerMinute": "R$ 0,46/min",
         "costPerCitizenYear": "R$ 0,09/ano",
         "salariosMinimos": "190 salários/ano",
         "roiText": "R$ 35,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 35628.02,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 427536.28,
+        "notasFiscais": 71,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 36582.46,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 323250
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 67042.19
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 26090.67
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/73579/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/73579"
+      },
+      "limitCeapMonthlyNum": 36582.46,
+      "limitCeapMonthly": "R$ 36.582,46",
+      "spendingPercentage": 97
     },
     "attendance": {
       "ratePct": 95,
@@ -55931,23 +57230,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 77
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 210328.00",
+      "spendingCeapMonthly": "R$ 35.288,95",
+      "savedCeapTotal": "R$ 72.142,93",
       "civicConversion": {
         "costPerMinute": "R$ 0,35/min",
         "costPerCitizenYear": "R$ 0,06/ano",
         "salariosMinimos": "177 salários/ano",
         "roiText": "R$ 35,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 35288.95,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 423467.39,
+        "notasFiscais": 123,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 41300.86,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 173476.74
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 134000
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 62818.85
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220565/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/220565"
+      },
+      "limitCeapMonthlyNum": 41300.86,
+      "limitCeapMonthly": "R$ 41.300,86",
+      "spendingPercentage": 85
     },
     "attendance": {
       "ratePct": 97,
@@ -56249,23 +57568,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 216667.00",
+      "spendingCeapMonthly": "R$ 18.794,80",
+      "savedCeapTotal": "R$ 270.072,68",
       "civicConversion": {
         "costPerMinute": "R$ 0,45/min",
         "costPerCitizenYear": "R$ 0,09/ano",
         "salariosMinimos": "192 salários/ano",
         "roiText": "R$ 36,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 18794.8,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 225537.64,
+        "notasFiscais": 130,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 41300.86,
+        "maioresDespesas": [
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 118500
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 91246.29
+          },
+          {
+            "tipo": "TELEFONIA",
+            "valor": 5891.6
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220568/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/220568"
+      },
+      "limitCeapMonthlyNum": 41300.86,
+      "limitCeapMonthly": "R$ 41.300,86",
+      "spendingPercentage": 46
     },
     "attendance": {
       "ratePct": 94,
@@ -56887,23 +58226,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 86
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 106220.00",
+      "spendingCeapMonthly": "R$ 34.743,70",
+      "savedCeapTotal": "R$ 78.685,96",
       "civicConversion": {
         "costPerMinute": "R$ 0,40/min",
         "costPerCitizenYear": "R$ 0,09/ano",
         "salariosMinimos": "179 salários/ano",
         "roiText": "R$ 37,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 34743.7,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 416924.36,
+        "notasFiscais": 278,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 41300.86,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 168360
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 139300
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 91561.07
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220569/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/220569"
+      },
+      "limitCeapMonthlyNum": 41300.86,
+      "limitCeapMonthly": "R$ 41.300,86",
+      "spendingPercentage": 84
     },
     "attendance": {
       "ratePct": 98,
@@ -57527,23 +58886,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 77
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 101486.00",
+      "spendingCeapMonthly": "R$ 39.088,84",
+      "savedCeapTotal": "R$ 26.544,28",
       "civicConversion": {
         "costPerMinute": "R$ 0,38/min",
         "costPerCitizenYear": "R$ 0,05/ano",
         "salariosMinimos": "194 salários/ano",
         "roiText": "R$ 29,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 39088.84,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 469066.04,
+        "notasFiscais": 497,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 41300.86,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 194287.04
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 112213
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 111854.56
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204412/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/204412"
+      },
+      "limitCeapMonthlyNum": 41300.86,
+      "limitCeapMonthly": "R$ 41.300,86",
+      "spendingPercentage": 95
     },
     "attendance": {
       "ratePct": 94,
@@ -57869,23 +59248,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 214466.00",
+      "spendingCeapMonthly": "R$ 41.479,08",
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,43/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "165 salários/ano",
         "roiText": "R$ 32,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 41479.08,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 497749,
+        "notasFiscais": 181,
+        "mesesComDespesa": 11,
+        "tetoMensalUF": 41300.86,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 263000
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 102988.81
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 94259.23
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160598/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/160598"
+      },
+      "limitCeapMonthlyNum": 41300.86,
+      "limitCeapMonthly": "R$ 41.300,86",
+      "spendingPercentage": 100
     },
     "attendance": {
       "ratePct": 97,
@@ -58211,23 +59610,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 83
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 81560.00",
+      "spendingCeapMonthly": "R$ 41.300,86",
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,40/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "161 salários/ano",
         "roiText": "R$ 30,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 41300.86,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 495610.32,
+        "notasFiscais": 250,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 41300.86,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 275420.43
+          },
+          {
+            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
+            "valor": 82127.85
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 74466.63
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/74371/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/74371"
+      },
+      "limitCeapMonthlyNum": 41300.86,
+      "limitCeapMonthly": "R$ 41.300,86",
+      "spendingPercentage": 100
     },
     "attendance": {
       "ratePct": 94,
@@ -59515,23 +60934,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 208515.00",
+      "spendingCeapMonthly": "R$ 38.036,70",
+      "savedCeapTotal": "R$ 119.814,64",
       "civicConversion": {
         "costPerMinute": "R$ 0,45/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "164 salários/ano",
         "roiText": "R$ 36,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 38036.7,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 456440.36,
+        "notasFiscais": 124,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 48021.25,
+        "maioresDespesas": [
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE AERONAVES",
+            "valor": 355400
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 89421.26
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 11586.17
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/153423/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/153423"
+      },
+      "limitCeapMonthlyNum": 48021.25,
+      "limitCeapMonthly": "R$ 48.021,25",
+      "spendingPercentage": 79
     },
     "attendance": {
       "ratePct": 96,
@@ -59857,23 +61296,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 83
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 112848.00",
+      "spendingCeapMonthly": "R$ 23.793,63",
+      "savedCeapTotal": "R$ 290.731,44",
       "civicConversion": {
         "costPerMinute": "R$ 0,50/min",
         "costPerCitizenYear": "R$ 0,05/ano",
         "salariosMinimos": "178 salários/ano",
         "roiText": "R$ 39,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 23793.63,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 285523.56,
+        "notasFiscais": 204,
+        "mesesComDespesa": 11,
+        "tetoMensalUF": 48021.25,
+        "maioresDespesas": [
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 121000
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 114364.21
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - RPA",
+            "valor": 29805.95
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/74079/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/74079"
+      },
+      "limitCeapMonthlyNum": 48021.25,
+      "limitCeapMonthly": "R$ 48.021,25",
+      "spendingPercentage": 50
     },
     "attendance": {
       "ratePct": 96,
@@ -60199,23 +61658,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 86
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 87357.00",
+      "spendingCeapMonthly": "R$ 43.752,84",
+      "savedCeapTotal": "R$ 51.220,93",
       "civicConversion": {
         "costPerMinute": "R$ 0,38/min",
         "costPerCitizenYear": "R$ 0,05/ano",
         "salariosMinimos": "188 salários/ano",
         "roiText": "R$ 28,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 43752.84,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 525034.07,
+        "notasFiscais": 170,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 48021.25,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 410500
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 114511.88
+          },
+          {
+            "tipo": "TELEFONIA",
+            "valor": 22.19
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204498/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/204498"
+      },
+      "limitCeapMonthlyNum": 48021.25,
+      "limitCeapMonthly": "R$ 48.021,25",
+      "spendingPercentage": 91
     },
     "attendance": {
       "ratePct": 94,
@@ -60541,23 +62020,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 74
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 215697.00",
+      "spendingCeapMonthly": "R$ 22.179,10",
+      "savedCeapTotal": "R$ 310.105,77",
       "civicConversion": {
         "costPerMinute": "R$ 0,59/min",
         "costPerCitizenYear": "R$ 0,08/ano",
         "salariosMinimos": "174 salários/ano",
         "roiText": "R$ 32,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 22179.1,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 266149.23,
+        "notasFiscais": 165,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 48021.25,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 199700
+          },
+          {
+            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
+            "valor": 32784.76
+          },
+          {
+            "tipo": "HOSPEDAGEM ,EXCETO DO PARLAMENTAR NO DISTRITO FEDERAL.",
+            "valor": 18405.8
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220673/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/220673"
+      },
+      "limitCeapMonthlyNum": 48021.25,
+      "limitCeapMonthly": "R$ 48.021,25",
+      "spendingPercentage": 46
     },
     "attendance": {
       "ratePct": 98,
@@ -60883,23 +62382,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 77
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 109837.00",
+      "spendingCeapMonthly": "R$ 39.351,40",
+      "savedCeapTotal": "R$ 104.038,18",
       "civicConversion": {
         "costPerMinute": "R$ 0,48/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "183 salários/ano",
         "roiText": "R$ 38,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 39351.4,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 472216.82,
+        "notasFiscais": 223,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 48021.25,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 244781.7
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 130092.26
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 76779
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204495/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/204495"
+      },
+      "limitCeapMonthlyNum": 48021.25,
+      "limitCeapMonthly": "R$ 48.021,25",
+      "spendingPercentage": 82
     },
     "attendance": {
       "ratePct": 94,
@@ -61225,23 +62744,43 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "savedCeapTotal": "R$ 171328.00",
+      "spendingCeapMonthly": "R$ 44.735,80",
+      "savedCeapTotal": "R$ 39.425,44",
       "civicConversion": {
         "costPerMinute": "R$ 0,42/min",
         "costPerCitizenYear": "R$ 0,09/ano",
         "salariosMinimos": "168 salários/ano",
         "roiText": "R$ 33,50 entregues por R$ 1 gasto"
       },
-      "spendingCeapMonthlyNum": 0,
+      "spendingCeapMonthlyNum": 44735.8,
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 536829.56,
+        "notasFiscais": 179,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 48021.25,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 322698
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 115000
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 48280.58
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220677/despesas?ano=2025"
-      }
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/220677"
+      },
+      "limitCeapMonthlyNum": 48021.25,
+      "limitCeapMonthly": "R$ 48.021,25",
+      "spendingPercentage": 93
     },
     "attendance": {
       "ratePct": 93,
@@ -63096,12 +64635,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 91
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 45.000,00",
-      "limitCeapMonthlyNum": 45000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 163.200,00",
+      "spendingCeapMonthly": "R$ 22.004,33",
+      "spendingCeapMonthlyNum": 22004.33,
+      "limitCeapMonthly": "R$ 42.837,33",
+      "limitCeapMonthlyNum": 42837.33,
+      "spendingPercentage": 51,
+      "savedCeapTotal": "R$ 249.996,01",
       "civicConversion": {
         "costPerMinute": "R$ 0,39 / min",
         "costPerCitizen": "R$ 0,004 / ano",
@@ -63109,12 +64648,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "R$ 18,10 por R$ 1 gasto"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 264051.95,
+        "notasFiscais": 653,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 42837.33,
+        "maioresDespesas": [
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 86835.96
+          },
+          {
+            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
+            "valor": 54539.83
+          },
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 35000
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/73441/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/73441"
       }
     },
     "parliamentaryAmendments": {
@@ -63515,12 +65071,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 95
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 45.000,00",
-      "limitCeapMonthlyNum": 45000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 182.400,00",
+      "spendingCeapMonthly": "R$ 43.143,14",
+      "spendingCeapMonthlyNum": 43143.14,
+      "limitCeapMonthly": "R$ 42.837,33",
+      "limitCeapMonthlyNum": 42837.33,
+      "spendingPercentage": 101,
+      "savedCeapTotal": "R$ 0,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,37 / min",
         "costPerCitizen": "R$ 0,004 / ano",
@@ -63528,12 +65084,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "R$ 20,50 por R$ 1 gasto"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 517717.63,
+        "notasFiscais": 895,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 42837.33,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 209890.25
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 154387.24
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 53938.8
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/141398/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/141398"
       }
     },
     "parliamentaryAmendments": {
@@ -63934,12 +65507,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 93
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 44.000,00",
-      "limitCeapMonthlyNum": 44000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 190.800,00",
+      "spendingCeapMonthly": "R$ 27.240,80",
+      "spendingCeapMonthlyNum": 27240.8,
+      "limitCeapMonthly": "R$ 41.553,77",
+      "limitCeapMonthlyNum": 41553.77,
+      "spendingPercentage": 66,
+      "savedCeapTotal": "R$ 171.755,66",
       "civicConversion": {
         "costPerMinute": "R$ 0,35 / min",
         "costPerCitizen": "R$ 0,003 / ano",
@@ -63947,12 +65520,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "R$ 22,00 por R$ 1 gasto"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 326889.58,
+        "notasFiscais": 285,
+        "mesesComDespesa": 11,
+        "tetoMensalUF": 41553.77,
+        "maioresDespesas": [
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 109296.42
+          },
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 94310.5
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 64792.72
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220619/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/220619"
       }
     },
     "parliamentaryAmendments": {
@@ -64355,12 +65945,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 94
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 44.000,00",
-      "limitCeapMonthlyNum": 44000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 177.600,00",
+      "spendingCeapMonthly": "R$ 32.986,31",
+      "spendingCeapMonthlyNum": 32986.31,
+      "limitCeapMonthly": "R$ 41.553,77",
+      "limitCeapMonthlyNum": 41553.77,
+      "spendingPercentage": 79,
+      "savedCeapTotal": "R$ 102.809,47",
       "civicConversion": {
         "costPerMinute": "R$ 0,36 / min",
         "costPerCitizen": "R$ 0,004 / ano",
@@ -64368,12 +65958,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "R$ 21,30 por R$ 1 gasto"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 395835.77,
+        "notasFiscais": 124,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 41553.77,
+        "maioresDespesas": [
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 201798.19
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 115030
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 65751.56
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/122158/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/122158"
       }
     },
     "parliamentaryAmendments": {
@@ -64774,12 +66381,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 92
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 44.000,00",
-      "limitCeapMonthlyNum": 44000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 198.000,00",
+      "spendingCeapMonthly": "R$ 41.540,05",
+      "spendingCeapMonthlyNum": 41540.05,
+      "limitCeapMonthly": "R$ 41.553,77",
+      "limitCeapMonthlyNum": 41553.77,
+      "spendingPercentage": 100,
+      "savedCeapTotal": "R$ 164,59",
       "civicConversion": {
         "costPerMinute": "R$ 0,34 / min",
         "costPerCitizen": "R$ 0,003 / ano",
@@ -64787,12 +66394,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "R$ 22,80 por R$ 1 gasto"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 498480.65,
+        "notasFiscais": 503,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 41553.77,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 164300
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 129900
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 71001.5
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204460/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/204460"
       }
     },
     "parliamentaryAmendments": {
@@ -65221,12 +66845,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 93
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 44.000,00",
-      "limitCeapMonthlyNum": 44000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 206.400,00",
+      "spendingCeapMonthly": "R$ 41.008,44",
+      "spendingCeapMonthlyNum": 41008.44,
+      "limitCeapMonthly": "R$ 41.553,77",
+      "limitCeapMonthlyNum": 41553.77,
+      "spendingPercentage": 99,
+      "savedCeapTotal": "R$ 6.543,91",
       "civicConversion": {
         "costPerMinute": "R$ 0,33 / min",
         "costPerCitizen": "R$ 0,003 / ano",
@@ -65234,12 +66858,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "R$ 23,50 por R$ 1 gasto"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 492101.33,
+        "notasFiscais": 678,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 41553.77,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 125000
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 120437.48
+          },
+          {
+            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
+            "valor": 104127.29
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220603/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/220603"
       }
     },
     "parliamentaryAmendments": {
@@ -66416,12 +68057,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 94
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 44.000,00",
-      "limitCeapMonthlyNum": 44000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 201.600,00",
+      "spendingCeapMonthly": "R$ 32.160,07",
+      "spendingCeapMonthlyNum": 32160.07,
+      "limitCeapMonthly": "R$ 41.886,51",
+      "limitCeapMonthlyNum": 41886.51,
+      "spendingPercentage": 77,
+      "savedCeapTotal": "R$ 116.717,30",
       "civicConversion": {
         "costPerMinute": "R$ 0,34 / min",
         "costPerCitizen": "R$ 0,003 / ano",
@@ -66429,12 +68070,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "R$ 23,10 por R$ 1 gasto"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 385920.82,
+        "notasFiscais": 677,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 41886.51,
+        "maioresDespesas": [
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 155413
+          },
+          {
+            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
+            "valor": 61656.04
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 54441.38
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204520/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/204520"
       }
     },
     "parliamentaryAmendments": {
@@ -66835,12 +68493,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 95
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 44.000,00",
-      "limitCeapMonthlyNum": 44000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 184.800,00",
+      "spendingCeapMonthly": "R$ 35.104,41",
+      "spendingCeapMonthlyNum": 35104.41,
+      "limitCeapMonthly": "R$ 41.886,51",
+      "limitCeapMonthlyNum": 41886.51,
+      "spendingPercentage": 84,
+      "savedCeapTotal": "R$ 81.385,20",
       "civicConversion": {
         "costPerMinute": "R$ 0,35 / min",
         "costPerCitizen": "R$ 0,003 / ano",
@@ -66848,12 +68506,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "R$ 21,90 por R$ 1 gasto"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 421252.92,
+        "notasFiscais": 466,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 41886.51,
+        "maioresDespesas": [
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 136891.23
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 90469.04
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 69284.98
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160640/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/160640"
       }
     },
     "parliamentaryAmendments": {
@@ -67654,12 +69329,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 95
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 44.000,00",
-      "limitCeapMonthlyNum": 44000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 181.200,00",
+      "spendingCeapMonthly": "R$ 40.053,85",
+      "spendingCeapMonthlyNum": 40053.85,
+      "limitCeapMonthly": "R$ 44.804,65",
+      "limitCeapMonthlyNum": 44804.65,
+      "spendingPercentage": 89,
+      "savedCeapTotal": "R$ 57.009,61",
       "civicConversion": {
         "costPerMinute": "R$ 0,36 / min",
         "costPerCitizen": "R$ 0,003 / ano",
@@ -67667,12 +69342,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "R$ 22,10 por R$ 1 gasto"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 480646.19,
+        "notasFiscais": 278,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 44804.65,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 190000
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 129600
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 104919.57
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/80815/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/80815"
       }
     },
     "parliamentaryAmendments": {
@@ -68073,12 +69765,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 92
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 44.000,00",
-      "limitCeapMonthlyNum": 44000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 174.000,00",
+      "spendingCeapMonthly": "R$ 9.507,47",
+      "spendingCeapMonthlyNum": 9507.47,
+      "limitCeapMonthly": "R$ 44.804,65",
+      "limitCeapMonthlyNum": 44804.65,
+      "spendingPercentage": 21,
+      "savedCeapTotal": "R$ 423.566,15",
       "civicConversion": {
         "costPerMinute": "R$ 0,36 / min",
         "costPerCitizen": "R$ 0,003 / ano",
@@ -68086,12 +69778,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "R$ 20,80 por R$ 1 gasto"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 114089.65,
+        "notasFiscais": 211,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 44804.65,
+        "maioresDespesas": [
+          {
+            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
+            "valor": 53547.93
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 32926
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 20518.23
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204553/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/204553"
       }
     },
     "parliamentaryAmendments": {
@@ -69294,10 +71003,10 @@ var candidatesData = _root.candidatesData = [
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
       "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 38.000,00",
-      "limitCeapMonthlyNum": 38000,
+      "limitCeapMonthly": "R$ 48.245,57",
+      "limitCeapMonthlyNum": 48245.57,
       "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 249.600,00",
+      "savedCeapTotal": "R$ 578.946,84",
       "civicConversion": {
         "costPerMinute": "R$ 0,21 / min",
         "costPerCitizen": "R$ 0,002 / ano",
@@ -69305,12 +71014,16 @@ var candidatesData = _root.candidatesData = [
         "roiText": "R$ 25,20 por R$ 1 gasto"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
         "totalAno": 0,
         "notasFiscais": 0,
+        "mesesComDespesa": 0,
+        "tetoMensalUF": 48245.57,
+        "maioresDespesas": [],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/226075/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/226075"
       }
     },
     "parliamentaryAmendments": {
@@ -69711,12 +71424,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 95
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 44.000,00",
-      "limitCeapMonthlyNum": 44000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 194.400,00",
+      "spendingCeapMonthly": "R$ 45.180,17",
+      "spendingCeapMonthlyNum": 45180.17,
+      "limitCeapMonthly": "R$ 48.245,57",
+      "limitCeapMonthlyNum": 48245.57,
+      "spendingPercentage": 94,
+      "savedCeapTotal": "R$ 36.784,75",
       "civicConversion": {
         "costPerMinute": "R$ 0,34 / min",
         "costPerCitizen": "R$ 0,003 / ano",
@@ -69724,12 +71437,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "R$ 23,20 por R$ 1 gasto"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 542162.09,
+        "notasFiscais": 181,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 48245.57,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 357649.99
+          },
+          {
+            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
+            "valor": 65642.39
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 60866.3
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204488/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/204488"
       }
     },
     "parliamentaryAmendments": {
@@ -70183,12 +71913,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 93
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 44.000,00",
-      "limitCeapMonthlyNum": 44000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 165.600,00",
+      "spendingCeapMonthly": "R$ 32.319,19",
+      "spendingCeapMonthlyNum": 32319.19,
+      "limitCeapMonthly": "R$ 48.245,57",
+      "limitCeapMonthlyNum": 48245.57,
+      "spendingPercentage": 67,
+      "savedCeapTotal": "R$ 191.116,59",
       "civicConversion": {
         "costPerMinute": "R$ 0,37 / min",
         "costPerCitizen": "R$ 0,004 / ano",
@@ -70196,12 +71926,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "R$ 19,80 por R$ 1 gasto"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 387830.25,
+        "notasFiscais": 59,
+        "mesesComDespesa": 9,
+        "tetoMensalUF": 48245.57,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 297167.8
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 79253.34
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 4930.09
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/74454/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/74454"
       }
     },
     "parliamentaryAmendments": {
@@ -72202,12 +73949,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 96
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 44.000,00",
-      "limitCeapMonthlyNum": 44000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 193.200,00",
+      "spendingCeapMonthly": "R$ 44.025,43",
+      "spendingCeapMonthlyNum": 44025.43,
+      "limitCeapMonthly": "R$ 47.470,60",
+      "limitCeapMonthlyNum": 47470.6,
+      "spendingPercentage": 93,
+      "savedCeapTotal": "R$ 41.341,99",
       "civicConversion": {
         "costPerMinute": "R$ 0,34 / min",
         "costPerCitizen": "R$ 0,003 / ano",
@@ -72215,12 +73962,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "R$ 23,40 por R$ 1 gasto"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 528305.21,
+        "notasFiscais": 573,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 47470.6,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 175364.01
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 148397
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 84773.47
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220667/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/220667"
       }
     },
     "parliamentaryAmendments": {
@@ -72621,12 +74385,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 94
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 44.000,00",
-      "limitCeapMonthlyNum": 44000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 188.400,00",
+      "spendingCeapMonthly": "R$ 42.109,00",
+      "spendingCeapMonthlyNum": 42109,
+      "limitCeapMonthly": "R$ 47.470,60",
+      "limitCeapMonthlyNum": 47470.6,
+      "spendingPercentage": 89,
+      "savedCeapTotal": "R$ 64.339,23",
       "civicConversion": {
         "costPerMinute": "R$ 0,35 / min",
         "costPerCitizen": "R$ 0,003 / ano",
@@ -72634,12 +74398,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "R$ 22,60 por R$ 1 gasto"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 505307.97,
+        "notasFiscais": 480,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 47470.6,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 245923.11
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 110335
+          },
+          {
+            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
+            "valor": 71661.06
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220668/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/220668"
       }
     },
     "parliamentaryAmendments": {
@@ -74643,12 +76424,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 97
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 45.000,00",
-      "limitCeapMonthlyNum": 45000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 358.800,00",
+      "spendingCeapMonthly": "R$ 3.373,40",
+      "spendingCeapMonthlyNum": 3373.4,
+      "limitCeapMonthly": "R$ 49.363,92",
+      "limitCeapMonthlyNum": 49363.92,
+      "spendingPercentage": 7,
+      "savedCeapTotal": "R$ 551.886,21",
       "civicConversion": {
         "costPerMinute": "R$ 0,19 / min",
         "costPerCitizen": "R$ 0,002 / ano",
@@ -74656,12 +76437,25 @@ var candidatesData = _root.candidatesData = [
         "roiText": "R$ 39,20 por R$ 1 gasto"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 40480.83,
+        "notasFiscais": 70,
+        "mesesComDespesa": 9,
+        "tetoMensalUF": 49363.92,
+        "maioresDespesas": [
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 40473.98
+          },
+          {
+            "tipo": "TELEFONIA",
+            "valor": 6.85
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220715/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/220715"
       }
     },
     "parliamentaryAmendments": {
@@ -75115,12 +76909,12 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 94
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 45.000,00",
-      "limitCeapMonthlyNum": 45000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 198.000,00",
+      "spendingCeapMonthly": "R$ 34.179,55",
+      "spendingCeapMonthlyNum": 34179.55,
+      "limitCeapMonthly": "R$ 49.363,92",
+      "limitCeapMonthlyNum": 49363.92,
+      "spendingPercentage": 69,
+      "savedCeapTotal": "R$ 182.212,46",
       "civicConversion": {
         "costPerMinute": "R$ 0,35 / min",
         "costPerCitizen": "R$ 0,003 / ano",
@@ -75128,12 +76922,29 @@ var candidatesData = _root.candidatesData = [
         "roiText": "R$ 22,50 por R$ 1 gasto"
       },
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 410154.58,
+        "notasFiscais": 204,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 49363.92,
+        "maioresDespesas": [
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 124438.02
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 124250
+          },
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 99000
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204572/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/204572"
       }
     },
     "parliamentaryAmendments": {
@@ -77005,22 +78816,39 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 94
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 49.000,00",
-      "limitCeapMonthlyNum": 49000,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 130.000,00",
+      "spendingCeapMonthly": "R$ 26.049,91",
+      "spendingCeapMonthlyNum": 26049.91,
+      "limitCeapMonthly": "R$ 46.737,90",
+      "limitCeapMonthlyNum": 46737.9,
+      "spendingPercentage": 56,
+      "savedCeapTotal": "R$ 248.255,87",
       "iprSevero": 72,
       "custoMinuto": "R$ 0,16 / min",
       "iprJustification": "Mandato parlamentar de alta intensidade executiva na Mesa Diretora da Câmara dos Deputados.",
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 312598.93,
+        "notasFiscais": 220,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 46737.9,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 100000
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - REEMBOLSO",
+            "valor": 81639.7
+          },
+          {
+            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
+            "valor": 46835.63
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160541/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/160541"
       }
     },
     "parliamentaryAmendments": {
@@ -77846,20 +79674,24 @@ var candidatesData = _root.candidatesData = [
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
       "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 42.800,00",
-      "limitCeapMonthlyNum": 42800,
+      "limitCeapMonthly": "R$ 42.837,33",
+      "limitCeapMonthlyNum": 42837.33,
       "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 230.000,00",
+      "savedCeapTotal": "R$ 514.047,96",
       "iprSevero": 86,
       "custoMinuto": "R$ 0,08 / min",
       "iprJustification": "Economia contínua de verbas indenizatórias e assiduidade destacada em plenário e comissões.",
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
         "totalAno": 0,
         "notasFiscais": 0,
+        "mesesComDespesa": 0,
+        "tetoMensalUF": 42837.33,
+        "maioresDespesas": [],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220637/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/220637"
       }
     },
     "parliamentaryAmendments": {
@@ -78492,22 +80324,39 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 96
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 44.500,00",
-      "limitCeapMonthlyNum": 44500,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 210.000,00",
+      "spendingCeapMonthly": "R$ 26.601,29",
+      "spendingCeapMonthlyNum": 26601.29,
+      "limitCeapMonthly": "R$ 45.671,58",
+      "limitCeapMonthlyNum": 45671.58,
+      "spendingPercentage": 58,
+      "savedCeapTotal": "R$ 228.843,46",
       "iprSevero": 80,
       "custoMinuto": "R$ 0,09 / min",
       "iprJustification": "Assiduidade exemplar de 96% e moderação no uso de recursos públicos em viagens oficiais.",
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 319215.5,
+        "notasFiscais": 427,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 45671.58,
+        "maioresDespesas": [
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 116700
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 114085.31
+          },
+          {
+            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
+            "valor": 29355.22
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204369/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/204369"
       }
     },
     "parliamentaryAmendments": {
@@ -78719,22 +80568,39 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 93
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 44.500,00",
-      "limitCeapMonthlyNum": 44500,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 180.000,00",
+      "spendingCeapMonthly": "R$ 40.570,04",
+      "spendingCeapMonthlyNum": 40570.04,
+      "limitCeapMonthly": "R$ 45.671,58",
+      "limitCeapMonthlyNum": 45671.58,
+      "spendingPercentage": 89,
+      "savedCeapTotal": "R$ 61.218,47",
       "iprSevero": 76,
       "custoMinuto": "R$ 0,10 / min",
       "iprJustification": "Boa taxa de assiduidade em plenário e atuação expressiva nas redes e em comissões temáticas.",
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 486840.49,
+        "notasFiscais": 397,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 45671.58,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 268669.74
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 99161
+          },
+          {
+            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
+            "valor": 38552.36
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220559/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/220559"
       }
     },
     "parliamentaryAmendments": {
@@ -79154,22 +81020,39 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 95
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 45.800,00",
-      "limitCeapMonthlyNum": 45800,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 190.000,00",
+      "spendingCeapMonthly": "R$ 31.496,14",
+      "spendingCeapMonthlyNum": 31496.14,
+      "limitCeapMonthly": "R$ 41.553,77",
+      "limitCeapMonthlyNum": 41553.77,
+      "spendingPercentage": 76,
+      "savedCeapTotal": "R$ 120.691,54",
       "iprSevero": 82,
       "custoMinuto": "R$ 0,11 / min",
       "iprJustification": "Frequência exemplar em votações nominais e recusa a fundos corporativos de financiamento.",
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 377953.7,
+        "notasFiscais": 635,
+        "mesesComDespesa": 12,
+        "tetoMensalUF": 41553.77,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 163950.32
+          },
+          {
+            "tipo": "PASSAGEM AÉREA - SIGEPA",
+            "valor": 67498.55
+          },
+          {
+            "tipo": "MANUTENÇÃO DE ESCRITÓRIO DE APOIO À ATIVIDADE PARLAMENTAR",
+            "valor": 66333.88
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/152605/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/152605"
       }
     },
     "parliamentaryAmendments": {
@@ -79381,22 +81264,39 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 91
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 0,
-      "limitCeapMonthly": "R$ 41.500,00",
-      "limitCeapMonthlyNum": 41500,
-      "spendingPercentage": 0,
-      "savedCeapTotal": "R$ 105.000,00",
+      "spendingCeapMonthly": "R$ 30.822,78",
+      "spendingCeapMonthlyNum": 30822.78,
+      "limitCeapMonthly": "R$ 41.886,51",
+      "limitCeapMonthlyNum": 41886.51,
+      "spendingPercentage": 74,
+      "savedCeapTotal": "R$ 132.764,77",
       "iprSevero": 72,
       "custoMinuto": "R$ 0,13 / min",
       "iprJustification": "Atuação focada em comunicação e mobilização de base com frequência parlamentar regular.",
       "ceapSource": {
-        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "fonte": "Câmara dos Deputados — arquivo oficial de despesas da CEAP",
         "ano": 2025,
-        "totalAno": 0,
-        "notasFiscais": 0,
+        "totalAno": 369873.35,
+        "notasFiscais": 202,
+        "mesesComDespesa": 10,
+        "tetoMensalUF": 41886.51,
+        "maioresDespesas": [
+          {
+            "tipo": "DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR.",
+            "valor": 259100.3
+          },
+          {
+            "tipo": "LOCAÇÃO OU FRETAMENTO DE VEÍCULOS AUTOMOTORES",
+            "valor": 64855
+          },
+          {
+            "tipo": "COMBUSTÍVEIS E LUBRIFICANTES.",
+            "valor": 22000.57
+          }
+        ],
         "consultadoEm": "2026-10-10",
-        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204515/despesas?ano=2025"
+        "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+        "painel": "https://www.camara.leg.br/deputados/204515"
       }
     },
     "parliamentaryAmendments": {

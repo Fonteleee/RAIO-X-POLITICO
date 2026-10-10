@@ -83,3 +83,15 @@ test('mandatários em exercício apontam para candidatos e fotos existentes', ()
     }
   }
 });
+
+test('CEAP verificada: valores reais não zerados e teto conforme tabela oficial da UF', () => {
+  const limits = require('../data/ceap_limits.json');
+  const verified = candidatesData.filter(c => c.salary && c.salary.ceapSource);
+  assert.ok(verified.length >= 50, 'esperado CEAP oficial para os deputados verificados');
+  const nonZero = verified.filter(c => c.salary.spendingCeapMonthlyNum > 0);
+  assert.ok(nonZero.length / verified.length > 0.8, `CEAP zerada para ${verified.length - nonZero.length} de ${verified.length} (falha na ingestão?)`);
+  for (const c of verified) {
+    const official = Object.values(limits[String(c.salary.ceapSource.ano)] || {});
+    assert.ok(official.includes(c.salary.limitCeapMonthlyNum), `${c.id}: teto ${c.salary.limitCeapMonthlyNum} fora da tabela oficial`);
+  }
+});

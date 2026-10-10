@@ -2497,7 +2497,7 @@
                 <span class="text-amber-400 font-bold">${100 - cand.salary.spendingPercentage}%</span>
               </div>
               <div class="w-full bg-slate-800 rounded-full h-1.5 overflow-hidden">
-                <div class="bg-amber-400 h-full rounded-full" style="width: ${100 - cand.salary.spendingPercentage}%"></div>
+                <div class="bg-amber-400 h-full rounded-full" style="width: ${Math.max(0, 100 - cand.salary.spendingPercentage)}%"></div>
               </div>
             </div>
 

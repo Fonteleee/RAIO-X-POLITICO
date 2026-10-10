@@ -1,0 +1,19 @@
+{
+  "descricao": "Teto mensal da Cota para o Exercício da Atividade Parlamentar (CEAP) por UF, Câmara dos Deputados",
+  "fontes": {
+    "2026": "https://www.camara.leg.br/transparencia/gastos-parlamentares (mapa 'Qual o valor mensal atual da cota por UF?', consultado em 2026-10-10; reajuste do Ato da Mesa nº 244/2026)",
+    "2025": "Anexo do Ato da Mesa nº 43/2009 vigente em 2025, conforme https://www.itatiaia.com.br/politica/saiba-quanto-cada-deputado-federal-pode-gastar-com-a-cota-parlamentar/ (23/10/2025); confere com 2026 / 1,1375 em todas as UFs"
+  },
+  "2025": {
+    "RR": 51406.33, "AC": 50426.26, "RO": 49466.29, "AM": 49363.92, "AP": 49168.58, "RN": 48525.79, "CE": 48245.57,
+    "PA": 48021.25, "MA": 47945.49, "PB": 47826.36, "PE": 47470.60, "PI": 46765.57, "AL": 46737.90, "RS": 46669.70,
+    "MS": 46336.64, "SE": 45933.06, "SC": 45671.58, "TO": 45297.41, "MT": 45221.83, "BA": 44804.65, "PR": 44665.66,
+    "ES": 43217.71, "SP": 42837.33, "MG": 41886.51, "RJ": 41553.77, "GO": 41300.86, "DF": 36582.46
+  },
+  "2026": {
+    "AC": 57359.87, "AL": 53164.36, "AP": 55929.26, "AM": 56151.46, "BA": 50965.29, "CE": 54879.34, "DF": 41612.55,
+    "ES": 49160.15, "GO": 46979.73, "MA": 54537.99, "MT": 51439.83, "MS": 52707.93, "MG": 47645.91, "PR": 50807.19,
+    "PB": 54402.48, "PA": 54624.17, "PE": 53997.81, "PI": 53195.84, "RN": 55198.09, "RS": 53086.78, "RJ": 47267.41,
+    "RO": 56267.90, "RR": 58474.70, "SC": 51951.42, "SE": 52248.86, "SP": 48727.46, "TO": 51525.80
+  }
+}

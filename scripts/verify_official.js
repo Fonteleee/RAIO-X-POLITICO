@@ -9,6 +9,8 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const sharp = require('sharp');
+const { loadCeapByDeputy } = require('./lib/camara_bulk');
+const CEAP_LIMITS = require('../data/ceap_limits.json');
 
 const ROOT = path.join(__dirname, '..');
 const DATA_FILE = path.join(ROOT, 'data', 'candidates.js');
@@ -79,16 +81,6 @@ function matchPerson(cand, pool, strict = false) {
   return null;
 }
 
-async function ceapTotal(deputyId, year) {
-  let total = 0, n = 0;
-  for (let page = 1; page < 60; page++) {
-    const j = await getJson(`${CAMARA}/deputados/${deputyId}/despesas?ano=${year}&itens=100&pagina=${page}`);
-    if (!j) return null;
-    for (const d of j.dados) { total += Number(d.valorLiquido) || 0; n++; }
-    if (j.dados.length < 100) break;
-  }
-  return { total: Math.round(total * 100) / 100, notas: n };
-}
 
 async function downloadPhoto(url, dest) {
   const r = await fetch(url, { signal: AbortSignal.timeout(30000) });
@@ -114,6 +106,12 @@ async function pool(items, size, fn) {
   const arrStart = startIdx + START.length;
   const arrEnd = src.indexOf('\n];\n', arrStart) + 2;
   const list = JSON.parse(src.slice(arrStart, arrEnd));
+
+  console.log(`Baixando CEAP ${CEAP_YEAR} (arquivo em lote da Câmara)...`);
+  const ceap = await loadCeapByDeputy(CEAP_YEAR);
+  console.log(`CEAP: ${ceap.rows} notas, ${ceap.byId.size} parlamentares`);
+  const limits = CEAP_LIMITS[String(CEAP_YEAR)];
+  if (!limits) throw new Error(`Sem tabela de teto CEAP para ${CEAP_YEAR} em data/ceap_limits.json`);
 
   console.log('Baixando listas oficiais...');
   const [deputies, senators] = await Promise.all([loadCamaraDeputies(), loadSenators()]);
@@ -208,23 +206,33 @@ async function pool(items, size, fn) {
       entry.photo = 'falha: ' + e.message;
     }
 
-    // Cota parlamentar real (somente Câmara)
+    // Cota parlamentar real (somente Câmara): arquivo em lote oficial + teto oficial da UF
     if (house === 'camara') {
-      const c = await ceapTotal(hit.id, CEAP_YEAR);
-      if (c) {
-        const monthly = Math.round((c.total / 12) * 100) / 100;
-        cand.salary = cand.salary || {};
-        const limit = Number(cand.salary.limitCeapMonthlyNum) || 0;
-        entry.ceap = { year: CEAP_YEAR, totalYear: c.total, notas: c.notas, monthlyAvg: monthly };
-        cand.salary.spendingCeapMonthlyNum = monthly;
-        cand.salary.spendingCeapMonthly = brl(monthly);
-        if (limit > 0) cand.salary.spendingPercentage = Math.min(100, Math.round((monthly / limit) * 100));
-        cand.salary.ceapSource = {
-          fonte: 'Câmara dos Deputados — Dados Abertos (despesas CEAP)',
-          ano: CEAP_YEAR, totalAno: c.total, notasFiscais: c.notas, consultadoEm: fetchedAt,
-          url: `https://dadosabertos.camara.leg.br/api/v2/deputados/${hit.id}/despesas?ano=${CEAP_YEAR}`
-        };
+      const c = ceap.byId.get(String(hit.id));
+      const total = c ? c.total : 0;
+      const monthsActive = c ? c.meses.size : 0;
+      const uf = (c && c.uf) || hit.siglaUf;
+      const limit = limits[uf];
+      const monthly = Math.round((total / 12) * 100) / 100;
+      cand.salary = cand.salary || {};
+      cand.salary.spendingCeapMonthlyNum = monthly;
+      cand.salary.spendingCeapMonthly = brl(monthly);
+      if (limit) {
+        cand.salary.limitCeapMonthlyNum = limit;
+        cand.salary.limitCeapMonthly = brl(limit);
+        cand.salary.spendingPercentage = Math.round((total / (limit * 12)) * 100);
+        cand.salary.savedCeapTotal = brl(Math.max(0, Math.round((limit * 12 - total) * 100) / 100));
       }
+      const topTipos = c ? Object.entries(c.porTipo).sort((x, y) => y[1] - x[1]).slice(0, 3).map(([tipo, v]) => ({ tipo, valor: Math.round(v * 100) / 100 })) : [];
+      entry.ceap = { year: CEAP_YEAR, totalYear: total, notas: c ? c.notas : 0, mesesComDespesa: monthsActive, monthlyAvg: monthly, tetoMensalUF: limit || null };
+      cand.salary.ceapSource = {
+        fonte: 'Câmara dos Deputados — arquivo oficial de despesas da CEAP',
+        ano: CEAP_YEAR, totalAno: total, notasFiscais: c ? c.notas : 0, mesesComDespesa: monthsActive,
+        tetoMensalUF: limit || null, maioresDespesas: topTipos, consultadoEm: fetchedAt,
+        url: `https://www.camara.leg.br/cotas/Ano-${CEAP_YEAR}.csv.zip`,
+        painel: `https://www.camara.leg.br/deputados/${hit.id}`
+      };
+      if (monthsActive && monthsActive < 12) entry.note = (entry.note ? entry.note + ' ' : '') + `CEAP com despesas em apenas ${monthsActive} meses de ${CEAP_YEAR} (licença/suplência).`;
     }
     cand.dataVerification = { fonte: house === 'camara' ? 'Câmara dos Deputados' : 'Senado Federal', idOficial: String(hit.id), verificadoEm: fetchedAt, situacao: entry.situacao || null, campos: ['identidade', 'foto'].concat(house === 'camara' ? ['ceap'] : []) };
     report.entries.push(entry);
