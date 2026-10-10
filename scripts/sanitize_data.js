@@ -14,7 +14,8 @@ const START = 'var candidatesData = _root.candidatesData = ';
 const NEUTRAL_RECORD = 'Sem apontamentos verificados nesta base • consulte as certidões oficiais';
 const PLACEHOLDER_YT = /dQw4w9WgXcQ/;
 // Fotos comprovadamente trocadas/duplicadas (mesma imagem usada para pessoas diferentes): usa placeholder
-const PHOTO_PENDING = new Set(['cand-alexandre-ramagem', 'cand-carlos-jordy', 'cand-helio-lopes', 'cand-clarissa-tercio', 'cand-adriana-accorsi', 'cand-keniston-braga']);
+// Fotos oficiais agora vêm de scripts/verify_official.js; nenhuma foto pendente.
+const PHOTO_PENDING = new Set([]);
 const PLACEHOLDER_AVATAR = 'img/placeholder-person.svg';
 const DUPLICATE_IDS = new Set(['cand-carol-de-toni']); // mantém cand-caroline-de-toni
 
