@@ -1104,7 +1104,7 @@
     function shareCandidateWhatsApp(candId) {
       const cand = candidatesData.find(c => c.id === candId);
       if (!cand) return;
-      const url = `${window.location.origin}/dossie.html?id=${cand.id}`;
+      const url = new URL(`dossie.html?id=${encodeURIComponent(cand.id)}`, window.location.href).href;
       const text = `🔎 *Figuras Políticas 2026 - Dossiê Oficial*\n\nConfira os dados auditados de *${cand.name}* (${cand.party}-${cand.state}):\n⭐ Score de Integridade: ${cand.overallScore || 90}/100\n🏛️ Cargo: ${cand.position}\n💰 Custo aos cofres: ${cand.salary?.civicConversion?.costPerMinute || 'Auditado pelo TCU'}\n📋 Propostas prioritárias: ${cand.proposals ? cand.proposals.length : 3} cadastradas\n\nVeja o dossiê completo e compare agora:\n${url}`;
       window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank');
     }

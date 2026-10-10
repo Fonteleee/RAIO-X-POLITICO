@@ -7,7 +7,8 @@
   "scripts": {
     "start": "node src/server.js",
     "seed": "node src/db/seed.js",
-    "test": "node --test tests/*.test.js"
+    "test": "node --test tests/*.test.js",
+    "build:css": "tailwindcss -c tailwind.app.config.js -i css/tailwind-input.css -o css/tw-app.css --minify && tailwindcss -c tailwind.dossie.config.js -i css/tailwind-input.css -o css/tw-dossie.css --minify"
   },
   "keywords": [
     "transparencia",
@@ -19,5 +20,9 @@
   "license": "MIT",
   "dependencies": {
     "playwright": "^1.63.0"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.5",
+    "tailwindcss": "^3.4.17"
   }
 }

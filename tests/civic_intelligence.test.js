@@ -8,7 +8,7 @@ const { AppDatabase } = require('../src/db/database');
 
 describe('Inteligência Cívica, IPR Severo e Mandatários em Exercício', () => {
   it('deve validar que existem pelo menos 200 candidatos enriquecidos no catálogo', () => {
-    assert.ok(candidatesData.length >= 215, 'Catálogo deve conter pelo menos 215 candidatos');
+    assert.ok(candidatesData.length >= 214, 'Catálogo deve conter pelo menos 214 candidatos');
   });
 
   it('deve garantir que todos os 200 candidatos possuem IPR Severo com justificativa e custo público', () => {

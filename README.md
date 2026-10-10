@@ -99,6 +99,16 @@ python -m http.server 8080
 npx serve .
 ```
 
+### Scripts úteis
+
+| Comando | Função |
+|---|---|
+| `npm test` | Testes (inclui regressões de sintaxe inline, links, SEO e segurança) |
+| `npm run build:css` | Compila o Tailwind (`css/tw-app.css`, `css/tw-dossie.css`) — rodar após criar classes novas |
+| `node scripts/smoke_site.js http://localhost:8080` | Smoke em navegador real (`FULL=1` testa todos os dossiês) |
+| `node scripts/sanitize_data.js` | Remove conteúdo padronizado/placeholder dos dados |
+| `node scripts/optimize_images.js` | Reduz fotos para 640px |
+
 3. **Acessar no Navegador:**
 ```
 http://localhost:8080/index.html

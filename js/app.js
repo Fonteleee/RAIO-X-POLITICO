@@ -79,7 +79,7 @@ window.candidatesData = window.candidatesData || [];
     window.loadUserLocation = loadUserLocation;
 
     function updateDynamicHeaderCounters() {
-      const candCount = (window.candidatesData && Array.isArray(window.candidatesData)) ? window.candidatesData.length : 215;
+      const candCount = (window.candidatesData && Array.isArray(window.candidatesData)) ? window.candidatesData.length : 214;
       const incCount = (window.incumbentsData && Array.isArray(window.incumbentsData)) ? window.incumbentsData.length : 158;
       const judList = (typeof judiciaryAuthorities !== 'undefined' && Array.isArray(judiciaryAuthorities))
         ? judiciaryAuthorities

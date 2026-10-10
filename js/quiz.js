@@ -290,12 +290,12 @@ function calculateMatch() {
 
 function shareMatchResults() {
   const state = matchSelectedState || 'Brasil';
-  const text = `🗳️ *Figuras Políticas 2026 - Meu Match Eleitoral*\n\nFiz o teste com 7 dilemas populares para o estado de ${state} e descobri meus candidatos com maior afinidade de ideias!\n\nFaça seu teste agora e descubra quem realmente te representa:\n${window.location.origin}`;
+  const text = `🗳️ *Figuras Políticas 2026 - Meu Match Eleitoral*\n\nFiz o teste com 7 dilemas populares para o estado de ${state} e descobri meus candidatos com maior afinidade de ideias!\n\nFaça seu teste agora e descubra quem realmente te representa:\n${new URL("index.html", window.location.href).href}`;
   window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank');
 }
 
 function shareQuizMatchWhatsApp(topName, topPct) {
-  const text = `🗳️ *Match Eleitoral 2026*\n\nMeu maior alinhamento cívico deu *${topPct}% de afinidade com ${topName}*!\n\nDescubra quem mais representa suas ideias para Presidente, Governador e Congresso:\n${window.location.origin}`;
+  const text = `🗳️ *Match Eleitoral 2026*\n\nMeu maior alinhamento cívico deu *${topPct}% de afinidade com ${topName}*!\n\nDescubra quem mais representa suas ideias para Presidente, Governador e Congresso:\n${new URL("index.html", window.location.href).href}`;
   window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank');
 }
 

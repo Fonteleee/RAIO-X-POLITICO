@@ -3182,7 +3182,7 @@
       const cardBg = exportVisualTheme === 'twitter' || isExportComparison ? '#070b16' : '#ffffff';
       const candName = activeExportCandidate ? (activeExportCandidate.ballotName || activeExportCandidate.name) : 'Candidato';
       const candParty = activeExportCandidate ? `${activeExportCandidate.party}-${activeExportCandidate.state}` : 'Eleições 2026';
-      const shareUrl = activeExportCandidate ? `${window.location.origin}/dossie.html?id=${activeExportCandidate.id}` : window.location.href;
+      const shareUrl = activeExportCandidate ? new URL(`dossie.html?id=${encodeURIComponent(activeExportCandidate.id)}`, window.location.href).href : window.location.href;
 
       try {
         const canvas = await generateCanvasSecurely(target, scaleFactor, cardBg);

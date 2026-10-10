@@ -5,7 +5,6 @@ User-agent: *
 Allow: /
 Allow: /index.html
 Allow: /dossie.html
-Allow: /match.html
 Allow: /data/
 Allow: /img/
 

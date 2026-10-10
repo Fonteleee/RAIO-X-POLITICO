@@ -243,7 +243,7 @@ describe('Engenharia Sênior: Segurança CSP, CORS Restrito & API de Auditoria C
       const csp = pageRes.headers.get('content-security-policy');
       assert.ok(csp, 'Deve conter cabeçalho Content-Security-Policy');
       assert.ok(csp.includes("default-src 'self'"));
-      assert.ok(csp.includes("https://cdn.tailwindcss.com"));
+      assert.ok(!csp.includes("unsafe-eval"));
 
       // 2. Validação de CORS Restrito e Preflight
       const optionsRes = await fetch(`${baseUrl}/api/candidates`, {

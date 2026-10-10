@@ -4,21 +4,26 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { candidatesData } = require('../data/candidates.js');
+const { judiciaryAuthorities } = require('../data/judiciary_authorities.js');
 
 const BASE_URL = (process.env.SITE_URL || 'https://fonteleee.github.io/figuras-politicas').replace(/\/+$/, '');
 const OUTPUT_FILE = path.join(__dirname, '..', 'sitemap.xml');
 
 function generateSitemapXml() {
-  const today = new Date().toISOString().split('T')[0];
+  // lastmod = data da última alteração real dos dados (evita commit diário só por mudar a data)
+  let today = new Date().toISOString().split('T')[0];
+  try {
+    const out = require('node:child_process').execSync('git log -1 --format=%cs -- data/ index.html dossie.html', {
+      cwd: path.join(__dirname, '..'), stdio: ['ignore', 'pipe', 'ignore']
+    }).toString().trim();
+    if (/^\d{4}-\d{2}-\d{2}$/.test(out)) today = out;
+  } catch { /* fora de um repositório git: usa a data atual */ }
 
   const staticRoutes = [
     { loc: `${BASE_URL}/`, priority: '1.0', changefreq: 'daily' },
-    { loc: `${BASE_URL}/index.html`, priority: '1.0', changefreq: 'daily' },
-    { loc: `${BASE_URL}/match.html`, priority: '0.9', changefreq: 'weekly' },
-    { loc: `${BASE_URL}/dossie.html`, priority: '0.8', changefreq: 'weekly' }
   ];
 
-  const candidateRoutes = candidatesData.map(cand => ({
+  const candidateRoutes = [...candidatesData, ...judiciaryAuthorities].map(cand => ({
     loc: `${BASE_URL}/dossie.html?id=${encodeURIComponent(cand.id)}`,
     priority: '0.8',
     changefreq: 'weekly'

@@ -42,18 +42,13 @@ class AutoUpdaterService {
       const candidates = this.db.prepare('SELECT id, name, position, state FROM candidates').all();
       checkedCount = candidates.length;
 
-      // 2. Simular atualização de gastos CEAP e presenças dos parlamentares
-      const updateStmt = this.db.prepare(`
-        UPDATE candidate_attendance 
-        SET rate_pct = MIN(100, rate_pct + 0.1)
-        WHERE candidate_id = ?
-      `);
-
-      for (const cand of candidates.slice(0, 15)) {
-        updateStmt.run(cand.id);
-        updatedCount++;
-      }
-      details.push(`Sincronizados 15 registros prioritários com a base oficial da Câmara/Senado.`);
+      // 2. Verificação de integridade (somente leitura): nenhuma métrica é alterada aqui.
+      // A atualização real a partir de Câmara/Senado/TSE ainda não está implementada;
+      // os extratores em src/ingestion devem alimentar o seed explicitamente.
+      const orphanAttendance = this.db.prepare(
+        'SELECT COUNT(*) AS n FROM candidate_attendance WHERE candidate_id NOT IN (SELECT id FROM candidates)'
+      ).get().n;
+      details.push(`Verificação de integridade: ${checkedCount} candidatos, ${orphanAttendance} registros órfãos. Nenhum dado foi alterado.`);
 
       // 3. Log de Auditoria
       const durationMs = Date.now() - startTime;

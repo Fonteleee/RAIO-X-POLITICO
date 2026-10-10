@@ -8,13 +8,6 @@ on:
     # - 20:00 BRT = 23:00 UTC (Noite: Coerência de Votos / Ranking)
     - cron: '0 12,16,23 * * *'
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths:
-      - 'scripts/social_autopilot.js'
-      - 'scripts/x_browser_bot.js'
-      - '.github/workflows/social_cron.yml'
 
 jobs:
   run-autopilot:

@@ -624,7 +624,7 @@
       const name2 = cand2.ballotName || cand2.name;
       const cost1 = cand1.campaignFinance?.costPerVote || 'R$ 9,23/voto';
       const cost2 = cand2.campaignFinance?.costPerVote || 'R$ 11,40/voto';
-      const text = `⚔️ *DUELO CÍVICO 2026:*\n${name1} (${cand1.party}) vs ${name2} (${cand2.party})\n\n📊 *Custo por Voto TSE:* ${name1} (${cost1}) vs ${name2} (${cost2})\n🛡️ *Ficha Limpa:* Ambos auditados perante CNJ e STF\n\nVeja o confronto completo e auditado no Figuras Políticas:\n${window.location.origin}/index.html?cand1=${cand1.id}&cand2=${cand2.id}#tab-comparator`;
+      const text = `⚔️ *DUELO CÍVICO 2026:*\n${name1} (${cand1.party}) vs ${name2} (${cand2.party})\n\n📊 *Custo por Voto TSE:* ${name1} (${cost1}) vs ${name2} (${cost2})\n🛡️ *Ficha Limpa:* Ambos auditados perante CNJ e STF\n\nVeja o confronto completo e auditado no Figuras Políticas:\n${new URL(`index.html?cand1=${encodeURIComponent(cand1.id)}&cand2=${encodeURIComponent(cand2.id)}#comparator`, window.location.href).href}`;
       window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank');
     }
 
@@ -632,7 +632,7 @@
       const sel1 = document.getElementById('compare-select-1');
       const sel2 = document.getElementById('compare-select-2');
       if (!sel1 || !sel2) return;
-      const url = `${window.location.origin}/index.html?cand1=${sel1.value}&cand2=${sel2.value}#tab-comparator`;
+      const url = new URL(`index.html?cand1=${encodeURIComponent(sel1.value)}&cand2=${encodeURIComponent(sel2.value)}#comparator`, window.location.href).href;
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(url).then(() => {
           alert('Link do confronto copiado para a área de transferência!');

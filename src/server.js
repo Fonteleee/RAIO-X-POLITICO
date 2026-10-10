@@ -20,7 +20,7 @@ const autoUpdater = new AutoUpdaterService();
 // Content Security Policy (CSP) Estrito e Defensivo
 const CSP_DIRECTIVES = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://unpkg.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com",
+  "script-src 'self' 'unsafe-inline' https://unpkg.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com",
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net",
   "font-src 'self' https://fonts.gstatic.com",
   "img-src 'self' data: blob: https://www.camara.leg.br https://camara.leg.br https://*.camara.leg.br http://*.camara.leg.br https://www.senado.leg.br https://senado.leg.br https://legis.senado.leg.br https://*.senado.leg.br http://www.senado.leg.br http://senado.leg.br http://*.senado.leg.br https://upload.wikimedia.org https://thumb.wikimedia.org https://divulgacandcontas.tse.jus.br https://images.unsplash.com https://ui-avatars.com https://raw.githubusercontent.com https://api.qrserver.com",
@@ -63,6 +63,9 @@ const MIME_TYPES = {
 const rateLimitMap = new Map();
 const RATE_LIMIT_WINDOW_MS = 60 * 1000;
 const RATE_LIMIT_MAX_REQUESTS = 250;
+
+// Deduplicação simples de votos cívicos por IP+proposta (em memória; reinicia com o servidor)
+const votedKeys = new Set();
 
 function checkRateLimit(ip) {
   const now = Date.now();
@@ -169,10 +172,12 @@ function parseBody(req) {
 }
 
 const server = http.createServer(async (req, res) => {
-  const clientIp = req.socket.remoteAddress || '127.0.0.1';
+  const forwarded = process.env.TRUST_PROXY === '1' && req.headers['x-forwarded-for'];
+  const clientIp = (forwarded ? String(forwarded).split(',')[0].trim() : req.socket.remoteAddress) || '127.0.0.1';
   
   // Rate Limiter defensivo contra abusos de requisição e scraping descontrolado
-  if (!checkRateLimit(clientIp)) {
+  // Apenas a API é limitada: uma página carrega dezenas de imagens estáticas
+  if (req.url.startsWith('/api/') && !checkRateLimit(clientIp)) {
     return sendJson(res, 429, { 
       success: false, 
       error: 'Limite de requisições excedido (Rate Limit: máx 250 req/min). Aguarde 60 segundos.',
@@ -310,15 +315,19 @@ const server = http.createServer(async (req, res) => {
           const timeoutId = setTimeout(() => controller.abort(), 4000);
           const upstream = await fetch(targetUrl, {
             signal: controller.signal,
+            redirect: 'error',
             headers: {
               'User-Agent': 'RaioXPolitico/1.0 (https://github.com/Fonteleee/RAIO-X-POLITICO; contact@raioxpolitico.org)'
             }
           });
           clearTimeout(timeoutId);
 
-          if (upstream.ok) {
-            const contentType = upstream.headers.get('content-type') || 'image/jpeg';
+          const upstreamType = upstream.headers.get('content-type') || '';
+          const upstreamLen = Number(upstream.headers.get('content-length') || 0);
+          if (upstream.ok && upstreamType.startsWith('image/') && upstreamLen <= 8 * 1024 * 1024) {
+            const contentType = upstreamType;
             const buffer = Buffer.from(await upstream.arrayBuffer());
+            if (buffer.length > 8 * 1024 * 1024) throw new Error('image too large');
             res.writeHead(200, {
               'Content-Type': contentType,
               'Access-Control-Allow-Origin': '*',
@@ -424,7 +433,12 @@ const server = http.createServer(async (req, res) => {
           return sendJson(res, 400, { error: 'voteType deve ser "support" ou "reject"' });
         }
 
+        const voteKey = clientIp + '|' + proposalId;
+        if (votedKeys.has(voteKey)) {
+          return sendJson(res, 429, { error: 'Voto já registrado para esta proposta' }, {}, req);
+        }
         const success = appDb.voteProposal(proposalId, voteType);
+        if (success) votedKeys.add(voteKey);
         if (!success) {
           return sendJson(res, 404, { error: 'Proposta não encontrada' });
         }
@@ -450,6 +464,11 @@ const server = http.createServer(async (req, res) => {
 
       // 8. Auto-Atualização Diária dos Dados Cívicos (Câmara, Senado e TSE)
       if (pathname === '/api/admin/auto-update') {
+        const adminToken = process.env.ADMIN_TOKEN;
+        const provided = (req.headers['authorization'] || '').replace(/^Bearer\s+/i, '');
+        if (req.method !== 'POST' || !adminToken || provided !== adminToken) {
+          return sendJson(res, 403, { error: 'Acesso restrito' }, {}, req);
+        }
         const result = await autoUpdater.runDailyMaintenance();
         return sendJson(res, 200, result);
       }
@@ -489,7 +508,7 @@ const server = http.createServer(async (req, res) => {
   filePath = path.normalize(path.join(PUBLIC_DIR, filePath));
 
   // Proteção contra Directory Traversal
-  if (!filePath.startsWith(PUBLIC_DIR)) {
+  if (filePath !== PUBLIC_DIR && !filePath.startsWith(PUBLIC_DIR + path.sep)) {
     res.writeHead(403, { 'Content-Type': 'text/plain; charset=utf-8' });
     return res.end('Acesso proibido');
   }
@@ -499,6 +518,15 @@ const server = http.createServer(async (req, res) => {
   const FORBIDDEN_PREFIXES = [
     'src/',
     'tests/',
+    'scripts/',
+    'docs/',
+    'node_modules/',
+    '.github/',
+    'output/',
+    'dist/',
+    'tailwind.',
+    'readme.md',
+    'css/tailwind-input.css',
     'scratch/',
     '.git',
     '.gemini',

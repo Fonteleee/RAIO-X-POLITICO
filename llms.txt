@@ -1,61 +1,30 @@
 # Figuras Políticas 2026
 
-> Plataforma apartidária de inteligência cívica e auditoria eleitoral baseada em dados abertos do Tribunal Superior Eleitoral (TSE), Câmara dos Deputados, Senado Federal, Tribunal de Contas da União (TCU) e Tesouro Nacional.
+> Observatório cívico independente que reúne dados públicos de transparência (TSE, Câmara dos Deputados, Senado Federal, TCU e Tesouro Nacional) sobre figuras políticas brasileiras nas Eleições Gerais de 2026.
 
-## Visão Geral
-O **Figuras Políticas** (https://figuraspoliticas.org) é uma ferramenta pública desenhada para auditar e comparar os principais atores políticos do Brasil nas Eleições Gerais de 2026. A plataforma abrange 45 personalidades públicas de destaque nas esferas de Presidência da República, Governos Estaduais, Senado Federal, Prefeituras de Grandes Capitais e Câmara dos Deputados.
+Site: https://fonteleee.github.io/figuras-politicas/
 
-## Metodologia de Avaliação e Pontuação Ponderada
-O Score Geral (0 a 100) é calculado a partir de 7 critérios auditáveis:
-1. **Integridade & Ficha Limpa (25%)**: Certidões negativas de condenações transitadas em julgado (TSE, STF, STJ, TCU).
-2. **Assiduidade & Presença em Plenário (20%)**: Percentual de presença em votações nominais e sessões deliberativas.
-3. **Eficiência Fiscal & Cota CEAP / Orçamento (15%)**: Economia em relação ao teto da cota parlamentar ou cumprimento de metas fiscais de gestão executiva.
-4. **Transparência em Emendas & Contratações (10%)**: Proporção de emendas e obras executadas por editais de licitação aberta vs dispensas/emendas diretas.
-5. **Eficiência de Mandato (15%)**: Conversão de projetos de lei em normas jurídicas sancionadas ou entrega de obras públicas previstas.
-6. **Veracidade em Debates & Discursos (15%)**: Cruzamento factual de falas públicas com relatórios contábeis oficiais (RREO, Tesouro, PNCP).
+## Escopo
+- 214 figuras políticas (Executivo e Legislativo) e 15 autoridades do Judiciário/MP.
+- Dossiê individual: https://fonteleee.github.io/figuras-politicas/dossie.html?id=<id> (ex.: `cand-lula`).
+- Lista completa de dossiês: https://fonteleee.github.io/figuras-politicas/sitemap.xml
+- Ferramentas: ranking, comparador 1v1, match eleitoral, urna virtual e catálogo dos 30 maiores gargalos nacionais.
 
-## Índice de Personalidades Auditadas (Eleições 2026)
+## Aviso sobre os dados
+- Os dados exibidos são indicativos e servem como ponto de partida para checagem nas fontes oficiais; não substituem certidões ou consulta direta aos órgãos competentes.
+- Pontuações e rankings são cálculos próprios do observatório, sem viés partidário, e não constituem pesquisa eleitoral.
+- Pedidos de correção: use o canal de contraditório do site (resposta em até 48h).
 
-### Presidência da República (Eleições 2026)
-- **Luiz Inácio Lula da Silva** (PT-BR, Nº 13) — Score: 91/100. Candidato à Reeleição Presidencial. Pautas: Isenção de IR até R$ 5.000, Reindustrialização Verde, Novo PAC.
-- **Flávio Nantes Bolsonaro** (PL-BR, Nº 22) — Score: 88/100. Candidato oficial do PL à Presidência (Vice: Alfredo Gaspar). Pautas: "Para o Brasil Vencer o Atraso", novo teto e corte de ministérios.
-- **Ronaldo Ramos Caiado** (PSD-BR, Nº 55) — Score: 94/100. Candidato oficial do PSD à Presidência (Vice: Gilberto Kassab). Pautas: Modelo goiano de tolerância zero, rigor fiscal e agronegócio.
-- **Romeu Zema Neto** (NOVO-BR, Nº 30) — Score: 93/100. Candidato oficial do NOVO à Presidência (Vice: Eduardo Girão). Pautas: "O Brasil sem Intocáveis", fim de privilégios e privatizações.
-- **Jair Messias Bolsonaro** (PL-RJ, Nº 22) — Score: 89/100. Ex-Presidente da República (Inelegível pelo TSE). Principal articulador do PL.
+## Fontes oficiais
+- TSE DivulgaCandContas: https://divulgacandcontas.tse.jus.br
+- Dados Abertos da Câmara: https://dadosabertos.camara.leg.br
+- Portal da Transparência: https://portaldatransparencia.gov.br
 
-### Governos Estaduais (Eleições 2026)
-- **Tarcísio Gomes de Freitas** (REPUBLICANOS-SP, Nº 10) — Score: 94/100. Candidato à Reeleição ao Governo de São Paulo. Obras do Trem Intercidades e desestatizações.
-- **Ciro Ferreira Gomes** (PSDB-CE, Nº 45) — Score: 93/100. Candidato ao Governo do Ceará (Vice: Roberto Cláudio). Pautas: Tolerância zero contra facções, hospitais regionais e modelo Sobral.
-- **Eduardo da Costa Paes** (PSD-RJ, Nº 55) — Score: 93/100. Candidato ao Governo do Rio de Janeiro (Vice: Jane Reis). Pautas: Recuperação da segurança pública e conexões intermunicipais.
-- **João Henrique Campos** (PSB-PE, Nº 40) — Score: 95/100. Candidato ao Governo de Pernambuco (Vice: Carlos Costa). Pautas: "Pernambuco Pronto para Fazer História", saúde regional e infraestrutura.
-- **Eduardo Figueiredo Leite** (PSD-RS) — Score: 90/100. Governador do Rio Grande do Sul (em exercício até dez/2026). Foco no Plano Rio Grande de reconstrução climática.
-- **Cláudio Bonfim de Castro** (PL-RJ) — Score: 84/100. Ex-Governador do Rio de Janeiro (Inelegível pelo TSE).
+## Licença
+Dados públicos protegidos pela Lei de Acesso à Informação (Lei nº 12.527/2011).
 
-### Senado Federal (Eleições 2026)
-- **Simone Nassar Tebet** (PSB-SP, Nº 400) — Score: 94/100. Candidata ao Senado Federal por São Paulo. Pautas: Orçamento para primeira infância, responsabilidade fiscal e indústria paulista.
-- **Helder Zahluth Barbalho** (MDB-PA, Nº 150) — Score: 92/100. Candidato ao Senado Federal pelo Pará. Pautas: Marco da bioeconomia amazônica e compensação tarifária de energia.
-- **Sergio Fernando Moro** (PL-PR, Nº 22) — Score: 92/100. Senador em exercício (mandato até 2030, filiado ao PL em 2026). Combate à corrupção sistêmica, prisão em 2ª instância e autonomia da PF.
-- **Marcos Cesar Pontes** (PL-SP) — Score: 89/100. Senador em exercício (mandato até 2030). Ciência espacial, tecnologia e semiárido.
-- **Randolfe Rodrigues** (PT-AP, Nº 131) — Score: 91/100. Candidato à Reeleição ao Senado pelo Amapá. Líder de governo, sustentabilidade amazônica e cultura.
-- **Rodrigo Otavio Pacheco** (PSD-MG) — Score: 92/100. Presidente do Senado (2021-2025) e indicado aprovado ao Tribunal de Contas da União (TCU).
-
-### Prefeituras de Capitais (Mandatários em Exercício)
-- **Ricardo Luis Reis Nunes** (MDB-SP, Nº 15) — Score: 89/100. Prefeito de São Paulo (2025-2028).
-- **Bruno Soares Reis** (UNIÃO-BA, Nº 44) — Score: 94/100. Prefeito de Salvador (2025-2028).
-- **Fuad Jorge Noman Filho** (PSD-MG, Nº 55) — Score: 89/100. Prefeito de Belo Horizonte (2025-2028).
-
-### Câmara dos Deputados (Amostra de Lideranças Nacionais)
-- **Tabata Amaral** (PSB-SP) — Score: 94/100. Programa Pé-de-Meia, Política Nacional de Saúde Mental, transparência 100% na cota CEAP.
-- **Kim Kataguiri** (MISSÃO-SP) — Score: 92/100. Marco Legal dos Games, revogação de incentivos fiscais ineficientes, economia de cota CEAP.
-- **Nikolas Ferreira** (PL-MG) — Score: 90/100. Defesa de pautas conservadoras, fiscalização de gastos em ministérios, combate à doutrinação escolar.
-- **Erika Hilton** (PSOL-SP) — Score: 92/100. Fim da escala de trabalho 6x1, acolhimento de vulneráveis, fiscalização de direitos humanos.
-- **Guilherme Boulos** (PSOL-SP) — Score: 91/100. Programa Cozinhas Solidárias, combate a despejos, Tarifa Zero no transporte público.
-- **Eduardo Bolsonaro** (PL-SP) — Score: 88/100. Enquadramento de facções criminosas como terroristas, legítima defesa e flexibilização de armas.
-- **Marcel van Hattem** (NOVO-RS) — Score: 94/100. Transparência tributária, cortes orçamentários, defesa de CPIs e prerrogativas parlamentares.
-- *(Demais 18 deputados auditados detalhados na base completa da plataforma).*
-
-## Endpoints e Formatos de Dados Oficiais
-- **Dossiê em JSON**: `GET /api/candidates/:id` (retorna métricas de radar, assiduidade, despesas, propostas, emendas e debate).
-- **Catálogo Completo**: `GET /api/candidates` (retorna todos os 45 líderes públicos).
-- **Comparador 1v1**: `GET /api/compare?c1=:id1&c2=:id2`.
-- **Licença de Dados**: Open Data / Domínio Público (Dados abertos governamentais protegidos pela Lei de Acesso à Informação nº 12.527/2011).
+## Exemplos de figuras catalogadas
+- Luiz Inácio Lula da Silva (Presidência)
+- Tarcísio Gomes de Freitas (Governo de São Paulo)
+- Simone Tebet, Sergio Moro, Randolfe Rodrigues (Senado)
+- Tabata Amaral, Kim Kataguiri, Erika Hilton (Câmara dos Deputados)

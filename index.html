@@ -14,7 +14,7 @@
   <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="description" content="Figuras Políticas 2026. Plataforma oficial de transparência e auditoria eleitoral independente. Comparador cívico, ranking ponderado, IPR Severo e 215 personalidades auditadas.">
+  <meta name="description" content="Figuras Políticas 2026. Plataforma oficial de transparência e auditoria eleitoral independente. Comparador cívico, ranking ponderado, IPR Severo e 214 personalidades auditadas.">
   
   <!-- SEO & Google Indexing -->
   <meta name="robots" content="index, follow">
@@ -23,8 +23,20 @@
 
   <!-- OpenGraph -->
   <meta property="og:title" content="Figuras Políticas • Observatório Cívico 2026">
-  <meta property="og:description" content="Auditoria profunda de gastos, propostas e histórico de 215 personalidades públicas com dados oficiais do TSE, Congresso e Tribunais.">
+  <meta property="og:description" content="Auditoria profunda de gastos, propostas e histórico de 214 personalidades públicas com dados oficiais do TSE, Congresso e Tribunais.">
   <meta property="og:type" content="website">
+  <link rel="canonical" href="https://fonteleee.github.io/figuras-politicas/index.html">
+  <meta property="og:site_name" content="Figuras Políticas">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://fonteleee.github.io/figuras-politicas/index.html">
+  <meta property="og:image" content="https://fonteleee.github.io/figuras-politicas/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Figuras Políticas • Observatório Cívico 2026">
+  <meta name="twitter:description" content="Auditoria de gastos, propostas e histórico de 214 personalidades públicas com dados oficiais.">
+  <meta name="twitter:image" content="https://fonteleee.github.io/figuras-politicas/img/og-image.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Figuras Políticas","url":"https://fonteleee.github.io/figuras-politicas/","inLanguage":"pt-BR","description":"Observatório cívico independente de transparência e auditoria eleitoral 2026."}</script>
 
   <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,35 +44,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Display"', '"SF Pro Text"', '"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
-            mono: ['"SF Mono"', '"JetBrains Mono"', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
-          },
-          colors: {
-            apple: {
-              canvas: '#f5f5f7',
-              canvasDark: '#000000',
-              cardLight: '#ffffff',
-              cardDark: '#1c1c1e',
-              blue: '#0071e3',
-              blueHover: '#0077ed',
-              blueDark: '#2997ff',
-              green: '#34c759',
-              orange: '#ff9500',
-              purple: '#af52de',
-              red: '#ff3b30'
-            }
-          }
-        }
-      }
-    }
-  </script>
+  <link rel="stylesheet" href="css/tw-app.css">
 
   <!-- Lucide Icons, Chart.js & html2canvas (Deferred for zero parser-blocking) -->
   <script src="https://unpkg.com/lucide@latest" defer></script>
@@ -337,13 +321,13 @@
     </h2>
 
     <p class="text-sm sm:text-xs text-neutral-500 dark:text-neutral-400 max-w-xl mx-auto font-medium leading-snug">
-      Auditoria de gastos, propostas e integridade de <span id="hero-total-candidates-count">215</span> candidatos e <span id="hero-total-incumbents-count">158</span> mandatários com 100% dos dados consolidados.
+      Auditoria de gastos, propostas e integridade de <span id="hero-total-candidates-count">214</span> candidatos e <span id="hero-total-incumbents-count">158</span> mandatários com 100% dos dados consolidados.
     </p>
 
     <!-- Live Badges -->
     <div class="flex flex-wrap items-center justify-center gap-1.5 pt-0.5 text-xs font-semibold">
       <span class="px-2.5 py-0.5 rounded-full bg-blue-500/10 text-blue-700 dark:text-blue-300 border border-blue-500/20">
-        <span id="hero-badge-cand-count">215</span> Candidatos Auditados
+        <span id="hero-badge-cand-count">214</span> Candidatos Auditados
       </span>
       <span class="px-2.5 py-0.5 rounded-full bg-purple-500/10 text-purple-700 dark:text-purple-300 border border-purple-500/20">
         <span id="hero-badge-inc-count">158</span> Mandatários
@@ -352,7 +336,7 @@
         17 Temas de Figurinhas
       </span>
       <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-500/20">
-        100% Fotos Oficiais
+        Fotos Oficiais (em verificação)
       </span>
     </div>
   </section>
@@ -428,7 +412,7 @@
           </div>
           <div class="flex items-center gap-1.5 overflow-x-auto w-full sm:w-auto no-scrollbar pb-1">
             <button onclick="setAppleOfficeFilter('todos')" class="px-2.5 py-1 rounded-xl text-sm font-semibold bg-white dark:bg-neutral-800 border border-black/10 dark:border-white/10 hover:border-blue-500 text-neutral-800 dark:text-neutral-200 transition flex items-center gap-1 shadow-2xs cursor-pointer">
-              <span>🌐 Todos</span> <span id="feed-filter-count-all" class="font-mono text-xs text-neutral-500">(215)</span>
+              <span>🌐 Todos</span> <span id="feed-filter-count-all" class="font-mono text-xs text-neutral-500">(214)</span>
             </button>
             <button onclick="setAppleOfficeFilter('Presidente')" class="px-2.5 py-1 rounded-xl text-sm font-semibold bg-white dark:bg-neutral-800 border border-black/10 dark:border-white/10 hover:border-amber-500 text-neutral-800 dark:text-neutral-200 transition flex items-center gap-1 shadow-2xs cursor-pointer">
               <i data-lucide="landmark" class="w-3 h-3 text-amber-500"></i> <span>Executivo</span>
@@ -445,7 +429,7 @@
         <!-- Office Pills -->
         <div class="flex items-center gap-2 overflow-x-auto no-scrollbar whitespace-nowrap pb-1 w-full max-w-[100vw] px-1">
           <button data-office-pill="todos" onclick="setAppleOfficeFilter('todos')" class="px-3 py-1 rounded-full text-xs font-semibold bg-blue-600 text-white shadow-xs cursor-pointer transition">
-            Todos (<span id="feed-pill-count-all">215</span>)
+            Todos (<span id="feed-pill-count-all">214</span>)
           </button>
           <button data-office-pill="Presidente" onclick="setAppleOfficeFilter('Presidente')" class="px-3 py-1 rounded-full text-xs font-semibold bg-black/5 dark:bg-white/5 hover:bg-black/10 dark:hover:bg-white/10 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white cursor-pointer transition">
             Presidente
@@ -532,7 +516,7 @@
             <div class="flex items-center gap-1.5 bg-slate-100 dark:bg-slate-800/80 p-4.5 rounded-xl border border-slate-200 dark:border-white/5 text-xs flex-wrap">
               <span class="text-xs font-extrabold uppercase text-slate-500 dark:text-slate-400 px-2">Poder Constitucional:</span>
               <button onclick="filterRankingByPower('todos')" id="rank-power-todos" class="rank-power-btn px-3 py-1.5 rounded-lg bg-sky-600 text-white font-bold transition shadow-sm cursor-pointer">
-                ⚖️ Todos os Poderes (<span id="rank-power-count-all">215</span>)
+                ⚖️ Todos os Poderes (<span id="rank-power-count-all">214</span>)
               </button>
               <button onclick="filterRankingByPower('executivo')" id="rank-power-executivo" class="rank-power-btn px-3 py-1.5 rounded-lg bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white font-medium transition cursor-pointer">
                 🏛️ Poder Executivo (LRF & Obras - <span id="rank-power-count-exec">41</span>)
@@ -630,7 +614,7 @@
               <span>Localizar Candidato na Tabela</span>
             </label>
             <span id="ranking-search-status-badge" class="text-xs font-mono font-bold text-sky-800 dark:text-sky-300 bg-sky-100 dark:bg-sky-900/60 px-2.5 py-0.5 rounded-md border border-sky-200 dark:border-sky-500/20">
-              Exibindo todos os <span id="rank-total-search-count">215</span> candidatos
+              Exibindo todos os <span id="rank-total-search-count">214</span> candidatos
             </span>
           </div>
 

@@ -618,7 +618,7 @@
   }
 
   window.shareUrnaSimulation = function(name, number, party) {
-    const text = `🗳️ Acabei de simular meu voto na Urna Eletrônica 2026 para ${name} (${party} - Nº ${number}) no Observatório Figuras Políticas!\nConfira a auditoria de gastos, presença e ficha limpa de todos os candidatos em: ${window.location.origin}`;
+    const text = `🗳️ Acabei de simular meu voto na Urna Eletrônica 2026 para ${name} (${party} - Nº ${number}) no Observatório Figuras Políticas!\nConfira a auditoria de gastos, presença e ficha limpa de todos os candidatos em: ${new URL("index.html", window.location.href).href}`;
     const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
     window.open(url, '_blank');
   };
