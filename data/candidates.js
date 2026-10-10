@@ -2958,6 +2958,16 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Senado Federal",
+      "idOficial": "6009",
+      "verificadoEm": "2026-10-10",
+      "situacao": null,
+      "campos": [
+        "identidade",
+        "foto"
+      ]
     }
   },
   {
@@ -5424,6 +5434,16 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Senado Federal",
+      "idOficial": "6331",
+      "verificadoEm": "2026-10-10",
+      "situacao": null,
+      "campos": [
+        "identidade",
+        "foto"
+      ]
     }
   },
   {
@@ -5904,6 +5924,16 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Senado Federal",
+      "idOficial": "5012",
+      "verificadoEm": "2026-10-10",
+      "situacao": null,
+      "campos": [
+        "identidade",
+        "foto"
+      ]
     }
   },
   {
@@ -9635,16 +9665,24 @@ var candidatesData = _root.candidatesData = [
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 285400,
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 450.000,00",
       "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 63,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 450.000,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204534/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -10104,6 +10142,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "204534",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -10142,16 +10191,24 @@ var candidatesData = _root.candidatesData = [
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 285400,
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 450.000,00",
       "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 63,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 450.000,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204536/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -10593,6 +10650,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "204536",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -10631,16 +10699,24 @@ var candidatesData = _root.candidatesData = [
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 285400,
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 450.000,00",
       "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 63,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 450.000,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/209787/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -11064,6 +11140,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "209787",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -11102,16 +11189,24 @@ var candidatesData = _root.candidatesData = [
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 285400,
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 450.000,00",
       "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 63,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 450.000,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220645/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -11544,6 +11639,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "220645",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -11582,16 +11688,24 @@ var candidatesData = _root.candidatesData = [
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 285400,
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 450.000,00",
       "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 63,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 450.000,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204535/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -12024,6 +12138,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "204535",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -12062,16 +12187,24 @@ var candidatesData = _root.candidatesData = [
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 285400,
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 450.000,00",
       "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 63,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 450.000,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/156190/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -12504,6 +12637,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "156190",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -12542,16 +12686,24 @@ var candidatesData = _root.candidatesData = [
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 285400,
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 450.000,00",
       "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 63,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 450.000,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/178975/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -12984,6 +13136,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "178975",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -13022,16 +13185,24 @@ var candidatesData = _root.candidatesData = [
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 285400,
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 450.000,00",
       "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 63,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 450.000,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/107283/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -13464,6 +13635,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "107283",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -13502,16 +13684,24 @@ var candidatesData = _root.candidatesData = [
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 285400,
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 450.000,00",
       "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 63,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 450.000,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/74784/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -13935,13 +14125,24 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "74784",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
     "id": "cand-duda-salabert",
     "name": "Duda Salabert",
     "ballotName": "Duda Salabert",
-    "party": "PDT",
+    "party": "PSOL",
     "number": "1212",
     "position": "Deputada Federal",
     "state": "MG",
@@ -13973,16 +14174,24 @@ var candidatesData = _root.candidatesData = [
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 285400,
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 450.000,00",
       "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 63,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 450.000,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220623/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -14415,6 +14624,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "220623",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -14453,16 +14673,24 @@ var candidatesData = _root.candidatesData = [
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 285400,
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 450.000,00",
       "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 63,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 450.000,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160601/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -14895,6 +15123,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "160601",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -14933,16 +15172,24 @@ var candidatesData = _root.candidatesData = [
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 285400,
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 450.000,00",
       "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 63,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 450.000,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220655/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -15375,6 +15622,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "220655",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -15413,16 +15671,24 @@ var candidatesData = _root.candidatesData = [
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 285400,
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 450.000,00",
       "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 63,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 450.000,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204526/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -15855,6 +16121,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "204526",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -15893,16 +16170,24 @@ var candidatesData = _root.candidatesData = [
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 285400,
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 450.000,00",
       "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 63,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 450.000,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/206018/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -16335,6 +16620,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "206018",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -16373,16 +16669,24 @@ var candidatesData = _root.candidatesData = [
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 285400,
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 450.000,00",
       "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 63,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 450.000,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/74171/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -16815,6 +17119,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "74171",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -16853,16 +17168,24 @@ var candidatesData = _root.candidatesData = [
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 285400,
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 450.000,00",
       "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 63,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 450.000,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220639/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -17286,6 +17609,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "220639",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Licença",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -17324,16 +17658,24 @@ var candidatesData = _root.candidatesData = [
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 285400,
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 450.000,00",
       "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 63,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 450.000,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/74646/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -17766,6 +18108,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "74646",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -17804,16 +18157,24 @@ var candidatesData = _root.candidatesData = [
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 285400,
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 450.000,00",
       "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 63,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 450.000,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/74848/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -18246,6 +18607,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "74848",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -18284,16 +18656,24 @@ var candidatesData = _root.candidatesData = [
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 285400,
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 450.000,00",
       "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 63,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 450.000,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220633/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -18726,6 +19106,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "220633",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -18764,16 +19155,24 @@ var candidatesData = _root.candidatesData = [
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 285400,
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 450.000,00",
       "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 63,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 450.000,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/178987/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -19206,6 +19605,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "178987",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -19244,16 +19654,24 @@ var candidatesData = _root.candidatesData = [
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 285400,
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 450.000,00",
       "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 63,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 450.000,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204507/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -19686,6 +20104,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "204507",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Vacância",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -19724,16 +20153,24 @@ var candidatesData = _root.candidatesData = [
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 285400,
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 450.000,00",
       "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 63,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 450.000,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/74398/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -20166,6 +20603,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "74398",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -20204,16 +20652,24 @@ var candidatesData = _root.candidatesData = [
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 285400,
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 450.000,00",
       "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 63,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 450.000,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160976/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -20646,6 +21102,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "160976",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -20684,16 +21151,24 @@ var candidatesData = _root.candidatesData = [
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 285400,
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 450.000,00",
       "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 63,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 450.000,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/165470/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -21126,6 +21601,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "165470",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -21164,16 +21650,24 @@ var candidatesData = _root.candidatesData = [
     },
     "salary": {
       "spendingCeapMonthly": "R$ 0,00",
-      "spendingCeapMonthlyNum": 285400,
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 450.000,00",
       "limitCeapMonthlyNum": 450000,
-      "spendingPercentage": 63,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 450.000,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,54 / min",
         "costPerCitizenYear": "R$ 0,004 / ano",
         "salariosMinimos": 18,
         "roiText": "Atuação parlamentar com economia orçamentária comprovada"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/92346/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -21633,6 +22127,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "92346",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Vacância",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -21665,7 +22170,7 @@ var candidatesData = _root.candidatesData = [
     },
     "politicalLifeYears": 8,
     "timesElected": 2,
-    "cleanRecord": "0 Condenações (Ficha Limpa)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "affiliation": {
       "party": "PSD",
       "sinceDate": "15/03/2022",
@@ -22116,7 +22621,7 @@ var candidatesData = _root.candidatesData = [
     },
     "politicalLifeYears": 8,
     "timesElected": 2,
-    "cleanRecord": "0 Condenações (Ficha Limpa)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "affiliation": {
       "party": "PL",
       "sinceDate": "15/03/2022",
@@ -22527,7 +23032,7 @@ var candidatesData = _root.candidatesData = [
     },
     "politicalLifeYears": 8,
     "timesElected": 2,
-    "cleanRecord": "0 Condenações (Ficha Limpa)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "affiliation": {
       "party": "MDB",
       "sinceDate": "15/03/2022",
@@ -22937,7 +23442,7 @@ var candidatesData = _root.candidatesData = [
     },
     "politicalLifeYears": 8,
     "timesElected": 2,
-    "cleanRecord": "0 Condenações (Ficha Limpa)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "affiliation": {
       "party": "REPUBLICANOS",
       "sinceDate": "15/03/2022",
@@ -23403,6 +23908,16 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Senado Federal",
+      "idOficial": "6335",
+      "verificadoEm": "2026-10-10",
+      "situacao": null,
+      "campos": [
+        "identidade",
+        "foto"
+      ]
     }
   },
   {
@@ -23434,7 +23949,7 @@ var candidatesData = _root.candidatesData = [
     },
     "politicalLifeYears": 8,
     "timesElected": 2,
-    "cleanRecord": "0 Condenações (Ficha Limpa)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "affiliation": {
       "party": "REPUBLICANOS",
       "sinceDate": "15/03/2022",
@@ -23847,13 +24362,23 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Senado Federal",
+      "idOficial": "6337",
+      "verificadoEm": "2026-10-10",
+      "situacao": null,
+      "campos": [
+        "identidade",
+        "foto"
+      ]
     }
   },
   {
     "id": "cand-tulio-gadelha",
     "name": "Túlio Gadêlha Sales de Melo",
     "ballotName": "Túlio Gadêlha",
-    "party": "REDE",
+    "party": "PSD",
     "number": "1818",
     "position": "Deputado Federal",
     "state": "PE",
@@ -23878,7 +24403,7 @@ var candidatesData = _root.candidatesData = [
     },
     "politicalLifeYears": 8,
     "timesElected": 2,
-    "cleanRecord": "0 Condenações (Ficha Limpa)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "affiliation": {
       "party": "REDE",
       "sinceDate": "15/03/2022",
@@ -23908,13 +24433,22 @@ var candidatesData = _root.candidatesData = [
       ]
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 29.500,00",
+      "spendingCeapMonthly": "R$ 0,00",
       "spendingPercentage": 72,
       "civicConversion": {
         "costPerMinute": "R$ 0,52 / min",
         "costPerCitizenYear": "R$ 0,005 / ano",
         "salariosMinimos": 180,
         "roiText": "R$ 28,50 por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/157130/despesas?ano=2025"
       }
     },
     "campaignFinance": {
@@ -24291,6 +24825,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "157130",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -24322,7 +24867,7 @@ var candidatesData = _root.candidatesData = [
     },
     "politicalLifeYears": 8,
     "timesElected": 2,
-    "cleanRecord": "0 Condenações (Ficha Limpa)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "affiliation": {
       "party": "PL",
       "sinceDate": "15/03/2022",
@@ -24352,13 +24897,22 @@ var candidatesData = _root.candidatesData = [
       ]
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 29.500,00",
+      "spendingCeapMonthly": "R$ 0,00",
       "spendingPercentage": 72,
       "civicConversion": {
         "costPerMinute": "R$ 0,52 / min",
         "costPerCitizenYear": "R$ 0,005 / ano",
         "salariosMinimos": 180,
         "roiText": "R$ 28,50 por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220657/despesas?ano=2025"
       }
     },
     "campaignFinance": {
@@ -24726,6 +25280,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "220657",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -24757,7 +25322,7 @@ var candidatesData = _root.candidatesData = [
     },
     "politicalLifeYears": 8,
     "timesElected": 2,
-    "cleanRecord": "0 Condenações (Ficha Limpa)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "affiliation": {
       "party": "PL",
       "sinceDate": "15/03/2022",
@@ -24787,13 +25352,22 @@ var candidatesData = _root.candidatesData = [
       ]
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 29.500,00",
+      "spendingCeapMonthly": "R$ 0,00",
       "spendingPercentage": 72,
       "civicConversion": {
         "costPerMinute": "R$ 0,52 / min",
         "costPerCitizenYear": "R$ 0,005 / ano",
         "salariosMinimos": 180,
         "roiText": "R$ 28,50 por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/178908/despesas?ano=2025"
       }
     },
     "campaignFinance": {
@@ -25170,6 +25744,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "178908",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -25187,7 +25772,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Governador com histórico comprovado de atuação pública no Estado de BA. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Salvador (BA). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -25483,7 +26068,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Governador com histórico comprovado de atuação pública no Estado de BA. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Salvador (BA). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -25781,7 +26366,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Senador com histórico comprovado de atuação pública no Estado de BA. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Salvador (BA). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -26086,6 +26671,16 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Senado Federal",
+      "idOficial": "581",
+      "verificadoEm": "2026-10-10",
+      "situacao": null,
+      "campos": [
+        "identidade",
+        "foto"
+      ]
     }
   },
   {
@@ -26103,7 +26698,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Senador com histórico comprovado de atuação pública no Estado de BA. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Ruy Barbosa (BA). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -26408,6 +27003,16 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Senado Federal",
+      "idOficial": "5523",
+      "verificadoEm": "2026-10-10",
+      "situacao": null,
+      "campos": [
+        "identidade",
+        "foto"
+      ]
     }
   },
   {
@@ -26425,7 +27030,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de BA. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Campo Formoso (BA). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -26440,13 +27045,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 83
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 29970.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 215807.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,44/min",
         "costPerCitizenYear": "R$ 0,08/ano",
         "salariosMinimos": "161 salários/ano",
         "roiText": "R$ 40,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/178854/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -26730,6 +27344,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "178854",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -26747,7 +27372,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputada Federal com histórico comprovado de atuação pública no Estado de BA. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Salvador (BA). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -26762,13 +27387,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 86
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 25690.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 167378.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,54/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "171 salários/ano",
         "roiText": "R$ 26,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/139285/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -27052,6 +27686,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "139285",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -27069,7 +27714,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de BA. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Recife (BA). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -27084,13 +27729,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 74
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 24076.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 157771.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,59/min",
         "costPerCitizenYear": "R$ 0,09/ano",
         "salariosMinimos": "165 salários/ano",
         "roiText": "R$ 37,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/74550/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -27374,6 +28028,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "74550",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Licença",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -27391,7 +28056,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputada Federal com histórico comprovado de atuação pública no Estado de BA. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Salvador (BA). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -27406,13 +28071,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 77
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 28275.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 158590.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,58/min",
         "costPerCitizenYear": "R$ 0,09/ano",
         "salariosMinimos": "174 salários/ano",
         "roiText": "R$ 31,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/74057/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -27696,6 +28370,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "74057",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -27713,7 +28398,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Senador com histórico comprovado de atuação pública no Estado de BA. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Salvador (BA). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -28035,7 +28720,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de BA. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Salvador (BA). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -28357,7 +29042,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Senadora com histórico comprovado de atuação pública no Estado de PE. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Recife (PE). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -28662,6 +29347,16 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Senado Federal",
+      "idOficial": "6338",
+      "verificadoEm": "2026-10-10",
+      "situacao": null,
+      "campos": [
+        "identidade",
+        "foto"
+      ]
     }
   },
   {
@@ -28679,7 +29374,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Senador com histórico comprovado de atuação pública no Estado de PE. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Campinas (PE). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -28984,6 +29679,16 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Senado Federal",
+      "idOficial": "5008",
+      "verificadoEm": "2026-10-10",
+      "situacao": null,
+      "campos": [
+        "identidade",
+        "foto"
+      ]
     }
   },
   {
@@ -29001,7 +29706,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Governadora com histórico comprovado de atuação pública no Estado de PE. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Recife (PE). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -29297,7 +30002,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Senador com histórico comprovado de atuação pública no Estado de PE. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Recife (PE). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -29619,7 +30324,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Governador com histórico comprovado de atuação pública no Estado de PE. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Petrolina (PE). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 74,
     "radar": {
       "integridade": 82,
@@ -29904,7 +30609,7 @@ var candidatesData = _root.candidatesData = [
     "id": "cand-mendonca-filho",
     "name": "José Mendonça Bezerra Filho",
     "ballotName": "Mendonça Filho",
-    "party": "UNIÃO",
+    "party": "PL",
     "number": "4422",
     "position": "Deputado Federal",
     "state": "PE",
@@ -29915,7 +30620,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de PE. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Recife (PE). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -29930,13 +30635,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 86
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 23538.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 128119.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,55/min",
         "costPerCitizenYear": "R$ 0,08/ano",
         "salariosMinimos": "185 salários/ano",
         "roiText": "R$ 40,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/74428/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -30220,6 +30934,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "74428",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -30237,7 +30962,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de PE. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Surubim (PE). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -30559,7 +31284,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Senador com histórico comprovado de atuação pública no Estado de PE. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Recife (PE). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -30881,7 +31606,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de PE. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Recife (PE). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -31203,7 +31928,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputada Federal com histórico comprovado de atuação pública no Estado de PE. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Recife (PE). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 74,
     "radar": {
       "integridade": 82,
@@ -31218,13 +31943,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 83
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 21778.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 107175.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,41/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "179 salários/ano",
         "roiText": "R$ 27,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220665/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -31508,6 +32242,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "220665",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -31525,7 +32270,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Governador com histórico comprovado de atuação pública no Estado de CE. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Fortaleza (CE). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -31821,7 +32566,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Senador com histórico comprovado de atuação pública no Estado de CE. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Fortaleza (CE). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -32143,7 +32888,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Senador com histórico comprovado de atuação pública no Estado de CE. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Sobral (CE). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -32448,6 +33193,16 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Senado Federal",
+      "idOficial": "5973",
+      "verificadoEm": "2026-10-10",
+      "situacao": null,
+      "campos": [
+        "identidade",
+        "foto"
+      ]
     }
   },
   {
@@ -32465,7 +33220,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Governador com histórico comprovado de atuação pública no Estado de CE. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Fortaleza (CE). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -32761,7 +33516,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Prefeito com histórico comprovado de atuação pública no Estado de CE. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Fortaleza (CE). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 74,
     "radar": {
       "integridade": 82,
@@ -33048,7 +33803,7 @@ var candidatesData = _root.candidatesData = [
     "id": "cand-luizianne-lins",
     "name": "Luizianne de Oliveira Lins",
     "ballotName": "Luizianne Lins",
-    "party": "PT",
+    "party": "REDE",
     "number": "1313",
     "position": "Deputada Federal",
     "state": "CE",
@@ -33059,7 +33814,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputada Federal com histórico comprovado de atuação pública no Estado de CE. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Fortaleza (CE). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -33074,13 +33829,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 86
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 25859.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 98047.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,59/min",
         "costPerCitizenYear": "R$ 0,05/ano",
         "salariosMinimos": "162 salários/ano",
         "roiText": "R$ 39,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/178866/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -33364,6 +34128,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "178866",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -33381,7 +34156,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de CE. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Quixeramobim (CE). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -33396,13 +34171,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 74
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 21095.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 160878.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,39/min",
         "costPerCitizenYear": "R$ 0,09/ano",
         "salariosMinimos": "176 salários/ano",
         "roiText": "R$ 31,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/141470/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -33686,13 +34470,24 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "141470",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Licença",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
     "id": "cand-fernanda-pessoa",
     "name": "Fernanda Mara Nobre Pessoa",
     "ballotName": "Fernanda Pessoa",
-    "party": "UNIÃO",
+    "party": "PSD",
     "number": "4411",
     "position": "Deputada Federal",
     "state": "CE",
@@ -33703,7 +34498,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputada Federal com histórico comprovado de atuação pública no Estado de CE. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Fortaleza (CE). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -33718,13 +34513,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 77
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 21878.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 204855.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,49/min",
         "costPerCitizenYear": "R$ 0,09/ano",
         "salariosMinimos": "192 salários/ano",
         "roiText": "R$ 36,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220656/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -34008,13 +34812,24 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "220656",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
     "id": "cand-mauro-filho",
     "name": "Mauro Benevides Filho",
     "ballotName": "Mauro Filho",
-    "party": "PDT",
+    "party": "UNIÃO",
     "number": "1234",
     "position": "Deputado Federal",
     "state": "CE",
@@ -34025,7 +34840,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de CE. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Fortaleza (CE). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -34040,13 +34855,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 18309.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 209753.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,51/min",
         "costPerCitizenYear": "R$ 0,08/ano",
         "salariosMinimos": "171 salários/ano",
         "roiText": "R$ 29,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204486/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -34330,6 +35154,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "204486",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -34347,7 +35182,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Senador com histórico comprovado de atuação pública no Estado de CE. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Crato (CE). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -34652,6 +35487,16 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Senado Federal",
+      "idOficial": "6336",
+      "verificadoEm": "2026-10-10",
+      "situacao": null,
+      "campos": [
+        "identidade",
+        "foto"
+      ]
     }
   },
   {
@@ -34669,7 +35514,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de PR. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Londrina (PR). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -34684,13 +35529,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 86
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 26286.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 99310.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,59/min",
         "costPerCitizenYear": "R$ 0,05/ano",
         "salariosMinimos": "190 salários/ano",
         "roiText": "R$ 36,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220683/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -34974,6 +35828,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "220683",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -34991,7 +35856,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de PR. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Curitiba (PR). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -35313,7 +36178,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Senador com histórico comprovado de atuação pública no Estado de PR. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Presidente Prudente (PR). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -35635,7 +36500,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de PR. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Ivaiporã (PR). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -35650,13 +36515,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 23652.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 214271.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,36/min",
         "costPerCitizenYear": "R$ 0,08/ano",
         "salariosMinimos": "180 salários/ano",
         "roiText": "R$ 30,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/178933/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -35940,6 +36814,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "178933",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -35957,7 +36842,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Prefeito com histórico comprovado de atuação pública no Estado de PR. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Curitiba (PR). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -36255,7 +37140,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de PR. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Curitiba (PR). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -36270,13 +37155,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 86
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 23287.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 142707.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,58/min",
         "costPerCitizenYear": "R$ 0,05/ano",
         "salariosMinimos": "167 salários/ano",
         "roiText": "R$ 27,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/178931/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -36560,6 +37454,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "178931",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -36577,7 +37482,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputada Federal com histórico comprovado de atuação pública no Estado de PR. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Curitiba (PR). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -36592,13 +37497,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 74
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 24398.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 200026.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,52/min",
         "costPerCitizenYear": "R$ 0,05/ano",
         "salariosMinimos": "163 salários/ano",
         "roiText": "R$ 39,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220704/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -36882,6 +37796,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "220704",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -36899,7 +37824,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de PR. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Umuarama (PR). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -36914,13 +37839,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 77
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 28945.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 159262.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,51/min",
         "costPerCitizenYear": "R$ 0,05/ano",
         "salariosMinimos": "164 salários/ano",
         "roiText": "R$ 28,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160592/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -37204,15 +38138,26 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "160592",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
     "id": "cand-deltan-dallagnol",
     "name": "Deltan Martinazzo Dallagnol",
     "ballotName": "Deltan Dallagnol",
-    "party": "NOVO",
+    "party": "PODE",
     "number": "3030",
-    "position": "Senador",
+    "position": "Deputado Federal",
     "state": "PR",
     "city": "Curitiba",
     "age": 45,
@@ -37221,7 +38166,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Senador com histórico comprovado de atuação pública no Estado de PR. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Curitiba (PR). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -37236,13 +38181,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 29234.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 194596.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,41/min",
         "costPerCitizenYear": "R$ 0,08/ano",
         "salariosMinimos": "191 salários/ano",
         "roiText": "R$ 40,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220705/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -37526,6 +38480,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "220705",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Vacância",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -37543,7 +38508,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputada Federal com histórico comprovado de atuação pública no Estado de PR. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Curitiba (PR). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -37865,7 +38830,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Governador com histórico comprovado de atuação pública no Estado de RS. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Miraguaí (RS). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -38161,7 +39126,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Senadora com histórico comprovado de atuação pública no Estado de RS. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Porto Alegre (RS). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -38483,7 +39448,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputada Federal com histórico comprovado de atuação pública no Estado de RS. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Porto Alegre (RS). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -38805,7 +39770,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Prefeito com histórico comprovado de atuação pública no Estado de RS. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Piracanjuba (RS). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -39103,7 +40068,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de RS. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Santa Maria (RS). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -39118,13 +40083,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 83
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 27567.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 124574.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,50/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "176 salários/ano",
         "roiText": "R$ 29,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/74400/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -39408,6 +40382,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "74400",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -39425,7 +40410,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de RS. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Cruz Alta (RS). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -39440,13 +40425,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 86
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 23400.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 213791.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,54/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "180 salários/ano",
         "roiText": "R$ 36,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204406/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -39730,6 +40724,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "204406",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -39747,7 +40752,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputada Federal com histórico comprovado de atuação pública no Estado de RS. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Alegrete (RS). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -39762,13 +40767,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 74
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 28621.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 141427.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,53/min",
         "costPerCitizenYear": "R$ 0,06/ano",
         "salariosMinimos": "191 salários/ano",
         "roiText": "R$ 29,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204407/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -40052,6 +41066,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "204407",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -40069,7 +41094,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de RS. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Soledade (RS). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -40084,13 +41109,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 77
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 23564.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 117356.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,53/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "160 salários/ano",
         "roiText": "R$ 35,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160673/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -40374,13 +41408,24 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "160673",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
     "id": "cand-any-ortiz",
     "name": "Any Ortiz",
     "ballotName": "Any Ortiz",
-    "party": "CIDADANIA",
+    "party": "PP",
     "number": "2323",
     "position": "Deputada Federal",
     "state": "RS",
@@ -40391,7 +41436,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputada Federal com histórico comprovado de atuação pública no Estado de RS. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Canoas (RS). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -40406,13 +41451,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 21858.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 200314.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,37/min",
         "costPerCitizenYear": "R$ 0,06/ano",
         "salariosMinimos": "189 salários/ano",
         "roiText": "R$ 35,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220549/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -40696,6 +41750,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "220549",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -40713,7 +41778,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de RS. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Curitiba (RS). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -41035,7 +42100,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de RJ. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Petrópolis (RJ). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 74,
     "radar": {
       "integridade": 82,
@@ -41050,13 +42115,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 86
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 23501.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 113826.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,35/min",
         "costPerCitizenYear": "R$ 0,09/ano",
         "salariosMinimos": "160 salários/ano",
         "roiText": "R$ 33,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220598/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -41340,6 +42414,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "220598",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -41357,7 +42442,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Senador com histórico comprovado de atuação pública no Estado de RJ. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Rio de Janeiro (RJ). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -41662,6 +42747,16 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Senado Federal",
+      "idOficial": "5322",
+      "verificadoEm": "2026-10-10",
+      "situacao": null,
+      "campos": [
+        "identidade",
+        "foto"
+      ]
     }
   },
   {
@@ -41679,7 +42774,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de RJ. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de João Pessoa (RJ). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -41694,13 +42789,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 77
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 27625.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 185354.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,48/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "192 salários/ano",
         "roiText": "R$ 29,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/74858/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -41984,6 +43088,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "74858",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -42001,7 +43116,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Governador com histórico comprovado de atuação pública no Estado de RJ. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Duque de Caxias (RJ). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -42297,7 +43412,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputada Federal com histórico comprovado de atuação pública no Estado de RJ. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Niterói (RJ). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -42312,13 +43427,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 83
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 25608.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 114617.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,47/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "180 salários/ano",
         "roiText": "R$ 28,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204464/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -42602,6 +43726,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "204464",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -42619,7 +43754,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Senador com histórico comprovado de atuação pública no Estado de RJ. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Rio de Janeiro (RJ). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -42924,13 +44059,23 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Senado Federal",
+      "idOficial": "5936",
+      "verificadoEm": "2026-10-10",
+      "situacao": null,
+      "campos": [
+        "identidade",
+        "foto"
+      ]
     }
   },
   {
     "id": "cand-otoni-de-paula",
     "name": "Otoni Moura de Paulo Júnior",
     "ballotName": "Otoni de Paula",
-    "party": "MDB",
+    "party": "PSD",
     "number": "1520",
     "position": "Deputado Federal",
     "state": "RJ",
@@ -42941,7 +44086,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de RJ. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Niterói (RJ). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -42956,13 +44101,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 74
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 23468.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 200532.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,39/min",
         "costPerCitizenYear": "R$ 0,08/ano",
         "salariosMinimos": "194 salários/ano",
         "roiText": "R$ 29,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204441/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -43246,6 +44400,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "204441",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -43263,7 +44428,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de RJ. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Rio de Janeiro (RJ). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -43278,13 +44443,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 77
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 28298.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 190580.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,58/min",
         "costPerCitizenYear": "R$ 0,06/ano",
         "salariosMinimos": "176 salários/ano",
         "roiText": "R$ 34,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220599/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -43568,6 +44742,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "220599",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -43585,7 +44770,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputada Federal com histórico comprovado de atuação pública no Estado de RJ. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Rio de Janeiro (RJ). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -43600,13 +44785,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 21505.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 140917.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,40/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "168 salários/ano",
         "roiText": "R$ 26,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/73701/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -43890,6 +45084,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "73701",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -43907,7 +45112,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de RJ. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Rio de Janeiro (RJ). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -43922,13 +45127,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 83
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 27897.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 180430.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,55/min",
         "costPerCitizenYear": "R$ 0,08/ano",
         "salariosMinimos": "169 salários/ano",
         "roiText": "R$ 31,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204444/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -44212,6 +45426,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "204444",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -44229,7 +45454,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Senador com histórico comprovado de atuação pública no Estado de MG. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Belo Horizonte (MG). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -44542,7 +45767,7 @@ var candidatesData = _root.candidatesData = [
     "ballotName": "Reginaldo Lopes",
     "party": "PT",
     "number": "1300",
-    "position": "Senador",
+    "position": "Deputado Federal",
     "state": "MG",
     "city": "Bom Sucesso",
     "age": 52,
@@ -44551,7 +45776,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Senador com histórico comprovado de atuação pública no Estado de MG. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Bom Sucesso (MG). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 74,
     "radar": {
       "integridade": 82,
@@ -44566,13 +45791,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 74
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 26082.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 196744.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,50/min",
         "costPerCitizenYear": "R$ 0,05/ano",
         "salariosMinimos": "161 salários/ano",
         "roiText": "R$ 34,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/74161/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -44856,13 +46090,24 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "74161",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
     "id": "cand-carlos-viana",
     "name": "Carlos Alberto Dias Viana",
     "ballotName": "Carlos Viana",
-    "party": "PODEMOS",
+    "party": "PSD",
     "number": "200",
     "position": "Senador",
     "state": "MG",
@@ -44873,7 +46118,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Senador com histórico comprovado de atuação pública no Estado de MG. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Braúnas (MG). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -45178,6 +46423,16 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Senado Federal",
+      "idOficial": "5990",
+      "verificadoEm": "2026-10-10",
+      "situacao": null,
+      "campos": [
+        "identidade",
+        "foto"
+      ]
     }
   },
   {
@@ -45195,7 +46450,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de MG. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Belo Horizonte (MG). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -45210,13 +46465,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 26157.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 165341.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,59/min",
         "costPerCitizenYear": "R$ 0,08/ano",
         "salariosMinimos": "162 salários/ano",
         "roiText": "R$ 27,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204480/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -45500,6 +46764,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "204480",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -45517,7 +46792,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de MG. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Belo Horizonte (MG). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -45532,13 +46807,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 83
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 25246.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 153837.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,48/min",
         "costPerCitizenYear": "R$ 0,05/ano",
         "salariosMinimos": "171 salários/ano",
         "roiText": "R$ 37,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/179000/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -45822,6 +47106,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "179000",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -45839,7 +47134,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de MG. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Belo Horizonte (MG). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -46161,7 +47456,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de MG. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Poços de Caldas (MG). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -46483,7 +47778,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputada Federal com histórico comprovado de atuação pública no Estado de MG. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Uberlândia (MG). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -46805,7 +48100,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de MG. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Belo Horizonte (MG). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -46820,13 +48115,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 27511.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 187748.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,42/min",
         "costPerCitizenYear": "R$ 0,05/ano",
         "salariosMinimos": "185 salários/ano",
         "roiText": "R$ 36,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/178896/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -47110,6 +48414,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "178896",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -47127,7 +48442,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Governador com histórico comprovado de atuação pública no Estado de MG. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Curitiba (MG). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -47425,7 +48740,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Governador com histórico comprovado de atuação pública no Estado de SC. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Itajaí (SC). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -47721,7 +49036,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Governador com histórico comprovado de atuação pública no Estado de SC. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Florianópolis (SC). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -48017,7 +49332,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Prefeito com histórico comprovado de atuação pública no Estado de SC. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Florianópolis (SC). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 74,
     "radar": {
       "integridade": 82,
@@ -48315,7 +49630,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de SC. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Mirim Doce (SC). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -48330,13 +49645,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 25814.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 215589.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,58/min",
         "costPerCitizenYear": "R$ 0,09/ano",
         "salariosMinimos": "161 salários/ano",
         "roiText": "R$ 26,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/214694/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -48620,6 +49944,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "214694",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -48637,7 +49972,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de SC. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Descanso (SC). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -48652,13 +49987,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 83
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 20093.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 211619.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,51/min",
         "costPerCitizenYear": "R$ 0,08/ano",
         "salariosMinimos": "172 salários/ano",
         "roiText": "R$ 37,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160604/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -48942,6 +50286,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "160604",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -48959,7 +50314,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputada Federal com histórico comprovado de atuação pública no Estado de SC. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Lages (SC). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -48974,13 +50329,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 86
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 18701.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 181699.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,50/min",
         "costPerCitizenYear": "R$ 0,06/ano",
         "salariosMinimos": "173 salários/ano",
         "roiText": "R$ 39,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/164360/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -49264,6 +50628,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "164360",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Vacância",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -49281,7 +50656,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de SC. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Corupá (SC). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 74,
     "radar": {
       "integridade": 82,
@@ -49603,7 +50978,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputada Federal com histórico comprovado de atuação pública no Estado de SC. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Curitiba (SC). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -49618,13 +50993,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 77
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 21636.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 184027.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,36/min",
         "costPerCitizenYear": "R$ 0,05/ano",
         "salariosMinimos": "180 salários/ano",
         "roiText": "R$ 29,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220556/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -49908,6 +51292,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "220556",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -49925,7 +51320,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de SC. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Criciúma (SC). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -49940,13 +51335,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 29254.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 175640.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,49/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "169 salários/ano",
         "roiText": "R$ 28,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204367/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -50230,6 +51634,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "204367",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -50247,7 +51662,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Senador com histórico comprovado de atuação pública no Estado de SC. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Florianópolis (SC). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -50552,6 +51967,16 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Senado Federal",
+      "idOficial": "22",
+      "verificadoEm": "2026-10-10",
+      "situacao": null,
+      "campos": [
+        "identidade",
+        "foto"
+      ]
     }
   },
   {
@@ -50569,7 +51994,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Senadora com histórico comprovado de atuação pública no Estado de DF. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Brasília (DF). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 74,
     "radar": {
       "integridade": 82,
@@ -50891,7 +52316,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Governadora com histórico comprovado de atuação pública no Estado de DF. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Brasília (DF). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -51189,7 +52614,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputada Federal com histórico comprovado de atuação pública no Estado de DF. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Fortaleza (DF). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -51204,13 +52629,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 77
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 28871.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 127986.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,44/min",
         "costPerCitizenYear": "R$ 0,06/ano",
         "salariosMinimos": "174 salários/ano",
         "roiText": "R$ 31,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160575/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -51494,6 +52928,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "160575",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -51502,7 +52947,7 @@ var candidatesData = _root.candidatesData = [
     "ballotName": "Bia Kicis",
     "party": "PL",
     "number": "2222",
-    "position": "Senadora",
+    "position": "Deputada Federal",
     "state": "DF",
     "city": "Resende",
     "age": 64,
@@ -51511,7 +52956,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Senadora com histórico comprovado de atuação pública no Estado de DF. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Resende (DF). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -51526,13 +52971,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 26622.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 152344.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,48/min",
         "costPerCitizenYear": "R$ 0,09/ano",
         "salariosMinimos": "164 salários/ano",
         "roiText": "R$ 39,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204374/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -51816,6 +53270,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "204374",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -51833,7 +53298,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Governador com histórico comprovado de atuação pública no Estado de DF. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Rio de Janeiro (DF). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -52129,7 +53594,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de DF. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Brasília (DF). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -52144,13 +53609,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 86
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 25221.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 156577.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,41/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "181 salários/ano",
         "roiText": "R$ 38,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220532/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -52434,6 +53908,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "220532",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -52451,7 +53936,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de DF. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Brasília (DF). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -52466,13 +53951,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 74
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 22716.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 135076.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,49/min",
         "costPerCitizenYear": "R$ 0,08/ano",
         "salariosMinimos": "183 salários/ano",
         "roiText": "R$ 34,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220534/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -52756,6 +54250,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "220534",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -52773,7 +54278,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de DF. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Crateús (DF). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -53095,7 +54600,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de DF. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Estância (DF). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -53110,13 +54615,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 26768.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 178392.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,46/min",
         "costPerCitizenYear": "R$ 0,09/ano",
         "salariosMinimos": "190 salários/ano",
         "roiText": "R$ 35,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/73579/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -53400,6 +54914,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "73579",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -53408,7 +54933,7 @@ var candidatesData = _root.candidatesData = [
     "ballotName": "Izalci Lucas",
     "party": "PL",
     "number": "22",
-    "position": "Governador",
+    "position": "Senador",
     "state": "DF",
     "city": "Araújos",
     "age": 70,
@@ -53417,7 +54942,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Governador com histórico comprovado de atuação pública no Estado de DF. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Araújos (DF). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -53671,7 +55196,7 @@ var candidatesData = _root.candidatesData = [
       "overallScore": 75,
       "costBenefitVerdict": "Mandato avaliado em 75/100 (Rigor Severo) com IPR de Produtividade em 70/100 e conformidade ética atestada por Ficha Limpa Plena / Certidão Negativa. O custo institucional de R$ 0,46/min apresenta retorno mensurado em 67% de efetividade no cargo e uso de 68% da cota parlamentar."
     },
-    "officePower": "executivo",
+    "officePower": "legislativo",
     "nationalBottlenecksCoverage": [
       3,
       8,
@@ -53698,7 +55223,18 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
-    }
+    },
+    "dataVerification": {
+      "fonte": "Senado Federal",
+      "idOficial": "4770",
+      "verificadoEm": "2026-10-10",
+      "situacao": null,
+      "campos": [
+        "identidade",
+        "foto"
+      ]
+    },
+    "authoredBillsDetailed": []
   },
   {
     "id": "cand-vanderlan-cardoso",
@@ -53715,7 +55251,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Senador com histórico comprovado de atuação pública no Estado de GO. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Iporá (GO). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -54020,6 +55556,16 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Senado Federal",
+      "idOficial": "5899",
+      "verificadoEm": "2026-10-10",
+      "situacao": null,
+      "campos": [
+        "identidade",
+        "foto"
+      ]
     }
   },
   {
@@ -54037,7 +55583,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Senador com histórico comprovado de atuação pública no Estado de GO. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Taquaral de Goiás (GO). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 74,
     "radar": {
       "integridade": 82,
@@ -54342,6 +55888,16 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Senado Federal",
+      "idOficial": "5070",
+      "verificadoEm": "2026-10-10",
+      "situacao": null,
+      "campos": [
+        "identidade",
+        "foto"
+      ]
     }
   },
   {
@@ -54350,7 +55906,7 @@ var candidatesData = _root.candidatesData = [
     "ballotName": "Adriana Accorsi",
     "party": "PT",
     "number": "1313",
-    "position": "Prefeita",
+    "position": "Deputada Federal",
     "state": "GO",
     "city": "Itapuranga",
     "age": 53,
@@ -54359,7 +55915,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Prefeita com histórico comprovado de atuação pública no Estado de GO. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Itapuranga (GO). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -54375,13 +55931,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 77
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 23161.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 210328.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,35/min",
         "costPerCitizenYear": "R$ 0,06/ano",
         "salariosMinimos": "177 salários/ano",
         "roiText": "R$ 35,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220565/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -54613,7 +56178,7 @@ var candidatesData = _root.candidatesData = [
       "overallScore": 76,
       "costBenefitVerdict": "Mandato avaliado em 76/100 (Rigor Severo) com IPR de Produtividade em 72/100 e conformidade ética atestada por Ficha Limpa Plena / Certidão Negativa. O custo institucional de R$ 0,35/min apresenta retorno mensurado em 71% de efetividade no cargo e uso de 68% da cota parlamentar."
     },
-    "officePower": "executivo",
+    "officePower": "legislativo",
     "nationalBottlenecksCoverage": [
       27,
       2,
@@ -54640,7 +56205,19 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
-    }
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "220565",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
+    },
+    "authoredBillsDetailed": []
   },
   {
     "id": "cand-gustavo-gayer",
@@ -54657,7 +56234,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de GO. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Goiânia (GO). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -54672,13 +56249,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 24856.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 216667.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,45/min",
         "costPerCitizenYear": "R$ 0,09/ano",
         "salariosMinimos": "192 salários/ano",
         "roiText": "R$ 36,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220568/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -54962,6 +56548,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "220568",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -54979,7 +56576,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Governador com histórico comprovado de atuação pública no Estado de GO. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Palmeiras de Goiás (GO). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -55275,7 +56872,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputada Federal com histórico comprovado de atuação pública no Estado de GO. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Goiânia (GO). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -55290,13 +56887,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 86
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 19348.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 106220.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,40/min",
         "costPerCitizenYear": "R$ 0,09/ano",
         "salariosMinimos": "179 salários/ano",
         "roiText": "R$ 37,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220569/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -55580,6 +57186,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "220569",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -55597,7 +57214,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Prefeito com histórico comprovado de atuação pública no Estado de GO. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Ribeirão Preto (GO). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -55884,7 +57501,7 @@ var candidatesData = _root.candidatesData = [
     "id": "cand-zacharias-calil",
     "name": "Zacharias Calil Hamu",
     "ballotName": "Dr. Zacharias Calil",
-    "party": "UNIÃO",
+    "party": "MDB",
     "number": "4400",
     "position": "Deputado Federal",
     "state": "GO",
@@ -55895,7 +57512,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de GO. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Goiânia (GO). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -55910,13 +57527,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 77
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 19695.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 101486.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,38/min",
         "costPerCitizenYear": "R$ 0,05/ano",
         "salariosMinimos": "194 salários/ano",
         "roiText": "R$ 29,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204412/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -56200,13 +57826,24 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "204412",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
     "id": "cand-flavia-morais",
     "name": "Flávia Carreiro Albuquerque Morais",
     "ballotName": "Flávia Morais",
-    "party": "PDT",
+    "party": "MDB",
     "number": "1212",
     "position": "Deputada Federal",
     "state": "GO",
@@ -56217,7 +57854,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputada Federal com histórico comprovado de atuação pública no Estado de GO. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Belo Horizonte (GO). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -56232,13 +57869,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 28776.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 214466.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,43/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "165 salários/ano",
         "roiText": "R$ 32,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160598/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -56522,6 +58168,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "160598",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -56539,7 +58196,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de GO. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Goianésia (GO). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -56554,13 +58211,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 83
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 21149.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 81560.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,40/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "161 salários/ano",
         "roiText": "R$ 30,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/74371/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -56844,6 +58510,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "74371",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -56861,7 +58538,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Prefeito com histórico comprovado de atuação pública no Estado de PA. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Belém (PA). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -57159,7 +58836,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Senador com histórico comprovado de atuação pública no Estado de PA. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Bujaru (PA). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -57464,6 +59141,16 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Senado Federal",
+      "idOficial": "4639",
+      "verificadoEm": "2026-10-10",
+      "situacao": null,
+      "campos": [
+        "identidade",
+        "foto"
+      ]
     }
   },
   {
@@ -57481,7 +59168,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Senador com histórico comprovado de atuação pública no Estado de PA. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Araguacema (PA). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -57786,6 +59473,16 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Senado Federal",
+      "idOficial": "3806",
+      "verificadoEm": "2026-10-10",
+      "situacao": null,
+      "campos": [
+        "identidade",
+        "foto"
+      ]
     }
   },
   {
@@ -57803,7 +59500,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputada Federal com histórico comprovado de atuação pública no Estado de PA. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Marapanim (PA). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -57818,13 +59515,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 20095.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 208515.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,45/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "164 salários/ano",
         "roiText": "R$ 36,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/153423/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -58108,6 +59814,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "153423",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -58125,7 +59842,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de PA. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Belém (PA). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -58140,13 +59857,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 83
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 19011.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 112848.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,50/min",
         "costPerCitizenYear": "R$ 0,05/ano",
         "salariosMinimos": "178 salários/ano",
         "roiText": "R$ 39,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/74079/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -58430,13 +60156,24 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "74079",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
     "id": "cand-olival-marques",
     "name": "Olival Marques de Souza",
     "ballotName": "Olival Marques",
-    "party": "MDB",
+    "party": "PODE",
     "number": "1500",
     "position": "Deputado Federal",
     "state": "PA",
@@ -58447,7 +60184,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de PA. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Belém (PA). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -58462,13 +60199,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 86
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 25506.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 87357.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,38/min",
         "costPerCitizenYear": "R$ 0,05/ano",
         "salariosMinimos": "188 salários/ano",
         "roiText": "R$ 28,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204498/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -58752,6 +60498,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "204498",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -58769,7 +60526,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de PA. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Rio Verde (PA). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -58784,13 +60541,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 74
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 20703.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 215697.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,59/min",
         "costPerCitizenYear": "R$ 0,08/ano",
         "salariosMinimos": "174 salários/ano",
         "roiText": "R$ 32,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220673/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -59074,6 +60840,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "220673",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -59091,7 +60868,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de PA. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Três Passos (PA). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -59106,13 +60883,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 77
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 24546.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 109837.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,48/min",
         "costPerCitizenYear": "R$ 0,07/ano",
         "salariosMinimos": "183 salários/ano",
         "roiText": "R$ 38,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204495/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -59396,6 +61182,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "204495",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -59413,7 +61210,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de PA. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Abaetetuba (PA). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 75,
     "radar": {
       "integridade": 82,
@@ -59428,13 +61225,22 @@ var candidatesData = _root.candidatesData = [
       "eficaciaPragmatica": 80
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 24888.00",
+      "spendingCeapMonthly": "R$ 0,00",
       "savedCeapTotal": "R$ 171328.00",
       "civicConversion": {
         "costPerMinute": "R$ 0,42/min",
         "costPerCitizenYear": "R$ 0,09/ano",
         "salariosMinimos": "168 salários/ano",
         "roiText": "R$ 33,50 entregues por R$ 1 gasto"
+      },
+      "spendingCeapMonthlyNum": 0,
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220677/despesas?ano=2025"
       }
     },
     "attendance": {
@@ -59718,6 +61524,17 @@ var candidatesData = _root.candidatesData = [
       "contradictions": [],
       "ineffectiveBillsSample": [],
       "badgeLabel": "Ficha Limpa Plena / Certidão Negativa"
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "220677",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -59735,7 +61552,7 @@ var candidatesData = _root.candidatesData = [
     "education": "Ensino Superior Completo",
     "careerHistory": "Deputado Federal com histórico comprovado de atuação pública no Estado de PA. Mandatos exercidos com aprovação de contas no TSE e atuação parlamentar/executiva regular.",
     "aiSummary": "Liderança política representativa de Belém (PA). Atuação focada no desenvolvimento regional, alocação de emendas e enfrentamento dos gargalos estruturais da jurisdição.",
-    "cleanRecord": "Ficha Limpa (0 Condenações)",
+    "cleanRecord": "Sem apontamentos verificados nesta base",
     "overallScore": 76,
     "radar": {
       "integridade": 82,
@@ -61279,17 +63096,25 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 91
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 31.400,00",
-      "spendingCeapMonthlyNum": 31400,
+      "spendingCeapMonthly": "R$ 0,00",
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 45.000,00",
       "limitCeapMonthlyNum": 45000,
-      "spendingPercentage": 69,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 163.200,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,39 / min",
         "costPerCitizen": "R$ 0,004 / ano",
         "salariosMinimos": 172,
         "roiText": "R$ 18,10 por R$ 1 gasto"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/73441/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -61642,7 +63467,18 @@ var candidatesData = _root.candidatesData = [
         "status": "Sancionada / Em Vigor",
         "isStructural": false
       }
-    ]
+    ],
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "73441",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
+    }
   },
   {
     "id": "cand-carlos-zarattini",
@@ -61679,17 +63515,25 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 95
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 29.800,00",
-      "spendingCeapMonthlyNum": 29800,
+      "spendingCeapMonthly": "R$ 0,00",
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 45.000,00",
       "limitCeapMonthlyNum": 45000,
-      "spendingPercentage": 66,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 182.400,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,37 / min",
         "costPerCitizen": "R$ 0,004 / ano",
         "salariosMinimos": 164,
         "roiText": "R$ 20,50 por R$ 1 gasto"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/141398/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -62042,7 +63886,18 @@ var candidatesData = _root.candidatesData = [
         "status": "Sancionada / Publicada em Diário Oficial",
         "isStructural": false
       }
-    ]
+    ],
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "141398",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
+    }
   },
   {
     "id": "cand-alexandre-ramagem",
@@ -62050,7 +63905,7 @@ var candidatesData = _root.candidatesData = [
     "ballotName": "Alexandre Ramagem",
     "party": "PL",
     "number": "2222",
-    "position": "Senador",
+    "position": "Deputado Federal",
     "state": "RJ",
     "city": "Rio de Janeiro, RJ",
     "age": 53,
@@ -62079,17 +63934,25 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 93
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 28.100,00",
-      "spendingCeapMonthlyNum": 28100,
+      "spendingCeapMonthly": "R$ 0,00",
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 44.000,00",
       "limitCeapMonthlyNum": 44000,
-      "spendingPercentage": 63,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 190.800,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,35 / min",
         "costPerCitizen": "R$ 0,003 / ano",
         "salariosMinimos": 155,
         "roiText": "R$ 22,00 por R$ 1 gasto"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220619/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -62444,7 +64307,18 @@ var candidatesData = _root.candidatesData = [
         "status": "Aprovada / Promulgada",
         "isStructural": false
       }
-    ]
+    ],
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "220619",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Vacância",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
+    }
   },
   {
     "id": "cand-pedro-paulo",
@@ -62481,17 +64355,25 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 94
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 29.200,00",
-      "spendingCeapMonthlyNum": 29200,
+      "spendingCeapMonthly": "R$ 0,00",
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 44.000,00",
       "limitCeapMonthlyNum": 44000,
-      "spendingPercentage": 66,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 177.600,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,36 / min",
         "costPerCitizen": "R$ 0,004 / ano",
         "salariosMinimos": 161,
         "roiText": "R$ 21,30 por R$ 1 gasto"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/122158/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -62844,7 +64726,18 @@ var candidatesData = _root.candidatesData = [
         "status": "Sancionada / Em Vigor",
         "isStructural": false
       }
-    ]
+    ],
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "122158",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
+    }
   },
   {
     "id": "cand-carlos-jordy",
@@ -62881,17 +64774,25 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 92
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 27.500,00",
-      "spendingCeapMonthlyNum": 27500,
+      "spendingCeapMonthly": "R$ 0,00",
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 44.000,00",
       "limitCeapMonthlyNum": 44000,
-      "spendingPercentage": 62,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 198.000,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,34 / min",
         "costPerCitizen": "R$ 0,003 / ano",
         "salariosMinimos": 151,
         "roiText": "R$ 22,80 por R$ 1 gasto"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204460/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -63272,13 +65173,24 @@ var candidatesData = _root.candidatesData = [
         "status": "Sancionada / Publicada em Diário Oficial",
         "isStructural": false
       }
-    ]
+    ],
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "204460",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
+    }
   },
   {
     "id": "cand-dani-cunha",
     "name": "Danielle Dytz da Cunha",
     "ballotName": "Dani Cunha",
-    "party": "UNIÃO",
+    "party": "PL",
     "number": "4422",
     "position": "Deputada Federal",
     "state": "RJ",
@@ -63309,17 +65221,25 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 93
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 26.800,00",
-      "spendingCeapMonthlyNum": 26800,
+      "spendingCeapMonthly": "R$ 0,00",
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 44.000,00",
       "limitCeapMonthlyNum": 44000,
-      "spendingPercentage": 60,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 206.400,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,33 / min",
         "costPerCitizen": "R$ 0,003 / ano",
         "salariosMinimos": 147,
         "roiText": "R$ 23,50 por R$ 1 gasto"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220603/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -63672,7 +65592,18 @@ var candidatesData = _root.candidatesData = [
         "status": "Aprovada / Promulgada",
         "isStructural": false
       }
-    ]
+    ],
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "220603",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
+    }
   },
   {
     "id": "cand-alvaro-damiao",
@@ -64485,17 +66416,25 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 94
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 27.200,00",
-      "spendingCeapMonthlyNum": 27200,
+      "spendingCeapMonthly": "R$ 0,00",
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 44.000,00",
       "limitCeapMonthlyNum": 44000,
-      "spendingPercentage": 61,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 201.600,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,34 / min",
         "costPerCitizen": "R$ 0,003 / ano",
         "salariosMinimos": 149,
         "roiText": "R$ 23,10 por R$ 1 gasto"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204520/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -64848,7 +66787,18 @@ var candidatesData = _root.candidatesData = [
         "status": "Aprovada / Promulgada",
         "isStructural": false
       }
-    ]
+    ],
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "204520",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
+    }
   },
   {
     "id": "cand-eros-biondini",
@@ -64885,17 +66835,25 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 95
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 28.600,00",
-      "spendingCeapMonthlyNum": 28600,
+      "spendingCeapMonthly": "R$ 0,00",
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 44.000,00",
       "limitCeapMonthlyNum": 44000,
-      "spendingPercentage": 65,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 184.800,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,35 / min",
         "costPerCitizen": "R$ 0,003 / ano",
         "salariosMinimos": 157,
         "roiText": "R$ 21,90 por R$ 1 gasto"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160640/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -65248,7 +67206,18 @@ var candidatesData = _root.candidatesData = [
         "status": "Sancionada / Em Vigor",
         "isStructural": false
       }
-    ]
+    ],
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "160640",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
+    }
   },
   {
     "id": "cand-olivia-santana",
@@ -65654,7 +67623,7 @@ var candidatesData = _root.candidatesData = [
     "id": "cand-leo-prates",
     "name": "Leonardo Silva Prates",
     "ballotName": "Leo Prates",
-    "party": "PDT",
+    "party": "REPUBLICANOS",
     "number": "1234",
     "position": "Deputado Federal",
     "state": "BA",
@@ -65685,17 +67654,25 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 95
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 28.900,00",
-      "spendingCeapMonthlyNum": 28900,
+      "spendingCeapMonthly": "R$ 0,00",
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 44.000,00",
       "limitCeapMonthlyNum": 44000,
-      "spendingPercentage": 65,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 181.200,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,36 / min",
         "costPerCitizen": "R$ 0,003 / ano",
         "salariosMinimos": 159,
         "roiText": "R$ 22,10 por R$ 1 gasto"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/80815/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -66048,7 +68025,18 @@ var candidatesData = _root.candidatesData = [
         "status": "Aprovada / Promulgada",
         "isStructural": false
       }
-    ]
+    ],
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "80815",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Licença",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
+    }
   },
   {
     "id": "cand-pastor-sargento-isidorio",
@@ -66085,17 +68073,25 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 92
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 29.500,00",
-      "spendingCeapMonthlyNum": 29500,
+      "spendingCeapMonthly": "R$ 0,00",
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 44.000,00",
       "limitCeapMonthlyNum": 44000,
-      "spendingPercentage": 67,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 174.000,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,36 / min",
         "costPerCitizen": "R$ 0,003 / ano",
         "salariosMinimos": 162,
         "roiText": "R$ 20,80 por R$ 1 gasto"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204553/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -66448,7 +68444,18 @@ var candidatesData = _root.candidatesData = [
         "status": "Sancionada / Em Vigor",
         "isStructural": false
       }
-    ]
+    ],
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "204553",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
+    }
   },
   {
     "id": "cand-katia-oliveira",
@@ -67285,17 +69292,25 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 95
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 17.200,00",
-      "spendingCeapMonthlyNum": 17200,
+      "spendingCeapMonthly": "R$ 0,00",
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 38.000,00",
       "limitCeapMonthlyNum": 38000,
-      "spendingPercentage": 45,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 249.600,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,21 / min",
         "costPerCitizen": "R$ 0,002 / ano",
         "salariosMinimos": 106,
         "roiText": "R$ 25,20 por R$ 1 gasto"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/226075/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -67648,7 +69663,18 @@ var candidatesData = _root.candidatesData = [
         "status": "Sancionada / Em Vigor",
         "isStructural": false
       }
-    ]
+    ],
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "226075",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
+    }
   },
   {
     "id": "cand-celio-studart",
@@ -67685,17 +69711,25 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 95
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 27.800,00",
-      "spendingCeapMonthlyNum": 27800,
+      "spendingCeapMonthly": "R$ 0,00",
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 44.000,00",
       "limitCeapMonthlyNum": 44000,
-      "spendingPercentage": 63,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 194.400,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,34 / min",
         "costPerCitizen": "R$ 0,003 / ano",
         "salariosMinimos": 153,
         "roiText": "R$ 23,20 por R$ 1 gasto"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204488/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -68101,7 +70135,18 @@ var candidatesData = _root.candidatesData = [
         "status": "Sancionada / Publicada em Diário Oficial",
         "isStructural": false
       }
-    ]
+    ],
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "204488",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
+    }
   },
   {
     "id": "cand-eunicio-oliveira",
@@ -68138,17 +70183,25 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 93
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 30.200,00",
-      "spendingCeapMonthlyNum": 30200,
+      "spendingCeapMonthly": "R$ 0,00",
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 44.000,00",
       "limitCeapMonthlyNum": 44000,
-      "spendingPercentage": 68,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 165.600,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,37 / min",
         "costPerCitizen": "R$ 0,004 / ano",
         "salariosMinimos": 166,
         "roiText": "R$ 19,80 por R$ 1 gasto"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/74454/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -68501,7 +70554,18 @@ var candidatesData = _root.candidatesData = [
         "status": "Aprovada / Promulgada",
         "isStructural": false
       }
-    ]
+    ],
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "74454",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
+    }
   },
   {
     "id": "cand-ney-leprevost",
@@ -70138,17 +72202,25 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 96
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 27.900,00",
-      "spendingCeapMonthlyNum": 27900,
+      "spendingCeapMonthly": "R$ 0,00",
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 44.000,00",
       "limitCeapMonthlyNum": 44000,
-      "spendingPercentage": 63,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 193.200,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,34 / min",
         "costPerCitizen": "R$ 0,003 / ano",
         "salariosMinimos": 153,
         "roiText": "R$ 23,40 por R$ 1 gasto"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220667/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -70501,13 +72573,24 @@ var candidatesData = _root.candidatesData = [
         "status": "Sancionada / Publicada em Diário Oficial",
         "isStructural": false
       }
-    ]
+    ],
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "220667",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
+    }
   },
   {
     "id": "cand-maria-arraes",
     "name": "Maria Arraes de Alencar",
     "ballotName": "Maria Arraes",
-    "party": "SOLIDARIEDADE",
+    "party": "PSB",
     "number": "7777",
     "position": "Deputada Federal",
     "state": "PE",
@@ -70538,17 +72621,25 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 94
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 28.300,00",
-      "spendingCeapMonthlyNum": 28300,
+      "spendingCeapMonthly": "R$ 0,00",
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 44.000,00",
       "limitCeapMonthlyNum": 44000,
-      "spendingPercentage": 64,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 188.400,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,35 / min",
         "costPerCitizen": "R$ 0,003 / ano",
         "salariosMinimos": 156,
         "roiText": "R$ 22,60 por R$ 1 gasto"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220668/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -70901,7 +72992,18 @@ var candidatesData = _root.candidatesData = [
         "status": "Aprovada / Promulgada",
         "isStructural": false
       }
-    ]
+    ],
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "220668",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
+    }
   },
   {
     "id": "cand-felipe-camozzato",
@@ -72510,9 +74612,9 @@ var candidatesData = _root.candidatesData = [
     "id": "cand-amom-mandel",
     "name": "Amom Mandel Lins Filho",
     "ballotName": "Amom Mandel",
-    "party": "CIDADANIA",
+    "party": "REPUBLICANOS",
     "number": "2323",
-    "position": "Senador",
+    "position": "Deputado Federal",
     "state": "AM",
     "city": "Manaus, AM",
     "age": 25,
@@ -72541,17 +74643,25 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 97
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 15.100,00",
-      "spendingCeapMonthlyNum": 15100,
+      "spendingCeapMonthly": "R$ 0,00",
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 45.000,00",
       "limitCeapMonthlyNum": 45000,
-      "spendingPercentage": 33,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 358.800,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,19 / min",
         "costPerCitizen": "R$ 0,002 / ano",
         "salariosMinimos": 98,
         "roiText": "R$ 39,20 por R$ 1 gasto"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220715/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -72957,7 +75067,18 @@ var candidatesData = _root.candidatesData = [
         "status": "Sancionada / Publicada em Diário Oficial",
         "isStructural": false
       }
-    ]
+    ],
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "220715",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
+    }
   },
   {
     "id": "cand-capitao-alberto-neto",
@@ -72965,7 +75086,7 @@ var candidatesData = _root.candidatesData = [
     "ballotName": "Capitão Alberto Neto",
     "party": "PL",
     "number": "2222",
-    "position": "Senador",
+    "position": "Deputado Federal",
     "state": "AM",
     "city": "Manaus, AM",
     "age": 43,
@@ -72994,17 +75115,25 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 94
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 28.500,00",
-      "spendingCeapMonthlyNum": 28500,
+      "spendingCeapMonthly": "R$ 0,00",
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 45.000,00",
       "limitCeapMonthlyNum": 45000,
-      "spendingPercentage": 63,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 198.000,00",
       "civicConversion": {
         "costPerMinute": "R$ 0,35 / min",
         "costPerCitizen": "R$ 0,003 / ano",
         "salariosMinimos": 156,
         "roiText": "R$ 22,50 por R$ 1 gasto"
+      },
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204572/despesas?ano=2025"
       }
     },
     "parliamentaryAmendments": {
@@ -73357,7 +75486,18 @@ var candidatesData = _root.candidatesData = [
         "status": "Aprovada / Promulgada",
         "isStructural": false
       }
-    ]
+    ],
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "204572",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
+    }
   },
   {
     "id": "cand-eduardo-braga",
@@ -73757,7 +75897,17 @@ var candidatesData = _root.candidatesData = [
         "status": "Sancionada / Em Vigor",
         "isStructural": false
       }
-    ]
+    ],
+    "dataVerification": {
+      "fonte": "Senado Federal",
+      "idOficial": "4994",
+      "verificadoEm": "2026-10-10",
+      "situacao": null,
+      "campos": [
+        "identidade",
+        "foto"
+      ]
+    }
   },
   {
     "id": "cand-fred-rodrigues",
@@ -74855,15 +77005,23 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 94
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 38.200,00",
-      "spendingCeapMonthlyNum": 38200,
+      "spendingCeapMonthly": "R$ 0,00",
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 49.000,00",
       "limitCeapMonthlyNum": 49000,
-      "spendingPercentage": 78,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 130.000,00",
       "iprSevero": 72,
       "custoMinuto": "R$ 0,16 / min",
-      "iprJustification": "Mandato parlamentar de alta intensidade executiva na Mesa Diretora da Câmara dos Deputados."
+      "iprJustification": "Mandato parlamentar de alta intensidade executiva na Mesa Diretora da Câmara dos Deputados.",
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160541/despesas?ano=2025"
+      }
     },
     "parliamentaryAmendments": {
       "totalAllocated": "R$ 35.000.000,00",
@@ -75027,6 +77185,17 @@ var candidatesData = _root.candidatesData = [
           "deficit": "Demandas crescentes de infraestrutura e qualidade nos serviços à população.",
           "responsibility": "Competência constitucional compartilhada."
         }
+      ]
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "160541",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
       ]
     }
   },
@@ -75648,7 +77817,7 @@ var candidatesData = _root.candidatesData = [
     "ballotName": "Marina Silva",
     "party": "REDE",
     "number": "1818",
-    "position": "Senadora",
+    "position": "Deputada Federal",
     "state": "SP",
     "city": "São Paulo, SP",
     "age": 68,
@@ -75675,15 +77844,23 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 93
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 19.800,00",
-      "spendingCeapMonthlyNum": 19800,
+      "spendingCeapMonthly": "R$ 0,00",
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 42.800,00",
       "limitCeapMonthlyNum": 42800,
-      "spendingPercentage": 46.2,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 230.000,00",
       "iprSevero": 86,
       "custoMinuto": "R$ 0,08 / min",
-      "iprJustification": "Economia contínua de verbas indenizatórias e assiduidade destacada em plenário e comissões."
+      "iprJustification": "Economia contínua de verbas indenizatórias e assiduidade destacada em plenário e comissões.",
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220637/despesas?ano=2025"
+      }
     },
     "parliamentaryAmendments": {
       "totalAllocated": "R$ 28.000.000,00",
@@ -75847,6 +78024,17 @@ var candidatesData = _root.candidatesData = [
           "deficit": "Demandas crescentes de infraestrutura e qualidade nos serviços à população.",
           "responsibility": "Competência constitucional compartilhada."
         }
+      ]
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "220637",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
       ]
     }
   },
@@ -76055,6 +78243,16 @@ var candidatesData = _root.candidatesData = [
           "deficit": "Demandas crescentes de infraestrutura e qualidade nos serviços à população.",
           "responsibility": "Competência constitucional compartilhada."
         }
+      ]
+    },
+    "dataVerification": {
+      "fonte": "Senado Federal",
+      "idOficial": "6341",
+      "verificadoEm": "2026-10-10",
+      "situacao": null,
+      "campos": [
+        "identidade",
+        "foto"
       ]
     }
   },
@@ -76294,15 +78492,23 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 96
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 22.100,00",
-      "spendingCeapMonthlyNum": 22100,
+      "spendingCeapMonthly": "R$ 0,00",
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 44.500,00",
       "limitCeapMonthlyNum": 44500,
-      "spendingPercentage": 49.6,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 210.000,00",
       "iprSevero": 80,
       "custoMinuto": "R$ 0,09 / min",
-      "iprJustification": "Assiduidade exemplar de 96% e moderação no uso de recursos públicos em viagens oficiais."
+      "iprJustification": "Assiduidade exemplar de 96% e moderação no uso de recursos públicos em viagens oficiais.",
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204369/despesas?ano=2025"
+      }
     },
     "parliamentaryAmendments": {
       "totalAllocated": "R$ 31.000.000,00",
@@ -76467,6 +78673,17 @@ var candidatesData = _root.candidatesData = [
           "responsibility": "Competência constitucional compartilhada."
         }
       ]
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "204369",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
@@ -76502,15 +78719,23 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 93
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 24.500,00",
-      "spendingCeapMonthlyNum": 24500,
+      "spendingCeapMonthly": "R$ 0,00",
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 44.500,00",
       "limitCeapMonthlyNum": 44500,
-      "spendingPercentage": 55,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 180.000,00",
       "iprSevero": 76,
       "custoMinuto": "R$ 0,10 / min",
-      "iprJustification": "Boa taxa de assiduidade em plenário e atuação expressiva nas redes e em comissões temáticas."
+      "iprJustification": "Boa taxa de assiduidade em plenário e atuação expressiva nas redes e em comissões temáticas.",
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220559/despesas?ano=2025"
+      }
     },
     "parliamentaryAmendments": {
       "totalAllocated": "R$ 29.500.000,00",
@@ -76674,6 +78899,17 @@ var candidatesData = _root.candidatesData = [
           "deficit": "Demandas crescentes de infraestrutura e qualidade nos serviços à população.",
           "responsibility": "Competência constitucional compartilhada."
         }
+      ]
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "220559",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
       ]
     }
   },
@@ -76918,15 +79154,23 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 95
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 25.800,00",
-      "spendingCeapMonthlyNum": 25800,
+      "spendingCeapMonthly": "R$ 0,00",
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 45.800,00",
       "limitCeapMonthlyNum": 45800,
-      "spendingPercentage": 56.3,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 190.000,00",
       "iprSevero": 82,
       "custoMinuto": "R$ 0,11 / min",
-      "iprJustification": "Frequência exemplar em votações nominais e recusa a fundos corporativos de financiamento."
+      "iprJustification": "Frequência exemplar em votações nominais e recusa a fundos corporativos de financiamento.",
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/152605/despesas?ano=2025"
+      }
     },
     "parliamentaryAmendments": {
       "totalAllocated": "R$ 33.000.000,00",
@@ -77091,13 +79335,24 @@ var candidatesData = _root.candidatesData = [
           "responsibility": "Competência constitucional compartilhada."
         }
       ]
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "152605",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
+      ]
     }
   },
   {
     "id": "cand-andre-janones",
     "name": "André Luis Gaspar Janones",
     "ballotName": "André Janones",
-    "party": "AVANTE",
+    "party": "REDE",
     "number": "7070",
     "position": "Deputado Federal",
     "state": "MG",
@@ -77126,15 +79381,23 @@ var candidatesData = _root.candidatesData = [
       "ratePct": 91
     },
     "salary": {
-      "spendingCeapMonthly": "R$ 31.000,00",
-      "spendingCeapMonthlyNum": 31000,
+      "spendingCeapMonthly": "R$ 0,00",
+      "spendingCeapMonthlyNum": 0,
       "limitCeapMonthly": "R$ 41.500,00",
       "limitCeapMonthlyNum": 41500,
-      "spendingPercentage": 74.7,
+      "spendingPercentage": 0,
       "savedCeapTotal": "R$ 105.000,00",
       "iprSevero": 72,
       "custoMinuto": "R$ 0,13 / min",
-      "iprJustification": "Atuação focada em comunicação e mobilização de base com frequência parlamentar regular."
+      "iprJustification": "Atuação focada em comunicação e mobilização de base com frequência parlamentar regular.",
+      "ceapSource": {
+        "fonte": "Câmara dos Deputados — Dados Abertos (despesas CEAP)",
+        "ano": 2025,
+        "totalAno": 0,
+        "notasFiscais": 0,
+        "consultadoEm": "2026-10-10",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204515/despesas?ano=2025"
+      }
     },
     "parliamentaryAmendments": {
       "totalAllocated": "R$ 32.000.000,00",
@@ -77298,6 +79561,17 @@ var candidatesData = _root.candidatesData = [
           "deficit": "Demandas crescentes de infraestrutura e qualidade nos serviços à população.",
           "responsibility": "Competência constitucional compartilhada."
         }
+      ]
+    },
+    "dataVerification": {
+      "fonte": "Câmara dos Deputados",
+      "idOficial": "204515",
+      "verificadoEm": "2026-10-10",
+      "situacao": "Exercício",
+      "campos": [
+        "identidade",
+        "foto",
+        "ceap"
       ]
     }
   },
@@ -78466,8 +80740,8 @@ var incumbentsData = _root.incumbentsData = [
     "legalStatus": "Ficha Limpa Plena"
   },
   {
-    "id": "inc-cand-carol-de-toni",
-    "candidateId": "cand-carol-de-toni",
+    "id": "inc-cand-caroline-de-toni",
+    "candidateId": "cand-caroline-de-toni",
     "name": "Carol De Toni",
     "fullName": "Caroline Rodrigues De Toni",
     "office": "Deputado(a) Federal (SC) - 57ª Legislatura",
@@ -78475,7 +80749,7 @@ var incumbentsData = _root.incumbentsData = [
     "party": "PL - SC",
     "state": "SC",
     "status": "Em Exercício",
-    "avatar": "img/candidates/cand-carol-de-toni.jpg",
+    "avatar": "img/candidates/cand-caroline-de-toni.jpg",
     "highlights": "Deputada Federal por Santa Catarina. Pauta jurídica e conservadora, defesa do agronegócio catarinense, endurecimento do Código Penal e desregulamentação para pequenas empresas....",
     "attendance": "95% no Mandato",
     "ceapMonthly": "R$ 29.500,00",

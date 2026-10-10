@@ -72,3 +72,14 @@ test('servidor: arquivos de infraestrutura não são servidos', async () => {
     server.close();
   }
 });
+
+test('mandatários em exercício apontam para candidatos e fotos existentes', () => {
+  const { incumbentsData } = require('../data/candidates');
+  const ids = new Set(candidatesData.map(c => c.id));
+  for (const inc of incumbentsData) {
+    assert.ok(ids.has(inc.candidateId), `${inc.id}: candidateId inexistente (${inc.candidateId})`);
+    if (inc.avatar && !inc.avatar.endsWith('.svg')) {
+      assert.ok(fs.existsSync(path.join(root, inc.avatar)), `${inc.id}: foto inexistente ${inc.avatar}`);
+    }
+  }
+});

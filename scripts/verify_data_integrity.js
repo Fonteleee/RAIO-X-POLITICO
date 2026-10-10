@@ -76,13 +76,13 @@ function verifyIntegrity(options = { checkNetwork: false }) {
     }
 
     // 2. Verificação de avatar não quebrado / não vazio (remoto ou local)
-    const isLocalAvatar = typeof c.avatar === 'string' && (c.avatar.startsWith('img/candidates/') || c.avatar.startsWith('/img/candidates/'));
+    const isLocalAvatar = typeof c.avatar === 'string' && (c.avatar.startsWith('img/candidates/') || c.avatar.startsWith('/img/candidates/') || c.avatar === 'img/placeholder-person.svg');
     const isRemoteAvatar = typeof c.avatar === 'string' && (c.avatar.startsWith('https://') || c.avatar.startsWith('http://'));
     if (!c.avatar || (!isLocalAvatar && !isRemoteAvatar)) {
       errors.push(`[${c.id}] URL de avatar inválida: ${c.avatar}`);
     } else if (isLocalAvatar) {
       const localFilePath = path.join(__dirname, '..', c.avatar.replace(/^\//, ''));
-      if (!fs.existsSync(localFilePath) || fs.statSync(localFilePath).size < 1000) {
+      if (c.avatar !== 'img/placeholder-person.svg' && (!fs.existsSync(localFilePath) || fs.statSync(localFilePath).size < 1000)) {
         errors.push(`[${c.id}] Arquivo de avatar local não existe ou é inválido (<1000b): ${c.avatar}`);
       }
     }

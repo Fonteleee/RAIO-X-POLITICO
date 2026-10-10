@@ -1,0 +1,3153 @@
+{
+  "generatedAt": "2026-10-10T02:56:31.505Z",
+  "ceapYear": 2025,
+  "sources": {
+    "camara": "https://dadosabertos.camara.leg.br/api/v2",
+    "senado": "https://legis.senado.leg.br/dadosabertos"
+  },
+  "entries": [
+    {
+      "id": "cand-acm-neto",
+      "name": "ACM Neto",
+      "positionInData": "Pré-candidato ao Governo do Estado",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-adriana-accorsi",
+      "name": "Adriana Accorsi",
+      "positionInData": "Deputada Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Delegada Adriana Accorsi",
+      "officialId": 220565,
+      "changes": [
+        {
+          "field": "position",
+          "from": "Prefeita",
+          "to": "Deputada Federal"
+        },
+        {
+          "field": "avatar",
+          "from": "img/placeholder-person.svg",
+          "to": "img/candidates/cand-adriana-accorsi.jpg"
+        }
+      ],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-aecio-neves",
+      "name": "Aécio Neves",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Aécio Neves",
+      "officialId": 74646,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-airton-faleiro",
+      "name": "Airton Faleiro",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Airton Faleiro",
+      "officialId": 204495,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-alberto-fraga",
+      "name": "Alberto Fraga",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Alberto Fraga",
+      "officialId": 73579,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-alexandre-ramagem",
+      "name": "Alexandre Ramagem",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Delegado Ramagem",
+      "officialId": 220619,
+      "changes": [
+        {
+          "field": "position",
+          "from": "Senador",
+          "to": "Deputado Federal"
+        },
+        {
+          "field": "avatar",
+          "from": "img/placeholder-person.svg",
+          "to": "img/candidates/cand-alexandre-ramagem.jpg"
+        }
+      ],
+      "situacao": "Vacância",
+      "condicaoEleitoral": "Titular",
+      "note": "Situação oficial atual: Vacância — cargo exibido pode estar desatualizado.",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-alexandre-silveira",
+      "name": "Alexandre Silveira",
+      "positionInData": "Senador",
+      "status": "NAO_ENCONTRADO_NA_CASA",
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
+      "changes": []
+    },
+    {
+      "id": "cand-alice-portugal",
+      "name": "Alice Portugal",
+      "positionInData": "Deputada Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Alice Portugal",
+      "officialId": 74057,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-alvaro-damiao",
+      "name": "Álvaro Damião",
+      "positionInData": "Vice-Prefeito",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-amanda-vettorazzo",
+      "name": "Amanda Vettorazzo",
+      "positionInData": "Deputada Federal",
+      "status": "NAO_ENCONTRADO_NA_CASA",
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
+      "changes": []
+    },
+    {
+      "id": "cand-amom-mandel",
+      "name": "Amom Mandel",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Amom Mandel",
+      "officialId": 220715,
+      "changes": [
+        {
+          "field": "party",
+          "from": "CIDADANIA",
+          "to": "REPUBLICANOS"
+        },
+        {
+          "field": "position",
+          "from": "Senador",
+          "to": "Deputado Federal"
+        }
+      ],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-ana-paula-lima",
+      "name": "Ana Paula Lima",
+      "positionInData": "Deputada Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Ana Paula Lima",
+      "officialId": 220556,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-anderson-ferreira",
+      "name": "Anderson Ferreira",
+      "positionInData": "Senador",
+      "status": "NAO_ENCONTRADO_NA_CASA",
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
+      "changes": []
+    },
+    {
+      "id": "cand-andre-fernandes",
+      "name": "André Fernandes",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "André Fernandes",
+      "officialId": 220657,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-andre-janones",
+      "name": "André Janones",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "André Janones",
+      "officialId": 204515,
+      "changes": [
+        {
+          "field": "party",
+          "from": "AVANTE",
+          "to": "REDE"
+        }
+      ],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-antidio-lunelli",
+      "name": "Antídio Lunelli",
+      "positionInData": "Deputado Federal",
+      "status": "NAO_ENCONTRADO_NA_CASA",
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
+      "changes": []
+    },
+    {
+      "id": "cand-antonio-reguffe",
+      "name": "Reguffe",
+      "positionInData": "Pré-candidato ao Governo do Estado",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-any-ortiz",
+      "name": "Any Ortiz",
+      "positionInData": "Deputada Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Any Ortiz",
+      "officialId": 220549,
+      "changes": [
+        {
+          "field": "party",
+          "from": "CIDADANIA",
+          "to": "PP"
+        }
+      ],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-arthur-lira",
+      "name": "Arthur Lira",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Arthur Lira",
+      "officialId": 160541,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-baleia-rossi",
+      "name": "Baleia Rossi",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Baleia Rossi",
+      "officialId": 178975,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-bella-goncalves",
+      "name": "Bella Gonçalves",
+      "positionInData": "Deputada Estadual",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-benedita-da-silva",
+      "name": "Benedita da Silva",
+      "positionInData": "Deputada Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Benedita da Silva",
+      "officialId": 73701,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-beto-faro",
+      "name": "Beto Faro",
+      "positionInData": "Senador",
+      "status": "VERIFICADO",
+      "house": "senado",
+      "officialName": "Beto Faro",
+      "officialId": "4639",
+      "changes": [],
+      "photo": "oficial"
+    },
+    {
+      "id": "cand-beto-richa",
+      "name": "Beto Richa",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Beto Richa",
+      "officialId": 220683,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-bia-kicis",
+      "name": "Bia Kicis",
+      "positionInData": "Deputada Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Bia Kicis",
+      "officialId": 204374,
+      "changes": [
+        {
+          "field": "position",
+          "from": "Senadora",
+          "to": "Deputada Federal"
+        }
+      ],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-bruno-engler",
+      "name": "Bruno Engler",
+      "positionInData": "Governador",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-bruno-reis",
+      "name": "Bruno Reis",
+      "positionInData": "Prefeito",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-camilo-santana",
+      "name": "Camilo Santana",
+      "positionInData": "Senador",
+      "status": "VERIFICADO",
+      "house": "senado",
+      "officialName": "Camilo Santana",
+      "officialId": "6336",
+      "changes": [],
+      "photo": "oficial"
+    },
+    {
+      "id": "cand-capitao-alberto-neto",
+      "name": "Capitão Alberto Neto",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Capitão Alberto Neto",
+      "officialId": 204572,
+      "changes": [
+        {
+          "field": "position",
+          "from": "Senador",
+          "to": "Deputado Federal"
+        }
+      ],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-capitao-wagner",
+      "name": "Capitão Wagner",
+      "positionInData": "Pré-candidato ao Governo do Estado",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-carla-zambelli",
+      "name": "Carla Zambelli",
+      "positionInData": "Deputada Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Carla Zambelli",
+      "officialId": 204507,
+      "changes": [],
+      "situacao": "Vacância",
+      "condicaoEleitoral": "Titular",
+      "note": "Situação oficial atual: Vacância — cargo exibido pode estar desatualizado.",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-carlos-bolsonaro",
+      "name": "Carlos Bolsonaro",
+      "positionInData": "Vereador",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-carlos-jordy",
+      "name": "Carlos Jordy",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Carlos Jordy",
+      "officialId": 204460,
+      "changes": [
+        {
+          "field": "avatar",
+          "from": "img/placeholder-person.svg",
+          "to": "img/candidates/cand-carlos-jordy.jpg"
+        }
+      ],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-carlos-portinho",
+      "name": "Carlos Portinho",
+      "positionInData": "Senador",
+      "status": "VERIFICADO",
+      "house": "senado",
+      "officialName": "Carlos Portinho",
+      "officialId": "5936",
+      "changes": [],
+      "photo": "oficial"
+    },
+    {
+      "id": "cand-carlos-viana",
+      "name": "Carlos Viana",
+      "positionInData": "Senador",
+      "status": "VERIFICADO",
+      "house": "senado",
+      "officialName": "Carlos Viana",
+      "officialId": "5990",
+      "changes": [
+        {
+          "field": "party",
+          "from": "PODEMOS",
+          "to": "PSD"
+        }
+      ],
+      "photo": "oficial"
+    },
+    {
+      "id": "cand-carlos-zarattini",
+      "name": "Carlos Zarattini",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Carlos Zarattini",
+      "officialId": 141398,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-carmelo-neto",
+      "name": "Carmelo Neto",
+      "positionInData": "Deputado Federal",
+      "status": "NAO_ENCONTRADO_NA_CASA",
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
+      "changes": []
+    },
+    {
+      "id": "cand-carmen-zanotto",
+      "name": "Carmen Zanotto",
+      "positionInData": "Deputada Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Carmen Zanotto",
+      "officialId": 164360,
+      "changes": [],
+      "situacao": "Vacância",
+      "condicaoEleitoral": "Titular",
+      "note": "Situação oficial atual: Vacância — cargo exibido pode estar desatualizado.",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-carol-dartora",
+      "name": "Carol Dartora",
+      "positionInData": "Deputada Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Carol Dartora",
+      "officialId": 220704,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-caroline-de-toni",
+      "name": "Caroline de Toni",
+      "positionInData": "Deputada Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Caroline de Toni",
+      "officialId": 204369,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-celia-xakriaba",
+      "name": "Célia Xakriabá",
+      "positionInData": "Deputada Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Célia Xakriabá",
+      "officialId": 206018,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-celio-studart",
+      "name": "Célio Studart",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Célio Studart",
+      "officialId": 204488,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-celso-russomanno",
+      "name": "Celso Russomanno",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Celso Russomanno",
+      "officialId": 73441,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-chico-alencar",
+      "name": "Chico Alencar",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Chico Alencar",
+      "officialId": 74171,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-cid-gomes",
+      "name": "Cid Gomes",
+      "positionInData": "Senador",
+      "status": "VERIFICADO",
+      "house": "senado",
+      "officialName": "Cid Gomes",
+      "officialId": "5973",
+      "changes": [],
+      "photo": "oficial"
+    },
+    {
+      "id": "cand-ciro-gomes",
+      "name": "Ciro Gomes",
+      "positionInData": "Governador",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-clarissa-tercio",
+      "name": "Clarissa Tércio",
+      "positionInData": "Deputada Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Clarissa Tércio",
+      "officialId": 220665,
+      "changes": [
+        {
+          "field": "avatar",
+          "from": "img/placeholder-person.svg",
+          "to": "img/candidates/cand-clarissa-tercio.jpg"
+        }
+      ],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-claudio-castro",
+      "name": "Cláudio Castro",
+      "positionInData": "Ex-Governador",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-cleitinho-azevedo",
+      "name": "Cleitinho",
+      "positionInData": "Senador",
+      "status": "VERIFICADO",
+      "house": "senado",
+      "officialName": "Cleitinho",
+      "officialId": "6337",
+      "changes": [],
+      "photo": "oficial"
+    },
+    {
+      "id": "cand-comandante-nadia",
+      "name": "Comandante Nádia",
+      "positionInData": "Deputada Estadual",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-cristina-graeml",
+      "name": "Cristina Graeml",
+      "positionInData": "Deputada Federal",
+      "status": "NAO_ENCONTRADO_NA_CASA",
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
+      "changes": []
+    },
+    {
+      "id": "cand-damares-alves",
+      "name": "Damares Alves",
+      "positionInData": "Senadora",
+      "status": "VERIFICADO",
+      "house": "senado",
+      "officialName": "Damares Alves",
+      "officialId": "6335",
+      "changes": [],
+      "photo": "oficial"
+    },
+    {
+      "id": "cand-dandara-tonantzin",
+      "name": "Dandara Tonantzin",
+      "positionInData": "Deputada Federal",
+      "status": "NAO_ENCONTRADO_NA_CASA",
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
+      "changes": []
+    },
+    {
+      "id": "cand-dani-cunha",
+      "name": "Dani Cunha",
+      "positionInData": "Deputada Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Dani Cunha",
+      "officialId": 220603,
+      "changes": [
+        {
+          "field": "party",
+          "from": "UNIÃO",
+          "to": "PL"
+        }
+      ],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-dani-portela",
+      "name": "Dani Portela",
+      "positionInData": "Deputada Federal",
+      "status": "NAO_ENCONTRADO_NA_CASA",
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
+      "changes": []
+    },
+    {
+      "id": "cand-daniel-coelho",
+      "name": "Daniel Coelho",
+      "positionInData": "Deputado Federal",
+      "status": "NAO_ENCONTRADO_NA_CASA",
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
+      "changes": []
+    },
+    {
+      "id": "cand-daniel-freitas",
+      "name": "Daniel Freitas",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Daniel Freitas",
+      "officialId": 204367,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-danilo-cabral",
+      "name": "Danilo Cabral",
+      "positionInData": "Deputado Federal",
+      "status": "NAO_ENCONTRADO_NA_CASA",
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
+      "changes": []
+    },
+    {
+      "id": "cand-david-almeida",
+      "name": "David Almeida",
+      "positionInData": "Governador",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-decio-lima",
+      "name": "Décio Lima",
+      "positionInData": "Pré-candidato ao Governo do Estado",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-delegado-caveira",
+      "name": "Delegado Caveira",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Delegado Caveira",
+      "officialId": 220673,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-deltan-dallagnol",
+      "name": "Deltan Dallagnol",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Deltan Dallagnol",
+      "officialId": 220705,
+      "changes": [
+        {
+          "field": "party",
+          "from": "NOVO",
+          "to": "PODE"
+        },
+        {
+          "field": "position",
+          "from": "Senador",
+          "to": "Deputado Federal"
+        }
+      ],
+      "situacao": "Vacância",
+      "condicaoEleitoral": "Não Eleito",
+      "note": "Situação oficial atual: Vacância — cargo exibido pode estar desatualizado.",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-duda-salabert",
+      "name": "Duda Salabert",
+      "positionInData": "Deputada Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Duda Salabert",
+      "officialId": 220623,
+      "changes": [
+        {
+          "field": "party",
+          "from": "PDT",
+          "to": "PSOL"
+        }
+      ],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-edegar-pretto",
+      "name": "Edegar Pretto",
+      "positionInData": "Pré-candidato ao Governo do Estado",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-eder-mauro",
+      "name": "Delegado Éder Mauro",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Delegado Éder Mauro",
+      "officialId": 178908,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-edmilson-rodrigues",
+      "name": "Edmilson Rodrigues",
+      "positionInData": "Deputado Federal",
+      "status": "NAO_ENCONTRADO_NA_CASA",
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
+      "changes": []
+    },
+    {
+      "id": "cand-eduarda-campopiano",
+      "name": "Eduarda Campopiano",
+      "positionInData": "Pré-candidata a Deputada Estadual",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-eduardo-bolsonaro",
+      "name": "Eduardo Bolsonaro",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Eduardo Bolsonaro",
+      "officialId": 92346,
+      "changes": [],
+      "situacao": "Vacância",
+      "condicaoEleitoral": "Titular",
+      "note": "Situação oficial atual: Vacância — cargo exibido pode estar desatualizado.",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-eduardo-braga",
+      "name": "Eduardo Braga",
+      "positionInData": "Senador",
+      "status": "VERIFICADO",
+      "house": "senado",
+      "officialName": "Eduardo Braga",
+      "officialId": "4994",
+      "changes": [],
+      "photo": "oficial"
+    },
+    {
+      "id": "cand-eduardo-girao",
+      "name": "Eduardo Girão",
+      "positionInData": "Senador",
+      "status": "NAO_ENCONTRADO_NA_CASA",
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
+      "changes": []
+    },
+    {
+      "id": "cand-eduardo-leite",
+      "name": "Eduardo Leite",
+      "positionInData": "Governador",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-eduardo-paes",
+      "name": "Eduardo Paes",
+      "positionInData": "Governador",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-eduardo-pimentel",
+      "name": "Eduardo Pimentel",
+      "positionInData": "Prefeito",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-elmar-nascimento",
+      "name": "Elmar Nascimento",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Elmar Nascimento",
+      "officialId": 178854,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-erika-hilton",
+      "name": "Erika Hilton",
+      "positionInData": "Deputada Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Erika Hilton",
+      "officialId": 220645,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-erika-kokay",
+      "name": "Erika Kokay",
+      "positionInData": "Deputada Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Erika Kokay",
+      "officialId": 160575,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-eros-biondini",
+      "name": "Eros Biondini",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Eros Biondini",
+      "officialId": 160640,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-esperidiao-amin",
+      "name": "Esperidião Amin",
+      "positionInData": "Senador",
+      "status": "VERIFICADO",
+      "house": "senado",
+      "officialName": "Esperidião Amin",
+      "officialId": "22",
+      "changes": [],
+      "photo": "oficial"
+    },
+    {
+      "id": "cand-eunicio-oliveira",
+      "name": "Eunício Oliveira",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Eunício Oliveira",
+      "officialId": 74454,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-evandro-leitao",
+      "name": "Evandro Leitão",
+      "positionInData": "Prefeito",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-felipe-camozzato",
+      "name": "Felipe Camozzato",
+      "positionInData": "Deputado Federal",
+      "status": "NAO_ENCONTRADO_NA_CASA",
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
+      "changes": []
+    },
+    {
+      "id": "cand-fernanda-melchionna",
+      "name": "Fernanda Melchionna",
+      "positionInData": "Deputada Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Fernanda Melchionna",
+      "officialId": 204407,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-fernanda-pessoa",
+      "name": "Fernanda Pessoa",
+      "positionInData": "Deputada Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Fernanda Pessoa",
+      "officialId": 220656,
+      "changes": [
+        {
+          "field": "party",
+          "from": "UNIÃO",
+          "to": "PSD"
+        }
+      ],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-fernando-haddad",
+      "name": "Fernando Haddad",
+      "positionInData": "Governador",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-flavia-morais",
+      "name": "Flávia Morais",
+      "positionInData": "Deputada Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Flávia Morais",
+      "officialId": 160598,
+      "changes": [
+        {
+          "field": "party",
+          "from": "PDT",
+          "to": "MDB"
+        }
+      ],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-flavio-bolsonaro",
+      "name": "Flávio Bolsonaro",
+      "positionInData": "Presidente da República",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-fred-linhares",
+      "name": "Fred Linhares",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Fred Linhares",
+      "officialId": 220534,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-fred-rodrigues",
+      "name": "Fred Rodrigues",
+      "positionInData": "Deputado Federal",
+      "status": "NAO_ENCONTRADO_NA_CASA",
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
+      "changes": []
+    },
+    {
+      "id": "cand-fuad-noman",
+      "name": "Fuad Noman",
+      "positionInData": "Prefeito",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-gabriel-azevedo",
+      "name": "Gabriel Azevedo",
+      "positionInData": "Deputado Federal",
+      "status": "NAO_ENCONTRADO_NA_CASA",
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
+      "changes": []
+    },
+    {
+      "id": "cand-gean-loureiro",
+      "name": "Gean Loureiro",
+      "positionInData": "Pré-candidato ao Governo do Estado",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-geraldo-alckmin",
+      "name": "Geraldo Alckmin",
+      "positionInData": "Governador",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-gilson-machado",
+      "name": "Gilson Machado",
+      "positionInData": "Senador",
+      "status": "NAO_ENCONTRADO_NA_CASA",
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
+      "changes": []
+    },
+    {
+      "id": "cand-giovani-cherini",
+      "name": "Giovani Cherini",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Giovani Cherini",
+      "officialId": 160673,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-glauber-braga",
+      "name": "Glauber Braga",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Glauber Braga",
+      "officialId": 152605,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-gleisi-hoffmann",
+      "name": "Gleisi Hoffmann",
+      "positionInData": "Deputada Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Gleisi Hoffmann",
+      "officialId": 107283,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-goura-nataraj",
+      "name": "Goura Nataraj",
+      "positionInData": "Deputado Federal",
+      "status": "NAO_ENCONTRADO_NA_CASA",
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
+      "changes": []
+    },
+    {
+      "id": "cand-guilherme-boulos",
+      "name": "Guilherme Boulos",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Guilherme Boulos",
+      "officialId": 220639,
+      "changes": [],
+      "situacao": "Licença",
+      "condicaoEleitoral": "Titular",
+      "note": "Situação oficial atual: Licença — cargo exibido pode estar desatualizado.",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-guilherme-kilter",
+      "name": "Guilherme Kilter",
+      "positionInData": "Deputado Estadual",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-gustavo-gayer",
+      "name": "Gustavo Gayer",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Gustavo Gayer",
+      "officialId": 220568,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-guto-zacarias",
+      "name": "Guto Zacarias",
+      "positionInData": "Deputado Estadual",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-hamilton-mourao",
+      "name": "General Mourão",
+      "positionInData": "Senador",
+      "status": "VERIFICADO",
+      "house": "senado",
+      "officialName": "Hamilton Mourão",
+      "officialId": "6341",
+      "changes": [],
+      "photo": "oficial"
+    },
+    {
+      "id": "cand-helder-barbalho",
+      "name": "Helder Barbalho",
+      "positionInData": "Senador",
+      "status": "NAO_ENCONTRADO_NA_CASA",
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
+      "changes": []
+    },
+    {
+      "id": "cand-helio-lopes",
+      "name": "Hélio Lopes",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Helio Lopes",
+      "officialId": 204444,
+      "changes": [
+        {
+          "field": "avatar",
+          "from": "img/placeholder-person.svg",
+          "to": "img/candidates/cand-helio-lopes.jpg"
+        }
+      ],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-humberto-costa",
+      "name": "Humberto Costa",
+      "positionInData": "Senador",
+      "status": "VERIFICADO",
+      "house": "senado",
+      "officialName": "Humberto Costa",
+      "officialId": "5008",
+      "changes": [],
+      "photo": "oficial"
+    },
+    {
+      "id": "cand-ibaneis-rocha",
+      "name": "Ibaneis Rocha",
+      "positionInData": "Governador",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-igor-normando",
+      "name": "Igor Normando",
+      "positionInData": "Prefeito",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-izalci-lucas",
+      "name": "Izalci Lucas",
+      "positionInData": "Senador",
+      "status": "VERIFICADO",
+      "house": "senado",
+      "officialName": "Izalci Lucas",
+      "officialId": "4770",
+      "changes": [
+        {
+          "field": "position",
+          "from": "Governador",
+          "to": "Senador"
+        }
+      ],
+      "photo": "oficial"
+    },
+    {
+      "id": "cand-jair-bolsonaro",
+      "name": "Jair Bolsonaro",
+      "positionInData": "Ex-Presidente da República",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-jandira-feghali",
+      "name": "Jandira Feghali",
+      "positionInData": "Deputada Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Jandira Feghali",
+      "officialId": 74848,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-jaques-wagner",
+      "name": "Jaques Wagner",
+      "positionInData": "Senador",
+      "status": "VERIFICADO",
+      "house": "senado",
+      "officialName": "Jaques Wagner",
+      "officialId": "581",
+      "changes": [],
+      "photo": "oficial"
+    },
+    {
+      "id": "cand-jeronimo-rodrigues",
+      "name": "Jerônimo Rodrigues",
+      "positionInData": "Governador",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-jesse-sangalli",
+      "name": "Jessé Sangalli",
+      "positionInData": "Deputado Estadual",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-joao-campos",
+      "name": "João Campos",
+      "positionInData": "Governador",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-joao-leao",
+      "name": "João Leão",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "João Leão",
+      "officialId": 74550,
+      "changes": [],
+      "situacao": "Licença",
+      "condicaoEleitoral": "Titular",
+      "note": "Situação oficial atual: Licença — cargo exibido pode estar desatualizado.",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-joao-roma",
+      "name": "João Roma",
+      "positionInData": "Senador",
+      "status": "NAO_ENCONTRADO_NA_CASA",
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
+      "changes": []
+    },
+    {
+      "id": "cand-jorge-goetten",
+      "name": "Jorge Goetten",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Jorge Goetten",
+      "officialId": 214694,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-jorginho-mello",
+      "name": "Jorginho Mello",
+      "positionInData": "Governador",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-jose-guimaraes",
+      "name": "José Guimarães",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "José Guimarães",
+      "officialId": 141470,
+      "changes": [],
+      "situacao": "Licença",
+      "condicaoEleitoral": "Titular",
+      "note": "Situação oficial atual: Licença — cargo exibido pode estar desatualizado.",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-jose-priante",
+      "name": "Priante",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "José Priante",
+      "officialId": 74079,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-julia-zanatta",
+      "name": "Julia Zanatta",
+      "positionInData": "Deputada Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Julia Zanatta",
+      "officialId": 220559,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-juliana-brizola",
+      "name": "Juliana Brizola",
+      "positionInData": "Deputada Federal",
+      "status": "NAO_ENCONTRADO_NA_CASA",
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
+      "changes": []
+    },
+    {
+      "id": "cand-junio-amaral",
+      "name": "Cabo Junio Amaral",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Junio Amaral",
+      "officialId": 204520,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-katia-oliveira",
+      "name": "Kátia Oliveira",
+      "positionInData": "Deputada Estadual",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-keniston-braga",
+      "name": "Keniston Braga",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Keniston Braga",
+      "officialId": 220677,
+      "changes": [
+        {
+          "field": "avatar",
+          "from": "img/placeholder-person.svg",
+          "to": "img/candidates/cand-keniston-braga.jpg"
+        }
+      ],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-kim-kataguiri",
+      "name": "Kim Kataguiri",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Kim Kataguiri",
+      "officialId": 204536,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-leandro-de-jesus",
+      "name": "Leandro de Jesus",
+      "positionInData": "Deputado Federal",
+      "status": "NAO_ENCONTRADO_NA_CASA",
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
+      "changes": []
+    },
+    {
+      "id": "cand-leila-do-volei",
+      "name": "Leila do Vôlei",
+      "positionInData": "Senadora",
+      "status": "NAO_ENCONTRADO_NA_CASA",
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
+      "changes": []
+    },
+    {
+      "id": "cand-leo-prates",
+      "name": "Leo Prates",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Léo Prates",
+      "officialId": 80815,
+      "changes": [
+        {
+          "field": "party",
+          "from": "PDT",
+          "to": "REPUBLICANOS"
+        }
+      ],
+      "situacao": "Licença",
+      "condicaoEleitoral": "Titular",
+      "note": "Situação oficial atual: Licença — cargo exibido pode estar desatualizado.",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-lidice-da-mata",
+      "name": "Lídice da Mata",
+      "positionInData": "Deputada Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Lídice da Mata",
+      "officialId": 139285,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-lindbergh-farias",
+      "name": "Lindbergh Farias",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Lindbergh Farias",
+      "officialId": 74858,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-lucas-pavanato",
+      "name": "Lucas Pavanato",
+      "positionInData": "Deputado Federal",
+      "status": "NAO_ENCONTRADO_NA_CASA",
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
+      "changes": []
+    },
+    {
+      "id": "cand-luciano-ducci",
+      "name": "Luciano Ducci",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Luciano Ducci",
+      "officialId": 178931,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-luiz-philippe",
+      "name": "Luiz Philippe de Orleans e Bragança",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Luiz Philippe de Orleans e Bragança",
+      "officialId": 204526,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-luiza-erundina",
+      "name": "Luiza Erundina",
+      "positionInData": "Deputada Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Luiza Erundina",
+      "officialId": 74784,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-luizianne-lins",
+      "name": "Luizianne Lins",
+      "positionInData": "Deputada Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Luizianne Lins",
+      "officialId": 178866,
+      "changes": [
+        {
+          "field": "party",
+          "from": "PT",
+          "to": "REDE"
+        }
+      ],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-lula",
+      "name": "Lula",
+      "positionInData": "Presidente da República",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-major-vitor-hugo",
+      "name": "Major Vitor Hugo",
+      "positionInData": "Deputado Federal",
+      "status": "NAO_ENCONTRADO_NA_CASA",
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
+      "changes": []
+    },
+    {
+      "id": "cand-manuela-davila",
+      "name": "Manuela d Avila",
+      "positionInData": "Senadora",
+      "status": "NAO_ENCONTRADO_NA_CASA",
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
+      "changes": []
+    },
+    {
+      "id": "cand-marcel-van-hattem",
+      "name": "Marcel van Hattem",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Marcel van Hattem",
+      "officialId": 156190,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-marcelo-alvaro-antonio",
+      "name": "Marcelo Álvaro Antônio",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Marcelo Álvaro Antônio",
+      "officialId": 179000,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-marcelo-crivella",
+      "name": "Marcelo Crivella",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Marcelo Crivella",
+      "officialId": 220599,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-marcelo-freixo",
+      "name": "Marcelo Freixo",
+      "positionInData": "Pré-candidato ao Governo do Estado",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-marco-feliciano",
+      "name": "Pr. Marco Feliciano",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Pr. Marco Feliciano",
+      "officialId": 160601,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-marconi-perillo",
+      "name": "Marconi Perillo",
+      "positionInData": "Pré-candidato ao Governo do Estado",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-marcos-pontes",
+      "name": "Astronauta Marcos Pontes",
+      "positionInData": "Senador",
+      "status": "VERIFICADO",
+      "house": "senado",
+      "officialName": "Astronauta Marcos Pontes",
+      "officialId": "6009",
+      "changes": [],
+      "photo": "oficial"
+    },
+    {
+      "id": "cand-maria-arraes",
+      "name": "Maria Arraes",
+      "positionInData": "Deputada Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Maria Arraes",
+      "officialId": 220668,
+      "changes": [
+        {
+          "field": "party",
+          "from": "SOLIDARIEDADE",
+          "to": "PSB"
+        }
+      ],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-maria-do-rosario",
+      "name": "Maria do Rosário",
+      "positionInData": "Deputada Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Maria do Rosário",
+      "officialId": 74398,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-maria-victoria",
+      "name": "Maria Victoria",
+      "positionInData": "Deputada Federal",
+      "status": "NAO_ENCONTRADO_NA_CASA",
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
+      "changes": []
+    },
+    {
+      "id": "cand-marilia-arraes",
+      "name": "Marília Arraes",
+      "positionInData": "Pré-candidata ao Governo do Estado",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-marina-helena",
+      "name": "Marina Helena",
+      "positionInData": "Deputada Federal",
+      "status": "NAO_ENCONTRADO_NA_CASA",
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
+      "changes": []
+    },
+    {
+      "id": "cand-marina-silva",
+      "name": "Marina Silva",
+      "positionInData": "Deputada Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Marina Silva",
+      "officialId": 220637,
+      "changes": [
+        {
+          "field": "position",
+          "from": "Senadora",
+          "to": "Deputada Federal"
+        }
+      ],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-mario-frias",
+      "name": "Mario Frias",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Mario Frias",
+      "officialId": 220655,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-mauricio-dziedricki",
+      "name": "Maurício Dziedricki",
+      "positionInData": "Deputado Federal",
+      "status": "NAO_ENCONTRADO_NA_CASA",
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
+      "changes": []
+    },
+    {
+      "id": "cand-mauro-filho",
+      "name": "Mauro Filho",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Mauro Benevides Filho",
+      "officialId": 204486,
+      "changes": [
+        {
+          "field": "party",
+          "from": "PDT",
+          "to": "UNIÃO"
+        }
+      ],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-mauro-tramonte",
+      "name": "Mauro Tramonte",
+      "positionInData": "Deputado Federal",
+      "status": "NAO_ENCONTRADO_NA_CASA",
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
+      "changes": []
+    },
+    {
+      "id": "cand-mendonca-filho",
+      "name": "Mendonça Filho",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Mendonça Filho",
+      "officialId": 74428,
+      "changes": [
+        {
+          "field": "party",
+          "from": "UNIÃO",
+          "to": "PL"
+        }
+      ],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-miguel-coelho",
+      "name": "Miguel Coelho",
+      "positionInData": "Pré-candidato ao Governo do Estado",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-newton-cardoso-jr",
+      "name": "Newton Cardoso Jr",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Newton Cardoso Jr",
+      "officialId": 178896,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-ney-leprevost",
+      "name": "Ney Leprevost",
+      "positionInData": "Deputado Federal",
+      "status": "NAO_ENCONTRADO_NA_CASA",
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
+      "changes": []
+    },
+    {
+      "id": "cand-nikolas-ferreira",
+      "name": "Nikolas Ferreira",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Nikolas Ferreira",
+      "officialId": 209787,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-olival-marques",
+      "name": "Olival Marques",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Olival Marques",
+      "officialId": 204498,
+      "changes": [
+        {
+          "field": "party",
+          "from": "MDB",
+          "to": "PODE"
+        }
+      ],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-olivia-santana",
+      "name": "Olívia Santana",
+      "positionInData": "Deputada Estadual",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-orlando-silva",
+      "name": "Orlando Silva",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Orlando Silva",
+      "officialId": 178987,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Suplente",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-otoni-de-paula",
+      "name": "Otoni de Paula",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Otoni de Paula",
+      "officialId": 204441,
+      "changes": [
+        {
+          "field": "party",
+          "from": "MDB",
+          "to": "PSD"
+        }
+      ],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-otto-alencar",
+      "name": "Otto Alencar",
+      "positionInData": "Senador",
+      "status": "VERIFICADO",
+      "house": "senado",
+      "officialName": "Otto Alencar",
+      "officialId": "5523",
+      "changes": [],
+      "photo": "oficial"
+    },
+    {
+      "id": "cand-pablo-marcal",
+      "name": "Pablo Marçal",
+      "positionInData": "Pré-candidato a Governador",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-pastor-sargento-isidorio",
+      "name": "Sargento Isidório",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Pastor Sargento Isidório",
+      "officialId": 204553,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-paula-belmonte",
+      "name": "Paula Belmonte",
+      "positionInData": "Governadora",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-paulo-martins",
+      "name": "Paulo Martins",
+      "positionInData": "Senador",
+      "status": "NAO_ENCONTRADO_NA_CASA",
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
+      "changes": []
+    },
+    {
+      "id": "cand-paulo-pimenta",
+      "name": "Paulo Pimenta",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Paulo Pimenta",
+      "officialId": 74400,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-pedro-campos",
+      "name": "Pedro Campos",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Pedro Campos",
+      "officialId": 220667,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-pedro-paulo",
+      "name": "Pedro Paulo",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Pedro Paulo",
+      "officialId": 122158,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-pedro-uczai",
+      "name": "Pedro Uczai",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Pedro Uczai",
+      "officialId": 160604,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-pedro-westphalen",
+      "name": "Pedro Westphalen",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Pedro Westphalen",
+      "officialId": 204406,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-priscila-costa",
+      "name": "Priscila Costa",
+      "positionInData": "Deputada Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Priscila Costa",
+      "officialId": 226075,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-rafael-prudente",
+      "name": "Rafael Prudente",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Rafael Prudente",
+      "officialId": 220532,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-randolfe-rodrigues",
+      "name": "Randolfe Rodrigues",
+      "positionInData": "Senador",
+      "status": "VERIFICADO",
+      "house": "senado",
+      "officialName": "Randolfe Rodrigues",
+      "officialId": "5012",
+      "changes": [],
+      "photo": "oficial"
+    },
+    {
+      "id": "cand-raquel-lyra",
+      "name": "Raquel Lyra",
+      "positionInData": "Governadora",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-ratinho-junior",
+      "name": "Ratinho Junior",
+      "positionInData": "Governador",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-reginaldo-lopes",
+      "name": "Reginaldo Lopes",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Reginaldo Lopes",
+      "officialId": 74161,
+      "changes": [
+        {
+          "field": "position",
+          "from": "Senador",
+          "to": "Deputado Federal"
+        }
+      ],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-reginaldo-veras",
+      "name": "Professor Reginaldo Veras",
+      "positionInData": "Deputado Federal",
+      "status": "NAO_ENCONTRADO_NA_CASA",
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
+      "changes": []
+    },
+    {
+      "id": "cand-renilce-nicodemos",
+      "name": "Renilce Nicodemos",
+      "positionInData": "Deputada Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Renilce Nicodemos",
+      "officialId": 153423,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-ricardo-nunes",
+      "name": "Ricardo Nunes",
+      "positionInData": "Prefeito",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-ricardo-salles",
+      "name": "Ricardo Salles",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Ricardo Salles",
+      "officialId": 220633,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-roberto-claudio",
+      "name": "Roberto Cláudio",
+      "positionInData": "Pré-candidato ao Governo do Estado",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-rodrigo-pacheco",
+      "name": "Rodrigo Pacheco",
+      "positionInData": "Senador",
+      "status": "NAO_ENCONTRADO_NA_CASA",
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
+      "changes": []
+    },
+    {
+      "id": "cand-rodrigo-valadares",
+      "name": "Rodrigo Valadares",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Rodrigo Valadares",
+      "officialId": 165470,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-rogerio-correia",
+      "name": "Rogério Correia",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Rogério Correia",
+      "officialId": 204480,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-romario-faria",
+      "name": "Romário",
+      "positionInData": "Senador",
+      "status": "VERIFICADO",
+      "house": "senado",
+      "officialName": "Romário",
+      "officialId": "5322",
+      "changes": [],
+      "photo": "oficial"
+    },
+    {
+      "id": "cand-romeu-zema",
+      "name": "Romeu Zema",
+      "positionInData": "Presidente da República",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-ronaldo-caiado",
+      "name": "Ronaldo Caiado",
+      "positionInData": "Presidente da República",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-rubens-otoni",
+      "name": "Rubens Otoni",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Rubens Otoni",
+      "officialId": 74371,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-samia-bomfim",
+      "name": "Sâmia Bomfim",
+      "positionInData": "Deputada Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Sâmia Bomfim",
+      "officialId": 204535,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-sandro-mabel",
+      "name": "Sandro Mabel",
+      "positionInData": "Prefeito",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-sebastiao-melo",
+      "name": "Sebastião Melo",
+      "positionInData": "Prefeito",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-sergio-moro",
+      "name": "Sergio Moro",
+      "positionInData": "Senador",
+      "status": "VERIFICADO",
+      "house": "senado",
+      "officialName": "Sergio Moro",
+      "officialId": "6331",
+      "changes": [],
+      "photo": "oficial"
+    },
+    {
+      "id": "cand-sergio-souza",
+      "name": "Sergio Souza",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Sergio Souza",
+      "officialId": 178933,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-silvye-alves",
+      "name": "Silvye Alves",
+      "positionInData": "Deputada Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Silvye Alves",
+      "officialId": 220569,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-simone-tebet",
+      "name": "Simone Tebet",
+      "positionInData": "Senadora",
+      "status": "NAO_ENCONTRADO_NA_CASA",
+      "note": "Não consta como parlamentar em exercício nas listas oficiais; revisar cargo/status.",
+      "changes": []
+    },
+    {
+      "id": "cand-tabata-amaral",
+      "name": "Tabata Amaral",
+      "positionInData": "Deputada Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Tabata Amaral",
+      "officialId": 204534,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-taliria-petrone",
+      "name": "Talíria Petrone",
+      "positionInData": "Deputada Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Talíria Petrone",
+      "officialId": 204464,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-tarcisio-de-freitas",
+      "name": "Tarcísio de Freitas",
+      "positionInData": "Governador",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-tarcisio-motta",
+      "name": "Tarcísio Motta",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Tarcísio Motta",
+      "officialId": 220598,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-teresa-leitao",
+      "name": "Teresa Leitão",
+      "positionInData": "Senadora",
+      "status": "VERIFICADO",
+      "house": "senado",
+      "officialName": "Teresa Leitão",
+      "officialId": "6338",
+      "changes": [],
+      "photo": "oficial"
+    },
+    {
+      "id": "cand-tiririca",
+      "name": "Tiririca",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Tiririca",
+      "officialId": 160976,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-topazio-neto",
+      "name": "Topázio Neto",
+      "positionInData": "Prefeito",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-tulio-gadelha",
+      "name": "Túlio Gadêlha",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Túlio Gadêlha",
+      "officialId": 157130,
+      "changes": [
+        {
+          "field": "party",
+          "from": "REDE",
+          "to": "PSD"
+        }
+      ],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-vanderlan-cardoso",
+      "name": "Vanderlan Cardoso",
+      "positionInData": "Senador",
+      "status": "VERIFICADO",
+      "house": "senado",
+      "officialName": "Vanderlan Cardoso",
+      "officialId": "5899",
+      "changes": [],
+      "photo": "oficial"
+    },
+    {
+      "id": "cand-washington-reis",
+      "name": "Washington Reis",
+      "positionInData": "Pré-candidato ao Governo do Estado",
+      "status": "SEM_FONTE_API",
+      "note": "Cargo fora do Legislativo federal: verificar manualmente (TSE DivulgaCandContas / sites oficiais).",
+      "changes": []
+    },
+    {
+      "id": "cand-wilder-morais",
+      "name": "Wilder Morais",
+      "positionInData": "Senador",
+      "status": "VERIFICADO",
+      "house": "senado",
+      "officialName": "Wilder Morais",
+      "officialId": "5070",
+      "changes": [],
+      "photo": "oficial"
+    },
+    {
+      "id": "cand-zacharias-calil",
+      "name": "Dr. Zacharias Calil",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Dr. Zacharias Calil",
+      "officialId": 204412,
+      "changes": [
+        {
+          "field": "party",
+          "from": "UNIÃO",
+          "to": "MDB"
+        }
+      ],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-zeca-dirceu",
+      "name": "Zeca Dirceu",
+      "positionInData": "Deputado Federal",
+      "status": "VERIFICADO",
+      "house": "camara",
+      "officialName": "Zeca Dirceu",
+      "officialId": 160592,
+      "changes": [],
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular",
+      "photo": "oficial",
+      "ceap": {
+        "year": 2025,
+        "totalYear": 0,
+        "notas": 0,
+        "monthlyAvg": 0
+      }
+    },
+    {
+      "id": "cand-zequinha-marinho",
+      "name": "Zequinha Marinho",
+      "positionInData": "Senador",
+      "status": "VERIFICADO",
+      "house": "senado",
+      "officialName": "Zequinha Marinho",
+      "officialId": "3806",
+      "changes": [],
+      "photo": "oficial"
+    }
+  ],
+  "summary": {
+    "total": 214,
+    "verificados": 127,
+    "naoEncontradosNaCasa": 34,
+    "semFonteApi": 53,
+    "comAlteracoes": 25
+  }
+}

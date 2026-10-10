@@ -167,7 +167,7 @@
   <!-- ================= CORPO PRINCIPAL DO DOSSIÊ ================= -->
   <main class="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 lg:p-8">
       <div role="note" class="mb-4 rounded-2xl border border-amber-300 dark:border-amber-500/30 bg-amber-50 dark:bg-amber-950/20 px-4 py-3 text-xs text-amber-900 dark:text-amber-200 leading-relaxed">
-        <strong>Dados em verificação.</strong> Pontuações, métricas e parte dos registros desta página são indicativos e ainda estão sendo conferidos com as fontes oficiais (TSE, Câmara, Senado, TCU). Não constituem pesquisa eleitoral nem certidão. Confira sempre nas fontes originais e use o canal de contraditório para solicitar correções.
+        <strong>Dados em verificação.</strong> <span id="dossie-verification-status" class="font-semibold"></span> Pontuações, métricas e parte dos registros desta página são indicativos e ainda estão sendo conferidos com as fontes oficiais (TSE, Câmara, Senado, TCU). Não constituem pesquisa eleitoral nem certidão. Confira sempre nas fontes originais e use o canal de contraditório para solicitar correções.
       </div>
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
       
@@ -2252,6 +2252,7 @@
       const radar = apiCand.radar || localCand?.radar || fb.radar;
       return {
         id: apiCand.id,
+        dataVerification: apiCand.dataVerification || localCand?.dataVerification || null,
         name: apiCand.name || localCand?.name || 'Candidato',
         ballotName: apiCand.ballotName || localCand?.ballotName || apiCand.name,
         party: apiCand.party || localCand?.party || 'IND',
@@ -2858,6 +2859,15 @@
     // Renderiza a Coluna Lateral e Informações Base
     function renderCandidateProfile(cand) {
       document.getElementById('page-title').innerText = `Dossiê: ${cand.name} (${cand.party}) | Figuras Políticas`;
+      try {
+        const vEl = document.getElementById('dossie-verification-status');
+        if (vEl) {
+          const v = cand.dataVerification;
+          vEl.textContent = v
+            ? `✔ Identidade, foto${(v.campos || []).includes('ceap') ? ' e cota parlamentar' : ''} conferidas em ${v.fonte} (dados abertos) em ${v.verificadoEm}${v.situacao && v.situacao !== 'Exercício' ? ' — situação oficial: ' + v.situacao : ''}.`
+            : 'Este perfil ainda não foi conferido em API oficial.';
+        }
+      } catch (e) { /* aviso é opcional */ }
       try {
         document.title = document.getElementById('page-title').innerText;
         const setMeta = (sel, attr, val) => { const el = document.querySelector(sel); if (el) el.setAttribute(attr, val); };

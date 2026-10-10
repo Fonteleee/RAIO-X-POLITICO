@@ -65,6 +65,10 @@ for (const c of kept) {
   if (c.recentDebate && Array.isArray(c.recentDebate.statements)) {
     c.recentDebate.statements = c.recentDebate.statements.filter(s => !isTemplatedQuote(s.quote));
   }
+  if (typeof c.cleanRecord === 'string' && /Ficha Limpa|Condena/i.test(c.cleanRecord) && c.cleanRecord !== 'Sem apontamentos verificados nesta base') {
+    c.cleanRecord = 'Sem apontamentos verificados nesta base';
+    stats.recordLabels++;
+  }
   const eth = c.ethicsDetailed;
   if (eth) {
     if (Array.isArray(eth.lawsuits)) {
